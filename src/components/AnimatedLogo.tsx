@@ -28,7 +28,7 @@ const AnimatedLogo: React.FC = () => {
         <div className="flex flex-col items-start leading-none">
           <div className="text-2xl font-bold tracking-tighter">
             <span className="text-green-400">Travel</span>
-            <span className="text-[#F59E0B]"> Hub</span>
+            <span className="text-[#0EA5E9]"> Hub</span>
           </div>
           <span className="text-[8px] font-black uppercase tracking-[0.3em] text-gray-400 mt-0.5">Sri Lanka</span>
         </div>
