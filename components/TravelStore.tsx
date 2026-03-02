@@ -94,7 +94,7 @@ const TravelStore: React.FC<{ language: Language }> = ({ language }) => {
               Global_Supply_Registry
            </div>
            <h2 className="text-6xl md:text-[10rem] font-heritage font-bold text-white tracking-tighter uppercase leading-[0.8] drop-shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
-             TRAVEL <br/><span className="italic insta-text-gradient">GEAR.</span>
+             TRAVEL <br/><span className="italic insta-text-gradient">STORE.</span>
            </h2>
            <p className="text-white/40 text-lg md:text-2xl font-light italic leading-relaxed tracking-wide">
              "Equipping the modern voyager with the tools of an island civilization."
@@ -127,7 +127,7 @@ const TravelStore: React.FC<{ language: Language }> = ({ language }) => {
                     </h3>
                     <p className="text-gray-400 font-light italic text-xl md:text-3xl max-w-3xl mx-auto leading-relaxed opacity-70">
                        {language === 'EN' 
-                         ? "The gear registry is currently undergoing high-fidelity calibration for next-cycle stock synchronization." 
+                         ? "The store registry is currently undergoing high-fidelity calibration for next-cycle stock synchronization." 
                          : "භාණ්ඩ නාමාවලිය දැනට පිරික්සුම් මට්ටමේ පවතින අතර, මීළඟ අදියරේදී සියලු නිෂ්පාදන ඔබ වෙත විවෘත වනු ඇත."}
                     </p>
                  </div>

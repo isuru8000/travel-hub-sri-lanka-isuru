@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({
       ]
     },
     { id: 'community', label: { EN: 'Memories', SI: 'මතකයන්' }, icon: <Heart size={14} /> },
-    { id: 'shop', label: { EN: 'Gear', SI: 'භාණ්ඩ' }, icon: <ShoppingCart size={14} /> },
+    { id: 'shop', label: { EN: 'Store', SI: 'භාණ්ඩ' }, icon: <ShoppingCart size={14} /> },
     { id: 'vr-portal', label: { EN: 'VR Trip', SI: 'VR චාරිකාව' }, icon: <Zap size={14} className="text-[#E1306C]" /> },
   ];
 
