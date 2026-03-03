@@ -5,7 +5,6 @@ import {
   Send, 
   Mail, 
   Globe, 
-  Instagram, 
   Facebook, 
   Youtube, 
   Music2,
@@ -115,16 +114,6 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
   };
 
   const socialChannels = [
-    { 
-      name: 'Instagram', 
-      icon: <Instagram size={40} />, 
-      color: 'hover:bg-gradient-to-tr hover:from-[#fdf497] hover:via-[#d6249f] hover:to-[#285AEB]',
-      shadow: 'group-hover:shadow-[0_40px_100px_rgba(214,36,159,0.4)]',
-      accent: 'text-[#E1306C]',
-      handle: '@travelhubsl',
-      url: '#',
-      strength: '98.2%'
-    },
     { 
       name: 'Facebook', 
       icon: <Facebook size={40} />, 

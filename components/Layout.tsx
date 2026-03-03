@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from './Navbar.tsx';
 import { Language, User } from '../types.ts';
-import { Facebook, Instagram, Youtube, Music2, ShieldCheck, Sparkles, Radio } from 'lucide-react';
+import { Facebook, Youtube, Music2, ShieldCheck, Sparkles, Radio } from 'lucide-react';
 import AnimatedLogo from '../src/components/AnimatedLogo';
 
 interface LayoutProps {
@@ -95,12 +95,6 @@ const Layout: React.FC<LayoutProps> = ({
           <div className="md:col-span-4 space-y-8">
             <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Social Media</h3>
             <div className="flex flex-wrap gap-4">
-              <SocialLink 
-                icon={Instagram} 
-                href="#" 
-                color="bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]" 
-                label="Instagram"
-              />
               <SocialLink 
                 icon={Facebook} 
                 href="https://www.facebook.com/share/1DJJ35Hq4k/" 
