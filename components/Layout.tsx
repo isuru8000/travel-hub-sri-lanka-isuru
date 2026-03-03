@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({
   onLogout
 }) => {
   return (
-    <div className="min-h-screen flex flex-col relative bg-white">
+    <div className="min-h-screen flex flex-col relative bg-white overflow-x-hidden w-full">
       <Navbar 
         language={language} 
         setLanguage={setLanguage} 
