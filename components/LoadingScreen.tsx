@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // Fix: Added implementation to Navbar.tsx to resolve module error for named export TravelHubLogo
-import AnimatedLogo from '../src/components/AnimatedLogo';
+import AnimatedLogo from './AnimatedLogo';
 import { ShieldCheck, Activity, Zap, Loader2, CheckCircle2 } from 'lucide-react';
 
 interface LoadingScreenProps {
@@ -10,20 +10,16 @@ interface LoadingScreenProps {
 
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter, language }) => {
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState(language === 'EN' ? 'Initializing Neural Uplink...' : 'සම්බන්ධතාවය ස්ථාපිත කරමින්...');
+  const [status, setStatus] = useState(language === 'EN' ? 'Loading...' : 'රැඳී සිටින්න...');
 
   const statuses = language === 'EN' ? [
-    'Scanning Heritage Terrain...',
-    'Syncing Ancient Metadata...',
-    'Calibrating Volumetric Mesh...',
-    'Optimizing Reality Buffer...',
-    'Ready for Integration.'
+    'Loading...',
+    'Almost there...',
+    'Ready.'
   ] : [
-    'භූමි දත්ත පිරික්සමින්...',
-    'පැරණි දත්ත සම්බන්ධ කරමින්...',
-    'ත්‍රිමාණ ජාලය සකසමින්...',
-    'යථාර්ථය සුමට කරමින්...',
-    'පද්ධතිය සූදානම්.'
+    'රැඳී සිටින්න...',
+    'සුදානම් වෙමින්...',
+    'සූදානම්.'
   ];
 
   useEffect(() => {
@@ -66,8 +62,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter, language }) => {
             Travel Hub
           </h2>
           <div className="flex items-center justify-center gap-4 text-[#0EA5E9] opacity-60">
-             <Activity size={14} className="animate-pulse" />
-             <span className="text-[10px] font-black uppercase tracking-[0.5em]">DIRECT_SYNC_CORE</span>
+             <span className="text-[10px] font-black uppercase tracking-[0.5em]">SRI LANKA</span>
           </div>
         </div>
 
@@ -89,7 +84,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onEnter, language }) => {
              <div className={`flex items-center gap-4 transition-all duration-500 ${progress === 100 ? 'text-green-500' : 'text-gray-300'}`}>
                 {progress === 100 ? <CheckCircle2 size={20} /> : <Loader2 size={16} className="animate-spin text-[#0EA5E9]" />}
                 <span className="text-[9px] font-black uppercase tracking-[0.4em]">
-                  {progress === 100 ? 'SYNCHRONIZED' : 'UPLINKING...'}
+                  {progress === 100 ? 'COMPLETED' : 'LOADING...'}
                 </span>
              </div>
         </div>

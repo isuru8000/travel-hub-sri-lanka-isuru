@@ -141,6 +141,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
   const [scrollProgress, setScrollProgress] = useState(0);
   const [nearbyResults, setNearbyResults] = useState<GroundingLink[]>([]);
   const [isSyncingNearby, setIsSyncingNearby] = useState(false);
+  const [deepDive, setDeepDive] = useState<any>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -154,6 +155,9 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
   useEffect(() => {
     if (destination) {
+      // Force scroll to top immediately
+      window.scrollTo(0, 0);
+      // Also try with behavior: 'instant' for modern browsers
       window.scrollTo({ top: 0, behavior: 'instant' });
 
       const fetchNearby = async () => {

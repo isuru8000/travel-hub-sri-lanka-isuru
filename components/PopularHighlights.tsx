@@ -118,9 +118,9 @@ const PopularHighlights: React.FC<PopularHighlightsProps> = ({ language, onSelec
   const highlights = DESTINATIONS.filter(d => popularIds.includes(d.id));
 
   return (
-    <section className="py-20 md:py-32 bg-white overflow-hidden" style={{ perspective: '3000px' }}>
+    <section className="py-10 md:py-20 bg-white overflow-hidden" style={{ perspective: '3000px' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16 md:mb-24 space-y-6 md:space-y-10 relative">
+        <div className="text-center mb-10 md:mb-16 space-y-4 md:space-y-8 relative">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-24 md:-translate-y-32 opacity-[0.02] text-black scale-[1.2] md:scale-[2]">
              <Compass size={250} className="md:w-[400px] md:h-[400px] animate-spin-slow" />
           </div>

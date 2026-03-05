@@ -184,7 +184,7 @@ const Quiz: React.FC<QuizProps> = ({ language, setView }) => {
                     onClick={() => setView('destinations')}
                     className="px-12 py-7 bg-white text-black rounded-[2.5rem] font-black text-xs uppercase tracking-[0.4em] flex items-center gap-6 hover:bg-[#0EA5E9] hover:text-white transition-all shadow-3xl active:scale-95 group/btn"
                    >
-                     Explore Nodes <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
+                     Explore Now <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
                    </button>
                    <button 
                     onClick={resetQuiz}

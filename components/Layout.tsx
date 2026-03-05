@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from './Navbar.tsx';
 import { Language, User } from '../types.ts';
 import { Facebook, Youtube, Music2, ShieldCheck, Sparkles, Radio } from 'lucide-react';
-import AnimatedLogo from '../src/components/AnimatedLogo';
+import AnimatedLogo from './AnimatedLogo';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -53,6 +53,28 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <div className="min-h-screen flex flex-col relative bg-white overflow-x-hidden w-full">
+      <style dangerouslySetInnerHTML={{ __html: `
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #333;
+          border-radius: 5px;
+          border: 2px solid #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+        /* Firefox */
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: #333 #0a0a0a;
+        }
+      `}} />
       <Navbar 
         language={language} 
         setLanguage={setLanguage} 
@@ -115,13 +137,7 @@ const Layout: React.FC<LayoutProps> = ({
               />
             </div>
             <div className="pt-4 flex flex-col gap-2">
-              <p className="text-[9px] font-black text-gray-300 uppercase tracking-[0.3em] leading-relaxed flex items-center gap-2">
-                <Radio size={12} className="text-[#E1306C] animate-pulse" />
-                SIGNAL STRENGTH: OPTIMAL
-              </p>
-              <p className="text-[9px] font-black text-gray-300 uppercase tracking-[0.3em] leading-relaxed pl-5">
-                LOCATION: COLOMBO_NODE_4.5
-              </p>
+              {/* Technical indicators removed for better user experience */}
             </div>
           </div>
         </div>

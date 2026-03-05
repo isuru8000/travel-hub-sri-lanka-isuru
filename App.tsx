@@ -35,6 +35,7 @@ import LoginModal from './components/LoginModal.tsx';
 import ScrollControls from './components/ScrollControls.tsx';
 import LockedView from './components/LockedView.tsx';
 import ComingSoonView from './components/ComingSoonView.tsx';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import Lenis from 'lenis';
 import { UI_STRINGS } from './constants.tsx';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
@@ -388,6 +389,7 @@ export default function App() {
 
   return (
     <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
+      <GoogleAnalytics view={view} />
       <div className="overflow-x-hidden transition-all duration-300">
         {renderContent()}
       </div>

@@ -36,7 +36,7 @@ import {
   Atom
 } from 'lucide-react';
 import { UI_STRINGS } from '../constants.tsx';
-import AnimatedLogo from '../src/components/AnimatedLogo';
+import AnimatedLogo from './AnimatedLogo';
 
 interface NavItem {
   id: string;
@@ -285,9 +285,8 @@ const Navbar: React.FC<NavbarProps> = ({
              
              {/* Decorative Footer info */}
              <div className="flex justify-center items-center gap-3 pt-2 opacity-20">
-                <Activity size={12} className="text-[#0EA5E9] animate-pulse" />
                 <span className="text-[7px] md:text-[8px] font-black text-white uppercase tracking-[0.4em] md:tracking-[0.6em]">
-                  {language === 'EN' ? 'Neural_Link_Stable_v4.5' : 'නාභිගත_සබැඳිය_ස්ථායී_v4.5'}
+                  {language === 'EN' ? 'Travel Hub Sri Lanka' : 'ට්‍රැවල් හබ් ශ්‍රී ලංකා'}
                 </span>
              </div>
           </div>

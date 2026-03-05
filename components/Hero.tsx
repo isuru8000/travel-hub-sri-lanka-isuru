@@ -47,7 +47,8 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   }, []);
 
   // User-provided cinematic aerial view of Sri Lanka
-  const heroBgImage = "https://i.pinimg.com/736x/1b/d0/51/1bd0512b368ea04b8f8a4f6ae6c89cac.jpg";
+  // Using thumbnail endpoint with max size (s16000) to get original quality
+  const heroBgImage = "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s16000";
 
   const mainTitleEN = "SRI LANKA";
   const mainTitleSI = "ශ්‍රී ලංකාව";
