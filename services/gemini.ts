@@ -2,6 +2,28 @@
 import { GoogleGenAI, Type, ThinkingLevel } from "@google/genai";
 import { Language } from "../types.ts";
 
+// Helper to get the API key safely across different environments (AI Studio vs Vercel)
+const getApiKey = (): string => {
+  // 1. Try Vite environment variable (for Vercel/local deployments)
+  if (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
+    return import.meta.env.VITE_GEMINI_API_KEY;
+  }
+  // 2. Fallback to process.env (for AI Studio environment)
+  if (typeof process !== 'undefined' && process.env) {
+    const key = process.env.API_KEY || process.env.GEMINI_API_KEY;
+    if (key) return key;
+  }
+  
+  // 3. Last resort check for Vercel injected envs on window if available
+  // Sometimes Vercel injects envs differently in certain build configs
+  if (typeof window !== 'undefined' && (window as any)._env_ && (window as any)._env_.VITE_GEMINI_API_KEY) {
+    return (window as any)._env_.VITE_GEMINI_API_KEY;
+  }
+
+  console.warn("Gemini API Key is missing. Please check Vercel Environment Variables.");
+  return '';
+};
+
 export interface GroundingLink {
   title: string;
   uri: string;
@@ -89,7 +111,7 @@ export function encode(bytes: Uint8Array): string {
  */
 export const analyzeFoodImage = async (base64Image: string, language: Language): Promise<string> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const model = 'gemini-2.5-flash';
     
     const prompt = `
@@ -161,7 +183,7 @@ export function createPcmBlob(data: Float32Array): { data: string; mimeType: str
  */
 export const getWeatherUpdate = async (location: string, language: Language): Promise<WeatherData | null> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const result = await ai.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: [{ parts: [{ text: `Search for the current weather in ${location}, Sri Lanka. Provide exactly these values in this order, separated by pipe symbols (|): Temperature (Celsius with symbol), Condition (One word), Humidity (%), Wind Speed (km/h), UV Index (number), Visibility (km), and a short poetic atmospheric vibe in ${language === 'SI' ? 'Sinhala' : 'English'}. Format: 28°C|Partially Cloudy|65%|10km/h|5|10km|A tropical embrace. Do not include any other text.` }] }],
@@ -211,7 +233,7 @@ export const getWeatherUpdate = async (location: string, language: Language): Pr
  */
 export const getDestinationDeepDive = async (destinationName: string, language: Language): Promise<DestinationDeepDive | null> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const result = await ai.models.generateContent({
       model: 'gemini-3.1-pro-preview',
       contents: [{ parts: [{ text: `You are the "Master Archivist" for Travel Hub Sri Lanka. Provide a structured, comprehensive, high-fidelity deep-dive for: ${destinationName}. Use poetic yet informative language. Language: ${language === 'SI' ? 'Sinhala' : 'English'}.` }] }],
@@ -274,7 +296,7 @@ export async function* streamLankaGuideResponse(
   image?: { data: string; mimeType: string }
 ): AsyncGenerator<AIResponse> {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     
     const systemInstruction = `
       You are "Lanka Guide AI", a prestige travel intelligence unit for "Travel Hub Sri Lanka". 
@@ -348,7 +370,7 @@ export async function* streamLankaGuideResponse(
       yield { text: "API_KEY_REQUIRED", links: [], error: "API_KEY_REQUIRED" };
       return;
     }
-    yield { text: "Neural link interrupted. Please retry.", links: [], error: errMsg };
+    yield { text: `Neural link interrupted. Please retry. (Error: ${errMsg})`, links: [], error: errMsg };
   }
 }
 
@@ -383,7 +405,7 @@ export const getLankaGuideResponse = async (
   // However, to be safe, let's just use generateContent for the non-streaming version to match original behavior exactly.
   
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const systemInstruction = `
       You are "Lanka Guide AI", a prestige travel intelligence unit for "Travel Hub Sri Lanka". 
       ${isThinkingMode ? 'You are currently in DEEP THINKING MODE, utilizing maximum neural resources to solve complex travel queries.' : 'You use real-time Google Maps data to provide accurate, up-to-date information.'}
@@ -427,7 +449,7 @@ export const getLankaGuideResponse = async (
     if (errMsg.includes("Requested entity was not found.") || errMsg.includes("403")) {
       return { text: "API_KEY_REQUIRED", links: [], error: "API_KEY_REQUIRED" };
     }
-    return "Neural link interrupted. Please retry.";
+    return `Neural link interrupted. Please retry. (Error: ${errMsg})`;
   }
 };
 
@@ -436,7 +458,7 @@ export const getLankaGuideResponse = async (
  */
 export const searchGrounding = async (query: string, language: Language, isThinkingMode: boolean = true): Promise<AIResponse> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const response = await ai.models.generateContent({
       model: "gemini-3.1-pro-preview",
       contents: [{ parts: [{ text: query }] }],
@@ -469,7 +491,7 @@ export const searchGrounding = async (query: string, language: Language, isThink
  */
 export const refineTravelStory = async (story: string, language: Language): Promise<string> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
       contents: [{ parts: [{ text: `Refine this story to be more poetic: "${story}"` }] }],
@@ -485,7 +507,7 @@ export const refineTravelStory = async (story: string, language: Language): Prom
  */
 export const generateDetailedItinerary = async (destination: string, language: Language): Promise<string> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const response = await ai.models.generateContent({
       model: 'gemini-3.1-pro-preview',
       contents: [{ parts: [{ text: `Create a detailed 3-day itinerary for ${destination}.` }] }],

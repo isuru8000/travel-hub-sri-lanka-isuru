@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Language, User, Destination } from './types.ts';
+import { Language, User, Destination, View } from './types.ts';
 import Layout from './components/Layout.tsx';
 import Hero from './components/Hero.tsx';
 import PopularHighlights from './components/PopularHighlights.tsx';
@@ -38,8 +38,6 @@ import GoogleAnalytics from './components/GoogleAnalytics';
 import Lenis from 'lenis';
 import { UI_STRINGS } from './constants.tsx';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
-
-type View = 'home' | 'destinations' | 'map' | 'hotels' | 'transport' | 'booking-destinations' | 'about' | 'foods' | 'music' | 'interests' | 'medicine' | 'phrases' | 'essentials' | 'festivals' | 'memories' | 'quiz' | 'vr-experience' | 'vr-showcase' | 'search' | 'contact' | 'marketplace' | 'community' | 'shop' | 'destination-detail' | 'vr-trip' | 'vr-portal' | 'trip-planner';
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('EN');

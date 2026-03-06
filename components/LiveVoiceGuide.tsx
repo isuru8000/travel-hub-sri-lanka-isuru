@@ -51,7 +51,17 @@ const LiveVoiceGuide: React.FC<LiveVoiceGuideProps> = ({ language }) => {
       setError(null);
       setIsConnecting(true);
       
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const getApiKey = (): string => {
+        if (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
+          return import.meta.env.VITE_GEMINI_API_KEY;
+        }
+        if (typeof process !== 'undefined' && process.env) {
+          return process.env.API_KEY || process.env.GEMINI_API_KEY || '';
+        }
+        return '';
+      };
+      
+      const ai = new GoogleGenAI({ apiKey: getApiKey() });
       
       const stream = await navigator.mediaDevices.getUserMedia({ 
         audio: {

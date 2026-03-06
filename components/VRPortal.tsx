@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Language } from '../types';
+import { Language, View } from '../types';
 import { Play, CreditCard, Users, Clock, ShieldCheck, ChevronLeft, MessageCircle, Send, Eye, Radio, Calendar, MapPin } from 'lucide-react';
+import StripePaymentModal from './StripePaymentModal';
 
 interface VRPortalProps {
   language: Language;
-  setView: (view: string) => void;
+  setView: (view: View) => void;
 }
 
 const vrTours = [
@@ -63,7 +64,7 @@ const vrTours = [
 const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
   const [selectedTour, setSelectedTour] = useState<any>(null);
   const [hasTicket, setHasTicket] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [chatMessage, setChatMessage] = useState('');
   const [chatMessages, setChatMessages] = useState([
     { id: 1, user: 'Kamal', text: 'Wow, the view is amazing!', time: '10:02 AM' },
@@ -71,11 +72,12 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
   ]);
 
   const handleBuyTicket = () => {
-    setIsProcessing(true);
-    setTimeout(() => {
-      setIsProcessing(false);
-      setHasTicket(true);
-    }, 1500);
+    setShowPaymentModal(true);
+  };
+
+  const handlePaymentSuccess = () => {
+    setShowPaymentModal(false);
+    setHasTicket(true);
   };
 
   const handleSendMessage = (e: React.FormEvent) => {
@@ -92,6 +94,7 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
   const resetSelection = () => {
     setSelectedTour(null);
     setHasTicket(false);
+    setShowPaymentModal(false);
   };
 
   // 1. SELECTOR SCREEN
@@ -276,6 +279,15 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
   // 3. TICKET PURCHASE SCREEN
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white pt-24 pb-12 px-4 relative overflow-hidden">
+      {showPaymentModal && (
+        <StripePaymentModal 
+          amount={selectedTour.price} 
+          onSuccess={handlePaymentSuccess} 
+          onClose={() => setShowPaymentModal(false)}
+          title={`Ticket: ${selectedTour.title[language]}`}
+        />
+      )}
+
       <div className="absolute inset-0 z-0">
         <img 
           src={selectedTour.image} 
@@ -349,17 +361,10 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
 
             <button 
               onClick={handleBuyTicket}
-              disabled={isProcessing}
-              className="w-full py-4 bg-white text-black rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:hover:scale-100"
+              className="w-full py-4 bg-white text-black rounded-full font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              {isProcessing ? (
-                <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
-                  <CreditCard size={18} />
-                  {language === 'EN' ? 'Purchase Ticket' : 'ප්‍රවේශපත්‍රය මිලදී ගන්න'}
-                </>
-              )}
+              <CreditCard size={18} />
+              {language === 'EN' ? 'Purchase Ticket' : 'ප්‍රවේශපත්‍රය මිලදී ගන්න'}
             </button>
 
             <div className="mt-6 flex items-center justify-center gap-2 text-xs text-gray-500">

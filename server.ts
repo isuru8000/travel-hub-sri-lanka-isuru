@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import axios from "axios";
 import path from "path";
 import { fileURLToPath } from "url";
+import Stripe from "stripe";
 
 dotenv.config();
 
@@ -15,11 +16,42 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  // Initialize Stripe
+  // Note: In a real app, you must provide the STRIPE_SECRET_KEY in your .env file
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
+
   app.use(express.json());
   app.use(cookieParser());
 
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok" });
+  });
+
+  app.post("/api/create-payment-intent", async (req, res) => {
+    try {
+      const { amount, currency = "usd" } = req.body;
+      
+      if (!process.env.STRIPE_SECRET_KEY) {
+        // Mock response for demo purposes if no key is provided
+        return res.json({ 
+          clientSecret: "mock_secret_" + Date.now(),
+          mock: true
+        });
+      }
+
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: Math.round(amount * 100), // Stripe expects amount in cents
+        currency,
+        automatic_payment_methods: {
+          enabled: true,
+        },
+      });
+
+      res.json({ clientSecret: paymentIntent.client_secret });
+    } catch (error: any) {
+      console.error("Stripe error:", error);
+      res.status(500).json({ error: error.message });
+    }
   });
 
   app.get("/api/auth/google/url", (req, res) => {
