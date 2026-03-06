@@ -186,29 +186,49 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
 
         if (chunk.error === "API_KEY_REQUIRED") {
           setNeedsApiKey(true);
-          // Remove the empty bot message if we failed
           setMessages(prev => prev.slice(0, -1));
           setIsLoading(false);
           return;
         }
 
-        if (chunk.text) {
-          accumulatedText += chunk.text;
-        }
         if (chunk.links) {
           accumulatedLinks = [...accumulatedLinks, ...chunk.links];
         }
 
-        setMessages(prev => {
-          const updated = [...prev];
-          updated[updated.length - 1] = {
-            role: 'bot',
-            text: accumulatedText,
-            links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
-            isThinking: isDeepMode
-          };
-          return updated;
-        });
+        if (chunk.text) {
+          // Smooth typing effect: process character by character
+          const chars = Array.from(chunk.text);
+          for (const char of chars) {
+            if (stopTypingRef.current) break;
+            accumulatedText += char;
+            
+            setMessages(prev => {
+              const updated = [...prev];
+              updated[updated.length - 1] = {
+                role: 'bot',
+                text: accumulatedText,
+                links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
+                isThinking: isDeepMode
+              };
+              return updated;
+            });
+            
+            // Delay for smoothness (adjust ms as needed, e.g., 15-20ms)
+            await new Promise(resolve => setTimeout(resolve, 15));
+          }
+        } else {
+          // If no text but links/metadata changed, update anyway
+          setMessages(prev => {
+            const updated = [...prev];
+            updated[updated.length - 1] = {
+              role: 'bot',
+              text: accumulatedText,
+              links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
+              isThinking: isDeepMode
+            };
+            return updated;
+          });
+        }
       }
     } catch (error) {
       console.error("Stream error:", error);
