@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Sparkles, X, Send, Compass, Loader2, History, Info, Square, Zap, Cpu, ShieldCheck, MapPin, ExternalLink, Brain, Globe, Bot, Navigation, Lock, Orbit, Activity, Camera, Image as ImageIcon, Trash2 } from 'lucide-react';
+import { Sparkles, X, Send, Compass, Loader2, History, Info, Square, Zap, Cpu, ShieldCheck, MapPin, ExternalLink, Brain, Globe, Bot, Navigation, Lock, Orbit, Activity, Camera, Image as ImageIcon, Trash2, Gem } from 'lucide-react';
 import { Language } from '../types.ts';
 import { UI_STRINGS } from '../constants.tsx';
 import { streamLankaGuideResponse, GroundingLink, ChatMessage } from '../services/gemini.ts';
@@ -263,7 +263,8 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
           <div className="relative z-10 flex items-center justify-center">
              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 backdrop-blur-xl rounded-full border border-white/10 flex items-center justify-center shadow-2xl relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0EA5E9]/20 to-transparent animate-pulse"></div>
-                <Navigation size={24} className="text-white relative z-10 group-hover:rotate-[360deg] transition-transform duration-1000 ease-in-out sm:w-7 sm:h-7" />
+                <Gem size={24} className="text-white relative z-10 group-hover:scale-110 transition-transform duration-500 sm:w-6 sm:h-6 drop-shadow-[0_0_8px_rgba(14,165,233,0.6)]" />
+                <Sparkles size={10} className="absolute top-2 right-2 text-[#0EA5E9] animate-ping" />
              </div>
              
              {/* Orbital Ring */}
@@ -282,25 +283,28 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
             <div className="relative flex justify-between items-center">
               <div className="flex items-center gap-6">
                 <div className="relative">
-                   <div className="w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#0EA5E9] via-cyan-500 to-blue-500 shadow-3xl animate-spin-slow">
+                   <div className={`w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#0EA5E9] via-cyan-500 to-blue-500 shadow-3xl ${isLoading || isTyping ? 'animate-spin' : 'animate-spin-slow'}`}>
                       <div className="bg-[#0a0a0a] w-full h-full rounded-full flex items-center justify-center overflow-hidden relative">
                          <div className="absolute inset-0 bg-gradient-to-tr from-[#0EA5E9]/20 to-transparent animate-pulse" />
                       </div>
                    </div>
                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Navigation 
-                        size={32} 
-                        className={`text-white transition-all duration-1000 ${
-                          (isLoading || isTyping) ? 'animate-talking-bot scale-110' : 'animate-floating-bot'
-                        }`} 
-                      />
+                      <div className={`relative ${isLoading || isTyping ? 'animate-gem-shake' : 'animate-floating-bot'}`}>
+                        <Gem 
+                          size={28} 
+                          className={`transition-all duration-1000 ${
+                            (isLoading || isTyping) ? 'text-[#0EA5E9] drop-shadow-[0_0_15px_rgba(14,165,233,1)]' : 'text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]'
+                          }`} 
+                        />
+                        <Sparkles size={14} className="absolute -top-2 -right-2 text-yellow-400 animate-ping" />
+                      </div>
                    </div>
-                   <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 border-4 border-[#0a0a0a] rounded-full shadow-2xl"></div>
+                   <div className={`absolute -bottom-1 -right-1 w-5 h-5 border-4 border-[#0a0a0a] rounded-full shadow-2xl transition-colors duration-500 ${isLoading || isTyping ? 'bg-[#0EA5E9] animate-pulse' : 'bg-green-500'}`}></div>
                 </div>
                 <div>
                   <div className="flex items-center gap-3">
-                     <h3 className="font-heritage font-black text-3xl tracking-tighter uppercase leading-none">
-                       Lanka AI
+                     <h3 className="font-heritage font-black text-3xl tracking-tighter uppercase leading-none bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white/80 animate-pulse">
+                       Ceylon AI
                      </h3>
                      <button 
                        onClick={() => setIsDeepMode(!isDeepMode)}
@@ -534,16 +538,14 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-8px) rotate(2deg); }
         }
-        @keyframes talking-bot {
+        @keyframes gem-shake {
           0%, 100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
-          25% { transform: scale(1.1) rotate(-5deg); filter: brightness(1.2); }
-          75% { transform: scale(1.1) rotate(5deg); filter: brightness(1.2); }
+          25% { transform: scale(1.1) rotate(-10deg); filter: brightness(1.3); }
+          50% { transform: scale(1.15) rotate(10deg); filter: brightness(1.5); }
+          75% { transform: scale(1.1) rotate(-5deg); filter: brightness(1.3); }
         }
-        .animate-floating-bot {
-          animation: floating-bot 4s ease-in-out infinite;
-        }
-        .animate-talking-bot {
-          animation: talking-bot 0.4s ease-in-out infinite;
+        .animate-gem-shake {
+          animation: gem-shake 0.5s ease-in-out infinite;
         }
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
