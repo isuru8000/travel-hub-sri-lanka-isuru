@@ -389,7 +389,7 @@ export default function App() {
         {renderContent()}
       </div>
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
-      <AIModal language={language} />
+      <AIModal language={language} onNavigate={navigateToDestination} />
       <ScrollControls />
     </Layout>
   );

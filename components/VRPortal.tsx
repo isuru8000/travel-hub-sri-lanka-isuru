@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Language, View } from '../types';
-import { Play, CreditCard, Users, Clock, ShieldCheck, ChevronLeft, MessageCircle, Send, Eye, Radio, Calendar, MapPin } from 'lucide-react';
+import { Play, CreditCard, Users, Clock, ShieldCheck, ChevronLeft, MessageCircle, Send, Eye, Radio, Calendar, MapPin, Lock } from 'lucide-react';
 import StripePaymentModal from './StripePaymentModal';
 
 interface VRPortalProps {
@@ -70,6 +70,50 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
     { id: 1, user: 'Kamal', text: 'Wow, the view is amazing!', time: '10:02 AM' },
     { id: 2, user: 'Sarah', text: 'Can the guide show that again?', time: '10:05 AM' },
   ]);
+
+  // LOCK OVERRIDE: Force "Coming Soon" view
+  const isLocked = true;
+
+  if (isLocked) {
+    return (
+      <div className="min-h-screen bg-[#0a0a0a] text-white pt-24 pb-12 px-4 relative overflow-hidden flex items-center justify-center">
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0">
+           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1626387346567-2cd2dc03d3ce?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-20 blur-sm scale-110"></div>
+           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent"></div>
+        </div>
+
+        {/* Locked Overlay Content */}
+        <div className="relative z-50 flex flex-col items-center justify-center text-center max-w-2xl mx-auto p-8">
+            <div className="w-24 h-24 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-8 shadow-[0_0_60px_rgba(14,165,233,0.15)] animate-pulse">
+                <Lock size={40} className="text-[#0EA5E9]" />
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-heritage font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+                {language === 'EN' ? 'Portal Locked' : 'ද්වාරය අගුළු දමා ඇත'}
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-400 mb-10 font-light leading-relaxed">
+                {language === 'EN' 
+                    ? 'This immersive VR experience is currently under construction by our neural architects. Access will be granted soon.' 
+                    : 'මෙම VR අත්දැකීම දැනට අපගේ ඉංජිනේරුවන් විසින් නිර්මාණය කරමින් පවතී. ළඟදීම ඔබට විවෘත වනු ඇත.'}
+            </p>
+            
+            <div className="flex items-center gap-3 px-6 py-2.5 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 text-[#0EA5E9] font-mono text-xs md:text-sm uppercase tracking-[0.2em] mb-12">
+                <div className="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse" />
+                Coming Soon
+            </div>
+            
+            <button 
+                onClick={() => setView('home')}
+                className="px-10 py-4 bg-white text-black rounded-full font-black uppercase tracking-[0.2em] hover:scale-105 transition-transform shadow-2xl hover:shadow-white/20"
+            >
+                {language === 'EN' ? 'Return to Home' : 'ආපසු මුල් පිටුවට'}
+            </button>
+        </div>
+      </div>
+    );
+  }
 
   const handleBuyTicket = () => {
     setShowPaymentModal(true);

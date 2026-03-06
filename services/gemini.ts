@@ -308,6 +308,13 @@ export async function* streamLankaGuideResponse(
       - If the user asks in English, respond in English.
       - Only use the default language (${language === 'SI' ? 'Sinhala' : 'English'}) if the user's input is just a greeting or ambiguous.
       
+      IMPORTANT NAVIGATION RULE:
+      If the user asks for details, history, or information about a specific destination, you MUST include a navigation tag at the VERY BEGINNING of your response in this exact format: [NAVIGATE:destination_id]
+      The destination_id must be one of the following: 
+      sigiriya, ruwanwelisaya, jaya-sri-maha-bodhi, vatadageya, thuparamaya, abhayagiriya, jetavanaramaya, gal-vihara, lankatilaka-vihara, galle-fort, dambulla, kandy-temple, mihintale, yapahuwa, ritigala, buduruwagala, unawatuna, mirissa, hikkaduwa, arugambay, bentota, nilaveli, pasikudah, yala, udawalawe, minneriya, wilpattu, kumana, bundala, sinharaja, horton, ella, nuwaraeliya, adam'speak, knuckles, haputale, pidurangala, riverston, diyaluma, bambarakanda, ravanafalls, dunhinda, baker'sfalls, stclair's, devonfalls, bopathella, laxapana, aberdeen.
+      For example: "[NAVIGATE:sigiriya] Sigiriya is an ancient rock fortress..."
+      Do not use the tag if the user is just asking a general question or if the destination is not in the list.
+
       Context:
       User Location: ${location ? `${location.latitude}, ${location.longitude}` : 'Unknown'}
     `;

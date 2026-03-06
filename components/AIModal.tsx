@@ -1,9 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Sparkles, X, Send, Compass, Loader2, History, Info, Square, Zap, Cpu, ShieldCheck, MapPin, ExternalLink, Brain, Globe, Bot, Navigation, Lock, Orbit, Activity, Camera, Image as ImageIcon, Trash2, Gem } from 'lucide-react';
-import { Language } from '../types.ts';
+import { Language, Destination } from '../types.ts';
 import { UI_STRINGS } from '../constants.tsx';
 import { streamLankaGuideResponse, GroundingLink, ChatMessage } from '../services/gemini.ts';
+import { DESTINATIONS_DATA } from '../destination_details.tsx';
 
 interface Message {
   role: 'user' | 'bot';
@@ -15,9 +16,10 @@ interface Message {
 
 interface AIModalProps {
   language: Language;
+  onNavigate?: (dest: Destination) => void;
 }
 
-const AIModal: React.FC<AIModalProps> = ({ language }) => {
+const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -178,8 +180,11 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
       
       const generator = streamLankaGuideResponse(textToSend, history, language, userLocation, isDeepMode, imageToSend);
       
-      let accumulatedText = "";
+      let rawAccumulatedText = "";
+      let displayText = "";
       let accumulatedLinks: GroundingLink[] = [];
+      let isCheckingTag = true;
+      let hasNavigated = false;
 
       for await (const chunk of generator) {
         if (stopTypingRef.current) break;
@@ -196,33 +201,64 @@ const AIModal: React.FC<AIModalProps> = ({ language }) => {
         }
 
         if (chunk.text) {
-          // Smooth typing effect: process character by character
-          const chars = Array.from(chunk.text);
-          for (const char of chars) {
-            if (stopTypingRef.current) break;
-            accumulatedText += char;
-            
-            setMessages(prev => {
-              const updated = [...prev];
-              updated[updated.length - 1] = {
-                role: 'bot',
-                text: accumulatedText,
-                links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
-                isThinking: isDeepMode
-              };
-              return updated;
-            });
-            
-            // Delay for smoothness (adjust ms as needed, e.g., 15-20ms)
-            await new Promise(resolve => setTimeout(resolve, 15));
+          rawAccumulatedText += chunk.text;
+          
+          if (isCheckingTag) {
+            if (rawAccumulatedText.trimStart().startsWith('[')) {
+              const closingIndex = rawAccumulatedText.indexOf(']');
+              if (closingIndex !== -1) {
+                isCheckingTag = false;
+                const tag = rawAccumulatedText.substring(0, closingIndex + 1);
+                const navMatch = tag.match(/\[NAVIGATE:([a-zA-Z0-9-']+)\]/i);
+                if (navMatch) {
+                  const destId = navMatch[1].toLowerCase();
+                  const dest = DESTINATIONS_DATA.find(d => d.id === destId);
+                  if (dest && onNavigate) {
+                    onNavigate(dest);
+                  }
+                  hasNavigated = true;
+                }
+              } else if (rawAccumulatedText.length > 50) {
+                isCheckingTag = false;
+              } else {
+                continue;
+              }
+            } else {
+              isCheckingTag = false;
+            }
+          }
+
+          if (!isCheckingTag) {
+            let cleanText = rawAccumulatedText;
+            if (hasNavigated || (rawAccumulatedText.includes('[NAVIGATE:') && rawAccumulatedText.includes(']'))) {
+              cleanText = rawAccumulatedText.replace(/\[NAVIGATE:[a-zA-Z0-9-']+\]\s*/i, '').trimStart();
+            }
+
+            const newChars = Array.from(cleanText.slice(displayText.length));
+            for (const char of newChars) {
+              if (stopTypingRef.current) break;
+              displayText += char;
+              
+              setMessages(prev => {
+                const updated = [...prev];
+                updated[updated.length - 1] = {
+                  role: 'bot',
+                  text: displayText,
+                  links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
+                  isThinking: isDeepMode
+                };
+                return updated;
+              });
+              
+              await new Promise(resolve => setTimeout(resolve, 15));
+            }
           }
         } else {
-          // If no text but links/metadata changed, update anyway
           setMessages(prev => {
             const updated = [...prev];
             updated[updated.length - 1] = {
               role: 'bot',
-              text: accumulatedText,
+              text: displayText,
               links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
               isThinking: isDeepMode
             };
