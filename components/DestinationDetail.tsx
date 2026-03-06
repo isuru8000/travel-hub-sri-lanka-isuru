@@ -83,11 +83,11 @@ const LiveWeatherWidget: React.FC<{ destinationName: string; language: Language 
   }, [destinationName, language]);
 
   return (
-    <div className="fixed top-[110px] right-6 md:right-12 z-[90] animate-in slide-in-from-right-8 duration-1000">
+    <div className="fixed top-24 right-4 md:top-[110px] md:right-12 z-[90] animate-in slide-in-from-right-8 duration-1000">
       <div className={`relative p-[1px] rounded-full overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all ${weather?.isThrottled ? 'shadow-orange-500/20' : ''}`}>
         <div className={`absolute inset-[-400%] bg-[conic-gradient(from_0deg,transparent_0,transparent_40%,${weather?.isThrottled ? '#f97316' : '#0EA5E9'}_50%,transparent_60%,transparent_100%)] animate-border-spin opacity-40 group-hover:opacity-100 transition-opacity duration-700`} />
         
-        <div className="relative bg-black/40 backdrop-blur-2xl rounded-full px-5 py-2.5 flex items-center gap-4 group transition-all hover:bg-black/60">
+        <div className="relative bg-black/40 backdrop-blur-2xl rounded-full px-4 py-2 md:px-5 md:py-2.5 flex items-center gap-3 md:gap-4 group transition-all hover:bg-black/60">
           {loading ? (
             <div className="flex items-center gap-2">
               <Loader2 size={12} className="animate-spin text-[#0EA5E9]" />
@@ -217,31 +217,33 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         />
         <div className="absolute inset-0 bg-gradient-to-t from-white via-black/30 to-transparent" />
         
-        <div className="absolute top-0 left-0 right-0 p-6 md:p-12 z-50 flex justify-between items-center">
-          <button onClick={onBack} className="flex items-center gap-4 px-8 py-4 bg-black/50 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all group shadow-2xl">
-            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> {UI_STRINGS.returnToRegistry[language]}
+        <div className="absolute top-0 left-0 right-0 p-4 md:p-12 z-50 flex justify-between items-center">
+          <button onClick={onBack} className="flex items-center gap-2 md:gap-4 px-5 py-3 md:px-8 md:py-4 bg-black/50 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-white hover:text-black transition-all group shadow-2xl active:scale-95">
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform md:w-[18px] md:h-[18px]" /> 
+            <span className="hidden sm:inline">{UI_STRINGS.returnToRegistry[language]}</span>
+            <span className="sm:hidden">Back</span>
           </button>
         </div>
 
-        <div className="absolute bottom-24 left-0 right-0 px-6 md:px-16 z-30">
-          <div className="max-w-7xl mx-auto space-y-8">
-            <div className="flex flex-wrap items-center justify-between gap-6">
-               <div className="flex flex-wrap items-center gap-4">
-                 <div className="px-6 py-2 bg-[#0EA5E9] text-white rounded-full text-[10px] font-black uppercase tracking-[0.4em] border border-white/20 shadow-xl">
+        <div className="absolute bottom-16 md:bottom-24 left-0 right-0 px-4 md:px-16 z-30">
+          <div className="max-w-7xl mx-auto space-y-4 md:space-y-8">
+            <div className="flex flex-wrap items-center justify-between gap-4 md:gap-6">
+               <div className="flex flex-wrap items-center gap-2 md:gap-4">
+                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-[#0EA5E9] text-white rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/20 shadow-xl">
                    ACTIVE NODE
                  </div>
-                 <div className="px-6 py-2 bg-black/40 backdrop-blur-3xl text-white rounded-full text-[10px] font-black uppercase tracking-[0.4em] border border-white/20 flex items-center gap-3 shadow-xl">
-                   <CatIcon size={14} style={{ color: config.color }} />
+                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-black/40 backdrop-blur-3xl text-white rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/20 flex items-center gap-2 md:gap-3 shadow-xl">
+                   <CatIcon size={12} className="md:w-3.5 md:h-3.5" style={{ color: config.color }} />
                    {destination.category.toUpperCase()}
                  </div>
                </div>
             </div>
             
-            <div className="space-y-4">
-               <h1 className="text-4xl md:text-7xl lg:text-8xl font-heritage font-bold text-white leading-[0.9] tracking-tighter drop-shadow-2xl max-w-5xl">
+            <div className="space-y-2 md:space-y-4">
+               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heritage font-bold text-white leading-[0.9] tracking-tighter drop-shadow-2xl max-w-5xl">
                  {destination.name[language]}
                </h1>
-               <div className="text-xl md:text-3xl text-white/90 font-light italic border-l-[4px] pl-8 max-w-3xl py-2 drop-shadow-lg" style={{ borderColor: config.color }}>
+               <div className="text-lg sm:text-xl md:text-3xl text-white/90 font-light italic border-l-[3px] md:border-l-[4px] pl-4 md:pl-8 max-w-3xl py-1 md:py-2 drop-shadow-lg" style={{ borderColor: config.color }}>
                  {destination.shortStory[language]}
                </div>
             </div>
@@ -280,26 +282,26 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                        </div>
                     </div>
 
-                    <div className="flex overflow-x-auto no-scrollbar gap-8 md:gap-12 pb-6 px-2 scroll-smooth">
+                    <div className="flex overflow-x-auto no-scrollbar gap-6 md:gap-12 pb-6 px-2 scroll-smooth snap-x snap-mandatory">
                         {destination.nearbyAttractions.map((att, idx) => (
                           <div 
                             key={att.id} 
-                            className="shrink-0 group cursor-pointer flex flex-col items-center gap-4"
+                            className="shrink-0 group cursor-pointer flex flex-col items-center gap-3 md:gap-4 snap-center"
                             onClick={() => handleNearbyClick(att.id)}
                           >
-                            <div className="relative w-24 h-24 md:w-32 md:h-32">
+                            <div className="relative w-20 h-20 md:w-32 md:h-32">
                                 <div className="absolute inset-[-4px] border border-dashed border-[#E1306C]/20 rounded-full animate-spin-slow opacity-40 group-hover:opacity-100 group-hover:border-[#E1306C] transition-all" />
                                 <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl border-2 border-white transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl">
                                   <img src={att.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
                                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-20 group-hover:opacity-0 transition-opacity" />
                                 </div>
-                                <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#0a0a0a] text-white rounded-full flex items-center justify-center border border-white shadow-lg text-[7px] font-black group-hover:bg-[#E1306C] transition-colors">
+                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-[#0a0a0a] text-white rounded-full flex items-center justify-center border border-white shadow-lg text-[6px] md:text-[7px] font-black group-hover:bg-[#E1306C] transition-colors">
                                   0{idx + 1}
                                 </div>
                             </div>
-                            <div className="text-center space-y-1 max-w-[120px]">
-                                <h4 className="text-xs font-heritage font-bold text-[#0a0a0a] uppercase tracking-tight leading-tight line-clamp-1 group-hover:text-[#E1306C] transition-colors">{att.name[language]}</h4>
-                                <p className="text-[7px] font-black text-gray-300 uppercase tracking-widest">{language === 'EN' ? 'EXPLORE' : 'ගවේෂණය'}</p>
+                            <div className="text-center space-y-1 max-w-[100px] md:max-w-[120px]">
+                                <h4 className="text-[10px] md:text-xs font-heritage font-bold text-[#0a0a0a] uppercase tracking-tight leading-tight line-clamp-2 md:line-clamp-1 group-hover:text-[#E1306C] transition-colors">{att.name[language]}</h4>
+                                <p className="text-[6px] md:text-[7px] font-black text-gray-300 uppercase tracking-widest">{language === 'EN' ? 'EXPLORE' : 'ගවේෂණය'}</p>
                             </div>
                           </div>
                         ))}
@@ -320,9 +322,9 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                     </div>
 
                     <div className="relative group">
-                       <div className={`absolute -left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
-                       <div className="font-space text-lg md:text-xl text-gray-600 leading-loose space-y-8 antialiased font-light text-justify relative z-10">
-                          <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
+                       <div className={`absolute -left-4 md:-left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
+                       <div className="font-space text-base md:text-xl text-gray-600 leading-relaxed md:leading-loose space-y-6 md:space-y-8 antialiased font-light text-justify relative z-10 pl-2 md:pl-0">
+                          <div className={`prose-container first-letter:text-4xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
                           {(() => {
                              const content = deepDive?.history || destination.detailedAbout?.[language];
                              if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;

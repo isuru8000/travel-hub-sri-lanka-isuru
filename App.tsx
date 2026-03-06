@@ -16,8 +16,7 @@ import CategoriesSection from './components/CategoriesSection.tsx';
 import StorySection from './components/StorySection.tsx';
 import AIModal from './components/AIModal.tsx';
 import IslandMapManifold from './components/IslandMapManifold.tsx';
-import VRTripFuture from './components/VRTripFuture.tsx';
-import VRComingSoon from './components/VRComingSoon.tsx';
+import VRPortal from './components/VRPortal.tsx';
 import TripPlanner from './components/TripPlanner.tsx';
 import NexusRewards from './components/NexusRewards.tsx';
 import Marketplace from './components/Marketplace.tsx';
@@ -158,9 +157,7 @@ export default function App() {
       case 'map':
         return <IslandMapManifold language={language} onSelectDestination={navigateToDestination} />;
       case 'vr-trip':
-        return <VRTripFuture language={language} setView={setView} />;
-      case 'vr-portal':
-        return <VRComingSoon language={language} setView={setView} />;
+        return <VRPortal language={language} setView={setView} />;
       case 'trip-planner':
         return <ComingSoonView language={language} setView={setView} title={language === 'EN' ? 'Trip Architect' : 'සංචාරක සැලසුම්කරු'} />;
       case 'community':
@@ -232,21 +229,21 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="py-12 md:py-20 flex flex-col md:flex-row justify-center bg-white border-y border-gray-100 gap-4 md:gap-8 px-6"
+                className="py-8 md:py-20 flex flex-col md:flex-row justify-center bg-white border-y border-gray-100 gap-4 md:gap-8 px-6"
               >
                 <button 
                   onClick={() => setView('map')}
-                  className="group relative px-8 py-5 md:px-12 md:py-6 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-2xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
+                  className="group relative px-6 py-4 md:px-12 md:py-6 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-2xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity" />
-                  <MapIcon size={18} className="text-cyan-400 group-hover:rotate-12 transition-transform md:w-5 md:h-5" />
+                  <MapIcon size={16} className="text-cyan-400 group-hover:rotate-12 transition-transform md:w-5 md:h-5" />
                   {UI_STRINGS.initializeMap[language]}
                   <ArrowRight size={14} className="md:w-4 md:h-4" />
                 </button>
 
                 <button 
                   onClick={() => setView('trip-planner')}
-                  className="group relative px-8 py-5 md:px-12 md:py-6 bg-white text-black border border-black/10 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
+                  className="group relative px-6 py-4 md:px-12 md:py-6 bg-white text-black border border-black/10 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-10 transition-opacity" />
                   <Compass size={18} className="text-emerald-600 group-hover:rotate-180 transition-transform duration-1000 md:w-5 md:h-5" />
@@ -299,11 +296,11 @@ export default function App() {
 
                           <button 
                             onClick={() => setView('quiz')}
-                            className="group relative px-8 py-5 w-full md:w-auto md:px-20 md:py-10 bg-white text-black font-black rounded-[2.5rem] md:rounded-[4rem] hover:scale-105 md:hover:scale-110 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)] md:shadow-[0_40px_100px_rgba(255,255,255,0.1)] flex items-center justify-center gap-4 md:gap-8 overflow-hidden"
+                            className="group relative px-6 py-4 w-full md:w-auto md:px-20 md:py-10 bg-white text-black font-black rounded-[2rem] md:rounded-[4rem] hover:scale-105 md:hover:scale-110 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)] md:shadow-[0_40px_100px_rgba(255,255,255,0.1)] flex items-center justify-center gap-3 md:gap-8 overflow-hidden"
                           >
                             <div className="absolute inset-0 bg-gradient-to-r from-pink-600/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <Compass size={20} className="relative z-10 text-[#E1306C] group-hover:rotate-180 transition-transform duration-1000 md:w-6 md:h-6" />
-                            <span className="relative z-10 uppercase tracking-[0.4em] md:tracking-[0.6em] text-[10px] md:text-[12px]">
+                            <Compass size={16} className="relative z-10 text-[#E1306C] group-hover:rotate-180 transition-transform duration-1000 md:w-6 md:h-6" />
+                            <span className="relative z-10 uppercase tracking-[0.3em] md:tracking-[0.6em] text-[9px] md:text-[12px]">
                                {UI_STRINGS.startDiscovery[language]}
                             </span>
                           </button>

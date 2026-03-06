@@ -175,20 +175,21 @@
 
       /* Mobile Specific Enhancements */
       @media (max-width: 768px) {
-        h1 { font-size: 2.5rem !important; line-height: 1.1 !important; }
-        h2 { font-size: 2rem !important; }
-        .text-6xl { font-size: 3rem !important; }
-        .text-7xl { font-size: 3.5rem !important; }
-        .text-8xl { font-size: 4rem !important; }
-        .text-9xl { font-size: 5rem !important; }
+        h1 { font-size: 2.25rem !important; line-height: 1.1 !important; }
+        h2 { font-size: 1.75rem !important; }
+        .text-6xl { font-size: 2.5rem !important; }
+        .text-7xl { font-size: 3rem !important; }
+        .text-8xl { font-size: 3.5rem !important; }
+        .text-9xl { font-size: 4rem !important; }
         .py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
         .py-32 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
-        .px-12 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-        .gap-20 { gap: 2.5rem !important; }
-        .rounded-\[5rem\] { border-radius: 3rem !important; }
-        .rounded-\[4rem\] { border-radius: 2.5rem !important; }
-        .p-20 { padding: 2.5rem !important; }
-        .p-12 { padding: 2rem !important; }
+        .px-12 { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+        .gap-20 { gap: 2rem !important; }
+        .rounded-\[5rem\] { border-radius: 2.5rem !important; }
+        .rounded-\[4rem\] { border-radius: 2rem !important; }
+        .rounded-\[3\.5rem\] { border-radius: 1.75rem !important; }
+        .p-20 { padding: 1.5rem !important; }
+        .p-12 { padding: 1.5rem !important; }
         
         /* Smooth transitions for mobile */
         * {
@@ -199,6 +200,18 @@
         .text-xl { font-size: 1.125rem !important; }
         .text-2xl { font-size: 1.25rem !important; }
         .text-3xl { font-size: 1.5rem !important; }
+
+        /* Mobile specific utility classes */
+        .mobile-glass {
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .mobile-glass {
+          background: rgba(10, 10, 10, 0.85);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
       }
     </style>
 <script type="importmap">

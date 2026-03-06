@@ -105,7 +105,7 @@ const Navbar: React.FC<NavbarProps> = ({
     },
     { id: 'community', label: { EN: 'Memories', SI: 'මතකයන්' }, icon: <Heart size={14} /> },
     { id: 'shop', label: { EN: 'Store', SI: 'භාණ්ඩ' }, icon: <ShoppingCart size={14} /> },
-    { id: 'vr-portal', label: { EN: 'VR Trip', SI: 'VR චාරිකාව' }, icon: <Zap size={14} className="text-[#E1306C]" /> },
+    { id: 'vr-trip', label: { EN: 'VR Trip', SI: 'VR චාරිකාව' }, icon: <Zap size={14} className="text-[#E1306C]" /> },
   ];
 
   const handleNav = (id: string) => {
@@ -200,9 +200,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className="fixed inset-x-0 top-full mt-2 md:mt-4 bg-[#0a0a0a]/95 backdrop-blur-3xl rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.6)] border border-white/10 p-4 md:p-8 flex flex-col gap-4 md:gap-8 animate-in slide-in-from-top-4 duration-500 max-h-[85vh] overflow-y-auto w-full">
+        <div className="fixed inset-x-0 top-full mt-2 md:mt-4 bg-white/95 backdrop-blur-3xl rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.2)] border border-gray-200/50 p-4 md:p-8 flex flex-col gap-4 md:gap-8 animate-in slide-in-from-top-4 duration-500 max-h-[85vh] overflow-y-auto w-full">
           {/* Header Identity in Mobile Menu */}
-          <div className="flex items-center gap-3 md:gap-5 px-4 py-3 md:px-6 md:py-4 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-xl shrink-0">
+          <div className="flex items-center gap-3 md:gap-5 px-4 py-3 md:px-6 md:py-4 bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm shrink-0 border border-gray-100">
              <AnimatedLogo />
              <div className="flex flex-col items-start leading-none">
                 <span className="text-xs md:text-sm font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">TRAVEL <span className="text-[#F59E0B]">HUB</span></span>
@@ -221,15 +221,15 @@ const Navbar: React.FC<NavbarProps> = ({
                       handleNav(link.id);
                     }
                   }}
-                  className={`w-full flex items-center justify-between p-3 md:p-6 rounded-[1.25rem] md:rounded-[2.5rem] transition-all duration-500 border ${
+                  className={`w-full flex items-center justify-between p-3 md:p-6 rounded-[1.25rem] md:rounded-[2.5rem] transition-all duration-300 border ${
                     currentView === link.id || (link.hasDropdown && link.items?.some(i => i.id === currentView))
-                      ? 'bg-white text-[#0a0a0a] border-transparent shadow-2xl scale-[1.02]' 
-                      : 'bg-white/5 text-white/60 border-white/5 hover:bg-white/10'
+                      ? 'bg-[#0a0a0a] text-white border-transparent shadow-xl scale-[1.02]' 
+                      : 'bg-gray-50 text-gray-600 border-gray-100 hover:bg-gray-100'
                   }`}
                 >
                   <div className="flex items-center gap-3 md:gap-6">
                     <span className={currentView === link.id ? 'text-[#0EA5E9]' : ''}>{link.icon}</span>
-                    <span className="text-xs md:text-lg font-heritage font-bold uppercase tracking-widest">{link.label[language]}</span>
+                    <span className="text-sm md:text-lg font-heritage font-bold uppercase tracking-widest">{link.label[language]}</span>
                   </div>
                   {link.hasDropdown && <ChevronDown size={16} className={`md:w-5 md:h-5 ${activeDropdown === link.id ? 'rotate-180 transition-transform' : 'transition-transform'}`} />}
                 </button>
@@ -240,13 +240,13 @@ const Navbar: React.FC<NavbarProps> = ({
                       <button
                         key={subItem.id}
                         onClick={() => handleNav(subItem.id)}
-                        className={`flex items-center gap-2 md:gap-4 p-2.5 md:p-5 rounded-xl md:rounded-2xl text-[8px] md:text-[9px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] transition-all border ${
+                        className={`flex items-center gap-2 md:gap-4 p-3 md:p-5 rounded-xl md:rounded-2xl text-[9px] md:text-[10px] font-black uppercase tracking-[0.1em] md:tracking-[0.2em] transition-all border ${
                           currentView === subItem.id 
-                            ? 'bg-[#0EA5E9]/20 text-[#0EA5E9] border-[#0EA5E9]/40 shadow-lg' 
-                            : 'bg-white/[0.03] text-white/30 border-white/5 hover:text-white/60 hover:bg-white/5'
+                            ? 'bg-[#0EA5E9]/10 text-[#0EA5E9] border-[#0EA5E9]/30 shadow-sm' 
+                            : 'bg-white text-gray-500 border-gray-100 hover:text-gray-800 hover:bg-gray-50 shadow-sm'
                         }`}
                       >
-                        <span className="opacity-60 scale-75 md:scale-100">{subItem.icon}</span>
+                        <span className="opacity-70 scale-90 md:scale-100">{subItem.icon}</span>
                         <span className="truncate">{subItem.label[language]}</span>
                       </button>
                     ))}
@@ -256,27 +256,27 @@ const Navbar: React.FC<NavbarProps> = ({
             ))}
           </div>
 
-          <div className="pt-3 md:pt-6 border-t border-white/10 flex flex-col gap-3 md:gap-4 shrink-0">
+          <div className="pt-3 md:pt-6 border-t border-gray-200 flex flex-col gap-3 md:gap-4 shrink-0">
              <div className="grid grid-cols-2 gap-2 md:gap-4">
                 <button 
                   onClick={() => { setLanguage(language === 'EN' ? 'SI' : 'EN'); setIsMenuOpen(false); }} 
-                  className="py-3 md:py-6 rounded-[1.25rem] md:rounded-[2.5rem] bg-[#0EA5E9]/20 border border-[#0EA5E9]/40 text-white font-black text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] flex items-center justify-center gap-2 md:gap-4 hover:bg-[#0EA5E9] transition-all"
+                  className="py-3 md:py-6 rounded-[1.25rem] md:rounded-[2.5rem] bg-blue-50 border border-blue-100 text-blue-600 font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] flex items-center justify-center gap-2 md:gap-4 hover:bg-blue-100 transition-all shadow-sm"
                 >
-                  <Globe size={12} className="md:w-[18px] md:h-[18px] text-white" />
+                  <Globe size={14} className="md:w-[18px] md:h-[18px] text-blue-600" />
                   {language === 'EN' ? 'Sinhala Vision' : 'English View'}
                 </button>
 
                 {user ? (
                   <button 
                     onClick={onLogout} 
-                    className="py-3 md:py-6 bg-red-500/10 border border-red-500/20 text-red-500 rounded-[1.25rem] md:rounded-[2.5rem] font-black text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-red-500 hover:text-white transition-all"
+                    className="py-3 md:py-6 bg-red-50 border border-red-100 text-red-600 rounded-[1.25rem] md:rounded-[2.5rem] font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-red-100 transition-all shadow-sm"
                   >
                     {language === 'EN' ? 'DISCONNECT' : 'විසන්ධි වන්න'}
                   </button>
                 ) : (
                   <button 
                     onClick={onLogin} 
-                    className="py-3 md:py-6 bg-white text-[#0a0a0a] rounded-[1.25rem] md:rounded-[2.5rem] font-black text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl hover:scale-105 active:scale-95 transition-all"
+                    className="py-3 md:py-6 bg-[#0a0a0a] text-white rounded-[1.25rem] md:rounded-[2.5rem] font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] shadow-xl hover:scale-105 active:scale-95 transition-all"
                   >
                     {language === 'EN' ? 'SYNC_REGISTRY' : 'පද්ධතියට_එක්වන්න'}
                   </button>
@@ -284,8 +284,8 @@ const Navbar: React.FC<NavbarProps> = ({
              </div>
              
              {/* Decorative Footer info */}
-             <div className="flex justify-center items-center gap-3 pt-2 opacity-20">
-                <span className="text-[7px] md:text-[8px] font-black text-white uppercase tracking-[0.4em] md:tracking-[0.6em]">
+             <div className="flex justify-center items-center gap-3 pt-2 opacity-40">
+                <span className="text-[8px] md:text-[9px] font-black text-gray-500 uppercase tracking-[0.4em] md:tracking-[0.6em]">
                   {language === 'EN' ? 'Travel Hub Sri Lanka' : 'ට්‍රැවල් හබ් ශ්‍රී ලංකා'}
                 </span>
              </div>
