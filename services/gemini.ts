@@ -318,10 +318,7 @@ export async function* streamLankaGuideResponse(
     }
 
     const resultStream = await chat.sendMessageStream({
-      message: {
-        role: 'user',
-        parts: messageParts
-      }
+      message: messageParts
     });
 
     for await (const chunk of resultStream) {

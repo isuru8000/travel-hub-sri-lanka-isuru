@@ -321,15 +321,25 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
                     <div className="relative group">
                        <div className={`absolute -left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
-                       <div className="font-narrative text-xl md:text-3xl text-gray-600 leading-relaxed space-y-10 antialiased font-medium text-justify relative z-10">
-                          <div className={`prose-container first-letter:text-7xl md:first-letter:text-9xl first-letter:font-heritage first-letter:font-bold first-letter:mr-6 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-2 first-letter:text-[#0EA5E9]`}>
-                             {(deepDive?.history || destination.detailedAbout?.[language])?.split('\n\n').map((para, pIdx) => (
+                       <div className="font-space text-lg md:text-xl text-gray-600 leading-loose space-y-8 antialiased font-light text-justify relative z-10">
+                          <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
+                          {(() => {
+                             const content = deepDive?.history || destination.detailedAbout?.[language];
+                             if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
+                             
+                             // Check if content looks like HTML (more robust check)
+                             const trimmedContent = content.trim();
+                             // Check for common HTML tags or if it starts with <
+                             if (trimmedContent.startsWith('<') || /<[a-z][\s\S]*>/i.test(trimmedContent)) {
+                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content" />;
+                             }
+
+                             return content.split('\n\n').map((para: string, pIdx: number) => (
                                <p key={pIdx} className={pIdx === 0 ? 'mt-0' : 'mt-12'}>
                                  {para}
                                </p>
-                             )) || (
-                               <p className="italic text-gray-400">Archival data loading...</p>
-                             )}
+                             ));
+                          })()}
                           </div>
                        </div>
                     </div>

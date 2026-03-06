@@ -7,15 +7,441 @@
 export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
   // Ancient
   sigiriya: { 
-    EN: "Sigiriya, also known as the Lion Rock, is an ancient rock fortress located in the northern Matale District near the town of Dambulla in the Central Province, Sri Lanka. It is a site of historical and archaeological significance that is dominated by a massive column of rock nearly 200 metres (660 ft) high. According to the ancient Sri Lankan chronicle the Culavamsa, this site was selected by King Kashyapa (477 – 495 AD) for his new capital. He built his palace on the top of this rock and decorated its sides with colourful frescoes. On a small plateau about halfway up the side of this rock he built a gateway in the form of an enormous lion. The name of this place is derived from this structure — Sīhāgiri, the Lion Rock. The capital and the royal palace were abandoned after the king's death. It was used as a Buddhist monastery until the 14th century. Sigiriya today is a UNESCO listed World Heritage Site. It is one of the best preserved examples of ancient urban planning.", 
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🦁 SIGIRIYA — LION ROCK, SRI LANKA</h3>
+        
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <p>Sigiriya is located in the Matale District, Central Province of Sri Lanka. It sits in the heart of the Cultural Triangle, approximately 175 km northeast of Colombo, 90 km from Kandy, and 20 km from Dambulla. The nearest town is Inamaluwa, and the nearest major transport hub is Dambulla.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏛️ WHAT IS SIGIRIYA?</h4>
+          <p>Sigiriya is an ancient rock fortress and palace complex built on top of a massive granite column rising 200 meters (660 feet) above the surrounding flat jungle plains. It is one of the best-preserved examples of ancient urban planning in Asia and is Sri Lanka's most visited cultural monument. UNESCO declared it a World Heritage Site in 1982. It is commonly known as the "Eighth Wonder of the World."</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 HISTORY IN FULL DETAIL</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>3rd Century BC:</strong> Buddhist monks first settled in the natural caves at the base of the rock, carving out small retreats and establishing Sigiriya as a place of spiritual significance.</li>
+            <li><strong>477 AD:</strong> Prince Kasyapa murdered his father, King Dhatusena, by walling him alive, and seized the throne from his brother Moggallana, who fled to India. Fearing his brother's return, Kasyapa chose the impenetrable rock as his new fortress capital.</li>
+            <li><strong>477–495 AD:</strong> King Kasyapa spent nearly 18 years constructing one of the ancient world's most sophisticated urban complexes. He built terraced water gardens, underground irrigation channels, fountain systems, a frescoed gallery, a polished mirror wall, and a royal palace at the very summit — all protected by a massive carved stone lion at the main entrance. The entire city was surrounded by moats, ramparts, and boulder gardens.</li>
+            <li><strong>495 AD:</strong> Moggallana returned with an Indian army. Kasyapa descended from the rock to battle him on the plains but was defeated. He committed suicide rather than surrender. The royal city was immediately abandoned.</li>
+            <li><strong>495 AD – 14th Century:</strong> Sigiriya returned to Buddhist monks who used it as a monastery for nearly 900 years. Visitors to the site began inscribing poems and messages on the polished Mirror Wall as early as the 8th century, making Sigiriya one of the world's oldest documented tourist attractions.</li>
+            <li><strong>14th Century:</strong> The monastery was abandoned. The site was gradually reclaimed by jungle and largely forgotten.</li>
+            <li><strong>1831:</strong> British military officer Jonathan Forbes rediscovered Sigiriya while on horseback.</li>
+            <li><strong>1898:</strong> British archaeologist H.C.P. Bell excavated the site and uncovered the famous lion's paws, revealing the scale of the original lion gateway.</li>
+            <li><strong>1982:</strong> UNESCO inscribed Sigiriya as a World Heritage Site, describing it as the best-preserved ancient city of the first millennium anywhere in Asia.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🔍 WHAT TO SEE — SECTION BY SECTION</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>1. The Outer Moat and Ramparts:</strong> Before you even reach the gardens, you cross a wide moat and pass through ancient defensive ramparts. These outer fortifications were designed to slow any attacking army and give defenders time to prepare.</li>
+            <li><strong>2. The Water Gardens:</strong> Immediately inside the complex, symmetrical water gardens stretch on either side of the main pathway. They feature ornamental ponds, water channels, small islands with pavilions, and a series of fountains. These fountains were powered by an underground pipe system using gravity and water pressure — and they still function naturally during the rainy season today, 1,500 years after construction. These are considered Asia's oldest surviving landscaped gardens.</li>
+            <li><strong>3. The Boulder Garden:</strong> Further along the path, a boulder garden features massive natural rocks that were carved and converted into platforms, chambers, and cisterns by the ancient builders. Some boulders still show the grooves of ancient drainage systems and the remains of painted plaster.</li>
+            <li><strong>4. The Terraced Garden:</strong> A series of ascending terraces of carved stone lead upward, transitioning the climb from garden to rock. The precision of the stonework here reflects an advanced understanding of architecture and landscaping.</li>
+            <li><strong>5. The Fresco Gallery:</strong> Carved into the western face of the rock, a sheltered gallery contains the famous Sigiriya frescoes. Originally there were believed to be over 500 painted figures stretching across a large section of the rock face. Today 18 to 21 remain intact. They depict beautiful women — bare-chested, adorned with jewels and flowers — believed to be Kasyapa's consorts, celestial nymphs, or priestesses. The painting style uses a technique similar to tempera, with colors mixed from minerals and plant extracts. The vibrant reds, yellows, and blacks have survived remarkably well. These frescoes are among the finest examples of ancient Sri Lankan art and are closely related stylistically to the famous Ajanta cave paintings of India.</li>
+            <li><strong>6. The Mirror Wall:</strong> Running alongside the narrow path past the frescoes is the Mirror Wall — a long section of ancient brick wall coated in a glaze of lime, egg white, honey, and other organic materials, polished so finely that King Kasyapa could reportedly see his own reflection. The surface later became covered in inscriptions by visitors — poems, love notes, observations — written from the 8th century onward. One of the most famous reads: "I am Budal. Came with hundreds of people to see Sigiriya. Since all the others wrote poems, I did not." Over 1,800 individual inscriptions have been identified. Touching or marking the wall today is strictly illegal.</li>
+            <li><strong>7. The Lion's Paw Platform:</strong> At the northern base of the final rock face, two enormous carved stone lion's paws mark the base of the original lion staircase. The full statue of the lion — whose mouth formed the final gateway to the summit — was approximately 14 meters tall. The lion's body has long since crumbled, but the paws remain, giving a powerful sense of the original scale and theatrical ambition of the entrance.</li>
+            <li><strong>8. The Summit Palace Ruins:</strong> The flat summit of the rock covers approximately 1.6 hectares. It contains the ruins of King Kasyapa's royal palace complex — foundations of throne rooms, audience halls, sleeping chambers, bathing pools, and terraced garden areas. A large cistern carved directly into the rock still holds water. From the summit, the 360-degree view across the entire Cultural Triangle — an unbroken green canopy dotted with ancient reservoirs — is breathtaking and impossible to adequately describe.</li>
+            <li><strong>9. The Sigiriya Museum:</strong> Located near the main entrance, the museum houses archaeological finds from excavations, scale models of the site at its peak, and detailed explanations of the construction methods, irrigation engineering, and artistic traditions of the Kasyapa period. Allow 30–45 minutes here before you begin the climb.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ TICKETS & ENTRY FEES 2026</h4>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-gray-200">
+                  <th class="py-2 font-bold">Visitor Type</th>
+                  <th class="py-2 font-bold">Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">Foreign Adult (non-SAARC)</td>
+                  <td class="py-2">USD $30</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">Foreign Child 6–12 years</td>
+                  <td class="py-2">USD $15</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">Child under 6</td>
+                  <td class="py-2">Free</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-2">SAARC nationals (India, Pakistan, etc.)</td>
+                  <td class="py-2">USD $15</td>
+                </tr>
+                <tr>
+                  <td class="py-2">Sri Lankan nationals</td>
+                  <td class="py-2">~100 LKR</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Opening Hours:</strong> 7:00 AM to 5:30 PM, every day of the year including public holidays.</p>
+          <p>Tickets are available at the entrance gate. Online booking through the Central Cultural Fund (CCF) of Sri Lanka is also possible and recommended during peak season to avoid long queues.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🧗 THE CLIMB — STEP BY STEP</h4>
+          <p>The full ascent to the summit and back takes approximately 1.5 to 2 hours for the average fit adult, not counting time spent at the frescoes, Mirror Wall, or summit. The path involves a combination of paved pathways, stone steps, metal staircases bolted into the rock face, and narrow ledge walkways with handrails. The exposure increases significantly near the top — the final section involves climbing vertical metal staircases high above the plains. People with a severe fear of heights should consider this carefully. The surface of the rock can be extremely slippery when wet or in humid conditions. Solid grip footwear is essential.</p>
+          <p><strong>Total number of steps to the summit is approximately 1,200.</strong></p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🌿 PIDURANGALA ROCK — FULL DETAILS</h4>
+          <p>Pidurangala Rock is a separate granite outcrop located 2 km north of Sigiriya, offering a completely different experience. The entire climb takes 30–40 minutes one way and is more rugged than Sigiriya, involving rocky terrain and some scrambling at the top. From the summit, you have a direct unobstructed view looking south at Lion Rock — the most iconic photographic composition of the entire region.</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Entry fee:</strong> approximately 1,000 LKR (around $3 USD).</li>
+            <li>At the base is an active Buddhist monastery and a reclining Buddha carved from white rock. Visitors must remove shoes before entering the temple area and cover their shoulders and knees out of respect.</li>
+            <li><strong>Best time to visit Pidurangala:</strong> Arrive by 5:30 AM for sunrise. The colors of the sky behind Sigiriya Rock at sunrise are extraordinary.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🐘 NEARBY ATTRACTIONS IN FULL DETAIL</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Minneriya National Park (45 min drive):</strong> Home to the world's largest known gathering of Asian elephants, called "The Gathering." Between May and October, hundreds of elephants — sometimes over 300 at a single time — converge around the ancient Minneriya reservoir as surrounding water sources dry up. This is one of the greatest wildlife spectacles on earth. Jeep safaris run every morning and afternoon from the park entrance. You cannot enter in a private vehicle.</li>
+            <li><strong>Kaudulla National Park (30 min drive):</strong> The second great elephant park in the area. The Minneriya and Kaudulla elephants migrate between the two parks depending on water and food availability. Kaudulla's peak season is August to December. The park also has leopards, sloth bears, deer, and hundreds of bird species.</li>
+            <li><strong>Dambulla Cave Temple (20 min drive):</strong> A UNESCO World Heritage Site and the best-preserved cave temple complex in Sri Lanka. Five cave temples are cut into a massive granite outcrop. Inside, every surface — walls, ceilings, floors — is covered with ancient murals and over 150 Buddha statues of varying sizes. The largest reclining Buddha here is 15 meters long. Entry fee is approximately $10 USD for foreigners. Dress modestly and remove shoes.</li>
+            <li><strong>Polonnaruwa Ancient City (60 min drive):</strong> The medieval capital of Sri Lanka from the 11th–13th centuries. The ancient park contains remarkably well-preserved palace ruins, dagobas, Hindu temples, and the famous Gal Vihara — four colossal Buddha figures carved directly from a single granite face. The site is best explored by bicycle, which can be rented at the entrance.</li>
+            <li><strong>Anuradhapura (90 min drive):</strong> The ancient sacred capital of Sri Lanka, inhabited for over 2,500 years. Home to massive white dagobas, the sacred Sri Maha Bodhi tree (a direct descendant of the tree under which the Buddha attained enlightenment, and the oldest historically documented tree in the world), and extensive palace and monastery ruins.</li>
+            <li><strong>Hiriwadunna Village Lake Tour (10 min drive):</strong> A peaceful boat ride through lotus-covered waters surrounded by rural Sri Lankan farmland. Monitor lizards sun themselves on the banks, kingfishers dart across the water, and local farmers tend their fields. A serene hour-long experience in complete contrast to the busy rock fortress.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING THERE — FULL TRANSPORT DETAILS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>From Colombo:</strong> 175 km. By car or AC express bus, the journey takes 3.5–4 hours using the expressway to Dambulla, then a 20-minute local bus or tuk-tuk to Sigiriya. A private taxi for the full round trip from Colombo costs approximately $50–70 USD.</li>
+            <li><strong>From Kandy:</strong> 90 km. Approximately 2.5–3 hours by car or bus via the A9 highway through Matale. Regular buses travel this route from Kandy Bus Stand.</li>
+            <li><strong>From Dambulla (nearest hub):</strong> 20 km, about 20–30 minutes. Local buses depart from Dambulla Bus Stand roughly every hour and cost about 100 LKR ($0.40 USD). A tuk-tuk for the round trip costs 2,000–2,500 LKR ($7–9 USD).</li>
+            <li><strong>By Train:</strong> The nearest train station is Habarana, about 20 km from Sigiriya. Trains run from Colombo Fort and Kandy to Habarana. From Habarana station, take a tuk-tuk for 20–30 minutes.</li>
+            <li><strong>Getting Around Sigiriya Village:</strong> Bicycles are ideal and can be rented from most guesthouses for around 500 LKR per day. Tuk-tuks are available everywhere and are the default transport for short distances.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🍛 FOOD — DETAILED</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Chooti Restaurant:</strong> The most popular eating spot in the village. Famous for generously sized rice and curry plates, devilled dishes, and an exceptional mango lassi. Very affordable and always busy.</li>
+            <li><strong>Soul Food:</strong> Considered by many long-stay visitors to be the best overall restaurant in the area. Wide menu, consistent quality, relaxed atmosphere.</li>
+            <li><strong>Kenoli Restaurant:</strong> A family-run place known for its authentic home-cooked curries, string hoppers, and egg hoppers. Quiet and welcoming.</li>
+            <li><strong>Liya Restaurant:</strong> Good for vegetarians and those wanting lighter meals. Kottu, rice and curry, fresh juices.</li>
+            <li><strong>Sigiriya Rock View Point Restaurant:</strong> A terrace restaurant with a direct view of Lion Rock. Food is decent; the view at sunset is the main draw.</li>
+            <li><strong>Rasta Rant:</strong> A garden bar more than a restaurant. Good cocktails and a laid-back evening atmosphere popular with backpackers.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏨 ACCOMMODATION — DETAILED</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Budget (USD $15–30/night):</strong> Sigiri Lion Lodge and various locally run guesthouses and homestays in Sigiriya village. Typically include breakfast. Clean, simple, friendly. Best choice for solo travelers and backpackers.</li>
+            <li><strong>Mid-Range (USD $40–80/night):</strong> Hotel Sigiriya offers a swimming pool, comfortable rooms, and good food. EKHO Sigiriya is a newer property with modern facilities and a relaxed atmosphere.</li>
+            <li><strong>Luxury (USD $150–400+/night):</strong> Water Garden Sigiriya is a stunning boutique resort built around ancient-style water gardens with individual villa suites. Jetwing Vil Uyana is built within a reclaimed wetland ecosystem — rooms are private wooden chalets raised above the water, surrounded by wildlife.</li>
+            <li><strong>Unique:</strong> Several properties offer jungle treehouse-style rooms, including Back of Beyond near Pidurangala — built on elevated wooden platforms within dense forest.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🌤️ BEST TIME TO VISIT</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>December to March:</strong> Peak dry season. Ideal weather, clear skies, minimal rain. Most crowded and slightly higher accommodation prices.</li>
+            <li><strong>April to May:</strong> Transition period. Still largely dry and very good conditions with fewer crowds than December–March.</li>
+            <li><strong>June to September:</strong> Occasional showers but generally manageable. Best season for elephant safaris at Minneriya and Kaudulla parks.</li>
+            <li><strong>October to November:</strong> Northeast monsoon. Heavy rainfall, slippery rock faces, and more difficult climbing conditions. Not recommended.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL PRACTICAL TIPS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Arrive before 8:00 AM:</strong> The site gets extremely crowded from 9:30 AM onward when tour buses arrive in large numbers. The heat is also far more intense later in the day.</li>
+            <li><strong>Wear grip footwear:</strong> The rock surfaces and metal staircases are genuinely slippery in humidity. Sandals or flip-flops can be dangerous.</li>
+            <li><strong>Bring at least 1.5 liters of water per person:</strong> There are limited vendors on the climb and dehydration is a real risk in the heat.</li>
+            <li><strong>Apply sunscreen before entering:</strong> There is significant sun exposure on the upper staircases and summit.</li>
+            <li><strong>Bring cash in LKR:</strong> Tuk-tuks, most local restaurants, and some ticket counters do not accept cards. The nearest ATMs are in Dambulla.</li>
+            <li><strong>Do not touch the Mirror Wall:</strong> It is both illegal and deeply damaging to the ancient surface. Guards enforce this rule.</li>
+            <li><strong>Watch your belongings near the monkeys:</strong> The resident toque macaques are bold and have learned to snatch food, sunglasses, and bags from distracted climbers.</li>
+            <li><strong>Visit the Sigiriya Museum first:</strong> Understanding the history before climbing transforms the experience from a physical challenge into a genuine encounter with history.</li>
+            <li><strong>Stay at least 2 nights:</strong> Day trips from Colombo are long and exhausting. Staying in the village allows you to see Pidurangala at sunrise, Sigiriya Rock in the morning, and do a safari in the afternoon — all at a comfortable pace.</li>
+            <li><strong>Combine with the Cultural Triangle:</strong> Sigiriya, Dambulla Cave Temple, and Polonnaruwa form a natural three-day circuit through Sri Lanka's ancient heartland that no visitor to the island should miss.</li>
+          </ul>
+        </div>
+      </div>
+    `,
     SI: "සීගිරිය හෙවත් සිංහ පර්වතය යනු ශ්‍රී ලංකාවේ මධ්‍යම පළාතේ මාතලේ දිස්ත්‍රික්කයේ දඹුල්ල නගරයට ආසන්නව පිහිටි පැරණි ශිලා බලකොටුවකි. මෙය මීටර් 200 ක් පමණ උසැති දැවැන්ත පර්වතයක් මත ගොඩනගා ඇති ඓතිහාසික හා පුරාවිද්‍යාත්මක වටිනාකමකින් යුත් ස්ථානයකි. චූලවංශයට අනුව, ක්‍රි.ව. 477 - 495 කාලයේ රජකම් කළ කාශ්‍යප රජු විසින් සිය නව අගනුවර ලෙස මෙම ස්ථානය තෝරා ගන්නා ලදී. ඔහු පර්වතය මුදුනේ සිය මාලිගය ගොඩනැගූ අතර එහි බිත්ති අලංකාර බිතුසිතුවම් වලින් සරසන ලදී. පර්වතයේ අඩක් පමණ ඉහළට වන්නට පිහිටි කුඩා තැන්නක ඔහු දැවැන්ත සිංහයෙකුගේ ස්වරූපයෙන් යුත් ද්වාරයක් ඉදිකළේය. සීගිරිය යන නාමය ව්‍යුත්පන්න වී ඇත්තේ මෙම සිංහ රූපය නිසාය. රජුගේ මරණයෙන් පසු මෙය අතහැර දැමුණු අතර 14 වන සියවස දක්වා බෞද්ධ ආරාමයක් ලෙස භාවිතා විය. අද වන විට සීගිරිය යුනෙස්කෝ ලෝක උරුමයක් ලෙස නම් කර ඇති අතර එය ලොව පැරණි නගර නිර්මාණ ශිල්පයේ විශිෂ්ටතම උදාහරණයකි." 
   },
   ruwanwelisaya: {
-    EN: "The Ruwanwelisaya is a stupa and a hemispherical structure containing relics, in Sri Lanka, considered sacred to many Buddhists all over the world. It was built by King Dutugemunu c. 140 BC, who became King of all Sri Lanka after a war in which the Chola King Elara was defeated. It is also known as 'Mahathupa', 'Swarnamali Chaitya', 'Suvarnamali Mahaceti' and 'Rathnamali Dagaba'. This is one of the 'Solosmasthana' and the 'Atamasthana'. The stupa is one of the world's tallest ancient monuments, standing at 103 m (338 ft) and with a circumference of 290 m (951 ft).",
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🕌 RUWANWELISAYA — THE GREAT WHITE DAGABA</h3>
+        
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <p>Ruwanwelisaya is situated in the heart of the Sacred City of Anuradhapura, in the North Central Province of Sri Lanka. It stands approximately 1 km from the Sri Maha Bodhi tree and 2 km from Anuradhapura Railway Station. Anuradhapura is about 200 km north of Colombo and 90 km northwest of Sigiriya. The stupa lies within the Anuradhapura UNESCO World Heritage Archaeological Park.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏛️ WHAT IS RUWANWELISAYA?</h4>
+          <p>Ruwanwelisaya — also known as the Maha Thupa (the Great Stupa), Rathnamali Dagoba, and Swarnamali Maha Chetiya — is one of the largest, most sacred, and most revered Buddhist stupas in the world. It is a massive hemispherical dome of brick and plaster, gleaming white against the sky, built to enshrine the sacred relics of Gautama Buddha.</p>
+          <p>The stupa enshrines what is believed to be two quarts (one Drona) of the Buddha's bodily relics — described in ancient chronicles as the largest single collection of Buddha relics anywhere on earth. This single fact gives Ruwanwelisaya an extraordinary weight of sacred importance not matched by almost any other structure in the Buddhist world.</p>
+          <p>It is one of the Atamasthana — the eight holy places every Buddhist pilgrim must visit in Anuradhapura — and one of the Solosmasthana — the 16 most sacred places in all of Sri Lanka. It is the most prominent and most venerated of all the great ancient stupas of Anuradhapura and remains a living, active place of worship visited by millions of pilgrims every year.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 FULL HISTORY</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>King Dutugemunu — The Man Who Built It:</strong> To understand Ruwanwelisaya, you must first understand its builder. King Dutugemunu (also written Dutugamunu) was the son of King Kavantissa of Ruhuna, a southern kingdom of Sri Lanka. For decades, the northern half of the island had been under the control of the Tamil Chola King Elara (Ellalan), a ruler widely described even in Sinhalese chronicles as a just and fair king despite being a foreign ruler. Dutugemunu unified the Sinhalese kingdoms of the south, raised a great army, and marched north. After a series of battles, he fought King Elara in single combat near the gates of Anuradhapura and defeated him. In a remarkable act recorded in the ancient chronicle Mahavamsa, Dutugemunu honoured his fallen enemy with a dignified royal cremation and ordered that all who passed that spot should be silent in respect — a command that was reportedly honoured for centuries. With the island unified under a single Sinhalese Buddhist king for the first time, Dutugemunu set about cementing his legacy through grand religious construction. He built many monasteries, hospitals, and temples across Anuradhapura. But his most ambitious project — the monument he wanted most to define his reign — was the Maha Thupa: Ruwanwelisaya.</li>
+            <li><strong>Construction Begins — 140 BC:</strong> Construction of the great stupa began around 140 BC. The scale of the undertaking was unprecedented. Ancient chronicles record that the foundation was prepared by trampling the earth with the feet of thousands of elephants to create a perfectly compacted base — then the surface was sealed with clay, stones, and iron netting. According to the Mahavamsa, the construction employed tens of thousands of workers and drew resources from across the island and beyond. The relics enshrined within were gathered from Buddhist communities across Asia. Monks, kings, and devotees contributed relics from India, Southeast Asia, and other Buddhist lands. The relics were sealed inside a golden casket placed at the very heart of the stupa before the dome was closed forever.</li>
+            <li><strong>The King Dies Before Completion:</strong> In one of history's most poignant royal stories, King Dutugemunu fell terminally ill before the stupa was finished. Knowing he was dying, he gave orders for the construction to be accelerated. The ancient chronicle Mahavamsa records that bamboo scaffolding was covered in cloth and cloth was fashioned to resemble the completed white dome so that the dying king could at least see the vision of his finished monument from his bed. He died shortly after, never seeing it fully complete. His brother King Saddhatissa ascended the throne and honoured the vision of his predecessor, completing the great stupa exactly as Dutugemunu had planned it.</li>
+            <li><strong>Centuries of Veneration and Renovation:</strong> From its completion, Ruwanwelisaya became the single most important religious site in Sri Lanka. Every subsequent Sinhalese king contributed to its upkeep, renovation, and embellishment as an act of both piety and political legitimacy. To maintain Ruwanwelisaya was to demonstrate one's worthiness to rule. Several kings carried out major renovations across the centuries, including King Vasabha in the 2nd century AD, King Sena I in the 9th century AD, and various others across the medieval period.</li>
+            <li><strong>Abandonment and Ruin:</strong> When the Kingdom of Anuradhapura fell in the 10th century AD following repeated South Indian Chola invasions, the sacred city was gradually abandoned. The jungle reclaimed everything — temples, palaces, monasteries, and stupas. By the 18th and 19th centuries, Ruwanwelisaya had been swallowed entirely by forest, its great dome a vegetation-covered hill indistinguishable from the surrounding landscape.</li>
+            <li><strong>Rediscovery and Restoration — 20th Century:</strong> When British colonial archaeologists began clearing and mapping Anuradhapura in the 19th century, the outlines of the great stupa began to emerge. The major restoration was carried out in the early 20th century, led significantly by a Sinhalese Buddhist monk Naranvita Sumanasara, who raised funds from Buddhist communities across Sri Lanka and beyond to rebuild the stupa faithfully. The restoration raised the stupa to twice its original height — the modern structure stands at 103 meters (338 feet), compared to the original estimated height of about 55 meters. The 344 elephant frieze around the base was also restored and completed during this period. Today the stupa stands gleaming white, maintained continuously, and visited by millions of pilgrims every year. It is the focal point of Anuradhapura's religious life and Sri Lanka's Buddhist national identity.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏗️ ARCHITECTURE — IN FULL DETAIL</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Size and Scale:</strong> Ruwanwelisaya stands 103 meters (338 feet) tall, with a base circumference of 290 meters (951 feet) and a base diameter of approximately 90 meters. It is one of the tallest ancient monuments in the world and the second-tallest stupa in Anuradhapura after the Jetavanaramaya.</li>
+            <li><strong>The Shape — A Bubble on Water:</strong> The stupa's distinctive design was directly inspired by the shape of a water bubble — a perfect hemisphere sitting on a cylindrical drum. Ancient chronicles record that King Dutugemunu asked the monks what shape the stupa should take. They poured water into a bowl, watched a bubble form, and said: "Like this." The graceful, swelling hemispherical dome of Ruwanwelisaya has been admired for over 2,100 years as one of the most elegant forms in all of sacred architecture.</li>
+            <li><strong>Buddhist Symbolism in Every Element:</strong> Every part of the structure encodes Buddhist philosophy: The dome itself represents the vastness and completeness of the Buddhist doctrine — the Dhamma — encompassing all things. The square section above the dome — called the Harmika — represents the Four Noble Truths. The concentric rings rising from the Harmika — called the Chatra — represent the Noble Eightfold Path. The crystal placed at the very pinnacle represents the ultimate Buddhist goal — Nirvana.</li>
+            <li><strong>The Elephant Wall — Gaja Mudra:</strong> Encircling the entire base of the stupa is the most visually striking decorative element: a continuous frieze of 344 stone elephants, carved in full relief, standing shoulder to shoulder all the way around the circumference. Each elephant is slightly different in detail. Elephants in Buddhism and in Sri Lankan royal tradition represent strength, protection, wisdom, and auspiciousness. This ring of elephants has stood guard over the sacred relic since the stupa's restoration and is one of the most photographed architectural features in Sri Lanka.</li>
+            <li><strong>The Four Vahalkadas — Entrance Shrines:</strong> At each of the four cardinal points — north, south, east, and west — there is a Vahalkada: an ornate entrance monument projecting from the base of the stupa. Each Vahalkada is decorated with sculptural panels, carved figures, makara friezes, and decorative columns. These served as ritual entrances for the circumambulation of the stupa — the act of walking clockwise around the sacred structure — which is the central act of veneration at any Buddhist stupa.</li>
+            <li><strong>The Terrace and Surrounding Platform:</strong> The stupa sits on a large raised platform — a broad paved terrace where pilgrims walk, offer flowers, light oil lamps, and sit in meditation. The terrace is always immaculately clean, swept continuously by temple attendants. Ancient ponds, stone columns, and the ruins of subsidiary shrine buildings surround the main platform, lending the entire complex a deep sense of archaeological richness.</li>
+            <li><strong>The Statue of King Dutugemunu:</strong> At the eastern entrance to the stupa complex stands a full-size limestone statue of King Dutugemunu himself — robed in royal dress, hands folded in veneration, gazing up at the monument he gave his life to build but never saw completed. This is believed by some scholars to be the actual statue that stood near the stupa in ancient times. It is a quietly powerful sight.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🙏 RELIGIOUS SIGNIFICANCE</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>The Relics:</strong> Ruwanwelisaya enshrines what ancient texts describe as the largest collection of Gautama Buddha's bodily relics anywhere in the world — one Drona (approximately two quarts) of relics, including bone fragments, retrieved from the Buddha's funeral pyre in Kusinara, India. These relics were collected from Buddhist communities across Asia and sealed permanently within the structure at the time of construction. They have never been removed or verified in modern times — to open the stupa would be to destroy it.</li>
+            <li><strong>Puja Rituals — Nine Times Daily:</strong> Unlike most temples, Ruwanwelisaya conducts nine puja (worship) rituals every single day — beginning at dawn and continuing throughout the day until late evening. Each puja involves drumming, chanting, flower offerings, the lighting of oil lamps, and the burning of incense. All visitors — Buddhist or non-Buddhist, Sri Lankan or foreign — are warmly welcome to observe or participate in any puja at any time.</li>
+            <li><strong>Full Moon Days — Poya:</strong> On every full moon day — called Poya — thousands upon thousands of white-robed pilgrims flood Anuradhapura from across Sri Lanka. Poya is a national public holiday and the most sacred day of the Buddhist calendar month. On Poya days, the atmosphere at Ruwanwelisaya is extraordinary — an unbroken river of white-clad devotees circumambulating the stupa, chanting, offering flowers, lighting lamps. The night Poya visit, when the stupa is bathed in floodlights against a full moon sky, is one of the most spiritually overwhelming sights in all of Sri Lanka.</li>
+            <li><strong>The Atamasthana:</strong> Ruwanwelisaya is considered the most important of the Atamasthana — the eight sacred sites in Anuradhapura that every Buddhist must visit on pilgrimage. These are places believed to have been visited by the Buddha himself during his three legendary visits to Sri Lanka, recorded in ancient texts. Completing the Atamasthana pilgrimage is considered an act of immense merit and is one of the most important religious journeys a Sri Lankan Buddhist can undertake.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ ENTRY, TIMINGS & ACCESS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Entry Fee:</strong> Ruwanwelisaya lies outside the paid Archaeological Park area and entry to the stupa complex itself is free of charge for all visitors — Sri Lankan and foreign alike. There is no ticket required.</li>
+            <li><strong>Opening Hours:</strong> The stupa complex is open 24 hours a day, every day of the year. The surrounding terrace and exterior can be visited at any time. The nine daily puja rituals begin from approximately 5:00 AM (dawn puja) through to around 9:00 PM (evening puja).</li>
+            <li><strong>Best Time to Visit:</strong> Early morning from 5:00–7:00 AM for the dawn puja in peaceful, cool conditions. Alternatively, visiting at night when the stupa is illuminated is extraordinary — the white dome glowing against the dark sky is an unforgettable image. Full Moon Poya Days offer the most intense pilgrimage atmosphere but are also the most crowded.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">👔 DRESS CODE — STRICTLY REQUIRED</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>White clothing is the traditional and strongly preferred attire for pilgrims at Ruwanwelisaya. While white is not technically mandatory for foreign visitors, wearing it shows deep respect and you will be welcomed warmly.</li>
+            <li>All visitors must remove shoes before entering the sacred terrace area. The stone and brick underfoot can be extremely hot in midday sun — visiting in early morning or evening avoids this discomfort. Thin socks are permitted on the outer pathways.</li>
+            <li>Shoulders and knees must be covered. Sarongs are available for rent or purchase from vendors near the entrance.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🗺️ NEARBY ATTRACTIONS IN ANURADHAPURA</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Sri Maha Bodhi — 1 km away:</strong> The most sacred tree in the Buddhist world — a fig tree grown from a cutting of the very tree under which the Buddha attained enlightenment in Bodh Gaya, India, brought to Sri Lanka by Princess Sanghamitta (daughter of Emperor Ashoka) in 288 BC. At over 2,300 years old, it is the oldest historically documented living tree on earth, continuously tended by monks for over two millennia.</li>
+            <li><strong>Thuparamaya Dagoba:</strong> The oldest stupa in Sri Lanka, built by King Devanampiyatissa in the 3rd century BC to enshrine the Buddha's right collarbone, brought to Sri Lanka by the missionary monk Mahinda. It is smaller than Ruwanwelisaya but predates it by nearly 200 years.</li>
+            <li><strong>Jetavanaramaya:</strong> Once the third-tallest structure on earth when completed around 301 AD, this colossal ruined stupa surpasses even Ruwanwelisaya in original size. Its overgrown, partially restored orange-brick dome rising from the forest is one of the most dramatic archaeological sights in Asia.</li>
+            <li><strong>Abhayagiri Dagoba:</strong> Another enormous ancient stupa, originally rivalling Jetavanaramaya in height. Now partially excavated and restored, with an excellent adjacent museum displaying statues, inscriptions, and artifacts recovered from the monastery complex that once surrounded it.</li>
+            <li><strong>Lovamahapaya — The Brazen Palace:</strong> The ruins of a nine-storey palace of 1,600 stone columns — all that remains of the enormous multi-storey wooden palace whose copper-tiled roof gave it its name. The columns stretch across a field in a haunting geometric grid.</li>
+            <li><strong>Kuttam Pokuna — Twin Ponds:</strong> Two perfectly constructed ancient bathing ponds of different sizes, fed by underground spring water through a sophisticated filtration system of sand, charcoal, and stone. An outstanding example of ancient Sinhalese hydraulic engineering.</li>
+            <li><strong>Mihintale:</strong> Located 12 km from Anuradhapura, Mihintale is considered the birthplace of Buddhism in Sri Lanka — the place where the Indian missionary monk Mahinda (son of Emperor Ashoka) first preached the Dhamma to King Devanampiyatissa in 247 BC. A long staircase of 1,840 steps leads to the summit, with stupas, shrines, caves, and panoramic views across the plains.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING TO ANURADHAPURA</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>From Colombo:</strong> By train from Colombo Fort Station, the journey takes approximately 4–5 hours on the Northern Line. By bus, frequent departures from Colombo Central Bus Stand take 4–5 hours. By car, the drive is about 200 km and takes 3.5–4.5 hours via the A9 highway.</li>
+            <li><strong>From Kandy:</strong> Approximately 130 km, about 3 hours by car or bus via Dambulla.</li>
+            <li><strong>From Sigiriya:</strong> Approximately 90 km, about 1.5–2 hours by car via Habarana. The most natural pairing — Sigiriya and Anuradhapura together form the core of the Cultural Triangle.</li>
+            <li><strong>From Dambulla:</strong> Approximately 65 km, about 1 hour by car.</li>
+            <li><strong>Getting Around Anuradhapura:</strong> The sacred city is large and spread out. Bicycles are the best and most enjoyable way to explore — available for rent from most guesthouses and near the train station for around 300–500 LKR per day. Tuk-tuks are also abundant and can be hired for a half-day tour covering all major sites for around 2,000–3,000 LKR. The main sites are not walkable from each other.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL TIPS FOR VISITORS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Arrive at dawn:</strong> The stupa at sunrise, with mist rising from the surrounding jungle, the first puja drums beginning to beat, and white-robed pilgrims arriving silently — this is one of the most beautiful and moving experiences in Sri Lanka.</li>
+            <li><strong>Visit at night:</strong> Ruwanwelisaya is fully floodlit after dark and the sight of the brilliant white dome towering against the night sky is extraordinary. The atmosphere is calm, cool, and deeply spiritual.</li>
+            <li><strong>Walk clockwise:</strong> All circumambulation of a Buddhist stupa must be done clockwise — this is a rule of sacred etiquette observed by all pilgrims and expected of visitors.</li>
+            <li><strong>Buy flowers at the entrance:</strong> Lotus blossoms and white frangipani are sold by vendors near the stupa for a small amount. Offering flowers as you walk is the traditional act of veneration and adds genuine meaning to your visit.</li>
+            <li><strong>Visit on a Poya full moon day:</strong> if your schedule allows — the intensity of devotion on these days is unlike anything seen on ordinary days.</li>
+            <li><strong>Combine with Sri Maha Bodhi:</strong> the sacred Bodhi tree is just 1 km away and together the two sites form the spiritual heart of Anuradhapura. Allow a full day to explore both properly.</li>
+            <li><strong>Rent a bicycle for the full city exploration:</strong> the ancient city is far too large and spread out to walk, and bicycles allow you to move freely between all sites at your own pace.</li>
+            <li><strong>Be completely respectful and quiet during puja rituals:</strong> this is a deeply active place of living worship, not a museum. Pilgrims are here on journeys of profound personal faith. Silence and stillness during prayers is expected and appreciated.</li>
+            <li><strong>Bring water and sun protection:</strong> Anuradhapura is in the dry zone and the sun can be extremely intense. The terrace and pathways around the stupa offer little shade during midday hours.</li>
+            <li><strong>Stay at least one full day in Anuradhapura:</strong> two days is better. The sacred city contains more extraordinary ancient sites than can be reasonably absorbed in a single day.</li>
+          </ul>
+        </div>
+      </div>
+    `,
     SI: "රුවන්වැලිසෑය යනු ශ්‍රී ලංකාවේ අනුරාධපුරයේ පිහිටි මහා ස්තූපයකි. මෙය ක්‍රි.පූ. 140 දී පමණ දුටුගැමුණු රජු විසින් ඉදිකරන ලදී. මෙය 'මහාථූප', 'ස්වර්ණමාලී චෛත්‍යය' සහ 'රත්නමාලී දාගැබ' ලෙසද හැඳින්වේ. මෙය සොළොස්මස්ථාන සහ අටමස්ථාන අතරින් එකකි. මීටර් 103 ක් උසැති මෙම ස්තූපය ලොව උසම පැරණි ස්මාරකවලින් එකකි."
   },
   "jaya-sri-maha-bodhi": {
-    EN: "The Jaya Sri Maha Bodhi is a sacred fig tree in the Mahamewna Gardens, Anuradhapura, Sri Lanka. It is said to be the southern branch from the historical Sri Maha Bodhi at Buddha Gaya in India under which Lord Buddha attained Enlightenment. It was planted in 288 BC, and is the oldest living human-planted tree in the world with a known planting date. It was brought to Sri Lanka by Sangamitta Theri, daughter of Emperor Asoka and founder of an order of Buddhist nuns in Sri Lanka.",
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🌳 JAYA SRI MAHA BODHI — THE SACRED BODHI TREE</h3>
+        
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <p>The Jaya Sri Maha Bodhi is situated inside the Mahamewuna Garden (also written Mahamevnawa or Maha Megha Vana), within the UNESCO World Heritage Sacred City of Anuradhapura, North Central Province, Sri Lanka.</p>
+          <ul class="list-disc pl-5 space-y-1 text-sm">
+            <li><strong>From Colombo:</strong> 205 km north — approximately 3.5 to 4.5 hours by road.</li>
+            <li><strong>From Kandy:</strong> Approximately 130 km — about 3 hours by road.</li>
+            <li><strong>From Sigiriya:</strong> Approximately 90 km — about 1.5 to 2 hours by road.</li>
+            <li><strong>From Ruwanwelisaya:</strong> Approximately 1 km walking distance.</li>
+            <li><strong>Nearest Transport:</strong> Anuradhapura Railway Station (25 min walk) and Mawatha Bus Stop (25 min walk).</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🌳 WHAT IS IT — VERIFIED FACTS ONLY</h4>
+          <p>The Jaya Sri Maha Bodhi is a sacred fig tree — species <em>Ficus religiosa</em> — standing in the Mahamewuna Gardens in the heart of Anuradhapura. It is the oldest living human-planted tree on earth with a known, documented planting date. This fact is accepted by historians, botanists, and is internationally recognised.</p>
+          <p>The tree was planted in 288 BC by King Devanampiyatissa of Anuradhapura. It is therefore, as of 2026, exactly 2,314 years old.</p>
+          <p>The tree stands approximately 32 meters (105 feet) tall with a wide spreading canopy. Its oldest and heaviest branches are now supported by a network of iron and steel props to prevent them breaking under their own weight after over two thousand years of growth.</p>
+          <p>It is one of the Atamasthana — the eight most sacred sites every Buddhist pilgrim must visit in Anuradhapura. It is also one of the Solosmasthana — the sixteen most sacred places in all of Sri Lanka.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 HISTORY — CONFIRMED FACTS</h4>
+          <p className="italic text-sm text-gray-500">Note: The primary historical source is the Mahavamsa (5th century AD). Events below are drawn from this chronicle and accepted by mainstream historians.</p>
+          
+          <div class="space-y-2">
+            <strong class="block text-gray-800">The Original Bodhi Tree in India</strong>
+            <p>Approximately 2,600 years ago, Prince Siddhartha Gautama attained enlightenment beneath a <em>Ficus religiosa</em> tree in Bodh Gaya, India, becoming the Buddha. The tree became an object of veneration known as the Bodhi tree (tree of awakening). While the original tree in India was destroyed and regrown multiple times (the current one is a fourth-generation descendant), the tree in Anuradhapura is a direct descendant of the original.</p>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Emperor Ashoka and the Mission (3rd Century BC)</strong>
+            <p>Emperor Ashoka of India, a great patron of Buddhism, sent his son Mahinda Thero to Sri Lanka around 247 BC to establish Buddhism. King Devanampiyatissa of Sri Lanka later requested a cutting of the sacred Bodhi tree. Ashoka arranged for the most sacred southern branch to be sent.</p>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Princess Sanghamitta Brings the Branch (236 BC)</strong>
+            <p>Ashoka's daughter, the Buddhist nun Sanghamitta Maha Theri, brought the branch in a golden vessel, landing at Jambukola in northern Sri Lanka. King Devanampiyatissa received it by wading into the sea and processed it to Anuradhapura along a decorated road, offering his entire kingdom to the tree.</p>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">The Planting (288 BC)</strong>
+            <p>In 288 BC, King Devanampiyatissa planted the sacred branch on a raised terrace 6.5 meters above the ground in the Mahamewuna Park. This date is the basis for the tree's confirmed age.</p>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Development by Successive Kings</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>King Vasabha (1st–2nd century AD):</strong> Placed four Buddha statues around the tree.</li>
+              <li><strong>King Voharika Tissa (3rd century AD):</strong> Added metallic Buddha statues.</li>
+              <li><strong>King Mahanaga (6th century AD):</strong> Constructed a water canal for the roots.</li>
+              <li><strong>King Kirti Sri Rajasinha (18th century):</strong> Built the current protective wall.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Survival Through Ruin (10th–19th Century)</strong>
+            <p>When Anuradhapura was abandoned around 993 AD following Chola invasions, the city was reclaimed by jungle. However, the Bodhi tree was never abandoned. Devoted monks and villagers maintained care for the tree without interruption through centuries of ruin — an unbroken chain of devotion stretching over 23 centuries.</p>
+          </div>
+
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Modern History</strong>
+            <p>The tree survived storms in 1907 and 1911. In 1929, a vandal severed a branch. On May 14, 1985, the LTTE attacked the site, killing 146 pilgrims; the tree was unharmed, but security was permanently increased. The first golden fence was constructed in 1969.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏗️ THE PHYSICAL SITE — SECTION BY SECTION</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>The Terraced Structure:</strong> The tree sits on a terrace 6.5 meters high. The complex has five descending terrace levels planted with <em>Parivara Bodhi</em> (companion trees) grown from cuttings of the main tree.</li>
+            <li><strong>The Golden Fence:</strong> Built in 1969, this gleaming railing encircles the sacred tree, adorned with colourful prayer flags left by millions of pilgrims.</li>
+            <li><strong>Access Restriction:</strong> Access to the upper terrace is restricted to custodians. Pilgrims view the tree from the lower terraces.</li>
+            <li><strong>The Prarthana Bodhi Tree:</strong> A subsidiary tree on the lower terrace where pilgrims tie white threads and cloth while whispering prayers.</li>
+            <li><strong>The Seated Buddha Statue:</strong> Located in the image house, this 3.3-meter dolomite marble statue (circa 6th century AD) is believed to be the only Sri Lankan Buddha seated in the diamond posture (<em>vajraparyankasana</em>).</li>
+            <li><strong>The Cobra Stone:</strong> An ancient carved stone featuring an embossed cobra, dating to the site's earliest period.</li>
+            <li><strong>Mahamewuna Gardens:</strong> The surrounding park, created by King Mutasiva (367–307 BC), is older than the tree itself and contains the famous Samadhi Buddha Statue.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🙏 RITUALS AND WORSHIP</h4>
+          <p><strong>Daily Worship:</strong> Monks and devotees conduct rituals daily, lighting hundreds of oil lamps, offering white lotus and jasmine flowers, burning incense, and chanting.</p>
+          <div class="space-y-2">
+            <strong class="block text-gray-800">Annual Festivals:</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Duruthu Mangalle (January):</strong> Festival of New Rice. Farmers offer the first harvest.</li>
+              <li><strong>Parana Avurudu Mangalle (April):</strong> Held before Sinhala New Year with herbal drinks and drumming.</li>
+              <li><strong>Aluth Avurudu Mangalle (April):</strong> Held at dawn on New Year, involving offering jewellery to the tree.</li>
+              <li><strong>Kartika Mangalle (October–November):</strong> Festival of Lights, illuminating the complex with thousands of lamps.</li>
+            </ul>
+          </div>
+          <p><strong>Poya Days:</strong> Full moon days, especially Poson Poya (May–June) and Duruthu Poya (January), attract massive crowds of white-robed pilgrims.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ ENTRY FEES & OPENING HOURS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Entry Fee:</strong> Nominal fee. Foreigners pay approx. 200 LKR (under $1 USD). Sri Lankans pay less or enter free.</li>
+            <li><strong>Opening Hours:</strong> Open daily from before dawn (5:00 AM) until late evening (approx. 9:00 PM).</li>
+            <li><strong>Best Time to Visit:</strong> Dawn (5:00–7:00 AM) for peace and chanting, or evening for the glow of oil lamps. Poya days offer intense atmosphere but large crowds.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">👔 DRESS CODE — STRICTLY ENFORCED</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Wear White:</strong> Strongly recommended as a sign of respect.</li>
+            <li><strong>Cover Up:</strong> Shoulders and knees must be fully covered. Sarongs are available for purchase near the entrance.</li>
+            <li><strong>No Footwear:</strong> Shoes must be removed before entering the terrace. Floors get hot at midday; visit early or late.</li>
+            <li><strong>Behavior:</strong> Quiet, respectful behavior is essential. Photography is permitted in most areas.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING THERE</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>From Colombo:</strong> Train (4–5 hrs) or Bus (4–5 hrs). Car via A9 (3.5–4.5 hrs).</li>
+            <li><strong>From Kandy:</strong> Car or bus via Dambulla (approx. 3 hrs).</li>
+            <li><strong>From Sigiriya:</strong> Car (1.5–2 hrs).</li>
+            <li><strong>Local Transport:</strong> 25 min walk from Railway Station. Tuk-tuks and bicycles are readily available.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏨 ACCOMMODATION</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Budget ($10–20):</strong> Guesthouses in Anuradhapura town near the station.</li>
+            <li><strong>Mid-Range ($40–90):</strong> Hotel Rajarata, Palm Garden Village, Ulagalla Resort.</li>
+            <li><strong>Luxury ($200+):</strong> Ulagalla by Uga Escapes (boutique resort).</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL TIPS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Arrive at Dawn:</strong> The most atmospheric time with chanting and mist.</li>
+            <li><strong>Wear White:</strong> Enhances the experience and respect from locals.</li>
+            <li><strong>Offer Flowers:</strong> Buy lotus/jasmine at the gate for a traditional offering.</li>
+            <li><strong>Silence:</strong> Respect the deep faith of pilgrims.</li>
+            <li><strong>Combine Sites:</strong> Visit Ruwanwelisaya (1 km away) on the same trip.</li>
+            <li><strong>Transport:</strong> Rent a bicycle to explore the vast sacred city.</li>
+            <li><strong>Stay:</strong> At least one full day, preferably two, to see Anuradhapura properly.</li>
+          </ul>
+        </div>
+      </div>
+    `,
     SI: "ජය ශ්‍රී මහා බෝධීන් වහන්සේ යනු ශ්‍රී ලංකාවේ අනුරාධපුර මහමෙව්නා උයනේ පිහිටි පූජනීය බෝධීන් වහන්සේය. මෙය බුදුරජාණන් වහන්සේ බුද්ධත්වයට පත් වූ ඉන්දියාවේ බුද්ධගයාවේ ශ්‍රී මහා බෝධීන් වහන්සේගේ දකුණු ශාඛාවක් ලෙස සැලකේ. ක්‍රි.පූ. 288 දී රෝපණය කරන ලද මෙය, රෝපණය කළ දිනයක් සහිත ලොව පැරණිතම ජීවමාන වෘක්ෂයයි. මෙය ලංකාවට වැඩම කරවන ලද්දේ අශෝක අධිරාජ්‍යයාගේ දියණිය වූ සංඝමිත්තා රෙහෙණින් වහන්සේ විසිනි."
   },
   vatadageya: {
@@ -51,7 +477,197 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
     SI: "දඹුලු ලෙන් විහාරය හෙවත් දඹුල්ලේ රන් විහාරය යනු ශ්‍රී ලංකාවේ මධ්‍යම ප්‍රදේශයේ පිහිටි ලෝක උරුම ස්ථානයකි. මෙය ශ්‍රී ලංකාවේ විශාලතම හා හොඳම මට්ටමින් සංරක්ෂණය කර ඇති ලෙන් විහාර සංකීර්ණයයි. අවට තැන්නෙන් මීටර් 160 ක් පමණ උසට පර්වතය විහිදී ඇත. අවට ප්‍රදේශයේ ලේඛනගත කරන ලද ලෙන් 80 කට වඩා තිබේ. ප්‍රධාන ආකර්ෂණීය ස්ථාන ලෙන් පහක් පුරා පැතිරී ඇති අතර ඒවායේ බුදු පිළිම සහ සිතුවම් අඩංගු වේ. මෙම සිතුවම් සහ පිළිම ගෞතම බුදුරජාණන් වහන්සේ සහ උන්වහන්සේගේ ජීවිතයට සම්බන්ධ වේ. මෙහි බුදු පිළිම 153 ක්, ශ්‍රී ලාංකේය රජවරුන්ගේ පිළිම 3 ක් සහ දෙවි දේවතාවුන්ගේ පිළිම 4 ක් ඇත. බිතුසිතුවම් වර්ග මීටර් 2,100 ක ප්‍රදේශයක් පුරා විහිදී පවතී. මෙම විහාරයේ ඉතිහාසය ක්‍රි.පූ. 1 වන සියවස දක්වා දිවයන අතර, වළගම්බා රජු සතුරන්ගෙන් බේරී මෙහි සැඟවී සිට පසුව කෘතගුණ සැලකීමක් ලෙස මෙම ලෙන් විහාර සංකීර්ණයක් බවට පත් කළේය." 
   },
   "kandy-temple": { 
-    EN: "The Temple of the Sacred Tooth Relic, commonly known as Sri Dalada Maligawa, is a Buddhist temple in the city of Kandy, Sri Lanka. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country. Kandy was the last capital of the Sri Lankan kings and is a World Heritage Site mainly due to the temple. The temple architecture is a unique blend of traditional Kandyan styles, featuring intricate wood carvings, painted ceilings, and silver-embossed doors. The Paththirippuwa (Octagon), built by the last king of Kandy, is an iconic part of the complex. Every year, the Esala Perahera, one of the oldest and grandest Buddhist festivals in the world, features a magnificent procession where the sacred relic is paraded through the streets of Kandy on a majestic tusker.", 
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🦷 TEMPLE OF THE TOOTH — SRI DALADA MALIGAWA</h3>
+        <p class="italic text-gray-600">Kandy, Sri Lanka — Full Details</p>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <p>The Temple of the Tooth is situated in Kandy, the cultural capital of Sri Lanka, in the Central Highlands. It sits within the Royal Palace Complex on the northwestern shore of Kandy Lake, in the very heart of the city. Kandy is approximately 115 km from Colombo — about 2.5 to 3.5 hours by road or train.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏛️ WHAT IS IT?</h4>
+          <p>Sri Dalada Maligawa — meaning "Palace of the Sacred Tooth Relic" — is Sri Lanka's most sacred Buddhist temple. The word Maligawa literally translates to "palace," reflecting its original role as part of the royal residential complex. It enshrines what is believed to be the left canine tooth of Gautama Buddha, retrieved from his funeral pyre after his cremation in India over 2,500 years ago.</p>
+          <p>Since ancient times, the relic has played a central role in Sri Lankan politics and culture — whoever held the tooth was believed to hold the divine right to rule the entire island. This single belief shaped the course of Sri Lankan history for nearly 1,700 years. It is a UNESCO World Heritage Site, inscribed in 1988 as part of the Sacred City of Kandy.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 FULL HISTORY</h4>
+          
+          <div>
+            <strong class="block text-gray-800">The Origin of the Relic — India</strong>
+            <p>When the Buddha passed away and his body was cremated on a sandalwood funeral pyre in Kusinara, India, his left canine tooth was retrieved from the ashes and presented to King Brahmadatta. It was kept in India for generations, venerated by rulers as the ultimate symbol of sacred power.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Smuggled to Sri Lanka — 4th Century AD</strong>
+            <p>The last Indian king to possess the tooth was King Guhasiva of Kalinga. When enemy armies besieged his kingdom, he made the decision to send the precious relic to safety in Buddhist Sri Lanka. His daughter, Princess Hemamali, and her husband Prince Dantha smuggled the tooth out of India hidden in the hair of the princess. They arrived on the shores of Sri Lanka during the reign of King Kirti Sri Meghavanna of Anuradhapura (301–328 AD).</p>
+            <p>According to the ancient chronicle Dalada Sirita, the king was so moved that he placed the relic upon his own head, stood in a decorated chariot pulled by white horses, and processed it through his royal city. He then declared that every year the tooth relic would be taken in annual procession — beginning the tradition that continues to this day.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Relic as Royal Power</strong>
+            <p>From that moment, safeguarding the tooth became the defining responsibility of every Sri Lankan monarch. Kings built tooth relic temples directly beside their palaces at every capital — in Anuradhapura, Polonnaruwa, Dambadeniya, Gampola, and Kotte — as the Sri Lankan capital shifted over the centuries. Losing the tooth meant losing the right to rule.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Arrival in Kandy — Late 16th Century</strong>
+            <p>When the Kingdom of Kandy rose as the last independent Sri Lankan kingdom, the relic was brought to the city and housed in a two-storey structure built by King Vimaladharmasuriya I around 1595.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Portuguese Destruction — 1603</strong>
+            <p>When Portuguese forces invaded Kandy in 1603, the tooth relic was secretly carried to safety in the hills at Meda Mahanuwara in the Dumbara valley. The original temple was destroyed. King Rajasinha II later recovered the relic and restored or rebuilt the temple.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Present Temple is Built — 1687 to 1707</strong>
+            <p>The current temple was constructed by King Vira Narendra Sinha between 1687 and 1707. It was expanded between 1747 and 1782 by later Kandyan kings. The iconic octagonal tower — the Paththirippuwa — was added in 1803 by King Sri Wickrama Rajasinghe, along with the moat surrounding the complex. It was originally built for the king's personal recreation, then offered to the temple, and now serves as the temple library housing ancient palm-leaf Buddhist manuscripts.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">British Period</strong>
+            <p>After the British defeated the Kandyan Kingdom and signed the Kandyan Convention in 1815 — the very hall adjacent to the temple served as the venue — the colonial government assumed official custodianship of the temple. Under the agreement, the British were bound by treaty to protect the tooth relic, which they formally did. The Audience Hall was also renovated in 1872 for the arrival of the Prince of Wales.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The 1989 Attack</strong>
+            <p>In 1989, the militant organization Janatha Vimukthi Peramuna (JVP) attacked the temple with the intention of capturing the relic. The attempt failed and security around the complex was significantly tightened afterward.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The 1998 Bomb Blast</strong>
+            <p>In January 1998, Tamil Tiger (LTTE) separatists detonated a massive truck bomb outside the main entrance gate — the Mahawahalkada — destroying the gate completely and severely damaging the facade and roof of the temple. Restoration began immediately and the site was rebuilt faithfully to its original design. The Sri Dalada Museum inside now contains photographs from this attack as part of its collection.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Golden Roof</strong>
+            <p>The distinctive golden canopy over the inner shrine was added in the 1980s through a donation of gold from Buddhist nations organized by Sri Lankan President J.R. Jayewardene — the gleaming roof that today defines the temple's silhouette against the sky.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏗️ ARCHITECTURE — SECTION BY SECTION</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>The Moat (Ditch):</strong> The entire complex is encircled by a wide moat fed by the waters of Kandy Lake. This both protected the temple and symbolically purified the sacred space within.</li>
+            <li><strong>The Water Waves Wall:</strong> A low brick wall runs along the moat's edge, punctuated with holes designed to hold coconut oil lamps. At night, when hundreds of flames are lit along this wall, the effect is extraordinary.</li>
+            <li><strong>The Main Entrance Gate — Mahawahalkada:</strong> The primary entrance over the moat features a carved moonstone at its base, a Makara Torana arch at the top, two flanking guardian stone figures, and stone elephants on either side. This gate was completely destroyed in the 1998 bomb blast and rebuilt precisely as it was.</li>
+            <li><strong>The Drummers' Chamber — Hewisi Maduwa:</strong> Positioned directly in front of the main shrine, this chamber is where traditional drummers perform the ceremonial music that marks every daily ritual. The drums have been beaten here continuously for centuries.</li>
+            <li><strong>The Main Shrine — Lower Floor (Palle Malaya):</strong> The ground floor of the two-storey main shrine is where the ritual drumming and opening ceremonies begin at each daily puja. Devotees gather here, offer flowers, and prepare to ascend.</li>
+            <li><strong>The Inner Shrine — Upper Floor (Udu Malaya / Weda Hitina Maligawa):</strong> The upper floor is the most sacred chamber in all of Sri Lanka. The doors are made of intricately carved ivory. Within, a series of seven nested gold and jewelled caskets, each placed inside the next like Russian dolls, house the sacred tooth. The relic itself is rarely seen — what devotees view is the outermost ornate gold casket enshrined within a small stupa-like golden structure. Devotees are given only a few seconds to stand before the shrine, offer their reverence, and move on. Photography of the tooth's casket and shrine is not permitted.</li>
+            <li><strong>The Audience Hall — Magul Maduwa:</strong> Adjacent to the main shrine, this grand open hall was where the Kandyan kings held royal court. Its wooden columns and roof display outstanding examples of Kandyan-period wood carving. It was renovated for the Prince of Wales in 1872. This was also where the Kandyan Convention — the agreement surrendering the Kingdom of Kandy to the British in 1815 — was formally read out to the people.</li>
+            <li><strong>The Paththirippuwa — Octagonal Tower:</strong> This distinctive octagonal tower at the corner of the complex was built in 1803. It now serves as the temple library and houses an extraordinary collection of ancient palm-leaf manuscripts of Buddhist scripture. The architecture is one of the finest examples of late Kandyan craftsmanship.</li>
+            <li><strong>The Sri Dalada Museum:</strong> The museum within the complex contains historic documents, royal gifts offered to the temple over centuries, precious gems, intricate carvings, photographs from the 1998 bombing and reconstruction, and a detailed history of the relic's journey from India to Kandy.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🙏 THE DAILY RITUALS — PUJA CEREMONIES</h4>
+          <p>Three formal rituals — called puja — are conducted every single day of the year by the Buddhist monks of the Malwatta and Asgiri chapters, the two most senior monastic orders in Sri Lanka.</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Dawn Puja (Thevava) — approximately 5:30 to 6:30 AM.</strong> The first ritual of the day opens the inner shrine. Drumming begins in the Hewisi chamber below, calling devotees to worship. Monks carry flower offerings upstairs. The inner shrine doors are opened and the casket is briefly visible.</li>
+            <li><strong>Midday Puja (Nanumura) — approximately 9:30 to 10:30 AM.</strong> The most elaborate of the three ceremonies. The inner chamber is reopened and a ritual meal offering is presented to the relic.</li>
+            <li><strong>Evening Puja (Tevava) — approximately 6:30 to 8:00 PM.</strong> The final ritual of the day. Often considered the most atmospheric — the temple is lit with lamps and the drumming resonates through the lake-side complex in the dark.</li>
+            <li><strong>Wednesday Nanumura Mangallaya —</strong> Every Wednesday, a special additional ceremony involves the symbolic bathing of the relic using a preparation of scented water mixed with fragrant flowers and herbs. The resulting holy water is believed to contain healing powers and is distributed among all those present — pilgrims consider this exceptionally auspicious.</li>
+          </ul>
+          <p>At all three daily pujas, the public — including non-Buddhists and foreign tourists — is fully welcome to enter and observe. Pilgrims bring offerings of white and pink lotus blossoms and frangipani flowers, purchased from vendors at the temple gates. The scent of flowers and incense fills the entire complex during puja times.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎉 THE ESALA PERAHERA — THE GREAT FESTIVAL</h4>
+          <p>The most spectacular event associated with the temple is the Esala Perahera, held every year during the full moon of July or August. It is considered one of the greatest religious festivals in Asia and arguably the largest Buddhist celebration in the world.</p>
+          <p>The festival runs for 10 consecutive nights. Each night, a grand procession moves through the streets of Kandy, growing larger and more elaborate with each passing night. The final nights are breathtaking in their scale.</p>
+          <p>The procession features dozens of elaborately decorated elephants — the lead elephant, a large royal male, carries the gold casket representing the tooth relic secured on his back beneath a canopied frame. He is flanked by two perfectly matched smaller elephants. Behind them come traditional Kandyan dancers, fire-walkers, torch bearers, acrobats, whip crackers, flag bearers, traditional musicians, drummers, and dignitaries dressed in Kandyan royal costume.</p>
+          <p>Up to 100 elephants take part in the final nights. Approximately one million people attend the Esala Perahera across its 10 days — Sri Lankans from every corner of the island, pilgrims from Buddhist nations across Asia, and tourists from around the world.</p>
+          <p>The final night's procession ends at the temple shrine itself, with elders dressed in the costumes of the ancient Kandyan kings. The President of Sri Lanka and national leaders take part in a ceremony at the temple, formally dedicating their service to the country in the presence of the sacred relic.</p>
+          <p>It is important to know that the actual tooth itself has not been brought out for the procession since 1990, due to security concerns related to the Tamil Tiger insurgency. The jewelled casket is paraded as its representative. The tradition of the Esala Perahera began in the 18th century.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ ENTRY FEES & OPENING HOURS</h4>
+          <p><strong>Opening Hours:</strong> The temple is open every day of the year, from 5:30 AM to 8:00 PM.</p>
+          <div>
+            <strong>Entry Fee:</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Foreign adults: 2,000 LKR (approximately $6–7 USD)</li>
+              <li>Foreign children under 15: Free</li>
+              <li>Sri Lankan nationals: Nominal or free</li>
+            </ul>
+          </div>
+          <div>
+            <strong>Puja Times to Visit:</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li>Dawn Puja: 5:30 – 6:30 AM</li>
+              <li>Midday Puja: 9:30 – 10:30 AM</li>
+              <li>Evening Puja: 6:30 – 8:00 PM</li>
+            </ul>
+          </div>
+          <p>Visiting during a puja ceremony is the most rewarding experience — the drumming, the crowd of white-robed pilgrims, the flower offerings, and the brief opening of the inner shrine all happen only during these windows.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">👔 DRESS CODE — STRICTLY ENFORCED</h4>
+          <p>The dress code is very strictly enforced by security guards stationed at the entrance. Violations result in being turned away regardless of how far you have travelled.</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Shoulders must be fully covered — no sleeveless tops, no strappy garments</li>
+            <li>Knees must be fully covered — no shorts, no short skirts</li>
+            <li>Remove all footwear before entering the inner shrine area — you will walk barefoot on stone floors</li>
+            <li>Hats must be removed inside the temple</li>
+            <li>Sarongs and wraps are available for rent or purchase at stalls near the entrance if needed</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📸 PHOTOGRAPHY RULES</h4>
+          <p>Photography is permitted throughout most of the complex — the exterior, gardens, Audience Hall, Paththirippuwa, and museum. However, photography of the inner shrine and the tooth's casket is strictly not permitted inside the upper sanctum. Visitors are given only a few seconds to view the shrine and must move on without stopping.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING TO THE TEMPLE</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>From Colombo:</strong> By train, the journey from Colombo Fort to Kandy takes 2.5 to 3 hours on the scenic hill country line — one of the most beautiful train rides in Sri Lanka. By road, it is 115 km and takes 2.5 to 3.5 hours by car or bus depending on traffic. Buses run frequently from Colombo Central Bus Stand.</li>
+            <li><strong>From Sigiriya:</strong> Approximately 90 km, 2.5 to 3 hours by car or bus through Dambulla and Matale.</li>
+            <li><strong>From Ella or Nuwara Eliya:</strong> By the spectacular hill country train — 3 to 4 hours through tea country and mountain passes.</li>
+            <li><strong>Within Kandy:</strong> The temple is in the absolute centre of the city, a 10-minute walk from Kandy Town bus stand and from the train station. Tuk-tuks are available everywhere.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏨 WHERE TO STAY IN KANDY</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Budget:</strong> McLeod Inn and various guesthouses in the Kandy Town area, from around $15–25 per night.</li>
+            <li><strong>Mid-Range:</strong> Earl's Regency, Hotel Suisse, and Cinnamon Citadel — all offering lake or hill views and swimming pools, from around $50–90 per night.</li>
+            <li><strong>Luxury:</strong> Kandy House (a restored Kandyan aristocrat's manor) and Theva Residency (stunning infinity pool with panoramic valley views) — from $150 upward per night.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🍽️ WHERE TO EAT NEAR THE TEMPLE</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>The Empire Café:</strong> Popular rooftop café overlooking Kandy Lake, good Sri Lankan and Western food.</li>
+            <li><strong>Slightly Chilled:</strong> A well-known local favourite on Kandy Lake Road with good Sri Lankan rice and curry.</li>
+            <li><strong>Helga's Folly Hotel Restaurant:</strong> One of Kandy's most unique dining experiences, in an extraordinarily decorated heritage hotel.</li>
+            <li><strong>Flower Song Chinese Restaurant:</strong> Excellent Chinese food, popular with both locals and tourists.</li>
+            <li><strong>Local Market Food Stalls:</strong> The covered market near the bus stand has excellent, cheap kottu, hoppers, and string hoppers.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL TIPS FOR VISITORS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Arrive during a puja ceremony:</strong> Arriving outside these times means the inner shrine is closed and the temple feels ordinary. Arriving during puja transforms the experience entirely.</li>
+            <li><strong>Go barefoot prepared:</strong> You will walk on stone and tile floors throughout. The floors can be hot in midday sun and cold in early morning. Thin socks are permitted in some areas.</li>
+            <li><strong>Buy flowers at the gate:</strong> Local vendors sell lotus blossoms and frangipani at the temple entrance for a small cost. Offering flowers is the traditional act of reverence and adds genuine meaning to the visit.</li>
+            <li><strong>Arrive early morning:</strong> The dawn puja at 5:30 AM is the least crowded and most atmospheric ritual of the day, with the city still quiet and the lake misty.</li>
+            <li><strong>Combine with Kandy Lake:</strong> A walk around Kandy Lake immediately after the temple visit is the perfect way to absorb the atmosphere of this beautiful royal city.</li>
+            <li><strong>Combine with the National Museum:</strong> Located directly adjacent to the temple in the former royal palace, the National Museum of Kandy contains throne rooms, royal regalia, and 2,000-year-old artifacts from Sri Lanka's kingdoms.</li>
+            <li><strong>Book accommodation during Esala Perahera well in advance:</strong> Hotels in Kandy fill up months ahead for the festival period (July–August). Prices also rise significantly during this time.</li>
+          </ul>
+        </div>
+      </div>
+    `,
     SI: "ශ්‍රී දන්ත ධාතු මන්දිරය හෙවත් ශ්‍රී දළදා මාළිගාව යනු ශ්‍රී ලංකාවේ මහනුවර නගරයේ පිහිටි බෞද්ධ විහාරස්ථානයකි. මෙය බුදුරජාණන් වහන්සේගේ ශ්‍රී දන්ත ධාතූන් වහන්සේ වැඩසිටින පැරණි මහනුවර රාජධානියේ රාජකීය මාලිගා සංකීර්ණය තුළ පිහිටා ඇත. පුරාණ කාලයේ සිටම දන්ත ධාතූන් වහන්සේ දේශපාලනික වශයෙන් වැදගත් කාර්යභාරයක් ඉටු කර ඇති අතර, දන්ත ධාතූන් වහන්සේගේ හිමිකාරිත්වය දරන තැනැත්තාට රටේ පාලන බලය හිමිවන බවට විශ්වාසයක් පවතී. මහනුවර යනු ශ්‍රී ලාංකේය රජවරුන්ගේ අවසාන අගනුවර වූ අතර මෙම විහාරස්ථානය නිසාම එය ලෝක උරුමයක් බවට පත්ව ඇත. විහාරයේ වාස්තු විද්‍යාව සාම්ප්‍රදායික උඩරට ශෛලීන්ගේ අද්විතීය සම්මිශ්‍රණයක් වන අතර සංකීර්ණ ලී කැටයම්, සිතුවම් කළ සිවිලිම් සහ රිදී කැටයම් කළ දොරවල් මෙහි දැකගත හැකිය. මහනුවර අවසාන රජු විසින් ඉදිකරන ලද පත්තිරිප්පුව මෙම සංකීර්ණයේ සුවිශේෂී කොටසකි. සෑම වසරකම ලොව පැරණිතම හා උදාරතම බෞද්ධ උත්සවයක් වන ඇසළ පෙරහැරේදී දන්ත ධාතූන් වහන්සේ වීදි සංචාරය කරවනු ලබයි." 
   },
   mihintale: { 
