@@ -223,6 +223,21 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
             <span className="hidden sm:inline">{UI_STRINGS.returnToRegistry[language]}</span>
             <span className="sm:hidden">Back</span>
           </button>
+          
+          <button 
+            onClick={() => {
+              // We'll trigger the LiveVoiceGuide from here or open a modal
+              // For now, let's just show an alert or trigger a global state if we had one
+              // Since we don't have a global state for the voice guide yet, we can just
+              // dispatch a custom event that the Layout or App can listen to.
+              window.dispatchEvent(new CustomEvent('open-voice-guide', { detail: { destination: destination.name.EN } }));
+            }}
+            className="flex items-center gap-2 md:gap-4 px-5 py-3 md:px-8 md:py-4 bg-[#0EA5E9]/80 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-[#0EA5E9] hover:scale-105 transition-all group shadow-2xl active:scale-95"
+          >
+            <Radio size={16} className="animate-pulse md:w-[18px] md:h-[18px]" />
+            <span className="hidden sm:inline">{language === 'EN' ? 'AI Voice Guide' : 'AI හඬ මඟපෙන්වන්නා'}</span>
+            <span className="sm:hidden">Voice</span>
+          </button>
         </div>
 
         <div className="absolute bottom-16 md:bottom-24 left-0 right-0 px-4 md:px-16 z-30">

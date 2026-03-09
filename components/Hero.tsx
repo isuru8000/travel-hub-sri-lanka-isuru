@@ -13,6 +13,22 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const heroImages = [
+    "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s16000",
+    "https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg",
+    "https://i.pinimg.com/1200x/c4/bd/4f/c4bd4fbf76c891efdf8a735d1337afaa.jpg",
+    "https://i.pinimg.com/1200x/1e/8f/62/1e8f62ed06398a4e4c8649cbaa62563a.jpg",
+    "https://i.pinimg.com/736x/cc/ae/b9/ccaeb9f1a649216bea87d317f10bd495.jpg"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     // Disable heavy event listeners on mobile for performance
@@ -46,10 +62,6 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
     };
   }, []);
 
-  // User-provided cinematic aerial view of Sri Lanka
-  // Using thumbnail endpoint with max size (s16000) to get original quality
-  const heroBgImage = "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s16000";
-
   const mainTitleEN = "SRI LANKA";
   const mainTitleSI = "ශ්‍රී ලංකාව";
 
@@ -59,13 +71,23 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
       {/* Background Layer with Parallax and Enhancements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div 
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms] ease-out brightness-[0.5] saturate-[1.1]" 
+          className="absolute inset-0 transition-transform duration-[1200ms] ease-out"
           style={{ 
-            backgroundImage: `url('${heroBgImage}')`,
             transform: `scale(1.1 + ${scrollPos / 6000}) translate3d(${mousePos.x * 35}px, ${mousePos.y * 35}px, 0)`,
             willChange: 'transform'
           }}
         >
+          {heroImages.map((img, index) => (
+            <div 
+              key={img}
+              className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out brightness-[0.5] saturate-[1.1] ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`} 
+              style={{ 
+                backgroundImage: `url('${img}')`,
+                willChange: 'opacity, transform'
+              }}
+            />
+          ))}
+          
           {/* Multi-layered cinematic overlays */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#020205]/60 via-transparent to-[#020205]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_80%)]" />

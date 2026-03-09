@@ -14,6 +14,18 @@ const LiveVoiceGuide: React.FC<LiveVoiceGuideProps> = ({ language }) => {
   const [status, setStatus] = useState<'idle' | 'listening' | 'speaking'>('idle');
   const [error, setError] = useState<string | null>(null);
   
+  useEffect(() => {
+    const handleOpenVoiceGuide = (e: CustomEvent) => {
+      if (!isActive && !isConnecting) {
+        startSession();
+      }
+    };
+    window.addEventListener('open-voice-guide', handleOpenVoiceGuide as EventListener);
+    return () => {
+      window.removeEventListener('open-voice-guide', handleOpenVoiceGuide as EventListener);
+    };
+  }, [isActive, isConnecting]);
+
   const sessionRef = useRef<any>(null);
   const inputAudioCtxRef = useRef<AudioContext | null>(null);
   const outputAudioCtxRef = useRef<AudioContext | null>(null);
@@ -199,53 +211,32 @@ const LiveVoiceGuide: React.FC<LiveVoiceGuideProps> = ({ language }) => {
 
   return (
     <>
-      <div className="fixed bottom-6 left-6 z-[60] group/live">
-        <div className={`absolute inset-0 bg-[#0EA5E9] rounded-full animate-ping opacity-20 scale-150 transition-opacity ${isActive ? 'opacity-40' : 'group-hover/live:opacity-0'}`}></div>
-        <button 
-          onClick={isActive ? stopSession : startSession}
-          disabled={isConnecting}
-          className={`relative p-6 rounded-full shadow-[0_30px_70px_rgba(14,165,233,0.3)] transition-all duration-700 flex items-center gap-4 overflow-hidden border border-white/20 ${isActive ? 'bg-[#0EA5E9] text-white scale-110' : 'bg-[#0a0a0a] text-white hover:scale-110 active:scale-95'}`}
-        >
-          <div className="relative z-10 flex items-center gap-4">
-             {isConnecting ? (
-               <Loader2 size={28} className="animate-spin text-white" />
-             ) : (
-               <Mic size={28} className={`${isActive ? 'animate-pulse' : 'text-[#0EA5E9]'}`} />
-             )}
-             <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-700 whitespace-nowrap font-black text-[10px] tracking-[0.4em] uppercase">
-                {isActive ? 'SYNC ACTIVE' : (isConnecting ? 'LINKING...' : 'INITIATE VOICE LINK')}
-             </span>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        </button>
-
-        {error && !isActive && (
-          <div className="absolute bottom-full left-0 mb-6 w-80 animate-in slide-in-from-bottom-2 duration-300">
-             <div className="bg-white/90 backdrop-blur-xl border border-red-100 p-6 rounded-[2rem] shadow-2xl space-y-4">
-                <div className="flex items-center gap-3 text-red-500">
-                   <AlertTriangle size={18} />
-                   <span className="text-[10px] font-black uppercase tracking-widest">Protocol Error</span>
-                </div>
-                <p className="text-xs font-bold text-gray-600 leading-relaxed italic">
-                  {error === "API_KEY_ERROR" 
-                    ? (language === 'EN' ? "Paid API Key required for advanced voice synthesis. Click below to select." : "මෙම පහසුකම සඳහා ගෙවන ලද API යතුරක් අවශ්‍ය වේ.") 
-                    : error}
-                </p>
-                {error === "API_KEY_ERROR" ? (
-                  <button 
-                    onClick={handleKeySelection}
-                    className="w-full py-3 bg-[#0a0a0a] text-white rounded-xl text-[9px] font-black uppercase tracking-[0.3em] flex items-center justify-center gap-2 hover:bg-[#0EA5E9] transition-colors"
-                  >
-                    <Key size={14} />
-                    Select Project Key
-                  </button>
-                ) : (
-                  <button onClick={() => setError(null)} className="text-[8px] font-black text-gray-400 uppercase tracking-widest hover:text-[#0a0a0a] transition-colors underline decoration-dotted underline-offset-4">Dismiss Warning</button>
-                )}
-             </div>
-          </div>
-        )}
-      </div>
+      {error && !isActive && (
+        <div className="fixed bottom-6 left-6 z-[60] w-80 animate-in slide-in-from-bottom-2 duration-300">
+           <div className="bg-white/90 backdrop-blur-xl border border-red-100 p-6 rounded-[2rem] shadow-2xl space-y-4">
+              <div className="flex items-center gap-3 text-red-500">
+                 <AlertTriangle size={18} />
+                 <span className="text-[10px] font-black uppercase tracking-widest">Protocol Error</span>
+              </div>
+              <p className="text-xs font-bold text-gray-600 leading-relaxed italic">
+                {error === "API_KEY_ERROR" 
+                  ? (language === 'EN' ? "Paid API Key required for advanced voice synthesis. Click below to select." : "මෙම පහසුකම සඳහා ගෙවන ලද API යතුරක් අවශ්‍ය වේ.") 
+                  : error}
+              </p>
+              {error === "API_KEY_ERROR" ? (
+                <button 
+                  onClick={handleKeySelection}
+                  className="w-full py-3 bg-[#0a0a0a] text-white rounded-xl text-[9px] font-black uppercase tracking-[0.3em] flex items-center justify-center gap-2 hover:bg-[#0EA5E9] transition-colors"
+                >
+                  <Key size={14} />
+                  Select Project Key
+                </button>
+              ) : (
+                <button onClick={() => setError(null)} className="text-[8px] font-black text-gray-400 uppercase tracking-widest hover:text-[#0a0a0a] transition-colors underline decoration-dotted underline-offset-4">Dismiss Warning</button>
+              )}
+           </div>
+        </div>
+      )}
 
       {isActive && (
         <div className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center p-6 animate-in fade-in duration-1000">

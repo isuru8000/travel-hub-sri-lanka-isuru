@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Food, HeritageMusic, TraditionalMedicine, Phrase, TravelEssential, Festival, Translation, Transport } from './types.ts';
+import { Food, HeritageMusic, TraditionalMedicine, Phrase, TravelEssential, Festival, Translation, Transport, ArtAndCraft } from './types.ts';
 import { DESTINATIONS_DATA } from './destination_details.tsx';
 
 export const SUPABASE_KEY = 'sb_publishable_c8wPY71QFNsFJKcAEuD86w_pcqen0nv';
@@ -405,7 +405,65 @@ export const MEDICINE_DATA: TraditionalMedicine[] = [
 
 export const CATEGORIES_DATA = [
   { id: "foods", icon: "Utensils", title: { EN: "Food Heritage", SI: "ආහාර උරුමය" }, description: { EN: "Taste the spices of Lanka.", SI: "ලංකාවේ කුළුබඩු රස බලන්න." } },
-  { id: "music", icon: "Music", title: { EN: "Ancient Music", SI: "සංගීතය" }, description: { EN: "Listen to the rhythms.", SI: "දේශීය රිද්මයට සවන් දෙන්න." } }
+  { id: "music", icon: "Music", title: { EN: "Ancient Music", SI: "සංගීතය" }, description: { EN: "Listen to the rhythms.", SI: "දේශීය රිද්මයට සවන් දෙන්න." } },
+  { id: "arts-crafts", icon: "Palette", title: { EN: "Arts & Crafts", SI: "කලා සහ අත්කම්" }, description: { EN: "Discover traditional artistry.", SI: "පාරම්පරික කලා නිර්මාණ ගවේෂණය කරන්න." } }
+];
+
+export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
+  {
+    id: "ac1",
+    name: { EN: "Ambalangoda Masks", SI: "අම්බලන්ගොඩ වෙස් මුහුණු" },
+    category: "mask",
+    description: { EN: "Intricately carved wooden masks used in traditional healing rituals and dances.", SI: "ශාන්තිකර්ම සහ නර්තන සඳහා යොදා ගන්නා ලීයෙන් නෙළන ලද වෙස් මුහුණු." },
+    image: "https://i.pinimg.com/736x/83/92/7d/83927ddb06d862f92f1f3e74a81b2490.jpg",
+    origin: { EN: "Ambalangoda", SI: "අම්බලන්ගොඩ" },
+    significance: { EN: "Represents demons, gods, and characters in folklore.", SI: "යකුන්, දෙවිවරුන් සහ ජනප්‍රවාද චරිත නිරූපණය කරයි." }
+  },
+  {
+    id: "ac2",
+    name: { EN: "Beeralu Lace", SI: "බීරළු රේන්ද" },
+    category: "textile",
+    description: { EN: "A delicate, hand-woven lace technique introduced by the Portuguese.", SI: "පෘතුගීසීන් විසින් හඳුන්වා දුන් සියුම් අත්කම් රේන්ද කලාවකි." },
+    image: "https://i.pinimg.com/1200x/c1/9f/6a/c19f6a7d571618a803f26034e3e3b3c3.jpg",
+    origin: { EN: "Galle / Weligama", SI: "ගාල්ල / වැලිගම" },
+    significance: { EN: "A symbol of southern coastal heritage and women's craftsmanship.", SI: "දකුණු වෙරළබඩ උරුමය සහ කාන්තා අත්කම් කුසලතාවයේ සංකේතයකි." }
+  },
+  {
+    id: "ac3",
+    name: { EN: "Brassware", SI: "පිත්තල කර්මාන්තය" },
+    category: "metal",
+    description: { EN: "Traditional metalwork creating oil lamps, vases, and decorative items.", SI: "පහන්, මල් පෝච්චි සහ විසිතුරු භාණ්ඩ නිර්මාණය කරන පාරම්පරික ලෝහ කර්මාන්තයකි." },
+    image: "https://i.pinimg.com/1200x/49/a2/77/49a2779f187a5f6e8d21b3e7f67823e1.jpg",
+    origin: { EN: "Pilimathalawa", SI: "පිළිමතලාව" },
+    significance: { EN: "Essential for religious ceremonies and cultural events.", SI: "ආගමික සහ සංස්කෘතික උත්සව සඳහා අත්‍යවශ්‍ය වේ." }
+  },
+  {
+    id: "ac4",
+    name: { EN: "Batik", SI: "බතික් කලාව" },
+    category: "textile",
+    description: { EN: "A wax-resist dyeing technique creating vibrant, colorful patterns on fabric.", SI: "ඉටි භාවිතයෙන් රෙදි මත වර්ණවත් රටා මවන කලාවකි." },
+    image: "https://i.pinimg.com/1200x/2d/4e/7a/2d4e7a8b9c0d1e2f3a4b5c6d7e8f9a0b.jpg",
+    origin: { EN: "Island-wide", SI: "දිවයින පුරා" },
+    significance: { EN: "Used for traditional clothing and modern fashion.", SI: "පාරම්පරික ඇඳුම් සහ නවීන විලාසිතා සඳහා යොදා ගනී." }
+  },
+  {
+    id: "ac5",
+    name: { EN: "Wood Carving", SI: "ලී කැටයම්" },
+    category: "wood",
+    description: { EN: "Detailed carvings on mahogany, teak, and ebony wood.", SI: "මහෝගනී, තේක්ක සහ කළුවර ලී මත කරන සියුම් කැටයම්." },
+    image: "https://i.pinimg.com/1200x/1f/2e/3d/1f2e3d4c5b6a7b8c9d0e1f2a3b4c5d6e.jpg",
+    origin: { EN: "Embekke / Kandy", SI: "ඇම්බැක්ක / මහනුවර" },
+    significance: { EN: "Showcases ancient architectural and artistic skills.", SI: "පැරණි වාස්තු විද්‍යාත්මක සහ කලාත්මක කුසලතා විදහා දක්වයි." }
+  },
+  {
+    id: "ac6",
+    name: { EN: "Dumbara Mats", SI: "දුම්බර පැදුරු" },
+    category: "textile",
+    description: { EN: "Handwoven mats with geometric patterns made from Hana plant fibers.", SI: "හණ ශාකයේ කෙඳි වලින් වියන ලද ජ්‍යාමිතික රටා සහිත පැදුරු." },
+    image: "https://i.pinimg.com/1200x/5a/6b/7c/5a6b7c8d9e0f1a2b3c4d5e6f7g8h9i0j.jpg",
+    origin: { EN: "Dumbara Valley", SI: "දුම්බර මිටියාවත" },
+    significance: { EN: "A UNESCO recognized intangible cultural heritage.", SI: "යුනෙස්කෝව විසින් පිළිගත් අස්පෘශ්‍ය සංස්කෘතික උරුමයකි." }
+  }
 ];
 
 export const PHRASEBOOK_DATA: Phrase[] = [

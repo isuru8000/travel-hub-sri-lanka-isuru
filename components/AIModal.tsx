@@ -16,7 +16,7 @@ interface Message {
 
 interface AIModalProps {
   language: Language;
-  onNavigate?: (dest: Destination) => void;
+  onNavigate?: (dest: Destination | string) => void;
 }
 
 const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
@@ -69,6 +69,13 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
       EN: "Analyze the best 3-day cultural route for a historian", 
       SI: "ඉතිහාසඥයෙකු සඳහා හොඳම තෙදින සංස්කෘතික ගමන් මග විශ්ලේෂණය කරන්න",
       label: { EN: "Complex Logic", SI: "සංකීර්ණ තර්කනය" }
+    },
+    { 
+      id: 'image_analysis', 
+      icon: <ImageIcon size={16} />, 
+      EN: "Can you identify this Sri Lankan food from the image?", 
+      SI: "මෙම පින්තූරයෙන් ශ්‍රී ලාංකික ආහාරය හඳුනාගත හැකිද?",
+      label: { EN: "Image Analysis", SI: "පින්තූර විශ්ලේෂණය" }
     }
   ];
 
@@ -215,6 +222,8 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
                   const dest = DESTINATIONS_DATA.find(d => d.id === destId);
                   if (dest && onNavigate) {
                     onNavigate(dest);
+                  } else if (onNavigate) {
+                    onNavigate(destId);
                   }
                   hasNavigated = true;
                 }

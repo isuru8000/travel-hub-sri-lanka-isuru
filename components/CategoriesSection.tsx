@@ -48,6 +48,7 @@ const CategoriesSection: React.FC<CategoriesSectionProps> = ({ language, setView
                 onClick={() => {
                    if (cat.id === 'foods') setView('foods');
                    else if (cat.id === 'music') setView('music');
+                   else if (cat.id === 'arts-crafts') setView('arts-crafts');
                    else if (cat.id === 'medicine') setView('medicine');
                    else if (cat.id === 'phrases') setView('phrases');
                    else if (cat.id === 'essentials') setView('essentials');

@@ -9,12 +9,14 @@ import Destinations from './components/Destinations.tsx';
 import Foods from './components/Foods.tsx';
 import HeritageMusic from './components/HeritageMusic.tsx';
 import TraditionalMedicine from './components/TraditionalMedicine.tsx';
+import { ArtsAndCrafts } from './components/ArtsAndCrafts.tsx';
 import Phrasebook from './components/Phrasebook.tsx';
 import TravelEssentials from './components/TravelEssentials.tsx';
 import Festivals from './components/Festivals.tsx';
 import CategoriesSection from './components/CategoriesSection.tsx';
 import StorySection from './components/StorySection.tsx';
 import AIModal from './components/AIModal.tsx';
+import LiveVoiceGuide from './components/LiveVoiceGuide.tsx';
 import IslandMapManifold from './components/IslandMapManifold.tsx';
 import VRPortal from './components/VRPortal.tsx';
 import TripPlanner from './components/TripPlanner.tsx';
@@ -36,7 +38,7 @@ import LockedView from './components/LockedView.tsx';
 import ComingSoonView from './components/ComingSoonView.tsx';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import Lenis from 'lenis';
-import { UI_STRINGS } from './constants.tsx';
+import { UI_STRINGS, DESTINATIONS as DESTINATIONS_DATA } from './constants.tsx';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
 
 export default function App() {
@@ -144,9 +146,19 @@ export default function App() {
     setUser(null);
   };
 
-  const navigateToDestination = (dest: Destination) => {
-    setSelectedDestinationData(dest);
-    setView('destination-detail');
+  const navigateToDestination = (dest: Destination | string) => {
+    if (typeof dest === 'string') {
+      const found = DESTINATIONS_DATA.find(d => d.id === dest);
+      if (found) {
+        setSelectedDestinationData(found);
+        setView('destination-detail');
+      } else if (['foods', 'music', 'arts-crafts', 'medicine', 'phrases', 'essentials', 'festivals', 'quiz'].includes(dest)) {
+        setView(dest as View);
+      }
+    } else {
+      setSelectedDestinationData(dest);
+      setView('destination-detail');
+    }
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
@@ -189,6 +201,8 @@ export default function App() {
         return <div className="pt-24"><HeritageMusic language={language} onBack={() => setView('home')} /></div>;
       case 'medicine':
         return <div className="pt-24"><TraditionalMedicine language={language} onBack={() => setView('home')} /></div>;
+      case 'arts-crafts':
+        return <div className="pt-24"><ArtsAndCrafts language={language} onBack={() => setView('home')} /></div>;
       case 'phrases':
         return <div className="pt-24"><Phrasebook language={language} onBack={() => setView('home')} /></div>;
       case 'essentials':
@@ -390,6 +404,7 @@ export default function App() {
       </div>
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
       <AIModal language={language} onNavigate={navigateToDestination} />
+      <LiveVoiceGuide language={language} />
       <ScrollControls />
     </Layout>
   );
