@@ -77,16 +77,17 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             willChange: 'transform'
           }}
         >
-          {heroImages.map((img, index) => (
-            <div 
-              key={img}
-              className={`absolute inset-0 bg-cover bg-center transition-all duration-[2000ms] ease-in-out brightness-[0.5] saturate-[1.1] ${index === currentImageIndex ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`} 
-              style={{ 
-                backgroundImage: `url('${img}')`,
-                willChange: 'opacity, transform'
-              }}
-            />
-          ))}
+          {/* Mobile Static Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.5] saturate-[1.1]"
+            style={{ backgroundImage: `url('https://i.pinimg.com/736x/8a/9f/71/8a9f719e457b3869ec63234062d057e5.jpg')` }}
+          />
+
+          {/* Desktop Static Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.5] saturate-[1.1]"
+            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/6d/f7/4d/6df74de4c2548cc787dc224005393149.jpg')` }}
+          />
           
           {/* Multi-layered cinematic overlays */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#020205]/60 via-transparent to-[#020205]" />
@@ -135,8 +136,8 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
              <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_30px_#F59E0B] mb-8 md:mb-12 opacity-60" />
              <p className="font-narrative text-xs md:text-xl font-light text-white/40 max-w-3xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic">
                {language === 'EN' 
-                 ? "a high-fidelity reconstruction of the world's most mysterious island."
-                 : "ලොව අබිරහස් දූපතක බහු-මාන ප්‍රතිනිර්මාණයට පිවිසෙන්න."}
+                 ? "an immersive journey through the timeless wonders of the pearl of the indian ocean."
+                 : "ඉන්දියන් සාගරයේ මුතු ඇටයේ කාලාන්තරයක් පුරා සැඟවුණු අසිරිය සොයා යන ගමනක්."}
              </p>
           </div>
         </div>
@@ -158,7 +159,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             className="w-full sm:w-auto group relative px-8 py-6 md:px-16 md:py-8 bg-white/5 backdrop-blur-3xl border border-white/20 rounded-[2.5rem] font-black text-[12px] md:text-[14px] text-white uppercase tracking-[0.3em] md:tracking-[0.5em] transition-all duration-700 hover:bg-white/10 hover:border-[#F59E0B]/50 active:scale-95 shadow-2xl flex justify-center"
           >
             <span className="relative z-10 flex items-center gap-4 md:gap-6">
-              {UI_STRINGS.vrHorizon[language]}
+              {UI_STRINGS.vrTrip[language]}
               <Orbit size={20} className="text-[#F59E0B] animate-spin-slow" />
             </span>
           </button>

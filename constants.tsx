@@ -25,7 +25,7 @@ export const UI_STRINGS: Translation = {
   close: { EN: "Close", SI: "වසා දමන්න" },
   exploreInterests: { EN: "Explore Your Interests", SI: "ඔබේ රුචිකත්වයන් ගවේෂණය කරන්න" },
   explore: { EN: "Explore", SI: "ගවේෂණය" },
-  vrHorizon: { EN: "VR Horizon", SI: "VR ක්ෂිතිජය" },
+  vrTrip: { EN: "VR Trip", SI: "VR චාරිකාව" },
   registry: { EN: "Registry", SI: "නාමාවලිය" },
   initializeMap: { EN: "Turn on the Global Map", SI: "ගෝලීය සිතියම් පද්ධතිය සක්‍රිය කරන්න" },
   uncoverDestiny: { EN: "Uncover Your Destiny", SI: "ඔබේ දෛවය සොයාගන්න" },
