@@ -319,7 +319,7 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[480px] sm:h-[800px] sm:max-h-[92vh] bg-white shadow-[0_60px_150px_rgba(0,0,0,0.4)] rounded-t-[4rem] sm:rounded-[4rem] z-[100] flex flex-col overflow-hidden animate-in slide-in-from-bottom-20 duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border border-gray-100">
+        <div className="fixed inset-x-0 bottom-0 h-[65vh] sm:inset-auto sm:bottom-6 sm:right-6 sm:w-[480px] sm:h-[800px] sm:max-h-[92vh] bg-white shadow-[0_60px_150px_rgba(0,0,0,0.4)] rounded-t-[2.5rem] sm:rounded-[4rem] z-[100] flex flex-col overflow-hidden animate-in slide-in-from-bottom-20 duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] border border-gray-100">
           
           <div className="relative shrink-0 p-10 bg-[#0a0a0a] text-white overflow-hidden">
             <div className="absolute inset-0 pattern-overlay opacity-10 pointer-events-none"></div>
