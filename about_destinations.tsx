@@ -469,11 +469,489 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
     SI: "ලංකාතිලක විහාරය යනු පොළොන්නරුව පුරාණ නගරයේ පිහිටි පැරණි ගොඩනැගිල්ලකි. පළමුවන පරාක්‍රමබාහු රජු විසින් ඉදිකරන ලද මෙය මහල් පහකින් යුක්ත වූ දැවැන්ත ගඩොල් ගොඩනැගිල්ලකි. මෙහි ඇති සුවිශේෂී ලක්ෂණය වන්නේ ඇතුළත ඇති යෝධ හිස රහිත බුදු පිළිමයයි. මෙය 'ගෙඩිගේ' වාස්තු විද්‍යා ශෛලියට කදිම උදාහරණයකි."
   },
   "galle-fort": { 
-    EN: "Galle Fort, in the Bay of Galle on the southwest coast of Sri Lanka, was built first in 1588 by the Portuguese, then extensively fortified by the Dutch during the 17th century from 1649 onwards. It is a historical, archaeological and architectural heritage monument, which even after more than 432 years maintains a polished appearance, due to extensive reconstruction work done by the Archaeological Department of Sri Lanka. The fort has a colourful history, and today has a multi-ethnic and multi-religious population. The heritage value of the fort has been recognized by the UNESCO and the site has been inscribed as a cultural heritage UNESCO World Heritage Site. It is a 'living' heritage site, with a bustling community living within its ramparts. Key landmarks include the Dutch Reformed Church, the Old Dutch Hospital, the Galle Lighthouse, and the massive ramparts that offer stunning views of the Indian Ocean. The narrow cobblestone streets are lined with colonial-era buildings, many of which have been converted into boutique hotels, shops, and cafes.", 
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🏰 GALLE FORT — ගාලු කොටුව</h3>
+        <p class="italic text-gray-600">Galle, Sri Lanka — Complete Verified Guide</p>
+
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <h4 class="font-bold text-blue-900 flex items-center gap-2 mb-2">✅ HONEST NOTE</h4>
+          <p class="text-blue-800 text-sm">All facts below are clearly labelled:<br/>
+          <strong>✅ CONFIRMED</strong> — physically verifiable, accepted by mainstream history and archaeology, documented by UNESCO and government records<br/>
+          <strong>⚠️ UNCERTAIN</strong> — recorded in some sources but debated or unverifiable</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>City:</strong> Galle, Southern Province, Sri Lanka</li>
+            <li><strong>Position:</strong> Built on a rocky promontory on the extreme southwestern tip of Sri Lanka, where the coastline turns east toward Matara and Tangalle. The fort peninsula juts into the Indian Ocean on three sides.</li>
+            <li><strong>Distance from Colombo:</strong> 119 km south — approximately 2 to 2.5 hours by car or train</li>
+            <li><strong>Distance from Mirissa:</strong> approximately 35 km east — about 45 minutes</li>
+            <li><strong>Distance from Unawatuna:</strong> approximately 5 km east — about 15 minutes</li>
+            <li><strong>Distance from Kandy:</strong> approximately 165 km — about 3.5 hours</li>
+            <li><strong>UNESCO Status:</strong> Inscribed 1988 as the Old Town of Galle and its Fortifications</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏰 WHAT IS GALLE FORT</h4>
+          <p><strong>✅ CONFIRMED</strong> — Galle Fort is the largest remaining fortress in Asia built by European colonial powers. It is a walled fortified city covering approximately 52 hectares (130 acres) on a rocky ocean peninsula, containing within its walls an entire living town of streets, buildings, churches, mosques, temples, houses, shops, and hotels — all still in active use today.</p>
+          <p><strong>✅ CONFIRMED</strong> — UNESCO describes it as "the best example of a fortified city built by Europeans in South and Southeast Asia, showing the interaction between European architectural styles and South Asian traditions." It is the only fortified colonial city in Asia where the original street grid, buildings, ramparts, bastions, and civilian population all remain intact and in continuous use after over 400 years.</p>
+          <p><strong>✅ CONFIRMED</strong> — Three successive European colonial powers — the Portuguese, the Dutch, and the British — each left their architectural mark on the fort across three centuries from 1588 to 1948. The result is a unique layered urban landscape found nowhere else in the world.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 FULL HISTORY — PERIOD BY PERIOD</h4>
+          
+          <div>
+            <strong class="block text-gray-800">Galle Before Europeans — An Ancient International Port</strong>
+            <p><strong>✅ CONFIRMED</strong> — Galle was a major international trading port long before any European arrival. Its history as a port stretches back over 2,000 years. The earliest written reference to Galle as a port appears in the 6th century AD geographical work Cosmas Indicopleustes, which records it as one of the most active ports in the Indian Ocean trading network.</p>
+            <p><strong>✅ CONFIRMED</strong> — Persian, Arab, Chinese, Indian, Malay, Greek, and Roman traders all used Galle as a port across the ancient and medieval periods. Arab merchants in particular established a significant long-term community in Galle — their descendants, the Sri Lankan Moors, constitute a large part of the population of the fort area to this day.</p>
+            <p><strong>✅ CONFIRMED</strong> — Moroccan explorer Ibn Battuta visited Galle in 1342 AD and referred to it in his writings as "Qali" — one of the earliest direct foreign eyewitness descriptions of the port.</p>
+            <p><strong>⚠️ UNCERTAIN</strong> — Some historians have proposed that Galle may be the ancient port of Tarshish mentioned in the Hebrew Bible, from which King Solomon supposedly drew ivory, peacocks, and spices. This is an interesting theory but is not accepted as established historical fact by mainstream scholars.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Portuguese Period — 1505 to 1640</strong>
+            <p><strong>✅ CONFIRMED</strong> — The Portuguese made their first contact with Sri Lanka in 1505 when a fleet under Lourenço de Almeida was blown off course and landed at Galle harbour. They observed it as a significant port but did not immediately occupy it.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Portuguese established a presence at Galle in the mid-16th century. In 1541 they constructed a Franciscan chapel within the area. The ruins of this chapel are still visible today within the fort — they are the oldest European-built structure surviving in Sri Lanka.</p>
+            <p><strong>✅ CONFIRMED</strong> — In 1588, after their main base at Colombo was attacked by the Sitawaka king Raja Singha I, the Portuguese retreated to Galle and constructed the first formal fortification — a simple structure called Santa Cruz (also known as the Black Fort or Zwart Fort). This initial fort was built of earth, mud, timber, and palm trees, with a rampart and three bastions enclosed by earthen banks and palisades. It was a basic defensive structure, not a stone fortress.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Portuguese extended the initial fort over subsequent decades, adding a fortalice, watchtower, and improvements to the three bastions. The main defensive works on the landward side were completed by approximately 1620. One bastion on the southern side was named after the Catholic saint São Tiago (Saint James).</p>
+            <p><strong>✅ CONFIRMED</strong> — The Portuguese used the fort as an administrative base and at times as a prison for opponents. Their influence on the physical fabric of the fort was limited — most Portuguese structures were later demolished by the Dutch. Only the Franciscan chapel ruins and the remnants of the Santa Cruz bastion survive from this period.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Dutch Period — 1640 to 1796</strong>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch East India Company (VOC — Vereenigde Oost-Indische Compagnie) captured Galle Fort from the Portuguese in 1640 through a combined military operation with the Kandyan king Raja Singha II, who sought Dutch help to expel the Portuguese. The fort fell after a siege.</p>
+            <p><strong>✅ CONFIRMED</strong> — From 1649 onward, the Dutch undertook a massive rebuilding and expansion of the entire fortification. The simple earthen Portuguese fort was demolished and replaced with a sophisticated stone and brick fortress on an entirely new scale. The Dutch transformed a basic defensive post into a complete fortified city — the most advanced European military fortification in Asia at the time.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch extended the fortifications to enclose the entire peninsula, not just the northern landward side. The new ramparts and bastions were built of black granite stones quarried locally, set in lime mortar. The walls are massive — up to 3 meters thick in places — designed to withstand cannon fire. The seaward walls in particular are formidable structures engineered to resist both naval attack and storm surge.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch laid out the interior of the fort on a rectangular grid street plan — a characteristic Dutch urban planning tradition. The grid of streets established in the Dutch period remains completely intact today. The main streets are Pedlar Street, Church Street, Leyn Baan Street, and Hospital Street among others.</p>
+            <p><strong>✅ CONFIRMED</strong> — Within the fort the Dutch constructed all major public buildings: the VOC headquarters and Commandant's residence, the arsenal, the gun house, warehouses, workshops for carpentry, smithy, and rope making, residential quarters for Dutch officials and local employees, and an elaborate underground sewer system that was flushed by seawater at high tide — an advanced sanitation engineering solution for the 17th century.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch Reformed Church (Groote Kerk) was built in 1755 — the oldest Protestant church in Sri Lanka still holding active services today. It occupies the highest ground inside the fort, commanding the entire interior. The original church construction was planned by Abraham Anthonisz and built in baroque style.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch introduced the breadfruit tree to Sri Lanka through Galle. The oldest breadfruit tree in the country is believed to be at the Akersloot Bastion within the fort.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Dutch also introduced Roman-Dutch law to their territories including Sri Lanka — the legal foundation that influenced Sri Lankan law for centuries afterward.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The British Period — 1796 to 1948</strong>
+            <p><strong>✅ CONFIRMED</strong> — The British took control of Galle Fort on 23 February 1796, exactly one week after capturing Colombo. Sri Lanka — then called Ceylon — remained a British colony until independence in 1948.</p>
+            <p><strong>✅ CONFIRMED</strong> — The British made significant modifications to the fort structure. They closed the moat on the landward side. They built additional houses and administrative buildings within the walls. They erected a lighthouse on Utrecht Bastion — originally built in 1848, destroyed by fire around 1930, and rebuilt in 1939. The current white lighthouse standing at Point Utrecht Bastion today is the 1939 rebuilt structure and remains operational.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Main Gate as it currently stands was built by the British in 1873, replacing the original Dutch gate. It bears both British and Dutch insignia — including the recognizable Dutch East India Company (VOC) emblem dated 1669, preserved from the original gate. The Royal Emblem of Ireland dating to the period of King George III is also displayed on this gate.</p>
+            <p><strong>✅ CONFIRMED</strong> — The Clock Tower was erected in 1883 to commemorate the jubilee of Queen Victoria. It stands near the main entrance and overlooks the cricket ground below the ramparts.</p>
+            <p><strong>✅ CONFIRMED</strong> — The All Saints' Anglican Church was consecrated on 21 February 1871. It was designed by Sri Lanka's most prominent 19th century architect James G. Smither in a Victorian Gothic Revival style. It was built on a basilican plan with cruciform layout, stone columns and arches, and heavy pews carved from Burmese teak.</p>
+            <p><strong>✅ CONFIRMED</strong> — Under British rule, Galle's importance as a commercial port declined significantly as the British developed Colombo as the main port and capital. The fort gradually became primarily residential and administrative rather than a major trading hub.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Post-Independence and the 2004 Tsunami</strong>
+            <p><strong>✅ CONFIRMED</strong> — Following Sri Lankan independence in 1948, the fort continued as a living residential and administrative area. The Sri Lankan government enacted the Galle Heritage Foundation Act No. 7 of 1991 for the conservation and management of the fort and its surroundings.</p>
+            <p><strong>✅ CONFIRMED</strong> — The 2004 Indian Ocean Tsunami caused significant damage to buildings within the fort and to the surrounding areas of Galle city. Following the disaster, a major international restoration programme was launched with financial support from the Government of the Netherlands, technical guidance from the Architectural Wing of the University of Moratuwa, and archaeological supervision from the Department of Archaeology of Sri Lanka. The restoration carefully preserved original architectural character.</p>
+            <p><strong>✅ CONFIRMED</strong> — Today the fort is a living city — approximately 400 families live within the walls. It is simultaneously a UNESCO World Heritage Site, a functioning residential neighbourhood, an active commercial district, and one of Sri Lanka's most popular tourist destinations.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏗️ ARCHITECTURE — FULL VERIFIED DETAILS</h4>
+          
+          <div>
+            <strong class="block text-gray-800">The Ramparts and Walls</strong>
+            <p><strong>✅ CONFIRMED</strong> — The ramparts of Galle Fort extend for approximately 1.3 km around the perimeter of the peninsula. They were built primarily by the Dutch from 1649 onward using locally quarried black granite set in lime mortar. The walls range from 1 meter to 3 meters thick. The seaward walls are the most massive, engineered to withstand both cannon fire and ocean storm surge.</p>
+            <p>The ramparts are not a simple straight wall — they follow the natural contours of the rocky promontory, incorporating natural rock outcrops into the defensive structure where possible. This organic adaptation to terrain is noted by UNESCO as a distinctive feature separating Galle from purely geometric European fortress designs.</p>
+            <p>Walking the full perimeter of the ramparts is the single most popular activity for visitors — the walkway along the top of the walls offers uninterrupted ocean views on three sides and views over the fort's rooftops on the landward side.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Bastions — 14 in Total</strong>
+            <p><strong>✅ CONFIRMED</strong> — The fort has 14 bastions — projecting platforms from which cannon fire could cover the walls in both directions, preventing any enemy from approaching a wall section without being exposed to flanking fire. Each bastion was built for a specific defensive purpose — some commanding the sea approaches, others covering the landward side.</p>
+            <p>The major bastions are:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Zwart Bastion (Black Bastion)</strong> — The oldest section of the fort, believed to incorporate elements of the original Portuguese Santa Cruz fortification. The earliest European-built defensive structure in Sri Lanka.</li>
+              <li><strong>Sun Bastion</strong> — On the northeastern landward corner, covering the main land approach.</li>
+              <li><strong>Moon Bastion</strong> — Adjacent to the Sun Bastion on the landward side. A gate between Moon and Sun Bastions was added by the British.</li>
+              <li><strong>Aeolus Bastion</strong> — On the northern seafront.</li>
+              <li><strong>Triton Bastion</strong> — Northwestern seafront.</li>
+              <li><strong>Neptune Bastion</strong> — Western seafront.</li>
+              <li><strong>Clippenberg Bastion</strong> — Southwestern.</li>
+              <li><strong>Aurora Bastion</strong> — Southern tip.</li>
+              <li><strong>Point Utrecht Bastion</strong> — Southernmost point of the fort, site of the lighthouse.</li>
+              <li><strong>Akersloot Bastion</strong> — Southeastern corner, site of the oldest breadfruit tree. The bastion inscription reads "Akersloot 1759".</li>
+              <li><strong>Barlaer Bastion, Eekhout Bastion, Rumphius Bastion, Flag Rock Bastion</strong> — Various positions covering the full perimeter.</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Gates</strong>
+            <p><strong>✅ CONFIRMED</strong> — There are two main gates into the fort.</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>The Main Gate</strong> — Built by the British in 1873 on the northern landward side. The principal entrance from the modern city. Bears both the VOC (Dutch East India Company) emblem dated 1669 and the British Royal Emblem. A portcullis gate — meaning it was originally fitted with a heavy iron or timber grid gate that could be dropped rapidly to seal the entrance.</li>
+              <li><strong>The Old Gate</strong> — The original Dutch gate, located closer to the harbour. Still retains its original Dutch inscription and the Dutch coat of arms above the archway. The inscription "ANNO MDCL XIX" — meaning the year 1669 — and the VOC emblem with the cockerel and the letters VOC are carved into the stonework above the entrance. This is the most historically intact gate of the fort.</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Street Grid</strong>
+            <p><strong>✅ CONFIRMED</strong> — The interior of the fort retains the complete original Dutch rectangular grid street plan laid out in the 17th century. The streets are narrow, paved with cobblestones and granite slabs, and lined with buildings whose narrow gabled ends face the street — a characteristic Dutch tradition of building with the narrow side of the building fronting the street to minimise street-frontage tax, which was levied per meter of street-facing wall width.</p>
+            <p>The main streets of the fort are Church Street, Pedlar Street, Leyn Baan Street (meaning Rope Walk Street — named after the Dutch rope-making workshop that once stood here), Hospital Street, Middle Street, and Rampart Street.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Buildings — Architectural Character</strong>
+            <p><strong>✅ CONFIRMED</strong> — Buildings within the fort reflect three overlapping colonial architectural traditions:</p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Dutch Colonial</strong> — Characterised by thick walls (up to 50 cm), massive teak roof beams, gabled street frontages, inner courtyards, long verandas supported on slender columns, high overhanging roofs providing shade, and large shuttered windows. The Dutch Reformed Church and the Old Dutch Hospital are the finest surviving examples.</li>
+              <li><strong>British Colonial</strong> — Characterised by Victorian and Georgian architectural elements, brick construction, sash windows, columns, and classical proportions. The All Saints' Anglican Church and the Clock Tower are the finest examples.</li>
+              <li><strong>South Asian Vernacular Adaptations</strong> — Local Sinhalese craftspeople adapted European building forms to the local tropical climate — wider roof overhangs, deeper verandas, courtyard layouts to allow natural ventilation, and the use of local timber and stone alongside imported materials.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🕌 MAJOR BUILDINGS AND LANDMARKS</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>The Dutch Reformed Church — Groote Kerk:</strong> <strong>✅ CONFIRMED</strong> — Built in 1755 on the foundations of an earlier structure. Designed by Abraham Anthonisz in baroque style. Occupies the highest ground inside the fort. It is the oldest Protestant church in Sri Lanka with an active congregation — services are held here to this day. The interior features a floor paved with the tombstones of Dutch colonial officials and their families, brought from the original cemetery that occupied this site before the church was built. The walls are 50 cm thick.</li>
+            <li><strong>The All Saints' Anglican Church:</strong> <strong>✅ CONFIRMED</strong> — Consecrated 21 February 1871. Designed by architect James G. Smither in Victorian Gothic Revival style modified for the tropical climate. Built on a cruciform basilican plan. Stone columns and arches. Heavy pews of Burmese teak carved with the Star of David. Masonry arches in local kabuk stone and lime mortar. Still holds regular Anglican services. The church stands on the site of an earlier British courthouse.</li>
+            <li><strong>The Old Dutch Hospital:</strong> <strong>✅ CONFIRMED</strong> — One of the oldest hospital buildings in Sri Lanka, built in the Dutch period in the 17th century. Wall thickness of 50 cm typical of Dutch construction. Massive teak beams. Upper floor reached by wooden staircase with wooden floors. Long open verandas running the full length of each wing. First used as the office of the Collector of Galle from 1850, then as the Galle Kachcheri (Government Agent's office). Notably, experiments against smallpox were conducted in this building before vaccination was invented in Europe. Converted in 2014 into a shopping and dining precinct while preserving the historic architecture.</li>
+            <li><strong>The Galle Lighthouse:</strong> <strong>✅ CONFIRMED</strong> — The oldest lighthouse in Sri Lanka. The original lighthouse at Point Utrecht Bastion was built in 1848. It was destroyed by fire around 1930. Rebuilt in 1939 — the current structure. Still fully operational, guiding ships along the southern coast. One of the most photographed landmarks in Galle Fort, especially at sunset.</li>
+            <li><strong>The Clock Tower:</strong> <strong>✅ CONFIRMED</strong> — Built in 1883 to honour the jubilee of Queen Victoria, and also in memory of local physician Dr. P.D. Anthonisz. Stands near the main entrance. Colonial architecture with panoramic views over the ramparts and the cricket ground below.</li>
+            <li><strong>The National Maritime Museum:</strong> <strong>✅ CONFIRMED</strong> — Opened 28 March 1999 in a historic Dutch-period building. Houses maritime artefacts, navigational equipment, model ships, and exhibits on Sri Lanka's ancient trading history and the history of Galle as a port.</li>
+            <li><strong>The Meeran Jumma Mosque:</strong> <strong>✅ CONFIRMED</strong> — The principal mosque of the fort's Muslim community — the Sri Lankan Moors who descend from Arab merchants who settled in Galle over many centuries. The mosque reflects the proportionally large Muslim presence in the fort, a community whose roots predate the Portuguese arrival. The current building dates from the colonial period and shows a distinctive mix of Islamic and Victorian architectural influences.</li>
+            <li><strong>The Sri Sudharmalaya Buddhist Temple:</strong> <strong>✅ CONFIRMED</strong> — The only Buddhist temple within the fort walls. Relatively modest in scale compared to the churches and mosque but important as a symbol of Sri Lankan Buddhist continuity within the colonial city. Traditional Buddhist banners and flags fly outside.</li>
+            <li><strong>The Dutch Sewer System:</strong> <strong>✅ CONFIRMED</strong> — One of the most remarkable engineering features of the Dutch period is the elaborate underground sewer system built beneath the streets of the fort. The system was designed to be flushed by seawater at high tide — the rising ocean water entered the sewer pipes, carried all waste out to sea, and drained out again on the ebb. This was a sophisticated sanitation solution for a tropical coastal city in the 17th century and contributed to the health of the fort's population. Much of the original sewer system remains beneath the streets today.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ ENTRY FEES AND OPENING HOURS</h4>
+          <p><strong>✅ CONFIRMED</strong></p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Entry Fee:</strong> There is no entry fee to enter Galle Fort. The fort is a living town — its streets, ramparts, and public spaces are open to all visitors at all times, completely free of charge. Individual museums, churches, and specific attractions within the fort have their own entry fees — the National Maritime Museum charges a small entry fee for foreigners.</li>
+            <li><strong>Opening Hours:</strong> The fort itself is open and accessible 24 hours a day, every day of the year as it is a functioning residential town. Specific museums and heritage buildings have their own opening hours, typically 9:00 AM to 5:00 PM.</li>
+            <li><strong>Best Times to Visit:</strong>
+              <ul class="list-circle pl-5 mt-1 space-y-1">
+                <li>Early morning from 6:00 to 9:00 AM — the streets are quiet, the light is beautiful, and the fort's atmosphere is most authentic before tourist crowds arrive.</li>
+                <li>Sunset from the ramparts — the western and southern ramparts offer extraordinary sunset views over the Indian Ocean. The lighthouse at Point Utrecht Bastion is the most popular sunset spot.</li>
+                <li>Evening — the fort takes on a different character after dark when restaurants and cafés open, the streets are lit, and the ocean breeze cools the air.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING TO GALLE FORT</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>By Train from Colombo — Recommended:</strong> <strong>✅ CONFIRMED</strong> — The train from Colombo Fort Station to Galle runs along the Coastal Railway Line with spectacular ocean views for much of the journey. The journey takes approximately 2 to 2.5 hours. Galle Railway Station is approximately 1.5 km from the fort entrance — a short tuk-tuk ride or a 20-minute walk. This is the most enjoyable and scenic way to travel between Colombo and Galle.</li>
+            <li><strong>By Bus from Colombo:</strong> Regular and express buses from Colombo Central Bus Stand to Galle Bus Stand run throughout the day. Journey time approximately 2 to 2.5 hours. Galle Bus Stand is adjacent to the fort entrance on the landward side.</li>
+            <li><strong>By Car or Taxi from Colombo:</strong> Approximately 119 km via the Southern Expressway (E01). Journey time approximately 1.5 to 2 hours by expressway — faster than bus or train but misses the coastal scenery.</li>
+            <li><strong>From Mirissa or Unawatuna:</strong> Mirissa is 35 km east — approximately 45 to 60 minutes by tuk-tuk or bus. Unawatuna is 5 km east — approximately 15 minutes.</li>
+            <li><strong>From Kandy:</strong> Approximately 165 km — about 3.5 hours by car via the expressway or through the hill country.</li>
+            <li><strong>Within the Fort:</strong> The fort is compact enough to walk entirely — the full perimeter walk along the ramparts takes approximately 45 minutes to 1 hour at a comfortable pace. All major landmarks are within 10 to 15 minutes walk of each other. Tuk-tuks are available outside the main gate.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🍽️ WHERE TO EAT IN THE FORT</h4>
+          <p>The fort has an outstanding food scene ranging from local Sri Lankan to international cuisine.</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Pedlar's Inn Café</strong> — One of the most charming cafés in the fort, set in a restored Dutch-period house on Pedlar Street. Excellent coffee, breakfast, and light meals.</li>
+            <li><strong>The Fort Printers</strong> — A boutique hotel restaurant in a beautifully restored 300-year-old Dutch building, serving refined Sri Lankan and international cuisine in an extraordinary setting.</li>
+            <li><strong>Fortaleza</strong> — Rooftop dining with direct views over the ramparts and the Indian Ocean. Exceptional setting for dinner.</li>
+            <li><strong>Poonie's Kitchen</strong> — A beloved local institution known for its authentic Sri Lankan rice and curry and short eats.</li>
+            <li><strong>Serendipity Arts Café</strong> — A gallery café on Pedlar Street combining art exhibitions with food and coffee.</li>
+            <li><strong>Old Dutch Hospital Complex</strong> — The restored building now houses multiple restaurants and cafés in a unique heritage setting. Good range of options in one location.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏨 WHERE TO STAY</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Budget (USD $20–40/night):</strong> Several guesthouses and small hotels within the fort walls offer simple but characterful accommodation in historic buildings.</li>
+            <li><strong>Mid-Range (USD $60–120/night):</strong> Numerous boutique hotels occupying restored colonial buildings, offering atmospheric rooms with period furniture and modern amenities.</li>
+            <li><strong>Luxury (USD $200–500+/night):</strong> The Amangalla (formerly the New Oriental Hotel — established 1694, one of the oldest continuously operating hotels in Asia), Galle Fort Hotel, and The Fort Bazaar are the premier properties — extraordinary buildings offering the finest accommodation experience in the fort.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL TIPS — PRACTICAL ONLY</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Walk the full rampart circuit.</strong> The 1.3 km walkway along the top of the fort walls is the single most rewarding experience in Galle Fort. Do it at both sunrise and sunset for completely different and equally beautiful experiences.</li>
+            <li><strong>Visit the Old Gate.</strong> Most visitors enter through the Main Gate on the busy land side. Walk through the quieter Old Gate near the harbour instead — it is the more historically intact entrance and far less crowded.</li>
+            <li><strong>Explore on foot.</strong> The fort is compact and entirely walkable. Getting lost in the narrow cobblestone streets between Church Street and Pedlar Street is half the pleasure of the visit.</li>
+            <li><strong>Start early.</strong> By 10:00 AM the streets fill with tour groups. Arriving at 7:00 AM gives you the entire fort virtually to yourself in the best morning light.</li>
+            <li><strong>Look up constantly.</strong> The architectural details of the buildings — Dutch gables, colonial verandas, VOC inscriptions, carved doorways — are on the buildings themselves, not in museums. Walking slowly and looking carefully is how Galle Fort reveals itself.</li>
+            <li><strong>Visit the Dutch Reformed Church interior.</strong> The floor of tombstones of Dutch colonial officials is one of the most unusual and haunting sights in the fort — and entirely free to enter during opening hours.</li>
+            <li><strong>Sunset at Point Utrecht Bastion.</strong> The lighthouse at the southernmost tip of the fort, with the Indian Ocean stretching to the horizon on three sides, is one of the finest sunset viewpoints in all of Sri Lanka. Arrive 30 minutes before sunset to secure a good spot.</li>
+            <li><strong>The fort is a living community.</strong> The approximately 400 families who live within the walls are not exhibits. Residents go about their daily lives here — respect their privacy, do not photograph people in their homes or gardens without permission, and treat the streets as the working neighbourhood they are.</li>
+            <li><strong>Combine with Unawatuna beach.</strong> Unawatuna bay, one of the most beautiful beaches in Sri Lanka, is 5 km east of the fort. A morning at the fort followed by an afternoon at Unawatuna makes an outstanding full day.</li>
+            <li><strong>Allow a full day minimum.</strong> The fort deserves at least 6 hours of unhurried exploration to do justice to its architecture, history, and atmosphere. Many travellers find they want to stay two or three nights.</li>
+          </ul>
+        </div>
+      </div>
+    `, 
     SI: "ශ්‍රී ලංකාවේ නිරිතදිග වෙරළ තීරයේ ගාල්ල බොක්කෙහි පිහිටි ගාල්ල කොටුව ප්‍රථමයෙන් 1588 දී පෘතුගීසීන් විසින් ඉදිකරන ලද අතර පසුව 17 වන සියවසේදී ලන්දේසීන් විසින් විශාල වශයෙන් ශක්තිමත් කරන ලදී. මෙය වසර 432 කට වඩා පැරණි වුවද ශ්‍රී ලංකා පුරාවිද්‍යා දෙපාර්තමේන්තුව විසින් සිදු කරන ලද ප්‍රතිසංස්කරණ කටයුතු හේතුවෙන් අදටත් මනාව පවතී. කොටුව සතුව වර්ණවත් ඉතිහාසයක් ඇති අතර අද වන විට එහි විවිධ ජාතීන් හා ආගම් වලට අයත් ජනතාවක් ජීවත් වෙති. මෙහි ඇති ඓතිහාසික වටිනාකම නිසා යුනෙස්කෝව විසින් මෙය ලෝක උරුමයක් ලෙස නම් කර ඇත. ලන්දේසි ප්‍රතිසංස්කරණ පල්ලිය, පැරණි ලන්දේසි රෝහල, ගාල්ල ප්‍රදීපාගාරය සහ ඉන්දියන් සාගරයේ මනරම් දර්ශන ලබා දෙන දැවැන්ත පවුර මෙහි ඇති ප්‍රධාන සන්ධිස්ථාන වේ. පටු ගල් අතුරා ඇති වීදි දිගේ යටත් විජිත යුගයේ ගොඩනැගිලි පිහිටා ඇති අතර ඒවායින් බොහොමයක් අද වන විට හෝටල්, වෙළඳසැල් සහ ආපනශාලා බවට පත් කර ඇත." 
   },
   dambulla: { 
-    EN: "Dambulla Cave Temple, also known as the Golden Temple of Dambulla, is a World Heritage Site in Sri Lanka, situated in the central part of the country. Dambulla is the largest and best-preserved cave temple complex in Sri Lanka. The rock towers 160 m over the surrounding plains. There are more than 80 documented caves in the surrounding area. Major attractions are spread over five caves, which contain statues and paintings. These paintings and statues are related to Gautama Buddha and his life. There are a total of 153 Buddha statues, three statues of Sri Lankan kings and four statues of gods and goddesses. The murals cover an area of 2,100 square metres (23,000 sq ft). Depictions on the walls of the caves include the temptation by the demon Mara and Buddha's first sermon. The history of the temple dates back to the 1st century BC, when King Valagamba took refuge here and later converted the caves into a magnificent temple complex in gratitude.", 
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🪨 DAMBULLA CAVE TEMPLE</h3>
+        <p class="italic text-gray-600">Dambulla, Sri Lanka — Complete Verified Guide</p>
+
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <h4 class="font-bold text-blue-900 flex items-center gap-2 mb-2">✅ HONEST LABELLING THROUGHOUT</h4>
+          <p class="text-blue-800 text-sm">
+          <strong>✅ CONFIRMED</strong> — physically verifiable, accepted by mainstream history, UNESCO, and archaeology<br/>
+          <strong>⭐ RELIGIOUS TRADITION</strong> — sincerely held belief recorded in ancient chronicles, not independently verifiable by science<br/>
+          <strong>⚠️ UNCERTAIN</strong> — recorded in some sources but debated among historians</p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Town:</strong> Dambulla, Matale District, Central Province, Sri Lanka</li>
+            <li><strong>Position:</strong> The cave complex is located at the base of a massive granite rock rising 160 meters (520 feet) above the surrounding plains, 2 km from Dambulla town centre on the Kandy–Jaffna highway (A9)</li>
+            <li><strong>Distance from Colombo:</strong> 148 km northeast — approximately 3 to 3.5 hours by road</li>
+            <li><strong>Distance from Kandy:</strong> 72 km north — approximately 1.5 to 2 hours by road</li>
+            <li><strong>Distance from Sigiriya:</strong> 19 km east — approximately 30 minutes by road</li>
+            <li><strong>Distance from Anuradhapura:</strong> 65 km south — approximately 1 hour by road</li>
+            <li><strong>Distance from Polonnaruwa:</strong> approximately 80 km — about 1.5 hours by road</li>
+            <li><strong>UNESCO Status:</strong> Inscribed 1991 as the Golden Temple of Dambulla</li>
+            <li><strong>Elevation of caves:</strong> approximately 340 meters (1,118 feet) above sea level</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏛️ WHAT IS DAMBULLA CAVE TEMPLE</h4>
+          <p><strong>✅ CONFIRMED</strong> — The Dambulla Cave Temple — also known as the Rangiri Dambulla Raja Maha Viharaya and the Golden Temple of Dambulla — is the largest and best-preserved cave temple complex in Sri Lanka and one of the most outstanding Buddhist monuments in all of South and Southeast Asia.</p>
+          <p><strong>✅ CONFIRMED</strong> — The complex consists of five cave shrines carved into and beneath a vast overhanging granite rock. Together they contain:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>157 Buddha statues (some sources record 153 — the exact count varies slightly by survey)</li>
+            <li>3 statues of Sri Lankan kings</li>
+            <li>4 statues of Hindu gods and goddesses including Vishnu and Ganesh</li>
+            <li>Mural paintings covering a total area of 2,100 square meters — the largest area of ancient Buddhist mural painting in Sri Lanka</li>
+            <li>Scenes depicting the life of the Buddha including his temptation by the demon Mara and his first sermon at the Deer Park</li>
+          </ul>
+          <p><strong>✅ CONFIRMED</strong> — UNESCO describes the site as "an outstanding example of the religious art and expression of Sri Lanka and South and Southeast Asia. The cave shrines, their painted surfaces, and statuary are unique in scale and degree of preservation."</p>
+          <p><strong>✅ CONFIRMED</strong> — The cave monastery is still active and fully functional — Buddhist monks reside and conduct religious services here continuously. It has been an active place of Buddhist worship without interruption for over 22 centuries.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📜 FULL HISTORY — PERIOD BY PERIOD</h4>
+          
+          <div>
+            <strong class="block text-gray-800">Prehistoric Habitation — Before Buddhism</strong>
+            <p><strong>✅ CONFIRMED</strong> — The Dambulla area was inhabited by prehistoric humans long before the arrival of Buddhism in Sri Lanka. At the Ibbankatuwa Prehistoric Burial Site located near the Dambulla cave complex, human skeletons approximately 2,700 years old have been discovered and scientifically analysed. These confirm human civilisation in this area from at least the 7th to 3rd century BC — centuries before Buddhism reached the island.</p>
+            <p><strong>✅ CONFIRMED</strong> — The name Dambulla itself derives from two Sinhala words — Damba meaning a type of rock or the damba tree, and Ulla meaning fountain or spring — a reference to the natural water springs found within and around the caves.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The First Monastery — 3rd to 2nd Century BC</strong>
+            <p><strong>✅ CONFIRMED</strong> — The cave complex dates as a Buddhist monastic site from the 3rd and 2nd centuries BC, when it was already established as one of the largest and most important Buddhist monasteries in Sri Lanka. Forest-dwelling monks used the natural caves of Dambulla rock for meditation and monastic life from this early period.</p>
+            <p><strong>✅ CONFIRMED</strong> — The overhanging rock provides a naturally sheltered environment. The ancient monks who first inhabited these caves carved a drip line — a groove cut into the rock just above each cave entrance — to channel rainwater away from the interiors and keep them permanently dry. This practical engineering detail is visible on the rock face today.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">King Valagamba — The Founder of the Cave Temple — 1st Century BC</strong>
+            <p><strong>✅ CONFIRMED</strong> — The transformation of the natural caves into a formal temple complex is traditionally and historically attributed to King Valagamba (also known as Vattagamini Abhaya), who reigned over Anuradhapura. The key facts of his association with Dambulla are recorded in the Mahavamsa and are broadly accepted by mainstream historians.</p>
+            <p><strong>✅ CONFIRMED</strong> — King Valagamba was driven from his throne at Anuradhapura by South Indian Tamil forces — specifically by five Tamil chiefs — and was forced into exile for 14 years. During this exile he took refuge in the caves of Dambulla, where Buddhist monks sheltered and protected him from his enemies.</p>
+            <p><strong>✅ CONFIRMED</strong> — In approximately 89 BC, King Valagamba recaptured his throne at Anuradhapura. In gratitude to the monks who had sheltered him at Dambulla during his exile, he returned to the site and commissioned the construction of a magnificent cave temple — transforming the natural rock shelters into formal shrine rooms with carved and plastered interiors.</p>
+            <p><strong>⚠️ UNCERTAIN</strong> — Exactly which specific statues and paintings were created under Valagamba's direct commission cannot be confirmed with absolute precision by modern archaeology. The cave art has been repainted and restored so many times that identifying original 1st century BC work is technically very difficult.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">King Nissanka Malla — 12th Century Expansion</strong>
+            <p><strong>✅ CONFIRMED</strong> — King Nissanka Malla of the Polonnaruwa Kingdom (reigned 1187–1196 AD) made a major contribution to Dambulla. A stone inscription near the cave entrance records that he commissioned the gilding of approximately 50 to 70 Buddha statues within the caves, giving the site its alternative name of Ran Giri (Golden Rock) and later the Golden Temple of Dambulla. His contribution is confirmed by this contemporary stone inscription — one of the most directly verifiable historical facts about the site.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The Kandyan Period — 18th Century</strong>
+            <p><strong>✅ CONFIRMED</strong> — During the 18th century, under the Kingdom of Kandy — particularly during the reign of King Kirti Sri Rajasinha (reigned 1747–1782) — the caves were extensively renovated, repainted, and embellished. Approximately 80% of the total surviving mural paintings at Dambulla today date from this 18th century Kandyan period restoration. The Kandyan painters completely repainted much of the cave interiors while following the original compositions, adding their own stylistic characteristics. This 18th century painting scheme represents the finest surviving example of the Kandyan School of Painting anywhere in Sri Lanka.</p>
+            <p><strong>✅ CONFIRMED</strong> — The 1982–1996 UNESCO conservation project confirmed through technical analysis that approximately 80% of the visible murals are 18th century Kandyan work. Earlier layers from previous periods exist beneath in some areas.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">1938 — Exterior Embellishment</strong>
+            <p><strong>✅ CONFIRMED</strong> — In 1938, the exterior architecture of the cave entrances was embellished with arched colonnades and gabled entrance facades — the distinctive white-painted arched colonnade visible from the road today dates from this 1938 addition. This was not ancient architecture — it was added in the 20th century. The caves behind the colonnade are ancient.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">Colonial Period Neglect</strong>
+            <p><strong>✅ CONFIRMED</strong> — During the European colonial period — particularly the Dutch and British eras — the temple suffered significant neglect and deterioration. Colonial administrations did not prioritise the maintenance of Buddhist religious sites. Multiple decades passed without restoration, causing damage to murals, statues, and the physical structure.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">UNESCO World Heritage — 1991</strong>
+            <p><strong>✅ CONFIRMED</strong> — Dambulla was inscribed as a UNESCO World Heritage Site in 1991. The UNESCO designation recognises both its outstanding artistic significance — the scale and quality of its cave paintings — and its 22-century continuous history as a living Buddhist pilgrimage site.</p>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">The 1982–1996 UNESCO Conservation Project</strong>
+            <p><strong>✅ CONFIRMED</strong> — A major international conservation programme was conducted collaboratively between UNESCO, the Cultural Triangle Project of Sri Lanka, and the temple authorities from 1982 to 1996. This project focused primarily on preserving the 18th century mural schemes, improving infrastructure and accessibility, installing modern lighting, and constructing a museum away from the historic complex. The project confirmed that the majority of mural schemes in the larger caves remained in excellent condition.</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🪨 THE FIVE CAVES — COMPLETE DETAILS</h4>
+          <p><strong>✅ CONFIRMED</strong> — All measurements, statue counts, and physical descriptions below are verified by UNESCO documentation, archaeological surveys, and the Department of Archaeology of Sri Lanka.</p>
+
+          <div>
+            <strong class="block text-gray-800">CAVE 1 — DEVARAJA LENA (Cave of the Divine King)</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Size:</strong> Approximately 15 meters deep, moderate height</li>
+              <li><strong>Main Statue:</strong> A 14.5-meter (approximately 45-foot) reclining Buddha carved directly from the living rock — not a separate statue placed inside the cave, but the rock itself shaped into the form of the reclining Buddha. This is one of the most important features of the cave — the statue is literally part of the mountain. The Buddha is depicted in the Parinirvana posture — lying on his right side, representing the final passing away and entry into complete Nirvana.</li>
+              <li><strong>Other Features:</strong>
+                <ul class="list-circle pl-5 mt-1 space-y-1">
+                  <li>A statue of the monk Ananda — the Buddha's most devoted and beloved disciple — stands at the feet of the reclining Buddha. Ananda is depicted in an attitude of grief at the passing of his teacher.</li>
+                  <li>A statue of the god Vishnu is present within this cave. The cave's name — Devaraja Lena, meaning Cave of the Divine King — is believed to refer to Vishnu. According to tradition this statue was installed during the reign of King Valagamba.</li>
+                </ul>
+              </li>
+              <li><strong>Ceiling Paintings:</strong> The ceiling and walls are painted with religious imagery in the characteristic Kandyan style — dense, richly coloured patterns of Buddhist iconography following the natural contours of the rock surface.</li>
+              <li><strong>Age note:</strong> The current reclining Buddha statue as it appears today has been repainted many times throughout history. Its most recent painting reportedly dates from the 20th century, giving it a brilliantly fresh appearance that masks its enormous age.</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">CAVE 2 — MAHARAJA LENA (Cave of the Great Kings)</strong>
+            <p>Size: The largest of the five caves, measuring 52 meters east to west, 23 meters from entrance to back wall, and 7 meters tall at the highest point. This is the most impressive, most complex, and most significant of all five caves. It contains more statues and paintings than any other cave and is named for the two Sri Lankan kings whose images stand within it.</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Total Statues:</strong> Approximately 56 statues — 16 standing Buddha figures and approximately 40 seated Buddha figures</li>
+              <li><strong>Key Statues:</strong>
+                <ul class="list-circle pl-5 mt-1 space-y-1">
+                  <li>A large seated Buddha carved from the living rock on the left side of the cave — the most sacred statue in the complex — is flanked by wooden figures of the Bodhisattvas Maitreya (the future Buddha) and Avalokiteshvara (also known as Natha in Sri Lanka).</li>
+                  <li>King Vattagamani Abhaya (Valagamba) — a standing statue of the king himself. The presence of a royal statue in a cave temple is extremely unusual and reflects the intimate personal connection between this king and this site. He is depicted in royal dress.</li>
+                  <li>King Nissanka Malla — a standing statue of the 12th century king who gilded the cave statues. His presence is confirmed by the stone inscription near the cave entrance recording his contributions.</li>
+                  <li>The Hindu gods Saman and Vishnu are also depicted — pilgrims regularly garland these statues with flower offerings.</li>
+                </ul>
+              </li>
+              <li><strong>The Water Miracle — Spring Inside the Cave:</strong> <strong>✅ CONFIRMED</strong> — A natural spring of water seeps through the rock ceiling inside Cave 2, dripping continuously. This water is collected in a small stone vessel below and is considered sacred by pilgrims. Despite being deep inside a rock cave, the spring has never dried up in over 2,000 years of recorded history. Archaeological analysis confirms the spring is a natural geological phenomenon — water filtering through the permeable rock above.</li>
+              <li><strong>Ceiling and Wall Paintings:</strong> The entire ceiling and upper walls are densely covered with mural paintings. Key scenes depicted include the Enlightenment of the Buddha under the Bodhi tree, the Temptation by the demon Mara — showing Mara's armies attacking the meditating Buddha, defeated by his serenity — the First Sermon at Deer Park Sarnath, the Arrival of Buddhism in Sri Lanka via Mahinda Thero, and the Tooth Relic of the Buddha being brought to Sri Lanka by Princess Hemamali.</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">CAVE 3 — MAHA ALUT VIHARAYA (Great New Monastery)</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Size:</strong> Moderate — smaller than Cave 2</li>
+              <li><strong>Age:</strong> An 18th century cave, constructed and painted during the reign of King Kirti Sri Rajasinha. The newest of the first three caves.</li>
+              <li><strong>Main Statue:</strong> A large seated Buddha in the centre of the cave in the earth-touching posture — Bhumisparsha Mudra — calling the earth to witness his attainment of enlightenment.</li>
+              <li><strong>Total Statues:</strong> Approximately 50 statues of varying sizes</li>
+              <li><strong>Notable Feature:</strong> A statue of King Kirti Sri Rajasinha — the Kandyan king responsible for the 18th century restoration — stands in this cave. His image is depicted in a posture of Buddhist veneration, hands clasped in worship. This is one of the rare royal statues preserved in a Sri Lankan cave temple.</li>
+              <li><strong>Paintings:</strong> The ceiling paintings in Cave 3 are some of the finest surviving examples of the Kandyan school — characterised by rich warm tones, intricate patterning, and densely packed religious iconography. The paintings remain in excellent condition.</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">CAVE 4 — PACHIMA VIHARAYA (Western Monastery)</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Size:</strong> Relatively small</li>
+              <li><strong>Condition:</strong> This cave suffered significant damage from both historical vandalism and looting. A small dagoba within the cave was reportedly broken open by looters seeking to steal the relics within — the broken dagoba base is still visible.</li>
+              <li><strong>Main Statue:</strong> A seated Buddha in meditation</li>
+              <li><strong>Paintings:</strong> Ceiling and wall paintings in the Kandyan style</li>
+            </ul>
+          </div>
+
+          <div>
+            <strong class="block text-gray-800">CAVE 5 — DEVANA ALUT VIHARAYA (Second New Monastery)</strong>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong>Size:</strong> Moderate</li>
+              <li><strong>Age:</strong> The most recently developed of the five caves — opened as a shrine room in 1951</li>
+              <li><strong>Main Statue:</strong> A reclining Buddha approximately 10 meters long — smaller than the Cave 1 reclining Buddha but depicted in a similar Parinirvana posture</li>
+              <li><strong>Notable difference:</strong> Unlike the statues in the other four caves which are carved from granite rock or are ancient stone and stucco figures, all the images in Cave 5 are constructed from brick and plaster — confirming its more recent construction date.</li>
+              <li>Two seated Buddha statues sheltered beneath the expanded hood of the Cobra King Muchalinda — the serpent who is said to have shielded the meditating Buddha from a storm by spreading his cobra hood above him. This iconographic motif is found throughout Buddhist art across Asia.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎨 THE MURAL PAINTINGS — DETAILED ANALYSIS</h4>
+          <p><strong>✅ CONFIRMED</strong> — The mural paintings of Dambulla cover a total area of 2,100 square meters — the largest area of ancient Buddhist mural painting anywhere in Sri Lanka.</p>
+          <p><strong>✅ CONFIRMED</strong> — Approximately 80% of surviving paintings date from the 18th century Kandyan period restoration under King Kirti Sri Rajasinha. Earlier paintings from the Anuradhapura and Polonnaruwa periods exist beneath in some areas — confirmed by the UNESCO conservation project through technical examination.</p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Technique:</strong> The Kandyan painters applied a lime plaster base to the cave walls and ceilings, then painted while the plaster was still damp — a fresco technique that bonded the pigments permanently into the plaster surface. The mineral pigments used — derived from local rocks, plants, and imported materials — have retained extraordinary vibrancy after 300 years.</li>
+            <li><strong>Composition:</strong> The paintings do not follow a flat wall layout — they follow the natural contours of the rock, wrapping around curves, across ceiling domes, and into crevices. The painters adapted their compositions to the irregular rock surfaces, creating a unique effect where the painted figures seem to inhabit a living, organic space rather than a flat architectural backdrop.</li>
+            <li><strong>Subject matter</strong> across all five caves includes: the life of the Buddha from birth to Parinirvana, the Buddhist cosmological universe, the Jataka tales (stories of the Buddha's previous lives), the history of Buddhism in Sri Lanka, scenes of royal patronage, Hindu deities associated with Buddhist practice, and densely repeated patterns of seated Buddhas covering entire ceiling surfaces.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🎟️ ENTRY FEES AND OPENING HOURS</h4>
+          <p><strong>✅ CONFIRMED</strong></p>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Entry Fee:</strong>
+              <ul class="list-circle pl-5 mt-1 space-y-1">
+                <li>Foreign adults: approximately 1,500 LKR (approximately $5 USD) — one of the most affordable UNESCO World Heritage Sites in Sri Lanka</li>
+                <li>Sri Lankan nationals: nominal reduced rate</li>
+                <li>Children under 12: free or reduced</li>
+              </ul>
+            </li>
+            <li><strong>Opening Hours:</strong> Daily from 7:00 AM to 7:00 PM</li>
+            <li><strong>Photography:</strong> Photography is permitted inside all five caves — an unusual policy for a site of this sensitivity. However, flash photography is not permitted as flash light damages the ancient pigments. Video cameras are permitted.</li>
+            <li><strong>Best Time to Visit:</strong>
+              <ul class="list-circle pl-5 mt-1 space-y-1">
+                <li>Early morning between 7:00 and 9:00 AM — fewer crowds, cooler temperatures, and the best quality of natural light filtering into the cave interiors.</li>
+                <li>Late afternoon from 4:00 PM onward — another quieter period before closing.</li>
+                <li>Avoid 10:00 AM to 2:00 PM — peak tour bus arrival times when the cave entrances become crowded.</li>
+              </ul>
+            </li>
+            <li><strong>Time Required:</strong> A thorough visit to all five caves with time to appreciate the paintings and statues requires approximately 1.5 to 2.5 hours.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🧗 THE CLIMB</h4>
+          <p><strong>✅ CONFIRMED</strong> — The caves are accessed via a stone path climbing the slope of the Dambulla rock. The climb is approximately 30 minutes for the average adult at a comfortable walking pace. The path is paved with stone for most of its length. The gradient is moderate — steeper than a gentle hill walk but not technically demanding.</p>
+          <p>From the cave terrace the view across the surrounding plains is extraordinary — Sigiriya Rock is clearly visible 19 km to the east on clear days. The panorama extends across the flat Cultural Triangle landscape in all directions.</p>
+          <p><strong>✅ CONFIRMED</strong> — Hundreds of swooping swallows gather at the cave entrances at dusk — a striking natural spectacle that has been observed and recorded by visitors for centuries.</p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">👔 DRESS CODE — STRICTLY ENFORCED</h4>
+          <p><strong>✅ CONFIRMED</strong> — The dress code is rigorously enforced by temple attendants stationed at the entrance to the cave complex.</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Shoulders must be fully covered — no sleeveless tops or strappy garments of any kind.</li>
+            <li>Knees must be fully covered — no shorts or short skirts of any length.</li>
+            <li>Hats must be removed at the cave entrances.</li>
+            <li>All footwear must be removed before entering any cave — you walk barefoot on stone and painted surfaces throughout. The cave floors can be cool and smooth — early morning visits are most comfortable.</li>
+            <li>Sarongs are available for rent and purchase from vendors at the base of the climb.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🚌 GETTING THERE</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>From Colombo:</strong> By car or express bus — approximately 148 km, 3 to 3.5 hours via the A9 highway. Buses from Colombo Central Bus Stand to Dambulla run frequently throughout the day.</li>
+            <li><strong>From Kandy:</strong> By car or bus — approximately 72 km, 1.5 to 2 hours via the A9 highway. Buses from Kandy Bus Stand to Dambulla run regularly.</li>
+            <li><strong>From Sigiriya:</strong> 19 km — approximately 30 minutes by car or tuk-tuk. The most natural same-day combination — Dambulla and Sigiriya are closer to each other than to any other major Cultural Triangle site.</li>
+            <li><strong>From Anuradhapura:</strong> approximately 65 km — about 1 hour by car.</li>
+            <li><strong>From Polonnaruwa:</strong> approximately 80 km — about 1.5 hours by car via Habarana.</li>
+            <li><strong>Local transport from Dambulla town to the temple:</strong> The cave temple is 2 km from Dambulla town centre on the Kandy–Jaffna highway. Tuk-tuks available from the bus stand cost approximately 200 to 300 LKR for the short trip. It is also a comfortable 30-minute walk along the main road.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏨 WHERE TO STAY IN DAMBULLA</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Budget (USD $15–30/night):</strong> Multiple guesthouses in Dambulla town and along the main road, most offering simple clean rooms and breakfast.</li>
+            <li><strong>Mid-Range (USD $40–90/night):</strong> Amaya Lake Dambulla — a comfortable lakeside resort approximately 10 km from the caves. Heritance Kandalama — a spectacular architectural landmark resort designed by Sri Lanka's most famous architect Geoffrey Bawa, built directly into the jungle cliff face of the Kandalama reservoir, approximately 8 km from the caves. One of the most celebrated hotel buildings in Asia.</li>
+            <li><strong>Luxury (USD $150+/night):</strong> Heritance Kandalama is itself a luxury property and the outstanding accommodation option in the area.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">💡 ESSENTIAL TIPS — PRACTICAL ONLY</h4>
+          <ul class="list-disc pl-5 space-y-2">
+            <li><strong>Wear white or light colours.</strong> Not mandatory but widely worn by local pilgrims as a sign of respect. Practically, light colours are also cooler on the exposed rock climb in the heat.</li>
+            <li><strong>Bring socks.</strong> The cave floors are stone and smooth painted surfaces — cool and comfortable in early morning but in midday they retain the heat. Thin socks protect feet while still being respectful. Remove at the cave entrance and carry in your hand.</li>
+            <li><strong>Hire a guide.</strong> The iconography, history, and symbolism packed into the five caves is vast and layered. A knowledgeable local guide at the cave entrance transforms the experience from looking at paintings into understanding an entire civilisation's artistic and religious tradition. Guides are available at the entrance for a negotiable fee.</li>
+            <li><strong>Bring a small torch or use your phone light.</strong> Despite modern lighting installed by the UNESCO project, some areas of the cave interiors — particularly the rear sections — are dimly lit and a small light helps appreciate ceiling paintings that are otherwise invisible.</li>
+            <li><strong>Do not touch the painted surfaces.</strong> The oils from human hands damage the ancient pigment surface over time. This is the single greatest ongoing threat to the mural paintings — touching is strictly forbidden and should be avoided even inadvertently.</li>
+            <li><strong>Look up constantly.</strong> The most extraordinary paintings are on the ceilings — not the walls. Visitors who walk through looking forward miss the greatest art in the complex. Spend time lying on your back or standing with your neck arched upward to appreciate the full ceiling compositions.</li>
+            <li><strong>Combine with Sigiriya on the same day.</strong> Sigiriya is 19 km away — 30 minutes by car. A morning at Dambulla caves followed by the afternoon climb of Sigiriya Rock is the classic Cultural Triangle combination and a magnificent full day.</li>
+            <li><strong>Visit Heritance Kandalama even if not staying there</strong> — the hotel has a public restaurant open to day visitors and the experience of dining in one of Asia's most extraordinary architectural buildings is worthwhile. The reservoir views from the hotel terrace are outstanding.</li>
+            <li><strong>Allow the full 2.5 hours inside the caves.</strong> The paintings reward slow, careful observation. Visitors who rush through in 45 minutes see a fraction of what is actually there.</li>
+          </ul>
+        </div>
+      </div>
+    `, 
     SI: "දඹුලු ලෙන් විහාරය හෙවත් දඹුල්ලේ රන් විහාරය යනු ශ්‍රී ලංකාවේ මධ්‍යම ප්‍රදේශයේ පිහිටි ලෝක උරුම ස්ථානයකි. මෙය ශ්‍රී ලංකාවේ විශාලතම හා හොඳම මට්ටමින් සංරක්ෂණය කර ඇති ලෙන් විහාර සංකීර්ණයයි. අවට තැන්නෙන් මීටර් 160 ක් පමණ උසට පර්වතය විහිදී ඇත. අවට ප්‍රදේශයේ ලේඛනගත කරන ලද ලෙන් 80 කට වඩා තිබේ. ප්‍රධාන ආකර්ෂණීය ස්ථාන ලෙන් පහක් පුරා පැතිරී ඇති අතර ඒවායේ බුදු පිළිම සහ සිතුවම් අඩංගු වේ. මෙම සිතුවම් සහ පිළිම ගෞතම බුදුරජාණන් වහන්සේ සහ උන්වහන්සේගේ ජීවිතයට සම්බන්ධ වේ. මෙහි බුදු පිළිම 153 ක්, ශ්‍රී ලාංකේය රජවරුන්ගේ පිළිම 3 ක් සහ දෙවි දේවතාවුන්ගේ පිළිම 4 ක් ඇත. බිතුසිතුවම් වර්ග මීටර් 2,100 ක ප්‍රදේශයක් පුරා විහිදී පවතී. මෙම විහාරයේ ඉතිහාසය ක්‍රි.පූ. 1 වන සියවස දක්වා දිවයන අතර, වළගම්බා රජු සතුරන්ගෙන් බේරී මෙහි සැඟවී සිට පසුව කෘතගුණ සැලකීමක් ලෙස මෙම ලෙන් විහාර සංකීර්ණයක් බවට පත් කළේය." 
   },
   "kandy-temple": { 

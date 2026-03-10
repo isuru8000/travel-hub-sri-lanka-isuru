@@ -526,7 +526,146 @@ const BASE_DESTINATIONS: Destination[] = [
       { id: "udawalawe", name: { EN: "Udawalawe National Park", SI: "උඩවලව ජාතික වනෝද්‍යානය" }, image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg" }
     ]
   },
-  { id: "sinharaja", name: { EN: "Sinharaja", SI: "සිංහරාජය" }, category: "wildlife", image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg", gallery: ["https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg"], history: { EN: "The Sinharaja Forest Reserve is a national park and a biodiversity hotspot in Sri Lanka. It is of international significance and has been designated a Biosphere Reserve and World Heritage Site by UNESCO. This virgin rainforest is a treasure trove of endemic species, including trees, insects, amphibians, reptiles, birds, and mammals. More than 60% of the trees are endemic and many of them are considered rare. It is the country's last viable area of primary tropical rainforest.", SI: "නොඉඳුල් වැසි වනාන්තරය." }, shortStory: { EN: "A world heritage site.", SI: "ලෝක උරුමයක්." }, tips: [{ EN: "Wear long socks for bugs.", SI: "කූඩැල්ලන්ගෙන් ආරක්ෂා වන්න." }], hiddenEchoes: { EN: "Many rare birds.", SI: "ආවේණික පක්ෂි රංචු." }, location: "Ratnapura", coordinates: { x: 44, y: 80 },
+  { id: "sinharaja", name: { EN: "Sinharaja", SI: "සිංහරාජය" }, category: "wildlife", image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg", gallery: ["https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg"], history: { EN: `
+<div className="space-y-8">
+  <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100/50">
+    <h3 className="text-xl font-semibold text-emerald-900 mb-4 flex items-center gap-2">
+      <span className="text-emerald-600">📍</span> Location & Geography
+    </h3>
+    <ul className="space-y-3 text-emerald-800/80">
+      <li className="flex items-start gap-3">
+        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+        <p><strong className="text-emerald-900">Province:</strong> Sabaragamuwa Province and Southern Province, Sri Lanka</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+        <p><strong className="text-emerald-900">Zone:</strong> South-west lowland wet zone</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+        <p><strong className="text-emerald-900">Distance from Colombo:</strong> Approximately 90 km southeast — about 3 to 3.5 hours by road via Ratnapura, or 172 km via the Southern Expressway</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>
+        <p><strong className="text-emerald-900">Nearest towns:</strong> Kudawa village (northwest entrance), Deniyaya (southeast entrance)</p>
+      </li>
+    </ul>
+  </div>
+
+  <div className="space-y-4">
+    <h3 className="text-2xl font-bold text-gray-900">What is Sinharaja?</h3>
+    <p className="text-gray-600 leading-relaxed">
+      Sinharaja Forest Reserve is a forest reserve and a biodiversity hotspot in Sri Lanka. It is of international significance and has been designated a Biosphere Reserve and World Heritage Site by UNESCO. According to the International Union for Conservation of Nature (IUCN), Sinharaja is the country's last viable area of primary tropical rainforest.
+    </p>
+    <p className="text-gray-600 leading-relaxed">
+      Encompassing the last extensive patch of primary lowland rainforest in Sri Lanka, Sinharaja Forest Reserve is situated in the south-west lowland wet zone of Sri Lanka. Covering an area of 8,864 ha and ranging from an altitude of 300 to 1,170 meters, it consists of 6,092 ha of Forest Reserve and 2,772 ha of Proposed Forest Reserve. This narrow strip of undulating terrain encompasses a series of ridges and valleys that are crisscrossed by an intricate network of streams.
+    </p>
+    <div className="bg-amber-50 p-4 rounded-xl border border-amber-100">
+      <p className="text-amber-800 text-sm">
+        <strong className="font-semibold">Name meaning:</strong> The word Sinharaja means lion — සිංහ/சிங்கம் sinha — king or kingdom — රාජ/ராஜා raja. <br/>
+        ⭐ <strong className="font-semibold">LEGEND:</strong> A popular folk legend has it that a legendary lion lived in this protected forest. This is a traditional story with no scientific or historical basis.
+      </p>
+    </div>
+  </div>
+
+  <div className="space-y-4">
+    <h3 className="text-2xl font-bold text-gray-900">Full History</h3>
+    <div className="grid gap-4 sm:grid-cols-2">
+      <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+        <h4 className="font-semibold text-gray-900 mb-2">Ancient Geological Origin</h4>
+        <p className="text-sm text-gray-600">The rainforest likely formed during the Jurassic period, from 200 million years to 145 million years ago. The plant families and ecological patterns found in Sinharaja today trace their lineage back many millions of years, making this forest one of the most ancient living ecosystems on earth.</p>
+      </div>
+      <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+        <h4 className="font-semibold text-gray-900 mb-2">First Official Recognition (1875)</h4>
+        <p className="text-sm text-gray-600">Most of the area of Sinharaja forest was originally declared a forest reserve under the Waste Lands Ordinance in 1875. This was a British colonial administrative measure that gave the forest its first legal protection.</p>
+      </div>
+      <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+        <h4 className="font-semibold text-gray-900 mb-2">UNESCO World Heritage Site (1988)</h4>
+        <p className="text-sm text-gray-600">In December 1988, the Sinharaja Biosphere Reserve became Sri Lanka's first natural site to be added to the UNESCO World Heritage list, recognised as an outstanding repository of biodiversity found nowhere else on earth.</p>
+      </div>
+      <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
+        <h4 className="font-semibold text-gray-900 mb-2">Conservation Concerns</h4>
+        <p className="text-sm text-gray-600">IUCN's Conservation Outlook Assessment rates the conservation status of Sinharaja as being of "significant concern" due to agricultural expansion, fragmentation, and illegal collection of rare species.</p>
+      </div>
+    </div>
+  </div>
+
+  <div className="space-y-4">
+    <h3 className="text-2xl font-bold text-gray-900">Flora & Fauna</h3>
+    <div className="space-y-6">
+      <div>
+        <h4 className="text-lg font-semibold text-gray-900 mb-2">Plant Life</h4>
+        <p className="text-gray-600 leading-relaxed mb-3">
+          More than 60% of the trees are endemic and many of them are considered rare. Of Sri Lanka's 217 endemic wet lowland trees and woody climbers, 139 (64%) have been recorded in Sinharaja. Dominant tree families include Dipterocarpaceae and Shorea (Hora).
+        </p>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold text-gray-900 mb-2">Birds & The Mixed Species Bird Flock</h4>
+        <p className="text-gray-600 leading-relaxed mb-3">
+          Faunal endemism is particularly high for birds with 19 (95%) of 20 species recorded in the property being endemic to Sri Lanka. Sinharaja Forest is the best place to watch mixed species bird flocks. These flocks regularly contain 30 to 50 birds of 10 to 15 different species moving rapidly through the forest simultaneously.
+        </p>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold text-gray-900 mb-2">Mammals, Reptiles & Amphibians</h4>
+        <p className="text-gray-600 leading-relaxed">
+          There are 39 mammals in Sinharaja (8 endemic), including the elusive Sri Lanka Leopard, Purple-Faced Langur, and Rusty-Spotted Cat. The forest also hosts 72 reptile species (21 endemic) like the Sri Lanka green pit viper, and 20 amphibian species (10 endemic).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="bg-blue-50/50 p-6 rounded-2xl border border-blue-100/50">
+    <h3 className="text-xl font-semibold text-blue-900 mb-4 flex items-center gap-2">
+      <span className="text-blue-600">🥾</span> Practical Information
+    </h3>
+    <div className="grid gap-6 md:grid-cols-2">
+      <div>
+        <h4 className="font-semibold text-blue-900 mb-2">Entrances</h4>
+        <ul className="space-y-2 text-sm text-blue-800/80">
+          <li>• <strong className="font-medium">Kudawa (North-west):</strong> Most popular for day visitors and birders.</li>
+          <li>• <strong className="font-medium">Deniyaya (South-east):</strong> Access to higher elevations, good for multi-day treks.</li>
+          <li>• <strong className="font-medium">Neluwa (South-west):</strong> Less visited but excellent for specific species.</li>
+          <li>• <strong className="font-medium">Rakwana (North-east):</strong> Highest entrance, occasional elephant sightings.</li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="font-semibold text-blue-900 mb-2">Entry & Regulations</h4>
+        <ul className="space-y-2 text-sm text-blue-800/80">
+          <li>• <strong className="font-medium">Entry Fee:</strong> ~700-800 LKR for foreign adults.</li>
+          <li>• <strong className="font-medium">Compulsory Guide:</strong> All visitors MUST be accompanied by a licensed guide. Guide fee is separate (~2,000-3,000 LKR per half-day).</li>
+          <li>• <strong className="font-medium">Hours:</strong> Daily from ~6:30 AM to 5:00 PM.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
+    <h3 className="text-lg font-semibold text-gray-900 mb-4">Essential Tips</h3>
+    <ul className="space-y-3 text-sm text-gray-600">
+      <li className="flex items-start gap-3">
+        <span className="text-gray-400 mt-0.5">1.</span>
+        <p><strong className="text-gray-900">Prepare for leeches:</strong> Wear long trousers tucked tightly into thick socks. Apply a repellent of salt solution or tobacco juice. Carry salt to detach them.</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="text-gray-400 mt-0.5">2.</span>
+        <p><strong className="text-gray-900">Wear dark colours:</strong> Bright clothing disturbs wildlife. Dark greens, browns, and blacks are ideal.</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="text-gray-400 mt-0.5">3.</span>
+        <p><strong className="text-gray-900">Arrive at dawn:</strong> The bird wave flocks are most active in the first two hours after sunrise. Arrive at 6:30 AM when gates open.</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="text-gray-400 mt-0.5">4.</span>
+        <p><strong className="text-gray-900">Waterproof everything:</strong> The forest is damp and sudden rain can occur anytime. Keep electronics in waterproof bags.</p>
+      </li>
+      <li className="flex items-start gap-3">
+        <span className="text-gray-400 mt-0.5">5.</span>
+        <p><strong className="text-gray-900">Do not remove anything:</strong> Collecting plants, animals, or any biological material is illegal and violates conservation regulations.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+`, SI: "නොඉඳුල් වැසි වනාන්තරය." }, shortStory: { EN: "A world heritage site.", SI: "ලෝක උරුමයක්." }, tips: [{ EN: "Wear long socks for bugs.", SI: "කූඩැල්ලන්ගෙන් ආරක්ෂා වන්න." }], hiddenEchoes: { EN: "Many rare birds.", SI: "ආවේණික පක්ෂි රංචු." }, location: "Ratnapura", coordinates: { x: 44, y: 80 },
     nearbyAttractions: [
       { id: "galle-fort", name: { EN: "Galle Fort", SI: "ගාල්ල කොටුව" }, image: "https://i.pinimg.com/1200x/fa/56/b6/fa56b632b66edcf9c5ee396a4930278c.jpg" },
       { id: "unawatuna", name: { EN: "Unawatuna Beach", SI: "උණවටුන වෙරළ" }, image: "https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg" },

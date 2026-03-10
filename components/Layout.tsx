@@ -16,7 +16,7 @@ interface LayoutProps {
   onLogout: () => void;
 }
 
-const SocialLink = ({ icon: Icon, href, color, label }: { icon: any, href: string, color: string, label: string }) => (
+const SocialLink = ({ icon: Icon, href, color, textColor, label }: { icon: any, href: string, color: string, textColor: string, label: string }) => (
   <a 
     href={href} 
     target="_blank" 
@@ -33,7 +33,7 @@ const SocialLink = ({ icon: Icon, href, color, label }: { icon: any, href: strin
       <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${color}`} />
       
       {/* Icon */}
-      <Icon size={22} className="relative z-20 text-gray-400 group-hover:text-white group-hover:scale-110 transition-all duration-500" />
+      <Icon size={22} className={`relative z-20 group-hover:text-white group-hover:scale-110 transition-all duration-500 ${textColor}`} />
       
       {/* Gloss Effect */}
       <div className="absolute top-0 left-0 w-full h-[200%] bg-gradient-to-b from-white/30 via-transparent to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-1000 pointer-events-none" />
@@ -121,18 +121,21 @@ const Layout: React.FC<LayoutProps> = ({
                 icon={Facebook} 
                 href="https://www.facebook.com/share/1DJJ35Hq4k/" 
                 color="bg-[#1877F2]" 
+                textColor="text-[#1877F2]"
                 label="Facebook"
               />
               <SocialLink 
                 icon={Youtube} 
                 href="https://www.youtube.com/@TravelHublk-123" 
                 color="bg-[#FF0000]" 
+                textColor="text-[#FF0000]"
                 label="YouTube"
               />
               <SocialLink 
                 icon={Music2} 
                 href="https://vm.tiktok.com/ZS91cdnNLXNp3-gURJB/" 
                 color="bg-[#000000]" 
+                textColor="text-[#000000]"
                 label="TikTok"
               />
             </div>
