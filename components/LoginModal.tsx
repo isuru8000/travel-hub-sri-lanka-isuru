@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import { X, Globe, Chrome, ShieldCheck, Info, Loader2, AlertCircle } from 'lucide-react';
 import { Language } from '../types.ts';
-import { supabase, IS_MOCK_AUTH } from '../lib/supabase.ts';
+import { auth, db } from '../firebase';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -19,31 +21,32 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, language }) =>
     setError(null);
     
     try {
-      // 1. Fetch the OAuth URL from our server
-      const response = await fetch('/api/auth/google/url');
-      if (!response.ok) throw new Error('Failed to get auth URL');
-      const { url } = await response.json();
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
 
-      // 2. Open the Google OAuth URL directly in a popup
-      const authWindow = window.open(
-        url,
-        'google_oauth_popup',
-        'width=600,height=700'
-      );
+      // Check if user exists in Firestore, if not create them
+      const userRef = doc(db, 'users', user.uid);
+      const userSnap = await getDoc(userRef);
 
-      if (!authWindow) {
-        throw new Error('Popup blocked. Please allow popups for this site.');
+      if (!userSnap.exists()) {
+        await setDoc(userRef, {
+          uid: user.uid,
+          name: user.displayName || 'Explorer',
+          email: user.email,
+          photo: user.photoURL || '',
+          role: 'user',
+          createdAt: serverTimestamp()
+        });
       }
 
-      // The success message will be handled by the listener in App.tsx or here
-      // Let's add a listener here as well for immediate feedback if needed, 
-      // but App.tsx is better for global state.
-      
+      onClose();
     } catch (err: any) {
       console.error("Authentication Error:", err);
       setError(err.message || (language === 'EN' 
         ? "Could not establish a secure handshake with the identity provider." 
         : "අනන්‍යතා සේවාව සමඟ සම්බන්ධ වීමට නොහැකි විය."));
+    } finally {
       setIsLoading(false);
     }
   };
@@ -111,18 +114,6 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, language }) =>
               <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-gray-100"></div></div>
               <span className="relative px-6 bg-white text-[9px] font-black text-gray-300 uppercase tracking-[0.5em]">Secure Protocol</span>
             </div>
-
-            {IS_MOCK_AUTH && !isLoading && (
-              <div className="flex items-start gap-4 p-6 rounded-[2rem] bg-blue-50/50 border border-blue-100 animate-pulse">
-                <Info size={18} className="text-blue-500 mt-0.5 shrink-0" />
-                <div className="text-left space-y-1">
-                  <p className="text-[10px] font-black text-blue-700 uppercase tracking-widest leading-none">Archival Preview Mode</p>
-                  <p className="text-[9px] font-medium text-blue-600/80 italic leading-relaxed">
-                    Real keys not detected. Using a simulated neural signature for exploration.
-                  </p>
-                </div>
-              </div>
-            )}
 
             <div className="flex items-center gap-5 p-6 rounded-[2rem] bg-gray-50 border border-gray-100 transition-all hover:bg-white hover:shadow-xl">
               <ShieldCheck size={24} className="text-green-500" />

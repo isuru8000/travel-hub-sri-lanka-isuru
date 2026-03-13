@@ -55,6 +55,8 @@ import {
 } from 'lucide-react';
 import { getLankaGuideResponse, GroundingLink, getWeatherUpdate, WeatherData } from '../services/gemini.ts';
 
+import { SEO } from './SEO.tsx';
+
 interface DestinationDetailProps {
   destination: Destination | null;
   language: Language;
@@ -203,7 +205,11 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
   return (
     <div className="min-h-screen bg-white animate-in fade-in duration-1000 relative overflow-x-hidden">
-      
+      <SEO 
+        title={destination.name[language]} 
+        description={destination.shortStory[language]} 
+        image={destination.image} 
+      />
       <LiveWeatherWidget destinationName={destination.name.EN} language={language} />
 
       {/* Cinematic Hero */}
@@ -276,7 +282,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
            
            {/* MAIN CONTENT BLOCK */}
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
-              <div className="lg:col-span-7 space-y-20">
+              <div className="lg:col-span-7 space-y-12 md:space-y-20">
                  
                  {/* ROUND NEARBY ATTRACTIONS (PROXIMITY NODES) - PLACED ABOVE MASTER ARCHIVE */}
                  {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
@@ -326,20 +332,20 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                  )}
 
                  {/* 1. Long Narrative Section (About Destination) */}
-                 <div className="space-y-12 relative">
-                    <div className="flex items-center gap-6">
-                        <div className={`w-14 h-14 rounded-3xl flex items-center justify-center shadow-inner bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20`}>
-                          <BookOpen size={24} />
+                 <div className="space-y-8 md:space-y-12 relative">
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-inner bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20`}>
+                          <BookOpen size={24} className="w-5 h-5 md:w-6 md:h-6" />
                         </div>
-                        <h3 className="text-3xl md:text-5xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
+                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
                           {UI_STRINGS.masterArchive[language]} {destination.name[language]}
                         </h3>
                     </div>
 
                     <div className="relative group">
                        <div className={`absolute -left-4 md:-left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
-                       <div className="font-space text-base md:text-xl text-gray-600 leading-relaxed md:leading-loose space-y-6 md:space-y-8 antialiased font-light text-justify relative z-10 pl-2 md:pl-0">
-                          <div className={`prose-container first-letter:text-4xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
+                       <div className="font-sans text-lg md:text-xl text-gray-800 leading-relaxed space-y-6 md:space-y-8 antialiased font-light relative z-10 pl-2 md:pl-0">
+                          <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
                           {(() => {
                              const content = deepDive?.history || destination.detailedAbout?.[language];
                              if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
@@ -348,11 +354,11 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              const trimmedContent = content.trim();
                              // Check for common HTML tags or if it starts with <
                              if (trimmedContent.startsWith('<') || /<[a-z][\s\S]*>/i.test(trimmedContent)) {
-                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content" />;
+                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content space-y-6 md:space-y-8" />;
                              }
 
                              return content.split('\n\n').map((para: string, pIdx: number) => (
-                               <p key={pIdx} className={pIdx === 0 ? 'mt-0' : 'mt-12'}>
+                               <p key={pIdx} className={`whitespace-pre-wrap ${pIdx === 0 ? 'mt-0' : 'mt-6 md:mt-8'}`}>
                                  {para}
                                </p>
                              ));
@@ -364,56 +370,42 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
                  {/* Deep Dive Addendum: Hidden Echoes */}
                  {deepDive?.hiddenEchoes && (
-                    <div className="pt-20 border-t border-gray-100 space-y-12 animate-in fade-in duration-1000">
-                       <div className="flex items-center gap-6">
-                          <div className="w-14 h-14 rounded-3xl bg-[#E1306C]/10 flex items-center justify-center text-[#E1306C] border border-[#E1306C]/20 shadow-inner">
-                            <Sparkles size={26} />
+                    <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12 animate-in fade-in duration-1000">
+                       <div className="flex items-center gap-4 md:gap-6">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-[#E1306C]/10 flex items-center justify-center text-[#E1306C] border border-[#E1306C]/20 shadow-inner">
+                            <Sparkles size={26} className="w-5 h-5 md:w-6 md:h-6" />
                           </div>
-                          <h4 className="text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Hidden Echoes</h4>
+                          <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Hidden Echoes</h4>
                        </div>
                        <div className="md:pl-20">
-                          <div className="bg-[#E1306C]/5 p-10 rounded-[4rem] border border-[#E1306C]/10 shadow-sm relative overflow-hidden group">
-                             <div className="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:rotate-12 transition-transform duration-1000">
-                                <Compass size={140} />
+                          <div className="bg-[#E1306C]/5 p-6 md:p-10 rounded-3xl md:rounded-[4rem] border border-[#E1306C]/10 shadow-sm relative overflow-hidden group">
+                             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.05] group-hover:rotate-12 transition-transform duration-1000">
+                                <Compass size={140} className="w-24 h-24 md:w-36 md:h-36" />
                              </div>
-                             <p className="text-xl md:text-3xl text-gray-700 italic font-medium leading-relaxed relative z-10">
-                               "{deepDive.hiddenEchoes}"
+                             <p className="text-lg sm:text-xl md:text-2xl text-gray-800 italic font-medium leading-relaxed relative z-10">
+                                "{deepDive.hiddenEchoes}"
                              </p>
                           </div>
                        </div>
                     </div>
                  )}
 
-                 {/* 2. Legacy & Legend (History) Section */}
-                 <div className="pt-20 border-t border-gray-100 space-y-12">
-                   <div className="flex items-center gap-6">
-                      <div className="w-14 h-14 rounded-3xl bg-[#F59E0B]/10 flex items-center justify-center text-[#F59E0B] border border-[#F59E0B]/20 shadow-inner">
-                        <History size={26} />
-                      </div>
-                      <h4 className="text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Legacy & Legend</h4>
-                   </div>
-                   <div className="md:pl-20">
-                      <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed whitespace-pre-line italic">
-                        {destination.history[language]}
-                      </p>
-                   </div>
-                 </div>
 
                  {/* 3. High-Fidelity Gallery Section */}
-                 <div className="pt-20 border-t border-gray-100 space-y-12">
-                    <div className="flex justify-between items-end">
-                      <div className="flex items-center gap-6">
-                        <div className="w-14 h-14 rounded-3xl bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] border border-[#0EA5E9]/20 shadow-inner">
-                          <ImageIcon size={26} />
+                 <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 sm:gap-0">
+                      <div className="flex items-center gap-4 md:gap-6">
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] border border-[#0EA5E9]/20 shadow-inner">
+                          <ImageIcon size={26} className="w-5 h-5 md:w-6 md:h-6" />
                         </div>
-                        <h4 className="text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Visual Traversal</h4>
+                        <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Visual Traversal</h4>
                       </div>
-                      <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">{destination.gallery.length} High-Res Frames</span>
+                      <span className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">{destination.gallery.length} High-Res Frames</span>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:pl-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 md:pl-20">
                       {destination.gallery.map((img, i) => (
-                        <div key={i} className="group relative aspect-[4/5] rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-gray-100">
+                        <div key={i} className="group relative aspect-[4/5] rounded-3xl md:rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-gray-100">
                            <img src={img} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                            <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
@@ -423,76 +415,31 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                       ))}
                     </div>
                  </div>
-
-                 {/* 4. Logistical Vision Addendum */}
-                 {destination.logistics && (
-                    <div className="pt-20 border-t border-gray-100 space-y-12">
-                       <div className="flex items-center gap-6 group/log">
-                          <div className={`w-14 h-14 rounded-3xl flex items-center justify-center bg-gray-100 text-gray-400 group-hover/log:bg-[#E1306C]/10 group-hover/log:text-[#E1306C] transition-all`}>
-                            <Car size={26} />
-                          </div>
-                          <h4 className="text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">{UI_STRINGS.logisticalVision[language]}</h4>
-                       </div>
-                       <div className="md:pl-20">
-                         <div className="bg-gray-50/50 p-8 md:p-12 rounded-[3.5rem] border border-gray-100/50 shadow-inner group">
-                            <p className="text-xl md:text-3xl text-gray-500 italic font-medium leading-relaxed">
-                               "{destination.logistics[language]}"
-                            </p>
-                         </div>
-                       </div>
-                    </div>
-                  )}
-
-                 {/* 5. Practical Wisdom (Tips) Section */}
-                 <div className="pt-20 border-t border-gray-100 space-y-12">
-                    <div className="flex items-center gap-6">
-                       <div className={`w-14 h-14 rounded-3xl flex items-center justify-center bg-blue-500/10 text-blue-500`}>
-                         <Lightbulb size={26} />
-                       </div>
-                       <h4 className="text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
-                         {UI_STRINGS.tipsLabel[language]}
-                       </h4>
-                    </div>
-                    <div className="grid grid-cols-1 gap-10 md:pl-20">
-                      {(deepDive?.wisdom || destination.tips.map(t => t[language])).map((tip, idx) => (
-                        <div key={idx} className="flex gap-8 items-start group">
-                          <div className={`w-12 h-12 rounded-2xl bg-white border shadow-sm flex items-center justify-center font-black text-xs shrink-0 transition-all duration-500 text-[#0EA5E9] border-gray-100 group-hover:bg-[#0EA5E9] group-hover:text-white`}>
-                            {idx + 1}
-                          </div>
-                          <span className="text-xl md:text-2xl font-medium text-gray-500 leading-relaxed italic pt-1">{typeof tip === 'string' ? tip : (tip as any).EN || tip}</span>
-                        </div>
-                      ))}
-                    </div>
-                 </div>
               </div>
 
               {/* Sidebar Display Hub */}
-              <div className="lg:col-span-5 flex flex-col gap-10">
+              <div className="lg:col-span-5 flex flex-col gap-8 md:gap-10">
                  
                  {/* Map Manifold Frame */}
-                 <div className="relative h-[500px] bg-gray-100 border-4 border-white rounded-[4rem] shadow-2xl overflow-hidden group">
+                 <div className="relative h-[300px] md:h-[500px] bg-gray-100 border-4 border-white rounded-3xl md:rounded-[4rem] shadow-2xl overflow-hidden group">
                     <iframe 
                       src={googleMapsIframeUrl}
                       className="absolute inset-0 w-full h-full grayscale-[0.2] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
                       loading="lazy"
                       allowFullScreen
                     />
-                    <div className="absolute inset-0 pointer-events-none border-[12px] border-white/10" />
+                    <div className="absolute inset-0 pointer-events-none border-[8px] md:border-[12px] border-white/10" />
                  </div>
 
-
-
-
-
                  {/* Local Intel Links */}
-                 <div className="bg-gray-50 p-12 rounded-[4rem] border border-gray-100 space-y-10 shadow-inner">
-                    <div className="flex items-center justify-between border-b border-gray-200 pb-8">
-                       <div className="flex items-center gap-4 text-[#E1306C]">
-                         <Target size={24} className="animate-pulse" />
-                         <span className="text-[11px] font-black uppercase tracking-[0.5em]">{language === 'EN' ? 'Regional Intelligence' : 'ප්‍රාදේශීය බුද්ධිය'}</span>
+                 <div className="bg-gray-50 p-6 md:p-12 rounded-3xl md:rounded-[4rem] border border-gray-100 space-y-6 md:space-y-10 shadow-inner">
+                    <div className="flex items-center justify-between border-b border-gray-200 pb-4 md:pb-8">
+                       <div className="flex items-center gap-3 md:gap-4 text-[#E1306C]">
+                         <Target size={24} className="animate-pulse w-5 h-5 md:w-6 md:h-6" />
+                         <span className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em]">{language === 'EN' ? 'Regional Intelligence' : 'ප්‍රාදේශීය බුද්ධිය'}</span>
                        </div>
                     </div>
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                        {nearbyResults.length > 0 ? (
                          nearbyResults.map((link, idx) => (
                            <a 
@@ -500,21 +447,21 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              href={link.uri}
                              target="_blank"
                              rel="noopener noreferrer"
-                             className="flex items-center justify-between p-6 bg-white rounded-3xl border border-gray-100 shadow-sm transition-all hover:border-[#0EA5E9]/40 hover:shadow-2xl hover:-translate-x-2 group/link"
+                             className="flex items-center justify-between p-4 md:p-6 bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm transition-all hover:border-[#0EA5E9]/40 hover:shadow-2xl hover:-translate-x-2 group/link"
                            >
-                              <div className="flex items-center gap-5 overflow-hidden">
-                                 <div className="w-12 h-12 rounded-2xl bg-[#0EA5E9]/5 flex items-center justify-center text-[#0EA5E9] shadow-inner group-hover/link:bg-[#0EA5E9] group-hover/link:text-white transition-colors">
-                                    <Navigation size={20} />
+                              <div className="flex items-center gap-3 md:gap-5 overflow-hidden">
+                                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#0EA5E9]/5 flex items-center justify-center text-[#0EA5E9] shadow-inner group-hover/link:bg-[#0EA5E9] group-hover/link:text-white transition-colors shrink-0">
+                                    <Navigation size={20} className="w-4 h-4 md:w-5 md:h-5" />
                                  </div>
-                                 <span className="text-sm font-bold text-gray-500 group-hover/link:text-[#0a0a0a] truncate tracking-tight uppercase">{link.title}</span>
+                                 <span className="text-xs md:text-sm font-bold text-gray-500 group-hover/link:text-[#0a0a0a] truncate tracking-tight uppercase">{link.title}</span>
                               </div>
-                              <ExternalLink size={16} className="text-gray-200 group-hover/link:text-[#0EA5E9] shrink-0" />
+                              <ExternalLink size={16} className="text-gray-200 group-hover/link:text-[#0EA5E9] shrink-0 w-3 h-3 md:w-4 md:h-4 ml-2" />
                            </a>
                          ))
                        ) : (
-                         <div className="text-center py-20 opacity-30 space-y-6">
-                            <Database size={48} className="mx-auto text-gray-300" />
-                            <p className="text-[11px] font-black uppercase tracking-[0.4em] italic">Fetching Spatial Metadata...</p>
+                         <div className="text-center py-12 md:py-20 opacity-30 space-y-4 md:space-y-6">
+                            <Database size={48} className="mx-auto text-gray-300 w-8 h-8 md:w-12 md:h-12" />
+                            <p className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] italic">Fetching Spatial Metadata...</p>
                          </div>
                        )}
                     </div>
@@ -524,13 +471,13 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         </section>
 
         {/* FINAL RETURN ACTION */}
-        <div className="mt-32 pt-20 border-t border-gray-100 flex justify-center">
+        <div className="mt-16 md:mt-32 pt-10 md:pt-20 border-t border-gray-100 flex justify-center">
            <button 
              onClick={onBack}
-             className="group relative flex items-center gap-8 px-20 py-10 bg-[#0a0a0a] text-white rounded-full font-black text-sm uppercase tracking-[0.8em] transition-all hover:scale-105 shadow-3xl overflow-hidden"
+             className="group relative flex items-center gap-4 md:gap-8 px-8 md:px-20 py-6 md:py-10 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-sm uppercase tracking-[0.4em] md:tracking-[0.8em] transition-all hover:scale-105 shadow-3xl overflow-hidden"
            >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              <ArrowLeft size={32} className="group-hover:-translate-x-3 transition-transform" />
+              <ArrowLeft size={32} className="w-6 h-6 md:w-8 md:h-8 group-hover:-translate-x-3 transition-transform" />
               {UI_STRINGS.returnToRegistry[language]}
            </button>
         </div>

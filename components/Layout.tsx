@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({
   onLogout
 }) => {
   return (
-    <div className="min-h-screen flex flex-col relative bg-white overflow-x-hidden w-full">
+    <div className="min-h-screen flex flex-col relative bg-green-500 overflow-x-hidden w-full">
       <style dangerouslySetInnerHTML={{ __html: `
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -89,13 +89,13 @@ const Layout: React.FC<LayoutProps> = ({
         {children}
       </main>
 
-      <footer className="bg-white border-t border-gray-100 text-[#0a0a0a] pt-24 pb-12 px-6">
+      <footer className="bg-[#0a0a0a] border-t border-white/10 text-white pt-24 pb-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-24">
           <div className="md:col-span-5 space-y-8">
             <div className="flex items-center gap-6 scale-125 origin-left">
               <AnimatedLogo />
             </div>
-            <p className="text-lg text-gray-500 leading-relaxed font-medium italic max-w-md">
+            <p className="text-lg text-gray-500 leading-relaxed font-normal not-italic text-left max-w-md">
               Where ancient memories meet modern journeys. We promote the heritage and beauty of our pearl in the Indian Ocean through high-fidelity archival technology.
             </p>
             <div className="flex items-center gap-3 py-4 px-6 bg-gray-50 rounded-2xl border border-gray-100 w-fit">
@@ -106,7 +106,7 @@ const Layout: React.FC<LayoutProps> = ({
 
           <div className="md:col-span-3 space-y-8">
             <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Quick Links</h3>
-            <ul className="space-y-4 text-sm text-gray-400 font-bold uppercase tracking-widest">
+            <ul className="space-y-4 text-sm text-gray-400 font-bold underline text-right border-dotted border-1 tracking-widest">
               <li><button onClick={() => setView('home')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Home</button></li>
               <li><button onClick={() => setView('destinations')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Destinations</button></li>
               <li><button onClick={() => setView('vr-trip')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> VR Experience</button></li>

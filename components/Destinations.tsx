@@ -25,6 +25,8 @@ import {
 
 
 
+import { SEO } from './SEO.tsx';
+
 interface DestinationsProps {
   language: Language;
   onSelectDestination: (dest: Destination) => void;
@@ -132,6 +134,10 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
   return (
     <section id="destinations" className="min-h-screen pb-64 bg-[#fafafa] relative antialiased">
+      <SEO 
+        title={language === 'EN' ? 'Destinations' : 'ගමනාන්ත'} 
+        description={language === 'EN' ? 'Explore the beautiful destinations of Sri Lanka.' : 'ශ්‍රී ලංකාවේ සුන්දර ගමනාන්ත ගවේෂණය කරන්න.'} 
+      />
       
       {/* Cinematic Header - Added z-[60] to stay above the sticky bar (z-50) */}
       <div className="relative z-[60] min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center bg-[#020205]">
@@ -192,44 +198,26 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
             {/* EXPANSIVE SEARCH RESULTS DROPDOWN - Overlapping the filter bar */}
             {showResultsDropdown && searchMatches.length > 0 && (
               <div className="absolute top-[calc(100%+0.5rem)] md:top-[calc(100%+1rem)] left-0 right-0 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_60px_180px_rgba(0,0,0,0.5)] border border-gray-100 overflow-hidden animate-in slide-in-from-top-6 duration-700 z-[120]">
-                <div className="px-6 py-4 md:px-10 md:py-6 border-b border-gray-50 flex items-center justify-between bg-gray-50/90 backdrop-blur-xl">
-                   <div className="flex items-center gap-3 md:gap-4">
-                      <p className="text-[8px] md:text-[10px] font-black text-[#0EA5E9] uppercase tracking-[0.2em] md:tracking-[0.4em]">Registry Sync Results</p>
-                      <span className="px-2 py-1 md:px-3 md:py-1 rounded-full bg-[#0EA5E9]/10 text-[#0EA5E9] text-[8px] md:text-[9px] font-black">{searchMatches.length} Found</span>
-                   </div>
-                   <div className="flex gap-1 md:gap-1.5 hidden sm:flex">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#0EA5E9] animate-pulse" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#0EA5E9] animate-pulse delay-150" />
-                   </div>
-                </div>
-                <div className="max-h-[60vh] md:max-h-[520px] overflow-y-auto no-scrollbar py-2 md:py-4 px-1 md:px-2">
-                  {searchMatches.map((dest, idx) => (
-                    <button
-                      key={dest.id}
-                      onClick={() => { onSelectDestination(dest); setShowResultsDropdown(false); setSearch(''); }}
-                      className="w-full flex items-center gap-4 md:gap-8 p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] hover:bg-[#fafafa] transition-all text-left group/item border-b border-gray-50/50 last:border-none"
-                    >
-                      <div className="relative w-16 h-16 md:w-24 md:h-24 rounded-[1rem] md:rounded-[2rem] overflow-hidden shrink-0 shadow-2xl group-hover/item:scale-105 transition-transform border-2 md:border-4 border-white">
-                        <img src={dest.image} className="w-full h-full object-cover" alt="" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40" />
-                      </div>
-                      <div className="flex-grow space-y-1 md:space-y-2">
-                        <div className="flex items-center gap-2 md:gap-3 text-[8px] md:text-[10px] font-black text-[#0EA5E9] uppercase tracking-[0.2em] md:tracking-[0.4em]">
-                          <MapPin size={10} className="md:w-3 md:h-3 animate-pulse" />
-                          {dest.location}
-                        </div>
-                        <h4 className="text-lg md:text-3xl font-heritage font-bold text-[#0a0a0a] group-hover/item:text-[#0EA5E9] transition-colors leading-none uppercase tracking-tighter">{dest.name[language]}</h4>
-                        <p className="text-xs md:text-sm text-gray-400 font-medium italic line-clamp-1 opacity-80 leading-relaxed hidden sm:block">"{dest.shortStory[language]}"</p>
-                      </div>
-                      <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gray-50 flex items-center justify-center text-gray-300 group-hover/item:bg-[#0a0a0a] group-hover/item:text-white transition-all transform group-hover/item:translate-x-[-4px] md:group-hover/item:translate-x-[-8px] group-hover/item:rotate-12 shadow-inner shrink-0">
-                        <ArrowRight size={18} className="md:w-6 md:h-6" />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-                <div className="p-4 md:p-6 bg-gray-50/50 border-t border-gray-50 flex justify-center">
-                   <p className="text-[8px] md:text-[9px] font-black text-gray-300 uppercase tracking-[0.4em] md:tracking-[0.6em]">End of Match Manifest</p>
-                </div>
+                {searchMatches.map((dest) => (
+                  <button
+                    key={dest.id}
+                    onClick={() => {
+                      onSelectDestination(dest);
+                      setShowResultsDropdown(false);
+                    }}
+                    className="w-full flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors text-left"
+                  >
+                    <img
+                      src={dest.image}
+                      alt={dest.name[language]}
+                      className="w-12 h-12 object-cover rounded-lg"
+                    />
+                    <div>
+                      <p className="font-bold text-sm text-gray-900">{dest.name[language]}</p>
+                      <p className="text-xs text-gray-500">{dest.location}</p>
+                    </div>
+                  </button>
+                ))}
               </div>
             )}
           </div>
@@ -301,44 +289,48 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
              <button onClick={resetFilters} className="px-8 py-4 md:px-12 md:py-5 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform">Return to Core</button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {filteredDestinations.length > 0 ? filteredDestinations.map((dest, idx) => (
             <div 
               key={dest.id} 
               onClick={() => onSelectDestination(dest)}
-              className={`group relative h-[400px] md:h-[600px] bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-gray-100 transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-4 hover:scale-[1.02] cursor-pointer hover-glint ${categoryGlows[dest.category] || categoryGlows.all} animate-in slide-in-from-bottom-10`}
-              style={{ animationDelay: `${idx * 80}ms` }}
+              className={`group relative h-[380px] md:h-[480px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer animate-in slide-in-from-bottom-10 border border-gray-100/50 slow-glow-card`}
+              style={{ animationDelay: `${idx * 50}ms` }}
             >
               <img 
                 src={dest.image} 
                 alt={dest.name[language]} 
-                className="w-full h-full object-cover transition-transform duration-[4s] ease-out group-hover:scale-110" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/40 to-transparent opacity-80 transition-opacity duration-700 group-hover:opacity-95" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
               
-              <div className="absolute top-4 left-4 md:top-6 md:left-6">
-                 <div className="px-3 py-1 md:px-4 md:py-1.5 bg-white/20 backdrop-blur-xl rounded-full text-[7px] md:text-[8px] font-black uppercase tracking-widest text-white shadow-2xl border border-white/20">
+              <div className="absolute top-5 left-5">
+                 <div className="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-semibold tracking-wider text-white border border-white/30 uppercase shadow-sm">
                     {dest.category}
                  </div>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10 space-y-3 md:space-y-4 transition-transform duration-700 group-hover:-translate-y-2">
-                 <div className="flex items-center gap-2 text-[#0EA5E9]">
-                    <MapPin size={12} className="md:w-3.5 md:h-3.5 animate-pulse" />
-                    <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.3em]">{dest.location}</span>
+              <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end">
+                 <div className="flex items-center gap-2 text-white/90 mb-2">
+                    <MapPin size={14} className="text-[#0EA5E9]" />
+                    <span className="text-[10px] font-medium tracking-wider uppercase">{dest.location}</span>
                  </div>
-                 <h3 className="text-2xl md:text-3xl font-heritage font-bold text-white tracking-tighter leading-[0.9] uppercase">{dest.name[language]}</h3>
-                 <p className="text-xs md:text-sm lg:text-lg text-white/80 font-light italic line-clamp-2 leading-relaxed">
-                    "{dest.shortStory[language]}"
-                 </p>
-                 <div className="pt-2 md:pt-4">
-                    <button 
-                      className="flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-white text-[#0a0a0a] rounded-full font-black text-[8px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-[#0EA5E9] hover:text-white transition-all duration-500 group/btn"
-                    >
-                      <span>Explore</span>
-                      <ArrowRight size={12} className="md:w-3.5 md:h-3.5 transition-transform group-hover/btn:translate-x-2" />
-                    </button>
+                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight drop-shadow-md">{dest.name[language]}</h3>
+                 
+                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                   <div className="overflow-hidden">
+                     <p className="text-sm text-white/80 line-clamp-2 leading-relaxed mb-4 mt-2">
+                        {dest.shortStory[language]}
+                     </p>
+                   </div>
+                 </div>
+
+                 <div className="mt-3">
+                   <div className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 group/btn shadow-lg hover:bg-[#0EA5E9] hover:text-white border border-transparent">
+                      <span className="mr-2">Explore</span>
+                      <ArrowRight size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
+                   </div>
                  </div>
               </div>
             </div>
@@ -367,6 +359,11 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
           100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
         }
         .active-category-glow { animation: pulse-light 2s infinite; border-color: rgba(14, 165, 233, 0.3) !important; }
+        @keyframes border-glow {
+          0%, 100% { box-shadow: inset 0 0 0 1px rgba(14, 165, 233, 0.2); }
+          50% { box-shadow: inset 0 0 0 3px rgba(14, 165, 233, 0.5); }
+        }
+        .slow-glow-card { animation: border-glow 4s infinite ease-in-out; }
       `}} />
     </section>
   );

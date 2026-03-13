@@ -2,56 +2,15 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Language, User, Memory, Comment } from '../types.ts';
 import { 
-  Zap, 
-  ArrowRight, 
-  ArrowLeft,
-  Sparkles, 
-  ShieldCheck, 
-  Camera, 
-  Share2, 
-  Lock, 
-  Gem, 
-  Activity,
-  Award,
-  Loader2,
-  CheckCircle2,
-  X,
-  History,
-  Target,
-  Image as ImageIcon,
-  Quote,
-  Send,
-  Star,
-  Wand2,
-  Plus,
-  Compass,
-  MapPin,
-  Heart,
-  MessageSquare,
-  Users,
-  Radio,
-  Database,
-  Gift,
-  Trophy,
-  Upload,
-  FileImage,
-  Fingerprint,
-  Scan,
-  Layers,
-  Search,
-  Cpu,
-  Bookmark,
-  Bell,
-  Terminal,
-  ChevronRight,
-  MoreVertical,
-  ThumbsUp,
-  Share,
-  HeartOff,
-  UserPlus,
-  Shield
+  Zap, ArrowRight, ArrowLeft, Sparkles, ShieldCheck, Camera, Share2, Lock, Gem, Activity,
+  Award, Loader2, CheckCircle2, X, History, Target, Image as ImageIcon, Quote, Send, Star,
+  Wand2, Plus, Compass, MapPin, Heart, MessageSquare, Users, Radio, Database, Gift, Trophy,
+  Upload, FileImage, Fingerprint, Scan, Layers, Search, Cpu, Bookmark, Bell, Terminal,
+  ChevronRight, MoreVertical, ThumbsUp, Share, HeartOff, UserPlus, Shield
 } from 'lucide-react';
 import { refineTravelStory } from '../services/gemini.ts';
+import { db, handleFirestoreError, OperationType } from '../firebase';
+import { collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, doc, updateDoc, increment, getDocs } from 'firebase/firestore';
 
 interface NexusRewardsProps {
   language: Language;
@@ -60,77 +19,6 @@ interface NexusRewardsProps {
   setView: (view: any) => void;
 }
 
-const INITIAL_MEMORIES: Memory[] = [
-  {
-    id: 'm1',
-    userName: 'Alexander P.',
-    location: { EN: 'Sigiriya', SI: 'සීගිරිය' },
-    title: { EN: 'Echoes of the Sky Fortress', SI: 'අහස් මාලිගයේ රාවය' },
-    story: { 
-      EN: 'Standing atop the Lion Rock at dawn, I felt the weight of centuries. The mist clinging to the jungle canopy felt like a bridge between eras.', 
-      SI: 'හිරු උදාවේදී සීගිරි පර්වතය මුදුනේ සිටින විට මට දැනුණේ සියවස් ගණනාවක අතීතයක බරයි. වනාන්තරය වසාගත් මීදුම යුග දෙකක් යා කරන පාලමක් වැනිය.' 
-    },
-    image: 'https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80',
-    likes: 412,
-    date: '2026-03-12',
-    rating: 5,
-    tags: ['ancient', 'sunrise'],
-    comments: [
-      { id: 'c1', userName: 'Elena M.', userPhoto: 'https://ui-avatars.com/api/?name=Elena+M&background=E1306C&color=fff', text: { EN: 'This view is absolutely breathtaking!', SI: 'මෙම දර්ශනය ඇත්තෙන්ම විශ්මයජනකයි!' }, date: '2026-03-13' }
-    ]
-  },
-  {
-    id: 'm2',
-    userName: 'Elena M.',
-    location: { EN: 'Ella', SI: 'ඇල්ල' },
-    title: { EN: 'Mist in the Tea Valley', SI: 'තේ නිම්නයේ මීදුම' },
-    story: { 
-      EN: 'The scent of damp earth and fresh tea leaves is something I’ll never forget. The blue train winding through the hills is pure magic.', 
-      SI: 'තෙත් වූ පසෙහි සහ නැවුම් තේ දළුවල සුවඳ මට කිසිදා අමතක කළ නොහැක. කඳු අතරින් යන නිල් පැහැති දුම්රිය සැබෑ මායාවකි.' 
-    },
-    image: 'https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80',
-    likes: 285,
-    date: '2026-03-05',
-    rating: 5,
-    tags: ['mountains', 'tea'],
-    comments: [
-      { id: 'c2', userName: 'Kaito S.', userPhoto: 'https://ui-avatars.com/api/?name=Kaito+S&background=0EA5E9&color=fff', text: { EN: 'I was there last week, it was magical indeed.', SI: 'මම ගිය සතියේ එහි ගියා, එය ඇත්තෙන්ම පුදුම සහගතයි.' }, date: '2026-03-06' }
-    ]
-  },
-  {
-    id: 'm3',
-    userName: 'Kaito S.',
-    location: { EN: 'Galle Fort', SI: 'ගාල්ල කොටුව' },
-    title: { EN: 'Cobblestone Dreams', SI: 'ගල් පවුරේ සිහිනය' },
-    story: { 
-      EN: 'Walking through the ramparts at midnight, the only sound was the crashing ocean and my own footsteps on history.', 
-      SI: 'මධ්‍යම රාත්‍රියේ කොටු පවුර දිගේ ඇවිද යන විට, ඇසුණු එකම ශබ්දය වූයේ සාගරයේ රළ පහර සහ ඉතිහාසය මත තැබූ මගේම පියවර හඬයි.' 
-    },
-    image: 'https://images.unsplash.com/photo-1654561773591-57b9413c45c0?auto=format&fit=crop&w=800&q=80',
-    likes: 194,
-    date: '2026-02-28',
-    rating: 4,
-    tags: ['heritage', 'coastal'],
-    comments: []
-  },
-  {
-    id: 'm4',
-    userName: 'Sarah J.',
-    location: { EN: 'Yala', SI: 'යාල' },
-    title: { EN: 'The Silent Stalker', SI: 'නිහඬ දඩයක්කාරයා' },
-    story: { 
-      EN: 'Total silence in the scrub forest. Suddenly, a tail flick. A leopard watching us from the shade of a Palu tree.', 
-      SI: 'වනය පුරාම තිබුණේ මහා නිහඬතාවයකි. හදිසියේම පලු ගසක සෙවන යට සිට අප දෙස බලා සිටින දිවියෙකු මම දුටුවෙමි.' 
-    },
-    image: 'https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80',
-    likes: 567,
-    date: '2026-02-15',
-    rating: 5,
-    tags: ['wildlife', 'raw'],
-    comments: []
-  }
-];
-
 const TOP_CONTRIBUTORS = [
   { name: 'Elena M.', points: 4520, rank: 1, avatar: 'https://ui-avatars.com/api/?name=Elena+M&background=E1306C&color=fff' },
   { name: 'Sarah J.', points: 3890, rank: 2, avatar: 'https://ui-avatars.com/api/?name=Sarah+J&background=0EA5E9&color=fff' },
@@ -138,7 +26,7 @@ const TOP_CONTRIBUTORS = [
 ];
 
 const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, setView }) => {
-  const [memories, setMemories] = useState<Memory[]>(INITIAL_MEMORIES);
+  const [memories, setMemories] = useState<Memory[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -166,6 +54,57 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
     }
   }, [chatMessages]);
 
+  useEffect(() => {
+    const q = query(collection(db, 'memories'), orderBy('createdAt', 'desc'));
+    const unsubscribe = onSnapshot(q, async (snapshot) => {
+      const fetchedMemories: Memory[] = [];
+      for (const document of snapshot.docs) {
+        const data = document.data();
+        
+        // Fetch comments for this memory
+        const commentsQ = query(collection(db, `memories/${document.id}/comments`), orderBy('createdAt', 'asc'));
+        const commentsSnapshot = await getDocs(commentsQ);
+        const comments: Comment[] = commentsSnapshot.docs.map(cDoc => {
+          const cData = cDoc.data();
+          return {
+            id: cDoc.id,
+            userName: cData.userName,
+            userPhoto: cData.userPhoto,
+            text: { EN: cData.textEN, SI: cData.textSI },
+            date: cData.createdAt?.toDate().toISOString().split('T')[0] || new Date().toISOString().split('T')[0]
+          };
+        });
+
+        fetchedMemories.push({
+          id: document.id,
+          userName: data.userName,
+          location: { EN: data.locationEN, SI: data.locationSI },
+          title: { EN: data.titleEN, SI: data.titleSI },
+          story: { EN: data.storyEN, SI: data.storySI },
+          image: data.image,
+          likes: data.likes || 0,
+          date: data.createdAt?.toDate().toISOString().split('T')[0] || new Date().toISOString().split('T')[0],
+          rating: data.rating || 5,
+          tags: data.tags || [],
+          comments: comments
+        });
+      }
+      setMemories(fetchedMemories);
+      
+      // Update active memory if it's currently open
+      if (activeMemory) {
+        const updatedActive = fetchedMemories.find(m => m.id === activeMemory.id);
+        if (updatedActive) {
+          setActiveMemory(updatedActive);
+        }
+      }
+    }, (error) => {
+      handleFirestoreError(error, OperationType.LIST, 'memories');
+    });
+
+    return () => unsubscribe();
+  }, [activeMemory?.id]);
+
   const filteredMemories = useMemo(() => {
     if (!searchQuery.trim()) return memories;
     return memories.filter(m => 
@@ -175,11 +114,13 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
     );
   }, [memories, searchQuery, language]);
 
-  const handleLike = (e: React.MouseEvent, memoryId: string) => {
+  const handleLike = async (e: React.MouseEvent, memoryId: string) => {
     e.stopPropagation();
     if (!user) { onLogin(); return; }
 
     const isLiked = likedMemories.has(memoryId);
+    
+    // Optimistic update for local state
     setLikedMemories(prev => {
       const next = new Set(prev);
       if (isLiked) next.delete(memoryId);
@@ -187,33 +128,45 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
       return next;
     });
 
-    setMemories(prev => prev.map(m => 
-      m.id === memoryId ? { ...m, likes: isLiked ? m.likes - 1 : m.likes + 1 } : m
-    ));
-    
-    if (activeMemory && activeMemory.id === memoryId) {
-      setActiveMemory(prev => prev ? { ...prev, likes: isLiked ? prev.likes - 1 : prev.likes + 1 } : null);
+    try {
+      const memoryRef = doc(db, 'memories', memoryId);
+      await updateDoc(memoryRef, {
+        likes: increment(isLiked ? -1 : 1)
+      });
+    } catch (error) {
+      // Revert optimistic update on failure
+      setLikedMemories(prev => {
+        const next = new Set(prev);
+        if (isLiked) next.add(memoryId);
+        else next.delete(memoryId);
+        return next;
+      });
+      handleFirestoreError(error, OperationType.UPDATE, `memories/${memoryId}`);
     }
   };
 
-  const handleAddComment = (memoryId: string) => {
-    if (!user) { onLogin(); return; }
+  const handleAddComment = async (memoryId: string) => {
+    if (!user || !user.uid) { onLogin(); return; }
     if (!commentInput.trim()) return;
 
-    const newComment: Comment = {
-      id: `c${Date.now()}`,
-      userName: user.name,
-      userPhoto: user.photo,
-      text: { EN: commentInput, SI: commentInput },
-      date: new Date().toISOString().split('T')[0]
-    };
+    const commentText = commentInput;
+    setCommentInput(''); // Clear input immediately for better UX
 
-    setMemories(prev => prev.map(m => 
-      m.id === memoryId ? { ...m, comments: [...m.comments, newComment] } : m
-    ));
-    setCommentInput('');
-    if (activeMemory && activeMemory.id === memoryId) {
-      setActiveMemory(prev => prev ? { ...prev, comments: [...prev.comments, newComment] } : null);
+    try {
+      const commentsRef = collection(db, `memories/${memoryId}/comments`);
+      await addDoc(commentsRef, {
+        memoryId: memoryId,
+        authorUid: user.uid,
+        userName: user.name,
+        userPhoto: user.photo,
+        textEN: commentText,
+        textSI: commentText, // Ideally translate this, but keeping it simple for now
+        createdAt: serverTimestamp()
+      });
+    } catch (error) {
+      console.error("Failed to add comment:", error);
+      handleFirestoreError(error, OperationType.CREATE, `memories/${memoryId}/comments`);
+      setCommentInput(commentText); // Restore input on failure
     }
   };
 
@@ -263,27 +216,31 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
     reader.readAsDataURL(file);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user) { onLogin(); return; }
+    if (!user || !user.uid) { onLogin(); return; }
     if (!newMemoryForm.image) { alert("Missing visual fragment."); return; }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      const memory: Memory = {
-        id: `m${Date.now()}`,
+    try {
+      const memoriesRef = collection(db, 'memories');
+      await addDoc(memoriesRef, {
+        authorUid: user.uid,
         userName: user.name,
-        location: { EN: newMemoryForm.location, SI: newMemoryForm.location },
-        title: { EN: newMemoryForm.title, SI: newMemoryForm.title },
-        story: { EN: newMemoryForm.story, SI: newMemoryForm.story },
+        userPhoto: user.photo || '',
+        locationEN: newMemoryForm.location,
+        locationSI: newMemoryForm.location,
+        titleEN: newMemoryForm.title,
+        titleSI: newMemoryForm.title,
+        storyEN: newMemoryForm.story,
+        storySI: newMemoryForm.story,
         image: newMemoryForm.image,
         likes: 0,
-        date: new Date().toISOString().split('T')[0],
         rating: newMemoryForm.rating,
         tags: ['community'],
-        comments: []
-      };
-      setMemories(prev => [memory, ...prev]);
+        createdAt: serverTimestamp()
+      });
+
       setIsSubmitting(false);
       setIsSuccess(true);
       setTimeout(() => {
@@ -291,7 +248,10 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
         setShowForm(false);
         setNewMemoryForm({ title: '', location: '', story: '', rating: 5, image: '' });
       }, 2000);
-    }, 1800);
+    } catch (error) {
+      setIsSubmitting(false);
+      handleFirestoreError(error, OperationType.CREATE, 'memories');
+    }
   };
 
   const memoriesHeroImage = "https://i.pinimg.com/736x/0a/51/50/0a51506962464dcfabe4ec6baa8efc84.jpg";
@@ -430,21 +390,18 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                              <input type="file" ref={fileInputRef} onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f); }} className="hidden" accept="image/*" />
                           </div>
                        </div>
-                       <button type="submit" disabled={isSubmitting} className="w-full py-8 bg-[#0a0a0a] text-white rounded-full font-black text-xs uppercase tracking-[0.5em] shadow-3xl hover:bg-[#0EA5E9] transition-all flex items-center justify-center gap-6 group/btn">
-                          {isSubmitting ? <Loader2 size={24} className="animate-spin" /> : <>Sync to Cloud <ArrowRight size={18} className="group-hover/btn:translate-x-2 transition-transform" /></>}
+                       <button type="submit" disabled={isSubmitting} className="w-full py-8 bg-[#0a0a0a] text-white rounded-full font-black text-xs uppercase tracking-[0.5em] shadow-3xl hover:bg-[#0EA5E9] transition-all flex items-center justify-center">
+                          {isSubmitting ? <Loader2 className="animate-spin" /> : (language === 'EN' ? 'TRANSMIT' : 'යොමු කරන්න')}
                        </button>
                     </div>
-                  </form>
-                </div>
+                 </form>
+               </div>
              </div>
-          </div>
+           </div>
         )}
 
-        {/* MAIN FEED & FACILITIES */}
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-12 lg:gap-20 items-start">
-           
-           {/* LEFT: PUBLIC FEED */}
-           <div className="xl:col-span-8 space-y-20">
+        {/* LEFT: PUBLIC FEED */}
+        <div className="xl:col-span-12 space-y-20">
               <div className="flex justify-between items-end border-b border-gray-100 pb-8">
                  <div className="space-y-2 text-left">
                     <p className="text-[10px] font-black text-[#0EA5E9] uppercase tracking-widest">Public_Experience_Manifest</p>
@@ -458,7 +415,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                  </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {filteredMemories.map((m, idx) => {
                    const isLiked = likedMemories.has(m.id);
                    return (
@@ -519,115 +476,8 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                          </div>
                       </div>
                     </div>
-                  );
+                   );
                 })}
-              </div>
-           </div>
-
-           {/* RIGHT: FACILITIES HUB */}
-           <div className="xl:col-span-4 sticky top-32 space-y-10 animate-in slide-in-from-right-8 duration-1000">
-              
-              {/* FACILITY 1: CHAT HUB */}
-              <div className="bg-[#0a0a0a] rounded-[4rem] p-10 border border-white/10 shadow-[0_60px_150px_rgba(0,0,0,0.4)] relative overflow-hidden flex flex-col h-[600px] group">
-                 <div className="absolute inset-0 pattern-overlay opacity-5 group-hover:opacity-10 transition-opacity" />
-                 
-                 <div 
-                   ref={chatScrollRef} 
-                   data-lenis-prevent
-                   className="relative z-10 flex-grow overflow-y-auto no-scrollbar space-y-6 pr-2 mb-8 text-left pt-6"
-                 >
-                    {chatMessages.map((msg) => (
-                      <div key={msg.id} className={`flex flex-col gap-2 ${msg.isSystem ? 'items-center py-4' : 'items-start'}`}>
-                         {msg.isSystem ? (
-                           <div className="px-6 py-1.5 bg-white/5 rounded-full border border-white/10">
-                              <p className="text-[8px] font-black text-white/30 uppercase tracking-[0.3em]">{msg.text[language]}</p>
-                           </div>
-                         ) : (
-                           <>
-                              <div className="flex items-center gap-3">
-                                 <span className="text-[9px] font-black text-[#E1306C] uppercase tracking-widest">{msg.user}</span>
-                                 <span className="text-[7px] font-bold text-white/10 uppercase">vNode</span>
-                              </div>
-                              <div className="bg-white/5 border border-white/5 p-4 rounded-2xl rounded-tl-none max-w-[90%] transition-colors hover:bg-white/10">
-                                 <p className="text-xs text-white/80 font-medium leading-relaxed">{msg.text[language]}</p>
-                              </div>
-                           </>
-                         )}
-                      </div>
-                    ))}
-                 </div>
-
-                 <form onSubmit={sendChatMessage} className="relative z-10 pt-6 border-t border-white/5">
-                    <div className="relative group/input">
-                       <input 
-                         type="text" 
-                         value={chatInput}
-                         onChange={(e) => setChatInput(e.target.value)}
-                         placeholder={language === 'EN' ? "Send signal..." : "පණිවිඩයක් එවන්න..."}
-                         className="w-full pl-6 pr-16 py-5 bg-white/5 border border-white/10 rounded-2xl text-white text-sm focus:outline-none focus:border-[#E1306C]/40 transition-all font-medium placeholder:text-white/10"
-                       />
-                       <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#E1306C] text-white rounded-xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 shadow-2xl">
-                          <Send size={18} />
-                       </button>
-                    </div>
-                 </form>
-              </div>
-
-              {/* FACILITY 2: TOP CONTRIBUTORS */}
-              <div className="bg-white p-10 rounded-[3.5rem] border border-gray-100 shadow-2xl space-y-10 group overflow-hidden relative">
-                 <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:rotate-12 transition-transform duration-700"><Trophy size={140} /></div>
-                 <div className="relative z-10 space-y-4 text-left">
-                    <div className="flex items-center gap-4 text-[#0EA5E9]">
-                       <Award size={24} />
-                       <span className="text-[10px] font-black uppercase tracking-[0.4em]">Elite_Contributors</span>
-                    </div>
-                    <h3 className="text-3xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Leaderboard.</h3>
-                 </div>
-
-                 <div className="relative z-10 space-y-6">
-                    {TOP_CONTRIBUTORS.map((contributor) => (
-                      <div key={contributor.rank} className="flex items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100 group/item hover:bg-white hover:shadow-xl transition-all">
-                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-xl overflow-hidden border border-gray-200">
-                               <img src={contributor.avatar} className="w-full h-full object-cover" alt="" />
-                            </div>
-                            <div className="text-left">
-                               <p className="text-sm font-bold text-[#0a0a0a] tracking-tight">{contributor.name}</p>
-                               <p className="text-[9px] font-black text-gray-400 uppercase tracking-widest">{contributor.points} Essence</p>
-                            </div>
-                         </div>
-                         <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
-                            <span className="text-[10px] font-black text-[#E1306C]">#{contributor.rank}</span>
-                         </div>
-                      </div>
-                    ))}
-                 </div>
-
-                 <button className="w-full py-6 bg-[#0a0a0a] text-white rounded-2xl font-black text-[10px] uppercase tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-[#E1306C] transition-all shadow-sm">
-                    {language === 'EN' ? 'REDEEM REWARDS' : 'ත්‍යාග ලබාගන්න'} <Gem size={14} />
-                 </button>
-              </div>
-
-              {/* FACILITY 3: STATS DASHBOARD */}
-              <div className="grid grid-cols-2 gap-6">
-                 <div className="bg-white p-8 rounded-[3rem] border border-gray-100 shadow-xl space-y-4 text-left">
-                    <div className="w-10 h-10 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-500 shadow-inner">
-                       <MapPin size={20} />
-                    </div>
-                    <div>
-                       <p className="text-3xl font-heritage font-black text-[#0a0a0a]">1.4K</p>
-                       <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest">Active_Nodes</p>
-                    </div>
-                 </div>
-                 <div className="bg-white p-8 rounded-[3rem] border border-gray-100 shadow-xl space-y-4 text-left">
-                    <div className="w-10 h-10 rounded-2xl bg-pink-50 flex items-center justify-center text-[#E1306C] shadow-inner">
-                       <Users size={20} />
-                    </div>
-                    <div>
-                       <p className="text-3xl font-heritage font-black text-[#0a0a0a]">820</p>
-                       <p className="text-[8px] font-black text-gray-400 uppercase tracking-widest">Online_Voyagers</p>
-                    </div>
-                 </div>
               </div>
            </div>
         </div>
@@ -650,123 +500,6 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
               </p>
            </div>
         </div>
-      </div>
-
-      {/* MEMORY DEEP DIVE MODAL */}
-      {activeMemory && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={() => setActiveMemory(null)} />
-          <div className="relative bg-white rounded-[4rem] w-full max-w-6xl overflow-hidden shadow-[0_60px_150px_rgba(0,0,0,1)] flex flex-col lg:flex-row h-[85vh] animate-in zoom-in-95 duration-500 border border-white/10">
-             
-             {/* Left: Visual & Narrative */}
-             <div className="w-full lg:w-2/3 h-1/2 lg:h-full relative overflow-hidden bg-black group">
-                <img src={activeMemory.image} className="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[10000ms] group-hover:scale-110" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                
-                <div className="absolute top-10 left-10 space-y-4">
-                   <button onClick={() => setActiveMemory(null)} className="pointer-events-auto w-14 h-14 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all shadow-2xl active:scale-90">
-                      <ArrowLeft size={24} />
-                   </button>
-                </div>
-
-                <div className="absolute bottom-12 left-12 right-12 space-y-8 text-left">
-                   <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-[#0EA5E9] font-black text-[10px] uppercase tracking-[0.4em] bg-white/5 backdrop-blur-xl w-fit px-5 py-1.5 rounded-full border border-white/10">
-                        <MapPin size={14} /> {activeMemory.location[language]}
-                      </div>
-                      <h2 className="text-4xl md:text-6xl font-heritage font-bold text-white uppercase tracking-tighter drop-shadow-2xl">{activeMemory.title[language]}</h2>
-                   </div>
-                   <div className="prose prose-invert max-w-none">
-                      <p className="text-xl md:text-2xl text-white/90 font-light italic leading-relaxed border-l-4 border-[#E1306C]/40 pl-8 max-w-3xl">
-                         "{activeMemory.story[language]}"
-                      </p>
-                   </div>
-                   <div className="flex items-center gap-8 pt-4">
-                      <div className="flex items-center gap-4 text-white/30 text-[10px] font-black uppercase tracking-[0.6em]">
-                         <History size={16} /> Committed {activeMemory.date}
-                      </div>
-                      <button 
-                        onClick={(e) => handleLike(e, activeMemory.id)}
-                        className={`flex items-center gap-3 pointer-events-auto transition-all ${likedMemories.has(activeMemory.id) ? 'text-[#E1306C]' : 'text-white/60 hover:text-white'}`}
-                      >
-                         <Heart size={24} className={likedMemories.has(activeMemory.id) ? 'fill-current' : ''} />
-                         <span className="text-lg font-black">{activeMemory.likes}</span>
-                      </button>
-                   </div>
-                </div>
-             </div>
-
-             {/* Right: Interaction Hub (Comments) */}
-             <div className="w-full lg:w-1/3 bg-white flex flex-col h-1/2 lg:h-full">
-                <div className="p-10 md:p-12 border-b border-gray-50 flex items-center justify-between shrink-0">
-                   <div className="space-y-1 text-left">
-                      <h4 className="text-xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tight">Interaction Hub</h4>
-                      <div className="flex items-center gap-2">
-                         <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                         <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest">Active Discussion</span>
-                      </div>
-                   </div>
-                   <div className="flex items-center gap-4">
-                      <button className="text-gray-300 hover:text-[#0a0a0a] transition-colors"><MoreVertical size={20}/></button>
-                   </div>
-                </div>
-
-                {/* Comments Stream */}
-                <div className="flex-grow overflow-y-auto no-scrollbar p-10 md:p-12 space-y-10">
-                   {activeMemory.comments.length > 0 ? (
-                     activeMemory.comments.map((comment) => (
-                       <div key={comment.id} className="group flex items-start gap-6 animate-in slide-in-from-bottom-2 duration-500">
-                          <div className="w-12 h-12 rounded-2xl bg-gray-100 border border-gray-100 overflow-hidden shrink-0 shadow-sm transition-transform group-hover:scale-110">
-                             <img src={comment.userPhoto || `https://ui-avatars.com/api/?name=${comment.userName}&background=E1306C&color=fff`} className="w-full h-full object-cover" alt="" />
-                          </div>
-                          <div className="space-y-2 flex-grow text-left">
-                             <div className="flex justify-between items-center">
-                                <span className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-widest">{comment.userName}</span>
-                                <span className="text-[8px] font-bold text-gray-300 uppercase">{comment.date}</span>
-                             </div>
-                             <p className="text-sm text-gray-500 font-medium leading-relaxed italic group-hover:text-gray-900 transition-colors">
-                                "{comment.text[language]}"
-                             </p>
-                             <div className="flex items-center gap-4 pt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button className="text-[8px] font-black uppercase text-[#0EA5E9] hover:underline">Reply</button>
-                                <button className="text-[8px] font-black uppercase text-gray-400 hover:text-[#E1306C] transition-colors">Like</button>
-                             </div>
-                          </div>
-                       </div>
-                     ))
-                   ) : (
-                     <div className="h-full flex flex-col items-center justify-center text-center space-y-6 opacity-30">
-                        <MessageSquare size={48} className="animate-pulse" />
-                        <p className="text-xs font-bold uppercase tracking-widest leading-relaxed">No echoes detected.<br/>Start the conversation.</p>
-                     </div>
-                   )}
-                </div>
-
-                {/* Comment Input Box */}
-                <div className="p-10 md:p-12 bg-gray-50/50 border-t border-gray-100 shrink-0">
-                   <div className="flex gap-4">
-                      <div className="flex-grow relative">
-                         <input 
-                           type="text" 
-                           value={commentInput}
-                           onChange={(e) => setCommentInput(e.target.value)}
-                           onKeyDown={(e) => e.key === 'Enter' && handleAddComment(activeMemory.id)}
-                           placeholder={language === 'EN' ? "Commit your echo..." : "ඔබේ අදහස ලියන්න..."}
-                           className="w-full px-6 py-5 bg-white border border-gray-200 rounded-2xl text-sm focus:outline-none focus:border-[#0EA5E9] transition-all font-medium shadow-sm"
-                         />
-                         <button 
-                           onClick={() => handleAddComment(activeMemory.id)}
-                           className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0a0a0a] text-white rounded-xl flex items-center justify-center hover:bg-[#0EA5E9] transition-all active:scale-90"
-                         >
-                            <ArrowRight size={18} />
-                         </button>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-        </div>
-      )}
 
       {/* FOOTER STATS */}
       <div className="max-w-7xl mx-auto w-full pt-24 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-12 opacity-30 mt-auto mb-20">

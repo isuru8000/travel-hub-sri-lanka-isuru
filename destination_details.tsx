@@ -126,8 +126,12 @@ const BASE_DESTINATIONS: Destination[] = [
     category: "ancient",
     image: "https://i.pinimg.com/736x/a6/ae/4f/a6ae4fd861554769766daae2f0e621d2.jpg",
     gallery: ["https://i.pinimg.com/736x/a6/ae/4f/a6ae4fd861554769766daae2f0e621d2.jpg"],
-    history: {
+    detailedAbout: {
       EN: "🏛️ THUPARAMAYA — THE FIRST STUPA OF SRI LANKA\nAnuradhapura, Sri Lanka — Complete Verified Guide\n\n✅ HONEST NOTE BEFORE READING\nThroughout this guide, facts are clearly labelled:\n✅ CONFIRMED — physically verifiable or accepted by mainstream archaeology and history\n⭐ RELIGIOUS TRADITION — sincerely held belief, recorded in ancient chronicles, but not independently verifiable by science\n\n📍 LOCATION\nCity: Anuradhapura, North Central Province, Sri Lanka\nExact position: Inside the Mahamewuna Garden (Mahamevnawa) — the same sacred park that contains the Jaya Sri Maha Bodhi tree — in the northern section of the ancient sacred city\nDistance from Colombo: approximately 205 km north — 3.5 to 4.5 hours by road\nDistance from Kandy: approximately 130 km — about 3 hours by road\nDistance from Sigiriya: approximately 90 km — about 1.5 to 2 hours by road\nDistance from Ruwanwelisaya: approximately 500 meters walking distance\nDistance from Jaya Sri Maha Bodhi: approximately 700 meters walking distance\nUNESCO Status: Part of the Sacred City of Anuradhapura — inscribed 1982\n\n🏛️ WHAT IS THUPARAMAYA\n✅ CONFIRMED — Thuparamaya is the oldest Buddhist stupa in Sri Lanka. It is a white bell-shaped dagoba built in the 3rd century BC, making it the first stupa constructed on the island following the introduction of Buddhism. It stands in the Mahamewuna Garden, surrounded by four concentric rings of ancient stone columns — the surviving remnants of a vatadage structure once built over the stupa.\nThe name Thuparamaya is derived from two Sinhala and Pali words — Thupa meaning stupa, and Aramaya meaning a monastic complex or dwelling for monks. Together the name means the monastic complex containing the stupa — reflecting the fact that this was not merely a monument but the living heart of an active monastic community.\n✅ CONFIRMED — It is one of the Atamasthana — the eight most sacred places of Buddhist pilgrimage in Anuradhapura that every devout Sri Lankan Buddhist seeks to visit.\n\n📜 FULL HISTORY — CONFIRMED FACTS\nThe Introduction of Buddhism to Sri Lanka — 247 BC\n✅ CONFIRMED — Buddhism was formally introduced to Sri Lanka during the reign of King Devanampiyatissa of Anuradhapura (reigned approximately 307–267 BC). The missionary who brought the Dhamma was Arahat Mahinda Thero — a senior Buddhist monk who according to both the Mahavamsa and the Indian text Samantapasadika was the son of Emperor Ashoka of the Maurya Dynasty in India.\nThe first meeting between Mahinda Thero and King Devanampiyatissa took place at Mihintale — a rocky hill 12 km east of Anuradhapura — during a deer hunt. The king was so profoundly moved by the encounter and the teaching of the Dhamma that he embraced Buddhism immediately and dedicated the remainder of his reign to establishing it as the religion of the island.\nThe Relic — The Right Collarbone of the Buddha\n⭐ RELIGIOUS TRADITION — According to the Mahavamsa, Arahat Mahinda Thero brought to Sri Lanka the right collarbone relic of the Gautama Buddha. This relic had been preserved in India since the Buddha's cremation and was entrusted to Mahinda for transmission to Sri Lanka. The ancient chronicle records that the relic arrived on the island and was presented to King Devanampiyatissa.\nSome ancient texts also record a secondary theory — that the Thuparamaya may have originally also housed the Tooth Relic of the Buddha before it was moved elsewhere. This alternative theory is recorded in some chronicles but is a minority view and cannot be confirmed.\n✅ CONFIRMED — The relic claim is unverifiable by modern science as the stupa has never been opened. The relic — whatever it is — remains sealed within the structure.\nConstruction — 3rd Century BC\n✅ CONFIRMED — Thuparamaya was built in the 3rd century BC during the reign of King Devanampiyatissa, at the request of Arahat Mahinda Thero. This dating is accepted by mainstream historians and is broadly consistent with archaeological findings at the site. It is the earliest stupa in Sri Lanka for which there is documented historical evidence.\nThe Method of Construction — Confirmed by Archaeology\n✅ CONFIRMED — The original stupa was built of small sun-dried bricks. Archaeological analysis of the core structure has confirmed the use of ancient brick construction methods characteristic of the Anuradhapura period. The foundation was prepared on earth compacted and sealed in the manner typical of early Sinhalese stupa construction.\nThe Vatadage is Added — 1st–2nd Century AD\n✅ CONFIRMED — The circular vatadage structure surrounding the stupa was not part of the original construction. It was added approximately 400 years later, during the reign of King Vasabha (reigned 67–111 AD). Vasabha built the circular roofed vatadage around the already existing stupa to provide it with protection and a formal processional space for devotees.\nOriginally 176 stone columns stood in four concentric circles around the stupa, supporting a wooden roof. The inner ring of columns was the tallest. The outer rings were progressively shorter, creating a sloped roof profile that channelled rainwater away from the stupa. The column capitals were carved in lotus form — characteristic of Anuradhapura period craftsmanship.\n✅ CONFIRMED — Over 30 of the original 176 stone columns still stand today, several retaining their original polished surfaces and lotus-shaped capitals. Four concentric rings of column bases are visible.\nDestruction and Restorations — Multiple Historical Periods\n✅ CONFIRMED — The Thuparamaya was damaged and destroyed multiple times over its history. Ancient chronicles record that by the reign of King Aggabodhi II (reigned 604–614 AD) the site was in ruins and was fully restored by royal decree. This is one of the earliest documented restorations.\nFurther restorations were carried out by successive kings across the Anuradhapura and Polonnaruwa periods whenever resources and political stability allowed.\nThe 1842 Restoration\n✅ CONFIRMED — The current dome of the Thuparamaya as it stands today dates from a major reconstruction carried out in 1842, during the early British colonial period. This restoration was initiated by local Buddhist community leaders and supported by donations. The current bell shape and white plastered exterior are the product of this 1842 rebuilding. The core of the stupa beneath contains the original ancient brick structure.\nAn Ancient Hospital at the Site\n✅ CONFIRMED — Archaeological excavations at Thuparamaya revealed the ruins of an ancient hospital that existed on the grounds of the monastic complex. Artefacts recovered include medical equipment, surgical instruments of stone and metal, and the remains of a drainage and latrine system. This confirms that the Thuparamaya complex was not merely a place of worship but a functioning monastery that provided medical care — consistent with the Buddhist tradition of compassionate service.\n\n🏗️ ARCHITECTURE — FULL VERIFIED DETAILS\nThe Shape — Dhanyakara\n✅ CONFIRMED — The Thuparamaya stupa was built in the Dhanyakara shape — a classic bell shape resembling an inverted rice heap. This is one of the five canonical stupa shapes of Sri Lankan Buddhist architecture. The smooth curved profile rising from a cylindrical base to a pointed spire is the defining visual characteristic of the Anuradhapura school of stupa design. This shape directly influenced all the great stupas built in Anuradhapura in subsequent centuries — Ruwanwelisaya, Abhayagiri, Jetavanaramaya, and Mirisawetiya all drew on the foundational model established by Thuparamaya.\nCurrent Measurements — All Confirmed\nHeight of the entire structure including spire: approximately 50 meters (164 feet)\nDiameter of the dome at the base: 18 meters (59 feet)\nTotal diameter of the full complex including terrace: approximately 50 meters (164 feet)\nHeight of the plinth on which the dome sits: 3.45 meters (11 feet 4 inches)\nThe Stone Columns — Vatadage Remains\n✅ CONFIRMED — Four concentric rings of stone column bases are visible around the stupa, marking the positions of the original 176 columns that formed the vatadage structure. More than 30 columns still stand upright to varying heights, some preserving their polished surfaces and lotus capitals. These columns are among the most photographed elements of the site — their arrangement around the stupa creates an extraordinary visual composition of stone, sky, and white dome.\nThe Wooden Roof — No Longer Present\n✅ CONFIRMED — The wooden roof that once covered the entire vatadage structure no longer exists. It perished centuries ago. The stone columns are all that remain of what was once a complete roofed circular shrine. The Anuradhapura Museum contains a scale model showing how the original roofed vatadage would have appeared — highly recommended to visit before or after seeing the stupa.\nThe Surrounding Terrace\n✅ CONFIRMED — The stupa stands on a raised stone terrace paved with granite. This terrace is the circumambulation platform used by pilgrims walking clockwise around the stupa. The terrace is maintained in excellent condition and is regularly swept clean by temple attendants.\nThe Symbolic Architecture\nEvery element of the stupa encodes Buddhist philosophical meaning — as with all Sri Lankan Buddhist stupas of this tradition:\nThe dome represents the universe and the perfection of the Buddhist path.\nThe square harmika above the dome represents the Four Noble Truths.\nThe concentric rings rising from the harmika represent the Noble Eightfold Path.\nThe pinnacle crystal represents Nirvana — the ultimate goal of Buddhist practice.\n\n🙏 RELIGIOUS SIGNIFICANCE — CONFIRMED AND TRADITION CLEARLY SEPARATED\nAs the First Stupa — Confirmed Historical Significance\n✅ CONFIRMED — The construction of Thuparamaya marked the very moment Buddhism became established as a formal state religion in Sri Lanka. Before Thuparamaya, there was no Buddhist stupa anywhere on the island. Its construction was the first physical expression of the new Buddhist civilisation that would go on to produce Ruwanwelisaya, the Jaya Sri Maha Bodhi shrine, Abhayagiri, Jetavanaramaya, and eventually the Temple of the Tooth in Kandy — the entire tradition of Buddhist sacred architecture in Sri Lanka begins here.\nAtamasthana — One of Eight Sacred Sites\n✅ CONFIRMED — Thuparamaya is one of the eight Atamasthana — the eight most sacred Buddhist sites in Anuradhapura that form the essential pilgrimage circuit. Every devout Sri Lankan Buddhist seeks to visit all eight on a single pilgrimage day if possible.\nDaily Worship\n✅ CONFIRMED — Thuparamaya is a continuously active place of worship. Daily puja rituals are conducted by the resident monks throughout the day. Pilgrims offer white lotus flowers, light clay oil lamps, burn incense, and perform clockwise circumambulation of the stupa every day of the year.\n⭐ RELIGIOUS TRADITION — The relic of the Buddha's right collarbone enshrined within the stupa is venerated as a direct physical connection to the historical Gautama Buddha himself. This is the central belief that gives Thuparamaya its supreme importance for Buddhist pilgrims. The relic cannot be verified or viewed — it remains permanently sealed within the stupa.\nPoya Full Moon Days\n✅ CONFIRMED — On every monthly full moon Poya day, significantly larger numbers of white-robed pilgrims attend Thuparamaya as part of the full Anuradhapura pilgrimage circuit. The most sacred Poya days at the site are Poson Poya (May–June) and Duruthu Poya (January).\n\n🎟️ ENTRY FEES AND OPENING HOURS\nEntry Fee:\nThuparamaya is covered by the single Anuradhapura Sacred City Archaeological Park ticket — one ticket gives access to all major sites within the park.\nForeign adults: approximately USD $25 for the full Sacred City park ticket\nSri Lankan nationals: nominal local rate or free\nOpening Hours: The stupa complex is open daily from 6:00 AM to 8:00 PM. The surrounding terrace can technically be visited at any time of day or night as the site is not fully gated, but official opening hours apply for the inner complex.\nBest Time to Visit:\nEarly morning between 6:00 and 8:00 AM — the white dome in the golden morning light with the stone columns casting long shadows is extraordinary.\nEvening from 5:00 PM onward — when oil lamps are lit around the terrace and the stupa is beautifully illuminated.\n\n🗺️ NEARBY ATTRACTIONS WITHIN WALKING DISTANCE\nJaya Sri Maha Bodhi — approximately 700 meters. The sacred Bodhi tree, the oldest documented human-planted tree on earth. Together with Thuparamaya it forms the most historically significant pair of sites in the entire sacred city.\nRuwanwelisaya — approximately 500 meters. The great white stupa of King Dutugemunu, the largest and most venerated stupa in Anuradhapura. These two stupas — the first ever built in Sri Lanka and the greatest ever built in Sri Lanka — stand less than 10 minutes walk apart.\nLovamahapaya — The Brazen Palace — approximately 300 meters. The ruins of the nine-storey palace of 1,600 stone columns, built by King Dutugemunu as a monastic hall adjacent to Ruwanwelisaya. Its grid of ancient stone columns spread across an open field is one of the most haunting archaeological sights in Anuradhapura.\nPadalanchana Cetiya — approximately 50 meters from Thuparamaya. A small stupa built by King Lajjitissa (119–109 BC) according to the Mahavamsa to enshrine a footprint of the Buddha. One of the least visited but most historically significant small monuments in the entire sacred city.\nSamadhi Buddha Statue — approximately 800 meters. One of the finest ancient Buddha statues in Sri Lanka — a seated meditation figure carved in the Anuradhapura style of exceptional quality, located within the Mahamewuna Gardens near the Bodhi tree precinct.\nAbhayagiri Dagoba — approximately 1 km north. One of the largest ancient stupas in the world, with an associated museum displaying some of the finest Anuradhapura period sculptures ever found.\n\n🚌 GETTING THERE\nFrom Colombo: By train from Colombo Fort Station on the Northern Railway Line — approximately 4 to 5 hours. By express bus — approximately 4 to 5 hours. By car — approximately 205 km, 3.5 to 4.5 hours via the A9 highway.\nFrom Kandy: Approximately 130 km, about 3 hours by car or bus via Dambulla.\nFrom Sigiriya: Approximately 90 km, about 1.5 to 2 hours by car — the most natural pairing.\nFrom Dambulla: Approximately 65 km, about 1 hour by car.\nWithin Anuradhapura: Thuparamaya is approximately 25 minutes walk from Anuradhapura Railway Station. Tuk-tuks are available from the station. A bicycle is the ideal way to explore all major sites of the sacred city — available for rent near the station for approximately 300 to 500 LKR per day.\n\n👔 DRESS CODE\nWhite clothing is strongly preferred and widely worn by pilgrims. Shoulders and knees must be fully covered. Sarongs are available from vendors near the entrance. All footwear must be removed before entering the sacred terrace around the stupa. The granite paving can be hot during midday — early morning or evening visits avoid this discomfort.\n\n💡 ESSENTIAL TIPS — PRACTICAL ONLY\nVisit in the early morning. The white bell shape of the stupa catching the first light of the day, surrounded by the ancient stone columns, is one of the most beautiful sights in all of Anuradhapura.\nVisit the Anuradhapura Museum first. The museum contains a detailed scale model of the Thuparamaya vatadage as it originally appeared — with the wooden roof intact and all 176 columns standing. Seeing this model before the site itself transforms the experience.\nWalk the full circumambulation. Walking clockwise around the stupa on the granite terrace, observing the stone columns from all sides, takes less than 10 minutes but is the most direct way to appreciate the scale and grace of the structure.\nCombine with Ruwanwelisaya and the Jaya Sri Maha Bodhi on the same morning. The three sites form the absolute sacred heart of Anuradhapura. All are within 700 meters of each other. A dedicated morning covers all three comfortably on foot or by bicycle.\nBuy lotus flowers at the entrance. Fresh white lotus blossoms sold by vendors near the entrance are the traditional offering. Placing them at the base of the stupa as you circumambulate connects you directly to a devotional tradition that has continued without interruption for over 2,300 years.\nDo not climb onto the stupa. The structure is sacred and fragile. Climbing is strictly forbidden and considered deeply disrespectful.\nObserve silence near the stupa during puja rituals. When monks are chanting and pilgrims are in prayer, quiet respectful observation is expected of all visitors.\nStay at least a full day in Anuradhapura. The sacred city contains Thuparamaya, Ruwanwelisaya, the Bodhi tree, Abhayagiri, Jetavanaramaya, Lovamahapaya, the Twin Ponds, Isurumuniya, and many more extraordinary monuments. Two full days allows genuine exploration without rushing.",
+      SI: "බුදුදහම හඳුන්වා දීමෙන් පසු ශ්‍රී ලංකාවේ ඉදිකරන ලද ප්‍රථම ස්තූපයයි."
+    },
+    history: {
+      EN: "Thuparamaya is the oldest Buddhist stupa in Sri Lanka, built in the 3rd century BC by King Devanampiyatissa. It is a sacred pilgrimage site and one of the Atamasthana.",
       SI: "බුදුදහම හඳුන්වා දීමෙන් පසු ශ්‍රී ලංකාවේ ඉදිකරන ලද ප්‍රථම ස්තූපයයි."
     },
     shortStory: {
@@ -198,6 +202,91 @@ const BASE_DESTINATIONS: Destination[] = [
     category: "ancient",
     image: "https://i.pinimg.com/1200x/bd/35/c6/bd35c69b7b3ed5e31da0edc4e374b028.jpg",
     gallery: ["https://i.pinimg.com/1200x/bd/35/c6/bd35c69b7b3ed5e31da0edc4e374b028.jpg"],
+    detailedAbout: {
+      EN: `🏛️ GAL VIHARA — POLONNARUWA
+The Pinnacle of Ancient Sinhalese Rock Carving — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by archaeology, mainstream history, inscriptions, UNESCO, and government records
+⭐ RELIGIOUS TRADITION — sincerely held belief recorded in ancient chronicles, not independently verifiable by science
+
+📍 LOCATION
+District: Polonnaruwa District, North Central Province, Sri Lanka
+Position: Located in the northern part of the ancient city of Polonnaruwa, a short distance from the Kiri Vehera and Lankatilaka image house.
+Distance from Colombo: approximately 215 km northeast — 4 to 5 hours by road
+Distance from Sigiriya: approximately 70 km — about 1.5 hours by road
+Distance from Anuradhapura: approximately 90 km — about 2 hours by road
+UNESCO Status: Part of the Ancient City of Polonnaruwa — inscribed 1982
+
+🏛️ WHAT IS GAL VIHARA
+✅ CONFIRMED — The Gal Vihara (originally named Uttararama, meaning the "Northern Monastery") is a rock temple of the Buddha situated in the ancient city of Polonnaruwa. It is widely considered the absolute pinnacle of ancient Sinhalese rock carving and sculpture.
+✅ CONFIRMED — The site consists of four colossal Buddha statues carved directly into the face of a single, massive granite rock outcropping. The four statues depict the Buddha in different postures: seated (two statues), standing, and reclining.
+
+📜 FULL HISTORY — CONFIRMED FACTS
+Period of Construction — 12th Century AD
+✅ CONFIRMED — The Gal Vihara was commissioned in the 12th century AD by King Parakramabahu I (reigned 1153–1186 AD), one of the greatest monarchs of the Polonnaruwa Kingdom. The ancient chronicle Culavamsa explicitly records that Parakramabahu I constructed the Uttararama (the original name of the site) and commissioned the carving of the statues.
+The Polonnaruwa Katikavata (Code of Conduct)
+✅ CONFIRMED — Carved directly into the rock face between the seated and standing Buddha statues is a massive stone inscription known as the Polonnaruwa Katikavata. This inscription, also commissioned by King Parakramabahu I, records a strict code of conduct and disciplinary rules for the Buddhist monastic order. It was created after the king successfully united the previously divided Buddhist sects (Mahavihara, Abhayagiri, and Jetavana) into a single unified Sangha.
+Abandonment and Rediscovery
+✅ CONFIRMED — Like the rest of Polonnaruwa, the Gal Vihara was abandoned in the 13th century following the invasion of Kalinga Magha and the collapse of the kingdom. The site was swallowed by the jungle and remained hidden for centuries. It was rediscovered in the 19th century during British colonial rule. The first major archaeological surveys and restorations were conducted by H.C.P. Bell in the early 20th century.
+
+🏗️ THE FOUR STATUES — FULL VERIFIED DETAILS
+The statues are carved from a single, long granite rock face. From left to right (south to north), the statues are:
+
+1. The Seated Buddha (Vidyhadhara Guha)
+✅ CONFIRMED — The first statue on the left is a large seated Buddha in the Samadhi (meditation) mudra. It sits on a carved lotus pedestal decorated with lions and thunderbolts (vajra). Behind the Buddha's head is a beautifully carved halo, and the background features intricate carvings of small shrines and celestial beings (Brahma and Vishnu).
+
+2. The Cave Buddha (Vidyhadhara Guha)
+✅ CONFIRMED — Next to the large seated Buddha is a smaller seated Buddha, also in the Samadhi mudra, located inside an artificial cave excavated directly into the rock. The cave walls were originally painted with frescoes, traces of which can still be seen today. The statue is flanked by two deities holding fly whisks (chauris).
+
+3. The Standing Buddha
+✅ CONFIRMED — This is perhaps the most unique and debated statue at the site. It is a 7-meter (23-foot) tall standing figure with its arms crossed over its chest (the Para Dukkhadukkhitha mudra, representing sorrow for the suffering of others).
+⭐ RELIGIOUS TRADITION / HISTORICAL DEBATE — For many years, it was widely believed that this statue depicted Ananda, the Buddha's closest disciple, mourning the Buddha's passing (since it stands next to the reclining Buddha). However, modern archaeologists and art historians generally agree that it is a statue of the Buddha himself, given the presence of the lotus pedestal and the ushnisha (the cranial bump signifying enlightenment), which are reserved only for the Buddha.
+
+4. The Reclining Buddha
+✅ CONFIRMED — The final and largest statue is a massive reclining Buddha, measuring 14 meters (46 feet) in length. It depicts the Buddha's Parinirvana (passing away into final nirvana). The statue is carved with extraordinary realism and sensitivity. The slight depression in the pillow under the head, and the slight withdrawal of the upper foot (indicating that the figure is deceased, not merely sleeping), are masterclasses in subtle sculptural detail.
+
+🎨 ARTISTIC SIGNIFICANCE
+✅ CONFIRMED — The Gal Vihara statues represent a departure from the earlier Anuradhapura style. The robes of the Gal Vihara Buddhas are carved with distinct, parallel, shallow ridges, unlike the smooth, clinging robes of the Anuradhapura period. The facial expressions are deeply serene, and the proportions are monumental yet perfectly balanced. They are universally recognized as masterpieces of South Asian art.
+
+🎟️ ENTRY FEES AND OPENING HOURS
+Entry Fee: Included in the main Polonnaruwa Archaeological Park ticket.
+Foreign adults: approximately $25 USD
+Opening Hours: Daily from 7:30 AM to 6:00 PM.
+
+💡 ESSENTIAL TIPS
+Visit early morning or late afternoon: The granite rock reflects intense heat during the middle of the day. The lighting for photography is also much better in the early morning or late afternoon.
+Remove footwear: You must remove your shoes and hats before entering the sandy area immediately in front of the statues. The sand can get very hot, so wearing socks is highly recommended.
+Respectful Photography: You are allowed to take photographs, but it is strictly forbidden to pose with your back turned towards the Buddha statues. This is considered deeply disrespectful in Sri Lanka.
+Observe the details: Take time to notice the subtle details, such as the depression in the pillow of the reclining Buddha and the intricate carvings behind the large seated Buddha.`,
+      SI: `🏛️ ගල් විහාරය — පොළොන්නරුව
+පැරණි සිංහල ශිලා කැටයම් කලාවේ අග්‍රගණ්‍ය නිර්මාණය — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
+
+✅ තහවුරු කළ කරුණු — පුරාවිද්‍යාව, ඉතිහාසය, සෙල්ලිපි සහ යුනෙස්කෝ වාර්තා මගින් තහවුරු කර ඇත.
+
+📍 පිහිටීම
+දිස්ත්‍රික්කය: පොළොන්නරුව දිස්ත්‍රික්කය, උතුරු මැද පළාත
+පිහිටීම: පොළොන්නරුව පැරණි නගරයේ උතුරු දෙසින්, කිරි වෙහෙර සහ ලංකාතිලක පිළිම ගෙයට ආසන්නව පිහිටා ඇත.
+
+🏛️ ගල් විහාරය යනු කුමක්ද?
+✅ තහවුරු කළ කරුණු — ගල් විහාරය (මුල් නම: උත්තරාරාමය) යනු පොළොන්නරුවේ පිහිටි බෞද්ධ ශිලා විහාරයකි. මෙය පැරණි සිංහල ශිලා කැටයම් කලාවේ ඉහළම ස්ථානය ලෙස සැලකේ.
+✅ තහවුරු කළ කරුණු — මෙහි තනි කළු ගලක නෙළන ලද දැවැන්ත බුදු පිළිම හතරක් ඇත: හිඳි පිළිම දෙකක්, හිටි පිළිමයක් සහ සැතපෙන පිළිමයක්.
+
+📜 ඉතිහාසය
+✅ තහවුරු කළ කරුණු — ගල් විහාරය 12 වන සියවසේදී මහා පරාක්‍රමබාහු රජු විසින් (ක්‍රි.ව. 1153–1186) ඉදිකරන ලදී. චූලවංශයට අනුව රජු විසින් මෙම උත්තරාරාමය කරවා පිළිම නෙළීමට උපදෙස් දී ඇත.
+පොළොන්නරු කතිකාවත: හිඳි සහ හිටි පිළිම අතර ගලෙහි කොටා ඇති විශාල සෙල්ලිපිය පොළොන්නරු කතිකාවත ලෙස හැඳින්වේ. පරාක්‍රමබාහු රජු විසින් භික්ෂු ශාසනය එක්සත් කිරීමෙන් පසු භික්ෂූන් වහන්සේලා සඳහා පනවන ලද විනය නීති මෙහි ඇතුළත් වේ.
+
+🏗️ පිළිම හතර
+1. විශාල හිඳි පිළිමය: සමාධි මුද්‍රාවෙන් වැඩ සිටින මෙම පිළිමය පිටුපස අලංකාර තොරණක් සහ දේව රූප කැටයම් කර ඇත.
+2. විද්‍යාධර ගුහාව (කුඩා හිඳි පිළිමය): ගල හාරා සාදන ලද කුඩා ගුහාවක් තුළ මෙම පිළිමය පිහිටා ඇත. ගුහාවේ බිත්තිවල පැරණි සිතුවම් වල ශේෂයන් තවමත් දැකගත හැක.
+3. හිටි පිළිමය: මීටර් 7ක් උසැති මෙම පිළිමය පරදුක්ඛදුක්ඛිත මුද්‍රාවෙන් (අනුන්ගේ දුකේදී කම්පා වන බව) යුක්තය. මෙය ආනන්ද තෙරුන්ගේ පිළිමයක් බවට අතීතයේ විශ්වාස කළද, වර්තමාන පුරාවිද්‍යාඥයින් මෙය බුදුරජාණන් වහන්සේගේම පිළිමයක් බව තහවුරු කර ඇත.
+4. සැතපෙන පිළිමය: මීටර් 14ක් දිගැති මෙම පිළිමයෙන් බුදුරජාණන් වහන්සේගේ පරිනිර්වාණය නිරූපණය වේ. කොට්ටයේ ඇති අවපාතය සහ පාදවල පිහිටීම වැනි සියුම් තොරතුරු ඉතා තාත්විකව නෙළා ඇත.
+
+💡 වැදගත් උපදෙස්
+* උදෑසන හෝ සවස් කාලයේ පැමිණීම වඩාත් සුදුසුය. දහවල් කාලයේදී ගල් තලාව සහ වැලි ඉතා උණුසුම් විය හැක.
+* පිළිම අසලට යාමට පෙර පාවහන් සහ හිස්වැසුම් ඉවත් කළ යුතුය. වැලි උණුසුම් විය හැකි බැවින් මේස් පැළඳීම සුදුසුය.
+* ඡායාරූප ගැනීමේදී පිළිම වලට පිටුපා සිටීමෙන් වළකින්න. එය අගෞරවයක් ලෙස සැලකේ.`
+    },
     history: {
       EN: "The Gal Vihara, or 'Rock Monastery', is a masterpiece of Sinhalese rock carving located in Polonnaruwa. Created in the 12th century by King Parakramabahu I, it features four magnificent Buddha statues carved into a single large granite rock face: a seated Buddha, a smaller seated Buddha inside a cave, a standing Buddha with crossed arms, and a massive reclining Buddha. The fluidity of the robes and the serene expressions on the statues are considered the pinnacle of ancient Sri Lankan sculpting.",
       SI: "තනි කළු ගලක නෙළන ලද විශිෂ්ට බුදු පිළිම හතරකින් යුත් ශිලා විහාරයකි."
@@ -214,6 +303,180 @@ const BASE_DESTINATIONS: Destination[] = [
     coordinates: { x: 58.5, y: 33.5 },
     nearbyAttractions: [
       { id: "vatadageya", name: { EN: "Vatadageya", SI: "වටදාගෙය" }, image: "https://i.pinimg.com/1200x/3e/16/a6/3e16a69f5a7a1aa1aa918ad765964902.jpg" }
+    ]
+  },
+  {
+    id: "mihintale",
+    name: { EN: "Mihintale", SI: "මිහිඳු තලේ" },
+    category: "ancient",
+    image: "https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg",
+    gallery: ["https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg"],
+    history: {
+      EN: "Mihintale is a series of rocky hills and mountain peaks that form the most historically significant pilgrimage site in Sri Lanka and one of the most important in the entire Buddhist world. It is universally recognised as the birthplace of Buddhism in Sri Lanka — the exact location where Buddhism was first preached on the island in 247 BC.",
+      SI: "මිහින්තලය ශ්‍රී ලංකාවේ බුදුදහමේ උපන් ස්ථානය ලෙස සැලකේ. මෙය ඓතිහාසික වශයෙන් ඉතා වැදගත් වන්දනා ස්ථානයකි."
+    },
+    shortStory: {
+      EN: "The Cradle of Buddhism in Sri Lanka.",
+      SI: "ශ්‍රී ලංකාවේ බුදුදහමේ තොටිල්ල."
+    },
+    detailedAbout: {
+      EN: `🏔️ MIHINTALE — මිහිඳු තලේ
+The Cradle of Buddhism in Sri Lanka — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by archaeology, mainstream history, inscriptions, UNESCO, and government records
+⭐ RELIGIOUS TRADITION — sincerely held belief recorded in ancient chronicles, not independently verifiable by science
+⚠️ UNCERTAIN — debated among historians
+
+📍 LOCATION
+District: Anuradhapura District, North Central Province, Sri Lanka
+Position: Mihintale is a rocky mountain range situated 12.5 km east of Anuradhapura city, close to the Anuradhapura–Trincomalee Road (A12 highway)
+Distance from Colombo: approximately 205 km north — 3.5 to 4.5 hours by road
+Distance from Anuradhapura city centre: 12.5 km — approximately 20 to 25 minutes by car or tuk-tuk
+Distance from Sigiriya: approximately 80 km — about 1.5 hours by road
+Distance from Kandy: approximately 140 km — about 3 hours by road
+Elevation: approximately 1,000 feet (300 meters) above the surrounding plains
+UNESCO Status: Part of the Sacred City of Anuradhapura — inscribed 1982
+
+🏔️ WHAT IS MIHINTALE
+✅ CONFIRMED — Mihintale is a series of rocky hills and mountain peaks that form the most historically significant pilgrimage site in Sri Lanka and one of the most important in the entire Buddhist world. It is universally recognised as the birthplace of Buddhism in Sri Lanka — the exact location where Buddhism was first preached on the island in 247 BC.
+✅ CONFIRMED — The name Mihintale comes from two Sinhala words — Mihin (a Sinhala rendering of the name Mahinda) and Thale meaning plateau or flat elevated ground. Together it means "the plateau of Mihindu (Mahinda)" — directly naming the site after the monk whose presence defined it forever.
+✅ CONFIRMED — The site comprises four separate mountain peaks each approximately 1,000 feet (300 meters) in height:
+Mihinthalawa Mountain — the main peak, home to the Mahaseya Stupa and the Aradhana Gala (Invitation Rock)
+Rajagiri Lena Mountain — containing important cave complexes
+Anaikutti Mountain
+Ath Vehera Mountain
+✅ CONFIRMED — Mihintale is one of the Solosmasthana — the sixteen most sacred places in all of Sri Lanka — and is an essential stop on every Buddhist pilgrimage to Anuradhapura.
+
+📜 FULL HISTORY — CONFIRMED FACTS
+Before Buddhism — Royal Hunting Ground
+✅ CONFIRMED — In the 4th century BC, Mihintale was a dense jungle serving as a royal hunting ground for the kings of Anuradhapura. The forested hills were rich in wildlife and the kings regularly hunted there. Stone inscriptions found at the site confirm human presence and activity in the Mihintale area from at least the 3rd century BC.
+The Meeting That Changed Sri Lanka — 247 BC
+✅ CONFIRMED — The most important event in the entire history of Sri Lankan religion and civilisation took place on this hill on the full moon day of the month of Poson (June) in 247 BC. This date is recorded in both the ancient Pali chronicles Dipavamsa and Mahavamsa and is accepted by mainstream historians as broadly accurate.
+✅ CONFIRMED — King Devanampiyatissa of Anuradhapura was hunting deer on the slopes of Mihintale when he encountered the Buddhist missionary monk Arahat Mahinda Thero. Mahinda tested the king's intelligence and wisdom through a series of questions about a mango tree — a famous episode recorded in detail in the Mahavamsa. Satisfied that the king possessed the wisdom to receive the Dhamma, Mahinda preached the Chulahatthipadopama Sutta — one of the key discourses of the Buddha — to the king and his 40,000 accompanying courtiers and subjects.
+✅ CONFIRMED — The king and his entire court embraced Buddhism on the spot. This single event set in motion the adoption of Buddhism as the national faith of Sri Lanka — a transformation that would shape every aspect of Sri Lankan art, architecture, law, culture, agriculture, and statecraft for the following 2,300 years without interruption.
+⭐ RELIGIOUS TRADITION — The Mahavamsa records that Mahinda Thero arrived at Mihintale by travelling through the air from India and descended to the summit of the Aradhana Gala. This is a matter of religious belief held by Buddhist devotees. It is not a literal historical or scientific claim.
+Mahinda's Residence at Mihintale
+✅ CONFIRMED — After his arrival in Sri Lanka, Mahinda Thero chose Mihintale as his personal residence and the base of his missionary activities. He lived at Mihintale for most of the remainder of his life, teaching and establishing the foundations of Sri Lankan Theravada Buddhism. His cave — Mihindu Guhawa — still exists at the site and is one of the most venerated spots in the entire complex.
+✅ CONFIRMED — According to the Mahavamsa, Mahinda Thero passed away at Mihintale. His bodily relics were enshrined here. This is the basis for the supreme sacred importance of the Ambasthala Dagoba — the stupa believed to be built over the relics of Mahinda Thero himself.
+Development as a Monastic Complex — Multiple Kings
+✅ CONFIRMED — From the moment of the conversion event, successive Sri Lankan kings developed Mihintale as a massive sacred complex across many centuries. The following royal contributions are confirmed by archaeological evidence and ancient inscriptions:
+King Devanampiyatissa (307–267 BC) — initiated the first development of Mihintale as a sacred site, building basic shrines and facilities for the monks.
+King Lanjatissa (119–109 BC) — confirmed by inscription to have added a stone mantel to the Kantaka Cetiya stupa. This proves the Kantaka Cetiya predates 119 BC — making it one of the oldest dateable stupas in Sri Lanka.
+King Bhathika Abhaya (22–7 BC) — ✅ CONFIRMED — constructed the 1,840 granite steps leading from the base of the hill to the summit. These original steps survive and are still used by pilgrims today after 2,000 years.
+King Mahadathika Mahanaga (7–19 AD) — ✅ CONFIRMED — built the Ambasthala Dagoba on the spot where Mahinda Thero first met King Devanampiyatissa, and the Maha Seya (Mihintale Maha Stupa) on the summit of the main Mihintale hill.
+King Aggabodhi I (575–608 AD) — converted the natural Naga Pokuna (Snake Pond) into a formally constructed stone pond.
+Chinese Monk Fa Hien's Visit — 5th Century AD
+✅ CONFIRMED — The Chinese Mahayana Buddhist monk Fa Hien (Faxian) visited Sri Lanka in the early 5th century AD and recorded his observations. His writings confirm that at the time of his visit, over 2,000 Buddhist monks resided at Mihintale — confirming it as one of the largest monastic communities in the ancient Buddhist world.
+The Hospital Complex
+✅ CONFIRMED — Archaeological excavations at Mihintale uncovered one of the most complete ancient hospital complexes found anywhere in the ancient world. The hospital consisted of a cluster of five rectangular buildings enclosed within a large compound wall. At the centre was a square structure serving as the main treatment building. At the four corners were residential buildings for monks receiving treatment. Surgical instruments, medicinal grinding stones, and drainage systems were all recovered. This confirms that Mihintale was not only a spiritual centre but also a major centre of ancient Sinhalese medical practice.
+The Mihintale Inscriptions
+✅ CONFIRMED — A total of 106 Brahmi script inscriptions have been found at Mihintale, ranging in date from the 3rd century BC to the 10th century AD. These inscriptions are among the most important historical documents of ancient Sri Lanka. They record royal donations, monastic regulations, land grants, and administrative records of the Mihintale monastery. The Mihintale Tablet — written in the 10th century AD — is the longest and best preserved of all the inscriptions. After the 10th century no more inscriptions were found, coinciding with the decline and fall of the Anuradhapura kingdom.
+Abandonment and Rediscovery
+✅ CONFIRMED — When the Kingdom of Anuradhapura fell to Chola invasion in the 10th century AD, Mihintale — like the broader sacred city — was largely abandoned. The jungle reclaimed the structures over subsequent centuries. British archaeologists and the Department of Archaeology of Ceylon carried out the major excavation and restoration work beginning in the 19th and early 20th centuries.
+
+🏗️ THE SITE — EVERY MONUMENT IN DETAIL
+The 1,840 Steps — Confirmed Physical Feature
+✅ CONFIRMED — The approach to the summit of Mihintale is via three successive flights of granite steps totalling 1,840 steps in total, constructed during the reign of King Bhathika Abhaya (22–7 BC). The steps are cut from solid granite and have been used by pilgrims for over 2,000 years. They ascend through the shade of spreading frangipani and temple trees whose roots grip the ancient stone.
+The first flight is wide and shallow — gentle and welcoming. The successive flights become progressively steeper and narrower as the summit approaches. The climb requires approximately 20 to 30 minutes at a comfortable pace for an average adult. A paved road built later provides an alternative motorised access for those unable to manage the steps.
+
+The Kantaka Cetiya — Oldest Dated Stupa at Mihintale
+✅ CONFIRMED — The Kantaka Cetiya is one of the oldest stupas in Sri Lanka and the oldest structure at Mihintale that can be positively dated. An inscription confirms that King Lanjatissa (119–109 BC) added a stone mantel to the existing structure, proving the stupa predates 119 BC — placing its original construction in the 2nd or 3rd century BC.
+The stupa measures approximately 12 meters in height and 130 feet (40 meters) at the base. It features four Vahalkadas — elaborate ornamental entrance facades at the four cardinal points — decorated with some of the finest stone carvings at Mihintale. The southern Vahalkada is the best preserved and displays a continuous band of Ghana figures (also called Vamana or Bahirawa figures) — mythical dwarfs depicted in various dynamic and humorous poses — one of the most distinctive decorative elements of early Anuradhapura period stupa architecture.
+The Kantaka Cetiya also features finely carved Nagaraja guardstones, balustrades, moonstones, and decorative friezes. These carvings are considered among the finest examples of pre-Christian era Buddhist sculptural art in Sri Lanka.
+
+The Ambasthala Dagoba
+✅ CONFIRMED — The Ambasthala Dagoba stands on the upper terrace of Mihintale at the exact spot where Mahinda Thero traditionally met King Devanampiyatissa in 247 BC. The name Ambasthala means "the place of the mango tree" — named after the mango tree that served as the backdrop to the famous meeting and the questions about the tree that Mahinda used to test the king's wisdom.
+The dagoba was built by King Mahadathika Mahanaga (7–19 AD) — confirmed by archaeological analysis consistent with this date. The stupa enshrines the sacred relics of Arahat Mahinda Thero himself — the mortal remains of the monk whose presence defines Mihintale. Archaeological ruins surrounding the dagoba indicate that a vatadage (circular protective structure) once enclosed it, similar to the Polonnaruwa Vatadage.
+
+The Maha Seya — The Summit Stupa
+✅ CONFIRMED — The Maha Seya is the largest stupa at Mihintale, situated on the summit of the main Mihintale hill. It was built by King Mahadathika Mahanaga (7–19 AD). Its base diameter is 136 feet (41 meters). The stupa was in a heavily deteriorated condition and was completely restored in modern times. It stands as the highest point of the entire complex and is visible from a great distance across the flat Anuradhapura plains.
+Access to the Maha Seya requires climbing to the very summit. Iron railings assist the climb in exposed and steep sections. Even in strong winds pilgrims make the ascent — the devotion of Sri Lankan Buddhists for this summit is extraordinary.
+
+The Aradhana Gala — Invitation Rock
+⭐ RELIGIOUS TRADITION combined with ✅ CONFIRMED physical feature — The Aradhana Gala — meaning Invitation Rock or Meditation Rock — is a large smooth granite outcrop near the Ambasthala Dagoba on the upper terrace. It is the rock from which Arahat Mahinda Thero is traditionally believed to have called out to King Devanampiyatissa by name to stop him shooting a deer — the first words the monk spoke to the king, initiating the famous encounter.
+✅ CONFIRMED — The rock exists physically and is one of the most visited spots at Mihintale. It commands extraordinary panoramic views across the entire Anuradhapura plains — ancient reservoirs glittering in the distance, the white domes of Ruwanwelisaya and Abhayagiri visible on clear days.
+⭐ RELIGIOUS TRADITION — That Mahinda descended from the sky onto this specific rock, and that this is the precise spot of the first meeting, is a matter of religious tradition recorded in the Mahavamsa. The general location of the meeting at Mihintale is accepted historically. The specific rock cannot be verified by archaeology.
+
+Mihindu Guhawa — The Cave of Mahinda
+✅ CONFIRMED — The cave where Arahat Mahinda Thero lived during his years at Mihintale exists and can be visited. It is a natural rock cave that shows evidence of ancient modification — walls were added, a drip ledge was carved above the entrance, and the interior was plastered. The cave is small, simple, and deeply atmospheric. It is the most intimate and personal monument at Mihintale — the actual place where one of the most important figures in Sri Lankan history slept, meditated, and taught for many years.
+
+The Naga Pokuna — Snake Pond
+✅ CONFIRMED — The Naga Pokuna — meaning Snake Pond — is a naturally occurring rock pool carved from the living granite and subsequently converted into a formal stone-lined pond. The name derives from a carved image of a seven-hooded cobra (Naga) cut into the rock face at one end of the pond. This cobra carving — approximately 5 meters (15 feet) long — remains clearly visible today and is one of the finest examples of ancient stone carving in Sri Lanka.
+The natural spring that feeds the Naga Pokuna still flows. The pond supplied water to the Sinha Pokuna (Lion Pond) below through an underground tunnel, which in turn supplied the Alms Hall and the daily water needs of the monks.
+
+The Sinha Pokuna — Lion Pond
+✅ CONFIRMED — Below the Naga Pokuna, the Sinha Pokuna — Lion Pond — is a smaller stone-lined pool. It derives its name from the carved rampant lion figure on its face. Water flowed from the Naga Pokuna to the Sinha Pokuna through an underground rock-cut tunnel — a small but elegant example of ancient Sinhalese hydraulic engineering.
+
+The Refectory — Dana Salawa (Alms Hall)
+✅ CONFIRMED — The Dana Salawa — Alms Hall — is a large stone-paved hall where monks received their daily meals. A massive stone trough measuring approximately 9 meters long, 1.5 meters wide, and 0.9 meters deep still stands here. This trough was used to receive the daily food offerings brought by lay devotees from the surrounding villages. The scale of the trough gives a vivid sense of the enormous number of monks residing at Mihintale in its peak period — consistent with Fa Hien's record of 2,000 monks.
+
+The Sannipatha Salawa — Chapter House
+✅ CONFIRMED — The Sannipatha Salawa was the assembly hall where monks gathered for communal religious activities — the recitation of monastic rules, the ordination of new monks, and the resolution of communal matters. The hall had a square layout with each side approximately 62 feet (19 meters). It had no enclosing walls — the roof was supported by a symmetrical arrangement of stone pillars open on all sides. The stone pillars remain standing while the wooden roof they once supported is long gone.
+
+The Hospital Complex
+✅ CONFIRMED — At the base of the main staircase lies the ancient hospital complex — one of the most completely surviving ancient hospital sites in the entire world. It consists of five rectangular buildings in a Panchavasa layout — four residential buildings at the corners and one central treatment building. Recovered artefacts include stone grinding troughs for medicinal preparations, stone bathing troughs, drainage channels, and evidence of an organised medical practice. Nagaraja guardstones, balustrades, and moonstones at the hospital entrance demonstrate that the building was constructed with full architectural care.
+
+The Kaludiya Pokuna — Black Water Pond
+✅ CONFIRMED — The Kaludiya Pokuna — Black Water Pond — is located in a forest setting apart from the main monastic complex. The name derives from the dark appearance of the water, caused by the reflection of the dense forest canopy and the nature of the minerals in the rock. This was the bathing pond of the forest-dwelling monks of a separate, more austere hermitage attached to Mihintale. The cave temple adjacent to the pond — the Kaludiya Pokuna Cave Temple — was constructed with brick walls, granite window openings, and granite ceiling slabs — an unusual and technically accomplished construction for its period.
+
+🙏 RELIGIOUS SIGNIFICANCE
+The Poson Festival — Sri Lanka's Most Important Buddhist Anniversary
+✅ CONFIRMED — Every year on the full moon day of Poson (June) — the exact anniversary of the meeting between Mahinda and King Devanampiyatissa — hundreds of thousands of white-robed Buddhist pilgrims descend on Mihintale and Anuradhapura for what is the most sacred date in the Sri Lankan Buddhist calendar. Poson Poya is a national public holiday. The entire city of Anuradhapura is filled with pilgrims. The 1,840 steps of Mihintale are climbed by a continuous stream of devotees throughout the night and into the following day. The atmosphere is profoundly moving.
+✅ CONFIRMED — Mihintale is one of the Solosmasthana — the sixteen most sacred Buddhist sites in all of Sri Lanka.
+
+🎟️ ENTRY FEES AND OPENING HOURS
+Entry Fee:
+✅ CONFIRMED — Mihintale is covered by the single Anuradhapura Archaeological Park ticket
+Foreign adults: approximately USD $25 for the full park
+Sri Lankan nationals: nominal local rate
+Entry to the outer complex including the steps and most monuments is free at all times. The ticket covers access to the main monument areas.
+Opening Hours: The site is accessible daily from dawn to dusk. There are no fixed closing hours for the outdoor complex. The full moon Poson Poya sees the site active throughout the night.
+Best Times to Visit:
+Early morning 6:00 to 8:00 AM — the mist lies across the plains below, the steps are cool, pilgrims are arriving quietly, and the entire complex is bathed in golden light
+Sunset — the views from the Aradhana Gala and the Maha Seya summit across the Anuradhapura plains at sunset are among the finest in all of Sri Lanka
+Poson full moon in June — the most intensely spiritual and atmospheric time to visit, though also the most crowded
+
+🚌 GETTING THERE
+From Anuradhapura: 12.5 km east on the A12 Trincomalee road — approximately 20 to 25 minutes by car or tuk-tuk. Tuk-tuk from Anuradhapura town to Mihintale cost approximately 500 to 700 LKR one way. Buses also run between Anuradhapura Bus Stand and Mihintale regularly.
+From Colombo: 205 km north — approximately 4 to 5 hours by train or bus to Anuradhapura, then 20 minutes by tuk-tuk to Mihintale.
+From Sigiriya: approximately 80 km — about 1.5 hours by car.
+From Kandy: approximately 140 km — about 3 hours by car or bus via Dambulla and Anuradhapura.
+
+👔 DRESS CODE
+✅ CONFIRMED — strictly enforced
+White clothing is strongly preferred and universally worn by local pilgrims. Shoulders must be covered. Knees must be covered. Sarongs available from vendors near the entrance for a small amount. All footwear must be removed before entering shrine areas. The granite steps and stone floors are cool in morning and hot at midday.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+Arrive at dawn. The ascent of the 1,840 granite steps in the early morning — with the light filtering through the frangipani trees and the plains below still wrapped in mist — is one of the most beautiful walks in Sri Lanka. By 9:00 AM tour buses begin arriving and the atmosphere changes.
+Climb all the way to the Maha Seya summit. Many visitors stop at the Ambasthala Dagoba and miss the final climb to the summit stupa. The views from the very top — across the entire Anuradhapura plains with the white domes of the great stupas visible in the distance — are extraordinary and worth every step.
+Stand on the Aradhana Gala. The smooth granite rock where Mahinda is believed to have first called to the king commands the finest panoramic view of the Anuradhapura landscape. Allow time to simply stand quietly and absorb the immensity of what happened here 2,300 years ago.
+Find the Mihindu Guhawa. The cave of Mahinda is not the most dramatic monument at the site but it is the most personally resonant — the actual small rock cave where the monk who changed Sri Lankan civilisation lived his daily life.
+Visit the Naga Pokuna. The giant five-meter cobra carved into the rock face above the pool is one of the finest and most striking pieces of ancient stone carving in Sri Lanka. Many visitors miss it entirely because it requires a short detour from the main path.
+Examine the Kantaka Cetiya carvings. Located at the base of the hill before ascending the main steps, the Kantaka Cetiya's Vahalkada carvings — particularly the Ghana dwarf figures on the southern entrance — are exceptional examples of 2nd century BC Buddhist sculptural art.
+Carry sufficient water. The climb is physically demanding, particularly in the heat of the day. Bring at least 1.5 litres per person.
+Combine with Anuradhapura on the same day. Mihintale is 12.5 km from the sacred city. A morning at Mihintale followed by an afternoon exploring Ruwanwelisaya, the Jaya Sri Maha Bodhi, and Thuparamaya makes a complete and deeply rewarding full day in the heartland of ancient Sri Lankan civilisation.
+Stay in Anuradhapura. There is no accommodation at Mihintale itself. Anuradhapura city has a full range of accommodation from budget guesthouses to comfortable hotels. Staying overnight allows you to visit both Mihintale at dawn and the sacred city monuments in the same day.
+Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihintale into one of the most extraordinary pilgrimage spectacles in Asia. If your travel dates allow it, being at Mihintale on Poson Poya is an experience that cannot be replicated at any other time of the year.`,
+      SI: "මිහින්තලය ශ්‍රී ලංකාවේ බුදුදහමේ උපන් ස්ථානයයි."
+    },
+    tips: [
+      { EN: "Arrive at dawn.", SI: "අලුයම පැමිණෙන්න." },
+      { EN: "Climb all the way to the Maha Seya summit.", SI: "මහා සෑය දක්වාම නගින්න." },
+      { EN: "Stand on the Aradhana Gala.", SI: "ආරාධනා ගල මත සිටින්න." },
+      { EN: "Find the Mihindu Guhawa.", SI: "මිහිඳු ගුහාව සොයා ගන්න." },
+      { EN: "Visit the Naga Pokuna.", SI: "නාග පොකුණ නරඹන්න." },
+      { EN: "Examine the Kantaka Cetiya carvings.", SI: "කණ්ඨක චේතියේ කැටයම් නරඹන්න." },
+      { EN: "Carry sufficient water.", SI: "ප්‍රමාණවත් තරම් ජලය රැගෙන එන්න." },
+      { EN: "Combine with Anuradhapura on the same day.", SI: "අනුරාධපුරය සමඟ එකම දිනකදී සංචාරය කරන්න." },
+      { EN: "Stay in Anuradhapura.", SI: "අනුරාධපුරයේ නවාතැන් ගන්න." },
+      { EN: "Visit on Poson Poya if possible.", SI: "හැකි නම් පොසොන් පොහොය දිනකදී පැමිණෙන්න." }
+    ],
+    hiddenEchoes: { EN: "The Mihintale Tablet is the longest and best preserved of all the inscriptions.", SI: "මිහින්තලේ ටැබ්ලටය පැරණි ශ්‍රී ලංකාවේ වැදගත්ම ඓතිහාසික ලේඛනයකි." },
+    location: "Anuradhapura",
+    coordinates: { x: 50, y: 20 },
+    nearbyAttractions: [
+      { id: "anuradhapura", name: { EN: "Anuradhapura", SI: "අනුරාධපුරය" }, image: "https://picsum.photos/seed/anuradhapura/800/600" }
     ]
   },
   {
@@ -320,33 +583,7 @@ const BASE_DESTINATIONS: Destination[] = [
       { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" }
     ]
   },
-  { 
-    id: "mihintale", 
-    name: { EN: "Mihintale", SI: "මිහින්තලේ" }, 
-    category: "ancient", 
-    image: "https://i.pinimg.com/1200x/4b/ce/e7/4bcee74e0567cf2c845621fa93db5905.jpg", 
-    gallery: ["https://i.pinimg.com/736x/87/b1/7f/87b17fb4f6d602cf2606fdf482e41c2b.jpg", "https://i.pinimg.com/1200x/4b/ce/e7/4bcee74e0567cf2c845621fa93db5905.jpg"], 
-    history: { 
-      EN: "Mihintale is revered as the cradle of Buddhism in Sri Lanka. It is the site where Arahat Mahinda, the son of Emperor Ashoka of India, met King Devanampiyatissa in 247 BC and introduced Buddhism to the island. The mountain peak is covered with ancient shrines, rock caves, and stupas, including the Maha Seya and the Aradhana Gala. A grand staircase of 1,840 granite steps leads to the summit, offering panoramic views and a profound sense of spiritual history.", 
-      SI: "ක්‍රි.පූ. 247 දී මිහිඳු රහතන් වහන්සේ සහ දේවානම්පියතිස්ස රජු හමු වූ ශ්‍රී ලංකාවේ බුදුදහමේ තොටිල්ලයි." 
-    }, 
-    shortStory: { 
-      EN: "The Mountain of Mahinda - A place of peace and light.", 
-      SI: "මිහින්තලා පර්වතය - සාමය සහ ආලෝකය පිරි ස්ථානයක්." 
-    }, 
-    tips: [
-      { EN: "Climb the Aradhana Gala for a panoramic view.", SI: "දර්ශනය නැරඹීමට ආරාධනා ගල තරණය කරන්න." },
-      { EN: "Visit the ancient hospital ruins at the base.", SI: "පහළ ඇති පැරණි රෝහල් නටබුන් නරඹන්න." }
-    ], 
-    hiddenEchoes: { EN: "The Kantaka Cetiya features some of the earliest stone carvings.", SI: "කණ්ඨක චේතිය මුල්කාලීන ශිලා කැටයම් වලින් සමන්විත වේ." }, 
-    location: "Anuradhapura", 
-    coordinates: { x: 50, y: 20 },
-    nearbyAttractions: [
-      { id: "ruwanwelisaya", name: { EN: "Ruwanwelisaya", SI: "රුවන්වැලිසෑය" }, image: "https://i.pinimg.com/1200x/e6/c4/67/e6c467b97e6ff3c8344d25e2b107b50e.jpg" },
-      { id: "ritigala", name: { EN: "Ritigala", SI: "රිටිගල" }, image: "https://i.pinimg.com/1200x/6f/b0/c0/6fb0c00a86082ccbdf8e6ac17b083319.jpg" },
-      { id: "wilpattu", name: { EN: "Wilpattu National Park", SI: "විල්පත්තුව ජාතික වනෝද්‍යානය" }, image: "https://i.pinimg.com/736x/f6/51/77/f65177d61ea209acea5c455e00246b7b.jpg" }
-    ]
-  },
+
   { 
     id: "yapahuwa", 
     name: { EN: "Yapahuwa", SI: "යාපහුව" }, 
@@ -437,9 +674,146 @@ const BASE_DESTINATIONS: Destination[] = [
       { id: "mirissa", name: { EN: "Mirissa Beach", SI: "මිරිස්ස වෙරළ" }, image: "https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg" }
     ]
   },
-  { id: "mirissa", name: { EN: "Mirissa", SI: "මිරිස්ස" }, category: "beach", image: "https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg", gallery: ["https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg"], history: { EN: "Mirissa is a picturesque beach town on the south coast of Sri Lanka, renowned for its stunning sunsets and laid-back atmosphere. It is the world's top destination for whale watching, where blue whales, sperm whales, and dolphins can be spotted just a few miles offshore. The beach features the iconic Parrot Rock and Coconut Tree Hill, offering breathtaking views of the Indian Ocean. Mirissa is also a hotspot for surfing and fresh seafood dining.", SI: "තල්මසුන් නැරඹීමේ මධ්‍යස්ථානය." }, shortStory: { EN: "A dream beach.", SI: "නිහඬ සාගර සිහිනය." }, tips: [{ EN: "Go to Coconut Tree Hill.", SI: "කොකනට් ට්‍රී හිල් වෙත යන්න." }], hiddenEchoes: { EN: "A path to Parrot Rock.", SI: "පැරට් රොක් මග." }, location: "Matara", coordinates: { x: 52, y: 96 },
-    nearbyAttractions: [
+  { id: "mirissa", name: { EN: "Mirissa", SI: "මිරිස්ස" }, category: "beach", image: "https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg", gallery: ["https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg"], 
+    detailedAbout: {
+      EN: `🌊 MIRISSA — මිරිස්ස
+Sri Lanka's Southern Coast — Complete Verified Guide
 
+📍 LOCATION
+Province: Southern Province, Sri Lanka
+Position: On the southern tip of Sri Lanka's coastline, facing the open Indian Ocean
+Distance from Colombo: approximately 150 km south — 2.5 to 3 hours by car or train
+Distance from Galle Fort: approximately 35 km west — about 45 minutes to 1 hour
+Distance from Unawatuna: approximately 30 km west — about 40 minutes
+Distance from Matara: approximately 10 km east — about 20 minutes
+Distance from Tangalle: approximately 40 km east — about 1 hour
+Nearest railway station: Weligama — approximately 10 km west, or Matara — approximately 10 km east
+
+🏖️ WHAT IS MIRISSA
+Mirissa is a small, crescent-shaped beach town on the extreme southern tip of Sri Lanka. It is simultaneously Sri Lanka's most famous whale-watching destination, a popular surf beach, a vibrant seafood and nightlife hub, and one of the most beautiful bays on the entire island. The beach curves around a sheltered bay flanked by low rocky headlands, with a small coconut-covered island — Parrot Rock — sitting just offshore at the eastern end.
+The town itself is small and compact — essentially one main road, one beautiful beach, a harbour, and a network of guesthouses, restaurants, and surf shops spread across the hillside above the bay. Despite its small size, Mirissa draws visitors from all over the world during the high season and has one of the most active and enjoyable beach atmospheres in Sri Lanka.
+
+📜 HISTORY
+Mirissa was historically a small fishing village — one of dozens of coastal settlements on Sri Lanka's southern coast whose economy revolved entirely around the sea. The harbour at Mirissa is today the largest fishing port on Sri Lanka's southern coast, handling enormous daily catches of tuna, mullet, snapper, swordfish, and other ocean fish. The fishing industry predates tourism by many generations and remains the economic foundation of the local community alongside tourism.
+The transformation of Mirissa from a quiet fishing village into an international tourist destination happened rapidly from the late 1990s onward, accelerating dramatically after the end of Sri Lanka's civil war in 2009 and the subsequent opening of the country to mass international tourism. The development of whale watching from Mirissa harbour — which began commercially around 2008 to 2010 — was the single biggest factor in putting the town on the international tourism map.
+The 2004 Indian Ocean Tsunami caused significant destruction in Mirissa. The town was severely damaged by the waves that struck the southern coast of Sri Lanka on 26 December 2004. The fishing harbour and beachfront were particularly badly hit. Recovery and rebuilding took several years and the town that exists today is largely rebuilt from that destruction.
+
+🐋 WHALE WATCHING — FULL CONFIRMED DETAILS
+Why Mirissa for Whales — The Scientific Reason
+The waters immediately south and southwest of Mirissa are extraordinarily productive marine habitat. The ocean shelf drops steeply off the southern coast of Sri Lanka creating deep-water upwelling zones where cold, nutrient-rich water rises from the deep ocean floor toward the surface. This upwelling creates massive concentrations of phytoplankton and krill — the microscopic organisms that blue whales and other large whales feed on. The whales follow this food source as they migrate through the Indian Ocean, making the waters around Mirissa one of the most reliable blue whale feeding grounds on earth.
+Species Confirmed Visible from Mirissa:
+Blue Whale (Balaenoptera musculus) — the primary target species. The largest animal that has ever lived on earth. Adults reach lengths of 24 to 30 meters and weights of up to 180 tonnes. The blue whale's heart alone is the size of a small car. Mirissa is one of the most reliable places in the world to see blue whales — these are not coastal or shallow-water whales but true deep-ocean giants seen regularly from the boats.
+Sperm Whale (Physeter macrocephalus) — the largest toothed animal on earth. Famous for their enormous squared-off heads containing the largest brain of any creature ever to have lived. Seen regularly on whale watching trips from Mirissa.
+Bryde's Whale (Balaenoptera edeni) — a medium-sized baleen whale. Frequently observed.
+Fin Whale (Balaenoptera physalus) — the second-largest animal on earth after the blue whale. Occasionally observed.
+Orca / Killer Whale (Orcinus orca) — occasional sightings, not regular. When orca pods are encountered they are extraordinary to observe.
+Spinner Dolphin (Stenella longirostris) — extremely commonly seen in large acrobatic pods near the boats. Frequently encountered in groups of dozens to hundreds, leaping and spinning above the water surface.
+Bottlenose Dolphin (Tursiops truncatus) — commonly seen.
+Whale Shark (Rhincodon typus) — occasionally observed during the season.
+Flying Fish, Sea Turtles, and Manta Rays — regularly seen during whale watching trips as additional encounters.
+The Season — Confirmed
+The primary whale watching season runs from November to April when the southwest monsoon has ended, sea conditions are calm, and blue whales are migrating northward through the Indian Ocean.
+The peak months for blue whale sightings are December, January, February, and March — these are the months when sea conditions are most reliably calm and whale concentrations are highest.
+May to October is the off-season for whale watching — the southwest monsoon creates rough seas that make boat trips uncomfortable and sometimes dangerous. Whales may still be present but conditions make them difficult to find and observe.
+Departure Time and Trip Duration
+All whale watching boats depart from Mirissa Harbour at approximately 6:00 to 6:30 AM. Early departure takes advantage of the calmest sea conditions before the wind picks up in the afternoon.
+Trip duration varies significantly depending on how far from shore whales are located on any given day. Trips typically last between 3 and 6 hours on average, with some days extending to 7 or 8 hours if whales are found far offshore. Boats travel up to 20 km offshore to reach whale feeding areas.
+Sighting Probability — Honest Assessment
+During peak season (December to March), sighting probability for at least one whale species is generally high — approximately 80 to 90% on average. Probability specifically for blue whales varies more — approximately 50 to 70% on any given trip. On some days even the best operators find nothing.
+Wildlife watching is inherently unpredictable and no operator — however experienced — can guarantee a sighting. Any operator claiming a 100% sighting guarantee should be treated with scepticism.
+The Overcrowding Problem — Important Honest Information
+This is a critical issue that any honest guide to Mirissa whale watching must address directly.
+Scientific studies published in peer-reviewed journals in 2012 and 2013 documented that unregulated whale watching boat activity in Sri Lanka was causing measurable disturbance to blue whales — boats approaching too fast, too close, and unpredictably were causing avoidance responses. Research linked this harassment to a documented shift in whale distribution and an increase in whale strandings during the study period.
+Multiple visitor reviews confirm that during busy periods multiple boats — sometimes 10 to 15 simultaneously — converge on a single whale sighting, surrounding the animal, preventing it from diving naturally, and creating extreme stress for the whales.
+Sri Lanka introduced formal whale watching regulations in 2012. However, monitoring and enforcement of these regulations has been described by a 2016 scientific review as weak and insufficient.
+The consequence is an industry that at its best provides extraordinary, responsible wildlife encounters and at its worst can cause measurable harm to the very animals it exists to show visitors.
+How to Choose an Ethical Operator:
+Choose operators who maintain a minimum distance of at least 300 feet from whales and do not encircle or chase them. Choose operators with smaller boats carrying fewer passengers. Choose operators with documented conservation commitments and trained naturalist guides on board. Avoid operators who boast about guaranteed sightings above all else — this incentive structure drives the most harmful behaviour.
+Cost — 2026
+Standard whale watching boat tours from Mirissa harbour cost approximately USD $45 to $60 per person for a standard large vessel. Private speedboat tours for small groups cost significantly more — approximately USD $200 to $350 for the entire boat.
+
+🏄 SURFING IN MIRISSA
+Mirissa offers good surfing particularly for beginner and intermediate surfers. The main beach produces gentle, consistent waves well-suited to learning. More experienced surfers head to nearby Weligama Bay — approximately 10 km west — which is one of the finest beginner and intermediate surf destinations on the entire island with long, consistent, rolling breaks ideal for learning.
+Surf season at Mirissa: November to April — the same window as whale watching season. The offshore winds and clean swells of this period produce the best wave conditions.
+Surfboards are available for rent from numerous shops along the Mirissa beachfront for approximately 500 to 800 LKR per hour or 1,500 to 2,500 LKR per day. Surf lessons are available from approximately USD $20 to $30 for a 2-hour beginner session.
+
+🌴 PARROT ROCK — SECRET BEACH
+At the eastern end of Mirissa beach, a small rocky island — Parrot Rock — sits just a short wade from the shore at low tide. The rock is accessible by wading through shallow water at low tide or by a short swim. The top of the rock commands an excellent view across the full sweep of Mirissa bay and is a popular sunset viewing spot.
+On the eastern side of Parrot Rock, hidden from the main beach, is a small quiet cove — informally called Secret Beach — a short scramble over the rocks from the main beach. This cove is calmer, less crowded, and more beautiful than the main beach and is one of Mirissa's best-kept secrets.
+Note: The wade and scramble to Parrot Rock and Secret Beach requires care at high tide when the water can be deep and currents strong. Check tide times before attempting.
+
+🌅 COCONUT TREE HILL
+Approximately 1 km east of Mirissa Beach, a small hill covered with swaying coconut palms — Coconut Tree Hill — overlooks both the beach and the open Indian Ocean. It is one of the most photographed viewpoints on the entire southern coast of Sri Lanka. The path to the top takes approximately 10 minutes on foot from the road. It is at its most beautiful at sunrise and sunset when the coconut palms are silhouetted against the coloured sky.
+
+🍽️ WHERE TO EAT
+Mirissa has an outstanding food scene concentrated along the beachfront and the main road above it.
+Paradise Beach Club — the most famous and long-established beachfront restaurant and bar. Right on the sand. Fresh grilled seafood, good cocktails, sunset views.
+Dewmini Roti Shop — a local institution on the main road. Sri Lankan rotis, curries, and short eats at extremely affordable prices. Beloved by both locals and budget travellers.
+The Wijaya Beach Restaurant — excellent grilled tuna, Sri Lankan rice and curry, and fresh juice. Good value, reliable quality.
+Hangover Bar — the most popular late-night bar in Mirissa, on the beachfront. Beach parties, fire shows, and live music.
+Pink Elephant Beach Bar — popular afternoon and evening beach bar.
+The Fisherman's Wharf — at the harbour, serving the freshest possible fish brought directly off the boats each morning. Extremely good value.
+Street Food along the main road — numerous small stalls selling kottu roti, hoppers, rice and curry, and fresh coconuts at local prices. The best value eating in Mirissa is at these roadside stalls.
+
+🏨 WHERE TO STAY
+Budget (USD $10–25/night):
+Hangover Hostel Mirissa — the most social budget option, known for its party atmosphere and beachfront location.
+Green Garden Guest House — simple clean rooms with air conditioning, breakfast included, close to the beach.
+Multiple small guesthouses on the hillside above the beach offering basic but comfortable accommodation.
+Mid-Range (USD $40–90/night):
+Sira's Chalets — literally on the beach, private rooms with air conditioning, some with ocean views.
+Ballena Regency — rooftop restaurant with good views, comfortable rooms, 150 meters from the beach.
+Imagine Villa Hotel — boutique hotel beside a quiet beach with a large pool.
+Luxury (USD $150–500+/night):
+Three Gables Boutique Villa — the finest property in Mirissa itself. Beachfront, private beach access, pool overlooking the ocean, excellent restaurant.
+Cape Weligama (10 km west) — one of the finest luxury resorts on the southern coast. A clifftop resort with extraordinary ocean views, exceptional dining, and the highest level of service. Rooms from approximately USD $434 per night.
+
+🌤️ BEST TIME TO VISIT
+November to April — the prime season. Dry weather, calm seas, excellent beach and surf conditions, whale watching season active. December to February is the absolute peak — busiest, most expensive, and finest weather.
+May to October — the southwest monsoon season. Heavy rainfall, rough seas, whale watching not operating. The beach is far less pleasant and most tourist businesses reduce hours or close. Not recommended for a first visit.
+
+🚌 GETTING THERE
+By Train from Colombo — Recommended:
+The coastal railway from Colombo Fort to Matara is one of the most scenic train journeys in Asia — the tracks run directly along the ocean shoreline for much of the southern coast. Journey time approximately 2.5 to 3.5 hours to Weligama or Matara stations. From either station, tuk-tuks to Mirissa cost approximately 500 to 800 LKR and take 15 to 20 minutes.
+By Bus from Colombo:
+Regular and express buses from Colombo Central Bus Stand to Matara via the Southern Expressway. Journey time approximately 2.5 to 3 hours. From Matara Bus Stand, local buses and tuk-tuks to Mirissa.
+By Car from Colombo:
+Approximately 150 km via the Southern Expressway (E01) to Pinnaduwa junction then local road to Mirissa. Journey time approximately 2 to 2.5 hours.
+From Galle Fort:
+35 km east — approximately 45 to 60 minutes by bus or tuk-tuk.
+From Unawatuna:
+30 km east — approximately 40 minutes.
+Within Mirissa:
+The beach, harbour, Coconut Tree Hill, and main road are all within comfortable walking distance of each other. Tuk-tuks are available everywhere for short trips.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+Book whale watching well in advance. During peak season (December to March) the better operators fill their boats days or weeks ahead. Booking 3 to 7 days in advance at minimum is strongly recommended. Walk-up bookings are often unavailable during peak weeks.
+Take seasickness medication the night before and again one hour before boarding. The Indian Ocean is not a calm ocean even in good weather. There is always at least a light swell and many visitors experience significant seasickness, particularly on longer trips of 5 to 6 hours. Taking medication proactively before any symptoms begin is far more effective than taking it after sickness has started.
+Bring sun protection for the full day. The boat trip involves hours of complete exposure on open ocean water. Sunscreen of SPF 50 or higher, a hat with a wide brim, and UV-protective sunglasses are essential. The combination of direct sun and reflection off the water surface burns exposed skin extremely quickly.
+Arrive at the harbour by 6:00 AM. Boats depart early to take advantage of calmer morning sea conditions. Missing the departure is not possible — the boat will not wait.
+Choose an operator with a smaller boat. Large boats carrying 50 to 100 passengers are cheaper but the experience of whale watching from a crowded double-decked vessel is significantly inferior to smaller boats. Smaller group sizes also generally mean operators are more careful about approach distances to avoid disturbing the whales.
+The whale watching trip will likely be your longest most physically demanding activity in Sri Lanka. Dress in layers — the open ocean at 6:00 AM can be surprisingly cold before the sun rises, and the middle of the day can be intensely hot. Bring extra clothing to remove as the day warms.
+Visit Coconut Tree Hill at sunrise. The walk from the beach takes 10 minutes and the view at sunrise — coconut palms and golden ocean light — is one of the most beautiful natural compositions on the entire southern coast.
+Explore Secret Beach. Wade around Parrot Rock at low tide to find the quiet cove on the far side. Check tide times first.
+Eat fresh tuna at the harbour. The fishing boats return in the early morning with overnight catches of the finest tuna. Several small restaurants and stalls near the harbour serve the freshest tuna in Sri Lanka — grilled, curried, and raw — at very local prices.
+Combine with Galle Fort on the same trip. Galle Fort is 35 km west — 45 minutes by tuk-tuk. A whale watching morning followed by an afternoon exploring the fort's cobblestone streets and rampart walks is the perfect southern coast day.
+Respect the local community. Mirissa is still at its core a fishing village. The approximately 3,000 to 5,000 local residents go about their daily lives alongside the tourism industry. Dress modestly when away from the beach, be considerate of noise late at night near residential areas, and buy from local vendors and restaurants rather than exclusively from tourist-facing businesses.`,
+      SI: "තල්මසුන් නැරඹීමේ මධ්‍යස්ථානය."
+    },
+    history: {
+      EN: "Mirissa is a picturesque beach town on the south coast of Sri Lanka, renowned for its stunning sunsets and laid-back atmosphere. It is the world's top destination for whale watching, where blue whales, sperm whales, and dolphins can be spotted just a few miles offshore. The beach features the iconic Parrot Rock and Coconut Tree Hill, offering breathtaking views of the Indian Ocean. Mirissa is also a hotspot for surfing and fresh seafood dining.",
+      SI: "තල්මසුන් නැරඹීමේ මධ්‍යස්ථානය."
+    },
+    shortStory: { EN: "A dream beach.", SI: "නිහඬ සාගර සිහිනය." },
+    tips: [
+      { EN: "Go to Coconut Tree Hill.", SI: "කොකනට් ට්‍රී හිල් වෙත යන්න." },
+      { EN: "Book whale watching in advance.", SI: "කල්තියා තල්මසුන් නැරඹීම වෙන්කරවා ගන්න." },
+      { EN: "Visit Coconut Tree Hill at sunrise.", SI: "සූර්ය උදාවට කොකනට් ට්‍රී හිල් වෙත යන්න." }
+    ],
+    hiddenEchoes: { EN: "A path to Parrot Rock.", SI: "පැරට් රොක් මග." },
+    location: "Matara",
+    coordinates: { x: 52, y: 96 },
+    nearbyAttractions: [
       { id: "unawatuna", name: { EN: "Unawatuna Beach", SI: "උණවටුන වෙරළ" }, image: "https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg" },
       { id: "yala", name: { EN: "Yala National Park", SI: "යාල ජාතික වනෝද්‍යානය" }, image: "https://i.pinimg.com/1200x/1f/61/a5/1f61a5f00d68b86b64e2dd496ba70d33.jpg" }
     ]
@@ -783,15 +1157,15 @@ const BASE_DESTINATIONS: Destination[] = [
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg", gallery: ["https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in Nuwara Eliya District, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Nuwara Eliya", coordinates: { x: 48, y: 70 },
+  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg", gallery: ["https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in Nuwara Eliya District, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Nuwara Eliya", coordinates: { x: 48, y: 70 },
     nearbyAttractions: [
-      { id: "aberdeen", name: { EN: "Aberdeen Falls", SI: "ඇබර්ඩීන් ඇල්ල" }, image: "https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg" },
+      { id: "aberdeen", name: { EN: "Aberdeen Falls", SI: "ඇබර්ඩීන් ඇල්ල" }, image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg" },
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg", gallery: ["https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Nuwara Eliya District of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Nuwara Eliya", coordinates: { x: 46, y: 72 },
+  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg", gallery: ["https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Nuwara Eliya District of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Nuwara Eliya", coordinates: { x: 46, y: 72 },
     nearbyAttractions: [
-      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg" },
+      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg" },
       { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" }
     ]
   },
@@ -801,6 +1175,6 @@ const BASE_DESTINATIONS: Destination[] = [
 
 export const DESTINATIONS_DATA: Destination[] = BASE_DESTINATIONS.map(dest => ({
   ...dest,
-  detailedAbout: ABOUT_DATA[dest.id] || { EN: "Deep archival narrative pending for this node.", SI: "මෙම ස්ථානය පිළිබඳ විස්තරය සකසමින් පවතී." },
-  logistics: LOGISTICS_DATA[dest.id] || { EN: "Logistics data syncing...", SI: "ප්‍රවාහන දත්ත යාවත්කාලීන වෙමින් පවතී..." }
+  detailedAbout: dest.detailedAbout || ABOUT_DATA[dest.id] || { EN: "Deep archival narrative pending for this node.", SI: "මෙම ස්ථානය පිළිබඳ විස්තරය සකසමින් පවතී." },
+  logistics: dest.logistics || LOGISTICS_DATA[dest.id] || { EN: "Logistics data syncing...", SI: "ප්‍රවාහන දත්ත යාවත්කාලීන වෙමින් පවතී..." }
 }));

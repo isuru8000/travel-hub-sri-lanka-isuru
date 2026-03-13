@@ -1,0 +1,258 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: users
+    // Document ID: {userId}
+    // Fields:
+    //   - uid: string (required) - The unique user ID
+    //   - name: string (required) - The user's display name
+    //   - email: string (required) - The user's email address
+    //   - photo: string (optional) - URL to the user's profile photo
+    //   - role: string (required) - 'user' or 'admin'
+    //   - createdAt: timestamp (required) - When the user profile was created
+    //
+    // Collection: memories
+    // Document ID: {memoryId}
+    // Fields:
+    //   - id: string (required)
+    //   - authorUid: string (required)
+    //   - userName: string (required)
+    //   - userPhoto: string (optional)
+    //   - locationEN: string (required)
+    //   - locationSI: string (required)
+    //   - titleEN: string (required)
+    //   - titleSI: string (required)
+    //   - storyEN: string (required)
+    //   - storySI: string (required)
+    //   - image: string (optional)
+    //   - likes: number (required)
+    //   - rating: number (required)
+    //   - tags: list (optional)
+    //   - createdAt: timestamp (required)
+    //
+    // Collection: memories/{memoryId}/comments
+    // Document ID: {commentId}
+    // Fields:
+    //   - id: string (required)
+    //   - memoryId: string (required)
+    //   - authorUid: string (required)
+    //   - userName: string (required)
+    //   - userPhoto: string (optional)
+    //   - textEN: string (required)
+    //   - textSI: string (required)
+    //   - createdAt: timestamp (required)
+    //
+    // Collection: favorites
+    // Document ID: {favoriteId}
+    // Fields:
+    //   - userId: string (required)
+    //   - destinationId: string (required)
+    //   - createdAt: timestamp (required)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isDocOwner() {
+      return isAuthenticated() && request.auth.uid == resource.data.authorUid;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && (
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+         get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin') ||
+        (request.auth.token.email == "slisuruniroshan@gmail.com" && request.auth.token.email_verified == true)
+      );
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidUrl(url) {
+      return url is string && (url.matches("^https://.*") || url.matches("^http://.*") || url.matches("^data:image/.*"));
+    }
+
+    function validStringLength(field, minLen, maxLen) {
+      return request.resource.data[field] is string &&
+        request.resource.data[field].size() >= minLen &&
+        request.resource.data[field].size() <= maxLen;
+    }
+
+    function isValidOptionalString(field, minLen, maxLen) {
+      return !(field in request.resource.data) ||
+             (request.resource.data[field] is string &&
+              request.resource.data[field].size() >= minLen &&
+              request.resource.data[field].size() <= maxLen);
+    }
+
+    function areImmutableFieldsUnchanged(fields) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(fields);
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function isValidUser(data) {
+      return hasOnlyAllowedFields(['uid', 'name', 'email', 'photo', 'role', 'createdAt']) &&
+             hasRequiredFields(['uid', 'name', 'email', 'role', 'createdAt']) &&
+             data.uid == request.auth.uid &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             isValidEmail(data.email) &&
+             isValidOptionalString('photo', 0, 2000) &&
+             data.role in ['user', 'admin'] &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidMemory(data) {
+      return hasOnlyAllowedFields(['authorUid', 'userName', 'userPhoto', 'locationEN', 'locationSI', 'titleEN', 'titleSI', 'storyEN', 'storySI', 'image', 'likes', 'rating', 'tags', 'createdAt']) &&
+             hasRequiredFields(['authorUid', 'userName', 'locationEN', 'locationSI', 'titleEN', 'titleSI', 'storyEN', 'storySI', 'likes', 'rating', 'createdAt']) &&
+             data.authorUid == request.auth.uid &&
+             data.userName is string && data.userName.size() > 0 && data.userName.size() <= 100 &&
+             isValidOptionalString('userPhoto', 0, 2000) &&
+             data.locationEN is string && data.locationEN.size() > 0 && data.locationEN.size() <= 200 &&
+             data.locationSI is string && data.locationSI.size() > 0 && data.locationSI.size() <= 200 &&
+             data.titleEN is string && data.titleEN.size() > 0 && data.titleEN.size() <= 200 &&
+             data.titleSI is string && data.titleSI.size() > 0 && data.titleSI.size() <= 200 &&
+             data.storyEN is string && data.storyEN.size() > 0 && data.storyEN.size() <= 50000 &&
+             data.storySI is string && data.storySI.size() > 0 && data.storySI.size() <= 50000 &&
+             isValidOptionalString('image', 0, 5000000) &&
+             data.likes is number && data.likes >= 0 &&
+             data.rating is number && data.rating >= 0 && data.rating <= 5 &&
+             (!( 'tags' in data ) || (data.tags is list && data.tags.size() <= 20)) &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidComment(data) {
+      return hasOnlyAllowedFields(['memoryId', 'authorUid', 'userName', 'userPhoto', 'textEN', 'textSI', 'createdAt']) &&
+             hasRequiredFields(['memoryId', 'authorUid', 'userName', 'textEN', 'textSI', 'createdAt']) &&
+             data.authorUid == request.auth.uid &&
+             data.memoryId is string && data.memoryId.size() > 0 && data.memoryId.size() <= 100 &&
+             data.userName is string && data.userName.size() > 0 && data.userName.size() <= 100 &&
+             isValidOptionalString('userPhoto', 0, 2000) &&
+             data.textEN is string && data.textEN.size() > 0 && data.textEN.size() <= 5000 &&
+             data.textSI is string && data.textSI.size() > 0 && data.textSI.size() <= 5000 &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidFavorite(data) {
+      return hasOnlyAllowedFields(['userId', 'destinationId', 'createdAt']) &&
+             hasRequiredFields(['userId', 'destinationId', 'createdAt']) &&
+             data.userId == request.auth.uid &&
+             data.destinationId is string && data.destinationId.size() > 0 && data.destinationId.size() <= 100 &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidLikeUpdate() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes']) &&
+             (request.resource.data.likes == resource.data.likes + 1 ||
+              request.resource.data.likes == resource.data.likes - 1);
+    }
+
+    // ===============================================================
+    // Rules
+    // ===============================================================
+
+    match /users/{userId} {
+      // Users can read their own profile. Admins can read all profiles.
+      allow read: if isOwner(userId) || isAdmin();
+      
+      // Users can create their own profile. They cannot make themselves admin unless they are already admin.
+      allow create: if isAuthenticated() && 
+                    isOwner(userId) && 
+                    isValidUser(request.resource.data) && 
+                    (request.resource.data.role == 'user' || isAdmin());
+                    
+      // Users can update their own profile. They cannot change their role or uid.
+      allow update: if isAuthenticated() && 
+                    isOwner(userId) && 
+                    isValidUser(request.resource.data) && 
+                    areImmutableFieldsUnchanged(['uid', 'createdAt']) &&
+                    (request.resource.data.role == resource.data.role || isAdmin());
+                    
+      allow delete: if isOwner(userId) || isAdmin();
+    }
+
+    match /memories/{memoryId} {
+      // Anyone can read memories
+      allow read: if true;
+      
+      // Authenticated users can create memories
+      allow create: if isAuthenticated() && 
+                    isValidMemory(request.resource.data);
+                    
+      // Owners or admins can update memories, or anyone can like
+      allow update: if isAuthenticated() && (
+                      (
+                        (isDocOwner() || isAdmin()) && 
+                        isValidMemory(request.resource.data) &&
+                        areImmutableFieldsUnchanged(['authorUid', 'createdAt'])
+                      ) ||
+                      isValidLikeUpdate()
+                    );
+                    
+      // Owners or admins can delete memories
+      allow delete: if isDocOwner() || isAdmin();
+
+      match /comments/{commentId} {
+        // Anyone can read comments
+        allow read: if true;
+        
+        // Authenticated users can create comments
+        allow create: if isAuthenticated() && 
+                      isValidComment(request.resource.data) &&
+                      request.resource.data.memoryId == memoryId;
+                      
+        // Owners or admins can update comments
+        allow update: if isAuthenticated() && 
+                      (isDocOwner() || isAdmin()) && 
+                      isValidComment(request.resource.data) &&
+                      areImmutableFieldsUnchanged(['memoryId', 'authorUid', 'createdAt']);
+                      
+        // Owners or admins can delete comments
+        allow delete: if isDocOwner() || isAdmin();
+      }
+    }
+
+    match /favorites/{favoriteId} {
+      // Users can read their own favorites
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+      
+      // Users can create their own favorites
+      allow create: if isAuthenticated() && 
+                    isValidFavorite(request.resource.data) &&
+                    favoriteId == request.auth.uid + '_' + request.resource.data.destinationId;
+                    
+      // Favorites shouldn't be updated, only deleted and recreated
+      allow update: if false;
+      
+      // Users can delete their own favorites
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+  }
+}

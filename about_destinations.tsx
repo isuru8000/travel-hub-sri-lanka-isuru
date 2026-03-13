@@ -449,7 +449,39 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
     SI: "පොළොන්නරුව වටදාගෙය යනු පොළොන්නරුව රාජධානි සමයට අයත් පැරණි ගොඩනැගිල්ලකි. මෙය පළමුවන පරාක්‍රමබාහු රජු හෝ නිශ්ශංක මල්ල රජු විසින් දන්ත ධාතූන් වහන්සේ හෝ පාත්‍ර ධාතූන් වහන්සේ තැන්පත් කිරීම සඳහා ඉදිකරන ලද බව විශ්වාස කෙරේ. පොළොන්නරුව පුරාණ නගරයේ මධ්‍යයේ පිහිටි මෙය රටේ ඇති හොඳම මට්ටමින් සංරක්ෂණය කර ඇති වටදාගෙයකි."
   },
   thuparamaya: {
-    EN: "Thuparamaya is the first Buddhist council in Sri Lanka. Built by King Devanampiyatissa (247-207 BC), it is the first stupa to be built in the country after the introduction of Buddhism. The stupa houses the right collarbone relic of the Buddha. The name Thuparamaya comes from 'stupa' and 'aramaya' (monastery complex). The original shape was paddy-heap, but it was restored to a bell shape in 1862. The ruins of the stone pillars that once supported a roof over the stupa can still be seen.",
+    EN: `
+      <div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">🏛️ THUPARAMAYA — ANURADHAPURA</h3>
+        <p class="italic text-gray-600">The First Stupa of Sri Lanka — Complete Verified Guide</p>
+
+        <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+          <h4 class="font-bold text-blue-900 flex items-center gap-2 mb-2">✅ HONEST LABELLING</h4>
+          <p class="text-blue-800 text-sm">
+            <strong>✅ CONFIRMED</strong> — verified by archaeology, mainstream history, UNESCO, and government records<br/>
+            <strong>⭐ RELIGIOUS TRADITION</strong> — sincerely held belief recorded in ancient chronicles, not independently verifiable by science<br/>
+            <strong>⚠️ UNCERTAIN</strong> — debated among historians
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">📍 LOCATION</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>City:</strong> Anuradhapura, North Central Province, Sri Lanka</li>
+            <li><strong>Position:</strong> Inside the Mahamewuna Garden (Mahamevnawa) — the same sacred park containing the Jaya Sri Maha Bodhi tree — northern section of the ancient sacred city</li>
+            <li><strong>Distance from Colombo:</strong> approximately 205 km north — 3.5 to 4.5 hours by road</li>
+            <li><strong>Distance from Kandy:</strong> approximately 130 km — about 3 hours</li>
+            <li><strong>Distance from Sigiriya:</strong> approximately 90 km — about 1.5 to 2 hours</li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="font-bold text-gray-900 flex items-center gap-2">🏛️ WHAT IS THUPARAMAYA?</h4>
+          <p><strong>✅ CONFIRMED</strong> — Thuparamaya is the oldest Buddhist stupa in Sri Lanka, built by King Devanampiyatissa in the 3rd century BC. It is the first stupa to be built in the country after the introduction of Buddhism by the missionary monk Mahinda.</p>
+          <p><strong>⭐ RELIGIOUS TRADITION</strong> — The stupa is believed to enshrine the right collarbone relic of the Buddha, brought to Sri Lanka by Mahinda Thero.</p>
+          <p><strong>✅ CONFIRMED</strong> — The name Thuparamaya comes from 'stupa' and 'aramaya' (monastery complex). The original shape was paddy-heap, but it was restored to a bell shape in 1862. The ruins of the stone pillars that once supported a roof over the stupa can still be seen.</p>
+        </div>
+      </div>
+    `,
     SI: "ථූපාරාමය යනු ශ්‍රී ලංකාවේ ඉදිකරන ලද ප්‍රථම ස්තූපයයි. මෙය ක්‍රි.පූ. 247-207 කාලයේ දේවානම්පියතිස්ස රජු විසින් ඉදිකරන ලදී. මෙහි බුදුරජාණන් වහන්සේගේ දකුණු අකු ධාතුව තැන්පත් කර ඇත. ථූපාරාමය යන නාමය 'ථූප' සහ 'ආරාමය' යන වචන වලින් බිහිවී ඇත. මුලින් ධාන්‍යාකාර හැඩයෙන් යුක්ත වූ මෙය 1862 දී ඝණ්ඨාකාර හැඩයට ප්‍රතිසංස්කරණය කරන ලදී."
   },
   abhayagiriya: {
@@ -1149,8 +1181,34 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
     SI: "ශ්‍රී දන්ත ධාතු මන්දිරය හෙවත් ශ්‍රී දළදා මාළිගාව යනු ශ්‍රී ලංකාවේ මහනුවර නගරයේ පිහිටි බෞද්ධ විහාරස්ථානයකි. මෙය බුදුරජාණන් වහන්සේගේ ශ්‍රී දන්ත ධාතූන් වහන්සේ වැඩසිටින පැරණි මහනුවර රාජධානියේ රාජකීය මාලිගා සංකීර්ණය තුළ පිහිටා ඇත. පුරාණ කාලයේ සිටම දන්ත ධාතූන් වහන්සේ දේශපාලනික වශයෙන් වැදගත් කාර්යභාරයක් ඉටු කර ඇති අතර, දන්ත ධාතූන් වහන්සේගේ හිමිකාරිත්වය දරන තැනැත්තාට රටේ පාලන බලය හිමිවන බවට විශ්වාසයක් පවතී. මහනුවර යනු ශ්‍රී ලාංකේය රජවරුන්ගේ අවසාන අගනුවර වූ අතර මෙම විහාරස්ථානය නිසාම එය ලෝක උරුමයක් බවට පත්ව ඇත. විහාරයේ වාස්තු විද්‍යාව සාම්ප්‍රදායික උඩරට ශෛලීන්ගේ අද්විතීය සම්මිශ්‍රණයක් වන අතර සංකීර්ණ ලී කැටයම්, සිතුවම් කළ සිවිලිම් සහ රිදී කැටයම් කළ දොරවල් මෙහි දැකගත හැකිය. මහනුවර අවසාන රජු විසින් ඉදිකරන ලද පත්තිරිප්පුව මෙම සංකීර්ණයේ සුවිශේෂී කොටසකි. සෑම වසරකම ලොව පැරණිතම හා උදාරතම බෞද්ධ උත්සවයක් වන ඇසළ පෙරහැරේදී දන්ත ධාතූන් වහන්සේ වීදි සංචාරය කරවනු ලබයි." 
   },
   mihintale: { 
-    EN: "Mihintale is a mountain peak near Anuradhapura in Sri Lanka. It is believed by Sri Lankans to be the site of a meeting between the Buddhist monk Mahinda and King Devanampiyatissa which inaugurated the presence of Buddhism in Sri Lanka. It is now a pilgrimage site, and the site of several religious monuments and abandoned structures. The climb to the summit involves ascending 1,840 ancient granite steps, passing through several levels of historical significance. Key sites include the Ambasthala Dagaba, built where the meeting is said to have occurred, the massive Maha Stupa at the summit, and the Kantaka Cetiya with its exquisite stone carvings. The Kaludiya Pokuna (Black Water Pond) and the ancient hospital ruins at the foot of the mountain reflect the advanced civilization that thrived here. Mihintale is especially vibrant during the Poson Poya festival in June, when thousands of devotees gather to commemorate the arrival of Buddhism.", 
-    SI: "මිහින්තලේ යනු ශ්‍රී ලංකාවේ අනුරාධපුරයට ආසන්නව පිහිටි කඳු මුදුනකි. මෙය මහින්ද රහතන් වහන්සේ සහ දේවානම්පියතිස්ස රජු අතර හමුවීම සිදු වූ ස්ථානය ලෙස ශ්‍රී ලාංකිකයන් විශ්වාස කරන අතර එමඟින් ශ්‍රී ලංකාවට බුදුදහම හඳුන්වා දෙන ලදී. අද වන විට මෙය වන්දනාමාන කරන ස්ථානයක් වන අතර ආගමික ස්මාරක සහ පැරණි ගොඩනැගිලි රැසක් මෙහි පිහිටා ඇත. කඳු මුදුනට පිවිසීම සඳහා පැරණි කළු ගලින් නිමවූ පඩි 1,840 ක් තරණය කළ යුතු අතර, ඒ අතරතුර ඓතිහාසික වටිනාකමකින් යුත් ස්ථාන රැසක් පසු කිරීමට සිදු වේ. අඹස්තල දාගැබ, කඳු මුදුනේ ඇති මහා ස්තූපය සහ විශිෂ්ට ගල් කැටයම් සහිත කණ්ඨක චේතිය මෙහි ඇති ප්‍රධාන ස්ථාන වේ. කන්ද පාමුල ඇති කළුදිය පොකුණ සහ පැරණි රෝහල් නටබුන් මෙහි පැවති දියුණු ශිෂ්ටාචාරය විදහා දක්වයි. ජූනි මාසයේ පැවැත්වෙන පොසොන් පොය උත්සවයේදී බුදුදහමේ පැමිණීම සැමරීම සඳහා දහස් සංඛ්‍යාත බැතිමතුන් මිහින්තලයට රැස් වෙති." 
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ MIHINTALE — මිහින්තලේ</h3>
+      <p>Mihintale is a mountain peak near Anuradhapura in Sri Lanka, revered as the cradle of Buddhism in the country. It is believed to be the site of the historic meeting between the Buddhist monk Mahinda, son of Emperor Ashoka, and King Devanampiyatissa in 247 BC, an event that formally introduced Buddhism to the island.</p>
+      <p>The site is a significant pilgrimage destination, featuring a complex of religious monuments and ancient structures spread across the mountain. The ascent to the summit involves climbing 1,840 ancient granite steps, a journey that takes visitors through various levels of historical and spiritual significance.</p>
+      <h4 class="font-bold text-gray-900">Key sites include:</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Ambasthala Dagaba:</strong> Built to commemorate the spot where Mahinda and the King met.</li>
+        <li><strong>Maha Stupa:</strong> A massive stupa at the summit, offering panoramic views.</li>
+        <li><strong>Kantaka Cetiya:</strong> Renowned for its exquisite stone carvings and ancient architectural style.</li>
+        <li><strong>Kaludiya Pokuna (Black Water Pond):</strong> A serene, ancient pond surrounded by ruins.</li>
+        <li><strong>Ancient Hospital Ruins:</strong> Located at the foot of the mountain, these ruins provide insight into the advanced medical practices of the time.</li>
+      </ul>
+      <p>Mihintale is particularly vibrant during the Poson Poya festival in June, when thousands of devotees gather to commemorate the arrival of Buddhism. The site offers a profound blend of history, spirituality, and natural beauty.</p>
+    </div>`, 
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ මිහින්තලේ — MIHINTALE</h3>
+      <p>මිහින්තලේ යනු ශ්‍රී ලංකාවේ අනුරාධපුරයට ආසන්නව පිහිටි කඳු මුදුනක් වන අතර එය ශ්‍රී ලංකාවේ බුදුදහමේ තොටිල්ල ලෙස සැලකේ. ක්‍රි.පූ. 247 දී අශෝක අධිරාජ්‍යයාගේ පුත් මහින්ද රහතන් වහන්සේ සහ දේවානම්පියතිස්ස රජු අතර හමුවීම සිදු වූ ස්ථානය මෙය බව විශ්වාස කෙරේ. මෙම හමුවීම ශ්‍රී ලංකාවට බුදුදහම නිල වශයෙන් හඳුන්වා දීම සනිටුහන් කළේය.</p>
+      <p>අද වන විට මෙය වන්දනාමාන කරන ස්ථානයක් වන අතර ආගමික ස්මාරක සහ පැරණි ගොඩනැගිලි රැසක් මෙහි පිහිටා ඇත. කඳු මුදුනට පිවිසීම සඳහා පැරණි කළු ගලින් නිමවූ පඩි 1,840 ක් තරණය කළ යුතු අතර, ඒ අතරතුර ඓතිහාසික වටිනාකමකින් යුත් ස්ථාන රැසක් පසු කිරීමට සිදු වේ.</p>
+      <h4 class="font-bold text-gray-900">ප්‍රධාන ස්ථාන කිහිපයක්:</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>අඹස්තල දාගැබ:</strong> මහින්ද රහතන් වහන්සේ සහ රජු හමුවූ ස්ථානය සිහිපත් කිරීම සඳහා ඉදිකරන ලද්දකි.</li>
+        <li><strong>මහා ස්තූපය:</strong> කඳු මුදුනේ ඇති දැවැන්ත ස්තූපය, අවට පරිසරයේ දර්ශනීය දසුනක් ලබා දෙයි.</li>
+        <li><strong>කණ්ඨක චේතිය:</strong> විශිෂ්ට ගල් කැටයම් සහ පැරණි වාස්තු විද්‍යාත්මක ශෛලිය සඳහා ප්‍රසිද්ධය.</li>
+        <li><strong>කළුදිය පොකුණ:</strong> නටබුන් වලින් වට වූ ඉතා සන්සුන්, පැරණි පොකුණකි.</li>
+        <li><strong>පැරණි රෝහල් නටබුන්:</strong> කන්ද පාමුල පිහිටි මෙම නටබුන් එකල පැවති දියුණු වෛද්‍ය ක්‍රම පිළිබඳ අවබෝධයක් ලබා දෙයි.</li>
+      </ul>
+      <p>ජූනි මාසයේ පැවැත්වෙන පොසොන් පොය උත්සවයේදී බුදුදහමේ පැමිණීම සැමරීම සඳහා දහස් සංඛ්‍යාත බැතිමතුන් මිහින්තලයට රැස් වෙති. මෙම ස්ථානය ඉතිහාසය, අධ්‍යාත්මිකත්වය සහ ස්වභාවික සුන්දරත්වයේ අද්විතීය සම්මිශ්‍රණයක් ලබා දෙයි.</p>
+    </div>` 
   },
   yapahuwa: { 
     EN: "Yapahuwa was one of the ephemeral capitals of medieval Sri Lanka. The citadel of Yapahuwa, lying midway between Kurunegala and Anuradhapura, was built around a huge granite rock rising abruptly nearly a hundred meters above the surrounding lowlands. In 1272, King Bhuvanekabahu I transferred the capital to Yapahuwa and brought the Sacred Tooth Relic here. The most remarkable feature of Yapahuwa is the magnificent ornamental staircase that leads to the terrace where the Tooth Relic was once housed. This staircase is decorated with intricate stone carvings of lions, dancers, musicians, and mythical creatures, reflecting a high level of artistic achievement. The style is notably influenced by South Indian architectural traditions. Although the capital was short-lived, falling to a Pandyan invasion in 1284, the ruins of the fortress, caves, and temples remain as a testament to its former glory. The view from the top of the rock offers a panoramic vista of the surrounding countryside.", 
@@ -1164,10 +1222,117 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
     EN: "Buduruwagala is an ancient Buddhist temple in Sri Lanka. The complex consists of seven statues and belongs to the Mahayana school of thought. The statues date back to the 10th century. The gigantic standing Buddha statue is the tallest in Sri Lanka, reaching a height of 16 meters (51 ft). It still bears traces of its original stuccoed robe and a streak of orange suggests that it was once brightly painted. The central Buddha statue is flanked by two groups of three statues. On the Buddha's right is a group led by Avalokitesvara, the Bodhisattva of Compassion, identified by the small Buddha figure in his headdress. To the left is another group featuring Maitreya, the future Buddha, and Vajrapani. One of the most intriguing features is a carved alcove that is constantly moist with an oil-like substance that smells of mustard oil, the source of which remains a mystery. The name Buduruwagala means 'the rock of Buddhist sculptures'. The site is set in a peaceful environment surrounded by a large reservoir and lush forest.", 
     SI: "බුදුරුවගල යනු ශ්‍රී ලංකාවේ පිහිටි පැරණි බෞද්ධ විහාරස්ථානයකි. පිළිම හතකින් සමන්විත මෙම සංකීර්ණය මහායාන බුදුදහමට අයත් වන අතර ඒවා 10 වන සියවසට අයත් වේ. මෙහි ඇති දැවැන්ත හිටි බුදු පිළිමය මීටර් 16 ක් (අඩි 51 ක්) උස වන අතර එය ශ්‍රී ලංකාවේ උසම බුදු පිළිමයයි. ප්‍රධාන බුදු පිළිමයට දෙපසින් පිළිම තුන බැගින් වූ කණ්ඩායම් දෙකක් ඇත. බුදුරජාණන් වහන්සේගේ දකුණු පසින් අවලෝකිතේශ්වර බෝධිසත්වයන් ප්‍රමුඛ කණ්ඩායම ද, වම් පසින් මෛත්‍රී බෝධිසත්වයන් සහ වජ්‍රපාණි ප්‍රමුඛ කණ්ඩායම ද පිහිටා ඇත. මෙහි ඇති වඩාත්ම කුතුහලය දනවන ලක්ෂණය වන්නේ අබ තෙල් සුවඳ විහිදෙන, නිරන්තරයෙන් තෙතමනය සහිතව පවතින ශිලා කුහරයකි. මෙහි තෙතමනය ඇතිවීමට හේතුව අදටත් අභිරහසකි. බුදුරුවගල යන නාමයේ අර්ථය 'බුදු පිළිම සහිත ගල' යන්නයි. විශාල වැවකින් සහ වනාන්තරයකින් වට වූ ඉතා සාමකාමී පරිසරයක මෙම ස්ථානය පිහිටා ඇත." 
   },
+  ella: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🏔️ ELLA — ඇල්ල</h3>
+      <p>Ella is a small town perched on the southern edge of Sri Lanka's central highlands. It sits at the dramatic point where the central mountain range drops sharply into the southern plains — a natural geographic threshold that produces the most extraordinary mountain views anywhere on the island.</p>
+      
+      <h4 class="font-bold text-gray-900">🏔️ WHAT IS ELLA</h4>
+      <p>The name Ella derives from the Sinhala word for waterfall. The town sits within a landscape of mountain ridges, tea plantations, cloud forest, rushing streams, and waterfalls. The defining feature is the Ella Gap — a deep natural pass through the mountain range offering views across 50 km of southern plains all the way to the Indian Ocean.</p>
+
+      <h4 class="font-bold text-gray-900">📜 HISTORY</h4>
+      <p>The area has ancient roots, with pre-Buddhist settlements and sites like the Dhowa Rock Temple. The landscape was transformed during the British colonial period (1860s-70s) when coffee plantations were replaced by tea. The railway line, completed in 1921, made Ella accessible, and it has since grown into a major international tourism hub.</p>
+
+      <h4 class="font-bold text-gray-900">🌄 MAJOR ATTRACTIONS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Nine Arch Bridge:</strong> Iconic colonial-era railway viaduct built of brick and stone.</li>
+        <li><strong>Little Adam's Peak:</strong> Accessible hike with panoramic views, best at sunrise.</li>
+        <li><strong>Ella Rock:</strong> Challenging hike with 360-degree vistas.</li>
+        <li><strong>Ravana Falls:</strong> Spectacular wide waterfall with a legendary connection to King Ravana.</li>
+        <li><strong>Diyaluma Falls:</strong> Second-highest waterfall in Sri Lanka with natural swimming pools.</li>
+        <li><strong>Bambarakanda Falls:</strong> Highest waterfall in Sri Lanka.</li>
+        <li><strong>Demodara Railway Loop:</strong> Extraordinary piece of railway engineering.</li>
+        <li><strong>Dhowa Rock Temple:</strong> Ancient temple with a large unfinished reclining Buddha.</li>
+        <li><strong>Tea Factory Tours:</strong> Explore the tea-making process at Halpewatte or Kinellan factories.</li>
+        <li><strong>Ella Spice Garden:</strong> Educational tours of Sri Lankan spice cultivation.</li>
+      </ul>
+      
+      <h4 class="font-bold text-gray-900">🚂 THE TRAIN JOURNEY</h4>
+      <p>The train journey from Kandy to Ella is universally regarded as one of the most scenic in the world, passing through tea plantations, cloud forests, and mountain vistas.</p>
+      
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p>January to March is the finest season with dry weather and clear skies. August to September is also relatively dry. December is peak season but can be rainy.</p>
+      
+      <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Book accommodation and train tickets well in advance.</li>
+        <li>Hike Ella Rock with a local guide.</li>
+        <li>Wake up early for the best views.</li>
+        <li>Carry a light waterproof layer and sufficient cash.</li>
+        <li>Allow a minimum of 2 full days to explore.</li>
+      </ul>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🏔️ ඇල්ල — ELLA</h3>
+      <p>ඇල්ල යනු ශ්‍රී ලංකාවේ මධ්‍යම කඳුකරයේ දකුණු කෙළවරේ පිහිටි කුඩා නගරයකි. මධ්‍යම කඳු පන්තිය දකුණු තැනිතලාවට හදිසියේම බෑවුම් වන නාට්‍යමය ස්ථානයේ මෙය පිහිටා ඇති අතර, එමඟින් දිවයිනේ ඕනෑම තැනක දැකිය හැකි අසාමාන්‍යම කඳුකර දර්ශන ලබා දෙයි.</p>
+      
+      <h4 class="font-bold text-gray-900">🏔️ ඇල්ල යනු කුමක්ද?</h4>
+      <p>'ඇල්ල' යන නම සිංහල වචනයෙන් බිඳී ආවකි. මෙම නගරය කඳු වැටි, තේ වතු, වලාකුළු වනාන්තර, දිය පහරවල් සහ දිය ඇලි වලින් පිරුණු භූ දර්ශනයක පිහිටා ඇත. මෙහි ඇති සුවිශේෂී ලක්ෂණය වන්නේ ඇල්ල කපොල්ලයි - මෙය කඳු පන්තිය හරහා ඇති ස්වාභාවික කපොල්ලක් වන අතර එයින් දකුණු තැනිතලාව හරහා ඉන්දියන් සාගරය දක්වා කිලෝමීටර් 50 ක දර්ශනයක් ලබා දෙයි.</p>
+
+      <h4 class="font-bold text-gray-900">📜 ඉතිහාසය</h4>
+      <p>ඇල්ල ප්‍රදේශය පුරාණයේ සිටම ජනාවාස වී ඇත. බ්‍රිතාන්‍ය යටත් විජිත සමයේදී කෝපි වගාව වෙනුවට තේ වගාව හඳුන්වා දීමෙන් මෙම භූ දර්ශනය වෙනස් විය. 1921 දී දුම්රිය මාර්ගය විවෘත වීමත් සමඟ ඇල්ල සංචාරක ගමනාන්තයක් ලෙස දියුණු විය.</p>
+
+      <h4 class="font-bold text-gray-900">🌄 ප්‍රධාන ආකර්ෂණීය ස්ථාන</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>නව අඟල් පාලම:</strong> යටත් විජිත සමයේ ඉදිකරන ලද සුප්‍රසිද්ධ දුම්රිය පාලම.</li>
+        <li><strong>කුඩා ආදම්ගේ කන්ද:</strong> පහසුවෙන් තරණය කළ හැකි, දර්ශනීය ස්ථානයකි.</li>
+        <li><strong>ඇල්ල රොක්:</strong> අභියෝගාත්මක නමුත් සුන්දර දර්ශන සහිත කන්දකි.</li>
+        <li><strong>රාවණා ඇල්ල:</strong> පුළුල් සහ සුන්දර දිය ඇල්ලකි.</li>
+        <li><strong>දියලුම ඇල්ල:</strong> ශ්‍රී ලංකාවේ දෙවන උසම දිය ඇල්ලයි.</li>
+        <li><strong>බඹරකන්ද ඇල්ල:</strong> ශ්‍රී ලංකාවේ උසම දිය ඇල්ලයි.</li>
+        <li><strong>දෙමෝදර දුම්රිය වළල්ල:</strong> දුම්රිය ඉංජිනේරු විද්‍යාවේ විශිෂ්ට නිර්මාණයකි.</li>
+        <li><strong>දෝව රජමහා විහාරය:</strong> පැරණි බුදු පිළිමයක් සහිත විහාරයකි.</li>
+      </ul>
+      
+      <h4 class="font-bold text-gray-900">🚂 දුම්රිය ගමන</h4>
+      <p>මහනුවර සිට ඇල්ල දක්වා දුම්රිය ගමන ලෝකයේ වඩාත්ම දර්ශනීය දුම්රිය ගමන් වලින් එකක් ලෙස සැලකේ.</p>
+      
+      <h4 class="font-bold text-gray-900">🌤️ නැරඹීමට සුදුසුම කාලය</h4>
+      <p>ජනවාරි සිට මාර්තු දක්වා කාලය පැහැදිලි අහසක් සහ කඳු නැගීමට සුදුසු කාලගුණයක් පවතී.</p>
+      
+      <h4 class="font-bold text-gray-900">💡 වැදගත් උපදෙස්</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>නවාතැන් සහ දුම්රිය ටිකට්පත් කලින්ම වෙන්කරවා ගන්න.</li>
+        <li>ඇල්ල රොක් තරණය සඳහා පළපුරුදු මඟ පෙන්වන්නෙකුගේ සහාය ලබා ගන්න.</li>
+        <li>උදෑසනම ගමන් ආරම්භ කරන්න.</li>
+        <li>වැසි ආවරණයක් සහ ප්‍රමාණවත් මුදල් රැගෙන යන්න.</li>
+        <li>අවම වශයෙන් දින 2ක් ඇල්ලේ ගත කරන්න.</li>
+      </ul>
+    </div>`
+  },
 
   // Beaches
   unawatuna: { EN: "A beautiful beach with golden sand and calm blue water.", SI: "රන්වන් වැලි සහ නිල්වන් සාගරය සහිත අඩ සඳක හැඩැති වෙරළකි." },
-  mirissa: { EN: "A great place to see whales and take photos of palm trees.", SI: "තල්මසුන් නැරඹීම සහ කොකනට් ට්‍රී හිල් නිසා ප්‍රසිද්ධය." },
+  mirissa: { 
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🌊 MIRISSA — මිරිස්ස</h3>
+      <p>Mirissa is a small, crescent-shaped beach town on the extreme southern tip of Sri Lanka. It is simultaneously Sri Lanka's most famous whale-watching destination, a popular surf beach, a vibrant seafood and nightlife hub, and one of the most beautiful bays on the entire island.</p>
+      <p>The beach is known for its golden sands, turquoise waters, and laid-back atmosphere. It is a perfect destination for those looking to relax, surf, or explore the marine life.</p>
+      <h4 class="font-bold text-gray-900">Key attractions include:</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Whale Watching:</strong> Mirissa is the premier location for whale watching in Sri Lanka, with chances to see blue whales, sperm whales, and dolphins.</li>
+        <li><strong>Coconut Tree Hill:</strong> An iconic spot for photos, offering stunning views of the ocean and the coastline.</li>
+        <li><strong>Parrot Rock:</strong> A small rock island accessible from the beach, offering great views of the bay.</li>
+        <li><strong>Surfing:</strong> Mirissa offers excellent surfing opportunities for both beginners and experienced surfers.</li>
+        <li><strong>Seafood and Nightlife:</strong> The beach is lined with restaurants and bars, offering fresh seafood and a vibrant nightlife scene.</li>
+      </ul>
+      <p>Mirissa is a must-visit destination for those traveling along the southern coast of Sri Lanka.</p>
+    </div>`, 
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🌊 මිරිස්ස — MIRISSA</h3>
+      <p>මිරිස්ස යනු ශ්‍රී ලංකාවේ දකුණු කෙළවරේ පිහිටි කුඩා, අඩ සඳ හැඩැති වෙරළබඩ නගරයකි. මෙය ශ්‍රී ලංකාවේ වඩාත්ම ප්‍රසිද්ධ තල්මසුන් නැරඹීමේ ස්ථානය, ජනප්‍රිය සර්ෆින් වෙරළක්, විචිත්‍රවත් මුහුදු ආහාර සහ රාත්‍රී ජීවිතයේ කේන්ද්‍රස්ථානයක් මෙන්ම දූපතේ ඇති ලස්සනම බොක්කකි.</p>
+      <p>මෙම වෙරළ රන්වන් වැලි, නිල් පැහැති ජලය සහ සන්සුන් වාතාවරණය සඳහා ප්‍රසිද්ධය. විවේක ගැනීමට, සර්ෆින් කිරීමට හෝ සමුද්‍ර ජීවීන් ගවේෂණය කිරීමට කැමති අය සඳහා මෙය කදිම ස්ථානයකි.</p>
+      <h4 class="font-bold text-gray-900">ප්‍රධාන ආකර්ෂණීය ස්ථාන:</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>තල්මසුන් නැරඹීම:</strong> මිරිස්ස ශ්‍රී ලංකාවේ තල්මසුන් නැරඹීම සඳහා ඇති ප්‍රධාන ස්ථානය වන අතර, නිල් තල්මසුන්, ශුක්‍රාණු තල්මසුන් සහ ඩොල්ෆින් මසුන් දැක ගැනීමට අවස්ථාව ඇත.</li>
+        <li><strong>කොකනට් ට්‍රී හිල්:</strong> ඡායාරූප සඳහා කදිම ස්ථානයක් වන අතර, සාගරයේ සහ වෙරළ තීරයේ විශ්මයජනක දසුනක් ලබා දෙයි.</li>
+        <li><strong>පැරට් රොක්:</strong> වෙරළේ සිට ළඟා විය හැකි කුඩා ගල් දූපතකි, බොක්කෙහි දර්ශනීය දසුනක් ලබා දෙයි.</li>
+        <li><strong>සර්ෆින්:</strong> මිරිස්ස ආරම්භකයින් සහ පළපුරුදු සර්ෆින් කරන්නන් සඳහා විශිෂ්ට අවස්ථා ලබා දෙයි.</li>
+        <li><strong>මුහුදු ආහාර සහ රාත්‍රී ජීවිතය:</strong> වෙරළ තීරයේ අවන්හල් සහ බාර් පේළියක් ඇති අතර, නැවුම් මුහුදු ආහාර සහ විචිත්‍රවත් රාත්‍රී ජීවිතයක් ලබා දෙයි.</li>
+      </ul>
+      <p>ශ්‍රී ලංකාවේ දකුණු වෙරළ තීරයේ සංචාරය කරන අය සඳහා මිරිස්ස අනිවාර්යයෙන්ම නැරඹිය යුතු ස්ථානයකි.</p>
+    </div>` 
+  },
   hikkaduwa: { EN: "A fun beach town with coral reefs and sea turtles.", SI: "කොරල් පර සහ මුහුදු කැස්බෑවන් නිසා ප්‍රසිද්ධ සංචාරක නගරයකි." },
   arugambay: { EN: "One of the best places in the world to surf.", SI: "ලොව හොඳම සර්ෆින් ස්ථානයක් වන අතර මෙය ඉතා නිදහස් පරිසරයකි." },
   bentota: { EN: "A top place for water sports where the river meets the sea.", SI: "ගඟ සහ මුහුද හමුවන ස්ථානයේ පිහිටි ජල ක්‍රීඩා පාරාදීසයකි." },
@@ -1181,29 +1346,603 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
   yala: { EN: "A big park where you can see many leopards.", SI: "දිවියන්ගේ රාජධානිය වන මෙය ලංකාවේ ප්‍රසිද්ධම වනෝද්‍යානයයි." },
   udawalawe: { EN: "The best place to see wild elephants in nature.", SI: "වන අලි නැරඹීමට ආසියාවේ ඇති හොඳම ස්ථානය උඩවලවයි." },
   minneriya: { EN: "A place where hundreds of wild elephants meet.", SI: "ලොව විශාලතම වන අලි රංචු ගැසීම සිදුවන ස්ථානයයි." },
-  wilpattu: { EN: "The largest park in Sri Lanka with many natural lakes.", SI: "ස්වභාවික විල් වලින් පිරි ලංකාවේ විශාලතම වනෝද්‍යානයයි." },
-  kumana: { EN: "A quiet place for birds in the East.", SI: "නැගෙනහිර පිහිටි හුදකලා පක්ෂි පාරාදීසයක් සහ විල්ලු පද්ධතියකි." },
+  wilpattu: { 
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🐆 WILPATTU NATIONAL PARK — විල්පත්තුව ජාතික වනෝද්‍යානය</h3>
+      
+      <h4 class="font-bold text-gray-900">🐆 MAMMALS</h4>
+      <p><strong>Sri Lankan Elephant:</strong> Resident year-round, often seen in smaller groups or solitary, providing intimate encounters in dense forest and villus.</p>
+      <p><strong>Sri Lankan Sloth Bear:</strong> Wilpattu is the premier location for sloth bear encounters, especially during the palu fruiting season (May to July).</p>
+      <p><strong>Water Buffalo:</strong> One of the last natural habitats in Sri Lanka for wild water buffalo, distinguished by their size and aggressive demeanor.</p>
+      <p><strong>Spotted Deer:</strong> The most abundant large mammal in the park.</p>
+      
+      <h4 class="font-bold text-gray-900">🦅 BIRDS & REPTILES</h4>
+      <p>Over 200 species recorded, including endemics like the Sri Lanka Junglefowl and Sri Lanka Grey Hornbill. Reptiles such as Mugger Crocodiles, Saltwater Crocodiles, and Indian Star Tortoises are frequently observed.</p>
+      
+      <h4 class="font-bold text-gray-900">🌿 HABITAT & FEATURES</h4>
+      <p>Wilpattu is characterized by its unique 'villus' (natural lakes), which are the lifeblood of the park. The landscape ranges from dense dry zone forests to open scrublands, coastal wetlands, and sand dunes.</p>
+
+      <p><strong>Essential Tips:</strong> Best visited from February to October. Always follow park guidelines and respect the wildlife.</p>
+    </div>`, 
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🐆 විල්පත්තුව ජාතික වනෝද්‍යානය — WILPATTU NATIONAL PARK</h3>
+      
+      <h4 class="font-bold text-gray-900">🐆 ක්ෂීරපායින්</h4>
+      <p><strong>ශ්‍රී ලංකා අලි ඇතුන්:</strong> වසර පුරාම වනෝද්‍යානයේ දැකගත හැකි අතර, බොහෝ විට කුඩා කණ්ඩායම් වශයෙන් හෝ තනිවම සැරිසරයි.</p>
+      <p><strong>ශ්‍රී ලංකා වලසා:</strong> වලසුන් නැරඹීම සඳහා ශ්‍රී ලංකාවේ ඇති හොඳම ස්ථානය විල්පත්තුවයි. පලු ගෙඩි කාලයේදී (මැයි - ජූලි) වලසුන් දැකගැනීමේ අවස්ථාව වැඩිය.</p>
+      <p><strong>වන මී හරකුන්:</strong> ශ්‍රී ලංකාවේ ඉතිරි වී ඇති ස්වාභාවික වාසස්ථාන කිහිපයෙන් එකකි.</p>
+      <p><strong>තිත් මුවන්:</strong> වනෝද්‍යානයේ බහුලවම දැකගත හැකි විශාල ක්ෂීරපායි සත්වයායි.</p>
+      
+      <h4 class="font-bold text-gray-900">🦅 පක්ෂීන් සහ උරගයින්</h4>
+      <p>විවිධ පක්ෂි විශේෂ සහ උරගයින් වන කිඹුලන් සහ කැස්බෑවන් මෙහි බහුලව දැකගත හැකිය.</p>
+      
+      <h4 class="font-bold text-gray-900">🌿 පරිසරය</h4>
+      <p>විල්පත්තුවේ ඇති ස්වාභාවික විල් (විල්ලු) වනෝද්‍යානයේ ජීවයයි. වියළි කලාපීය වනාන්තර, පඳුරු සහිත භූමි සහ වෙරළබඩ තෙත් බිම් වලින් සමන්විත වේ.</p>
+
+      <p><strong>වැදගත් උපදෙස්:</strong> පෙබරවාරි සිට ඔක්තෝබර් දක්වා නැරඹීමට සුදුසුය. වනෝද්‍යාන නීති රීති පිළිපදින්න.</p>
+    </div>` 
+  },
+  kumana: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🦅 KUMANA NATIONAL PARK — කුමණ ජාතික වනෝද්‍යානය</h3>
+      <p><strong>Sri Lanka's Premier Birdwatching Destination — Complete Verified Guide</strong></p>
+      <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by government records, scientific surveys, archaeology, and physical measurement<br>⭐ LEGEND / TRADITION — traditional belief or cultural story, not independently verifiable<br>⚠️ UNCERTAIN — figures vary between sources or are debated</p>
+      
+      <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
+      <p>Province: Eastern Province, Sri Lanka<br>District: Ampara District<br>Position: Southeastern coast of Sri Lanka, immediately north of Yala National Park<br>Distance from Colombo: 391 km — approximately 6 to 7 hours by road<br>Distance from Arugam Bay: approximately 22 km south — about 1 hour by road<br>Distance from Panama village: approximately 5 km<br>Distance from Yala National Park Block I: directly contiguous — separated only by the Kumbukkan Oya river<br>Distance from Kataragama: approximately 60 km west — about 1.5 hours by road<br>Main entrance: Okanda gate, 22 km southwest of Arugam Bay<br>Elevation: sea level to 90 meters</p>
+
+      <h4 class="font-bold text-gray-900">🌿 WHAT IS KUMANA</h4>
+      <p>✅ CONFIRMED — Kumana National Park is Sri Lanka's most important bird nesting and breeding sanctuary and one of the finest birdwatching destinations in all of Asia. The park covers approximately 18,149 hectares of coastal dry zone lowland encompassing mangrove swamps, open lagoons, dry zone scrubland, grasslands, riverine forest, rocky outcrops, and coastal beach habitat along Sri Lanka's southeastern coast.</p>
+      <p>✅ CONFIRMED — The park was formerly known as Yala East National Park — it is the eastern sector of the broader Yala protected area complex. The two parks are directly contiguous, separated only by the Kumbukkan Oya river at the southern boundary. The park was formally renamed Kumana National Park on June 6, 2006.</p>
+      <p>✅ CONFIRMED — Kumana's defining distinction from all other national parks in Sri Lanka is its exceptional concentration and diversity of water birds and migratory species. While Yala is the premier destination for leopard, and Wilpattu for sloth bear and wilderness atmosphere, Kumana is without equal in Sri Lanka for birds. Even a visitor with no prior birdwatching experience can expect to observe around 50 species of birds in a single outing. An experienced birder during the April to July season can record well over 100 species in a day.</p>
+      <p>✅ CONFIRMED — Kumana receives significantly fewer visitors than Yala. During busy periods in the high season, as few as 10 to 15 safari jeeps enter the park per day. By comparison, Yala Block I routinely receives hundreds of jeeps simultaneously. The practical consequence is that encounters with wildlife at Kumana are typically private and unhurried — when a leopard or a rare bird is found, you are frequently the only vehicle present.</p>
+
+      <h4 class="font-bold text-gray-900">📜 HISTORY — CONFIRMED FACTS</h4>
+      <p><strong>Ancient Civilisation — 3rd Century BC:</strong> ✅ CONFIRMED — The Kumana area is part of an ancient civilisation dating back to the 3rd century BC. The region was part of the ancient Magama Kingdom — the southern kingdom whose capital was at Tissamaharama. Rock inscriptions belonging to the 2nd and 1st centuries BC have been found throughout the park — at the base of most rock outcrops, caves contain inscriptions confirming human settlement and religious activity during this period.</p>
+      <p>✅ CONFIRMED — The Bowattegala Monastery — located within the park — contains an ancient reclining Buddha and inscriptions confirming it was an active Buddhist monastic site during the early historical period. A nine-meter statue of a reclining Buddha, now in ruins, was discovered in a large cave at Bambaragastalawa within the park area. The Kongala stupas within the park are further evidence of the area's ancient Buddhist heritage.</p>
+      <p>✅ CONFIRMED — Rock art — cave paintings believed to have been created by the Veddas, the indigenous people of Sri Lanka — is present within the park. The most documented paintings depict hunters and herds of wild elephants. These paintings are among the oldest surviving art in Sri Lanka.</p>
+      <p>⭐ LEGEND — Local tradition holds that the peripheral areas of Kudumbigala and Lenama were once inhabited by the Nittawo — a legendary race of small pygmy-like people who were traditional enemies of the Veddas. The Nittawo appear consistently in Vedda oral tradition. Their biological identity — whether a real human population, a now-extinct hominid species, or entirely legendary — remains unresolved and is debated by anthropologists.</p>
+      <p><strong>The Pada Yatra Pilgrimage Route:</strong> ✅ CONFIRMED — Kumana National Park lies on the route of the traditional annual Pada Yatra — the sacred foot pilgrimage to the Hindu temple at Kataragama. Both Tamil and Sinhalese communities participate in this pilgrimage, walking hundreds of kilometres through the jungle from the north and east of Sri Lanka to reach Kataragama. The pilgrimage route passes directly through the park area. A Tamil Hindu kovil within the park marks a stopping point on the pilgrimage route.</p>
+      <p><strong>Former Village:</strong> ✅ CONFIRMED — Before the park's current boundaries were established, Kumana contained a village whose residents were relocated to the Mahaweli development project area. The former village is no longer present within the park.</p>
+      <p><strong>Pre-Sanctuary History:</strong> ✅ CONFIRMED — Before formal protection was established, the Kumana area was a hunting ground for elephant poachers and was used by the Dehiwala Zoo in Colombo to obtain elephants for captivity.</p>
+      <p><strong>Declared a Bird Sanctuary — 1938:</strong> ✅ CONFIRMED — The Kumana Bird Sanctuary was formally declared a protected area in 1938, specifically in recognition of the extraordinary concentration of nesting and breeding water birds at the Kumana Villu mangrove swamp. This was the first formal legal protection of the area.</p>
+      <p><strong>Separated as an Independent Park — 1969:</strong> ✅ CONFIRMED — In 1969, Kumana National Park was formally separated from the larger Yala wildlife refuge and established as an independent conservation unit.</p>
+      <p><strong>Closure During the Civil War — 1985 to 2003:</strong> ✅ CONFIRMED — The park was closed from 1985 to March 2003 due to LTTE attacks and the security situation on Sri Lanka's east coast during the civil war. This 18-year closure had significant consequences for wildlife management and infrastructure but the park's geographic isolation meant wildlife populations were largely protected from poaching during this period — unlike Wilpattu, which was systematically poached during its closure.</p>
+      <p><strong>2004 Tsunami:</strong> ✅ CONFIRMED — Kumana was significantly affected by the Boxing Day tsunami of December 26, 2004. The coastal areas of the park were inundated and infrastructure damaged. The park's wildlife population was affected in the coastal zones.</p>
+      <p><strong>Renamed — 2006:</strong> ✅ CONFIRMED — The park was formally renamed from Yala East National Park to Kumana National Park on June 6, 2006.</p>
+
+      <h4 class="font-bold text-gray-900">🌿 HABITAT — THE LANDSCAPE OF KUMANA</h4>
+      <p>✅ CONFIRMED — Kumana contains a complex mosaic of habitat types within its 18,149 hectares:</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>The Kumana Villu:</strong> The defining feature. A 200-hectare natural mangrove swamp lake fed by the Kumbukkan Oya.</li>
+        <li><strong>Open Lagoons and Tanks:</strong> Twenty lagoons and tanks support extraordinary bird concentrations.</li>
+        <li><strong>Dry Zone Scrubland and Grassland:</strong> Dominant land habitat supporting deer, elephants, leopards.</li>
+        <li><strong>Riverine Forest:</strong> Along the Kumbukkan Oya, critical habitat for fishing cats, otters, and water birds.</li>
+        <li><strong>Rocky Outcrops:</strong> Provide nesting sites for raptors and shelter for leopards.</li>
+        <li><strong>Coastal Beach and Dune:</strong> Sea turtle nesting habitat and migratory bird corridor.</li>
+        <li><strong>Mangrove Forest:</strong> Nesting habitat for herons, egrets, storks, and nursery for fish/crustaceans.</li>
+      </ul>
+
+      <h4 class="font-bold text-gray-900">🦅 BIRDS — THE DEFINING FEATURE OF KUMANA</h4>
+      <p>✅ CONFIRMED — 255 species of birds have been recorded. The park is one of the most important bird nesting and breeding grounds in all of Sri Lanka.</p>
+      <p><strong>The Migration Season — April to July:</strong> ✅ CONFIRMED — Peak nesting and breeding season. Tens of thousands of birds migrate to the Kumana swamp area.</p>
+      <p><strong>The Rarest Bird — Black-Necked Stork:</strong> ✅ CONFIRMED — Kumana is the most reliable location in Sri Lanka for sightings of this Near Threatened species.</p>
+      <p><strong>Other Notable Species:</strong> Painted Stork, Lesser Adjutant, Great Thick-Knee, Eurasian Spoonbill, Malabar Pied Hornbill, and many migratory waterfowl and waders.</p>
+      <p>⚠️ DECLINING BIRD NUMBERS: ✅ CONFIRMED — Bird numbers have fallen recently, partly due to threats like the proposed Kirinda-Panama coastal road.</p>
+
+      <h4 class="font-bold text-gray-900">🐆 MAMMALS</h4>
+      <p>Includes Sri Lankan Leopard (private, unhurried encounters), Sri Lankan Elephant (common, 30-40 individuals), Sri Lankan Sloth Bear (confirmed resident), Water Buffalo, Spotted Deer, Sambar Deer, Wild Boar, Golden Jackal, Fishing Cat, European Otter, Toque Macaque, and Grey Langur.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p><strong>April to July:</strong> The Nesting Season (Primary Recommendation). Peak activity at Kumana Villu.</p>
+      <p><strong>January to March:</strong> Inter-monsoon dry period. Good wildlife viewing.</p>
+      <p><strong>November to March:</strong> The Wet Season. Lower bird numbers but a unique flooded landscape.</p>
+      <p><strong>August to October:</strong> Quieter period.</p>
+
+      <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Go in April to July for the birds.</li>
+        <li>Depart Arugam Bay by 5:00 AM.</li>
+        <li>Bring binoculars — a genuine necessity.</li>
+        <li>Use the watchtowers.</li>
+        <li>Choose a guide with specific Kumana expertise.</li>
+        <li>Never approach the water's edge on foot.</li>
+        <li>Bring insect repellent.</li>
+        <li>Combine with Arugam Bay and Yala.</li>
+      </ul>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🦅 කුමණ ජාතික වනෝද්‍යානය — KUMANA NATIONAL PARK</h3>
+      <p><strong>ශ්‍රී ලංකාවේ ප්‍රමුඛතම පක්ෂි නිරීක්ෂණ ගමනාන්තය</strong></p>
+      <p>✅ සත්‍ය තොරතුරු පමණි<br>✅ රජයේ වාර්තා, විද්‍යාත්මක සමීක්ෂණ, පුරාවිද්‍යාත්මක සාධක සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත<br>⭐ සම්ප්‍රදායික විශ්වාසයන්<br>⚠️ අවිනිශ්චිත තොරතුරු</p>
+      
+      <h4 class="font-bold text-gray-900">📍 පිහිටීම</h4>
+      <p>පළාත: නැගෙනහිර පළාත, ශ්‍රී ලංකාව<br>දිස්ත්‍රික්කය: අම්පාර දිස්ත්‍රික්කය<br>පිහිටීම: ශ්‍රී ලංකාවේ ගිනිකොනදිග වෙරළ තීරය, යාල ජාතික වනෝද්‍යානයට උතුරින්<br>කොළඹ සිට දුර: කි.මී. 391 — මාර්ගයෙන් පැය 6-7<br>ආරුගම්බේ සිට දුර: කි.මී. 22 දකුණට — පැය 1<br>පනම ගම්මානයට දුර: කි.මී. 5<br>යාල ජාතික වනෝද්‍යානයට දුර: කුඹුක්කන් ඔයෙන් වෙන්වී ඇත<br>කතරගමට දුර: කි.මී. 60 බටහිරට — පැය 1.5<br>ප්‍රධාන දොරටුව: ඔකඳ දොරටුව, ආරුගම්බේ සිට කි.මී. 22<br>උන්නතාංශය: මුහුදු මට්ටමේ සිට මීටර් 90 දක්වා</p>
+
+      <h4 class="font-bold text-gray-900">🌿 කුමණ යනු කුමක්ද?</h4>
+      <p>✅ කුමණ ජාතික වනෝද්‍යානය ශ්‍රී ලංකාවේ පක්ෂීන් කූඩු සාදන සහ අභිජනනය කරන වැදගත්ම අභයභූමියයි. ආසියාවේ හොඳම පක්ෂි නිරීක්ෂණ ස්ථානයකි. හෙක්ටයාර 18,149ක් පුරා පැතිරී ඇති මෙය කඩොලාන වගුරු බිම්, කලපු, වියළි කලාපීය පඳුරු සහිත භූමි සහ වෙරළබඩ පරිසර පද්ධතියකින් සමන්විත වේ.</p>
+      <p>✅ මෙය මීට පෙර යාල නැගෙනහිර ජාතික වනෝද්‍යානය ලෙස හැඳින්විණි. 2006 ජුනි 6 දින කුමණ ජාතික වනෝද්‍යානය ලෙස නම් කරන ලදී.</p>
+      <p>✅ කුමණෙහි ඇති සුවිශේෂී ලක්ෂණය වන්නේ ජලජ පක්ෂීන්ගේ සහ සංචාරක පක්ෂීන්ගේ විවිධත්වයයි. යාල දිවියන් සඳහා ප්‍රසිද්ධ වුවත්, කුමණ පක්ෂීන් සඳහා ලංකාවේ ඇති හොඳම ස්ථානයයි.</p>
+      <p>✅ යාලට සාපේක්ෂව කුමණට පැමිණෙන සංචාරකයින් සංඛ්‍යාව ඉතා අඩුය. එම නිසා සතුන් නැරඹීම ඉතා නිහඬව සහ පෞද්ගලිකව සිදු කළ හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">📜 ඉතිහාසය</h4>
+      <p><strong>පුරාණ ශිෂ්ටාචාරය:</strong> ක්‍රි.පූ. 3 වන සියවස දක්වා දිවෙන ඉතිහාසයක් ඇත. මාගම රාජධානියේ කොටසකි. ගල් ලෙන් වල ඇති සෙල්ලිපි මගින් පැරණි මානව ජනාවාස සහ ආගමික ක්‍රියාකාරකම් තහවුරු වේ.</p>
+      <p><strong>බෝවත්තගල සහ බඹරගස්තලාව:</strong> පැරණි බෞද්ධ ආරාම සංකීර්ණ සහ පිළිම වල නටබුන් මෙහි ඇත.</p>
+      <p><strong>පද යාත්‍රාව:</strong> කතරගම දේවාලය වෙත යන වාර්ෂික පද යාත්‍රාව කුමණ හරහා ගමන් කරයි.</p>
+      <p><strong>පක්ෂි අභයභූමිය:</strong> 1938 දී පක්ෂි අභයභූමියක් ලෙස ප්‍රකාශයට පත් කරන ලදී.</p>
+      <p><strong>යුද්ධය සහ වසා දැමීම:</strong> 1985 සිට 2003 දක්වා යුද්ධය හේතුවෙන් වසා දමා තිබුණි.</p>
+
+      <h4 class="font-bold text-gray-900">🌿 පරිසර පද්ධතිය</h4>
+      <p>කුමණ විල්ලුව, කලපු, වියළි කලාපීය පඳුරු සහිත භූමි, ගංගාශ්‍රිත වනාන්තර, ගල් පර්වත සහ වෙරළබඩ කලාපය මෙහි ඇති ප්‍රධාන පරිසර පද්ධති වේ.</p>
+
+      <h4 class="font-bold text-gray-900">🦅 පක්ෂීන්</h4>
+      <p>පක්ෂි විශේෂ 255ක් වාර්තා වී ඇත. අප්‍රේල් සිට ජූලි දක්වා කාලය පක්ෂීන්ගේ අභිජනන සමයයි. කළු-බෙල්ලන් දොඹා (Black-Necked Stork) වැනි දුර්ලභ පක්ෂීන් මෙහි දැකිය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🐆 ක්ෂීරපායින්</h4>
+      <p>දිවියන්, අලි ඇතුන්, වලසුන්, වල් මී හරකුන්, තිත් මුවන්, ගෝනුන්, වල් ඌරන්, හිවලුන්, හඳුන් දිවියන් සහ දිය බල්ලන් මෙහි දැකිය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ නැරඹීමට සුදුසුම කාලය</h4>
+      <p><strong>අප්‍රේල් සිට ජූලි:</strong> පක්ෂීන්ගේ අභිජනන සමය (හොඳම කාලය).</p>
+      <p><strong>ජනවාරි සිට මාර්තු:</strong> වියළි කාලය, සතුන් නැරඹීමට සුදුසුය.</p>
+      <p><strong>නොවැම්බර් සිට මාර්තු:</strong> වැසි සහිත කාලය.</p>
+
+      <h4 class="font-bold text-gray-900">💡 වැදගත් උපදෙස්</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>පක්ෂීන් නැරඹීමට නම් අප්‍රේල්-ජූලි කාලය තෝරා ගන්න.</li>
+        <li>උදෑසන 5:00 ට ආරුගම්බේ සිට ගමන් අරඹන්න.</li>
+        <li>දුරේක්ෂයක් (Binoculars) අනිවාර්යයෙන්ම රැගෙන යන්න.</li>
+        <li>නිරීක්ෂණ කුළුණු (Watchtowers) භාවිතා කරන්න.</li>
+        <li>කුමණ ගැන හොඳ දැනුමක් ඇති මඟ පෙන්වන්නෙකු තෝරා ගන්න.</li>
+        <li>ජලයට ඉතා ආසන්නයට නොයන්න (කිඹුලන් සිටිය හැක).</li>
+        <li>කෘමි විකර්ෂක (Insect repellent) භාවිතා කරන්න.</li>
+      </ul>
+    </div>`
+  },
   bundala: { EN: "A park by the sea famous for beautiful birds.", SI: "වෙරළබඩ කලපුවලින් පිරි මෙහි සංචාරක පක්ෂීන් බහුලව දැකගත හැක." },
   sinharaja: { EN: "A very old and beautiful rainforest with many animals.", SI: "ලෝක උරුමයක් වන මෙය ඉතා වටිනා වැසි වනාන්තරයකි." },
-  horton: { EN: "A high park with a famous cliff called World's End.", SI: "මීදුමෙන් වැසුණු කඳුකර තැන්නක් වන මෙහි ලෝකාන්තය පිහිටා ඇත." },
+  horton: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🏔️ HORTON PLAINS NATIONAL PARK — හෝර්ටන් තැන්න ජාතික උද්‍යානය</h3>
+      <p><strong>Sri Lanka's Highest Plateau — Complete Verified Guide</strong></p>
+      <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by geology, archaeology, government records, and scientific surveys<br>⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable<br>⚠️ UNCERTAIN — figures vary between sources or are debated</p>
+      
+      <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
+      <p>Province: Central Province and Uva Province, Sri Lanka<br>District: Nuwara Eliya District<br>Position: Southern plateau of the central highlands<br>Altitude: 2,100 to 2,300 meters (6,900 to 7,500 feet) above sea level<br>Area: 3,160 hectares (31.6 square kilometres)<br>Distance from Nuwara Eliya: approximately 20 km south — about 45 minutes to 1 hour by road<br>Distance from Haputale: approximately 20 km west — about 45 minutes to 1 hour by road<br>Distance from Ella: approximately 40 km west — about 1.5 hours by road<br>Distance from Colombo: approximately 200 km — about 5 to 6 hours by road<br>Distance from Kandy: approximately 120 km — about 3 hours by road<br>Nearest railway stations: Ohiya (4 km from park entrance) and Pattipola (9 km) — both on the Colombo–Badulla main line<br>Main entrance: Ohiya gate — accessed via the road from Nuwara Eliya through Pattipola or from Haputale</p>
+
+      <h4 class="font-bold text-gray-900">🌿 WHAT IS HORTON PLAINS</h4>
+      <p>✅ CONFIRMED — Horton Plains National Park is Sri Lanka's highest and most isolated wildlife plateau — an extraordinary highland wilderness unlike any other landscape on the island. It encompasses an area of 31 square kilometres and is located at an elevation of 2,100 to 2,300 metres, encompassing montane grassland and cloud forest.</p>
+      <p>✅ CONFIRMED — Horton Plains contains the most extensive area of cloud forest still existing in Sri Lanka. This cloud forest — perpetually mist-draped, ancient, and ecologically irreplaceable — is the defining natural feature of the park and produces the extraordinary concentration of endemic species for which Horton Plains is internationally recognised.</p>
+      <p>✅ CONFIRMED — The Horton Plains are the headwaters of three major Sri Lankan rivers — the Mahaweli, Kelani, and Walawe rivers. The same three-river watershed significance found at Adam's Peak extends to Horton Plains — the plateau feeds virtually all of Sri Lanka's most important river systems, making it the most critical freshwater catchment area in the entire country.</p>
+      <p>✅ CONFIRMED — This is the only national park in Sri Lanka where visitors can explore the designated trails on foot without a compulsory guide. Horton Plains is unique in allowing independent walking on the marked trail circuit — one of the most important practical distinctions for visitors planning their experience.</p>
+      <p>✅ CONFIRMED — The plateau comes to a sudden end at World's End, a stunning escarpment that plunges 880 metres. This sheer vertical drop at the southern edge of the plateau — where the highland world simply ends and the lowlands begin far below — is the single most dramatic natural feature of the park.</p>
+
+      <h4 class="font-bold text-gray-900">📜 HISTORY — CONFIRMED FACTS</h4>
+      <p><strong>Prehistoric Human Presence — Balangoda Culture:</strong> ✅ CONFIRMED — Stone tools dating back to the Balangoda culture — who existed from around 30,000 to around 10,000 BCE — have been found here. These tools are among the oldest evidence of human presence in the Sri Lankan highlands and confirm that Homo sapiens balangodensis — the prehistoric people of Sri Lanka — were living at elevations above 2,000 metres at least 30,000 years ago.</p>
+      <p>⭐ LEGEND — The Ramayana and the Original Name: According to a significant folktale prevalent in Sri Lanka that parallels the Indian epic Ramayana, it was on Thotupala mountain in Horton Plains that King Ravana landed his aircraft after abducting Sita. Consequently, the army of Rama set fire to the Horton hillsides and this fire lasted for a long time. The former name Maha Eliya Thenna means "The hugely lightened ground" with reference to this legend.</p>
+      <p><strong>The Actual Name Origin:</strong> ✅ CONFIRMED — Horton Plains was once known locally as Maha Eliya Thenna — meaning "great open plain" — a name dating back before British rule. The British later renamed it Horton Plains after Sir Robert Wilmot-Horton, a colonial governor of Ceylon in the early 19th century.</p>
+      <p><strong>First Colonial Protection — 1873:</strong> ✅ CONFIRMED — Sir Joseph Dalton Hooker advised the British Government "to leave all Montane Forests above 5000 ft. undisturbed" and an administrative order to this effect was issued in 1873 that prevented clearing and felling of forests in the region. This 1873 administrative order was the first formal legal protection of the Horton Plains environment.</p>
+      <p><strong>Designated Wildlife Sanctuary — 1969:</strong> ✅ CONFIRMED — The area was elevated to wildlife sanctuary status in 1969.</p>
+      <p><strong>Elevated to National Park — 1988:</strong> ✅ CONFIRMED — Horton Plains was elevated to national park status in 1988 due to its biodiversity importance.</p>
+      <p><strong>UNESCO World Heritage Site — 2010:</strong> ✅ CONFIRMED — In July 2010, the Central Highlands of Sri Lanka — which incorporates Horton Plains National Park, Peak Wilderness Sanctuary, and the Knuckles Mountain Range — was inscribed on the World Heritage List.</p>
+
+      <h4 class="font-bold text-gray-900">🌄 THE LANDSCAPE — WHAT MAKES HORTON PLAINS UNIQUE</h4>
+      <p>✅ CONFIRMED — Horton Plains presents a landscape utterly unlike anything else in Sri Lanka — and unlike almost anything in tropical Asia. Approaching from the tea country below, visitors pass through increasingly cold, wind-swept highlands until the road suddenly opens onto a vast, open, treeless plateau swept by cold wind under enormous skies.</p>
+      <p><strong>The Two Habitat Zones:</strong> ✅ CONFIRMED — The vegetation of the park is classified into two distinctive groups — approximately 2,000 hectares of wet patana montane grasslands and shrublands, and the remaining area of cloud forest. The grasslands — patana — are open, rolling, wind-swept plains of highland grasses interspersed with low shrubs and wildflowers. The cloud forest patches are dense, ancient, and permanently mist-saturated — draped in old man's beard lichen, mosses, and ferns, with gnarled trees twisted by decades of highland wind.</p>
+      <p>✅ CONFIRMED — The cloud forest contains the characteristic Keena tree (Calophyllum walkeri) — an endemic highland tree with a distinctive umbrella-shaped canopy. Keena trees grow slowly over many decades and the largest specimens in Horton Plains are centuries old. Their branches are permanently covered in lichens, mosses, and epiphytic plants — each tree supporting an entire miniature ecosystem on its surface.</p>
+      <p><strong>The Surrounding Peaks:</strong> ✅ CONFIRMED — Horton Plains lies in the shadows of Sri Lanka's second and third highest mountains — Kirigalpoththa at 2,395 metres and Totapola at 2,357 metres.</p>
+      <p><strong>Climate:</strong> ✅ CONFIRMED — The mean annual temperature is 13°C but the temperature varies considerably during the course of a day, reaching as high as 27°C during the daytime, and dipping as low as 5°C at night. During the southwest monsoon season, the wind speed sometimes reaches gale force. Although some rain falls throughout the year, a dry season occurs from January to March. Ground frost is common in February.</p>
+
+      <h4 class="font-bold text-gray-900">🏔️ THE CIRCULAR TRAIL — COMPLETE DETAILS</h4>
+      <p>✅ CONFIRMED — The defining experience of Horton Plains is the circular hiking trail that connects the park's three main attractions. The Horton Plains hike is a 10 km loop. At around 5 minutes after the park entrance, there is the option to walk left toward Mini World's End or right towards Baker's Falls. Most people complete the loop in 2.5 to 3 hours and the walk is not challenging.</p>
+      <p><strong>World's End — The Great Escarpment:</strong> ✅ CONFIRMED — World's End is the defining feature of Horton Plains and one of the most dramatic natural viewpoints in all of Asia. World's End is a sheer cliff that drops 880 metres (2,890 feet) into the valley below, offering visitors a dizzying view of the plains and distant mountains.</p>
+      <p>✅ CONFIRMED — On exceptionally clear mornings — primarily between January and March — the view from World's End extends across the southern plains of Sri Lanka all the way to the Indian Ocean, approximately 80 kilometres distant.</p>
+      <p>⚠️ SAFETY WARNING — CONFIRMED: The World's End is where the plateau ends in a sheer precipice of nearly 900 metres and the spot has no safety fence. There have been cases of people falling to their deaths from there. Be extra cautious, especially with children. The edge is entirely unprotected. The rock at the edge can be wet and slippery after rain. Stand well back from the edge and exercise extreme caution, particularly with children and when the ground is wet.</p>
+      <p>✅ CONFIRMED — There is also a Mini World's End — a smaller escarpment approximately 2 km from the park entrance with a drop of approximately 270 metres. Mini World's End provides a preview of the escarpment landscape and is reached much earlier on the trail. Most visitors stop briefly at Mini World's End before continuing to the main World's End.</p>
+      <p><strong>Baker's Falls:</strong> ✅ CONFIRMED — Baker's Falls is located on the circular trail approximately midway between the park entrance and World's End. It is a multi-tiered, 20-metre-tall waterfall. The falls are fed by the Belihul Oya river — one of the highland streams that originates on the Horton Plains plateau. The pool at the base of the falls and the stream below are surrounded by cloud forest vegetation — ferns, mosses, and overhanging trees create a sheltered green environment in sharp contrast to the open windy plateau above.</p>
+      <p>⚠️ SAFETY WARNING: Baker's Falls can be slippery and extra caution is required. The rocks around the base of the falls and the access path are permanently wet and covered in algae. Grip footwear is essential.</p>
+      <p><strong>Trail Direction:</strong> Most guides recommend walking the loop clockwise — turning right from the park entrance toward Baker's Falls first, then continuing to World's End, and returning via Mini World's End to the entrance. The practical advantage of this direction is that World's End is reached at approximately the midpoint of the walk — roughly 1.5 hours in — which is typically before 8:00 AM for visitors who enter at 6:00 AM.</p>
+
+      <h4 class="font-bold text-gray-900">🥾 ADDITIONAL HIKING TRAILS</h4>
+      <p><strong>Kirigalpoththa Summit Trail:</strong> ✅ CONFIRMED — The trail to the summit of Kirigalpoththa — Sri Lanka's second highest peak at 2,395 metres — begins within Horton Plains National Park and requires prior arrangement and a mandatory park ranger guide. The return hike takes approximately 4 to 5 hours from the park entrance.</p>
+      <p><strong>Thotupola Kanda Trail:</strong> ✅ CONFIRMED — A trail to Sri Lanka's third highest peak — Thotupola Kanda at 2,357 metres — is also accessible from within the park with a ranger guide.</p>
+
+      <h4 class="font-bold text-gray-900">🦌 MAMMALS</h4>
+      <p><strong>Sri Lankan Sambar Deer:</strong> ✅ CONFIRMED — The most commonly sighted large mammal is the Sri Lankan Sambar Deer, often seen grazing peacefully on the open plains. Sambar are present in large herds throughout Horton Plains and are almost guaranteed to be seen on any visit.</p>
+      <p><strong>Sri Lankan Leopard:</strong> ✅ CONFIRMED — Leopards have become a major attraction in recent years — larger and heavier than their lowland relatives, thanks to the cool climate and abundant prey. Sightings are not common but camera trap studies confirm a resident breeding population.</p>
+      <p><strong>Other Mammals:</strong> Purple-Faced Langur (endemic), Wild Boar, Fishing Cat, Giant Squirrel, Porcupine, and Otter.</p>
+
+      <h4 class="font-bold text-gray-900">🦅 BIRDS — EXCEPTIONAL ENDEMIC CONCENTRATION</h4>
+      <p>✅ CONFIRMED — The park contains 21 endemic bird species. Four species — the Sri Lanka Magpie, Dull-Blue Flycatcher, Sri Lanka White-Eye, and Sri Lanka Wood Pigeon — occur only in Horton Plains among all Sri Lankan national parks. All six highland-restricted endemic birds of Sri Lanka are found here.</p>
+      <p><strong>The Six Highland Endemics:</strong> Sri Lanka Wood Pigeon, Dull-Blue Flycatcher, Sri Lanka White-Eye, Sri Lanka Bush Warbler, Yellow-Eared Bulbul, and Sri Lanka Whistling Thrush.</p>
+      <p><strong>Other Notable Birds:</strong> Sri Lanka Blue Magpie, Sri Lanka Junglefowl, Sri Lanka Spurfowl, Orange-Billed Babbler, Yellow-Fronted Barbet, Crested Serpent Eagle, Mountain Hawk-Eagle, Peregrine Falcon, and Alpine Swift.</p>
+
+      <h4 class="font-bold text-gray-900">🌿 FLORA — EXCEPTIONAL ENDEMISM</h4>
+      <p>✅ CONFIRMED — The plant diversity of Horton Plains is extraordinary. The park contains a very high proportion of endemic plant species — many found nowhere else on earth. Key species include the Keena tree (Calophyllum walkeri), Rhododendron (Rhododendron arboreum ssp. zeylanicum), Mahoe (Agapetes thwaitesii), and several species of Highland Nelu (Strobilanthes sp.).</p>
+
+      <h4 class="font-bold text-gray-900">⚠️ FOREST DIEBACK</h4>
+      <p>✅ CONFIRMED — Forest dieback is one of the major threats to the park and some studies suggest that it is caused by a natural phenomenon. Large areas of cloud forest within the park show patches of dead trees. The cause of this dieback has been debated among ecologists.</p>
+
+      <h4 class="font-bold text-gray-900">🎟️ ENTRY FEES AND PRACTICAL DETAILS — 2026</h4>
+      <p>✅ CONFIRMED — Entry Fees: Foreign adults: approximately USD $40 to $80 per person (varies). Sri Lankan nationals: nominal local rate. Vehicle entry fee charged separately.</p>
+      <p><strong>Opening Hours:</strong> Daily from 6:00 AM to 6:00 PM.</p>
+      <p><strong>🚫 No Plastic Zone — Strictly Enforced:</strong> ✅ CONFIRMED — Horton Plains has a strict environmental policy. Park officials will check your bags at the entrance and confiscate all single-use plastics, including plastic wrappers. Use reusable water bottles and paper bags for snacks.</p>
+      <p><strong>No Guide Required:</strong> ✅ CONFIRMED — Horton Plains is the only national park in Sri Lanka where independent walking on the designated trails is permitted without a compulsory guide.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p><strong>January to March:</strong> Primary Recommendation — dry season, clearest skies, best World's End views.</p>
+      <p><strong>April:</strong> The Transition Month — generally good but unpredictable afternoons.</p>
+      <p><strong>May to September:</strong> The Southwest Monsoon — significant rainfall, frequent cloud cover.</p>
+      <p><strong>October to December:</strong> The Northeast Monsoon Transition — improving conditions from November.</p>
+
+      <h4 class="font-bold text-gray-900">🚌 GETTING THERE</h4>
+      <p><strong>By Train:</strong> Ohiya (4 km) or Pattipola (9 km) stations on the Colombo–Badulla main line.</p>
+      <p><strong>By Road:</strong> From Nuwara Eliya (20 km), Haputale (20 km), or Ella (40 km). No public bus service to the park entrance.</p>
+
+      <h4 class="font-bold text-gray-900">🏨 WHERE TO STAY</h4>
+      <p><strong>No Accommodation Inside the Park:</strong> ✅ CONFIRMED — There is no accommodation within Horton Plains National Park itself.</p>
+      <p><strong>Near the Park:</strong> Jungle Boutique (Ohiya), Jetwing St. Andrew's (Nuwara Eliya), and various guesthouses in Nuwara Eliya and Haputale.</p>
+
+      <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Arrive at the park gate at 6:00 AM.</li>
+        <li>Bring warm clothing.</li>
+        <li>Use a reusable water bottle.</li>
+        <li>Pack snacks in paper or fabric bags.</li>
+        <li>Wear grip footwear.</li>
+        <li>Bring binoculars for the birds.</li>
+        <li>Do not approach the edge at World's End.</li>
+        <li>Consider a dawn start.</li>
+        <li>Combine with Bambarakanda Falls and Nuwara Eliya.</li>
+      </ul>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">🏔️ හෝර්ටන් තැන්න ජාතික උද්‍යානය — HORTON PLAINS NATIONAL PARK</h3>
+      <p><strong>ශ්‍රී ලංකාවේ උසම සානුව — සම්පූර්ණ මාර්ගෝපදේශය</strong></p>
+      <p>✅ සත්‍ය තොරතුරු පමණි<br>✅ භූ විද්‍යාත්මක, පුරාවිද්‍යාත්මක, රජයේ වාර්තා සහ විද්‍යාත්මක සමීක්ෂණ මගින් තහවුරු කර ඇත<br>⭐ සම්ප්‍රදායික විශ්වාසයන්<br>⚠️ අවිනිශ්චිත තොරතුරු</p>
+      
+      <h4 class="font-bold text-gray-900">📍 පිහිටීම</h4>
+      <p>පළාත: මධ්‍යම සහ ඌව පළාත්, ශ්‍රී ලංකාව<br>දිස්ත්‍රික්කය: නුවරඑළිය දිස්ත්‍රික්කය<br>පිහිටීම: මධ්‍යම කඳුකරයේ දකුණු සානුව<br>උන්නතාංශය: මුහුදු මට්ටමේ සිට මීටර් 2,100 - 2,300<br>ප්‍රදේශය: හෙක්ටයාර 3,160<br>නුවරඑළියේ සිට දුර: කි.මී. 20 දකුණට — පැය 0.75 - 1<br>හපුතලේ සිට දුර: කි.මී. 20 බටහිරට — පැය 0.75 - 1<br>ඇල්ලේ සිට දුර: කි.මී. 40 බටහිරට — පැය 1.5<br>කොළඹ සිට දුර: කි.මී. 200 — පැය 5 - 6<br>මහනුවර සිට දුර: කි.මී. 120 — පැය 3<br>ළඟම දුම්රිය ස්ථාන: ඔහිය (කි.මී. 4) සහ පට්ටිපොළ (කි.මී. 9)<br>ප්‍රධාන දොරටුව: ඔහිය දොරටුව</p>
+
+      <h4 class="font-bold text-gray-900">🌿 හෝර්ටන් තැන්න යනු කුමක්ද?</h4>
+      <p>✅ හෝර්ටන් තැන්න ශ්‍රී ලංකාවේ උසම සහ හුදකලාම වනජීවී සානුවයි. මෙය මීටර් 2,100-2,300 උන්නතාංශයක පිහිටි තෘණ භූමි සහ වලාකුළු වනාන්තරවලින් සමන්විත අද්විතීය පරිසර පද්ධතියකි.</p>
+      <p>✅ මෙහි ඇති වලාකුළු වනාන්තර ශ්‍රී ලංකාවේ පවතින විශාලතම වලාකුළු වනාන්තර පද්ධතියයි.</p>
+      <p>✅ ශ්‍රී ලංකාවේ ප්‍රධාන ගංගා තුනක (මහවැලි, කැලණි, වලවේ) උල්පත මෙහි පිහිටා ඇත.</p>
+      <p>✅ ශ්‍රී ලංකාවේ මඟ පෙන්වන්නෙකු නොමැතිව ස්වාධීනව ඇවිද යා හැකි එකම ජාතික වනෝද්‍යානය මෙයයි.</p>
+      <p>✅ ලෝකාන්තය (World's End) මෙහි ඇති වඩාත්ම ආකර්ෂණීය ස්ථානයයි.</p>
+
+      <h4 class="font-bold text-gray-900">📜 ඉතිහාසය</h4>
+      <p><strong>පූර්ව ඉතිහාසය:</strong> ක්‍රි.පූ. 30,000 සිට 10,000 දක්වා කාලයට අයත් බලංගොඩ මානවයාගේ ගල් ආයුධ මෙහි තිබී හමුවී ඇත.</p>
+      <p><strong>පුරාවෘත්ත:</strong> රාමායණයට අනුව රාවණා රජු සීතාව පැහැරගෙන විත් ගොඩබට ස්ථානය මෙය ලෙස ජනප්‍රවාදයේ පවතී.</p>
+      <p><strong>නම:</strong> බ්‍රිතාන්‍ය ආණ්ඩුකාර රොබට් විල්මොට්-හෝර්ටන් සිහිවීම පිණිස 'හෝර්ටන් තැන්න' ලෙස නම් කරන ලදී.</p>
+      <p><strong>ආරක්ෂාව:</strong> 1873 දී බ්‍රිතාන්‍ය රජය මගින් මීටර් 1,500ට වැඩි වනාන්තර ආරක්ෂා කිරීමට නියෝගයක් නිකුත් කරන ලදී.</p>
+      <p><strong>ජාතික වනෝද්‍යානය:</strong> 1988 දී ජාතික වනෝද්‍යානයක් ලෙස ප්‍රකාශයට පත් කරන ලදී.</p>
+      <p><strong>ලෝක උරුමය:</strong> 2010 දී යුනෙස්කෝ ලෝක උරුමයක් ලෙස නම් කරන ලදී.</p>
+
+      <h4 class="font-bold text-gray-900">🌄 භූ දර්ශනය</h4>
+      <p>✅ හෝර්ටන් තැන්න තෘණ භූමි (පතන) සහ වලාකුළු වනාන්තර ලෙස ප්‍රධාන කොටස් දෙකකින් සමන්විත වේ. කීන ගස්, රෝඩොඩෙන්ඩ්‍රන් සහ විවිධ මල් වර්ග මෙහි බහුලව දැකිය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🏔️ සංචාරක මංපෙත</h4>
+      <p>✅ කි.මී. 10ක වෘත්තාකාර මංපෙතක් මගින් ලෝකාන්තය, කුඩා ලෝකාන්තය සහ බේකර්ස් ඇල්ල නැරඹිය හැකිය. මෙය සම්පූර්ණ කිරීමට පැය 2.5 - 3ක් ගතවේ. සාමාන්‍යයෙන් දක්ෂිණාවර්තව (Baker's Falls දෙසට) ගමන් කිරීම වඩාත් සුදුසුය.</p>
+
+      <h4 class="font-bold text-gray-900">🦌 ක්ෂීරපායින්</h4>
+      <p>ගෝනුන් (Sambar Deer) බහුලව දැකිය හැකිය. මීට අමතරව දිවියන්, වල් ඌරන්, දිය බල්ලන් සහ වඳුරන් ද වාසය කරයි.</p>
+
+      <h4 class="font-bold text-gray-900">🦅 පක්ෂීන්</h4>
+      <p>පක්ෂි විශේෂ 21ක් මෙහි ආවේණික වේ. ශ්‍රී ලංකා අළු කෑදැත්තා, නිල් මැගිපියා වැනි දුර්ලභ පක්ෂීන් මෙහි දැකිය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ නැරඹීමට සුදුසුම කාලය</h4>
+      <p><strong>ජනවාරි සිට මාර්තු:</strong> වියළි කාලය, පැහැදිලි අහස, ලෝකාන්තය නැරඹීමට හොඳම කාලය.</p>
+      <p><strong>අප්‍රේල්:</strong> සාමාන්‍ය කාලගුණයක් පවතී.</p>
+      <p><strong>මැයි සිට සැප්තැම්බර්:</strong> වැසි සහිත කාලය.</p>
+      <p><strong>ඔක්තෝබර් සිට දෙසැම්බර්:</strong> වැසි සහිත කාලය.</p>
+
+      <h4 class="font-bold text-gray-900">💡 වැදගත් උපදෙස්</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>උදෑසන 6:00 ට දොරටුවට පැමිණෙන්න.</li>
+        <li>උණුසුම් ඇඳුම් රැගෙන යන්න.</li>
+        <li>නැවත භාවිතා කළ හැකි ජල බෝතලයක් රැගෙන යන්න.</li>
+        <li>ප්ලාස්ටික් ද්‍රව්‍ය රැගෙන ඒම තහනම්ය.</li>
+        <li>හොඳින් ග්‍රහණය වන පාවහන් පැළඳ ගන්න.</li>
+        <li>දුරේක්ෂයක් රැගෙන යන්න.</li>
+        <li>ලෝකාන්තයේ අද්දරට නොයන්න.</li>
+        <li>උදෑසනම ගමන් ආරම්භ කරන්න.</li>
+        <li>බඹරකන්ද ඇල්ල සහ නුවරඑළිය සමඟ ගමන සැලසුම් කරන්න.</li>
+      </ul>
+    </div>`
+  },
   pigeonisland: { EN: "A park in the sea with coral reefs and sharks.", SI: "කොරල් පර සහ මෝරුන් නැරඹිය හැකි මුහුදු උද්‍යානයකි." },
   wasgamuwa: { EN: "A wild place where bears and elephants live.", SI: "වලසුන් සහ අලි ඇතුන් සැරිසරන හුදකලා වනාන්තරයකි." },
 
   // Mountains
-  ella: { EN: "A beautiful village with tea farms and a famous bridge.", SI: "තේ වතු සහ ආරුක්කු නවය පාලම සහිත සුන්දර කඳුකර ගම්මානයකි." },
   nuwaraeliya: { EN: "A cool town in the hills with old British buildings.", SI: "බ්‍රිතාන්‍ය ගෘහ නිර්මාණ ශිල්පය සහිත සිසිල් කඳුකර නගරයකි." },
-  "adam'speak": { EN: "A holy mountain that many people climb for prayer.", SI: "පූජනීය කඳු මුදුනක් වන මෙය වන්දනාකරුවන්ගේ ගමනාන්තයකි." },
+  "adam'speak": {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ ADAM'S PEAK — ශ්‍රී පාද</h3>
+      <p><strong>Sri Lanka's Most Sacred Mountain — Complete Verified Guide</strong></p>
+      <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by archaeology, historical records, physical measurement, and mainstream scholarship<br>⭐ RELIGIOUS TRADITION — sincerely held belief across multiple faiths, recorded in ancient chronicles, not independently verifiable by science<br>⚠️ UNCERTAIN — debated among historians or varies between credible sources</p>
+      
+      <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
+      <p>Province: Sabaragamuwa Province and Central Province, Sri Lanka<br>Districts: Ratnapura District and Nuwara Eliya District<br>Position: Southern reaches of the central highlands<br>Altitude: 2,243 meters (7,359 feet) above sea level<br>Distance from Colombo: approximately 100 km — about 3 hours by road to the Hatton trailhead<br>Distance from Kandy: approximately 80 km — about 2.5 hours by road to Hatton<br>Distance from Nuwara Eliya: approximately 40 km — about 1.5 hours by road<br>Distance from Ratnapura: approximately 40 km northeast — about 1.5 hours by road<br>Distance from Hatton: approximately 32 km southwest — about 1 hour by road<br>Distance from Ella: approximately 120 km — about 3 hours by road</p>
+
+      <h4 class="font-bold text-gray-900">🏔️ WHAT IS ADAM'S PEAK</h4>
+      <p>✅ CONFIRMED — Adam's Peak — known in Sinhala as Sri Pada, meaning Sacred Footprint — is a 2,243-meter conical sacred mountain in the central highlands of Sri Lanka. It is not the tallest mountain in Sri Lanka — that distinction belongs to Pidurutalagala — but its isolated, almost perfectly pyramidal profile rising dramatically above the surrounding hills makes it the most visually distinctive and instantly recognisable mountain on the island. From the sea, its silhouette has been a navigational landmark for Indian Ocean sailors for centuries.</p>
+      <p>✅ CONFIRMED — The mountain is the source of three of Sri Lanka's most important rivers — the Kelani River, the Walawe River, and the Kalu Ganga. Three great river systems feeding millions of people in the lowlands all originate from a single mountain peak — a geographic fact of enormous practical and symbolic significance throughout recorded history.</p>
+      <p>✅ CONFIRMED — The rock is composed of gneiss and is known to be rich in garnets, rubies, and sapphires — geologically connected to the same ancient Precambrian metamorphic rock system that makes Ratnapura — City of Gems — one of the world's most important gemstone-producing regions.</p>
+      <p>✅ CONFIRMED — No other mountain on earth has been continuously revered by so many people, from so many different religions, for so many centuries. Adam's Peak is simultaneously a place of pilgrimage for Buddhists, Hindus, Muslims, and Christians — four world faiths each claiming the mountain's central sacred feature, the Sri Pada, as their own.</p>
+
+      <h4 class="font-bold text-gray-900">📜 HISTORY — CONFIRMED FACTS</h4>
+      <p><strong>Pre-Buddhist and Indigenous Veneration:</strong> ✅ CONFIRMED — Long before Buddhism, Hinduism, Christianity, or Islam reached Sri Lanka, the mountain was venerated by the aboriginal inhabitants of the island — the Veddas. Their name for the peak was Samanala Kanda — Butterfly Mountain — named for the vast clouds of butterflies that migrate through the highland passes and around this peak annually. Saman was one of the four guardian deities of the island. This indigenous veneration predates all written records and all the major world religions that subsequently adopted the site. The mountain's sanctity is therefore older than any of the traditions that now define it.</p>
+      <p><strong>5th Century Written Records:</strong> ✅ CONFIRMED — Adam's Peak is mentioned in the 5th century Pali chronicle Mahavamsa, which records a royal connection to the mountain. The 5th century Chinese Buddhist monk Faxian — who visited Sri Lanka and left detailed accounts of the island — wrote of the mountain in his travel records. A 6th century Tamil epic poem, the Manimekalai, refers to the peak of Samantakuta on the island of Ratnadipa as the site of the footprints of the Buddha — confirming the mountain's sacred status was already established across the Indian Ocean world by this period.</p>
+      <p><strong>King Vijayabahu I — Earliest Confirmed Royal Patronage:</strong> ✅ CONFIRMED — The earliest confirmed historical evidence in chronicles and stone inscriptions of organised royal patronage of the Sri Pada pilgrimage dates to the reign of King Vijayabahu I, who ruled from 1065 to 1119 AD. Stone inscriptions found at Gilimale and Ambagamuwa confirm that Vijayabahu I dedicated the village of Gilimale to provide for the needs of pilgrims travelling to the sacred footprint. He also established wayside rest houses — ambalamas — along the pilgrimage route. These physical inscriptions are among the oldest confirmed evidence of organised pilgrimage infrastructure at Adam's Peak.</p>
+      <p><strong>Medieval Infrastructure — 12th to 13th Century:</strong> ✅ CONFIRMED — King Nissankamalla, who reigned from 1187 to 1196, had a concrete protective slab constructed over the sacred footprint at the summit — the earliest confirmed example of constructed protection for the Sri Pada.</p>
+      <p>✅ CONFIRMED — Devaprathiraja, the minister of King Parakramabahu II who reigned from 1225 to 1269, constructed formal roads leading up the mountain and installed iron chains on iron posts to ease the final and most dangerous section of the ascent. Remains of these ancient iron chains — secured to the rock face with rivets of iron and bronze — are still visible on the Ratnapura trail today. These are among the oldest surviving man-made fixtures on the mountain and their antiquity was noted by a British garrison officer, Robert Percival, in the early 19th century who wrote that the chains had the appearance of being planted there at a very early date.</p>
+      <p><strong>Famous Medieval Visitors — Confirmed Records:</strong> ✅ CONFIRMED — Adam's Peak appears in the written records of two of the most famous medieval travellers in history. The Venetian explorer Marco Polo (1254–1324) recorded the mountain. The Moroccan scholar and traveller Ibn Battuta (1304–1368) visited the mountain and left a detailed account. Both records confirm the mountain's international fame as a pilgrimage and wonder of the world throughout the medieval period.</p>
+      <p>✅ CONFIRMED — The 14th to 15th century Chinese traveller Ma Huan described Adam's Peak as abounding with rubies and precious stones. The historical Islamic work Tuhfat ul-Mujahidin records that the first Muslim settlement in Sri Lanka was established by a party of pilgrims returning from Adam's Peak — confirming the mountain's importance to Islamic pilgrimage tradition from the earliest period of Muslim presence in Sri Lanka.</p>
+      <p><strong>Portuguese Contact — 16th Century:</strong> ✅ CONFIRMED — Portuguese Christians arrived in Sri Lanka from 1505 onward and encountered the already ancient and multi-faith pilgrimage tradition at Adam's Peak. Portuguese colonial records document their engagement with the mountain. They added their own interpretation to the sacred footprint — identifying it with St. Thomas the Apostle, believed in some Christian traditions to have brought Christianity to India and Sri Lanka in the 1st century AD.</p>
+      <p><strong>19th Century European Documentation:</strong> ✅ CONFIRMED — Adam's Peak was visited and documented by increasing numbers of European travellers and scientists during the 19th century. Dr. John Davy, in an 1817 letter addressed to his more famous brother Sir Humphry Davy, described the steep route to the summit and documented the iron chains and rock steps. The English author John Still climbed the peak many times from the early 1900s and described it as one of the vastest and most reverenced cathedrals of the human race.</p>
+      <p><strong>Peak Wilderness Sanctuary — 1940:</strong> ✅ CONFIRMED — The Peak Wilderness Sanctuary surrounding Adam's Peak was formally created as a conservation zone in 1940. The sanctuary protects the critical watershed that feeds the Kelani, Walawe, and Kalu rivers and provides habitat for a range of highland wildlife.</p>
+      <p><strong>UNESCO World Heritage — 2010:</strong> ✅ CONFIRMED — The Central Highlands of Sri Lanka — encompassing the Peak Wilderness Sanctuary, Horton Plains National Park, and the Knuckles Conservation Forest — was inscribed as a UNESCO World Heritage Site in 2010 for its outstanding biodiversity and ecological significance as a watershed.</p>
+
+      <h4 class="font-bold text-gray-900">⭐ THE SACRED FOOTPRINT — ALL TRADITIONS</h4>
+      <p>✅ CONFIRMED — THE PHYSICAL FACT: The Sri Pada is a natural hollow in the gneiss rock surface at the summit measuring 67 inches (170 cm) long and 18 inches (46 cm) wide — significantly larger than a normal human footprint. It is covered by an ornate gilded metal casing during non-pilgrimage periods and is housed within a small Buddhist shrine at the summit. The indentation is a natural geological formation shaped by weathering and erosion over geological time. Its resemblance to a footprint is coincidental. Photographs of the footprint itself are not permitted — monks at the summit enforce this strictly.</p>
+      <p>⭐ BUDDHIST TRADITION: The footprint is the left foot of the Lord Buddha, left when he visited Sri Lanka for the third and last time in the 6th century BC at the invitation of the Buddhist god Saman. The mountain is also known as Samanala Kanda — the abode of Saman, guardian deity of Adam's Peak. Buddhist pilgrims venerate the Sri Pada as a Paribhogika Dhaatu — a relic of use — one of the most sacred categories of Buddhist relic.</p>
+      <p>⭐ HINDU TRADITION: The footprint belongs to the god Shiva, left when he danced at the creation of the world. Tamil Hindus call the mountain Sivan Adi Padham or Sivanolipaathamalai — Mountain of Shiva's Light. Some Hindu traditions associate the footprint with Hanuman rather than Shiva.</p>
+      <p>⭐ ISLAMIC TRADITION: The footprint is that of Adam — the first man — left when God placed him on this mountain after his expulsion from the Garden of Eden. Adam is said to have stood on one foot for a thousand years at this spot as an act of penance. Arab seafarers knew the mountain for centuries and their name for it gave rise to the English name Adam's Peak.</p>
+      <p>⭐ CHRISTIAN TRADITION: Portuguese Christians identified the footprint with St. Thomas the Apostle who, according to tradition, brought Christianity to southern India and Sri Lanka in the 1st century AD. Portuguese records show disagreement among colonial Christians about whether the footprint belonged to Adam, St. Thomas, or another biblical figure.</p>
+      <p>⭐ CHINESE TRADITION: A 14th century Chinese work records that the footprint was made by Pwan-Ko — the primordial first man of Chinese mythology.</p>
+      <p>✅ CONFIRMED — THE SCIENTIFIC REALITY: The indentation is a natural feature in the gneiss rock surface. The association with a sacred footprint and the subsequent pilgrimage traditions built around it across four world religions are entirely human cultural constructions of extraordinary historical importance and sincerely held by hundreds of millions of believers.</p>
+
+      <h4 class="font-bold text-gray-900">☀️ THE IRA SEVAYA (SUNRISE SHADOW)</h4>
+      <p>✅ CONFIRMED — The Ira Sevaya — Sunrise Shadow Phenomenon — is the defining natural spectacle of Adam's Peak and the primary reason pilgrims time their ascent to arrive at the summit before dawn. At the moment of sunrise, the almost perfectly conical geometry of Adam's Peak casts a triangular shadow westward across the morning clouds and mist of the surrounding plains below. This shadow precisely replicates the triangular profile of the mountain itself. As the sun rises higher, the shadow appears to detach from the mountain and move independently downward toward the base before dissolving into the morning light. The entire phenomenon lasts only a few minutes.</p>
+
+      <h4 class="font-bold text-gray-900">🧗 THE CLIMB</h4>
+      <p><strong>The Six Routes:</strong> ✅ CONFIRMED — Six trails lead to the summit. Three are in regular use: Hatton–Nallathanni (most popular, paved steps), Ratnapura–Palabaddala (traditional, longer), and Kuruwita–Erathna (strenuous, less supported).</p>
+      <p><strong>The Steps:</strong> ✅ CONFIRMED — The Nallathanni route involves more than 5,000 steps.</p>
+      <p><strong>Duration:</strong> 3 to 7 hours depending on fitness. Allow 6 to 8 hours for the full return trip.</p>
+      <p><strong>The Night Climb:</strong> The vast majority of pilgrims begin the ascent at night (2:00 AM to 3:00 AM) to reach the summit before sunrise. The trail is illuminated throughout the pilgrimage season.</p>
+      <p><strong>The Summit:</strong> ✅ CONFIRMED — Extremely small platform. Three official ceremonies are held daily. Two bells ring as pilgrims arrive.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p>✅ CONFIRMED — The official pilgrimage season runs from the full moon of December to the full moon of May. January and February are best for weather and visibility. Avoid weekends, Poya days, and the Sri Lankan New Year (mid-April) due to extreme congestion.</p>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ ශ්‍රී පාද — ADAM'S PEAK</h3>
+      <p>ශ්‍රී පාදස්ථානය යනු ශ්‍රී ලංකාවේ මධ්‍යම කඳුකරයේ පිහිටි මීටර් 2,243ක් උසැති පූජනීය කඳු මුදුනකි. මෙය ලොව පුරා බෞද්ධ, හින්දු, මුස්ලිම් සහ ක්‍රිස්තියානි බැතිමතුන්ගේ ගෞරවාදරයට පාත්‍ර වූ අතිශය පූජනීය ස්ථානයකි.</p>
+      
+      <h4 class="font-bold text-gray-900">📍 පිහිටීම සහ වැදගත්කම</h4>
+      <p>සබරගමුව සහ මධ්‍යම පළාත් මායිමේ පිහිටා ඇති මෙය ශ්‍රී ලංකාවේ ප්‍රධාන ගංගා තුනක (කැලණි, වලවේ, කළු ගඟ) උල්පතයි. මෙහි ඇති පිරමිඩ හැඩැති ස්වභාවය නිසා මෙය දිවයිනේ වඩාත්ම කැපී පෙනෙන කඳු මුදුන වේ.</p>
+
+      <h4 class="font-bold text-gray-900">📜 ඉතිහාසය</h4>
+      <p>මෙම ස්ථානය පිළිබඳ ඉතිහාසය ලිඛිත වාර්තා වලටත් එහා ගිය ඈත අතීතයකට දිව යයි. 11 වන සියවසේ පළමුවන විජයබාහු රජුගේ සිට රාජකීය අනුග්‍රහය ලැබුණු බවට සාධක ඇත. මාර්කෝ පෝලෝ සහ ඉබන් බතූතා වැනි ලෝක ප්‍රසිද්ධ සංචාරකයින් ද මෙම ස්ථානය ගැන වාර්තා කර ඇත.</p>
+
+      <h4 class="font-bold text-gray-900">👣 ශ්‍රී පාද ලාංඡනය</h4>
+      <p>කඳු මුදුනේ ඇති ස්වාභාවික ගල් පර්වතයේ පිහිටි අඩි 67ක් දිගැති සලකුණ ශ්‍රී පාද ලාංඡනය ලෙස වන්දනාමාන කෙරේ. විවිධ ආගම් වලට අනුව මෙය බුදුරජාණන් වහන්සේගේ, ශිව දෙවියන්ගේ, ආදම්ගේ හෝ ශාන්ත තෝමස් මුනිඳුන්ගේ පාද ලාංඡනය ලෙස සැලකේ.</p>
+
+      <h4 class="font-bold text-gray-900">☀️ ඉර සේවය</h4>
+      <p>සූර්යෝදයේදී කඳු මුදුන මගින් අවට වලාකුළු මත පතිත කරන ත්‍රිකෝණාකාර සෙවණැල්ල 'ඉර සේවය' ලෙස හැඳින්වේ. මෙය ජනවාරි සිට මාර්තු දක්වා කාලයේදී පැහැදිලිව දැකගත හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🧗 කඳු නැගීම</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>හැටන්-නල්ලතන්නි මාර්ගය:</strong> වඩාත්ම ජනප්‍රිය, පඩිපෙළ සහිත පහසු මාර්ගය.</li>
+        <li><strong>රත්නපුර-පලාබද්දල මාර්ගය:</strong> සාම්ප්‍රදායික, දිගු සහ අභියෝගාත්මක මාර්ගය.</li>
+        <li><strong>රාත්‍රී ගමන:</strong> බොහෝ බැතිමතුන් අලුයම හිරු උදාවට පෙර කඳු මුදුනට ළඟා වීමට රාත්‍රියේ ගමන් අරඹයි.</li>
+      </ul>
+      
+      <p><strong>නැරඹීමට සුදුසුම කාලය:</strong> දෙසැම්බර් මස පෝය දින සිට මැයි මස පෝය දින දක්වා නිල වන්දනා සමය පවතී.</p>
+    </div>`
+  },
   knuckles: { EN: "A group of mountains great for walking and camping.", SI: "කඳු තරණයට සහ කඳවුරු බැඳීමට සුදුසුම දුෂ්කර කඳු පන්තියකි." },
   haputale: { EN: "A town in the hills with amazing views of the land below.", SI: "තැන්න දක්වා දිවෙන මනරම් දර්ශන සහිත මීදුම් පිරි කඳු ගැටයකි." },
   bandarawela: { EN: "A nice town with good weather and old charm.", SI: "සුවදායී දේශගුණයක් සහිත පැරණි බ්‍රිතාන්‍ය ලක්ෂණ පිරි නගරයකි." },
   badulla: { EN: "A main town in the hills at the end of the train line.", SI: "ඌව කඳුකරයේ ප්‍රධාන නගරය සහ දුම්රිය මගේ අවසානයයි." },
   hatton: { EN: "A town famous for tea and the start of the climb to Adam's Peak.", SI: "තේ කර්මාන්තයේ මධ්‍යස්ථානය සහ සිරිපා පිවිසුමයි." },
   pidurangala: { EN: "A hill with the best view of the Sigiriya rock.", SI: "සීගිරි බලකොටුව නැරඹීමට ඇති හොඳම ස්ථානයයි." },
-  riverston: { EN: "A windy place in the hills with cliffs and waterfalls.", SI: "දැඩි සුළඟ සහ මනරම් දියඇලි සහිත කඳුකර මංකඩකි." },
+  riverston: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ RIVERSTON — රිවර්ස්ටන්</h3>
+      <p><strong>Sri Lanka's Misty Mountain Gateway — Complete Verified Guide</strong></p>
+      <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by government records, scientific surveys, and physical observation<br>⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable<br>⚠️ UNCERTAIN — figures vary between sources or are debated</p>
+      
+      <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
+      <p>Province: Central Province, Sri Lanka<br>District: Matale District<br>Village: Illukkumbura area, Pitawala<br>Position: Within the Knuckles Mountain Range, on the northwestern edge of the range<br>Elevation of Riverston Peak: approximately 1,424 meters above sea level<br>Distance from Matale town: approximately 30 km — about 1.5 to 2 hours by road<br>Distance from Kandy: approximately 50 km — about 2 to 2.5 hours by road<br>Distance from Colombo: approximately 160 km — about 4 to 5 hours by road<br>Distance from Sigiriya: approximately 50 km northeast — about 1.5 hours by road<br>Nearest railway station: Matale Railway Station — approximately 30 km by road<br>Nearest main town: Rattota — approximately 15 km; Matale town — approximately 30 km</p>
+
+      <h4 class="font-bold text-gray-900">🌿 WHAT IS RIVERSTON</h4>
+      <p>✅ CONFIRMED — Riverston is a peak area and highland region within the Knuckles Mountain Range in Matale District, Central Province. It sits at approximately 1,424 meters elevation and forms the northwestern gateway to the broader Knuckles wilderness. The area is part of the Central Highlands of Sri Lanka UNESCO World Heritage Site inscribed in 2010.</p>
+      <p>✅ CONFIRMED — Riverston is characterised by a landscape of dramatic rocky outcrops, deep misty valleys, highland grassland, cloud forest, waterfalls, and paddy terraces carved into the steep hillsides below. The Thelgamu Oya river runs through the valley at the base of the ridge, and the Kalu Ganga river system originates in the highlands in this general area — eventually flowing to the ocean at Kalutara.</p>
+      <p>✅ CONFIRMED — The name Riverston is thought to derive from the dramatic rocky outcrops and the river running through the landscape — "river and stone" — as noted by the Central Province Tourism Department. The surrounding valley and village are specifically called Illukkumbura. The broader mountain range is called Dumbara Kaduwetiya in Sinhala — meaning the Mountains Full of Mist — a name entirely accurate to the landscape's character.</p>
+      <p>✅ CONFIRMED — Riverston is one of the least commercialised highland destinations in Sri Lanka. Unlike Ella or Horton Plains, it has no large hotels, no tour bus infrastructure, no souvenir shops, and no entrance gates with ticket queues. The food options are local guesthouses and small village eateries. The road is narrow, winding, and in places seriously rough. This is both the defining appeal and the main practical challenge of the destination.</p>
+      <p>✅ CONFIRMED — Riverston is located in the wet zone of Sri Lanka. The area is genuinely misty for much of the year. Weather changes extremely rapidly — local people say conditions change every five minutes, and this is not an exaggeration. Sun, mist, light rain, and brilliant clarity can all occur within the same hour.</p>
+
+      <h4 class="font-bold text-gray-900">📜 NAME AND CONTEXT — CONFIRMED</h4>
+      <p>✅ CONFIRMED — Riverston sits within the Knuckles Mountain Range — formally the Knuckles Conservation Forest — a UNESCO World Heritage Site. The Knuckles range takes its English name from the jagged, knuckle-like profile of its highest peaks as seen from the Kandy valley below. The Sinhala name Dumbara — meaning misty or cloud-filled — is a more accurate and evocative description.</p>
+      <p>✅ CONFIRMED — The Riverston area specifically refers to the northwestern section of this range — the peaks, viewpoints, grasslands, and waterfall zones accessible from the Rattota–Illukkumbura road. This road is one of the most scenic drives in Sri Lanka despite its challenging condition.</p>
+
+      <h4 class="font-bold text-gray-900">🏔️ THE MAIN ATTRACTIONS</h4>
+      <p><strong>Riverston Peak and the Summit Hike:</strong> ✅ CONFIRMED — Riverston Peak stands at approximately 1,424 meters. A two-kilometer hiking trail leads from the vehicle parking area to the summit. The trail is paved with concrete steps for most of its length. A VHF telecommunications tower stands on the summit. The summit views on clear days encompass the full sweep of the Knuckles ridge, the Thelgamuwa Valley far below, and distant mountain ranges. Two wind gaps must be passed on the route to the summit during the dry season from May to September, famous for the extraordinary force of the wind channelled through them.</p>
+      <p><strong>Pitawala Pathana — Mini World's End:</strong> ✅ CONFIRMED — Pitawala Pathana is a unique 10-hectare montane grassland expanse on a flat rock slab plateau. The grassland ends abruptly at a cliff edge with a drop of approximately 300 meters — informally called Mini World's End. The views from the Pitawala Pathana cliff edge take in the valley systems of the northern Knuckles area. Entry to Pitawala Pathana requires a ticket purchased from the office at the vehicle parking area.</p>
+      <p><strong>Bambarakiri Ella Falls:</strong> ✅ CONFIRMED — Bambarakiri Ella waterfall is located near Rattota town, approximately 15 km from Riverston peak. It is a single-drop fall of modest height into a pool surrounded by lush vegetation. ⚠️ SAFETY WARNING — This waterfall has a dangerous reputation. Swimming, wading, and bathing at Bambarakiri Ella are strongly advised against.</p>
+      <p><strong>Sera Ella Falls:</strong> ✅ CONFIRMED — Sera Ella waterfall is located approximately 13 km off the main Riverston road. Sera Ella is famous for having a small accessible cave behind the waterfall, allowing visitors to stand behind the falling curtain of water.</p>
+      <p><strong>Riverston Gap:</strong> ✅ CONFIRMED — The Riverston Gap is a dramatic narrow passage close to the summit of the Riverston ridge. The gap is famous for the intense wind that funnels through it.</p>
+      <p><strong>Manigala Peak:</strong> ✅ CONFIRMED — Manigala is a prominent peak within the Knuckles Mountain Range accessible via hiking trail from the Attanwala village near Riverston. The summit of Manigala provides panoramic views over the full extent of the northern Knuckles range.</p>
+      <p><strong>The Thelgamu Oya River Swimming Spot:</strong> ✅ CONFIRMED — At the base of the valley, the Thelgamu Oya flows under a bridge on the Riverston road. The river at the bridge is noted as genuinely safe for swimming — shallow, clear, and calm.</p>
+      <p><strong>Kalu Ganga Reservoir Viewpoint:</strong> ✅ CONFIRMED — The Kalu Ganga reservoir viewpoint is encountered on the Riverston road during the descent toward Hettipola.</p>
+      <p><strong>Sembuwaththa Lake:</strong> ✅ CONFIRMED — Sembuwaththa Lake is a scenic reservoir in the Riverston area. Popular as a photography location, particularly at dawn.</p>
+
+      <h4 class="font-bold text-gray-900">🌿 BIODIVERSITY</h4>
+      <p>✅ CONFIRMED — Riverston is located in the wet zone highland forest of central Sri Lanka, part of the Knuckles Conservation Forest, recognised for extraordinary biodiversity. The forests consist of multi-layered highland cloud forest. The area supports endemic species including Galpandiya (freshwater fish), Kirtisinghe's Rock Frog, leaf-nosed lizards, and all six highland-restricted endemic bird species of Sri Lanka.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p><strong>January to March:</strong> Primary Recommendation — dry season, clearest skies, best summit views.</p>
+      <p><strong>April:</strong> Transition Month — generally good.</p>
+      <p><strong>May to September:</strong> Windy Season — windier, mistier, lush and green.</p>
+      <p><strong>October to December:</strong> Monsoon Season — heavy rain, not recommended for first-time visitors.</p>
+
+      <h4 class="font-bold text-gray-900">🚗 THE RIVERSTON TRAIL — THE ROAD ITSELF</h4>
+      <p>✅ CONFIRMED — The road from Rattota to the Riverston area is narrow, winding, steep, and in places seriously deteriorated. A 4WD vehicle with good tyres and reliable brakes is strongly recommended. Check vehicle fitness before departure.</p>
+
+      <h4 class="font-bold text-gray-900">🚌 GETTING THERE</h4>
+      <p><strong>By Private Car/Hired Vehicle:</strong> Strongly recommended. 4WD/SUV suggested.</p>
+      <p><strong>By Bus/Tuk-Tuk:</strong> Possible but challenging, not recommended for the full trail.</p>
+      <p><strong>Nearest Railway:</strong> Matale Railway Station (30 km).</p>
+
+      <h4 class="font-bold text-gray-900">🏨 WHERE TO STAY</h4>
+      <p><strong>At Riverston:</strong> Limited guesthouses and home-stays in Illukkumbura village, Arangala Forest Lodge.</p>
+      <p><strong>In Kandy/Matale:</strong> Full range of accommodation options.</p>
+      <p><strong>Camping:</strong> Available at Riverston, most immersive option.</p>
+
+      <h4 class="font-bold text-gray-900">🍽️ WHERE TO EAT</h4>
+      <p>✅ CONFIRMED — Food options are local and limited. Village shops sell snacks. Guesthouses provide meals on prior request. Bring all food and water from Kandy or Matale.</p>
+
+      <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Verify vehicle condition before departure.</li>
+        <li>Start by 6:00 AM from Kandy.</li>
+        <li>Hire a local guide for Manigala.</li>
+        <li>Apply leech repellent.</li>
+        <li>Do not walk into forest margins alone (elephants present).</li>
+        <li>Do not swim at Bambarakiri Ella.</li>
+        <li>Secure loose items at wind gaps.</li>
+        <li>Visit on a weekday.</li>
+        <li>Arrive before the mist.</li>
+        <li>Bring warm and waterproof layers.</li>
+      </ul>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ රිවර්ස්ටන් — RIVERSTON</h3>
+      <p><strong>ශ්‍රී ලංකාවේ මීදුමෙන් වැසුණු කඳුකර දොරටුව — සම්පූර්ණ මාර්ගෝපදේශය</strong></p>
+      <p>✅ සත්‍ය තොරතුරු පමණි<br>✅ රජයේ වාර්තා, විද්‍යාත්මක සමීක්ෂණ සහ නිරීක්ෂණ මගින් තහවුරු කර ඇත<br>⭐ සම්ප්‍රදායික විශ්වාසයන්<br>⚠️ අවිනිශ්චිත තොරතුරු</p>
+      
+      <h4 class="font-bold text-gray-900">📍 පිහිටීම</h4>
+      <p>පළාත: මධ්‍යම පළාත, ශ්‍රී ලංකාව<br>දිස්ත්‍රික්කය: මාතලේ දිස්ත්‍රික්කය<br>ග්‍රාමය: ඉලුක්කුඹුර ප්‍රදේශය, පිටවල<br>පිහිටීම: දුම්බර කඳුවැටිය තුළ, කඳුවැටියේ වයඹ දිග කෙළවරේ<br>රිවර්ස්ටන් කඳු මුදුනේ උන්නතාංශය: මුහුදු මට්ටමේ සිට මීටර් 1,424<br>මාතලේ සිට දුර: කි.මී. 30 — පැය 1.5 - 2<br>මහනුවර සිට දුර: කි.මී. 50 — පැය 2 - 2.5<br>කොළඹ සිට දුර: කි.මී. 160 — පැය 4 - 5<br>සීගිරියේ සිට දුර: කි.මී. 50 — පැය 1.5<br>ළඟම දුම්රිය ස්ථානය: මාතලේ දුම්රිය ස්ථානය (කි.මී. 30)<br>ළඟම ප්‍රධාන නගරය: රත්තොට (කි.මී. 15), මාතලේ (කි.මී. 30)</p>
+
+      <h4 class="font-bold text-gray-900">🌿 රිවර්ස්ටන් යනු කුමක්ද?</h4>
+      <p>✅ රිවර්ස්ටන් යනු මාතලේ දිස්ත්‍රික්කයේ දුම්බර කඳුවැටිය තුළ පිහිටි කඳුකර ප්‍රදේශයකි. මෙය මීටර් 1,424 ක උන්නතාංශයක පිහිටා ඇති අතර දුම්බර කඳුවැටියට ඇතුළු වන දොරටුව ලෙස සැලකේ. 2010 දී යුනෙස්කෝ ලෝක උරුමයක් ලෙස නම් කරන ලදී.</p>
+      <p>✅ මෙහි මනරම් කඳු මුදුන්, මීදුමෙන් වැසුණු නිම්න, තෘණ භූමි, වලාකුළු වනාන්තර සහ දියඇලි දැකිය හැකිය. තෙල්ගමු ඔය සහ කළු ගඟ පද්ධතියේ උල්පත් මෙහි පිහිටා ඇත.</p>
+      <p>✅ 'රිවර්ස්ටන්' යන නම ගංගා සහ ගල් (river and stone) යන අර්ථයෙන් බිඳී ආ බව සැලකේ. සිංහලෙන් මෙය 'දුම්බර කඳුවැටිය' ලෙස හැඳින්වේ.</p>
+      <p>✅ රිවර්ස්ටන් යනු ශ්‍රී ලංකාවේ වාණිජකරණය නොවූ ස්වභාවික සුන්දරත්වය රැඳි ස්ථානයකි. මෙහි විශාල හෝටල් හෝ සංචාරක පහසුකම් නොමැත.</p>
+      <p>✅ මෙහි කාලගුණය ඉතා වේගයෙන් වෙනස් වේ. මීදුම, හිරු එළිය සහ වැසි එකම පැයක් තුළ දැකගත හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">📜 නම සහ පසුබිම</h4>
+      <p>✅ දුම්බර කඳුවැටිය යනු යුනෙස්කෝ ලෝක උරුමයකි. ඉංග්‍රීසියෙන් 'Knuckles' ලෙස හැඳින්වෙන්නේ කඳු මුදුන්වල හැඩය නිසාය. සිංහලෙන් 'දුම්බර' යනු මීදුමෙන් වැසුණු යන අර්ථයයි.</p>
+
+      <h4 class="font-bold text-gray-900">🏔️ ප්‍රධාන ආකර්ෂණීය ස්ථාන</h4>
+      <p><strong>රිවර්ස්ටන් කඳු මුදුන:</strong> මීටර් 1,424 ක උසකින් යුක්තය. කඳු මුදුනට යාමට කි.මී. 2ක මංපෙතක් ඇත. කඳු මුදුනේ විදුලි සංදේශ කුළුණක් පිහිටා ඇත. සුළං පරතරයන් දෙකක් හරහා ගමන් කිරීමේදී දැඩි සුළඟ අත්විඳිය හැකිය.</p>
+      <p><strong>පිටවල පතන:</strong> කුඩා ලෝකාන්තය ලෙස හැඳින්වේ. මීටර් 300 ක පමණ ප්‍රපාතයක් ඇත. මෙහි දුර්ලභ ශාක සහ සතුන් වාසය කරයි. ඇතුළු වීමට ටිකට් පතක් අවශ්‍ය වේ.</p>
+      <p><strong>බඹරකිරි ඇල්ල:</strong> රත්තොට අසල පිහිටා ඇත. ඉතා අලංකාර දියඇල්ලකි. ⚠️ අවවාදයයි: මෙහි දිය නෑම ඉතා අනතුරුදායකය.</p>
+      <p><strong>සේර ඇල්ල:</strong> දියඇල්ල පිටුපස ඇති ගුහාව නිසා ප්‍රසිද්ධය.</p>
+      <p><strong>රිවර්ස්ටන් පරතරය:</strong> දැඩි සුළඟක් හමන පටු කඳු පරතරයකි.</p>
+      <p><strong>මැනිගල කඳු මුදුන:</strong> අත්තන්වල ගම්මානයෙන් ආරම්භ වන පැය 5ක පමණ කඳු නැගීමකි. මඟ පෙන්වන්නෙකු අත්‍යවශ්‍ය වේ.</p>
+      <p><strong>තෙල්ගමු ඔය:</strong> දිය නෑමට සුදුසු ආරක්ෂිත ස්ථානයකි.</p>
+      <p><strong>කළු ගඟ ජලාශය:</strong> මනරම් දසුන් සහිත ජලාශයකි.</p>
+      <p><strong>සෙම්බුවත්ත වැව:</strong> ඡායාරූප ගැනීමට සුදුසු මනරම් වැවකි.</p>
+
+      <h4 class="font-bold text-gray-900">🌿 ජෛව විවිධත්වය</h4>
+      <p>✅ දුම්බර කඳුවැටිය ආවේණික විශේෂ බහුල ස්ථානයකි. ගල්පන්ඩියා (මිරිදිය මත්ස්‍යයා), කීර්තිසිංහගේ ගල් පනුවා, විවිධ උරග විශේෂ සහ ආවේණික පක්ෂීන් මෙහි වාසය කරයි.</p>
+
+      <h4 class="font-bold text-gray-900">🌤️ නැරඹීමට සුදුසුම කාලය</h4>
+      <p><strong>ජනවාරි සිට මාර්තු:</strong> වියළි කාලය, පැහැදිලි අහස, හොඳම කාලය.</p>
+      <p><strong>අප්‍රේල්:</strong> සාමාන්‍ය කාලගුණයක් පවතී.</p>
+      <p><strong>මැයි සිට සැප්තැම්බර්:</strong> සුළං සහිත කාලය.</p>
+      <p><strong>ඔක්තෝබර් සිට දෙසැම්බර්:</strong> වැසි සහිත කාලය.</p>
+
+      <h4 class="font-bold text-gray-900">🚗 ගමන් මාර්ගය</h4>
+      <p>✅ රත්තොට සිට ඉලුක්කුඹුර දක්වා මාර්ගය පටු සහ අබලන්ය. 4WD වාහනයක් වඩාත් සුදුසුය. ගමන් කිරීමට පෙර වාහනයේ තත්ත්වය පරීක්ෂා කරන්න.</p>
+
+      <h4 class="font-bold text-gray-900">🚌 ප්‍රවාහනය</h4>
+      <p><strong>පෞද්ගලික වාහනය:</strong> වඩාත් සුදුසුය.</p>
+      <p><strong>බස්/ත්‍රිරෝද රථ:</strong> අපහසුය.</p>
+      <p><strong>දුම්රිය:</strong> මාතලේ දුම්රිය ස්ථානය දක්වා පැමිණිය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🏨 නවාතැන් පහසුකම්</h4>
+      <p><strong>රිවර්ස්ටන්:</strong> කුඩා නවාතැන් සහ හෝම්-ස්ටේ (Home-stays) ඇත.</p>
+      <p><strong>මහනුවර/මාතලේ:</strong> බොහෝ නවාතැන් පහසුකම් ඇත.</p>
+      <p><strong>කඳවුරු බැඳීම:</strong> කඳවුරු බැඳීම සඳහා පහසුකම් ඇත.</p>
+
+      <h4 class="font-bold text-gray-900">🍽️ ආහාර</h4>
+      <p>✅ ආහාර පහසුකම් සීමිතය. ගම්මානවල කඩවලින් සුළු ආහාර ගත හැකිය. ගෙස්ට් හවුස්වල ආහාර කලින් ඇණවුම් කළ යුතුය. ආහාර සහ ජලය රැගෙන ඒම වඩාත් සුදුසුය.</p>
+
+      <h4 class="font-bold text-gray-900">💡 වැදගත් උපදෙස්</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>වාහනයේ තත්ත්වය පරීක්ෂා කරන්න.</li>
+        <li>උදෑසන 6:00 ට ගමන් ආරම්භ කරන්න.</li>
+        <li>මැනිගල සඳහා මඟ පෙන්වන්නෙකු ලබා ගන්න.</li>
+        <li>කූඩැල්ලන්ගෙන් ආරක්ෂා වීමට අවශ්‍ය දේ රැගෙන යන්න.</li>
+        <li>වනාන්තර තුළ තනිව ගමන් නොකරන්න (අලි ඇතුන් සිටිය හැක).</li>
+        <li>බඹරකිරි ඇල්ලේ දිය නෑමෙන් වළකින්න.</li>
+        <li>සුළඟින් ආරක්ෂා වීමට පියවර ගන්න.</li>
+        <li>සතියේ දිනවල ගමන් කරන්න.</li>
+        <li>මීදුමෙන් පෙර ස්ථානයට ළඟා වන්න.</li>
+        <li>උණුසුම් සහ වැසි ආවරණ රැගෙන යන්න.</li>
+      </ul>
+    </div>`
+  },
 
   // Waterfalls
   diyaluma: { EN: "The second highest waterfall in Sri Lanka with pools to swim.", SI: "ලංකාවේ දෙවන උසම දියඇල්ල වන මෙය ස්වභාවික තටාකවලින් පිරි ඇත." },
-  bambarakanda: { EN: "The highest waterfall in Sri Lanka.", SI: "ලංකාවේ උසම දියඇල්ලයි. මෙය මීටර් 263 ක් උසය." },
+  bambarakanda: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">💧 BAMBARAKANDA FALLS — බඹරකැන්ද ඇල්ල</h3>
+      <p>Bambarakanda Falls — also known as Bambarakele Falls — is the tallest waterfall in Sri Lanka, with a height of 263 meters (863 feet). It is situated in Kalupahana in the Badulla District.</p>
+      
+      <h4 class="font-bold text-gray-900">📍 LOCATION & ACCESS</h4>
+      <p>Located in the Uva Province, Kalupahana village, at the foot of the Haputale mountain range. Access is via a 5 km gravel road from the A4 highway at Kalupahana junction. A 10-15 minute walk through a pine forest leads to the base pool.</p>
+
+      <h4 class="font-bold text-gray-900">🌊 WHAT IS BAMBARAKANDA FALLS</h4>
+      <p>Classified as a horsetail waterfall, it features a slender, veil-like flow down a near-vertical rock face. It is formed by Kuda Oya, a tributary of the Walawe River, and is surrounded by a striking pine forest planted during the British colonial period.</p>
+
+      <h4 class="font-bold text-gray-900">🪨 GEOLOGY</h4>
+      <p>The falls are located within the Highland Complex, consisting of ancient Precambrian metamorphic rocks (2.2 to 3.0 billion years old). The sheer drop has been created by millions of years of fluvial erosion along the Haputale escarpment.</p>
+
+      <h4 class="font-bold text-gray-900">🧗 THE HIKE TO THE CREST</h4>
+      <p>A moderate to challenging trail leads to the top of the falls (2-3 hours return). <strong>Warning:</strong> The trail is not consistently marked; hiring a local guide is strongly recommended for the upper hike to avoid getting lost.</p>
+
+      <h4 class="font-bold text-gray-900">🦅 WILDLIFE & BIODIVERSITY</h4>
+      <p>The area supports various endemic bird species like the Sri Lanka Blue Magpie and Yellow-eared Bulbul. Purple-faced Langurs and Toque Macaques are often seen in the surrounding forest.</p>
+      
+      <h4 class="font-bold text-gray-900">🌤️ BEST TIME TO VISIT</h4>
+      <p>March to May is the most recommended period for strong water flow and manageable hiking conditions. October to November also offers powerful flow but can be wet and slippery.</p>
+      
+      <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Arrive before 10:00 AM for the best light.</li>
+        <li>Wear proper grip footwear; rocks are slippery.</li>
+        <li>Apply leech repellent before entering the forest.</li>
+        <li>Do not swim at the base pool during high water flow.</li>
+        <li>Do not attempt the upper trail alone.</li>
+      </ul>
+    </div>`,
+    SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">💧 බඹරකැන්ද ඇල්ල — BAMBARAKANDA FALLS</h3>
+      <p>බඹරකැන්ද ඇල්ල ශ්‍රී ලංකාවේ උසම දියඇල්ලයි. මෙහි උස මීටර් 263 (අඩි 863) කි. මෙය බදුල්ල දිස්ත්‍රික්කයේ කළුපහන ප්‍රදේශයේ පිහිටා ඇත.</p>
+      
+      <h4 class="font-bold text-gray-900">📍 පිහිටීම සහ ප්‍රවේශය</h4>
+      <p>ඌව පළාතේ, කළුපහන ග්‍රාමයේ, හපුතලේ කඳු පන්තියේ පාමුල පිහිටා ඇත. ඒ-4 මහා මාර්ගයේ කළුපහන හන්දියෙන් හැරී කිලෝමීටර් 5ක බොරළු පාරක් ඔස්සේ මෙහි යා හැකිය. පයින් ගමන් කරන මාර්ගය පයින් වනාන්තරයක් හරහා විනාඩි 10-15කින් දිය ඇල්ලේ පාමුලට ළඟා විය හැකිය.</p>
+
+      <h4 class="font-bold text-gray-900">🌊 බඹරකැන්ද ඇල්ල යනු කුමක්ද?</h4>
+      <p>මෙය අශ්ව වලිගයක හැඩයට සමාන දිය ඇල්ලකි. මෙය කුඩා ඔය මගින් නිර්මාණය වී ඇත. බ්‍රිතාන්‍ය යටත් විජිත සමයේ සිටුවන ලද පයින් වනාන්තරයකින් මෙම දිය ඇල්ල වටවී ඇත.</p>
+
+      <h4 class="font-bold text-gray-900">🪨 භූ විද්‍යාව</h4>
+      <p>මෙම දිය ඇල්ල පිහිටා ඇත්තේ ශ්‍රී ලංකාවේ පැරණිතම ප්‍රාග්-කේම්බ්‍රියන් යුගයට අයත් පාෂාණ තට්ටු මතය. වසර මිලියන ගණනක් පුරා සිදු වූ ඛාදනය නිසා මෙම දැවැන්ත දිය ඇල්ල නිර්මාණය වී ඇත.</p>
+
+      <h4 class="font-bold text-gray-900">🧗 කඳු නැගීම</h4>
+      <p>දිය ඇල්ලේ මුදුනට යාම සඳහා මධ්‍යස්ථ මට්ටමේ සිට අභියෝගාත්මක මාර්ගයක් ඇත (පැය 2-3). <strong>අවවාදයයි:</strong> මාර්ගය නිසි ලෙස සලකුණු කර නොමැති බැවින්, පළපුරුදු මඟ පෙන්වන්නෙකුගේ සහාය ලබා ගැනීම අනිවාර්ය වේ.</p>
+
+      <h4 class="font-bold text-gray-900">🦅 වනජීවී සහ ජෛව විවිධත්වය</h4>
+      <p>මෙම ප්‍රදේශය ශ්‍රී ලංකාවට ආවේණික පක්ෂීන් සහ ක්ෂීරපායින් සඳහා වාසස්ථානයකි. නිල් මැගිපියා, කහ කන් කොණ්ඩයා වැනි පක්ෂීන් සහ වඳුරන් බහුලව දැකිය හැකිය.</p>
+      
+      <h4 class="font-bold text-gray-900">🌤️ නැරඹීමට සුදුසුම කාලය</h4>
+      <p>මාර්තු සිට මැයි දක්වා කාලය දිය ඇල්ල නැරඹීමට සහ කඳු නැගීමට වඩාත් සුදුසුය. ඔක්තෝබර් සිට නොවැම්බර් දක්වා කාලයේදී දිය ඇල්ලේ ජල ප්‍රමාණය වැඩි වුවද මාර්ග ලිස්සන සුළු විය හැකිය.</p>
+      
+      <h4 class="font-bold text-gray-900">💡 වැදගත් උපදෙස්</h4>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>උදෑසන 10:00 ට පෙර පැමිණීම වඩාත් සුදුසුය.</li>
+        <li>හොඳින් ග්‍රහණය වන පාවහන් පැළඳ ගන්න.</li>
+        <li>කූඩැල්ලන්ගෙන් ආරක්ෂා වීමට අවශ්‍ය දේ රැගෙන යන්න.</li>
+        <li>වැසි සහිත කාලයේදී දිය ඇල්ලේ පාමුල දිය නෑමෙන් වළකින්න.</li>
+        <li>තනිවම කඳු මුදුනට යාමට උත්සාහ නොකරන්න.</li>
+      </ul>
+    </div>`
+  },
   ravanafalls: { EN: "A wide waterfall from a famous old story.", SI: "රාම රාවණා කතාව සමඟ බැඳුණු පුළුල් දියඇල්ලකි." },
   dunhinda: { EN: "A beautiful waterfall that looks like mist.", SI: "මීදුමක් ලෙස විසිරෙන දිය දහර නිසා ප්‍රසිද්ධ දුන්හිඳ ඇල්ල." },
   "baker'sfalls": { EN: "A very cold waterfall in the high plains.", SI: "හෝර්ටන් තැන්න ඇතුළත පිහිටි ඉතා සිසිල් දියඇල්ලකි." },

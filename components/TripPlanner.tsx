@@ -1,28 +1,22 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Language, Destination } from '../types.ts';
 import { DESTINATIONS } from '../constants.tsx';
 import { 
-  Zap, 
-  Plus, 
   X, 
   Compass, 
-  MapPin, 
-  ArrowRight, 
-  // Fix: Added missing ArrowLeft import
-  ArrowLeft,
+  Plus,
   Loader2, 
   Sparkles, 
-  CalendarDays, 
   Target, 
   ShieldCheck, 
   Brain,
   History,
-  Clock,
   Navigation,
   CheckCircle2,
-  AlertCircle
+  ArrowLeft
 } from 'lucide-react';
 import { generateDetailedItinerary } from '../services/gemini.ts';
+import { ErrorAlert } from './ErrorAlert.tsx';
 
 interface TripPlannerProps {
   language: Language;
@@ -34,12 +28,17 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
   const [selectedNodes, setSelectedNodes] = useState<Destination[]>([]);
   const [itinerary, setItinerary] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [duration, setDuration] = useState(3);
   const [step, setStep] = useState<'select' | 'result'>('select');
 
   const handleAddNode = (dest: Destination) => {
     if (selectedNodes.find(n => n.id === dest.id)) return;
-    if (selectedNodes.length >= 5) return;
+    if (selectedNodes.length >= 5) {
+      setError(language === 'EN' ? "Maximum 5 nodes allowed." : "උපරිම ස්ථාන 5කට පමණක් අවසර ඇත.");
+      return;
+    }
+    setError(null);
     setSelectedNodes([...selectedNodes, dest]);
   };
 
@@ -49,7 +48,11 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
   };
 
   const handleGenerate = async () => {
-    if (selectedNodes.length < 2) return;
+    if (selectedNodes.length < 2) {
+      setError(language === 'EN' ? "Please select at least 2 nodes." : "කරුණාකර අවම වශයෙන් ස්ථාන 2ක් තෝරන්න.");
+      return;
+    }
+    setError(null);
     setIsGenerating(true);
     setItinerary(null);
     
@@ -58,10 +61,14 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
     
     try {
       const result = await generateDetailedItinerary(prompt, language);
+      if (!result || result === "Failed to generate itinerary.") {
+        throw new Error(language === 'EN' ? "Failed to generate itinerary. Please try again." : "ගමන් සැලසුම සකස් කිරීම අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.");
+      }
       setItinerary(result);
       setStep('result');
-    } catch (e) {
+    } catch (e: any) {
       console.error("AI Architect failed:", e);
+      setError(e.message || (language === 'EN' ? "An unexpected error occurred." : "අනපේක්ෂිත දෝෂයක් සිදුවිය."));
     } finally {
       setIsGenerating(false);
     }
@@ -71,6 +78,7 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
     setStep('select');
     setItinerary(null);
     setSelectedNodes([]);
+    setError(null);
   };
 
   return (
@@ -86,6 +94,11 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {error && (
+          <div className="mb-8">
+            <ErrorAlert message={error} onDismiss={() => setError(null)} />
+          </div>
+        )}
         {step === 'select' ? (
           <div className="space-y-16 animate-in fade-in duration-700">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b border-white/10 pb-12">
