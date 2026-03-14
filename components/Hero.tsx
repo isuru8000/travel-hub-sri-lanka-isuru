@@ -85,8 +85,8 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
 
           {/* Desktop Static Background Image */}
           <div 
-            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.8] saturate-[1.4]"
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1552423814-f448065a589d?auto=format&fit=crop&w=1920&q=80')` }}
+            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.9] saturate-[1.1]"
+            style={{ backgroundImage: `url('https://i.pinimg.com/736x/43/5b/70/435b70265e550d16d783fc8cd7fea532.jpg')` }}
           />
           
           {/* Multi-layered cinematic overlays */}
