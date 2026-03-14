@@ -52,7 +52,7 @@ const Layout: React.FC<LayoutProps> = ({
   onLogout
 }) => {
   return (
-    <div className="min-h-screen flex flex-col relative bg-green-500 overflow-x-hidden w-full">
+    <div className="min-h-screen flex flex-col relative bg-white overflow-x-hidden w-full">
       <style dangerouslySetInnerHTML={{ __html: `
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -89,7 +89,7 @@ const Layout: React.FC<LayoutProps> = ({
         {children}
       </main>
 
-      <footer className="bg-[#0a0a0a] border-t border-white/10 text-white pt-24 pb-12 px-6">
+      <footer className="bg-white border-t border-gray-100 text-[#0a0a0a] pt-24 pb-12 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-24">
           <div className="md:col-span-5 space-y-8">
             <div className="flex items-center gap-6 scale-125 origin-left">
