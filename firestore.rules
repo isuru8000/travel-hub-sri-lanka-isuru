@@ -94,7 +94,21 @@ service cloud.firestore {
     }
 
     function isValidUrl(url) {
-      return url is string && (url.matches("^https://.*") || url.matches("^http://.*") || url.matches("^data:image/.*"));
+      return url is string && (url.matches("^https://.*") || url.matches("^http://.*"));
+    }
+
+    function isValidImageUrl(url) {
+      return url is string && (
+        url.matches("^https://.*") || 
+        url.matches("^http://.*") || 
+        (url.matches("^data:image/.*") && url.size() <= 800000)
+      );
+    }
+
+    function isRecent(ts) {
+      return ts is timestamp && 
+             ts <= request.time && 
+             ts > request.time - duration.value(10, 'm');
     }
 
     function validStringLength(field, minLen, maxLen) {
@@ -141,7 +155,8 @@ service cloud.firestore {
              data.titleSI is string && data.titleSI.size() > 0 && data.titleSI.size() <= 200 &&
              data.storyEN is string && data.storyEN.size() > 0 && data.storyEN.size() <= 50000 &&
              data.storySI is string && data.storySI.size() > 0 && data.storySI.size() <= 50000 &&
-             isValidOptionalString('image', 0, 5000000) &&
+             isValidOptionalString('image', 0, 800000) &&
+             ( !('image' in data) || isValidImageUrl(data.image) ) &&
              data.likes is number && data.likes >= 0 &&
              data.rating is number && data.rating >= 0 && data.rating <= 5 &&
              (!( 'tags' in data ) || (data.tags is list && data.tags.size() <= 20)) &&

@@ -79,22 +79,22 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         >
           {/* Mobile Static Background Image */}
           <div 
-            className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.5] saturate-[1.1]"
-            style={{ backgroundImage: `url('https://i.pinimg.com/736x/8a/9f/71/8a9f719e457b3869ec63234062d057e5.jpg')` }}
+            className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=1920&q=80')` }}
           />
 
           {/* Desktop Static Background Image */}
           <div 
-            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.5] saturate-[1.1]"
-            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/6d/f7/4d/6df74de4c2548cc787dc224005393149.jpg')` }}
+            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.8] saturate-[1.4]"
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1552423814-f448065a589d?auto=format&fit=crop&w=1920&q=80')` }}
           />
           
           {/* Multi-layered cinematic overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#020205]/60 via-transparent to-[#020205]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.05)_0%,transparent_80%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020205]/80 via-transparent to-[#020205]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.1)_0%,transparent_80%)]" />
           
           {/* Noise Texture */}
-          <div className="absolute inset-0 opacity-[0.03] pattern-overlay" />
+          <div className="absolute inset-0 opacity-[0.05] pattern-overlay" />
         </div>
         
         {/* Floating Atmospheric Particles */}
@@ -109,23 +109,23 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         
         <div className="space-y-8 mb-12 animate-in fade-in zoom-in-95 duration-1000 delay-200">
           <h1 className="flex flex-col items-center select-none">
-            <span className="block text-sm md:text-5xl font-light tracking-[0.2em] md:tracking-[0.4em] text-[#FFF7ED] mb-6 md:mb-12 uppercase font-heritage drop-shadow-lg">
+            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-[#FFF7ED] mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90 text-shadow-lg">
               {language === 'EN' ? 'WELCOME TO' : 'ආයුබෝවන්'}
             </span>
             
             <div className="relative">
               <div 
-                className="text-5xl sm:text-7xl md:text-9xl lg:text-[14rem] font-heritage font-bold leading-none tracking-tighter uppercase water-text-container"
+                className="text-6xl sm:text-8xl md:text-9xl lg:text-[16rem] font-heritage font-bold leading-none tracking-tighter uppercase water-text-container"
               >
                 {language === 'EN' ? (
                   <>
                     <span className="water-base">{mainTitleEN}</span>
-                    <span className="water-wave" data-text={mainTitleEN}>{mainTitleEN}</span>
+                    <span className="water-wave animate-gradient-text-slow" data-text={mainTitleEN}>{mainTitleEN}</span>
                   </>
                 ) : (
                   <>
                     <span className="water-base">{mainTitleSI}</span>
-                    <span className="water-wave" data-text={mainTitleSI}>{mainTitleSI}</span>
+                    <span className="water-wave animate-gradient-text-slow" data-text={mainTitleSI}>{mainTitleSI}</span>
                   </>
                 )}
               </div>
@@ -133,10 +133,10 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           </h1>
           
           <div className="flex flex-col items-center mt-8 md:mt-12">
-             <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_30px_#F59E0B] mb-8 md:mb-12 opacity-60" />
-             <p className="font-narrative text-xs md:text-xl font-light text-white/40 max-w-3xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic">
+             <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_40px_#F59E0B] mb-8 md:mb-12 opacity-80" />
+             <p className="font-narrative text-sm md:text-2xl font-light text-white/60 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic text-shadow-lg">
                {language === 'EN' 
-                 ? "an immersive journey through the timeless wonders of the pearl of the indian ocean."
+                 ? "An immersive journey through the timeless wonders of the Pearl of the Indian Ocean."
                  : "ඉන්දියන් සාගරයේ මුතු ඇටයේ කාලාන්තරයක් පුරා සැඟවුණු අසිරිය සොයා යන ගමනක්."}
              </p>
           </div>
@@ -145,22 +145,22 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 w-full">
           <button 
             onClick={() => setView('destinations')}
-            className="w-full sm:w-auto group relative px-8 py-6 md:px-16 md:py-8 bg-white text-[#050508] rounded-[2.5rem] font-black text-[12px] md:text-[14px] uppercase tracking-[0.3em] md:tracking-[0.5em] transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_40px_100px_rgba(245,158,11,0.2)] overflow-hidden flex justify-center"
+            className="w-full sm:w-auto group relative px-10 py-6 md:px-20 md:py-10 bg-[#F59E0B] text-white rounded-full font-black text-[14px] md:text-[16px] uppercase tracking-[0.4em] md:tracking-[0.6em] transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_20px_80px_rgba(245,158,11,0.5)] overflow-hidden flex justify-center items-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F59E0B]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms]" />
-            <span className="relative z-10 flex items-center gap-4 md:gap-6">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms]" />
+            <span className="relative z-10 flex items-center gap-4 md:gap-8">
               {UI_STRINGS.explore[language]}
-              <ChevronRight size={20} className="group-hover:translate-x-2 transition-transform" />
+              <ChevronRight size={24} className="group-hover:translate-x-2 transition-transform" />
             </span>
           </button>
 
           <button 
             onClick={() => setView('vr-trip')}
-            className="w-full sm:w-auto group relative px-8 py-6 md:px-16 md:py-8 bg-white/5 backdrop-blur-3xl border border-white/20 rounded-[2.5rem] font-black text-[12px] md:text-[14px] text-white uppercase tracking-[0.3em] md:tracking-[0.5em] transition-all duration-700 hover:bg-white/10 hover:border-[#F59E0B]/50 active:scale-95 shadow-2xl flex justify-center"
+            className="w-full sm:w-auto group relative px-10 py-6 md:px-20 md:py-10 glass-card rounded-full font-black text-[14px] md:text-[16px] text-white uppercase tracking-[0.4em] md:tracking-[0.6em] transition-all duration-700 hover:bg-white/10 hover:border-[#F59E0B] active:scale-95 shadow-2xl flex justify-center items-center"
           >
-            <span className="relative z-10 flex items-center gap-4 md:gap-6">
+            <span className="relative z-10 flex items-center gap-4 md:gap-8">
               {UI_STRINGS.vrTrip[language]}
-              <Orbit size={20} className="text-[#F59E0B] animate-spin-slow" />
+              <Orbit size={24} className="text-[#F59E0B] animate-spin-slow" />
             </span>
           </button>
         </div>

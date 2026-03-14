@@ -209,6 +209,11 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
   };
 
   const processFile = (file: File) => {
+    // Limit to 800KB to stay under Firestore 1MB doc limit
+    if (file.size > 800 * 1024) {
+      alert(language === 'EN' ? "Image too large. Limit is 800KB." : "ඡායාරූපය විශාල වැඩියි. උපරිමය 800KB වේ.");
+      return;
+    }
     const reader = new FileReader();
     reader.onloadend = () => {
       setNewMemoryForm(prev => ({ ...prev, image: reader.result as string }));
