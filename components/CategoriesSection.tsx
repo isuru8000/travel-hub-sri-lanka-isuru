@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 // Added .tsx extension for explicit resolution and fixed missing member error by updating constants.tsx
 import { UI_STRINGS, CATEGORIES_DATA } from '../constants.tsx';
 import * as Icons from 'lucide-react';

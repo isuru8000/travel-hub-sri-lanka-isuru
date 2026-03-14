@@ -1,6 +1,6 @@
 import express from "express";
 import { createServer as createViteServer } from "vite";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import axios from "axios";
 import path from "path";

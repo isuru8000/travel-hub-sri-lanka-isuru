@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Lock, ShieldAlert, ArrowRight } from 'lucide-react';
-import { Language } from '../types';
+import { Language } from '../types.ts';
 
 interface LockedViewProps {
   language: Language;

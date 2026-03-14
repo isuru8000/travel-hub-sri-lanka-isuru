@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Palette, Info, MapPin, X, ShoppingBag, ArrowLeft } from 'lucide-react';
-import { Language, ArtAndCraft } from '../types';
-import { ARTS_CRAFTS_DATA } from '../constants';
+import { Language, ArtAndCraft } from '../types.ts';
+import { ARTS_CRAFTS_DATA } from '../constants.tsx';
 
 interface ArtsAndCraftsProps {
   language: Language;
