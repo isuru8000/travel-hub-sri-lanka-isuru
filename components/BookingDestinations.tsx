@@ -27,9 +27,13 @@ import {
 interface BookingDestinationsProps {
   language: Language;
   setView: (view: any) => void;
+  onBack?: () => void;
 }
 
-const BookingDestinations: React.FC<BookingDestinationsProps> = ({ language, setView }) => {
+const BookingDestinations: React.FC<BookingDestinationsProps> = ({ language, setView, onBack }) => {
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   const bookingRegistry = DESTINATIONS.map((d, i) => ({
     ...d,
     price: 150 + (i * 25),
@@ -38,7 +42,16 @@ const BookingDestinations: React.FC<BookingDestinationsProps> = ({ language, set
   }));
 
   return (
-    <div className="min-h-screen bg-[#fafafa] pb-32 font-sans">
+    <div className="min-h-screen bg-[#fafafa] pb-32 font-sans relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* EDITORIAL HERO SECTION */}
       <div className="relative h-[100vh] md:h-[90vh] flex flex-col md:flex-row overflow-hidden bg-white">
         <div className="w-full h-[40vh] md:w-1/2 md:h-full relative overflow-hidden shrink-0">
@@ -150,57 +163,57 @@ const BookingDestinations: React.FC<BookingDestinationsProps> = ({ language, set
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {bookingRegistry.map((item, idx) => (
               <div 
                 key={item.id} 
-                className={`group relative bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden border border-gray-100 shadow-xl transition-all duration-1000 ${item.isLocked ? 'grayscale opacity-60' : 'hover:shadow-[0_60px_120px_rgba(0,0,0,0.08)] hover:-translate-y-2 md:hover:-translate-y-4'}`}
+                className={`group relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-500 ${item.isLocked ? 'grayscale opacity-60' : 'hover:shadow-2xl hover:-translate-y-2'}`}
               >
-                <div className="relative h-[300px] md:h-[450px] overflow-hidden">
-                  <img src={item.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt={item.name[language]} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="relative h-[280px] md:h-[360px] overflow-hidden">
+                  <img src={item.image} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" alt={item.name[language]} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90" />
                   
-                  <div className="absolute top-6 left-6 md:top-8 md:left-8 flex items-center gap-4">
-                    <div className="px-4 py-2 md:px-6 md:py-3 bg-white/10 backdrop-blur-3xl rounded-full border border-white/20 text-white text-[7px] md:text-[9px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em]">
-                       Node_#0{idx + 1}
+                  <div className="absolute top-5 left-5 flex items-center gap-3">
+                    <div className="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full border border-white/30 text-white text-[10px] font-semibold uppercase tracking-wider shadow-sm">
+                       Package 0{idx + 1}
                     </div>
                   </div>
 
-                  <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end">
-                    <div className="space-y-1 md:space-y-2">
-                      <div className="flex items-center gap-2 md:gap-3 text-white/60">
-                        <MapPin size={12} className="md:w-3.5 md:h-3.5 text-[#E1306C]" />
-                        <span className="text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em]">{item.location}</span>
+                  <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2 text-white/90">
+                        <MapPin size={14} className="text-[#0EA5E9]" />
+                        <span className="text-[10px] font-medium uppercase tracking-wider">{item.location}</span>
                       </div>
-                      <h4 className="text-2xl md:text-4xl font-heritage font-bold text-white uppercase tracking-tighter leading-none">{item.name[language]}</h4>
+                      <h4 className="text-2xl md:text-3xl font-bold text-white tracking-tight drop-shadow-md">{item.name[language]}</h4>
                     </div>
                     <div className="text-right">
-                      <p className="text-[7px] md:text-[9px] font-black text-white/40 uppercase tracking-[0.3em] md:tracking-[0.4em] mb-1">Archival Rate</p>
-                      <p className="text-xl md:text-3xl font-heritage font-bold text-white tracking-tighter">${item.price}</p>
+                      <p className="text-[10px] font-medium text-white/80 uppercase tracking-wider mb-1">From</p>
+                      <p className="text-2xl md:text-3xl font-bold text-white drop-shadow-md">${item.price}</p>
                     </div>
                   </div>
 
                   {item.isLocked && (
-                    <div className="absolute inset-0 z-20 bg-black/40 backdrop-blur-md flex flex-col items-center justify-center gap-4 md:gap-6">
-                       <Lock size={32} className="md:w-10 md:h-10 text-white/40 animate-pulse" />
-                       <span className="text-[8px] md:text-[10px] font-black text-white uppercase tracking-[0.4em] md:tracking-[0.6em]">Access_Restricted</span>
+                    <div className="absolute inset-0 z-20 bg-black/40 backdrop-blur-sm flex flex-col items-center justify-center gap-3">
+                       <Lock size={28} className="text-white/60" />
+                       <span className="text-xs font-bold text-white uppercase tracking-widest">Access Restricted</span>
                     </div>
                   )}
                 </div>
 
-                <div className="p-8 md:p-12 space-y-8 md:space-y-10">
-                  <div className="space-y-4 md:space-y-6">
-                    <p className="text-base md:text-xl text-gray-500 font-light italic leading-relaxed border-l-2 border-gray-100 pl-4 md:pl-8">
-                       "{item.shortStory[language]}"
+                <div className="p-6 md:p-8 space-y-6">
+                  <div className="space-y-4">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                       {item.shortStory[language]}
                     </p>
-                    <div className="flex flex-wrap gap-3 md:gap-4">
-                      <div className="flex items-center gap-2 md:gap-3 px-4 py-1.5 md:px-5 md:py-2 rounded-full bg-gray-50 border border-gray-100 text-gray-400 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
-                        <Clock size={10} className="md:w-3 md:h-3" />
+                    <div className="flex flex-wrap gap-3">
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-gray-500 text-[10px] font-semibold uppercase tracking-wider">
+                        <Clock size={12} />
                         {item.duration}
                       </div>
-                      <div className="flex items-center gap-2 md:gap-3 px-4 py-1.5 md:px-5 md:py-2 rounded-full bg-gray-50 border border-gray-100 text-gray-400 text-[8px] md:text-[10px] font-black uppercase tracking-widest">
-                        <Zap size={10} className="md:w-3 md:h-3 text-[#E1306C]" />
-                        Sync_Stable
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-100 text-gray-500 text-[10px] font-semibold uppercase tracking-wider">
+                        <Zap size={12} className="text-[#0EA5E9]" />
+                        Instant Booking
                       </div>
                     </div>
                   </div>
@@ -208,10 +221,10 @@ const BookingDestinations: React.FC<BookingDestinationsProps> = ({ language, set
                   <button 
                     disabled={item.isLocked}
                     onClick={() => setView('marketplace')}
-                    className="w-full flex items-center justify-between px-6 py-5 md:px-10 md:py-7 bg-[#0a0a0a] text-white rounded-full font-black text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.6em] hover:bg-[#E1306C] transition-all shadow-2xl active:scale-95 disabled:opacity-20 group/btn"
+                    className="w-full flex items-center justify-between px-6 py-4 bg-[#0a0a0a] text-white rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#0EA5E9] transition-all shadow-md active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed group/btn"
                   >
-                    <span>Initialize Traversal Sync</span>
-                    <ArrowRight size={16} className="md:w-5 md:h-5 group-hover/btn:translate-x-2 transition-transform" />
+                    <span>Book Now</span>
+                    <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </div>

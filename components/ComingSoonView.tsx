@@ -7,11 +7,25 @@ interface ComingSoonViewProps {
   language: Language;
   setView: (view: any) => void;
   title?: string;
+  onBack?: () => void;
 }
 
-const ComingSoonView: React.FC<ComingSoonViewProps> = ({ language, setView, title }) => {
+const ComingSoonView: React.FC<ComingSoonViewProps> = ({ language, setView, title, onBack }) => {
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
+
   return (
-    <div className="min-h-[90vh] flex items-center justify-center px-6 pt-24 bg-white">
+    <div className="min-h-[90vh] flex items-center justify-center px-6 pt-24 bg-white relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       <div className="max-w-2xl w-full text-center space-y-12 animate-in fade-in zoom-in duration-1000">
         <div className="relative inline-block">
           <div className="w-32 h-32 bg-gray-50 rounded-[2.5rem] flex items-center justify-center border border-gray-100 shadow-inner relative overflow-hidden group">

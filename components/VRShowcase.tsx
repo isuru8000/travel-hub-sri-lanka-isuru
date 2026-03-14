@@ -6,6 +6,7 @@ import { Layers, Box, Sparkles, Target, Radio, ArrowLeft, Gem, Wind, Zap, Lock, 
 interface VRShowcaseProps {
   language: Language;
   setView: (view: any) => void;
+  onBack?: () => void;
 }
 
 const REGISTRY_01 = [
@@ -209,13 +210,15 @@ const VRCard: React.FC<{ space: any, language: Language, idx: number, isLocked?:
   );
 };
 
-const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView }) => {
+const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView, onBack }) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [targetRotation, setTargetRotation] = useState({ x: 0, y: 0 });
   const [position, setPosition] = useState({ x: 0, z: 0 });
   const [velocity, setVelocity] = useState({ x: 0, z: 0 });
   
-  const lastTouchRef = useRef<{ x: number, y: number } | null>(null);
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   const requestRef = useRef<number | null>(null);
 
   const animate = () => {
@@ -301,6 +304,15 @@ const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={() => { lastTouchRef.current = null; }}
     >
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       <div className="fixed inset-0 opacity-[0.03] pointer-events-none z-0" style={{ backgroundImage: `url('https://www.transparenttextures.com/patterns/stardust.png')` }} />
       
       {/* Animated Flowing Grid Background */}

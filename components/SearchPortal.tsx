@@ -31,6 +31,7 @@ import { searchGrounding, AIResponse } from '../services/gemini.ts';
 
 interface SearchPortalProps {
   language: Language;
+  onBack?: () => void;
 }
 
 const POPULAR_SUGGESTIONS = [
@@ -51,13 +52,17 @@ const POPULAR_SUGGESTIONS = [
   "Horton Plains World's End"
 ];
 
-const SearchPortal: React.FC<SearchPortalProps> = ({ language }) => {
+const SearchPortal: React.FC<SearchPortalProps> = ({ language, onBack }) => {
   const [query, setQuery] = useState('');
   const [result, setResult] = useState<AIResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState<string>('');
   const [activeTab, setActiveTab] = useState('general');
   const [suggestions, setSuggestions] = useState<string[]>([]);
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isDeepMode, setIsDeepMode] = useState(true);
   const [needsApiKey, setNeedsApiKey] = useState(false);
@@ -163,6 +168,15 @@ const SearchPortal: React.FC<SearchPortalProps> = ({ language }) => {
 
   return (
     <div className="min-h-screen bg-[#fafafa] text-[#262626] pt-24 pb-20 md:pb-32 px-4 md:px-8 relative overflow-hidden">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       <div className="absolute inset-0 pattern-overlay opacity-5 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[400px] md:h-[600px] bg-gradient-to-b from-blue-50/50 via-transparent to-transparent pointer-events-none" />
       

@@ -309,8 +309,8 @@ Observe the details: Take time to notice the subtle details, such as the depress
     id: "mihintale",
     name: { EN: "Mihintale", SI: "මිහිඳු තලේ" },
     category: "ancient",
-    image: "https://picsum.photos/seed/mihintale/1200/800",
-    gallery: ["https://picsum.photos/seed/mihintale/1200/800"],
+    image: "https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg",
+    gallery: ["https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg"],
     history: {
       EN: "Mihintale is a series of rocky hills and mountain peaks that form the most historically significant pilgrimage site in Sri Lanka and one of the most important in the entire Buddhist world. It is universally recognised as the birthplace of Buddhism in Sri Lanka — the exact location where Buddhism was first preached on the island in 247 BC.",
       SI: "මිහින්තලය ශ්‍රී ලංකාවේ බුදුදහමේ උපන් ස්ථානය ලෙස සැලකේ. මෙය ඓතිහාසික වශයෙන් ඉතා වැදගත් වන්දනා ස්ථානයකි."
@@ -634,7 +634,7 @@ Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihin
     coordinates: { x: 54, y: 26 },
     nearbyAttractions: [
       { id: "ruwanwelisaya", name: { EN: "Ruwanwelisaya", SI: "රුවන්වැලිසෑය" }, image: "https://i.pinimg.com/1200x/e6/c4/67/e6c467b97e6ff3c8344d25e2b107b50e.jpg" },
-      { id: "mihintale", name: { EN: "Mihintale", SI: "මිහින්තලේ" }, image: "https://i.pinimg.com/1200x/4b/ce/e7/4bcee74e0567cf2c845621fa93db5905.jpg" },
+      { id: "mihintale", name: { EN: "Mihintale", SI: "මිහින්තලේ" }, image: "https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg" },
       { id: "sigiriya", name: { EN: "Sigiriya", SI: "සීගිරිය" }, image: "https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg" }
     ]
   },
@@ -883,7 +883,7 @@ Respect the local community. Mirissa is still at its core a fishing village. The
     nearbyAttractions: [
       { id: "ruwanwelisaya", name: { EN: "Ruwanwelisaya", SI: "රුවන්වැලිසෑය" }, image: "https://i.pinimg.com/1200x/e6/c4/67/e6c467b97e6ff3c8344d25e2b107b50e.jpg" },
 
-      { id: "mihintale", name: { EN: "Mihintale", SI: "මිහින්තලේ" }, image: "https://i.pinimg.com/1200x/4b/ce/e7/4bcee74e0567cf2c845621fa93db5905.jpg" }
+      { id: "mihintale", name: { EN: "Mihintale", SI: "මිහින්තලේ" }, image: "https://i.pinimg.com/1200x/1b/95/f6/1b95f6de2957767658ef8f7cb1ef658c.jpg" }
     ]
   },
   { id: "kumana", name: { EN: "Kumana", SI: "කුමන" }, category: "wildlife", image: "https://i.pinimg.com/736x/71/50/16/71501668218b3602ac732a426f397666.jpg", gallery: ["https://i.pinimg.com/736x/71/50/16/71501668218b3602ac732a426f397666.jpg"], history: { EN: "Kumana National Park, formerly known as Yala East, is renowned for its avifauna, particularly its large flocks of migratory waterfowl and wading birds. The park's 200-hectare Kumana Villu mangrove swamp is a critical nesting ground for painted storks, pelicans, spoonbills, and ibises. Apart from birds, the park is home to leopards, elephants, and turtles. It is also a significant route for the annual 'Pada Yatra' pilgrimage to Kataragama.", SI: "කුරුලු පාරාදීසය." }, shortStory: { EN: "Wetland wildlife.", SI: "තෙත් බිම් වනජීවී." }, tips: [{ EN: "Bring your binoculars.", SI: "දුරදක්නයක් රැගෙන එන්න." }], hiddenEchoes: { EN: "Mangrove forests.", SI: "කඩොලාන වනාන්තර." }, location: "Ampara", coordinates: { x: 84, y: 82 },
@@ -1073,7 +1073,7 @@ Respect the local community. Mirissa is still at its core a fishing village. The
   { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, category: "mountains", image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg", gallery: ["https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg"], history: { EN: "Adam's Peak is a 2,243 m (7,359 ft) tall conical mountain located in central Sri Lanka. It is well known for the Sri Pada, i.e., 'sacred footprint', a 1.8 m (5 ft 11 in) rock formation near the summit, which in Buddhist tradition is held to be the footprint of the Buddha, in Hindu tradition that of Hanuman or Shiva and in some Islamic and Christian traditions that of Adam, or that of St. Thomas.", SI: "පූජනීය ශ්‍රී පාද පියුම." }, shortStory: { EN: "A holy mountain peak.", SI: "සදාකාලික කඳු මුදුන." }, tips: [{ EN: "Start climbing at midnight.", SI: "මධ්‍යම රාත්‍රියේ අරඹන්න." }], hiddenEchoes: { EN: "A shadow at sunrise.", SI: "හිරු උදාවේ සෙවණැල්ල." }, location: "Ratnapura", coordinates: { x: 54, y: 70 },
     nearbyAttractions: [
       { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" },
-      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg" }
+      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg" }
     ]
   },
   { id: "knuckles", name: { EN: "Knuckles", SI: "නකල්ස්" }, category: "mountains", image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg", gallery: ["https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg"], history: { EN: "The Knuckles Mountain Range lies in central Sri Lanka, in the Districts of Matale and Kandy. The range takes its name from a series of recumbent folds and peaks in the west of the massif which resemble the knuckles of clenched fist when viewed from certain locations in the Kandy District. Whilst this name was assigned by early British surveyors, the Sinhalese residents have traditionally referred to the area as Dumbara Kanduvetiya meaning Mist-laden Mountain Range.", SI: "දුෂ්කර කඳු පන්තිය." }, shortStory: { EN: "Old wild hills.", SI: "පුරාණ කඳුකරය." }, tips: [{ EN: "You must have a guide.", SI: "මඟපෙන්වන්නෙකු අවශ්‍යයි." }], hiddenEchoes: { EN: "A very old village.", SI: "මීමුරේ ගම්මානය." }, location: "Kandy", coordinates: { x: 62, y: 44 },
@@ -1157,15 +1157,15 @@ Respect the local community. Mirissa is still at its core a fishing village. The
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg", gallery: ["https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in Nuwara Eliya District, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Nuwara Eliya", coordinates: { x: 48, y: 70 },
+  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg", gallery: ["https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in Nuwara Eliya District, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Nuwara Eliya", coordinates: { x: 48, y: 70 },
     nearbyAttractions: [
-      { id: "aberdeen", name: { EN: "Aberdeen Falls", SI: "ඇබර්ඩීන් ඇල්ල" }, image: "https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg" },
+      { id: "aberdeen", name: { EN: "Aberdeen Falls", SI: "ඇබර්ඩීන් ඇල්ල" }, image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg" },
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg", gallery: ["https://i.pinimg.com/1200x/b3/c4/d5/b3c4d5e6f7g8h9i0j1k2.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Nuwara Eliya District of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Nuwara Eliya", coordinates: { x: 46, y: 72 },
+  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg", gallery: ["https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Nuwara Eliya District of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Nuwara Eliya", coordinates: { x: 46, y: 72 },
     nearbyAttractions: [
-      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg" },
+      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg" },
       { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" }
     ]
   },

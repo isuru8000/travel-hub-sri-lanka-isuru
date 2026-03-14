@@ -1,45 +1,49 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Language, Destination } from '../types.ts';
 import { DESTINATIONS } from '../constants.tsx';
 import { 
-  Zap, 
-  Plus, 
   X, 
   Compass, 
-  MapPin, 
-  ArrowRight, 
-  // Fix: Added missing ArrowLeft import
-  ArrowLeft,
+  Plus,
   Loader2, 
   Sparkles, 
-  CalendarDays, 
   Target, 
   ShieldCheck, 
   Brain,
   History,
-  Clock,
   Navigation,
   CheckCircle2,
-  AlertCircle
+  ArrowLeft
 } from 'lucide-react';
 import { generateDetailedItinerary } from '../services/gemini.ts';
+import { ErrorAlert } from './ErrorAlert.tsx';
 
 interface TripPlannerProps {
   language: Language;
   setView: (view: any) => void;
   onSelectDestination: (dest: Destination) => void;
+  onBack?: () => void;
 }
 
-const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDestination }) => {
+const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDestination, onBack }) => {
   const [selectedNodes, setSelectedNodes] = useState<Destination[]>([]);
   const [itinerary, setItinerary] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [duration, setDuration] = useState(3);
   const [step, setStep] = useState<'select' | 'result'>('select');
 
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
+
   const handleAddNode = (dest: Destination) => {
     if (selectedNodes.find(n => n.id === dest.id)) return;
-    if (selectedNodes.length >= 5) return;
+    if (selectedNodes.length >= 5) {
+      setError(language === 'EN' ? "Maximum 5 nodes allowed." : "උපරිම ස්ථාන 5කට පමණක් අවසර ඇත.");
+      return;
+    }
+    setError(null);
     setSelectedNodes([...selectedNodes, dest]);
   };
 
@@ -49,7 +53,11 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
   };
 
   const handleGenerate = async () => {
-    if (selectedNodes.length < 2) return;
+    if (selectedNodes.length < 2) {
+      setError(language === 'EN' ? "Please select at least 2 nodes." : "කරුණාකර අවම වශයෙන් ස්ථාන 2ක් තෝරන්න.");
+      return;
+    }
+    setError(null);
     setIsGenerating(true);
     setItinerary(null);
     
@@ -58,10 +66,14 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
     
     try {
       const result = await generateDetailedItinerary(prompt, language);
+      if (!result || result === "Failed to generate itinerary.") {
+        throw new Error(language === 'EN' ? "Failed to generate itinerary. Please try again." : "ගමන් සැලසුම සකස් කිරීම අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න.");
+      }
       setItinerary(result);
       setStep('result');
-    } catch (e) {
+    } catch (e: any) {
       console.error("AI Architect failed:", e);
+      setError(e.message || (language === 'EN' ? "An unexpected error occurred." : "අනපේක්ෂිත දෝෂයක් සිදුවිය."));
     } finally {
       setIsGenerating(false);
     }
@@ -71,10 +83,20 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
     setStep('select');
     setItinerary(null);
     setSelectedNodes([]);
+    setError(null);
   };
 
   return (
     <div className="min-h-screen bg-[#050505] text-white pt-24 pb-32 relative overflow-hidden">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* Background Ambience */}
       <div className="fixed inset-0 pointer-events-none opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15)_0%,transparent_75%)]" />
@@ -86,6 +108,11 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {error && (
+          <div className="mb-8">
+            <ErrorAlert message={error} onDismiss={() => setError(null)} />
+          </div>
+        )}
         {step === 'select' ? (
           <div className="space-y-16 animate-in fade-in duration-700">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-b border-white/10 pb-12">

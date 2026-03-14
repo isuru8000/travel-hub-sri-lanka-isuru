@@ -36,6 +36,7 @@ import {
 
 interface MarketplaceProps {
   language: Language;
+  onBack?: () => void;
 }
 
 const PREMIUM_PACKAGES = [
@@ -102,7 +103,7 @@ const FUTURE_NODES = [
   }
 ];
 
-const Marketplace: React.FC<MarketplaceProps> = ({ language }) => {
+const Marketplace: React.FC<MarketplaceProps> = ({ language, onBack }) => {
   const [bookingState, setBookingState] = useState({
     destination: '',
     checkIn: '',
@@ -115,6 +116,10 @@ const Marketplace: React.FC<MarketplaceProps> = ({ language }) => {
     paymentMethod: 'card' as 'card' | 'wallet' | 'ledger',
     bookingId: ''
   });
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
 
   const processingSteps = [
     { label: "Initializing Gateway...", icon: <Zap size={18} /> },
@@ -152,6 +157,15 @@ const Marketplace: React.FC<MarketplaceProps> = ({ language }) => {
 
   return (
     <div className="min-h-screen bg-[#fafafa] pb-32">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* SUCCESS CONFIRMATION MODAL */}
       {bookingState.isSuccess && (
         <div className="fixed inset-0 z-[300] bg-black/95 backdrop-blur-2xl flex items-center justify-center p-6 animate-in fade-in duration-700">

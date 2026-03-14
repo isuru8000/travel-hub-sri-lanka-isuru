@@ -77,9 +77,27 @@ const STORE_ITEMS: GearItem[] = [
   }
 ];
 
-const TravelStore: React.FC<{ language: Language }> = ({ language }) => {
+interface TravelStoreProps {
+  language: Language;
+  onBack?: () => void;
+}
+
+const TravelStore: React.FC<TravelStoreProps> = ({ language, onBack }) => {
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* Cinematic Header */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
         <div 

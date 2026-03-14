@@ -22,11 +22,25 @@ import {
 
 interface TransportProps {
   language: Language;
+  onBack?: () => void;
 }
 
-const Transport: React.FC<TransportProps> = ({ language }) => {
+const Transport: React.FC<TransportProps> = ({ language, onBack }) => {
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
+
   return (
-    <div className="min-h-screen bg-[#fafafa] pb-32">
+    <div className="min-h-screen bg-[#fafafa] pb-32 relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* CINEMATIC LOGISTICS HEADER */}
       <div className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-[20000ms] animate-slow-zoom" 

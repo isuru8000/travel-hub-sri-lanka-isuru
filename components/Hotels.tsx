@@ -12,6 +12,7 @@ import {
   ArrowRight,
   ShieldCheck,
   Radio,
+  ArrowLeft,
   Building2,
   Calendar,
   Users,
@@ -79,7 +80,12 @@ const LUXURY_HOTELS = [
   }
 ];
 
-const Hotels: React.FC<{ language: Language }> = ({ language }) => {
+interface HotelsProps {
+  language: Language;
+  onBack?: () => void;
+}
+
+const Hotels: React.FC<HotelsProps> = ({ language, onBack }) => {
   const [selectedHotel, setSelectedHotel] = useState<any | null>(null);
   const [bookingState, setBookingState] = useState({
     destination: '',
@@ -91,6 +97,10 @@ const Hotels: React.FC<{ language: Language }> = ({ language }) => {
     error: null as string | null
   });
 
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
+
   const onBook = (hotelName: string) => {
     setBookingState(prev => ({ ...prev, destination: hotelName }));
     const hotel = LUXURY_HOTELS.find(h => h.name.EN === hotelName);
@@ -98,7 +108,16 @@ const Hotels: React.FC<{ language: Language }> = ({ language }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] pb-32 font-sans">
+    <div className="min-h-screen bg-[#fafafa] pb-32 font-sans relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* LUXURY HERO SECTION */}
       <div className="relative h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden bg-[#050505]">
         <div className="absolute inset-0 bg-cover bg-center opacity-30 transition-transform duration-[30000ms] animate-slow-zoom" 

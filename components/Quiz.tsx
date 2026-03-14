@@ -19,6 +19,7 @@ import {
 interface QuizProps {
   language: Language;
   setView: (view: any) => void;
+  onBack?: () => void;
 }
 
 const QUIZ_QUESTIONS: QuizQuestion[] = [
@@ -107,11 +108,15 @@ const EXPLORER_PROFILES: Record<string, ExplorerProfile> = {
   }
 };
 
-const Quiz: React.FC<QuizProps> = ({ language, setView }) => {
+const Quiz: React.FC<QuizProps> = ({ language, setView, onBack }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
   const [isFinished, setIsFinished] = useState(false);
   const [profile, setProfile] = useState<ExplorerProfile | null>(null);
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
 
   const handleOptionSelect = (profileScore: string) => {
     const newAnswers = [...answers, profileScore];
@@ -203,6 +208,15 @@ const Quiz: React.FC<QuizProps> = ({ language, setView }) => {
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-40 px-6 flex flex-col items-center overflow-hidden relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       <div className="max-w-[1600px] w-full space-y-24 animate-in slide-in-from-bottom-12 duration-1000 relative z-10">
         
         {/* Progress HUD */}

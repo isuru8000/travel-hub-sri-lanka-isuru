@@ -29,12 +29,17 @@ import {
 interface IslandMapManifoldProps {
   language: Language;
   onSelectDestination: (dest: Destination) => void;
+  onBack?: () => void;
 }
 
-const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelectDestination }) => {
+const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelectDestination, onBack }) => {
   const [hoveredNode, setHoveredNode] = useState<Destination | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<'all' | Destination['category']>('all');
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   
   // Guided Tour States
   const [tourMode, setTourMode] = useState(false);
@@ -86,6 +91,15 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
 
   return (
     <div className="min-h-screen bg-[#050508] relative overflow-hidden flex flex-col pt-32 pb-12">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* Background Ambience */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.08)_0%,transparent_70%)]" />

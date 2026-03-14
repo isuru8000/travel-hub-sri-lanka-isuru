@@ -25,14 +25,19 @@ import {
 
 interface ContactProps {
   language: Language;
+  onBack?: () => void;
 }
 
-const Contact: React.FC<ContactProps> = ({ language }) => {
+const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
+  
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   
   const [formData, setFormData] = useState({
     name: '',
@@ -148,6 +153,15 @@ const Contact: React.FC<ContactProps> = ({ language }) => {
 
   return (
     <div className="min-h-screen bg-[#020202] pb-32 animate-in fade-in duration-700 relative overflow-hidden">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       
       {/* --- FULLY ANIMATED BACKGROUND LAYER --- */}
       <div className="fixed inset-0 z-0 pointer-events-none" style={{ perspective: '1500px' }}>

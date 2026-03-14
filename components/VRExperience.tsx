@@ -21,6 +21,7 @@ import {
 interface VRExperienceProps {
   language: Language;
   setView: (view: any) => void;
+  onBack?: () => void;
 }
 
 interface POI {
@@ -32,12 +33,16 @@ interface POI {
   category: string;
 }
 
-const VRExperience: React.FC<VRExperienceProps> = ({ language, setView }) => {
+const VRExperience: React.FC<VRExperienceProps> = ({ language, setView, onBack }) => {
   const [selectedDest, setSelectedDest] = useState<Destination | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [scanProgress, setScanProgress] = useState(0);
   const [isImmersive, setIsImmersive] = useState(false);
   const [movement, setMovement] = useState({ x: 0, z: 0 }); 
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
   const [lookRotation, setLookRotation] = useState({ x: 0, y: 0 }); 
   const [activePOI, setActivePOI] = useState<POI | null>(null);
 
@@ -148,6 +153,15 @@ const VRExperience: React.FC<VRExperienceProps> = ({ language, setView }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* 3D Immersive Environment Container */}
       <div 
         className={`fixed inset-0 transition-all duration-[2000ms] ${isImmersive ? 'opacity-100 scale-100' : 'opacity-0 scale-110 pointer-events-none'}`}

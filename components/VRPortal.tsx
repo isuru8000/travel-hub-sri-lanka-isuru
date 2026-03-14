@@ -6,6 +6,7 @@ import StripePaymentModal from './StripePaymentModal';
 interface VRPortalProps {
   language: Language;
   setView: (view: View) => void;
+  onBack?: () => void;
 }
 
 const vrTours = [
@@ -61,7 +62,7 @@ const vrTours = [
   }
 ];
 
-const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
+const VRPortal: React.FC<VRPortalProps> = ({ language, setView, onBack }) => {
   const [selectedTour, setSelectedTour] = useState<any>(null);
   const [hasTicket, setHasTicket] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
@@ -70,6 +71,10 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
     { id: 1, user: 'Kamal', text: 'Wow, the view is amazing!', time: '10:02 AM' },
     { id: 2, user: 'Sarah', text: 'Can the guide show that again?', time: '10:05 AM' },
   ]);
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
 
   // LOCK OVERRIDE: Force "Coming Soon" view
   const isLocked = true;
@@ -323,6 +328,15 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
   // 3. TICKET PURCHASE SCREEN
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white pt-24 pb-12 px-4 relative overflow-hidden">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/10 backdrop-blur-md transition-all text-gray-400 hover:text-white"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {showPaymentModal && (
         <StripePaymentModal 
           amount={selectedTour.price} 

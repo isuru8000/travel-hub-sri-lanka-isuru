@@ -55,6 +55,8 @@ import {
 } from 'lucide-react';
 import { getLankaGuideResponse, GroundingLink, getWeatherUpdate, WeatherData } from '../services/gemini.ts';
 
+import { SEO } from './SEO.tsx';
+
 interface DestinationDetailProps {
   destination: Destination | null;
   language: Language;
@@ -203,7 +205,11 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
   return (
     <div className="min-h-screen bg-white animate-in fade-in duration-1000 relative overflow-x-hidden">
-      
+      <SEO 
+        title={destination.name[language]} 
+        description={destination.shortStory[language]} 
+        image={destination.image} 
+      />
       <LiveWeatherWidget destinationName={destination.name.EN} language={language} />
 
       {/* Cinematic Hero */}
@@ -338,8 +344,8 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
                     <div className="relative group">
                        <div className={`absolute -left-4 md:-left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
-                       <div className="font-space text-base md:text-xl text-gray-600 leading-relaxed md:leading-loose space-y-6 md:space-y-8 antialiased font-light text-justify relative z-10 pl-2 md:pl-0">
-                          <div className={`prose-container first-letter:text-4xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
+                       <div className="font-sans text-lg md:text-xl text-gray-800 leading-relaxed space-y-6 md:space-y-8 antialiased font-light relative z-10 pl-2 md:pl-0">
+                          <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
                           {(() => {
                              const content = deepDive?.history || destination.detailedAbout?.[language];
                              if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
@@ -348,11 +354,11 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              const trimmedContent = content.trim();
                              // Check for common HTML tags or if it starts with <
                              if (trimmedContent.startsWith('<') || /<[a-z][\s\S]*>/i.test(trimmedContent)) {
-                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content" />;
+                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content space-y-6 md:space-y-8" />;
                              }
 
                              return content.split('\n\n').map((para: string, pIdx: number) => (
-                               <p key={pIdx} className={`whitespace-pre-wrap ${pIdx === 0 ? 'mt-0' : 'mt-12'}`}>
+                               <p key={pIdx} className={`whitespace-pre-wrap ${pIdx === 0 ? 'mt-0' : 'mt-6 md:mt-8'}`}>
                                  {para}
                                </p>
                              ));
@@ -376,7 +382,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.05] group-hover:rotate-12 transition-transform duration-1000">
                                 <Compass size={140} className="w-24 h-24 md:w-36 md:h-36" />
                              </div>
-                             <p className="text-lg sm:text-xl md:text-3xl text-gray-700 italic font-medium leading-relaxed relative z-10">
+                             <p className="text-lg sm:text-xl md:text-2xl text-gray-800 italic font-medium leading-relaxed relative z-10">
                                 "{deepDive.hiddenEchoes}"
                              </p>
                           </div>
@@ -405,47 +411,6 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                            <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
                               <span className="text-[8px] font-black text-white uppercase tracking-[0.4em] bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">Frame_Ref #0{i+1}</span>
                            </div>
-                        </div>
-                      ))}
-                    </div>
-                 </div>
-
-                 {/* 4. Logistical Vision Addendum */}
-                 {destination.logistics && (
-                    <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12">
-                       <div className="flex items-center gap-4 md:gap-6 group/log">
-                          <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center bg-gray-100 text-gray-400 group-hover/log:bg-[#E1306C]/10 group-hover/log:text-[#E1306C] transition-all`}>
-                            <Car size={26} className="w-5 h-5 md:w-6 md:h-6" />
-                          </div>
-                          <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">{UI_STRINGS.logisticalVision[language]}</h4>
-                       </div>
-                       <div className="md:pl-20">
-                         <div className="bg-gray-50/50 p-6 md:p-12 rounded-3xl md:rounded-[3.5rem] border border-gray-100/50 shadow-inner group">
-                            <p className="text-lg sm:text-xl md:text-3xl text-gray-500 italic font-medium leading-relaxed">
-                               "{destination.logistics[language]}"
-                            </p>
-                         </div>
-                       </div>
-                    </div>
-                  )}
-
-                 {/* 5. Practical Wisdom (Tips) Section */}
-                 <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12">
-                    <div className="flex items-center gap-4 md:gap-6">
-                       <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center bg-blue-500/10 text-blue-500`}>
-                         <Lightbulb size={26} className="w-5 h-5 md:w-6 md:h-6" />
-                       </div>
-                       <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
-                         {UI_STRINGS.tipsLabel[language]}
-                       </h4>
-                    </div>
-                    <div className="grid grid-cols-1 gap-6 md:gap-10 md:pl-20">
-                      {(deepDive?.wisdom || destination.tips.map(t => t[language])).map((tip, idx) => (
-                        <div key={idx} className="flex gap-4 md:gap-8 items-start group">
-                          <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white border shadow-sm flex items-center justify-center font-black text-[10px] md:text-xs shrink-0 transition-all duration-500 text-[#0EA5E9] border-gray-100 group-hover:bg-[#0EA5E9] group-hover:text-white`}>
-                            {idx + 1}
-                          </div>
-                          <span className="text-lg sm:text-xl md:text-2xl font-medium text-gray-500 leading-relaxed italic pt-1">{typeof tip === 'string' ? tip : (tip as any).EN || tip}</span>
                         </div>
                       ))}
                     </div>

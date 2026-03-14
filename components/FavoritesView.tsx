@@ -11,11 +11,16 @@ interface FavoritesViewProps {
   toggleSave: (category: string, id: string) => void;
   setView: (view: any) => void;
   onSelectDestination: (dest: Destination) => void;
+  onBack?: () => void;
 }
 
-const FavoritesView: React.FC<FavoritesViewProps> = ({ language, savedIds, toggleSave, setView, onSelectDestination }) => {
+const FavoritesView: React.FC<FavoritesViewProps> = ({ language, savedIds, toggleSave, setView, onSelectDestination, onBack }) => {
   const [isRoving, setIsRoving] = useState(false);
   const [rovedDestination, setRovedDestination] = useState<Destination | null>(null);
+
+  const t = {
+    back: language === 'EN' ? 'Back to Home' : 'ආපසු',
+  };
 
   const allSaved = useMemo(() => {
     const list: { id: string; category: string; data: any; typeLabel: string }[] = [];
@@ -68,7 +73,16 @@ const FavoritesView: React.FC<FavoritesViewProps> = ({ language, savedIds, toggl
   };
 
   return (
-    <div className="min-h-screen bg-white pb-40 animate-in fade-in duration-700">
+    <div className="min-h-screen bg-white pb-40 animate-in fade-in duration-700 relative">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="fixed top-24 left-4 sm:left-8 z-50 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md hover:bg-white rounded-full shadow-lg border border-gray-100 transition-all text-gray-600 hover:text-black"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="text-sm font-medium">{t.back}</span>
+        </button>
+      )}
       {/* Header */}
       <div className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
          <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: `linear-gradient(#E1306C 1px, transparent 1px), linear-gradient(90deg, #E1306C 1px, transparent 1px)`, backgroundSize: '120px 120px' }} />
