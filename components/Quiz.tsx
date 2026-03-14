@@ -4,6 +4,7 @@ import { Language, QuizQuestion, ExplorerProfile } from '../types.ts';
 import { 
   Compass, 
   ArrowRight, 
+  ArrowLeft,
   RotateCcw, 
   Sparkles, 
   ChevronLeft,

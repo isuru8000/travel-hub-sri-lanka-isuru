@@ -13,7 +13,8 @@ import {
   Activity,
   Cpu,
   Scan,
-  Orbit
+  Orbit,
+  ArrowLeft
 } from 'lucide-react';
 
 interface GearItem {

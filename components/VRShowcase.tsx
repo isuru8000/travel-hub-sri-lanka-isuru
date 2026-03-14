@@ -220,6 +220,7 @@ const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView, onBack }) =>
     back: language === 'EN' ? 'Back to Home' : 'ආපසු',
   };
   const requestRef = useRef<number | null>(null);
+  const lastTouchRef = useRef<{ x: number, y: number } | null>(null);
 
   const animate = () => {
     setRotation(prev => ({

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Language, User, Destination, View } from './types.ts';
@@ -251,32 +250,32 @@ export default function App() {
                 className="py-20 md:py-52 px-4 md:px-6 relative overflow-hidden bg-white"
               >
                 <div className="max-w-7xl mx-auto">
-                  <div className="relative rounded-[3rem] md:rounded-[6rem] bg-[#0a0a0a] overflow-hidden group/card shadow-[0_30px_100px_rgba(0,0,0,0.3)] md:shadow-[0_60px_150px_rgba(0,0,0,0.3)] border border-white/5">
+                  <div className="relative rounded-[3rem] md:rounded-[6rem] bg-white overflow-hidden group/card shadow-[0_30px_100px_rgba(0,0,0,0.1)] md:shadow-[0_60px_150px_rgba(0,0,0,0.1)] border border-black/10">
                     
                     {/* Atmospheric Background Mesh */}
                     <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
-                       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(225,48,108,0.2)_0%,transparent_50%)]" />
-                       <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(14,165,233,0.15)_0%,transparent_50%)]" />
+                       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(225,48,108,0.1)_0%,transparent_50%)]" />
+                       <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(14,165,233,0.1)_0%,transparent_50%)]" />
                     </div>
 
                     <div className="relative z-10 p-6 sm:p-10 md:p-24 space-y-12 md:space-y-20">
                        {/* HEADER CONTENT */}
-                       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-10 border-b border-white/5 pb-10 md:pb-16">
+                       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-10 border-b border-black/10 pb-10 md:pb-16">
                           <div className="space-y-8 md:space-y-12">
-                             <div className="inline-flex items-center gap-3 md:gap-5 px-6 py-2 md:px-8 md:py-3 rounded-full bg-white/10 border border-white/20 text-[#E1306C] text-[9px] md:text-[11px] font-black uppercase tracking-[0.4em] md:tracking-[0.6em] backdrop-blur-xl">
+                             <div className="inline-flex items-center gap-3 md:gap-5 px-6 py-2 md:px-8 md:py-3 rounded-full bg-black/5 border border-black/10 text-[#E1306C] text-[9px] md:text-[11px] font-black uppercase tracking-[0.4em] md:tracking-[0.6em] backdrop-blur-xl">
                                <span className="animate-pulse"><Sparkles size={14} className="md:w-[18px] md:h-[18px]" /></span>
                                {language === 'EN' ? 'Personalized Exploration' : 'පුද්ගලීකරණය කළ ගවේෂණය'}
                              </div>
                              
                              <div className="space-y-6 md:space-y-8">
-                               <h2 className="text-4xl sm:text-5xl md:text-[8rem] font-heritage font-bold text-white leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-2 md:mb-4">
+                               <h2 className="text-4xl sm:text-5xl md:text-[8rem] font-heritage font-bold text-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-2 md:mb-4">
                                   {language === 'EN' ? (
                                     <>Uncover Your <br/><span className="italic insta-text-gradient">Destiny.</span></>
                                   ) : (
                                     <>ඔබේ <span className="insta-text-gradient italic">දෛවය</span> <br/>සොයාගන්න.</>
                                   )}
                                </h2>
-                               <p className="text-gray-400 text-lg sm:text-xl md:text-2xl font-light italic leading-relaxed border-l-4 border-[#E1306C]/30 pl-6 md:pl-8">
+                               <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-light italic leading-relaxed border-l-4 border-[#E1306C]/30 pl-6 md:pl-8">
                                   {language === 'EN' 
                                     ? "Every voyager carries a unique signature. We match your neural archetype to the perfect archival nodes."
                                     : "සෑම සංචාරකයෙකුටම සුවිශේෂී අනන්‍යතාවයක් ඇත. ඔබේ රුචිකත්වයන්ට වඩාත් ගැලපෙන ස්ථාන අපි හඳුනා ගනිමු."}
@@ -286,7 +285,7 @@ export default function App() {
 
                           <button 
                             onClick={() => setView('quiz')}
-                            className="group relative px-6 py-4 w-full md:w-auto md:px-20 md:py-10 bg-white text-black font-black rounded-[2rem] md:rounded-[4rem] hover:scale-105 md:hover:scale-110 active:scale-95 transition-all shadow-[0_20px_60px_rgba(255,255,255,0.1)] md:shadow-[0_40px_100px_rgba(255,255,255,0.1)] flex items-center justify-center gap-3 md:gap-8 overflow-hidden"
+                            className="group relative px-6 py-4 w-full md:w-auto md:px-20 md:py-10 bg-black text-white font-black rounded-[2rem] md:rounded-[4rem] hover:scale-105 md:hover:scale-110 active:scale-95 transition-all shadow-[0_20px_60px_rgba(0,0,0,0.1)] md:shadow-[0_40px_100px_rgba(0,0,0,0.1)] flex items-center justify-center gap-3 md:gap-8 overflow-hidden"
                           >
                             <div className="absolute inset-0 bg-gradient-to-r from-pink-600/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <Compass size={16} className="relative z-10 text-[#E1306C] group-hover:rotate-180 transition-transform duration-1000 md:w-6 md:h-6" />
@@ -299,15 +298,15 @@ export default function App() {
                        {/* UPGRADED 4-COLUMN SHARDS GRID */}
                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                           {/* Decorative background script */}
-                          <div className="absolute -top-40 -right-40 text-[20rem] font-heritage font-black text-white/[0.01] select-none pointer-events-none rotate-90">
+                          <div className="absolute -top-40 -right-40 text-[20rem] font-heritage font-black text-black/[0.02] select-none pointer-events-none rotate-90">
                              {language === 'EN' ? 'ගවේෂණය' : 'DESTINY'}
                           </div>
 
                           {/* Shard 1: Ancient Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#E1306C]/40">
+                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#E1306C]/40">
                              <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Ancient" />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Target size={18} className="text-[#E1306C] animate-pulse" />
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
@@ -317,10 +316,10 @@ export default function App() {
                           </div>
 
                           {/* Shard 2: Mist Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-cyan-400/40">
+                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-cyan-400/40">
                              <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Mist" />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Wind size={18} className="text-cyan-400 animate-pulse" />
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
@@ -330,10 +329,10 @@ export default function App() {
                           </div>
 
                           {/* Shard 3: Wave Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-blue-400/40">
+                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-blue-400/40">
                              <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Waves" />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Activity size={18} className="text-blue-400 animate-pulse" />
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
@@ -343,10 +342,10 @@ export default function App() {
                           </div>
 
                           {/* Shard 4: Wild Heart */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-white/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#10B981]/40">
+                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#10B981]/40">
                              <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Wildlife" />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <PawPrint size={18} className="text-[#10B981] animate-pulse" />
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">

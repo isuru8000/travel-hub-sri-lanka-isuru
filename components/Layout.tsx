@@ -59,20 +59,20 @@ const Layout: React.FC<LayoutProps> = ({
           width: 10px;
         }
         ::-webkit-scrollbar-track {
-          background: #0a0a0a;
+          background: #f3f4f6;
         }
         ::-webkit-scrollbar-thumb {
-          background: #333;
+          background: #d1d5db;
           border-radius: 5px;
-          border: 2px solid #0a0a0a;
+          border: 2px solid #f3f4f6;
         }
         ::-webkit-scrollbar-thumb:hover {
-          background: #555;
+          background: #9ca3af;
         }
         /* Firefox */
         * {
           scrollbar-width: thin;
-          scrollbar-color: #333 #0a0a0a;
+          scrollbar-color: #d1d5db #f3f4f6;
         }
       `}} />
       <Navbar 

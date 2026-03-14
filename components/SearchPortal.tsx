@@ -10,6 +10,7 @@ import {
   ShieldCheck, 
   Database, 
   ArrowRight, 
+  ArrowLeft,
   Newspaper, 
   Zap, 
   CloudSun, 

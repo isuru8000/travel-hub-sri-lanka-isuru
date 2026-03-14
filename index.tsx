@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './src/index.css';
 // Fix: Use explicit .tsx extension to resolve the default export correctly
 import App from './App.tsx';
@@ -11,9 +12,11 @@ if (rootElement) {
   const root = createRoot(rootElement);
   root.render(
     <ErrorBoundary>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }

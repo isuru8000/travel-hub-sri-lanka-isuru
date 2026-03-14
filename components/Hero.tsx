@@ -66,7 +66,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const mainTitleSI = "ශ්‍රී ලංකාව";
 
   return (
-    <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-[#020205]" style={{ perspective: '2000px' }}>
+    <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-white" style={{ perspective: '2000px' }}>
       
       {/* Background Layer with Parallax and Enhancements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -90,7 +90,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           />
           
           {/* Multi-layered cinematic overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#020205]/80 via-transparent to-[#020205]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.1)_0%,transparent_80%)]" />
           
           {/* Noise Texture */}
@@ -109,7 +109,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         
         <div className="space-y-8 mb-12 animate-in fade-in zoom-in-95 duration-1000 delay-200">
           <h1 className="flex flex-col items-center select-none">
-            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-[#FFF7ED] mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90 text-shadow-lg">
+            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-black mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90">
               {language === 'EN' ? 'WELCOME TO' : 'ආයුබෝවන්'}
             </span>
             
@@ -134,7 +134,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           
           <div className="flex flex-col items-center mt-8 md:mt-12">
              <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_40px_#F59E0B] mb-8 md:mb-12 opacity-80" />
-             <p className="font-narrative text-sm md:text-2xl font-light text-white/60 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic text-shadow-lg">
+             <p className="font-narrative text-sm md:text-2xl font-light text-black/60 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic">
                {language === 'EN' 
                  ? "An immersive journey through the timeless wonders of the Pearl of the Indian Ocean."
                  : "ඉන්දියන් සාගරයේ මුතු ඇටයේ කාලාන්තරයක් පුරා සැඟවුණු අසිරිය සොයා යන ගමනක්."}
