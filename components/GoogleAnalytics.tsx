@@ -5,6 +5,18 @@ interface GoogleAnalyticsProps {
   view: string;
 }
 
+export const trackEvent = (category: string, action: string, label?: string, value?: number) => {
+  const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
+  if (measurementId) {
+    ReactGA.event({
+      category,
+      action,
+      label,
+      value,
+    });
+  }
+};
+
 const GoogleAnalytics = ({ view }: GoogleAnalyticsProps) => {
   useEffect(() => {
     const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
