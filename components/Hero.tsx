@@ -80,21 +80,21 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           {/* Mobile Static Background Image */}
           <div 
             role="img"
-            aria-label="Scenic view of Sri Lankan tea plantations"
+            aria-label="Scenic view of a tropical beach in Sri Lanka"
             className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=800&q=80')` }}
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80')` }}
           />
 
           {/* Desktop Static Background Image */}
           <div 
             role="img"
-            aria-label="Scenic view of Sigiriya rock fortress in Sri Lanka"
+            aria-label="Scenic view of a misty jungle in Sri Lanka"
             className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.9] saturate-[1.1]"
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1920&q=80')` }}
+            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg')` }}
           />
           
           {/* Multi-layered cinematic overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.1)_0%,transparent_80%)]" />
           
           {/* Noise Texture */}
@@ -113,7 +113,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         
         <div className="space-y-8 mb-12 animate-in fade-in zoom-in-95 duration-1000 delay-200">
           <h1 className="flex flex-col items-center select-none">
-            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-black mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90">
+            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-white mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90">
               {language === 'EN' ? 'WELCOME TO' : 'ආයුබෝවන්'}
             </span>
             
@@ -138,7 +138,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           
           <div className="flex flex-col items-center mt-8 md:mt-12">
              <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_40px_#F59E0B] mb-8 md:mb-12 opacity-80" />
-             <p className="font-narrative text-sm md:text-2xl font-light text-black/60 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic">
+             <p className="font-narrative text-sm md:text-2xl font-light text-white/90 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic drop-shadow-md">
                {language === 'EN' 
                  ? "An immersive journey through the timeless wonders of the Pearl of the Indian Ocean."
                  : "ඉන්දියන් සාගරයේ මුතු ඇටයේ කාලාන්තරයක් පුරා සැඟවුණු අසිරිය සොයා යන ගමනක්."}
