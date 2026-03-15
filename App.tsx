@@ -373,6 +373,28 @@ export default function App() {
     }
   };
 
+  const getMetaTitle = (view: string): string => {
+    const titles: Record<string, string> = {
+      home: "Travel Hub Sri Lanka | Your Ultimate Guide to an Unforgettable Journey",
+      foods: "Traditional Sri Lankan Cuisine | Culinary Journey with Travel Hub",
+      festivals: "Cultural Festivals of Sri Lanka | Experience the Vibrant Traditions",
+      destinations: "Best Places to Visit in Sri Lanka | Travel Hub Destinations",
+      heritage: "Cultural Heritage of Sri Lanka | Discover Ancient Temples & History",
+      booking: "Book Your Sri Lankan Getaway | Tours, Hotels & Experiences",
+      memories: "Travel Memories | Relive Your Sri Lankan Adventures",
+      store: "Travel Hub Store | Authentic Sri Lankan Handicrafts & Souvenirs",
+      "vr-trip": "Virtual Reality Sri Lanka Tour | Immersive Travel Experience",
+      "sinhala-vision": "Sinhala Vision | Explore Sri Lankan Cultural Identity",
+      registry: "Travel Hub Registry | Manage Your Sri Lankan Travel Experience",
+      contact: "Contact Travel Hub Sri Lanka | Expert Travel Advice & Support",
+      about: "About Travel Hub Sri Lanka | Showcasing the Beauty of Our Island",
+      medicine: "Traditional Sri Lankan Medicine | Ancient Healing & Wellness",
+      arts: "Arts & Crafts of Sri Lanka | Celebrate Our Artistic Spirit",
+      music: "Traditional Music of Sri Lanka | Listen to the Soul of Our Island"
+    };
+    return titles[view] || "Travel Hub Sri Lanka | Discover the Beauty of Our Island";
+  };
+
   const getMetaDescription = (view: string): string => {
     const descriptions: Record<string, string> = {
       home: "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, festivals, heritage, and more. Your ultimate guide to an unforgettable Sri Lankan journey.",
@@ -398,7 +420,7 @@ export default function App() {
   return (
     <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
       <SEO 
-        title={view === 'home' ? 'Home' : view.charAt(0).toUpperCase() + view.slice(1)} 
+        title={getMetaTitle(view)} 
         description={getMetaDescription(view)} 
       />
       <GoogleAnalytics view={view} />

@@ -32,6 +32,7 @@
     "tsx": "^4.21.0"
   },
   "devDependencies": {
+    "@prerenderer/renderer-puppeteer": "^1.2.4",
     "@tailwindcss/vite": "^4.2.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -40,6 +41,7 @@
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vite-plugin-prerender": "^1.0.8"
   }
 }
