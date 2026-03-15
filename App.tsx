@@ -373,11 +373,33 @@ export default function App() {
     }
   };
 
+  const getMetaDescription = (view: string): string => {
+    const descriptions: Record<string, string> = {
+      home: "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, festivals, heritage, and more. Your ultimate guide to an unforgettable Sri Lankan journey.",
+      foods: "Embark on a culinary journey through Sri Lanka. Explore our comprehensive guide to traditional Sri Lankan cuisine, from authentic spicy curries and fragrant rice dishes to popular street food, sweet treats, and unique culinary experiences found across the island. Discover the rich flavours, history, and secrets behind Sri Lanka's most beloved dishes.",
+      festivals: "Experience the vibrant cultural tapestry of Sri Lanka through our comprehensive guide to traditional festivals. From the grandeur of the Esala Perahera in Kandy to the sacred rituals of Poson and Vesak, discover the dates, customs, and significance of Sri Lanka's most iconic religious and cultural celebrations. Plan your visit to witness these spectacular events firsthand.",
+      destinations: "Explore the diverse landscapes of Sri Lanka. From ancient rock fortresses like Sigiriya to the misty highlands of Ella and pristine beaches, discover the best places to visit in Sri Lanka.",
+      heritage: "Immerse yourself in the rich cultural heritage of Sri Lanka. Discover ancient temples, historical sites, traditional arts, and the deep-rooted traditions that define our island nation.",
+      booking: "Plan your perfect Sri Lankan getaway. Easily book your tours, accommodations, and experiences through Travel Hub. Start your adventure today.",
+      memories: "Relive your Sri Lankan adventures. Share and explore the unforgettable moments and memories captured by travelers across our beautiful island.",
+      store: "Bring a piece of Sri Lanka home. Shop for authentic Sri Lankan handicrafts, souvenirs, and traditional products at the Travel Hub store.",
+      "vr-trip": "Experience Sri Lanka like never before. Take an immersive virtual reality tour of our most iconic destinations and landmarks from the comfort of your home.",
+      "sinhala-vision": "Explore the Sinhala vision and cultural identity of Sri Lanka. Discover the traditions, language, and artistic expressions that shape our unique heritage.",
+      registry: "Access the Travel Hub registry. Manage your bookings, profile, and travel preferences for a seamless Sri Lankan travel experience.",
+      contact: "Get in touch with Travel Hub. Have questions about your Sri Lankan trip? Contact our team for expert travel advice, support, and assistance.",
+      about: "Learn more about Travel Hub Sri Lanka. We are dedicated to showcasing the true beauty, culture, and spirit of our island to travelers from around the world.",
+      medicine: "Discover the ancient wisdom of Sri Lankan traditional medicine. Explore the healing practices, herbal remedies, and holistic wellness traditions of our island.",
+      arts: "Celebrate the artistic spirit of Sri Lanka. Discover traditional handicrafts, intricate carvings, vibrant paintings, and the skilled artisans who keep our cultural heritage alive.",
+      music: "Listen to the soul of Sri Lanka. Explore our traditional music, rhythmic drumming, and the melodic heritage that echoes through our island's history."
+    };
+    return descriptions[view] || "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, and more.";
+  };
+
   return (
     <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
       <SEO 
         title={view === 'home' ? 'Home' : view.charAt(0).toUpperCase() + view.slice(1)} 
-        description="Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, and more." 
+        description={getMetaDescription(view)} 
       />
       <GoogleAnalytics view={view} />
       <div className="overflow-x-hidden transition-all duration-300">
