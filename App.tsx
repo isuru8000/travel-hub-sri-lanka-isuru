@@ -311,7 +311,7 @@ export default function App() {
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
                                 <p className="text-[9px] font-black uppercase tracking-[0.4em] text-[#E1306C]">Registry_Node_01</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Ancient Path' : 'පුරාණ මග'}</h4>
+                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Explore Yapahuwa: Ancient Rock Fortress' : 'යාපහුව ගවේෂණය කරන්න: පැරණි ශිලා බලකොටුව'}</h4>
                              </div>
                           </div>
 
@@ -324,7 +324,7 @@ export default function App() {
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
                                 <p className="text-[9px] font-black uppercase tracking-[0.4em] text-cyan-400">Registry_Node_02</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Mist Highlands' : 'මීදුම් කඳුකරය'}</h4>
+                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Visit Ella: The Misty Highlands' : 'ඇල්ල සංචාරය: මීදුම් සහිත කඳුකරය'}</h4>
                              </div>
                           </div>
 
@@ -337,7 +337,7 @@ export default function App() {
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
                                 <p className="text-[9px] font-black uppercase tracking-[0.4em] text-blue-400">Registry_Node_03</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Azure Waves' : 'නිල්වන් සාගරය'}</h4>
+                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Discover Galle Fort: Historic Fortress' : 'ගාල්ල කොටුව සොයාගන්න: ඓතිහාසික බලකොටුව'}</h4>
                              </div>
                           </div>
 
@@ -350,7 +350,7 @@ export default function App() {
                              </div>
                              <div className="absolute bottom-10 left-10 right-10 space-y-2">
                                 <p className="text-[9px] font-black uppercase tracking-[0.4em] text-[#10B981]">Registry_Node_04</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Wild Heart' : 'වනගත ජීවය'}</h4>
+                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Experience Yala: Wildlife Safari' : 'යාල අත්විඳින්න: වනජීවී සෆාරිය'}</h4>
                              </div>
                           </div>
                        </div>

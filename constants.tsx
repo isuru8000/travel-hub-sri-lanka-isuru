@@ -10,8 +10,8 @@ export const LOGO_URL = "https://i.ibb.co/9m8G0fP/travel-hub-logo.png";
 export const UI_STRINGS: Translation = {
   heroTitle: { EN: "Discover True Beauty of Sri Lanka", SI: "ශ්‍රී ලංකාවේ සැබෑ සුන්දරත්වය සොයා ගන්න" },
   exploreDestinations: { EN: "Explore Destinations", SI: "ගමනාන්ත ගවේෂණය කරන්න" },
-  popularHighlightsTitle: { EN: "Top Highlights", SI: "ප්‍රධාන ආකර්ෂණයන්" },
-  popularHighlightsSubtitle: { EN: "See the five most famous places that show the heart of our island.", SI: "අපගේ දිවයිනේ ජීවය නිරූපණය කරන සුවිශේෂී ස්ථාන පහක් හරහා සංචාරය කරන්න." },
+  popularHighlightsTitle: { EN: "Must-Visit Gems of Sri Lanka", SI: "ශ්‍රී ලංකාවේ නැරඹිය යුතුම ස්ථාන" },
+  popularHighlightsSubtitle: { EN: "Discover the heart of our island through these 5 iconic destinations that define Sri Lanka's beauty.", SI: "ශ්‍රී ලංකාවේ සුන්දරත්වය විදහාපාන මෙම සුවිශේෂී ගමනාන්ත 5 හරහා අප දිවයිනේ හදවත සොයා යන්න." },
   planYourTrip: { EN: "Plan Your Trip", SI: "සංචාරය සැලසුම් කරන්න" },
   ancientHighlights: { EN: "Ancient Sri Lanka Highlights", SI: "පැරණි ශ්‍රී ලංකාවේ විශේෂිත ස්ථාන" },
   natureAdventure: { EN: "Nature & Adventure", SI: "සොබාදහම සහ වික්‍රමය" },
