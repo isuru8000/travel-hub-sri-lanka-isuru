@@ -151,7 +151,7 @@ const HotelModal: React.FC<HotelModalProps> = ({ hotel, onClose, onBook, booking
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
                 {hotel.gallery.map((img, i) => (
                   <div key={i} className="group relative aspect-[4/3] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl md:shadow-2xl border border-gray-100 transition-transform duration-700 hover:-translate-y-2">
-                    <img src={img} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                    <img src={img} alt={`${hotel.name[language]} gallery image ${i + 1}`} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#E1306C]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 ))}

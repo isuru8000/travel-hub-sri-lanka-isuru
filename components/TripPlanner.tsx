@@ -173,7 +173,7 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
                           selectedNodes.map((node, idx) => (
                             <div key={node.id} className="group relative flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all animate-in slide-in-from-right-4">
                                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/10">
-                                  <img src={node.image} className="w-full h-full object-cover" alt="" />
+                                  <img src={node.image} className="w-full h-full object-cover" alt={`Selected node: ${node.name[language]}`} />
                                </div>
                                <div className="flex-grow min-w-0">
                                   <p className="text-[8px] font-black text-[#0EA5E9] uppercase tracking-widest leading-none mb-1">NODE_{String(idx + 1).padStart(2, '0')}</p>
@@ -219,7 +219,7 @@ const TripPlanner: React.FC<TripPlannerProps> = ({ language, setView, onSelectDe
                       return (
                         <div key={dest.id} className={`group relative bg-white/5 border rounded-[2.5rem] overflow-hidden transition-all duration-500 ${isSelected ? 'border-[#0EA5E9]/50 opacity-50' : 'border-white/10 hover:border-white/30'}`}>
                           <div className="aspect-[16/9] overflow-hidden">
-                            <img src={dest.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="" />
+                            <img src={dest.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt={`Destination: ${dest.name[language]}`} />
                           </div>
                           <div className="p-8 space-y-6">
                             <div className="space-y-1">

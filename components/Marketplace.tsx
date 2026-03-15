@@ -254,7 +254,7 @@ const Marketplace: React.FC<MarketplaceProps> = ({ language, onBack }) => {
                    <div className="space-y-8">
                       <div className="bg-white p-8 rounded-[2.5rem] shadow-sm border border-gray-100 flex gap-6 items-center">
                          <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0">
-                            <img src={selectedPackage?.image || 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=200'} className="w-full h-full object-cover" alt="" />
+                            <img src={selectedPackage?.image || 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=200'} className="w-full h-full object-cover" alt={`Package: ${selectedPackage?.title[language] || 'Package image'}`} />
                          </div>
                          <div className="text-left space-y-1">
                             <p className="text-[9px] font-black text-[#E1306C] uppercase tracking-widest">Selected_Node</p>
@@ -447,7 +447,7 @@ const Marketplace: React.FC<MarketplaceProps> = ({ language, onBack }) => {
            {PREMIUM_PACKAGES.map((pkg) => (
              <div key={pkg.id} className="group relative h-[550px] md:h-[650px] rounded-[3rem] md:rounded-[5rem] overflow-hidden bg-white border border-gray-100 shadow-2xl transition-all duration-1000 hover:-translate-y-2 md:hover:-translate-y-4 flex flex-col">
                 <div className="relative h-1/2 md:h-2/3 overflow-hidden">
-                   <img src={pkg.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
+                   <img src={pkg.image} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt={`Package: ${pkg.title[language]}`} />
                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                    
                    <div className="absolute top-6 left-6 md:top-10 md:left-10">

@@ -79,12 +79,16 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         >
           {/* Mobile Static Background Image */}
           <div 
+            role="img"
+            aria-label="Scenic view of Sri Lankan tea plantations"
             className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
             style={{ backgroundImage: `url('https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&w=800&q=80')` }}
           />
 
           {/* Desktop Static Background Image */}
           <div 
+            role="img"
+            aria-label="Scenic view of Sigiriya rock fortress in Sri Lanka"
             className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.9] saturate-[1.1]"
             style={{ backgroundImage: `url('https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=1920&q=80')` }}
           />

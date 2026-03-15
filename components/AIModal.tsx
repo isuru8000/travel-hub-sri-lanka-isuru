@@ -419,7 +419,7 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
                 }`}>
                   {m.image && (
                     <div className="mb-4 rounded-2xl overflow-hidden border border-white/10">
-                      <img src={m.image} alt="User upload" className="w-full h-auto max-h-60 object-cover" />
+                      <img src={m.image} alt="User uploaded image" className="w-full h-auto max-h-60 object-cover" />
                     </div>
                   )}
                   <div className="text-base sm:text-lg whitespace-pre-line prose prose-sm max-w-none prose-headings:font-heritage prose-headings:text-[#0a0a0a]">
@@ -482,7 +482,7 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
             {selectedImage && (
               <div className="relative inline-block animate-in fade-in slide-in-from-bottom-4">
                 <div className="relative w-24 h-24 rounded-2xl overflow-hidden border border-gray-200 shadow-lg group">
-                  <img src={selectedImage} alt="Preview" className="w-full h-full object-cover" />
+                  <img src={selectedImage} alt="Selected image preview" className="w-full h-full object-cover" />
                   <button 
                     onClick={() => setSelectedImage(null)}
                     className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
