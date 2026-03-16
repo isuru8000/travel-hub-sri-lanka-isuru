@@ -1,10 +1,9 @@
 {
-  "apiKey": "AIzaSyCOA0y2lVfiz_2c1QP2phZumfuqRrgqRgw",
-  "authDomain": "gen-lang-client-0488424075.firebaseapp.com",
-  "projectId": "gen-lang-client-0488424075",
-  "storageBucket": "gen-lang-client-0488424075.firebasestorage.app",
-  "messagingSenderId": "932939627553",
-  "appId": "1:932939627553:web:d5790902908cea64eb7760",
-  "measurementId": "G-NCQJBL44EG",
-  "firestoreDatabaseId": "(default)"
+  "apiKey": "AIzaSyALjz9x0a9bRUr_WKhAK6ab-pDDiik4AGY",
+  "authDomain": "travelhub-37c3c.firebaseapp.com",
+  "projectId": "travelhub-37c3c",
+  "storageBucket": "travelhub-37c3c.firebasestorage.app",
+  "messagingSenderId": "662883466221",
+  "appId": "1:662883466221:web:b63a6885090caf3bdb85e4",
+  "measurementId": "G-CN5FNERHMK"
 }
