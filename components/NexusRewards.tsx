@@ -426,12 +426,12 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                       style={{ animationDelay: `${idx * 100}ms` }}
                     >
                       <div className="relative aspect-[4/5] overflow-hidden">
-                         <img src={m.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
+                         <img src={m.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt={m.title[language]} />
                          <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/30 to-transparent" />
                          
                          <div className="absolute top-8 left-8 flex items-center gap-3">
                             <div className="w-12 h-12 rounded-2xl border border-white/20 overflow-hidden shadow-2xl bg-gray-900 p-1">
-                               <img src={`https://ui-avatars.com/api/?name=${m.userName}&background=0EA5E9&color=fff`} className="w-full h-full object-cover rounded-xl" alt="" />
+                               <img src={`https://ui-avatars.com/api/?name=${m.userName}&background=0EA5E9&color=fff`} className="w-full h-full object-cover rounded-xl" alt={m.userName} />
                             </div>
                             <div className="text-left">
                                <p className="text-[10px] font-black text-white uppercase tracking-widest mb-0.5">{m.userName}</p>
