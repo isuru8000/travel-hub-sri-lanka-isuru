@@ -37,9 +37,42 @@
         "name": { "type": "string" },
         "photo": { "type": "string" },
         "role": { "type": "string" },
+        "explorerProfileId": { "type": "string" },
         "createdAt": { "type": "string", "format": "date-time" }
       },
       "required": ["uid", "email", "name", "role", "createdAt"]
+    },
+    "Memory": {
+      "title": "Memory",
+      "description": "A travel memory shared by a user.",
+      "type": "object",
+      "properties": {
+        "authorUid": { "type": "string" },
+        "userName": { "type": "string" },
+        "userPhoto": { "type": "string" },
+        "location": { "type": "object" },
+        "title": { "type": "object" },
+        "story": { "type": "object" },
+        "image": { "type": "string" },
+        "likes": { "type": "number" },
+        "rating": { "type": "number" },
+        "tags": { "type": "array" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorUid", "userName", "title", "story", "image", "createdAt"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "A comment on a memory.",
+      "type": "object",
+      "properties": {
+        "authorUid": { "type": "string" },
+        "userName": { "type": "string" },
+        "userPhoto": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorUid", "userName", "text", "createdAt"]
     }
   },
   "firestore": {
@@ -54,6 +87,14 @@
     "users/{userId}": {
       "schema": { "$ref": "User" },
       "description": "Collection of user profiles."
+    },
+    "memories/{memoryId}": {
+      "schema": { "$ref": "Memory" },
+      "description": "Collection of travel memories."
+    },
+    "memories/{memoryId}/comments/{commentId}": {
+      "schema": { "$ref": "Comment" },
+      "description": "Subcollection of comments on a memory."
     }
   }
 }

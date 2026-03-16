@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import './src/index.css';
+import './index.css';
 // Fix: Use explicit .tsx extension to resolve the default export correctly
 import App from './App.tsx';
 import { ErrorBoundary } from './components/ErrorBoundary.tsx';

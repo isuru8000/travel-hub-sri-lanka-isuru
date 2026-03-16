@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { refineTravelStory } from '../services/gemini.ts';
 import { db, handleFirestoreError, OperationType } from '../firebase.ts';
-import { collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, doc, updateDoc, increment, getDocs } from 'firebase/firestore';
+import { collection, query, onSnapshot, addDoc, serverTimestamp, doc, updateDoc, increment, getDocs, deleteDoc } from 'firebase/firestore';
 
 interface NexusRewardsProps {
   language: Language;
@@ -36,6 +36,8 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
   const [commentInput, setCommentInput] = useState('');
   const [likedMemories, setLikedMemories] = useState<Set<string>>(new Set());
   const [showShareToast, setShowShareToast] = useState(false);
+  const [deleteConfirm, setDeleteConfirm] = useState<{ id: string, type: 'memory' | 'comment', parentId?: string } | null>(null);
+  const [isDeleting, setIsDeleting] = useState(false);
   
   // Chat States
   const [chatMessages, setChatMessages] = useState([
@@ -55,40 +57,59 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
   }, [chatMessages]);
 
   useEffect(() => {
-    const q = query(collection(db, 'memories'), orderBy('createdAt', 'desc'));
+    const q = query(collection(db, 'memories'));
     const unsubscribe = onSnapshot(q, async (snapshot) => {
       const fetchedMemories: Memory[] = [];
       for (const document of snapshot.docs) {
         const data = document.data();
         
         // Fetch comments for this memory
-        const commentsQ = query(collection(db, `memories/${document.id}/comments`), orderBy('createdAt', 'asc'));
+        const commentsQ = query(collection(db, `memories/${document.id}/comments`));
         const commentsSnapshot = await getDocs(commentsQ);
         const comments: Comment[] = commentsSnapshot.docs.map(cDoc => {
           const cData = cDoc.data();
           return {
             id: cDoc.id,
+            authorUid: cData.authorUid,
             userName: cData.userName,
             userPhoto: cData.userPhoto,
             text: { EN: cData.textEN, SI: cData.textSI },
-            date: cData.createdAt?.toDate().toISOString().split('T')[0] || new Date().toISOString().split('T')[0]
+            date: cData.createdAt?.toDate?.().toISOString().split('T')[0] || new Date().toISOString().split('T')[0],
+            createdAt: cData.createdAt // Keep for sorting
           };
+        });
+
+        // Sort comments client-side (asc)
+        comments.sort((a: any, b: any) => {
+          const timeA = a.createdAt?.toMillis?.() || 0;
+          const timeB = b.createdAt?.toMillis?.() || 0;
+          return timeA - timeB;
         });
 
         fetchedMemories.push({
           id: document.id,
+          authorUid: data.authorUid,
           userName: data.userName,
           location: { EN: data.locationEN, SI: data.locationSI },
           title: { EN: data.titleEN, SI: data.titleSI },
           story: { EN: data.storyEN, SI: data.storySI },
           image: data.image,
           likes: data.likes || 0,
-          date: data.createdAt?.toDate().toISOString().split('T')[0] || new Date().toISOString().split('T')[0],
+          date: data.createdAt?.toDate?.().toISOString().split('T')[0] || new Date().toISOString().split('T')[0],
+          createdAt: data.createdAt, // Keep for sorting
           rating: data.rating || 5,
           tags: data.tags || [],
           comments: comments
         });
       }
+
+      // Sort memories client-side (desc)
+      fetchedMemories.sort((a: any, b: any) => {
+        const timeA = a.createdAt?.toMillis?.() || 0;
+        const timeB = b.createdAt?.toMillis?.() || 0;
+        return timeB - timeA;
+      });
+
       setMemories(fetchedMemories);
       
       // Update active memory if it's currently open
@@ -167,6 +188,33 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
       console.error("Failed to add comment:", error);
       handleFirestoreError(error, OperationType.CREATE, `memories/${memoryId}/comments`);
       setCommentInput(commentText); // Restore input on failure
+    }
+  };
+
+  const handleDeleteMemory = async (memoryId: string) => {
+    if (!user) return;
+    setIsDeleting(true);
+    try {
+      await deleteDoc(doc(db, 'memories', memoryId));
+      if (activeMemory?.id === memoryId) setActiveMemory(null);
+      setDeleteConfirm(null);
+    } catch (error) {
+      handleFirestoreError(error, OperationType.DELETE, `memories/${memoryId}`);
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
+  const handleDeleteComment = async (memoryId: string, commentId: string) => {
+    if (!user) return;
+    setIsDeleting(true);
+    try {
+      await deleteDoc(doc(db, `memories/${memoryId}/comments`, commentId));
+      setDeleteConfirm(null);
+    } catch (error) {
+      handleFirestoreError(error, OperationType.DELETE, `memories/${memoryId}/comments/${commentId}`);
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -262,12 +310,160 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/carbon-fibre.png")` }} />
       <div className="fixed inset-0 z-0 pointer-events-none opacity-10 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15)_0%,transparent_80%)]" />
 
+      {/* DELETE CONFIRMATION MODAL */}
+      {deleteConfirm && (
+        <div className="fixed inset-0 z-[400] flex items-center justify-center p-6">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => !isDeleting && setDeleteConfirm(null)} />
+          <div className="relative bg-white rounded-[2.5rem] p-10 max-w-md w-full shadow-2xl border border-gray-100 animate-in zoom-in-95 duration-300">
+            <div className="space-y-6 text-center">
+              <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mx-auto">
+                <X size={32} className="text-red-500" />
+              </div>
+              <div className="space-y-2">
+                <h4 className="text-2xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
+                  {language === 'EN' ? 'Confirm Deletion' : 'මකා දැමීම තහවුරු කරන්න'}
+                </h4>
+                <p className="text-gray-500 text-sm font-medium italic">
+                  {language === 'EN' 
+                    ? 'This action is permanent and cannot be reversed.' 
+                    : 'මෙම ක්‍රියාව ස්ථිර වන අතර එය ආපසු හැරවිය නොහැක.'}
+                </p>
+              </div>
+              <div className="flex gap-4 pt-4">
+                <button 
+                  disabled={isDeleting}
+                  onClick={() => setDeleteConfirm(null)}
+                  className="flex-1 py-4 bg-gray-100 text-gray-400 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-gray-200 transition-all"
+                >
+                  {language === 'EN' ? 'CANCEL' : 'අවලංගු කරන්න'}
+                </button>
+                <button 
+                  disabled={isDeleting}
+                  onClick={() => {
+                    if (deleteConfirm.type === 'memory') handleDeleteMemory(deleteConfirm.id);
+                    else if (deleteConfirm.parentId) handleDeleteComment(deleteConfirm.parentId, deleteConfirm.id);
+                  }}
+                  className="flex-1 py-4 bg-red-500 text-white rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-red-600 shadow-lg shadow-red-500/20 transition-all flex items-center justify-center"
+                >
+                  {isDeleting ? <Loader2 size={16} className="animate-spin" /> : (language === 'EN' ? 'DELETE' : 'මකා දමන්න')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {showShareToast && (
         <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[300] bg-[#0a0a0a] text-white px-8 py-4 rounded-2xl shadow-3xl flex items-center gap-4 animate-in slide-in-from-bottom-4 duration-500">
            <Share size={18} className="text-[#0EA5E9]" />
            <span className="text-[10px] font-black uppercase tracking-widest">Protocol Link Copied to Clipboard</span>
         </div>
       )}
+
+      {/* ACTIVE MEMORY MODAL */}
+      {(() => {
+        const currentActiveMemory = memories.find(m => m.id === activeMemory?.id) || activeMemory;
+        if (!currentActiveMemory) return null;
+        
+        return (
+          <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 animate-in fade-in duration-300">
+            <div className="absolute inset-0 bg-black/90 backdrop-blur-2xl" onClick={() => setActiveMemory(null)} />
+            <div className="relative bg-white rounded-[4rem] w-full max-w-6xl overflow-hidden shadow-[0_80px_200px_rgba(0,0,0,0.8)] border border-white/10 animate-in zoom-in-95 duration-500 flex flex-col lg:flex-row max-h-[90vh]">
+              {/* Image Section */}
+              <div className="lg:w-1/2 relative h-64 lg:h-auto overflow-hidden">
+                <img src={currentActiveMemory.image} className="w-full h-full object-cover" alt={currentActiveMemory.title[language]} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-12 left-12 right-12 space-y-4">
+                  <div className="flex items-center gap-3 text-[#0EA5E9] font-black text-[10px] uppercase tracking-widest bg-white/95 w-fit px-4 py-2 rounded-full">
+                    <MapPin size={12} /> {currentActiveMemory.location[language]}
+                  </div>
+                  <h2 className="text-4xl md:text-6xl font-heritage font-bold text-white uppercase tracking-tighter leading-none">
+                    {currentActiveMemory.title[language]}
+                  </h2>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="lg:w-1/2 bg-[#fafafa] p-12 md:p-16 overflow-y-auto flex flex-col">
+                <div className="flex justify-between items-start mb-12">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl border border-gray-200 overflow-hidden shadow-sm bg-white p-1">
+                      <img src={`https://ui-avatars.com/api/?name=${currentActiveMemory.userName}&background=0EA5E9&color=fff`} className="w-full h-full object-cover rounded-xl" alt={currentActiveMemory.userName} />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-xs font-black text-[#0a0a0a] uppercase tracking-widest">{currentActiveMemory.userName}</p>
+                      <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{currentActiveMemory.date}</p>
+                    </div>
+                  </div>
+                  <button onClick={() => setActiveMemory(null)} className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-gray-300 hover:text-red-500 shadow-sm transition-all active:scale-90">
+                    <X size={20} />
+                  </button>
+                </div>
+
+                <div className="space-y-12 flex-grow">
+                  <div className="relative">
+                    <Quote size={40} className="absolute -top-6 -left-6 text-[#E1306C]/10" />
+                    <p className="text-xl text-gray-600 font-light italic leading-relaxed pl-6">
+                      "{currentActiveMemory.story[language]}"
+                    </p>
+                  </div>
+
+                  {/* Comments Section */}
+                  <div className="space-y-8 pt-12 border-t border-gray-100">
+                    <h5 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em] flex items-center gap-3">
+                      <MessageSquare size={14} className="text-[#0EA5E9]" />
+                      {language === 'EN' ? 'RESONANCE_LOGS' : 'අදහස්'} ({currentActiveMemory.comments.length})
+                    </h5>
+                    
+                    <div className="space-y-6 max-h-64 overflow-y-auto pr-4 no-scrollbar">
+                      {currentActiveMemory.comments.map((comment) => (
+                        <div key={comment.id} className="group flex gap-4 items-start bg-white p-6 rounded-3xl border border-gray-50 shadow-sm transition-all hover:border-[#0EA5E9]/20">
+                          <img src={comment.userPhoto || `https://ui-avatars.com/api/?name=${comment.userName}&background=f0f0f0&color=999`} className="w-10 h-10 rounded-xl object-cover" alt={comment.userName} />
+                          <div className="flex-grow text-left space-y-1">
+                            <div className="flex justify-between items-center">
+                              <p className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-widest">{comment.userName}</p>
+                              <div className="flex items-center gap-3">
+                                <span className="text-[8px] font-bold text-gray-300 uppercase tracking-widest">{comment.date}</span>
+                                {user && comment.authorUid === user.uid && (
+                                  <button 
+                                    onClick={() => setDeleteConfirm({ id: comment.id, type: 'comment', parentId: currentActiveMemory.id })}
+                                    className="text-gray-300 hover:text-red-500 transition-colors"
+                                  >
+                                    <X size={12} />
+                                  </button>
+                                )}
+                              </div>
+                            </div>
+                            <p className="text-sm text-gray-500 font-medium leading-relaxed">{comment.text[language]}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Add Comment */}
+                    <div className="relative pt-4">
+                      <input 
+                        type="text"
+                        value={commentInput}
+                        onChange={(e) => setCommentInput(e.target.value)}
+                        onKeyDown={(e) => e.key === 'Enter' && handleAddComment(currentActiveMemory.id)}
+                        placeholder={language === 'EN' ? "Add resonance..." : "අදහසක් එක් කරන්න..."}
+                        className="w-full pl-6 pr-16 py-5 bg-white border border-gray-100 rounded-2xl focus:outline-none focus:border-[#0EA5E9]/30 font-bold text-xs uppercase tracking-widest shadow-sm"
+                      />
+                      <button 
+                        onClick={() => handleAddComment(currentActiveMemory.id)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#0a0a0a] text-white rounded-xl flex items-center justify-center hover:bg-[#0EA5E9] transition-all"
+                      >
+                        <Send size={16} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
 
       {/* CINEMATIC HERO HEADER */}
       <div className="relative w-full h-[65vh] flex items-center justify-center overflow-hidden bg-black mb-20">
@@ -469,6 +665,17 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                                </button>
                             </div>
                             <div className="flex gap-2">
+                               {user && m.authorUid === user.uid && (
+                                 <button 
+                                   onClick={(e) => {
+                                     e.stopPropagation();
+                                     setDeleteConfirm({ id: m.id, type: 'memory' });
+                                   }}
+                                   className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-400 hover:bg-red-500 hover:text-white transition-all shadow-inner"
+                                 >
+                                   <X size={16} />
+                                 </button>
+                               )}
                                <button onClick={handleShare} className="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center text-gray-300 hover:bg-[#0EA5E9] hover:text-white transition-all shadow-inner">
                                   <Share2 size={16} />
                                 </button>

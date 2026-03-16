@@ -181,7 +181,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             {user ? (
-              <button onClick={() => handleNav('community')} className="w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden group">
+              <button onClick={() => handleNav('profile')} className="w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden group">
                  <img src={user.photo} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
               </button>
             ) : (

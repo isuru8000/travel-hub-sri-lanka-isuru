@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Language, QuizQuestion, ExplorerProfile } from '../types.ts';
+import { auth, db } from '../firebase.ts';
+import { doc, updateDoc } from 'firebase/firestore';
 import { 
   Compass, 
   ArrowRight, 
@@ -146,6 +148,14 @@ const Quiz: React.FC<QuizProps> = ({ language, setView, onBack }) => {
     
     setProfile(EXPLORER_PROFILES[winningProfile]);
     setIsFinished(true);
+
+    // Save to Firestore if user is logged in
+    if (auth.currentUser) {
+      const userRef = doc(db, 'users', auth.currentUser.uid);
+      updateDoc(userRef, {
+        explorerProfileId: winningProfile
+      }).catch(err => console.error("Error saving profile:", err));
+    }
   };
 
   const resetQuiz = () => {

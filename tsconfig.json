@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "allowImportingTsExtensions": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "types": ["vite/client"]
   },
   "include": ["./**/*.ts", "./**/*.tsx"]
 }

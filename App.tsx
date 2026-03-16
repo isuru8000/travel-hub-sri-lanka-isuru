@@ -27,6 +27,7 @@ import BookingDestinations from './components/BookingDestinations.tsx';
 import TravelStore from './components/TravelStore.tsx';
 import DestinationDetail from './components/DestinationDetail.tsx';
 import Quiz from './components/Quiz.tsx';
+import ProfileView from './components/ProfileView.tsx';
 import VRExperience from './components/VRExperience.tsx';
 import VRShowcase from './components/VRShowcase.tsx';
 import SearchPortal from './components/SearchPortal.tsx';
@@ -36,11 +37,13 @@ import ScrollControls from './components/ScrollControls.tsx';
 import LockedView from './components/LockedView.tsx';
 import ComingSoonView from './components/ComingSoonView.tsx';
 import GoogleAnalytics from './components/GoogleAnalytics.tsx';
+import { ErrorBoundary } from './components/ErrorBoundary.tsx';
 import Lenis from 'lenis';
 import { UI_STRINGS, DESTINATIONS as DESTINATIONS_DATA } from './constants.tsx';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
-import { auth } from './firebase.ts';
+import { auth, db } from './firebase.ts';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { doc, onSnapshot } from 'firebase/firestore';
 import { SEO } from './components/SEO.tsx';
 
 export default function App() {
@@ -92,12 +95,31 @@ export default function App() {
     
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
+        // Initial user state from Auth
         setUser({
           uid: firebaseUser.uid,
           name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'Explorer',
           email: firebaseUser.email || '',
           photo: firebaseUser.photoURL || `https://ui-avatars.com/api/?name=${firebaseUser.email}`
         });
+
+        // Listen to user document in Firestore for additional data like explorerProfileId
+        const userRef = doc(db, 'users', firebaseUser.uid);
+        const unsubUser = onSnapshot(userRef, (docSnap) => {
+          if (docSnap.exists()) {
+            const data = docSnap.data();
+            setUser(prev => prev ? {
+              ...prev,
+              name: data.name || prev.name,
+              photo: data.photo || prev.photo,
+              explorerProfileId: data.explorerProfileId
+            } : null);
+          }
+        });
+
+        return () => {
+          unsubUser();
+        };
       } else {
         setUser(null);
       }
@@ -190,6 +212,8 @@ export default function App() {
         return <div className="pt-24"><CategoriesSection language={language} setView={setView} /></div>;
       case 'quiz':
         return <div className="pt-24"><Quiz language={language} setView={setView} /></div>;
+      case 'profile':
+        return <ProfileView language={language} user={user} onLogout={handleLogout} setView={setView} />;
       case 'vr-experience':
         return <div className="pt-24"><VRExperience language={language} setView={setView} /></div>;
       case 'vr-showcase':
@@ -304,7 +328,7 @@ export default function App() {
 
                           {/* Shard 1: Ancient Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#E1306C]/40">
-                             <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Ancient" />
+                             <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Yapahuwa Ancient Rock Fortress' : 'යාපහුව ඓතිහාසික ශිලා බලකොටුව'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Target size={18} className="text-[#E1306C] animate-pulse" />
@@ -317,7 +341,7 @@ export default function App() {
 
                           {/* Shard 2: Mist Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-cyan-400/40">
-                             <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Mist" />
+                             <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Misty Highlands of Ella' : 'ඇල්ල මීදුම් සහිත කඳුකරය'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Wind size={18} className="text-cyan-400 animate-pulse" />
@@ -330,7 +354,7 @@ export default function App() {
 
                           {/* Shard 3: Wave Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-blue-400/40">
-                             <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Waves" />
+                             <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Historic Galle Fort' : 'ඓතිහාසික ගාල්ල කොටුව'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Activity size={18} className="text-blue-400 animate-pulse" />
@@ -343,7 +367,7 @@ export default function App() {
 
                           {/* Shard 4: Wild Heart */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#10B981]/40">
-                             <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt="Wildlife" />
+                             <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Wildlife Safari in Yala' : 'යාල වනජීවී සෆාරිය'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <PawPrint size={18} className="text-[#10B981] animate-pulse" />
@@ -418,19 +442,21 @@ export default function App() {
   };
 
   return (
-    <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
-      <SEO 
-        title={getMetaTitle(view)} 
-        description={getMetaDescription(view)} 
-      />
-      <GoogleAnalytics view={view} />
-      <div className="overflow-x-hidden transition-all duration-300">
-        {renderContent()}
-      </div>
-      <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
-      <AIModal language={language} onNavigate={navigateToDestination} />
-      <LiveVoiceGuide language={language} />
-      <ScrollControls />
-    </Layout>
+    <ErrorBoundary>
+      <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
+        <SEO 
+          title={getMetaTitle(view)} 
+          description={getMetaDescription(view)} 
+        />
+        <GoogleAnalytics view={view} />
+        <div className="overflow-x-hidden transition-all duration-300">
+          {renderContent()}
+        </div>
+        <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
+        <AIModal language={language} onNavigate={navigateToDestination} />
+        <LiveVoiceGuide language={language} />
+        <ScrollControls />
+      </Layout>
+    </ErrorBoundary>
   );
 }
