@@ -1,9 +1,18 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore, getDocFromServer, doc } from 'firebase/firestore';
-import firebaseConfig from './firebase-applet-config.json';
 
 // Initialize Firebase SDK
+const firebaseConfig = {
+  apiKey: "AIzaSyALjz9x0a9bRUr_WKhAK6ab-pDDiik4AGY",
+  authDomain: "travelhub-37c3c.firebaseapp.com",
+  projectId: "travelhub-37c3c",
+  storageBucket: "travelhub-37c3c.firebasestorage.app",
+  messagingSenderId: "662883466221",
+  appId: "1:662883466221:web:b63a6885090caf3bdb85e4",
+  measurementId: "G-CN5FNERHMK"
+};
+
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
