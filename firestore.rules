@@ -33,6 +33,35 @@ service cloud.firestore {
     //   - role: string (required)
     //   - createdAt: timestamp (required)
     //
+    // Collection: memories
+    // Document ID: memoryId
+    // Fields:
+    //   - authorUid: string (required)
+    //   - userName: string (required)
+    //   - userPhoto: string (optional)
+    //   - locationEN: string (required)
+    //   - locationSI: string (required)
+    //   - titleEN: string (required)
+    //   - titleSI: string (required)
+    //   - storyEN: string (required)
+    //   - storySI: string (required)
+    //   - image: string (required, base64 or URL)
+    //   - likes: number (required)
+    //   - rating: number (required)
+    //   - tags: list (optional)
+    //   - createdAt: timestamp (required)
+    //
+    // Collection: memories/{memoryId}/comments
+    // Document ID: commentId
+    // Fields:
+    //   - memoryId: string (required)
+    //   - authorUid: string (required)
+    //   - userName: string (required)
+    //   - userPhoto: string (optional)
+    //   - textEN: string (required)
+    //   - textSI: string (required)
+    //   - createdAt: timestamp (required)
+    //
     // ===============================================================
 
     // ===============================================================
@@ -87,6 +116,32 @@ service cloud.firestore {
              (!('photo' in data) || data.photo is string);
     }
 
+    function isValidMemory(data) {
+      return data.keys().hasAll(['authorUid', 'userName', 'locationEN', 'locationSI', 'titleEN', 'titleSI', 'storyEN', 'storySI', 'image', 'likes', 'rating', 'createdAt']) &&
+             data.authorUid is string &&
+             data.userName is string &&
+             data.locationEN is string &&
+             data.locationSI is string &&
+             data.titleEN is string &&
+             data.titleSI is string &&
+             data.storyEN is string &&
+             data.storySI is string &&
+             data.image is string &&
+             data.likes is number &&
+             data.rating is number &&
+             data.createdAt is timestamp;
+    }
+
+    function isValidComment(data) {
+      return data.keys().hasAll(['memoryId', 'authorUid', 'userName', 'textEN', 'textSI', 'createdAt']) &&
+             data.memoryId is string &&
+             data.authorUid is string &&
+             data.userName is string &&
+             data.textEN is string &&
+             data.textSI is string &&
+             data.createdAt is timestamp;
+    }
+
     // ===============================================================
     // Rules
     // ===============================================================
@@ -105,6 +160,22 @@ service cloud.firestore {
     match /users/{userId} {
       allow read: if isOwner(userId);
       allow write: if isOwner(userId) && isValidUser(request.resource.data);
+    }
+
+    match /memories/{memoryId} {
+      allow read: if true; // Publicly readable
+      allow create: if isAuthenticated() && isValidMemory(request.resource.data) && request.resource.data.authorUid == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        (isOwner(resource.data.authorUid) && isValidMemory(request.resource.data)) ||
+        (request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes'])) // Allow anyone to like
+      );
+      allow delete: if isAuthenticated() && isOwner(resource.data.authorUid);
+
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if isAuthenticated() && isValidComment(request.resource.data) && request.resource.data.authorUid == request.auth.uid;
+        allow delete: if isAuthenticated() && isOwner(resource.data.authorUid);
+      }
     }
   }
 }
