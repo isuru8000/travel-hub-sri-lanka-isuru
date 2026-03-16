@@ -1,10 +1,10 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore, getDocFromServer, doc } from 'firebase/firestore';
 
 // Initialize Firebase SDK
 const firebaseConfig = {
-  apiKey: "AIzaSyALjz9x0a9bRUr_WKhAK6ab-pDDiik4AGY",
+  apiKey: "AIzaSyALjz9X0a9bRUr_WKhAK6ab-pDDiik4AGY",
   authDomain: "travelhub-37c3c.firebaseapp.com",
   projectId: "travelhub-37c3c",
   storageBucket: "travelhub-37c3c.firebasestorage.app",
@@ -13,7 +13,15 @@ const firebaseConfig = {
   measurementId: "G-CN5FNERHMK"
 };
 
-const app = initializeApp(firebaseConfig);
+let app;
+try {
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+  console.log("Firebase initialized successfully with project:", firebaseConfig.projectId);
+} catch (error) {
+  console.error("Firebase initialization error:", error);
+  app = getApp();
+}
+
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 
