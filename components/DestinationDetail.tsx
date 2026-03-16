@@ -209,6 +209,12 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         title={destination.name[language]} 
         description={destination.shortStory[language]} 
         image={destination.image} 
+        touristAttraction={{
+          name: destination.name.EN,
+          description: destination.shortStory.EN,
+          image: destination.image,
+          address: destination.location
+        }}
       />
       <LiveWeatherWidget destinationName={destination.name.EN} language={language} />
 
