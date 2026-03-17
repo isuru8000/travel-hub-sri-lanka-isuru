@@ -5,7 +5,7 @@ import { DESTINATIONS_DATA } from './destination_details.tsx';
 
 export const SUPABASE_KEY = 'sb_publishable_c8wPY71QFNsFJKcAEuD86w_pcqen0nv';
 
-export const LOGO_URL = "https://i.ibb.co/9m8G0fP/travel-hub-logo.png";
+export const LOGO_URL = "https://cdn-icons-png.flaticon.com/512/3069/3069172.png";
 
 export const UI_STRINGS: Translation = {
   heroTitle: { EN: "Discover True Beauty of Sri Lanka", SI: "ශ්‍රී ලංකාවේ සැබෑ සුන්දරත්වය සොයා ගන්න" },

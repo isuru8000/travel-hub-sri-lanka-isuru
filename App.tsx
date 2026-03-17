@@ -15,7 +15,6 @@ import Festivals from './components/Festivals.tsx';
 import CategoriesSection from './components/CategoriesSection.tsx';
 import StorySection from './components/StorySection.tsx';
 import AIModal from './components/AIModal.tsx';
-import LiveVoiceGuide from './components/LiveVoiceGuide.tsx';
 import IslandMapManifold from './components/IslandMapManifold.tsx';
 import VRPortal from './components/VRPortal.tsx';
 import TripPlanner from './components/TripPlanner.tsx';
@@ -454,7 +453,6 @@ export default function App() {
         </div>
         <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
         <AIModal language={language} onNavigate={navigateToDestination} />
-        <LiveVoiceGuide language={language} />
         <ScrollControls />
       </Layout>
     </ErrorBoundary>

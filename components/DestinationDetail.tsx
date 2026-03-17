@@ -89,7 +89,7 @@ const LiveWeatherWidget: React.FC<{ destinationName: string; language: Language 
       <div className={`relative p-[1px] rounded-full overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all ${weather?.isThrottled ? 'shadow-orange-500/20' : ''}`}>
         <div className={`absolute inset-[-400%] bg-[conic-gradient(from_0deg,transparent_0,transparent_40%,${weather?.isThrottled ? '#f97316' : '#0EA5E9'}_50%,transparent_60%,transparent_100%)] animate-border-spin opacity-40 group-hover:opacity-100 transition-opacity duration-700`} />
         
-        <div className="relative bg-black/40 backdrop-blur-2xl rounded-full px-4 py-2 md:px-5 md:py-2.5 flex items-center gap-3 md:gap-4 group transition-all hover:bg-black/60">
+        <div className="relative bg-black/80 md:bg-black/40 md:backdrop-blur-2xl rounded-full px-4 py-2 md:px-5 md:py-2.5 flex items-center gap-3 md:gap-4 group transition-all hover:bg-black/60">
           {loading ? (
             <div className="flex items-center gap-2">
               <Loader2 size={12} className="animate-spin text-[#0EA5E9]" />
@@ -170,6 +170,18 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
           if (typeof response !== 'string' && response.links) {
             setNearbyResults(response.links);
           }
+          
+          // Fetch deep dive
+          const deepDivePrompt = `Provide a detailed history and a hidden echo (an intriguing, lesser-known fact) for ${destination.name.EN} in ${destination.location}, Sri Lanka. Return as JSON: { "history": "...", "hiddenEchoes": "..." }`;
+          const deepDiveResponse = await getLankaGuideResponse(deepDivePrompt, language, undefined, false);
+          if (typeof deepDiveResponse === 'string') {
+            try {
+              const parsed = JSON.parse(deepDiveResponse);
+              setDeepDive(parsed);
+            } catch (e) {
+              console.error("Deep dive parsing failed", e);
+            }
+          }
         } catch (e) {
           console.error("Nearby sync failed", e);
         } finally {
@@ -221,7 +233,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
       {/* Cinematic Hero */}
       <div className="relative h-[85vh] w-full overflow-hidden bg-black">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-[100ms] ease-out"
+          className="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-[100ms] ease-out parallax-hero"
           style={{ 
             backgroundImage: `url(${destination.image})`,
             transform: `translateY(${scrollProgress * 200}px) scale(1.05)`,
@@ -234,21 +246,6 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform md:w-[18px] md:h-[18px]" /> 
             <span className="hidden sm:inline">{UI_STRINGS.returnToRegistry[language]}</span>
             <span className="sm:hidden">Back</span>
-          </button>
-          
-          <button 
-            onClick={() => {
-              // We'll trigger the LiveVoiceGuide from here or open a modal
-              // For now, let's just show an alert or trigger a global state if we had one
-              // Since we don't have a global state for the voice guide yet, we can just
-              // dispatch a custom event that the Layout or App can listen to.
-              window.dispatchEvent(new CustomEvent('open-voice-guide', { detail: { destination: destination.name.EN } }));
-            }}
-            className="flex items-center gap-2 md:gap-4 px-5 py-3 md:px-8 md:py-4 bg-[#0EA5E9]/80 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-[#0EA5E9] hover:scale-105 transition-all group shadow-2xl active:scale-95"
-          >
-            <Radio size={16} className="animate-pulse md:w-[18px] md:h-[18px]" />
-            <span className="hidden sm:inline">{language === 'EN' ? 'AI Voice Guide' : 'AI හඬ මඟපෙන්වන්නා'}</span>
-            <span className="sm:hidden">Voice</span>
           </button>
         </div>
 
@@ -277,9 +274,6 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
           </div>
         </div>
       </div>
-
-      {/* Sync Overlay */}
-      {/* Deep sync logic removed */}
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
         
@@ -503,6 +497,9 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
           to { transform: rotate(360deg); }
         }
         .animate-border-spin { animation: border-spin 4s linear infinite; }
+        @media (max-width: 768px) {
+          .parallax-hero { transform: none !important; }
+        }
       `}} />
     </div>
   );
