@@ -83,18 +83,18 @@ const StorySection: React.FC<StorySectionProps> = ({ language, setView }) => {
 
             <div className="space-y-8 pt-20">
               <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Temple" />
+                 <img src="https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Temple" />
               </div>
               <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Statue" />
+                 <img src="https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Statue" />
               </div>
             </div>
             <div className="space-y-8">
               <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Culture" />
+                 <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Culture" />
               </div>
               <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Nature" />
+                 <img src="https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Nature" />
               </div>
             </div>
           </div>

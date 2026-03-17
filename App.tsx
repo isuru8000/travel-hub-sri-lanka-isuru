@@ -1,49 +1,50 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense, lazy } from 'react';
 import { motion } from 'framer-motion';
 import { Language, User, Destination, View } from './types.ts';
 import Layout from './components/Layout.tsx';
 import Hero from './components/Hero.tsx';
 import PopularHighlights from './components/PopularHighlights.tsx';
-import Destinations from './components/Destinations.tsx';
-import Foods from './components/Foods.tsx';
-import HeritageMusic from './components/HeritageMusic.tsx';
-import TraditionalMedicine from './components/TraditionalMedicine.tsx';
-import { ArtsAndCrafts } from './components/ArtsAndCrafts.tsx';
-import Phrasebook from './components/Phrasebook.tsx';
-import TravelEssentials from './components/TravelEssentials.tsx';
-import Festivals from './components/Festivals.tsx';
-import CategoriesSection from './components/CategoriesSection.tsx';
-import StorySection from './components/StorySection.tsx';
-import AIModal from './components/AIModal.tsx';
-import IslandMapManifold from './components/IslandMapManifold.tsx';
-import VRPortal from './components/VRPortal.tsx';
-import TripPlanner from './components/TripPlanner.tsx';
-import NexusRewards from './components/NexusRewards.tsx';
-import Marketplace from './components/Marketplace.tsx';
-import Hotels from './components/Hotels.tsx';
-import Transport from './components/Transport.tsx';
-import BookingDestinations from './components/BookingDestinations.tsx';
-import TravelStore from './components/TravelStore.tsx';
-import DestinationDetail from './components/DestinationDetail.tsx';
-import Quiz from './components/Quiz.tsx';
-import ProfileView from './components/ProfileView.tsx';
-import VRExperience from './components/VRExperience.tsx';
-import VRShowcase from './components/VRShowcase.tsx';
-import SearchPortal from './components/SearchPortal.tsx';
-import Contact from './components/Contact.tsx';
-import LoginModal from './components/LoginModal.tsx';
-import ScrollControls from './components/ScrollControls.tsx';
-import LockedView from './components/LockedView.tsx';
-import ComingSoonView from './components/ComingSoonView.tsx';
+import { SEO } from './components/SEO.tsx';
 import GoogleAnalytics from './components/GoogleAnalytics.tsx';
 import { ErrorBoundary } from './components/ErrorBoundary.tsx';
+import LoginModal from './components/LoginModal.tsx';
+import AIModal from './components/AIModal.tsx';
+import ScrollControls from './components/ScrollControls.tsx';
 import Lenis from 'lenis';
 import { UI_STRINGS, DESTINATIONS as DESTINATIONS_DATA } from './constants.tsx';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
 import { auth, db } from './firebase.ts';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, onSnapshot } from 'firebase/firestore';
-import { SEO } from './components/SEO.tsx';
+
+const Destinations = lazy(() => import('./components/Destinations.tsx'));
+const Foods = lazy(() => import('./components/Foods.tsx'));
+const HeritageMusic = lazy(() => import('./components/HeritageMusic.tsx'));
+const TraditionalMedicine = lazy(() => import('./components/TraditionalMedicine.tsx'));
+const ArtsAndCrafts = lazy(() => import('./components/ArtsAndCrafts.tsx').then(module => ({ default: module.ArtsAndCrafts })));
+const Phrasebook = lazy(() => import('./components/Phrasebook.tsx'));
+const TravelEssentials = lazy(() => import('./components/TravelEssentials.tsx'));
+const Festivals = lazy(() => import('./components/Festivals.tsx'));
+const CategoriesSection = lazy(() => import('./components/CategoriesSection.tsx'));
+const StorySection = lazy(() => import('./components/StorySection.tsx'));
+const IslandMapManifold = lazy(() => import('./components/IslandMapManifold.tsx'));
+const VRPortal = lazy(() => import('./components/VRPortal.tsx'));
+const TripPlanner = lazy(() => import('./components/TripPlanner.tsx'));
+const NexusRewards = lazy(() => import('./components/NexusRewards.tsx'));
+const DestinationDetail = lazy(() => import('./components/DestinationDetail.tsx'));
+const Quiz = lazy(() => import('./components/Quiz.tsx'));
+const ProfileView = lazy(() => import('./components/ProfileView.tsx'));
+const VRExperience = lazy(() => import('./components/VRExperience.tsx'));
+const VRShowcase = lazy(() => import('./components/VRShowcase.tsx'));
+const SearchPortal = lazy(() => import('./components/SearchPortal.tsx'));
+const Contact = lazy(() => import('./components/Contact.tsx'));
+const LockedView = lazy(() => import('./components/LockedView.tsx'));
+const ComingSoonView = lazy(() => import('./components/ComingSoonView.tsx'));
+const Marketplace = lazy(() => import('./components/Marketplace.tsx'));
+const Hotels = lazy(() => import('./components/Hotels.tsx'));
+const Transport = lazy(() => import('./components/Transport.tsx'));
+const BookingDestinations = lazy(() => import('./components/BookingDestinations.tsx'));
+const TravelStore = lazy(() => import('./components/TravelStore.tsx'));
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('EN');
@@ -327,7 +328,7 @@ export default function App() {
 
                           {/* Shard 1: Ancient Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#E1306C]/40">
-                             <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Yapahuwa Ancient Rock Fortress' : 'යාපහුව ඓතිහාසික ශිලා බලකොටුව'} />
+                             <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Yapahuwa Ancient Rock Fortress' : 'යාපහුව ඓතිහාසික ශිලා බලකොටුව'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Target size={18} className="text-[#E1306C] animate-pulse" />
@@ -340,7 +341,7 @@ export default function App() {
 
                           {/* Shard 2: Mist Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-cyan-400/40">
-                             <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Misty Highlands of Ella' : 'ඇල්ල මීදුම් සහිත කඳුකරය'} />
+                             <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Misty Highlands of Ella' : 'ඇල්ල මීදුම් සහිත කඳුකරය'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Wind size={18} className="text-cyan-400 animate-pulse" />
@@ -353,7 +354,7 @@ export default function App() {
 
                           {/* Shard 3: Wave Path */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-blue-400/40">
-                             <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Historic Galle Fort' : 'ඓතිහාසික ගාල්ල කොටුව'} />
+                             <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Historic Galle Fort' : 'ඓතිහාසික ගාල්ල කොටුව'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <Activity size={18} className="text-blue-400 animate-pulse" />
@@ -366,7 +367,7 @@ export default function App() {
 
                           {/* Shard 4: Wild Heart */}
                           <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#10B981]/40">
-                             <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Wildlife Safari in Yala' : 'යාල වනජීවී සෆාරිය'} />
+                             <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Wildlife Safari in Yala' : 'යාල වනජීවී සෆාරිය'} />
                              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
                              <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
                                 <PawPrint size={18} className="text-[#10B981] animate-pulse" />
@@ -449,7 +450,9 @@ export default function App() {
         />
         <GoogleAnalytics view={view} />
         <div className="overflow-x-hidden transition-all duration-300">
-          {renderContent()}
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+            {renderContent()}
+          </Suspense>
         </div>
         <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} language={language} />
         <AIModal language={language} onNavigate={navigateToDestination} />

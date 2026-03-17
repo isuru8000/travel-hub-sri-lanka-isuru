@@ -167,7 +167,7 @@ const Hotels: React.FC<HotelsProps> = ({ language, onBack }) => {
               </div>
            </div>
            <div className="relative aspect-square rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-2xl group">
-              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[5000ms]" alt="Luxury Interior" />
+              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[5000ms]" alt="Luxury Interior" />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
               <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 p-3 md:p-4 bg-white/10 backdrop-blur-3xl rounded-2xl md:rounded-3xl border border-white/20">
                  <Sparkles size={20} className="md:w-6 md:h-6 text-yellow-500 animate-pulse" />
