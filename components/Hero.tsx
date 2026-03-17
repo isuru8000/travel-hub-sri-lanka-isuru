@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             role="img"
             aria-label="Scenic view of a tropical beach in Sri Lanka"
             className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80')` }}
+            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=60')` }}
           />
 
           {/* Desktop Static Background Image */}
@@ -103,8 +103,8 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         
         {/* Floating Atmospheric Particles */}
         <div className="absolute inset-0 opacity-40">
-           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#F59E0B]/10 rounded-full blur-[180px] animate-pulse" />
-           <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-[#EA580C]/5 rounded-full blur-[160px] animate-pulse" style={{ animationDelay: '3s' }} />
+           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#F59E0B]/10 rounded-full blur-[180px] md:animate-pulse" />
+           <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-[#EA580C]/5 rounded-full blur-[160px] md:animate-pulse" style={{ animationDelay: '3s' }} />
         </div>
       </div>
 
@@ -124,12 +124,12 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
                 {language === 'EN' ? (
                   <>
                     <span className="water-base">{mainTitleEN}</span>
-                    <span className="water-wave animate-gradient-text-slow" data-text={mainTitleEN}>{mainTitleEN}</span>
+                    <span className="water-wave md:animate-gradient-text-slow" data-text={mainTitleEN}>{mainTitleEN}</span>
                   </>
                 ) : (
                   <>
                     <span className="water-base">{mainTitleSI}</span>
-                    <span className="water-wave animate-gradient-text-slow" data-text={mainTitleSI}>{mainTitleSI}</span>
+                    <span className="water-wave md:animate-gradient-text-slow" data-text={mainTitleSI}>{mainTitleSI}</span>
                   </>
                 )}
               </div>
@@ -164,7 +164,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           >
             <span className="relative z-10 flex items-center gap-4 md:gap-8">
               {UI_STRINGS.vrTrip[language]}
-              <Orbit size={24} className="text-[#F59E0B] animate-spin-slow" />
+              <Orbit size={24} className="text-[#F59E0B] md:animate-spin-slow" />
             </span>
           </button>
         </div>
@@ -233,6 +233,11 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
           50% {
             clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
           }
+        }
+        @media (max-width: 768px) {
+          .water-wave { animation: none !important; }
+          .water-base { animation: none !important; }
+          .water-base { -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3); }
         }
       `}} />
     </div>
