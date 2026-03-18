@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Language, User } from '../types.ts';
 import { Box, Orbit, Layers, ShieldCheck, Activity, ChevronRight, Sparkles } from 'lucide-react';
 import { UI_STRINGS } from '../constants.tsx';
@@ -14,20 +15,32 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [mobileImageIndex, setMobileImageIndex] = useState(0);
 
   const heroImages = [
-    "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s800",
-    "https://i.pinimg.com/600x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg",
-    "https://i.pinimg.com/600x/c4/bd/4f/c4bd4fbf76c891efdf8a735d1337afaa.jpg",
-    "https://i.pinimg.com/600x/1e/8f/62/1e8f62ed06398a4e4c8649cbaa62563a.jpg",
-    "https://i.pinimg.com/600x/cc/ae/b9/ccaeb9f1a649216bea87d317f10bd495.jpg"
+    "https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg",
+    "https://i.pinimg.com/1200x/93/7f/5f/937f5f8b31f9fbad63893f189b3ddc4a.jpg",
+    "https://i.pinimg.com/1200x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg"
+  ];
+
+  const mobileHeroImages = [
+    "https://i.pinimg.com/736x/6e/ff/95/6eff9553b1bb8eb65a3d5f31761f7c12.jpg",
+    "https://i.pinimg.com/736x/54/ff/87/54ff8771c324a860307f665f81ed6bf9.jpg"
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const desktopInterval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 8000);
-    return () => clearInterval(interval);
+
+    const mobileInterval = setInterval(() => {
+      setMobileImageIndex((prevIndex) => (prevIndex + 1) % mobileHeroImages.length);
+    }, 6000);
+
+    return () => {
+      clearInterval(desktopInterval);
+      clearInterval(mobileInterval);
+    };
   }, []);
 
   useEffect(() => {
@@ -77,21 +90,35 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             willChange: 'transform'
           }}
         >
-          {/* Mobile Static Background Image */}
-          <div 
-            role="img"
-            aria-label="Scenic view of a tropical beach in Sri Lanka"
-            className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
-            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg')` }}
-          />
+          {/* Mobile Background Slideshow */}
+          <div className="md:hidden absolute inset-0">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={mobileImageIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="absolute inset-0 bg-cover bg-center brightness-[0.8] saturate-[1.4]"
+                style={{ backgroundImage: `url('${mobileHeroImages[mobileImageIndex]}')` }}
+              />
+            </AnimatePresence>
+          </div>
 
-          {/* Desktop Static Background Image */}
-          <div 
-            role="img"
-            aria-label="Scenic view of a misty jungle in Sri Lanka"
-            className="absolute inset-0 bg-cover bg-center hidden md:block brightness-[0.9] saturate-[1.1]"
-            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg')` }}
-          />
+          {/* Desktop Background Slideshow */}
+          <div className="hidden md:block absolute inset-0">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentImageIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 2, ease: "easeInOut" }}
+                className="absolute inset-0 bg-cover bg-center brightness-[0.9] saturate-[1.1]"
+                style={{ backgroundImage: `url('${heroImages[currentImageIndex]}')` }}
+              />
+            </AnimatePresence>
+          </div>
           
           {/* Multi-layered cinematic overlays */}
           <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/10" />
