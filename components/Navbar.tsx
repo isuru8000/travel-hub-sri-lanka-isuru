@@ -115,11 +115,13 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[96%] md:w-[98%] max-w-7xl bg-white/80 backdrop-blur-xl border border-white/40 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-4 md:px-5' : 'py-2 px-4 md:py-2.5 md:px-8'}`}>
+    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[96%] md:w-[98%] max-w-7xl bg-white border border-gray-100 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-4 md:px-5' : 'py-2 px-4 md:py-2.5 md:px-8'}`}>
       <div className="flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3 md:gap-4 cursor-pointer group shrink-0" onClick={() => handleNav('home')}>
-          <AnimatedLogo />
+          <div className="scale-125">
+            <AnimatedLogo />
+          </div>
         </div>
 
         {/* Desktop Nav */}
@@ -204,10 +206,6 @@ const Navbar: React.FC<NavbarProps> = ({
           {/* Header Identity in Mobile Menu */}
           <div className="flex items-center gap-3 md:gap-5 px-4 py-3 md:px-6 md:py-4 bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm shrink-0 border border-gray-100">
              <AnimatedLogo />
-             <div className="flex flex-col items-start leading-none">
-                <span className="text-xs md:text-sm font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">TRAVEL <span className="text-[#F59E0B]">HUB</span></span>
-                <span className="text-[6px] md:text-[7px] font-black text-gray-400 uppercase tracking-[0.2em] md:tracking-[0.3em]">sri lanka</span>
-             </div>
           </div>
 
           <div className="space-y-2 md:space-y-4 overflow-y-auto pr-2">

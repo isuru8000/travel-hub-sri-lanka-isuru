@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             role="img"
             aria-label="Scenic view of a tropical beach in Sri Lanka"
             className="absolute inset-0 bg-cover bg-center md:hidden brightness-[0.8] saturate-[1.4]"
-            style={{ backgroundImage: `url('https://images.unsplash.com/photo-1589308078059-be1415eab49a?auto=format&fit=crop&w=400&q=40')` }}
+            style={{ backgroundImage: `url('https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg')` }}
           />
 
           {/* Desktop Static Background Image */}

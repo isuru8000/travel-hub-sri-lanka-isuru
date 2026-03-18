@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, Suspense, lazy } from 'react';
+import React, { useState, useEffect, useMemo, Suspense, lazy, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Language, User, Destination, View } from './types.ts';
 import Layout from './components/Layout.tsx';
@@ -54,20 +54,24 @@ export default function App() {
   const [scrollPos, setScrollPos] = useState(0);
   const [selectedDestinationData, setSelectedDestinationData] = useState<Destination | null>(null);
   const [isAuthReady, setIsAuthReady] = useState(false);
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
   }, [view]);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     
     // Disable Lenis smooth scrolling on mobile for better performance
-    let lenis: Lenis | null = null;
     let rafId: number;
 
     if (!isMobile) {
-      lenis = new Lenis({
+      lenisRef.current = new Lenis({
         duration: 1.2,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
         orientation: 'vertical',
@@ -79,7 +83,7 @@ export default function App() {
       });
 
       function raf(time: number) {
-        lenis?.raf(time);
+        lenisRef.current?.raf(time);
         rafId = requestAnimationFrame(raf);
       }
 
@@ -127,7 +131,10 @@ export default function App() {
     });
 
     return () => {
-      if (lenis) lenis.destroy();
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+        lenisRef.current = null;
+      }
       window.removeEventListener('scroll', handleScroll);
       unsubscribe();
     };
@@ -158,7 +165,12 @@ export default function App() {
       setSelectedDestinationData(dest);
       setView('destination-detail');
     }
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
   };
 
   const renderContent = () => {

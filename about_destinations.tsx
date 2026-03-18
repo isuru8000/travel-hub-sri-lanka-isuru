@@ -1139,7 +1139,7 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
           <ul class="list-disc pl-5 space-y-2">
             <li><strong>From Colombo:</strong> By train, the journey from Colombo Fort to Kandy takes 2.5 to 3 hours on the scenic hill country line — one of the most beautiful train rides in Sri Lanka. By road, it is 115 km and takes 2.5 to 3.5 hours by car or bus depending on traffic. Buses run frequently from Colombo Central Bus Stand.</li>
             <li><strong>From Sigiriya:</strong> Approximately 90 km, 2.5 to 3 hours by car or bus through Dambulla and Matale.</li>
-            <li><strong>From Ella or Nuwara Eliya:</strong> By the spectacular hill country train — 3 to 4 hours through tea country and mountain passes.</li>
+            <li><strong>From Ella:</strong> By the spectacular hill country train — 3 to 4 hours through tea country and mountain passes.</li>
             <li><strong>Within Kandy:</strong> The temple is in the absolute centre of the city, a 10-minute walk from Kandy Town bus stand and from the train station. Tuk-tuks are available everywhere.</li>
           </ul>
         </div>
@@ -1507,7 +1507,7 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
       <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by geology, archaeology, government records, and scientific surveys<br>⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable<br>⚠️ UNCERTAIN — figures vary between sources or are debated</p>
       
       <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
-      <p>Province: Central Province and Uva Province, Sri Lanka<br>District: Nuwara Eliya District<br>Position: Southern plateau of the central highlands<br>Altitude: 2,100 to 2,300 meters (6,900 to 7,500 feet) above sea level<br>Area: 3,160 hectares (31.6 square kilometres)<br>Distance from Nuwara Eliya: approximately 20 km south — about 45 minutes to 1 hour by road<br>Distance from Haputale: approximately 20 km west — about 45 minutes to 1 hour by road<br>Distance from Ella: approximately 40 km west — about 1.5 hours by road<br>Distance from Colombo: approximately 200 km — about 5 to 6 hours by road<br>Distance from Kandy: approximately 120 km — about 3 hours by road<br>Nearest railway stations: Ohiya (4 km from park entrance) and Pattipola (9 km) — both on the Colombo–Badulla main line<br>Main entrance: Ohiya gate — accessed via the road from Nuwara Eliya through Pattipola or from Haputale</p>
+      <p>Province: Central Province and Uva Province, Sri Lanka<br>District: Central Highlands<br>Position: Southern plateau of the central highlands<br>Altitude: 2,100 to 2,300 meters (6,900 to 7,500 feet) above sea level<br>Area: 3,160 hectares (31.6 square kilometres)<br>Distance from Haputale: approximately 20 km west — about 45 minutes to 1 hour by road<br>Distance from Ella: approximately 40 km west — about 1.5 hours by road<br>Distance from Colombo: approximately 200 km — about 5 to 6 hours by road<br>Distance from Kandy: approximately 120 km — about 3 hours by road<br>Nearest railway stations: Ohiya (4 km from park entrance) and Pattipola (9 km) — both on the Colombo–Badulla main line<br>Main entrance: Ohiya gate — accessed via the road through Pattipola or from Haputale</p>
 
       <h4 class="font-bold text-gray-900">🌿 WHAT IS HORTON PLAINS</h4>
       <p>✅ CONFIRMED — Horton Plains National Park is Sri Lanka's highest and most isolated wildlife plateau — an extraordinary highland wilderness unlike any other landscape on the island. It encompasses an area of 31 square kilometres and is located at an elevation of 2,100 to 2,300 metres, encompassing montane grassland and cloud forest.</p>
@@ -1576,11 +1576,11 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
 
       <h4 class="font-bold text-gray-900">🚌 GETTING THERE</h4>
       <p><strong>By Train:</strong> Ohiya (4 km) or Pattipola (9 km) stations on the Colombo–Badulla main line.</p>
-      <p><strong>By Road:</strong> From Nuwara Eliya (20 km), Haputale (20 km), or Ella (40 km). No public bus service to the park entrance.</p>
+      <p><strong>By Road:</strong> From Haputale (20 km) or Ella (40 km). No public bus service to the park entrance.</p>
 
       <h4 class="font-bold text-gray-900">🏨 WHERE TO STAY</h4>
       <p><strong>No Accommodation Inside the Park:</strong> ✅ CONFIRMED — There is no accommodation within Horton Plains National Park itself.</p>
-      <p><strong>Near the Park:</strong> Jungle Boutique (Ohiya), Jetwing St. Andrew's (Nuwara Eliya), and various guesthouses in Nuwara Eliya and Haputale.</p>
+      <p><strong>Near the Park:</strong> Jungle Boutique (Ohiya) and various guesthouses in Haputale.</p>
 
       <h4 class="font-bold text-gray-900">💡 ESSENTIAL TIPS</h4>
       <ul class="list-disc pl-5 space-y-1">
@@ -1592,7 +1592,7 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
         <li>Bring binoculars for the birds.</li>
         <li>Do not approach the edge at World's End.</li>
         <li>Consider a dawn start.</li>
-        <li>Combine with Bambarakanda Falls and Nuwara Eliya.</li>
+        <li>Combine with Bambarakanda Falls.</li>
       </ul>
     </div>`,
     SI: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
@@ -1654,7 +1654,18 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
   wasgamuwa: { EN: "A wild place where bears and elephants live.", SI: "වලසුන් සහ අලි ඇතුන් සැරිසරන හුදකලා වනාන්තරයකි." },
 
   // Mountains
-  nuwaraeliya: { EN: "A cool town in the hills with old British buildings.", SI: "බ්‍රිතාන්‍ය ගෘහ නිර්මාණ ශිල්පය සහිත සිසිල් කඳුකර නගරයකි." },
+  pidurangala: {
+    EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ PIDURANGALA ROCK — පිදුරංගල</h3>
+      <p>Pidurangala Rock is a separate granite outcrop located 2 km north of Sigiriya, offering a completely different experience. The entire climb takes 30–40 minutes one way and is more rugged than Sigiriya, involving rocky terrain and some scrambling at the top. From the summit, you have a direct unobstructed view looking south at Lion Rock — the most iconic photographic composition of the entire region.</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Entry fee:</strong> approximately 1,000 LKR (around $3 USD).</li>
+        <li>At the base is an active Buddhist monastery and a reclining Buddha carved from white rock. Visitors must remove shoes before entering the temple area and cover their shoulders and knees out of respect.</li>
+        <li><strong>Best time to visit Pidurangala:</strong> Arrive by 5:30 AM for sunrise. The colors of the sky behind Sigiriya Rock at sunrise are extraordinary.</li>
+      </ul>
+    </div>`,
+    SI: "සීගිරියට උතුරින් පිහිටි දැවැන්ත ගල් පර්වතයකි. මෙහි නැගීම තරමක් අභියෝගාත්මක වුවත්, මුදුනේ සිට සීගිරිය පර්වතයේ අපූරු දසුනක් දැකගත හැකිය."
+  },
   "adam'speak": {
     EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
       <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ ADAM'S PEAK — ශ්‍රී පාද</h3>
@@ -1662,7 +1673,7 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
       <p>✅ HONEST LABELLING THROUGHOUT<br>✅ CONFIRMED — verified by archaeology, historical records, physical measurement, and mainstream scholarship<br>⭐ RELIGIOUS TRADITION — sincerely held belief across multiple faiths, recorded in ancient chronicles, not independently verifiable by science<br>⚠️ UNCERTAIN — debated among historians or varies between credible sources</p>
       
       <h4 class="font-bold text-gray-900">📍 LOCATION</h4>
-      <p>Province: Sabaragamuwa Province and Central Province, Sri Lanka<br>Districts: Ratnapura District and Nuwara Eliya District<br>Position: Southern reaches of the central highlands<br>Altitude: 2,243 meters (7,359 feet) above sea level<br>Distance from Colombo: approximately 100 km — about 3 hours by road to the Hatton trailhead<br>Distance from Kandy: approximately 80 km — about 2.5 hours by road to Hatton<br>Distance from Nuwara Eliya: approximately 40 km — about 1.5 hours by road<br>Distance from Ratnapura: approximately 40 km northeast — about 1.5 hours by road<br>Distance from Hatton: approximately 32 km southwest — about 1 hour by road<br>Distance from Ella: approximately 120 km — about 3 hours by road</p>
+      <p>Province: Sabaragamuwa Province and Central Province, Sri Lanka<br>Districts: Ratnapura District<br>Position: Southern reaches of the central highlands<br>Altitude: 2,243 meters (7,359 feet) above sea level<br>Distance from Colombo: approximately 100 km — about 3 hours by road to the Hatton trailhead<br>Distance from Kandy: approximately 80 km — about 2.5 hours by road to Hatton<br>Distance from Ratnapura: approximately 40 km northeast — about 1.5 hours by road<br>Distance from Hatton: approximately 32 km southwest — about 1 hour by road<br>Distance from Ella: approximately 120 km — about 3 hours by road</p>
 
       <h4 class="font-bold text-gray-900">🏔️ WHAT IS ADAM'S PEAK</h4>
       <p>✅ CONFIRMED — Adam's Peak — known in Sinhala as Sri Pada, meaning Sacred Footprint — is a 2,243-meter conical sacred mountain in the central highlands of Sri Lanka. It is not the tallest mountain in Sri Lanka — that distinction belongs to Pidurutalagala — but its isolated, almost perfectly pyramidal profile rising dramatically above the surrounding hills makes it the most visually distinctive and instantly recognisable mountain on the island. From the sea, its silhouette has been a navigational landmark for Indian Ocean sailors for centuries.</p>
@@ -1736,7 +1747,6 @@ export const ABOUT_DATA: Record<string, { EN: string, SI: string }> = {
   bandarawela: { EN: "A nice town with good weather and old charm.", SI: "සුවදායී දේශගුණයක් සහිත පැරණි බ්‍රිතාන්‍ය ලක්ෂණ පිරි නගරයකි." },
   badulla: { EN: "A main town in the hills at the end of the train line.", SI: "ඌව කඳුකරයේ ප්‍රධාන නගරය සහ දුම්රිය මගේ අවසානයයි." },
   hatton: { EN: "A town famous for tea and the start of the climb to Adam's Peak.", SI: "තේ කර්මාන්තයේ මධ්‍යස්ථානය සහ සිරිපා පිවිසුමයි." },
-  pidurangala: { EN: "A hill with the best view of the Sigiriya rock.", SI: "සීගිරි බලකොටුව නැරඹීමට ඇති හොඳම ස්ථානයයි." },
   riverston: {
     EN: `<div class="space-y-6 text-gray-700 font-sans leading-relaxed text-sm md:text-base">
       <h3 class="text-xl font-bold text-gray-900 mb-2">⛰️ RIVERSTON — රිවර්ස්ටන්</h3>

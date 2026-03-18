@@ -59,7 +59,7 @@ const PREMIUM_PACKAGES = [
     type: 'WELLNESS',
     image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=80',
     nodes: 8,
-    highlights: { EN: ['Ella Ridge', 'Nuwara Eliya', 'Tea Factories'], SI: ['ඇල්ල', 'නුවර එළිය', 'තේ කර්මාන්තශාලා'] }
+    highlights: { EN: ['Ella Ridge', 'Tea Factories'], SI: ['ඇල්ල', 'තේ කර්මාන්තශාලා'] }
   },
   {
     id: 'p3',

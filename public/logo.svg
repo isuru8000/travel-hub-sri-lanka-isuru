@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 { fill: #0077be; }
+      .cls-2 { fill: #00a86b; }
+      .cls-3 { fill: #ff8c00; }
+    </style>
+  </defs>
+  <!-- Simplified representation of the uploaded logo -->
+  <circle cx="50" cy="50" r="40" fill="#f0f0f0" />
+  <text x="50" y="55" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Travel Hub</text>
+</svg>

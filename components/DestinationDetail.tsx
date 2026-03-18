@@ -158,9 +158,12 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
   useEffect(() => {
     if (destination) {
       // Force scroll to top immediately
-      window.scrollTo(0, 0);
-      // Also try with behavior: 'instant' for modern browsers
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      if ((window as any).scrollToTop) {
+        (window as any).scrollToTop();
+      } else {
+        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
 
       const fetchNearby = async () => {
         setIsSyncingNearby(true);

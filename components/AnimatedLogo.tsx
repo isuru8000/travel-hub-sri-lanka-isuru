@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AnimatedLogo: React.FC = () => {
@@ -13,25 +12,22 @@ const AnimatedLogo: React.FC = () => {
       >
         <motion.div
           animate={{
-            scale: [1, 1.2, 1, 1.2, 1],
-            rotate: [0, 10, -10, 10, 0],
+            scale: [1, 1.05, 1],
+            rotate: [0, 2, -2, 0],
           }}
           transition={{
-            duration: 2,
+            duration: 4,
             ease: "easeInOut",
             repeat: Infinity,
-            repeatDelay: 3
           }}
         >
-          <MapPin className="text-green-400 h-8 w-8 mr-2" />
+          <img 
+            src="https://lh3.googleusercontent.com/d/1dxsYOR-B3HwShDO_7EQPkQUW3g4uBMw4" 
+            alt="Travel Hub Logo" 
+            className="h-20 w-20 object-contain"
+            referrerPolicy="no-referrer"
+          />
         </motion.div>
-        <div className="flex flex-col items-start leading-none">
-          <div className="text-2xl font-bold tracking-tighter">
-            <span className="text-green-400">Travel</span>
-            <span className="text-[#0EA5E9]"> Hub</span>
-          </div>
-          <span className="text-[8px] font-black uppercase tracking-[0.3em] text-gray-400 mt-0.5">Sri Lanka</span>
-        </div>
       </motion.div>
     </Link>
   );

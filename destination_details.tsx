@@ -579,8 +579,7 @@ Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihin
     location: "Kandy", 
     coordinates: { x: 56, y: 52 },
     nearbyAttractions: [
-      { id: "knuckles", name: { EN: "Knuckles Mountain Range", SI: "නකල්ස් කඳු පන්තිය" }, image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg" },
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" }
+      { id: "knuckles", name: { EN: "Knuckles Mountain Range", SI: "නකල්ස් කඳු පන්තිය" }, image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg" }
     ]
   },
 
@@ -667,7 +666,169 @@ Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihin
   },
 
   // --- BEACHES (10) ---
-  { id: "unawatuna", name: { EN: "Unawatuna", SI: "උණවටුන" }, category: "beach", image: "https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg", gallery: ["https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg"], history: { EN: "Unawatuna is a coastal town in Galle district and a major tourist attraction in Sri Lanka. Famous for its beautiful horseshoe-shaped beach and corals, it is mentioned in the Ramayana epic as a piece of the Himalayas that fell from Hanuman's hand. The beach is protected by a double reef, making it safe for swimming throughout the year. It is also known for its vibrant nightlife, beachside restaurants, and the Japanese Peace Pagoda overlooking the ocean.", SI: "රාම රාවණා කතාවේ වෙරළ." }, shortStory: { EN: "The Golden Beach.", SI: "රන්වන් වෙරළ." }, tips: [{ EN: "Try swimming with a mask.", SI: "කිමිදීමට උත්සාහ කරන්න." }], hiddenEchoes: { EN: "A path to Jungle Beach.", SI: "ජංගල් බීච් මංපෙත." }, location: "Galle", coordinates: { x: 44, y: 94 },
+  { id: "unawatuna", name: { EN: "Unawatuna", SI: "උණවටුන" }, category: "beach", image: "https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg", gallery: ["https://i.pinimg.com/736x/09/4c/77/094c771bcf9d20988d5cb0bd21e91487.jpg"], 
+    detailedAbout: {
+      EN: `🌊 UNAWATUNA — උනවටුන
+Sri Lanka's Southern Jewel — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by historical records, archaeological evidence, and physical observation
+⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Southern Province, Sri Lanka
+District: Galle District
+Position: Southeastern shore of a sheltered bay, on the southern coast of Sri Lanka
+Elevation: approximately 5 meters above sea level
+Distance from Galle Fort: approximately 5 to 6 km southeast — about 10 to 15 minutes by tuk-tuk
+Distance from Colombo: approximately 108 to 125 km south — about 2 to 2.5 hours by road or train
+Distance from Mirissa: approximately 30 km east — about 40 to 50 minutes
+Distance from Weligama: approximately 20 km east — about 30 minutes
+Distance from Hikkaduwa: approximately 15 km west — about 20 minutes
+Nearest railway station: Unawatuna Railway Station — on the Colombo–Matara coastal line, within walking distance of the beach
+
+🌊 WHAT IS UNAWATUNA
+✅ CONFIRMED — Unawatuna is a small coastal town approximately 5 km southeast of Galle city centre on Sri Lanka's southern coast. It is shaped around a crescent-shaped bay with a banana-curved beach approximately 800 meters long — walkable end to end in about 15 minutes. The bay is sheltered by a wooded headland — Rumassala Hill — to the west and a smaller rocky point to the east, creating naturally calm, protected swimming conditions.
+✅ CONFIRMED — Unawatuna is one of the most visited beach destinations in Sri Lanka, combining a beautiful sheltered beach, clear shallow water, coral reef snorkelling, proximity to Galle Fort, a vibrant café and restaurant scene, and a lively but not overwhelming atmosphere. It draws a broad mix of travellers — backpackers, families, honeymooners, and visitors using it as a base for the broader southern coast.
+✅ CONFIRMED — Despite significant tourism development in the past decade, Unawatuna still supports a population of the endemic and Endangered purple-faced langur — unusual for a developed beach town. The remaining forested areas of Rumassala Hill provide the habitat that keeps this shy endemic monkey present in the area.
+
+📜 NAME AND MEANING — CONFIRMED AND TRADITION
+⚠️ UNCERTAIN — NAME ORIGIN:
+Two explanations for the name Unawatuna circulate and both are widely repeated:
+The most commonly cited explanation derives the name from the Sinhala phrase Una-Watuna — meaning fell into or that which fell down — connecting the name to the Ramayana legend of Hanuman dropping a piece of the Himalayan mountains at this location.
+An alternative explanation — cited by some sources — derives the name from a shipwreck that occurred off the coast, with una-watuna meaning fell into the saltwater.
+⚠️ CONFIRMED — UNCERTAINTY: Neither etymology has been definitively confirmed by linguistic or historical scholarship. Both explanations are plausible and widely believed. The true origin of the name is uncertain.
+
+📜 HISTORY — CONFIRMED FACTS
+🏛️ Ancient Seaport
+✅ CONFIRMED — Unawatuna's position on the southern coast made it an important maritime location in ancient times. The area attracted traders from China, India, Persia, Egypt, and Greece — a consequence of the Indian Ocean trade routes that made the southern Sri Lankan coast a natural stopping point for vessels crossing between the Persian Gulf, India, and Southeast Asia.
+🛕 The Devol Devalaya — Over 1,000 Years Old
+✅ CONFIRMED — A kovil — Hindu shrine — at the western point of the Unawatuna bay has a documented history of over 1,000 years. This is the Devol Devalaya — dedicated to the deity Devol, one of the guardian deities of Sri Lanka. The shrine predates all European presence in Sri Lanka and is among the oldest continuously active religious sites on the southern coast. Thousands of pilgrims visit during the annual Esala festival — a new rice offering ceremony during which cultivators bring a share of their crop and pray for timely rain and plentiful harvest.
+⭐ LEGEND — Devol Deity:
+Local tradition records that Devol was a prince from India who was shipwrecked off this coast. The Goddess of Chastity, Pattini, created a wall of fire to prevent him coming ashore. Being a person of supreme power, he set in motion a tsunami with his foot to extinguish the fire and landed at Unawatuna. He is said to have lived here and helped the people in various ways. This tradition is sincerely held locally and is the foundation of the Devol Devalaya's significance.
+🛕 The Suwethamali Dagoba
+✅ CONFIRMED — Built on the hill immediately adjacent to the Devol Devalaya, the Suwethamali Dagoba is a Buddhist stupa on the hillock at the western end of the bay. It was built after the Devalaya and the two religious structures — one Hindu, one Buddhist — coexist on the same hillock, reflecting the syncretic religious culture of the southern Sri Lankan coast.
+⭐ TRADITION — The dagoba is said to contain a hair relic of the Buddha. This is a religious tradition and is not independently verifiable.
+🇳🇱 Dutch Colonial Period — 1640
+✅ CONFIRMED — After defeating the Portuguese at Negombo, the Dutch fleet sailed south and landed at Unawatuna in 1640 before marching to Galle. The Portuguese encountered the Dutch forces at Magalle — where the Closenberg Hotel now stands — and fierce fighting occurred. Over 400 Dutch soldiers were killed in the engagement and only 49 Portuguese survived to retreat to the fortification at Galle, where they were held under siege for four days before surrendering.
+✅ CONFIRMED — The Dutch subsequently built administrative residences in Unawatuna. Confirmed structures from this period include the Nooit Gedacht — a Dutch colonial mansion whose name means Never Thought in Dutch — which survives in modified form. The area known as Parangiyawatta — meaning Land of the Portuguese — preserves the memory of the earlier Portuguese presence in the place name. The area called Ja-Kotuwa suggests a settlement of Javanese people — known as Hollanders — who may have maintained some fortification here.
+🌊 The 2004 Tsunami
+✅ CONFIRMED — The 2004 Indian Ocean Tsunami struck Unawatuna with great destructive force on December 26, 2004. The bay's normally sheltered geography offered no protection — the tsunami waves overwhelmed the entire beachfront. Significant loss of life and destruction of infrastructure occurred. The town was substantially rebuilt following the disaster and the Unawatuna that exists today is largely a post-tsunami reconstruction.
+
+🏖️ THE BEACHES — CONFIRMED DETAILS
+🏖️ Unawatuna Main Beach
+✅ CONFIRMED — The main beach is an 800-meter crescent of sand curving around the sheltered bay. The water is warm year-round — approximately 27 to 29 degrees Celsius. The bay's sheltered geography creates naturally calm swimming conditions for most of the year, making it one of the safest swimming beaches on the southern coast. The beach is lined with cafés, restaurants, guesthouses, and sun lounger operators.
+⚠️ WATER QUALITY CONCERN:
+✅ CONFIRMED — Unawatuna beach has experienced documented water quality issues in recent years. Reports of sewage contamination affecting the bay water have been published, particularly in the period around and after heavy rain when the drainage system in the surrounding town overflows into the bay. This is a genuine and documented environmental concern. Check current water quality reports before swimming, particularly after heavy rain.
+🌿 Jungle Beach
+✅ CONFIRMED — Jungle Beach is a small, quieter bay immediately west of the main beach, accessible by a 30-minute walk along the rocky headland path or by a short boat ride from the main beach. The bay has calmer, cleaner water than the main beach in most conditions and a jungle-backed shoreline that is more scenic and less developed. A second smaller and even quieter bay is accessible by continuing along the rocks beyond Jungle Beach. Both bays are best visited in the morning before the heat and any afternoon crowd arrive.
+🏖️ Dalawella Beach
+✅ CONFIRMED — Approximately 2 km east of Unawatuna, Dalawella Beach is a quieter stretch of sand with a more relaxed atmosphere than the main beach. Famous for the rope swing — a rope hung from a palm tree leaning over the water — which became one of the most photographed beach attractions in Sri Lanka and is credited by some travel writers with significantly boosting Sri Lanka's international social media profile as a destination from approximately 2015 onward. The rope swing costs approximately 500 LKR for three swings. Adjacent to the swing, a coconut tree leaning dramatically over a rock over the sea creates an extremely photogenic natural composition particularly at sunset.
+🏖️ Mihiripenna Beach and Koggala Beach
+✅ CONFIRMED — Continuing east along the coast from Dalawella, Mihiripenna and Koggala offer progressively quieter and less developed stretches of the southern shoreline. Koggala — approximately 8 km east of Unawatuna — is the location of the famous stilt fishermen, traditional fishermen who fish from poles embedded in the shallow reef, perching above the water in a technique unique to this section of the Sri Lankan coast. The stilt fishing is a genuine traditional practice, though today the stilt fishermen near the main road often charge tourists for photographs.
+
+🐠 MARINE LIFE AND WATER ACTIVITIES
+🐠 Coral Reef and Snorkelling
+✅ CONFIRMED — A coral reef lies offshore in the Unawatuna bay at shallow depth — accessible by swimming from the main beach. The reef supports a range of tropical fish species, sea turtles, and invertebrates. The reef is shallow enough for beginner snorkellers without any equipment beyond a mask and snorkel.
+⚠️ REEF CONDITION CONCERN:
+✅ CONFIRMED — The coral reef at Unawatuna has experienced documented degradation in recent decades. Coral bleaching events — linked to elevated sea surface temperatures — combined with physical damage from tourist activity, boat anchoring, and the impacts of the 2004 tsunami have reduced the reef's condition compared to its former state. The reef retains biological interest and snorkelling value but is not the pristine coral ecosystem it was several decades ago.
+🤿 Scuba Diving
+✅ CONFIRMED — Several dive schools operate from Unawatuna beach offering beginner certification courses and guided dives. Notable dive sites accessible from Unawatuna include:
+Rock Island — a shallow reef dive ideal for beginners, 10 to 15 minutes by boat from the beach
+The Wreck of the Rangoon — a 19th-century British cargo ship sunk in the bay; accessible at 15 to 20 meters depth; one of the most historically interesting dive sites on the southern coast
+Multiple coral reef sites along the Unawatuna headland
+Typical costs: a beginner discover dive with equipment approximately USD $40 to $60; a two-dive guided trip for certified divers approximately USD $60 to $80; PADI Open Water certification approximately USD $300 to $350 for a 3 to 4 day course.
+🚣 Other Water Activities
+Glass-bottom boat tours — 30 to 60-minute tours over the reef for non-swimmers; approximately 1,500 to 3,000 LKR per person
+Kayaking — single and double kayaks available for rent from beach operators; approximately 500 to 800 LKR per hour
+Stand-Up Paddleboarding — available from several beach operators; approximately 1,000 LKR per hour
+Surfing — Unawatuna's main beach is not a surf beach due to its sheltered bay geography. Dewata Beach — a short distance from Unawatuna — has a sand-bottomed beach break suitable for beginners. Weligama, 20 km east, is the finest beginner surf destination on the southern coast.
+
+🏛️ CULTURAL AND HISTORICAL SITES
+⛩️ The Devol Devalaya
+✅ CONFIRMED — Located at the western rocky point of the bay. A Hindu kovil with a confirmed history of over 1,000 years. An active place of worship. The Esala festival here draws thousands of pilgrims annually. Remove shoes before entering the shrine area. Visitors are welcome but respectful behaviour and appropriate dress are required.
+🕌 The Suwethamali Dagoba
+✅ CONFIRMED — Immediately adjacent to the Devol Devalaya on the same hillock. An active Buddhist stupa. The combination of Hindu and Buddhist sacred structures sharing the same hillock above the bay is a distinctive expression of the syncretic religious culture of the southern Sri Lankan coast.
+🕊️ Japanese Peace Pagoda
+✅ CONFIRMED — A white Buddhist stupa built by Japanese monks of the Nipponzan Myohoji Order on the summit of Rumassala Hill above Unawatuna. The Peace Pagoda was constructed to promote peace — part of a global network of Peace Pagodas built by this Japanese Buddhist order at significant locations worldwide. The pagoda on Rumassala Hill was built predominantly by a single elderly Japanese monk over many years.
+✅ CONFIRMED — The pagoda commands a panoramic view across the entire Unawatuna bay, the surrounding coastline, and on clear days Galle Fort visible to the northwest. The hike to the pagoda from the main beach takes approximately 20 to 30 minutes through the forested hill. The path passes through the Rumassala forest — home to the purple-faced langur and a range of bird species.
+✅ CONFIRMED — Construction is ongoing adjacent to the Peace Pagoda of a larger structure in honour of Hanuman — built by Japanese Mahayana Buddhist monks. This structure references the Ramayana tradition associating Rumassala Hill with the Himalayan mountain fragment dropped by Hanuman.
+🛕 Yatagala Rajamaha Viharaya
+✅ CONFIRMED — An ancient Buddhist rock temple located approximately 10 minutes by tuk-tuk from Unawatuna beach. The temple is set against and within massive granite boulders — the cave shrine is carved from and built beneath a natural rock overhang. The temple contains a large reclining Buddha and ancient frescoes. The surrounding landscape of lush rice paddies and massive rocks creates an extraordinary pastoral-sacred atmosphere profoundly different from the beach environment of Unawatuna.
+✅ CONFIRMED — The Bodhi tree at Yatagala Rajamaha Viharaya is documented to be over 1,000 years old — one of the oldest confirmed Bodhi trees on the southern coast of Sri Lanka. Sitting beneath this ancient tree in the silence of the temple compound is described by many visitors as one of the most calming experiences available near Unawatuna.
+🏰 Galle Fort (5 to 6 km northwest)
+✅ CONFIRMED — Galle Fort is the most significant heritage site immediately adjacent to Unawatuna. A UNESCO World Heritage Site, the largest remaining European colonial fortress in Asia, with three colonial periods — Portuguese, Dutch, and British — all represented in the surviving architecture. Full details in the Galle Fort guide above.
+
+🌿 RUMASSALA HILL — NATURE AND BIODIVERSITY
+✅ CONFIRMED — Rumassala Hill is the forested headland forming the western boundary of Unawatuna bay. It rises steeply from the shoreline and its forest has been preserved from development, making it a genuine ecological enclave within an otherwise heavily developed tourist zone.
+✅ CONFIRMED — Over 60 species of endemic birds have been recorded in the Rumassala area by ornithologist Clive Byers, including terns, egrets, herons, sandpipers, kingfishers, lesser whistling duck, Asian palm swift, white-breasted waterhen, Loten's sunbird, and black bittern. The remaining marshy areas and the forested hill together create a bird habitat of surprising diversity within the suburban context.
+✅ CONFIRMED — The endemic and Endangered purple-faced langur is present in the Rumassala forest — one of the few remaining populations of this endemic monkey in the heavily developed southern coastal zone. The langurs are shy and arboreal — most easily seen in the early morning in the forest canopy.
+⭐ TRADITION — THE HIMALAYAN HERBS:
+Local tradition, and the Ramayana legend, holds that the Rumassala Hill was formed from a piece of the Himalayan mountains dropped by Hanuman and that the hill contains rare medicinal herbs brought from the Himalayas. Several sources note that the botanical diversity and unusual rock formations of Rumassala are genuinely atypical for a coastal headland in this region — though this does not confirm the mythological origin. The tradition is sincerely held and the hill is treated as a sacred space by local people.
+
+🌤️ BEST TIME TO VISIT
+November to April — Primary Recommendation
+The dry season for the southern and western coasts. Clear skies, calm seas, excellent swimming and snorkelling conditions. December to March is peak season — finest weather, maximum visitor numbers, highest accommodation prices.
+December to February — the absolute best weather window. The northeast monsoon has brought rain to the north and east of the country but the south coast is dry and settled. Christmas and New Year are the peak of the peak — book accommodation months in advance.
+February to April — slightly fewer tourists than December to January, the same excellent weather, and better accommodation prices. The most comfortable period for visitors who want good conditions without maximum crowds.
+May to October — The Southwest Monsoon
+The southwest monsoon brings rain, rough seas, and strong offshore winds to the southern coast from May to October. The main beach at Unawatuna remains swimmable for much of this period due to its sheltered bay geography — the headlands provide some protection from the direct monsoon swell — but conditions are less reliable and less pleasant than the dry season. Many tourist businesses reduce hours or close. Not recommended for a first visit.
+
+🚌 GETTING THERE
+🚂 By Train from Colombo — Strongly Recommended
+The coastal railway from Colombo Fort Station to Matara is one of the most scenic train journeys in Asia, running directly along the shoreline for much of its length on the southern section. Unawatuna has its own railway station on this line.
+From Colombo Fort to Unawatuna: approximately 2.5 to 3 hours. Multiple trains daily. Second class reserved approximately 250 to 400 LKR. The train from Colombo to Galle and beyond runs directly along the coast — the views of the Indian Ocean from the train window in the final approach to Galle are extraordinary.
+🚗 By Road from Colombo:
+Approximately 108 to 125 km via the Southern Expressway (E01) to Pinnaduwa junction then local road to Unawatuna. Journey time approximately 2 to 2.5 hours by car.
+🚌 By Bus from Colombo:
+Buses from Colombo Central Bus Stand to Galle — approximately 2.5 to 3 hours. From Galle Bus Stand, local buses and tuk-tuks to Unawatuna — approximately 15 minutes.
+From Galle Fort:
+5 to 6 km — approximately 10 to 15 minutes by tuk-tuk, approximately 300 to 400 LKR.
+From Mirissa:
+30 km west — approximately 40 to 50 minutes by bus or tuk-tuk.
+From Hikkaduwa:
+15 km east — approximately 20 minutes.
+Within Unawatuna:
+The main beach, Jungle Beach path, Rumassala Hill, Devol Devalaya, and Suwethamali Dagoba are all within walking distance. Tuk-tuks are available for Yatagala Rajamaha Viharaya, Dalawella, and Galle Fort.
+
+🍽️ WHERE TO EAT
+Hideout Restaurant — consistently cited as one of the best restaurants on the entire southern coast. Mexican-inspired food with Sri Lankan influences — jackfruit BBQ tacos, grilled mahi mahi, craft cocktails. Open garden setting. Taco Tuesday is the most popular evening. The menu creativity is unusual for the southern coast.
+The Social — popular restaurant and bar with live music and excellent cocktails. One of the liveliest evening venues in town.
+Kingfisher Hotel Restaurant and Bar — beach bar and restaurant known for the Saturday night beach party — the most active nightlife event in Unawatuna. Music from approximately 10:00 PM. Drinks priced at tourist rates — significantly more expensive than inland prices.
+Dream Café — well-regarded for breakfasts, smoothie bowls, and healthy options. Popular with the morning surfing and yoga crowd.
+Local rice and curry restaurants along the back streets — several small, family-run Sri Lankan restaurants on the streets behind the beachfront serve genuine Sri Lankan food at local prices. The best value eating in Unawatuna is at these establishments, not at the beachfront tourist restaurants.
+Galle Market (7 km northwest) — the vibrant fruit, spice, and flower markets of Galle town — 7 km from Unawatuna — are among the finest local food markets on the southern coast. Fresh tropical fruits including unusual varieties, spices, vegetables, and fresh fish. Worth a morning visit combined with Galle Fort.
+
+🏨 WHERE TO STAY
+Budget (USD $15–35/night):
+La Villa Guesthouse — simple rooms, lovely owners, excellent home-cooked dinners on the veranda. One of the most frequently praised budget options by visitor accounts. Very close to the beach.
+Green Escape Unawatuna — eco-conscious budget guesthouse in a quiet garden setting.
+KAJU Green Eco Lodges — sustainable eco-accommodation.
+Multiple family guesthouses on the back streets of Unawatuna at 3,000 to 6,000 LKR per night — simple, clean, and within walking distance of everything.
+Mid-Range (USD $40–100/night):
+Thaproban Beach House — 4-star property right on Unawatuna beach. Spacious rooms, sea or garden views, restaurant, bar, pool, spa. Rates from approximately USD $70 per night.
+Calamander Unawatuna Beach — 4-star beachfront hotel with modern, comfortable rooms, restaurant, pool, children's play area. Rates from approximately USD $80 per night.
+Cocobay Unawatuna — eco-friendly resort with comfortable rooms and villas in lush tropical gardens, pool, Sri Lankan dining.
+Gloria Grand Hotel — well-located mid-range option in the heart of the action.
+Luxury (USD $150–500+/night):
+Radisson Collection Resort Galle — one of the finest luxury resort properties in the broader Unawatuna–Galle area. Exceptional facilities, outstanding dining, and the highest service standards. Rates from approximately USD $200 per night.
+Closenberg Hotel — a historic property occupying the former residence of a Dutch colonial captain at Magalle — the site of the 1640 Dutch–Portuguese battle. One of the most historically significant hotel locations on the southern coast. Victorian-era architecture, gardens, and sea views.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+🕗 Check water quality before swimming. Unawatuna bay has experienced sewage contamination events, particularly after heavy rain. This is a documented and ongoing issue. Ask locally about current water quality conditions on the day of arrival, particularly after any significant rainfall in the preceding 48 hours.
+🌅 Hike to the Japanese Peace Pagoda at dawn. The 20 to 30 minute walk through the Rumassala forest to the pagoda summit at sunrise — before the heat of the day builds — produces the finest view of the full sweep of the bay and coastline. The purple-faced langurs in the forest canopy are most active in the early morning. The pagoda itself is most atmospheric in the early light before the day's visitors arrive.
+🛕 Visit Yatagala Rajamaha Viharaya. The ancient rock temple 10 minutes by tuk-tuk from the beach is one of the most peaceful and spiritually significant sites in the entire southern region. The 1,000-year-old Bodhi tree, the cave shrine, and the surrounding rice paddy landscape create an atmosphere of complete calm that contrasts profoundly with the beach town. Remove footwear on entry. Best visited in the morning.
+🚢 Take a glass-bottom boat over the reef. For non-swimmers or visitors who want a quick overview of the reef without diving equipment, the glass-bottom boat provides a clear view of the reef fish and coral structure. The best time is morning when the water is clearest. Negotiate price before boarding.
+🏰 Go to Galle Fort in the late afternoon. The fort is 10 to 15 minutes by tuk-tuk from Unawatuna. The late afternoon light — from 4:00 PM onward — turns the fort's Dutch-era walls golden and the rampart walk at sunset is one of the finest evening experiences on the southern coast. The fort's restaurants, boutique shops, and cafés are at their most lively in the late afternoon.
+🤿 Choose a reputable dive school. Dive school quality varies significantly in Unawatuna. Ask specifically for PADI or SSI certified instructors. For wreck diving — the Rangoon wreck is the most historically significant dive site — choose an operator who has guided this site regularly. The wreck is at depth and requires a certain level of comfort underwater.
+🌊 Swim at Jungle Beach for cleaner water. Jungle Beach, accessible by the 30-minute headland walk, generally has cleaner, clearer water than the main bay due to better circulation and fewer boats and drainage inputs. Worth the walk particularly for snorkelling — the visibility is typically better than at the main beach.
+📅 Allow at least 3 days. Unawatuna's combination of the beach, Jungle Beach, Rumassala Hill, Devol Devalaya, Yatagala temple, Peace Pagoda, Galle Fort, Dalawella, and day trips to Mirissa and Hikkaduwa requires a minimum of 3 days to explore comfortably. Visitors using Unawatuna as a base for the entire southern coast benefit from a week or more.
+💰 Negotiate tuk-tuk fares before boarding. Tuk-tuk fares from Unawatuna to Galle Fort, Dalawella, and Yatagala should be agreed before the journey begins. Typical fares: Galle Fort approximately 300 to 400 LKR one way; Dalawella approximately 200 to 300 LKR; Yatagala approximately 500 to 700 LKR return including waiting time.
+🎒 Use Unawatuna as a base for the southern coast. Galle Fort (6 km), Hikkaduwa (15 km), Weligama (20 km), Mirissa (30 km), and Yala National Park (approximately 100 km) are all accessible as day trips from an Unawatuna base. The combination of a comfortable beach base with day trip access to the finest heritage, surf, and wildlife destinations of the southern coast is Unawatuna's greatest practical advantage as a travel hub.`,
+      SI: "උණවටුන පිළිබඳ සවිස්තරාත්මක තොරතුරු."
+    },
+    history: { EN: "Unawatuna is a coastal town in Galle district and a major tourist attraction in Sri Lanka. Famous for its beautiful horseshoe-shaped beach and corals, it is mentioned in the Ramayana epic as a piece of the Himalayas that fell from Hanuman's hand. The beach is protected by a double reef, making it safe for swimming throughout the year. It is also known for its vibrant nightlife, beachside restaurants, and the Japanese Peace Pagoda overlooking the ocean.", SI: "රාම රාවණා කතාවේ වෙරළ." }, shortStory: { EN: "The Golden Beach.", SI: "රන්වන් වෙරළ." }, tips: [{ EN: "Try swimming with a mask.", SI: "කිමිදීමට උත්සාහ කරන්න." }], hiddenEchoes: { EN: "A path to Jungle Beach.", SI: "ජංගල් බීච් මංපෙත." }, location: "Galle", coordinates: { x: 44, y: 94 },
     nearbyAttractions: [
       { id: "galle-fort", name: { EN: "Galle Fort", SI: "ගාල්ල කොටුව" }, image: "https://i.pinimg.com/1200x/fa/56/b6/fa56b632b66edcf9c5ee396a4930278c.jpg" },
       { id: "hikkaduwa", name: { EN: "Hikkaduwa Beach", SI: "හික්කඩුව වෙරළ" }, image: "https://i.pinimg.com/1200x/7c/db/39/7cdb39c88ab9b4684492930755128968.jpg" },
@@ -1046,9 +1207,8 @@ Respect the local community. Mirissa is still at its core a fishing village. The
       { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg" }
     ]
   },
-  { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, category: "wildlife", image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg", gallery: ["https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg"], history: { EN: "Horton Plains National Park is a protected area in the central highlands of Sri Lanka and is covered by montane grassland and cloud forest. This plateau at an altitude of 2,100–2,300 meters is rich in biodiversity and many species found here are endemic to the region. The park's most famous feature is 'World's End', a sheer precipice with a 870m drop. It is also the headwaters of three major Sri Lankan rivers: the Mahaweli, Kelani, and Walawe.", SI: "කඳුකර තැන්න." }, shortStory: { EN: "World's End.", SI: "ලෝකාන්තය." }, tips: [{ EN: "Start early at 5 AM.", SI: "පාන්දර 5 ට ආරම්භ කරන්න." }], hiddenEchoes: { EN: "A beautiful waterfall.", SI: "බේකර්ස් ඇල්ල." }, location: "Nuwara Eliya", coordinates: { x: 62, y: 72 },
+  { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, category: "wildlife", image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg", gallery: ["https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg"], history: { EN: "Horton Plains National Park is a protected area in the central highlands of Sri Lanka and is covered by montane grassland and cloud forest. This plateau at an altitude of 2,100–2,300 meters is rich in biodiversity and many species found here are endemic to the region. The park's most famous feature is 'World's End', a sheer precipice with a 870m drop. It is also the headwaters of three major Sri Lankan rivers: the Mahaweli, Kelani, and Walawe.", SI: "කඳුකර තැන්න." }, shortStory: { EN: "World's End.", SI: "ලෝකාන්තය." }, tips: [{ EN: "Start early at 5 AM.", SI: "පාන්දර 5 ට ආරම්භ කරන්න." }], hiddenEchoes: { EN: "A beautiful waterfall.", SI: "බේකර්ස් ඇල්ල." }, location: "Central Highlands", coordinates: { x: 62, y: 72 },
     nearbyAttractions: [
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" },
       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" },
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
@@ -1060,16 +1220,10 @@ Respect the local community. Mirissa is still at its core a fishing village. The
   { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, category: "mountains", image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg", gallery: ["https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg"], history: { EN: "Ella is a small town in the Badulla District of Uva Province, governed by an Urban Council. It is approximately 200 kilometres east of Colombo and is situated at an elevation of 1,041 metres above sea level. The area has a rich bio-diversity, dense with numerous varieties of flora and fauna. Ella is surrounded by hills covered with cloud forests and tea plantations. The town has a cooler climate than surrounding lowlands, due to its elevation. The Ella Gap allows views across the southern plains of Sri Lanka.", SI: "කඳුකර නිම්න ගම්මානය." }, shortStory: { EN: "A village in the clouds.", SI: "වලාකුළු ගම්මානය." }, tips: [{ EN: "See the Nine Arch Bridge.", SI: "ආරුක්කු නවය පාලමට යන්න." }], hiddenEchoes: { EN: "Old caves to see.", SI: "රාවණා ගුහාව." }, location: "Badulla", coordinates: { x: 68, y: 68 },
     nearbyAttractions: [
       { id: "ravanafalls", name: { EN: "Ravana Falls", SI: "රාවණා ඇල්ල" }, image: "https://i.pinimg.com/1200x/e5/cf/c0/e5cfc05e4ebb57cf741b8dcf0677a269.jpg" },
-      { id: "diyaluma", name: { EN: "Diyaluma Falls", SI: "දියලුම ඇල්ල" }, image: "https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg" },
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" }
+      { id: "diyaluma", name: { EN: "Diyaluma Falls", SI: "දියලුම ඇල්ල" }, image: "https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg" }
     ]
   },
-  { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, category: "mountains", image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg", gallery: ["https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg"], history: { EN: "Nuwara Eliya is a city in the hill country of the Central Province, Sri Lanka. Its name means 'city on the plain (table land)' or 'city of light'. The city is the administrative capital of Nuwara Eliya District, with a picturesque landscape and temperate climate. It is at an altitude of 1,868 m (6,128 ft) and is considered to be the most important location for tea production in Sri Lanka. The city is overlooked by Pidurutalagala, the tallest mountain in Sri Lanka. Nuwara Eliya is known for its temperate, cool climate – the coolest area in Sri Lanka.", SI: "පුංචි එංගලන්තය." }, shortStory: { EN: "A misty town.", SI: "මීදුම් පිරි හදවත." }, tips: [{ EN: "Drink fresh hot tea.", SI: "නැවුම් තේ රස බලන්න." }], hiddenEchoes: { EN: "A beautiful lake.", SI: "ග්‍රෙගරි වැව." }, location: "Nuwara Eliya", coordinates: { x: 60, y: 64 },
-    nearbyAttractions: [
-      { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
-      { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
-    ]
-  },
+
   { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, category: "mountains", image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg", gallery: ["https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg"], history: { EN: "Adam's Peak is a 2,243 m (7,359 ft) tall conical mountain located in central Sri Lanka. It is well known for the Sri Pada, i.e., 'sacred footprint', a 1.8 m (5 ft 11 in) rock formation near the summit, which in Buddhist tradition is held to be the footprint of the Buddha, in Hindu tradition that of Hanuman or Shiva and in some Islamic and Christian traditions that of Adam, or that of St. Thomas.", SI: "පූජනීය ශ්‍රී පාද පියුම." }, shortStory: { EN: "A holy mountain peak.", SI: "සදාකාලික කඳු මුදුන." }, tips: [{ EN: "Start climbing at midnight.", SI: "මධ්‍යම රාත්‍රියේ අරඹන්න." }], hiddenEchoes: { EN: "A shadow at sunrise.", SI: "හිරු උදාවේ සෙවණැල්ල." }, location: "Ratnapura", coordinates: { x: 54, y: 70 },
     nearbyAttractions: [
       { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" },
@@ -1131,23 +1285,20 @@ Respect the local community. Mirissa is still at its core a fishing village. The
       { id: "pasikudah", name: { EN: "Pasikudah Beach", SI: "පාසිකුඩා වෙරළ" }, image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg" }
     ]
   },
-  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg", gallery: ["https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is located in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's waterfalls is 20 metres (66 ft). The waterfall was named after Sir Samuel Baker, who was a famous explorer. The waterfall is known for its beautiful surroundings and the cool climate.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "A very cold waterfall.", SI: "සීතල දිය ඇල්ල." }, tips: [{ EN: "It is very cold in the morning.", SI: "උදෑසනට අධික සීතලයි." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Nuwara Eliya", coordinates: { x: 63, y: 73 },
+  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg", gallery: ["https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is located in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's waterfalls is 20 metres (66 ft). The waterfall was named after Sir Samuel Baker, who was a famous explorer. The waterfall is known for its beautiful surroundings and the cool climate.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "A very cold waterfall.", SI: "සීතල දිය ඇල්ල." }, tips: [{ EN: "It is very cold in the morning.", SI: "උදෑසනට අධික සීතලයි." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
     nearbyAttractions: [
       { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" },
       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
     ]
   },
-  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in Nuwara Eliya District.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "A wide waterfall.", SI: "පුළුල් දිය ඇල්ල." }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Nuwara Eliya", coordinates: { x: 52, y: 64 },
+  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "A wide waterfall.", SI: "පුළුල් දිය ඇල්ල." }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Central Highlands", coordinates: { x: 52, y: 64 },
     nearbyAttractions: [
-      { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" },
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" }
+      { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" }
     ]
   },
-  { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg", gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"], history: { EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Nuwara Eliya District on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.", SI: "වැවිලිකරුවෙකුගේ නම." }, shortStory: { EN: "A beautiful waterfall.", SI: "සුවඳවත් දිය ඇල්ල." }, tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Nuwara Eliya", coordinates: { x: 50, y: 64 },
+  { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg", gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"], history: { EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Central Highlands on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.", SI: "වැවිලිකරුවෙකුගේ නම." }, shortStory: { EN: "A beautiful waterfall.", SI: "සුවඳවත් දිය ඇල්ල." }, tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Central Highlands", coordinates: { x: 50, y: 64 },
     nearbyAttractions: [
-      { id: "stclair's", name: { EN: "St. Clair's Falls", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල" }, image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg" },
-      { id: "nuwaraeliya", name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" }, image: "https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" }
+      { id: "stclair's", name: { EN: "St. Clair's Falls", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල" }, image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg" }
     ]
   },
   { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg", gallery: ["https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg"], history: { EN: "Bopath Ella is a waterfall situated in the Ratnapura District of Sri Lanka. It has a shape very similar to the leaf of the Sacred Fig or 'Bo' tree, which has earned it this name. The waterfall is a major tourist attraction in the country. The falls are formed by the Kuru Ganga, which is a tributary of the Kalu Ganga.", SI: "බෝ පතක හැඩය." }, shortStory: { EN: "A holy shape.", SI: "පූජනීය හැඩය." }, tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." }, location: "Ratnapura", coordinates: { x: 42, y: 76 },
@@ -1157,13 +1308,13 @@ Respect the local community. Mirissa is still at its core a fishing village. The
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg", gallery: ["https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in Nuwara Eliya District, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Nuwara Eliya", coordinates: { x: 48, y: 70 },
+  { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg", gallery: ["https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in the Central Highlands, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "The electric waterfall.", SI: "විදුලි දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Central Highlands", coordinates: { x: 48, y: 70 },
     nearbyAttractions: [
       { id: "aberdeen", name: { EN: "Aberdeen Falls", SI: "ඇබර්ඩීන් ඇල්ල" }, image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg" },
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg", gallery: ["https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Nuwara Eliya District of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Nuwara Eliya", coordinates: { x: 46, y: 72 },
+  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg", gallery: ["https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Central Highlands of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Highland beauty.", SI: "කඳුකර අසිරිය." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Central Highlands", coordinates: { x: 46, y: 72 },
     nearbyAttractions: [
       { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg" },
       { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" }
