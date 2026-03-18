@@ -16,11 +16,11 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const heroImages = [
-    "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s16000",
-    "https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg",
-    "https://i.pinimg.com/1200x/c4/bd/4f/c4bd4fbf76c891efdf8a735d1337afaa.jpg",
-    "https://i.pinimg.com/1200x/1e/8f/62/1e8f62ed06398a4e4c8649cbaa62563a.jpg",
-    "https://i.pinimg.com/736x/cc/ae/b9/ccaeb9f1a649216bea87d317f10bd495.jpg"
+    "https://drive.google.com/thumbnail?id=1TugyxpPAbTUVoCzSZCoXTYKxUp41V53o&sz=s800",
+    "https://i.pinimg.com/600x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg",
+    "https://i.pinimg.com/600x/c4/bd/4f/c4bd4fbf76c891efdf8a735d1337afaa.jpg",
+    "https://i.pinimg.com/600x/1e/8f/62/1e8f62ed06398a4e4c8649cbaa62563a.jpg",
+    "https://i.pinimg.com/600x/cc/ae/b9/ccaeb9f1a649216bea87d317f10bd495.jpg"
   ];
 
   useEffect(() => {

@@ -44,6 +44,7 @@ const HighlightCard: React.FC<{ dest: Destination; index: number; language: Lang
             <img 
               src={dest.image} 
               alt={dest.name[language]} 
+              loading="lazy"
               className="w-full h-full object-cover transition-transform duration-[6000ms] group-hover:scale-110 saturate-[1.4] brightness-[0.8]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80 md:group-hover:opacity-40 transition-opacity" />
