@@ -33,7 +33,8 @@ import {
   Car,
   Route,
   Orbit,
-  Atom
+  Atom,
+  Mail
 } from 'lucide-react';
 import { UI_STRINGS } from '../constants.tsx';
 import AnimatedLogo from './AnimatedLogo.tsx';
@@ -106,6 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({
     { id: 'community', label: { EN: 'Memories', SI: 'මතකයන්' }, icon: <Heart size={14} /> },
     { id: 'shop', label: { EN: 'Store', SI: 'භාණ්ඩ' }, icon: <ShoppingCart size={14} /> },
     { id: 'vr-trip', label: { EN: 'VR Trip', SI: 'VR චාරිකාව' }, icon: <Zap size={14} className="text-[#E1306C]" /> },
+    { id: 'contact', label: { EN: 'Contact', SI: 'සම්බන්ධ වන්න' }, icon: <Mail size={14} /> },
   ];
 
   const handleNav = (id: string) => {

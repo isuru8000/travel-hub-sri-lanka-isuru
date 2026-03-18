@@ -89,7 +89,7 @@ const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          _to: "slisuruniroshan@gmail.com",
+          _to: "travelhub132@gmail.com",
           _replyto: formData.email,
           _subject: `Travel Hub Inquiry from ${formData.name}`,
           message: `Sender: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`
@@ -115,7 +115,7 @@ const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
   };
 
   const handleManualMail = () => {
-    const mailto = `mailto:slisuruniroshan@gmail.com?subject=${formData.subject}&body=${encodeURIComponent(`Name: ${formData.name}\n\n${formData.message}`)}`;
+    const mailto = `mailto:travelhub132@gmail.com?subject=${formData.subject}&body=${encodeURIComponent(`Name: ${formData.name}\n\n${formData.message}`)}`;
     window.location.href = mailto;
   };
 
@@ -153,7 +153,7 @@ const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#020202] pb-32 animate-in fade-in duration-700 relative overflow-hidden">
+    <div className="min-h-screen bg-white pb-32 animate-in fade-in duration-700 relative overflow-hidden">
       {onBack && (
         <button
           onClick={onBack}
@@ -352,7 +352,7 @@ const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
                     <div className="space-y-6">
                        <h4 className="text-5xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Entry Committed</h4>
                        <p className="text-gray-500 text-xl font-medium italic max-w-md mx-auto leading-relaxed">
-                         Packet received at <span className="text-[#E1306C] font-bold">slisuruniroshan@gmail.com</span>. Our intelligence unit will process your request shortly.
+                         Packet received at <span className="text-[#E1306C] font-bold">travelhub132@gmail.com</span>. Our intelligence unit will process your request shortly.
                        </p>
                     </div>
                     <button 
@@ -378,7 +378,7 @@ const Contact: React.FC<ContactProps> = ({ language, onBack }) => {
                        <span className="text-[9px] font-black text-gray-300 uppercase tracking-[0.5em]">Command_Center_v3</span>
                        <span className="text-[12px] font-bold text-[#0a0a0a] uppercase tracking-widest flex items-center gap-3">
                          <div className="w-2.5 h-2.5 bg-green-500 rounded-full shadow-[0_0_15px_#22c55e] animate-pulse" />
-                         slisuruniroshan@gmail.com
+                         travelhub132@gmail.com
                        </span>
                     </div>
                   </div>
