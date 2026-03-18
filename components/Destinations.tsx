@@ -78,7 +78,8 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
     return DESTINATIONS.filter(d => {
       return d.name.EN.toLowerCase().includes(q) || 
              d.name.SI.includes(q) ||
-             d.location.toLowerCase().includes(q);
+             d.location.toLowerCase().includes(q) ||
+             d.category.toLowerCase().includes(q);
     });
   }, [search]);
 
@@ -89,7 +90,8 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       const matchesSearch = !search.trim() || 
                             d.name.EN.toLowerCase().includes(q) || 
                             d.name.SI.includes(q) ||
-                            d.location.toLowerCase().includes(q);
+                            d.location.toLowerCase().includes(q) ||
+                            d.category.toLowerCase().includes(q);
       const matchesCategory = categoryFilter === 'all' || d.category === categoryFilter;
       return matchesLocation && matchesSearch && matchesCategory;
     });
@@ -335,12 +337,27 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               </div>
             </div>
           )) : (
-            <div className="col-span-full py-24 md:py-48 text-center space-y-8 md:space-y-12">
-               <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-50 rounded-full flex items-center justify-center mx-auto text-gray-200 shadow-inner">
+            <div className="col-span-full py-24 md:py-48 text-center space-y-8 md:space-y-12 bg-white rounded-[3rem] border border-gray-100 shadow-sm">
+               <div className="w-24 h-24 md:w-32 md:h-32 bg-stone-50 rounded-full flex items-center justify-center mx-auto text-stone-200 shadow-inner">
                   <Search size={48} className="md:w-16 md:h-16 animate-pulse" />
                </div>
-               <h3 className="text-2xl md:text-4xl font-heritage font-bold text-gray-400">No Registry Matches</h3>
-               <button onClick={resetFilters} className="px-8 py-4 md:px-12 md:py-5 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl">Reset Sync</button>
+               <div className="space-y-4">
+                 <h3 className="text-2xl md:text-4xl font-heritage font-bold text-stone-800 uppercase tracking-tighter">
+                   {language === 'EN' ? 'No Registry Matches' : 'ගැලපෙන දත්ත කිසිවක් නැත'}
+                 </h3>
+                 <p className="max-w-md mx-auto text-stone-400 italic text-sm md:text-base px-4">
+                   {language === 'EN' 
+                     ? "We couldn't find any destinations matching your current filters. Try resetting your search parameters."
+                     : "ඔබේ පෙරහන් වලට ගැලපෙන ගමනාන්ත කිසිවක් අපට හමු නොවීය. කරුණාකර ඔබගේ සෙවුම් පරාමිතීන් නැවත සකසන්න."}
+                 </p>
+               </div>
+               <button 
+                 onClick={resetFilters} 
+                 className="px-8 py-4 md:px-12 md:py-5 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 mx-auto"
+               >
+                 <RotateCcw size={14} />
+                 {language === 'EN' ? 'Reset Sync' : 'නැවත සකසන්න'}
+               </button>
             </div>
           )}
         </div>
