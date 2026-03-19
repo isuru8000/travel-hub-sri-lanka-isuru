@@ -18,9 +18,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const [mobileImageIndex, setMobileImageIndex] = useState(0);
 
   const heroImages = [
-    "https://i.pinimg.com/1200x/7a/76/1d/7a761d0c69df3858fceff11ef8708f48.jpg",
-    "https://i.pinimg.com/1200x/93/7f/5f/937f5f8b31f9fbad63893f189b3ddc4a.jpg",
-    "https://i.pinimg.com/1200x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg"
+    "https://i.pinimg.com/736x/42/d2/64/42d26488738bc11bac7ef935e22d0750.jpg"
   ];
 
   const mobileHeroImages = [
@@ -29,16 +27,11 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   ];
 
   useEffect(() => {
-    const desktopInterval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 8000);
-
     const mobileInterval = setInterval(() => {
       setMobileImageIndex((prevIndex) => (prevIndex + 1) % mobileHeroImages.length);
     }, 6000);
 
     return () => {
-      clearInterval(desktopInterval);
       clearInterval(mobileInterval);
     };
   }, []);

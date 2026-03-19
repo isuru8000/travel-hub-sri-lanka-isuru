@@ -54,6 +54,7 @@ export interface DestinationDeepDive {
   hiddenEchoes: string;
   nearbyAttractions: AINearbyNode[];
   isFallback?: boolean;
+  isThrottled?: boolean;
 }
 
 export interface WeatherData {
@@ -236,13 +237,13 @@ export const getDestinationDeepDive = async (destinationName: string, language: 
     const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const result = await ai.models.generateContent({
       model: 'gemini-3.1-pro-preview',
-      contents: [{ parts: [{ text: `You are the "Master Archivist" for Travel Hub Sri Lanka. Provide a structured, comprehensive, high-fidelity deep-dive for: ${destinationName}. Use poetic yet informative language. Language: ${language === 'SI' ? 'Sinhala' : 'English'}.` }] }],
+      contents: [{ parts: [{ text: `You are the "Master Archivist" for Travel Hub Sri Lanka. Provide a structured, comprehensive, high-fidelity deep-dive for: ${destinationName}. Use poetic yet informative language. Language: ${language === 'SI' ? 'Sinhala' : 'English'}. IMPORTANT: The 'history' field MUST be formatted using Markdown. Include professional headings (e.g., ### 🏛️ WHAT IS IT?, #### 📜 HISTORY IN FULL DETAIL, #### 🔍 WHAT TO SEE, #### 🎟️ TICKETS & ENTRY FEES), bullet points, and bold text to match a premium travel guide style.` }] }],
       config: {
         responseMimeType: "application/json",
         responseSchema: {
           type: Type.OBJECT,
           properties: {
-            history: { type: Type.STRING, description: "Detailed historical and mythical context (The Legend)." },
+            history: { type: Type.STRING, description: "Detailed historical and mythical context (The Legend). MUST be formatted in Markdown with headings, lists, and bold text." },
             temporalSync: { type: Type.STRING, description: "Best time to visit and atmospheric conditions (Temporal Sync)." },
             wisdom: { 
               type: Type.ARRAY, 
@@ -268,7 +269,10 @@ export const getDestinationDeepDive = async (destinationName: string, language: 
       }
     });
 
-    return JSON.parse(result.text || "{}") as DestinationDeepDive;
+    return {
+      ...JSON.parse(result.text || "{}"),
+      isThrottled: false
+    } as DestinationDeepDive;
   } catch (error) {
     if (isQuotaError(error)) {
       return {
@@ -277,7 +281,8 @@ export const getDestinationDeepDive = async (destinationName: string, language: 
         wisdom: ["Wait for neural recharge", "Check connectivity", "Upgrade to Priority Link"],
         hiddenEchoes: "Registry Throttled.",
         nearbyAttractions: [],
-        isFallback: true
+        isFallback: true,
+        isThrottled: true
       };
     }
     return null;
@@ -395,28 +400,7 @@ export const getLankaGuideResponse = async (
   language: Language, 
   location?: { latitude: number; longitude: number },
   isThinkingMode: boolean = false
-): Promise<AIResponse | string> => {
-  // Simple wrapper around the stream for legacy support
-  let fullText = "";
-  let allLinks: GroundingLink[] = [];
-  
-  const generator = streamLankaGuideResponse(prompt, [], language, location, isThinkingMode);
-  
-  for await (const chunk of generator) {
-    if (chunk.error === "API_KEY_REQUIRED") return "API_KEY_REQUIRED";
-    if (chunk.text) fullText += chunk.text; // Note: chunk.text in stream is usually the delta, but check SDK behavior. 
-    // Actually, SDK chunk.text is the ACCUMULATED text for that candidate in some versions, or delta in others. 
-    // Wait, the @google/genai SDK `chunk.text` is usually the text of the chunk.
-    // But `sendMessageStream` returns chunks. 
-    // Let's assume it returns deltas or we need to accumulate.
-    // Actually, for `sendMessageStream`, `chunk.text` is the text content of that specific chunk.
-    if (chunk.links) allLinks = [...allLinks, ...chunk.links];
-  }
-  
-  // If we are using this wrapper, we might get duplicated text if we just append.
-  // But since we are moving to streaming in the UI, this function might not be used much.
-  // However, to be safe, let's just use generateContent for the non-streaming version to match original behavior exactly.
-  
+): Promise<AIResponse> => {
   try {
     const ai = new GoogleGenAI({ apiKey: getApiKey() });
     const systemInstruction = `
@@ -447,7 +431,7 @@ export const getLankaGuideResponse = async (
       .filter((m: any) => m && m.uri)
       .map((m: any) => ({ title: m.title || "View Details", uri: m.uri })) || [];
 
-    return { text, links };
+    return { text, links, isThrottled: false };
   } catch (error: any) {
      if (isQuotaError(error)) {
       return { 
@@ -462,7 +446,7 @@ export const getLankaGuideResponse = async (
     if (errMsg.includes("Requested entity was not found.") || errMsg.includes("403")) {
       return { text: "API_KEY_REQUIRED", links: [], error: "API_KEY_REQUIRED" };
     }
-    return `Neural link interrupted. Please retry. (Error: ${errMsg})`;
+    return { text: `Neural link interrupted. Please retry. (Error: ${errMsg})`, links: [], error: "INTERRUPTED" };
   }
 };
 

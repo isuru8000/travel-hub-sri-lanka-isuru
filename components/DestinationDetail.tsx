@@ -53,8 +53,16 @@ import {
   History,
   EyeOff
 } from 'lucide-react';
-import { getLankaGuideResponse, GroundingLink, getWeatherUpdate, WeatherData } from '../services/gemini.ts';
+import { 
+  getLankaGuideResponse, 
+  GroundingLink, 
+  getWeatherUpdate, 
+  WeatherData, 
+  getDestinationDeepDive, 
+  DestinationDeepDive 
+} from '../services/gemini.ts';
 
+import ReactMarkdown from 'react-markdown';
 import { SEO } from './SEO.tsx';
 
 interface DestinationDetailProps {
@@ -143,7 +151,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
   const [scrollProgress, setScrollProgress] = useState(0);
   const [nearbyResults, setNearbyResults] = useState<GroundingLink[]>([]);
   const [isSyncingNearby, setIsSyncingNearby] = useState(false);
-  const [deepDive, setDeepDive] = useState<any>(null);
+  const [deepDive, setDeepDive] = useState<DestinationDeepDive | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -174,16 +182,10 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
             setNearbyResults(response.links);
           }
           
-          // Fetch deep dive
-          const deepDivePrompt = `Provide a detailed history and a hidden echo (an intriguing, lesser-known fact) for ${destination.name.EN} in ${destination.location}, Sri Lanka. Return as JSON: { "history": "...", "hiddenEchoes": "..." }`;
-          const deepDiveResponse = await getLankaGuideResponse(deepDivePrompt, language, undefined, false);
-          if (typeof deepDiveResponse === 'string') {
-            try {
-              const parsed = JSON.parse(deepDiveResponse);
-              setDeepDive(parsed);
-            } catch (e) {
-              console.error("Deep dive parsing failed", e);
-            }
+          // Fetch deep dive using the structured API
+          const deepDiveData = await getDestinationDeepDive(destination.name.EN, language);
+          if (deepDiveData) {
+            setDeepDive(deepDiveData);
           }
         } catch (e) {
           console.error("Nearby sync failed", e);
@@ -336,6 +338,17 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
                  {/* 1. Long Narrative Section (About Destination) */}
                  <div className="space-y-8 md:space-y-12 relative">
+                    {/* Throttling Notice */}
+                    {deepDive?.isThrottled && (
+                       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-4 text-amber-800 animate-pulse">
+                          <EyeOff size={20} className="flex-shrink-0" />
+                          <p className="text-sm font-medium">
+                             {language === 'SI' 
+                                ? "නාභිගත සම්බන්ධතාවය තාවකාලිකව සීමා කර ඇත. පෙන්වන්නේ සංරක්ෂිත දත්ත පමණි." 
+                                : "Neural Link Throttled. Displaying archival data while the Master Archivist recharges."}
+                          </p>
+                       </div>
+                    )}
                     <div className="flex items-center gap-4 md:gap-6">
                         <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-inner bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20`}>
                           <BookOpen size={24} className="w-5 h-5 md:w-6 md:h-6" />
@@ -350,21 +363,24 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                        <div className="font-sans text-lg md:text-xl text-gray-800 leading-relaxed space-y-6 md:space-y-8 antialiased font-light relative z-10 pl-2 md:pl-0">
                           <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
                           {(() => {
-                             const content = deepDive?.history || destination.detailedAbout?.[language];
-                             if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
+                             const detailedContent = destination.detailedAbout?.[language];
+                             const isPending = detailedContent?.includes("pending for this node") || detailedContent?.includes("සකසමින් පවතී");
+                             const isShort = detailedContent && detailedContent.length < 200;
                              
-                             // Check if content looks like HTML (more robust check)
-                             const trimmedContent = content.trim();
-                             // Check for common HTML tags or if it starts with <
-                             if (trimmedContent.startsWith('<') || /<[a-z][\s\S]*>/i.test(trimmedContent)) {
-                               return <div dangerouslySetInnerHTML={{ __html: content }} className="html-content space-y-6 md:space-y-8" />;
+                             let content = detailedContent;
+                             if (deepDive?.history && (isPending || isShort)) {
+                               content = deepDive.history;
+                             } else if (isPending && !deepDive?.history) {
+                               return <p className="italic text-gray-400">Archival data loading...</p>;
                              }
 
-                             return content.split('\n\n').map((para: string, pIdx: number) => (
-                               <p key={pIdx} className={`whitespace-pre-wrap ${pIdx === 0 ? 'mt-0' : 'mt-6 md:mt-8'}`}>
-                                 {para}
-                               </p>
-                             ));
+                             if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
+
+                             return (
+                               <div className="prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:font-heritage prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-[#0EA5E9] prose-strong:text-gray-900 prose-li:marker:text-[#0EA5E9]">
+                                 <ReactMarkdown>{content}</ReactMarkdown>
+                               </div>
+                             );
                           })()}
                           </div>
                        </div>
@@ -389,6 +405,40 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                                 "{deepDive.hiddenEchoes}"
                              </p>
                           </div>
+                       </div>
+                    </div>
+                 )}
+
+                 {/* Temporal Sync & Voyager Wisdom */}
+                 {deepDive && !deepDive.isThrottled && (
+                    <div className="pt-12 md:pt-20 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                       <div className="space-y-6">
+                          <div className="flex items-center gap-4">
+                             <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
+                                <History size={20} />
+                             </div>
+                             <h5 className="text-lg font-bold uppercase tracking-widest text-gray-900">Temporal Sync</h5>
+                          </div>
+                          <p className="text-gray-600 leading-relaxed md:pl-14">
+                             {deepDive.temporalSync}
+                          </p>
+                       </div>
+                       
+                       <div className="space-y-6">
+                          <div className="flex items-center gap-4">
+                             <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
+                                <Sparkles size={20} />
+                             </div>
+                             <h5 className="text-lg font-bold uppercase tracking-widest text-gray-900">Voyager Wisdom</h5>
+                          </div>
+                          <ul className="space-y-3 md:pl-14">
+                             {deepDive.wisdom?.map((tip, i) => (
+                                <li key={i} className="text-gray-600 flex gap-3">
+                                   <span className="text-emerald-500 font-bold">0{i+1}</span>
+                                   {tip}
+                                </li>
+                             ))}
+                          </ul>
                        </div>
                     </div>
                  )}
@@ -434,41 +484,6 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                     <div className="absolute inset-0 pointer-events-none border-[8px] md:border-[12px] border-white/10" />
                  </div>
 
-                 {/* Local Intel Links */}
-                 <div className="bg-gray-50 p-6 md:p-12 rounded-3xl md:rounded-[4rem] border border-gray-100 space-y-6 md:space-y-10 shadow-inner">
-                    <div className="flex items-center justify-between border-b border-gray-200 pb-4 md:pb-8">
-                       <div className="flex items-center gap-3 md:gap-4 text-[#E1306C]">
-                         <Target size={24} className="animate-pulse w-5 h-5 md:w-6 md:h-6" />
-                         <span className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em]">{language === 'EN' ? 'Regional Intelligence' : 'ප්‍රාදේශීය බුද්ධිය'}</span>
-                       </div>
-                    </div>
-                    <div className="space-y-3 md:space-y-4">
-                       {nearbyResults.length > 0 ? (
-                         nearbyResults.map((link, idx) => (
-                           <a 
-                             key={idx}
-                             href={link.uri}
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             className="flex items-center justify-between p-4 md:p-6 bg-white rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm transition-all hover:border-[#0EA5E9]/40 hover:shadow-2xl hover:-translate-x-2 group/link"
-                           >
-                              <div className="flex items-center gap-3 md:gap-5 overflow-hidden">
-                                 <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#0EA5E9]/5 flex items-center justify-center text-[#0EA5E9] shadow-inner group-hover/link:bg-[#0EA5E9] group-hover/link:text-white transition-colors shrink-0">
-                                    <Navigation size={20} className="w-4 h-4 md:w-5 md:h-5" />
-                                 </div>
-                                 <span className="text-xs md:text-sm font-bold text-gray-500 group-hover/link:text-[#0a0a0a] truncate tracking-tight uppercase">{link.title}</span>
-                              </div>
-                              <ExternalLink size={16} className="text-gray-200 group-hover/link:text-[#0EA5E9] shrink-0 w-3 h-3 md:w-4 md:h-4 ml-2" />
-                           </a>
-                         ))
-                       ) : (
-                         <div className="text-center py-12 md:py-20 opacity-30 space-y-4 md:space-y-6">
-                            <Database size={48} className="mx-auto text-gray-300 w-8 h-8 md:w-12 md:h-12" />
-                            <p className="text-[9px] md:text-[11px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] italic">Fetching Spatial Metadata...</p>
-                         </div>
-                       )}
-                    </div>
-                 </div>
               </div>
            </div>
         </section>
