@@ -27,8 +27,8 @@ import {
   Orbit,
   ZapOff
 } from 'lucide-react';
-import { Language } from '../types.ts';
-import { searchGrounding, AIResponse } from '../services/gemini.ts';
+import { Language } from '../types';
+import { searchGrounding, AIResponse } from '../services/gemini';
 
 interface SearchPortalProps {
   language: Language;

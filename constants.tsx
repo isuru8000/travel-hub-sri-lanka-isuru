@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Food, HeritageMusic, TraditionalMedicine, Phrase, TravelEssential, Festival, Translation, Transport, ArtAndCraft } from './types.ts';
-import { DESTINATIONS_DATA } from './destination_details.tsx';
+import { Food, HeritageMusic, TraditionalMedicine, Phrase, TravelEssential, Festival, Translation, Transport, ArtAndCraft } from './types';
+import { DESTINATIONS_DATA } from './destination_details';
 
 export const SUPABASE_KEY = 'sb_publishable_c8wPY71QFNsFJKcAEuD86w_pcqen0nv';
 
@@ -406,7 +406,7 @@ export const MEDICINE_DATA: TraditionalMedicine[] = [
 export const CATEGORIES_DATA = [
   { id: "foods", icon: "Utensils", title: { EN: "Food Heritage", SI: "ආහාර උරුමය" }, description: { EN: "Taste the spices of Lanka.", SI: "ලංකාවේ කුළුබඩු රස බලන්න." } },
   { id: "music", icon: "Music", title: { EN: "Ancient Music", SI: "සංගීතය" }, description: { EN: "Listen to the rhythms.", SI: "දේශීය රිද්මයට සවන් දෙන්න." } },
-  { id: "arts-crafts", icon: "Palette", title: { EN: "Arts & Crafts", SI: "කලා සහ අත්කම්" }, description: { EN: "Discover traditional artistry.", SI: "පාරම්පරික කලා නිර්මාණ ගවේෂණය කරන්න." } }
+  { id: "arts-crafts", icon: "Palette", title: { EN: "Traditional Arts & Crafts", SI: "පාරම්පරික කලා සහ අත්කම්" }, description: { EN: "Discover traditional artistry.", SI: "පාරම්පරික කලා නිර්මාණ ගවේෂණය කරන්න." } }
 ];
 
 export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [

@@ -1,7 +1,8 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS, UI_STRINGS } from '../constants.tsx';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Language, Destination } from '../types';
+import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { 
   Search, 
   MapPin, 
@@ -25,7 +26,7 @@ import {
 
 
 
-import { SEO } from './SEO.tsx';
+import { SEO } from './SEO';
 
 interface DestinationsProps {
   language: Language;
@@ -120,12 +121,8 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       setShowResultsDropdown(true);
       const timer = setTimeout(() => setIsSearching(false), 300);
       return () => clearTimeout(timer);
-    } else {
-      setShowResultsDropdown(false);
     }
   }, [search]);
-
-
 
   const resetFilters = () => {
     setCategoryFilter('all');
@@ -135,14 +132,25 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
   };
 
   return (
-    <section id="destinations" className="min-h-screen pb-64 bg-[#fafafa] relative antialiased">
+    <section id="destinations" className="min-h-screen pb-64 bg-[#f5f5f0] relative antialiased text-[#2d2d2d] font-sans overflow-x-hidden">
+      {/* Fixed Background Image Layer */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none opacity-[0.25] mix-blend-multiply"
+        style={{ 
+          backgroundImage: `url('https://i.pinimg.com/736x/5d/0d/ef/5d0def42d743d3e932b0b0095b12a61f.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+
       <SEO 
         title={language === 'EN' ? 'Destinations' : 'ගමනාන්ත'} 
         description={language === 'EN' ? 'Explore the beautiful destinations of Sri Lanka.' : 'ශ්‍රී ලංකාවේ සුන්දර ගමනාන්ත ගවේෂණය කරන්න.'} 
       />
       
       {/* Cinematic Header */}
-      <div className="relative z-[60] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-black">
+      <div className="relative z-[60] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-[#1a1a1a]">
         <div className="absolute inset-0 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms]" 
@@ -152,34 +160,40 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               filter: 'brightness(0.5) saturate(1.1)'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#fafafa]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#f5f5f0]" />
           </div>
         </div>
 
         {/* Back Button */}
         <div className="absolute top-8 left-8 md:top-12 md:left-12 z-[70]">
-          <button onClick={onBack} className="flex items-center gap-4 px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all shadow-2xl group">
+          <button onClick={onBack} className="flex items-center gap-4 px-8 py-4 bg-[#5A5A40]/80 backdrop-blur-2xl border border-white/20 text-white rounded-full font-bold text-[10px] uppercase tracking-[0.4em] hover:bg-[#5A5A40] transition-all shadow-2xl group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> 
             {language === 'EN' ? 'Home' : 'මුල් පිටුව'}
           </button>
         </div>
         
         <div className="relative z-10 w-full max-w-7xl mx-auto text-center px-8 space-y-12">
-          <div className="space-y-6">
-            <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.6em] shadow-2xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl text-[#f5f5f0] text-[10px] font-bold uppercase tracking-[0.6em] shadow-2xl mx-auto">
               <Sparkles size={14} className="animate-pulse" />
               {language === 'EN' ? 'THE ARCHIVAL REGISTRY' : 'පැරණි නාමාවලිය'}
             </div>
-            <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-heritage font-bold text-white tracking-tighter leading-[0.85] uppercase drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
-              LOCATE <br/><span className="text-stone-400 italic">WONDERS.</span>
+            <h2 className="text-4xl md:text-6xl lg:text-[8rem] font-heritage font-bold text-white tracking-tighter leading-none uppercase drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+              LOCATE <br/><span className="text-[#f5f5f0]/70 italic">WONDERS.</span>
             </h2>
-          </div>
+          </motion.div>
 
           {/* CINEMATIC SEARCH BAR */}
           <div className="w-full max-w-3xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#F59E0B]/20 to-orange-500/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
-            <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#F59E0B] shadow-[0_30px_80px_-15px_rgba(245,158,11,0.4)]' : 'border-white/20 shadow-2xl'}`}>
-              <div className="pl-8 text-[#F59E0B]">
+            <div className="absolute -inset-4 bg-[#5A5A40]/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
+            <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#5A5A40] shadow-[0_30px_80px_-15px_rgba(90,90,64,0.4)]' : 'border-white/20 shadow-2xl'}`}>
+              <div className="pl-8 text-[#f5f5f0]">
                 {isSearching ? <Loader2 size={24} className="animate-spin" /> : <Search size={24} />}
               </div>
               <input 
@@ -188,18 +202,18 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                 value={search}
                 onFocus={() => { setIsFocused(true); if (search.trim()) setShowResultsDropdown(true); }}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full px-6 py-8 md:py-10 text-xl md:text-3xl bg-transparent text-white font-light focus:outline-none placeholder:text-white/20 tracking-tight"
+                className="w-full px-6 py-8 md:py-10 text-xl md:text-3xl bg-transparent text-white font-light focus:outline-none placeholder:text-white/20 tracking-tight font-serif"
               />
               {search && (
-                <button onClick={() => setSearch('')} className="pr-8 text-white/40 hover:text-[#F59E0B] transition-all hover:scale-110">
+                <button onClick={() => setSearch('')} className="pr-8 text-white/40 hover:text-[#f5f5f0] transition-all hover:scale-110">
                   <X size={24} />
                 </button>
               )}
             </div>
 
-            {/* EXPANSIVE SEARCH RESULTS DROPDOWN - Overlapping the filter bar */}
+            {/* EXPANSIVE SEARCH RESULTS DROPDOWN */}
             {showResultsDropdown && searchMatches.length > 0 && (
-              <div className="absolute top-[calc(100%+0.5rem)] md:top-[calc(100%+1rem)] left-0 right-0 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_60px_180px_rgba(0,0,0,0.5)] border border-gray-100 overflow-hidden animate-in slide-in-from-top-6 duration-700 z-[120]">
+              <div className="absolute top-[calc(100%+0.5rem)] md:top-[calc(100%+1rem)] left-0 right-0 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_60px_180px_rgba(0,0,0,0.3)] border border-[#5A5A40]/10 overflow-hidden animate-in slide-in-from-top-6 duration-700 z-[120]">
                 {searchMatches.map((dest) => (
                   <button
                     key={dest.id}
@@ -207,16 +221,16 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                       onSelectDestination(dest);
                       setShowResultsDropdown(false);
                     }}
-                    className="w-full flex items-center gap-4 p-4 hover:bg-gray-50 transition-colors text-left"
+                    className="w-full flex items-center gap-4 p-6 hover:bg-[#f5f5f0] transition-colors text-left border-b border-[#5A5A40]/5 last:border-0"
                   >
                     <img
                       src={dest.image}
                       alt={dest.name[language]}
-                      className="w-12 h-12 object-cover rounded-lg"
+                      className="w-16 h-16 object-cover rounded-2xl"
                     />
                     <div>
-                      <p className="font-bold text-sm text-gray-900">{dest.name[language]}</p>
-                      <p className="text-xs text-gray-500">{dest.location}</p>
+                      <p className="font-bold text-lg text-[#2d2d2d] font-serif">{dest.name[language]}</p>
+                      <p className="text-xs text-[#2d2d2d]/60 uppercase tracking-widest">{dest.location}</p>
                     </div>
                   </button>
                 ))}
@@ -227,21 +241,21 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       </div>
 
       {/* STICKY CATEGORY BAR */}
-      <div className="sticky top-20 md:top-24 z-50 py-6 md:py-10 bg-white/90 backdrop-blur-3xl border-y border-stone-100">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div className="sticky top-0 z-[100] py-3 md:py-4 bg-[#f5f5f0]/80 backdrop-blur-3xl border-b border-[#5A5A40]/10">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
           <div className="relative w-full lg:w-auto">
             <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2 lg:pb-0">
               {categories.map(cat => (
                 <button 
                   key={cat.id} 
                   onClick={() => setCategoryFilter(cat.id)} 
-                  className={`flex items-center gap-3 px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all border shrink-0 ${
+                  className={`flex items-center gap-3 px-8 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all border shrink-0 ${
                     categoryFilter === cat.id 
-                      ? 'bg-black text-white border-transparent shadow-2xl scale-105' 
-                      : 'bg-white text-stone-400 border-stone-100 hover:border-stone-300'
+                      ? 'bg-[#5A5A40] text-white border-transparent shadow-xl scale-105' 
+                      : 'bg-white text-[#2d2d2d]/60 border-[#5A5A40]/10 hover:border-[#5A5A40]/30'
                   }`}
                 >
-                  <cat.icon size={14} className={categoryFilter === cat.id ? 'text-[#F59E0B]' : 'opacity-40'} />
+                  <cat.icon size={14} className={categoryFilter === cat.id ? 'text-white' : 'opacity-40'} />
                   {language === 'EN' ? cat.EN : cat.SI}
                 </button>
               ))}
@@ -253,16 +267,16 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               <select 
                 value={locationFilter} 
                 onChange={(e) => setLocationFilter(e.target.value)} 
-                className="appearance-none w-full pl-8 pr-12 py-4 bg-white border border-stone-100 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-stone-600 outline-none focus:border-[#F59E0B] cursor-pointer"
+                className="appearance-none w-full pl-8 pr-12 py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
               >
-                <option value="all">{UI_STRINGS.allRegions[language]}</option>
-                {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc}>{loc}</option>)}
+                <option value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
+                {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc} className="bg-white">{loc}</option>)}
               </select>
-              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-[#F59E0B] pointer-events-none" />
+              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-[#5A5A40] pointer-events-none" />
             </div>
             {(categoryFilter !== 'all' || locationFilter !== 'all' || search) && (
-              <button onClick={resetFilters} className="p-4 bg-stone-50 text-stone-400 rounded-full hover:bg-black hover:text-white transition-all">
-                <RotateCcw size={18} />
+              <button onClick={resetFilters} className="p-4 bg-white text-[#5A5A40] border border-[#5A5A40]/10 rounded-full hover:bg-[#5A5A40]/5 transition-all shadow-sm">
+                <RotateCcw size={14} />
               </button>
             )}
           </div>
@@ -270,90 +284,94 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       </div>
 
       {/* RESULTS GRID */}
-      <div id="registry-grid" className="max-w-[1600px] mx-auto px-4 md:px-12 mt-12 md:mt-24">
+      <div id="registry-grid" className="max-w-[1600px] mx-auto px-4 md:px-12 mt-12 md:mt-24 relative z-10">
         {categoryFilter === 'camping' ? (
-          <div className="col-span-full py-24 md:py-48 text-center space-y-8 md:space-y-12 bg-white rounded-[3rem] border border-gray-100 shadow-sm">
-             <div className="w-24 h-24 md:w-32 md:h-32 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-500 shadow-inner">
-                <Tent size={48} className="md:w-16 md:h-16 animate-pulse" />
+          <div className="py-16 md:py-48 text-center space-y-8 md:space-y-12 bg-white/40 backdrop-blur-sm rounded-[2rem] md:rounded-[4rem] border border-[#5A5A40]/10 shadow-sm mx-4">
+             <div className="w-20 h-20 md:w-32 md:h-32 bg-[#5A5A40]/10 rounded-full flex items-center justify-center mx-auto text-[#5A5A40] shadow-inner">
+                <Tent size={40} className="md:w-16 md:h-16 animate-pulse" />
              </div>
              <div className="space-y-4">
-               <h3 className="text-3xl md:text-5xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Camping Registry</h3>
-               <p className="text-lg md:text-2xl text-emerald-600 font-black uppercase tracking-[0.3em] md:tracking-[0.5em] animate-pulse">
+               <h3 className="text-2xl md:text-5xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">Camping Registry</h3>
+               <p className="text-base md:text-2xl text-[#5A5A40] font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] animate-pulse">
                  {language === 'EN' ? 'Coming Soon' : 'ළඟදීම බලාපොරොත්තු වන්න'}
                </p>
              </div>
-             <p className="max-w-md mx-auto text-gray-400 italic text-sm md:text-base">
+             <p className="max-w-md mx-auto text-[#2d2d2d]/60 italic text-xs md:text-base px-6">
                {language === 'EN' 
                  ? "We are currently synchronizing the wild forest nodes. The camping manifest will be available in the next update."
                  : "අපි දැනට වනාන්තර කලාප දත්ත පද්ධතියට එක් කරමින් සිටිමු. මීළඟ යාවත්කාලීනයෙන් කඳවුරු තොරතුරු ලබා ගත හැක."}
              </p>
-             <button onClick={resetFilters} className="px-8 py-4 md:px-12 md:py-5 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform">Return to Core</button>
+             <button onClick={resetFilters} className="px-8 py-4 md:px-12 md:py-5 bg-[#5A5A40] text-white rounded-full font-bold text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform">Return to Core</button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-12">
             {filteredDestinations.length > 0 ? filteredDestinations.map((dest, idx) => (
-            <div 
+            <motion.div 
               key={dest.id} 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: (idx % 4) * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
               onClick={() => onSelectDestination(dest)}
-              className="group relative h-[500px] md:h-[650px] bg-white rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 cursor-pointer border border-stone-100"
-              style={{ animationDelay: `${idx * 100}ms` }}
+              className="group relative h-[450px] md:h-[650px] bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-xl transition-all duration-700 cursor-pointer border border-[#5A5A40]/10 hover:shadow-2xl hover:-translate-y-2"
             >
               <img 
                 src={dest.image} 
                 alt={dest.name[language]} 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5000ms] group-hover:scale-110" 
+                loading="lazy"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               
-              <div className="absolute top-8 left-8">
-                 <div className="px-6 py-2 bg-white/10 backdrop-blur-xl rounded-full text-[10px] font-black tracking-[0.2em] text-white border border-white/20 uppercase">
+              <div className="absolute top-6 left-6 md:top-8 md:left-8">
+                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-[#5A5A40]/80 backdrop-blur-xl rounded-full text-[8px] md:text-[10px] font-bold tracking-[0.2em] text-white border border-white/20 uppercase">
                     {dest.category}
                  </div>
               </div>
 
               {/* Editorial Number */}
-              <div className="absolute top-8 right-8 mix-blend-difference opacity-20">
-                <span className="text-4xl font-heritage font-bold text-white tracking-tighter">
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 mix-blend-difference opacity-20">
+                <span className="text-2xl md:text-4xl font-heritage font-bold text-white tracking-tighter">
                   {idx < 9 ? `0${idx + 1}` : idx + 1}
                 </span>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-12 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
-                 <div className="flex items-center gap-3 text-white/60 mb-4">
-                    <MapPin size={16} className="text-[#F59E0B]" />
-                    <span className="text-[10px] font-black uppercase tracking-[0.3em]">{dest.location}</span>
+              <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 flex flex-col justify-end transform translate-y-4 md:translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
+                 <div className="flex items-center gap-2 md:gap-3 text-white/80 mb-2 md:mb-4">
+                    <MapPin size={14} className="text-[#f5f5f0]" />
+                    <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em]">{dest.location}</span>
                  </div>
-                 <h3 className="text-2xl md:text-4xl font-heritage font-bold text-white mb-4 tracking-tighter leading-tight uppercase">{dest.name[language]}</h3>
+                 <h3 className="text-xl md:text-4xl font-heritage font-bold text-white mb-2 md:mb-4 tracking-tighter leading-tight uppercase">{dest.name[language]}</h3>
                  
                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-700 ease-in-out">
                    <div className="overflow-hidden">
-                     <p className="text-sm md:text-base text-white/60 font-light italic leading-relaxed mb-6">
+                     <p className="text-xs md:text-base text-white/90 font-light italic leading-relaxed mb-4 md:mb-6 line-clamp-3 md:line-clamp-none drop-shadow-sm">
                         {dest.shortStory[language]}
                      </p>
                    </div>
                  </div>
 
-                 <div className="pt-4">
-                   <div className="inline-flex items-center gap-4 text-white font-black text-[9px] uppercase tracking-[0.4em] group/btn">
+                 <div className="pt-2 md:pt-4">
+                   <div className="inline-flex items-center gap-3 md:gap-4 text-white font-bold text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] group/btn">
                       <span>Explore Node</span>
-                      <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-[#F59E0B] group-hover/btn:border-transparent transition-all duration-500">
-                        <ArrowRight size={16} className="transition-transform duration-500 group-hover/btn:translate-x-1" />
+                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-[#5A5A40] group-hover/btn:border-transparent transition-all duration-500">
+                        <ArrowRight size={14} className="md:w-4 md:h-4 transition-transform duration-500 group-hover/btn:translate-x-1" />
                       </div>
                    </div>
                  </div>
               </div>
-            </div>
+            </motion.div>
           )) : (
-            <div className="col-span-full py-24 md:py-48 text-center space-y-8 md:space-y-12 bg-white rounded-[3rem] border border-gray-100 shadow-sm">
-               <div className="w-24 h-24 md:w-32 md:h-32 bg-stone-50 rounded-full flex items-center justify-center mx-auto text-stone-200 shadow-inner">
-                  <Search size={48} className="md:w-16 md:h-16 animate-pulse" />
+            <div className="col-span-full py-16 md:py-48 text-center space-y-8 md:space-y-12 bg-white/40 backdrop-blur-sm rounded-[2rem] md:rounded-[4rem] border border-[#5A5A40]/10 shadow-sm mx-4">
+               <div className="w-20 h-20 md:w-32 md:h-32 bg-[#5A5A40]/5 rounded-full flex items-center justify-center mx-auto text-[#5A5A40]/20 shadow-inner">
+                  <Search size={40} className="md:w-16 md:h-16 animate-pulse" />
                </div>
                <div className="space-y-4">
-                 <h3 className="text-2xl md:text-4xl font-heritage font-bold text-stone-800 uppercase tracking-tighter">
+                 <h3 className="text-xl md:text-4xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
                    {language === 'EN' ? 'No Registry Matches' : 'ගැලපෙන දත්ත කිසිවක් නැත'}
                  </h3>
-                 <p className="max-w-md mx-auto text-stone-400 italic text-sm md:text-base px-4">
+                 <p className="max-w-md mx-auto text-[#2d2d2d]/40 italic text-xs md:text-base px-4">
                    {language === 'EN' 
                      ? "We couldn't find any destinations matching your current filters. Try resetting your search parameters."
                      : "ඔබේ පෙරහන් වලට ගැලපෙන ගමනාන්ත කිසිවක් අපට හමු නොවීය. කරුණාකර ඔබගේ සෙවුම් පරාමිතීන් නැවත සකසන්න."}
@@ -361,7 +379,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                </div>
                <button 
                  onClick={resetFilters} 
-                 className="px-8 py-4 md:px-12 md:py-5 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 mx-auto"
+                 className="px-8 py-4 md:px-12 md:py-5 bg-[#5A5A40] text-white rounded-full font-bold text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl hover:scale-105 transition-transform flex items-center gap-2 mx-auto"
                >
                  <RotateCcw size={14} />
                  {language === 'EN' ? 'Reset Sync' : 'නැවත සකසන්න'}
@@ -369,26 +387,17 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
             </div>
           )}
         </div>
-        )}
-
-
-      </div>
+      )}
+    </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
-        .group\\/cat-btn:hover .animate-shimmer { animation: shimmer 1s infinite; }
         @keyframes pulse-light {
-          0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
-          70% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+          0% { box-shadow: 0 0 0 0 rgba(90, 90, 64, 0.4); }
+          70% { box-shadow: 0 0 0 10px rgba(90, 90, 64, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(90, 90, 64, 0); }
         }
-        .active-category-glow { animation: pulse-light 2s infinite; border-color: rgba(14, 165, 233, 0.3) !important; }
-        @keyframes border-glow {
-          0%, 100% { box-shadow: inset 0 0 0 1px rgba(14, 165, 233, 0.2); }
-          50% { box-shadow: inset 0 0 0 3px rgba(14, 165, 233, 0.5); }
-        }
-        .slow-glow-card { animation: border-glow 4s infinite ease-in-out; }
+        .active-category-glow { animation: pulse-light 2s infinite; border-color: rgba(90, 90, 64, 0.3) !important; }
       `}} />
     </section>
   );

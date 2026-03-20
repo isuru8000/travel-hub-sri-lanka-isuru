@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Language, User } from '../types.ts';
+import { Language, User } from '../types';
 import { 
   Globe, 
   User as UserIcon, 
@@ -22,6 +22,7 @@ import {
   Calendar,
   Utensils,
   Music,
+  Palette,
   Activity,
   Languages,
   Sprout,
@@ -36,8 +37,8 @@ import {
   Atom,
   Mail
 } from 'lucide-react';
-import { UI_STRINGS } from '../constants.tsx';
-import AnimatedLogo from './AnimatedLogo.tsx';
+import { UI_STRINGS } from '../constants';
+import AnimatedLogo from './AnimatedLogo';
 
 interface NavItem {
   id: string;
@@ -79,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({
   const navLinks: NavItem[] = [
     { id: 'destinations', label: { EN: 'Destinations', SI: 'ගමනාන්ත' }, icon: <Map size={14} /> },
     { 
-      id: 'heritage-nav', 
+      id: 'heritage', 
       label: { EN: 'Heritage', SI: 'උරුමය' }, 
       icon: <Landmark size={14} />,
       hasDropdown: true,
@@ -87,6 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({
         { id: 'foods', label: { EN: 'Food', SI: 'ආහාර' }, icon: <Utensils size={14} /> },
         { id: 'phrases', label: { EN: 'Language', SI: 'භාෂාව' }, icon: <Languages size={14} /> },
         { id: 'music', label: { EN: 'Music', SI: 'සංගීතය' }, icon: <Music size={14} /> },
+        { id: 'arts-crafts', label: { EN: 'Arts & Crafts', SI: 'අත්කම්' }, icon: <Palette size={14} /> },
         { id: 'medicine', label: { EN: 'Medicine', SI: 'වෙදකම' }, icon: <Activity size={14} /> },
         { id: 'festivals', label: { EN: 'Festivals', SI: 'උත්සව' }, icon: <Calendar size={14} /> },
       ]
@@ -136,7 +138,7 @@ const Navbar: React.FC<NavbarProps> = ({
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                onClick={() => !link.hasDropdown && handleNav(link.id)}
+                onClick={() => handleNav(link.id)}
                 className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-500 relative group/link ${
                   currentView === link.id || (link.hasDropdown && link.items?.some(i => i.id === currentView))
                     ? 'bg-black/5 text-[#0a0a0a]' 

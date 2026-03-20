@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { 
   Atom, 
   Cpu, 

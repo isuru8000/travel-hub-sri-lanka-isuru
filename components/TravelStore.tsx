@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { 
   ShieldCheck, 
   Sparkles, 

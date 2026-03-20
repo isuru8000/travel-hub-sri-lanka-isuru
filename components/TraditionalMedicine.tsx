@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language, TraditionalMedicine as TraditionalMedicineType } from '../types.ts';
-import { MEDICINE_DATA } from '../constants.tsx';
+import { Language, TraditionalMedicine as TraditionalMedicineType } from '../types';
+import { MEDICINE_DATA } from '../constants';
 // Fix: Added ArrowLeft import for the back button
 import { Leaf, History, Activity, Sparkles, HeartPulse, Info, ArrowLeft } from 'lucide-react';
 

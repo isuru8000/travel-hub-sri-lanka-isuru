@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS, UI_STRINGS } from '../constants.tsx';
+import { Language, Destination } from '../types';
+import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { MapPin, Sparkles, Compass, ArrowRight, ShieldCheck, Box, Globe, MoveRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -9,6 +9,7 @@ const HighlightCard: React.FC<{ dest: Destination; index: number; language: Lang
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (window.innerWidth < 1024) return;
@@ -22,10 +23,10 @@ const HighlightCard: React.FC<{ dest: Destination; index: number; language: Lang
   return (
     <motion.div 
       ref={cardRef}
-      initial={{ opacity: 0, y: 100 }}
+      initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: isMobile ? "-50px" : "-100px" }}
+      transition={{ duration: isMobile ? 0.6 : 1, ease: [0.22, 1, 0.36, 1] }}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => { setTilt({ x: 0, y: 0 }); setIsHovered(false); }}
@@ -46,7 +47,8 @@ const HighlightCard: React.FC<{ dest: Destination; index: number; language: Lang
             src={dest.image} 
             alt={dest.name[language]} 
             loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110 saturate-[1.1]"
+            decoding="async"
+            className={`w-full h-full object-cover transition-transform ${isMobile ? 'duration-[2000ms]' : 'duration-[8000ms]'} group-hover:scale-110 saturate-[1.1]`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
           
@@ -112,9 +114,10 @@ interface PopularHighlightsProps {
 const PopularHighlights: React.FC<PopularHighlightsProps> = ({ language, onSelectDestination, setView }) => {
   const popularIds = ['sigiriya', 'kandy-temple', 'ella', 'galle-fort', 'yala'];
   const highlights = DESTINATIONS.filter(d => popularIds.includes(d.id));
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   
   return (
-    <section className="py-24 md:py-48 bg-stone-50 overflow-hidden relative">
+    <section className="py-24 md:py-48 bg-stone-50 overflow-hidden relative mobile-section-optimize">
       {/* Vertical Rail Text */}
       <div className="hidden xl:block absolute left-12 top-1/2 -translate-y-1/2 h-full pointer-events-none">
         <div className="sticky top-1/2 flex flex-col items-center gap-12 opacity-10">
@@ -168,12 +171,12 @@ const PopularHighlights: React.FC<PopularHighlightsProps> = ({ language, onSelec
           ))}
         </div>
         
-        {/* Call to Action Section */}
+        {/* Call to Action Section - Simplified on mobile */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={isMobile ? { opacity: 0 } : { opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1 }}
+          transition={{ duration: isMobile ? 0.6 : 1 }}
           className="mt-48 md:mt-80 relative"
         >
            <div className="relative p-12 md:p-32 bg-black rounded-[3rem] md:rounded-[6rem] text-center space-y-12 md:space-y-20 overflow-hidden group">

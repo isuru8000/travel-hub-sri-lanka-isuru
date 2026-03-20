@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { 
   Gem, 
   Zap, 

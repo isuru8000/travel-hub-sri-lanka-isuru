@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Type, ThinkingLevel } from "@google/genai";
-import { Language } from "../types.ts";
+import { Language } from "../types";
 
 // Helper to get the API key safely across different environments (AI Studio vs Vercel)
 const getApiKey = (): string => {

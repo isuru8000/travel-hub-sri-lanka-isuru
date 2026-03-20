@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language } from '../types.ts';
-import { TRANSPORT_DATA } from '../constants.tsx';
+import { Language } from '../types';
+import { TRANSPORT_DATA } from '../constants';
 import { 
   Car, 
   Plane, 

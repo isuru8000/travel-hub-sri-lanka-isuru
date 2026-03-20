@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS } from '../constants.tsx';
+import { Language, Destination } from '../types';
+import { DESTINATIONS } from '../constants';
 import { 
   X, 
   Compass, 
@@ -15,8 +15,8 @@ import {
   CheckCircle2,
   ArrowLeft
 } from 'lucide-react';
-import { generateDetailedItinerary } from '../services/gemini.ts';
-import { ErrorAlert } from './ErrorAlert.tsx';
+import { generateDetailedItinerary } from '../services/gemini';
+import { ErrorAlert } from './ErrorAlert';
 
 interface TripPlannerProps {
   language: Language;

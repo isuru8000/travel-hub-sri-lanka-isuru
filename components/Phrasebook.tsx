@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Language, Phrase } from '../types.ts';
-import { PHRASEBOOK_DATA } from '../constants.tsx';
+import { Language, Phrase } from '../types';
+import { PHRASEBOOK_DATA } from '../constants';
 // Fix: Added ArrowLeft import for the back button
 import { MessageSquare, Volume2, Search, Heart, Utensils, AlertCircle, ShoppingBag, Globe, Sparkles, BookOpen, ArrowLeft } from 'lucide-react';
 
@@ -88,7 +88,7 @@ const Phrasebook: React.FC<PhrasebookProps> = ({ language, onBack }) => {
             <button
               key={cat.id}
               onClick={() => setFilter(cat.id)}
-              className={`flex items-center gap-3 px-8 py-3.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all border shadow-sm ${
+              className={`flex items-center gap-3 px-8 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all border shadow-sm ${
                 filter === cat.id 
                   ? 'bg-[#0a0a0a] text-white border-transparent scale-105 shadow-2xl' 
                   : 'bg-white text-gray-400 border-gray-100 hover:border-[#0EA5E9] hover:text-[#0a0a0a]'

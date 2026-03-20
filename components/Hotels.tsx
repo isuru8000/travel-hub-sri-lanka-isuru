@@ -1,6 +1,6 @@
 
 import React, { useState, useMemo } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { 
   Gem, 
   MapPin, 
@@ -25,7 +25,7 @@ import {
   Layers,
   Heart
 } from 'lucide-react';
-import HotelModal from './HotelModal.tsx';
+import HotelModal from './HotelModal';
 
 const LUXURY_HOTELS = [
   {

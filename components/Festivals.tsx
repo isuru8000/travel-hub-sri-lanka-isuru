@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo } from 'react';
-import { Language, Festival } from '../types.ts';
-import { FESTIVALS_DATA } from '../constants.tsx';
+import { Language, Festival } from '../types';
+import { FESTIVALS_DATA } from '../constants';
 // Fix: Added ArrowLeft import for the back button
 import { Calendar, Sparkles, Info, Star, Landmark, LayoutGrid, Waves, Palette, Sprout, Search, ArrowLeft } from 'lucide-react';
 

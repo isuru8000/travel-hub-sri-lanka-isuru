@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { Layers, Box, Sparkles, Target, Radio, ArrowLeft, Gem, Wind, Zap, Lock, Loader2, Cpu, Scan, Hexagon, Binary, Shield, ZapOff, Signal, FastForward, Move, Compass, RotateCw, Activity, Database, HardDrive, Sun, ArrowDown } from 'lucide-react';
 
 interface VRShowcaseProps {

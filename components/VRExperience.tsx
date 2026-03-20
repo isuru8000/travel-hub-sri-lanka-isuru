@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS } from '../constants.tsx';
+import { Language, Destination } from '../types';
+import { DESTINATIONS } from '../constants';
 import { 
   Box, 
   Compass, 

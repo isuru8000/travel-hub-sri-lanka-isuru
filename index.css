@@ -1,14 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-heritage: "Playfair Display", serif;
+  --font-heritage: "Libre Baskerville", serif;
+  --font-serif: "Libre Baskerville", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-white text-[#0a0a0a] antialiased;
+  }
+}
+
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  .mobile-optimize {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+  
+  .mobile-section-optimize {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 800px;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  img {
+    content-visibility: auto;
   }
 }
 

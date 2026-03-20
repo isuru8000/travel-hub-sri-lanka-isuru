@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Destination, Language } from '../types.ts';
-import { UI_STRINGS, DESTINATIONS } from '../constants.tsx';
+import { Destination, Language } from '../types';
+import { UI_STRINGS, DESTINATIONS } from '../constants';
 import { X, MapPin, Info, Clock, PlayCircle, Image as ImageIcon, Lightbulb, Play, Pause, Volume2, VolumeX, Maximize, Sparkles, ArrowUpRight, Compass } from 'lucide-react';
 
 // Define YouTube IFrame API types

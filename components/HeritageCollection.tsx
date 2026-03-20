@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { Compass, Sparkles, ArrowRight, ShieldCheck, Gem, Box } from 'lucide-react';
 
 const HIDDEN_GEMS = [

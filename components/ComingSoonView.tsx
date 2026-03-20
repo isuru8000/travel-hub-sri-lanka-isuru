@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Clock, Construction, ArrowLeft, Sparkles } from 'lucide-react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 
 interface ComingSoonViewProps {
   language: Language;

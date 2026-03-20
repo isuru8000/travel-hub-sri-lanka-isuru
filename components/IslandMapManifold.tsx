@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS, UI_STRINGS } from '../constants.tsx';
+import { Language, Destination } from '../types';
+import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { 
   Compass, 
   MapPin, 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Language, View } from '../types.ts';
-import { UI_STRINGS } from '../constants.tsx';
+import { Language, View } from '../types';
+import { UI_STRINGS } from '../constants';
 import { Compass, Sparkles, Target, Wind, Activity, PawPrint } from 'lucide-react';
 
 interface DestinySectionProps {
@@ -10,6 +10,7 @@ interface DestinySectionProps {
 }
 
 const DestinySection: React.FC<DestinySectionProps> = ({ language, setView }) => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
   const shards = [
     {
       id: '01',
@@ -50,9 +51,9 @@ const DestinySection: React.FC<DestinySectionProps> = ({ language, setView }) =>
   ];
 
   return (
-    <section className="py-24 md:py-64 px-4 md:px-8 bg-white overflow-hidden relative">
-      {/* Background Decorative Text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-heritage font-bold text-black/[0.02] select-none pointer-events-none whitespace-nowrap">
+    <section className="py-24 md:py-64 px-4 md:px-8 bg-white overflow-hidden relative mobile-section-optimize">
+      {/* Background Decorative Text - Simplified on mobile */}
+      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-heritage font-bold text-black/[0.02] select-none pointer-events-none whitespace-nowrap ${isMobile ? 'opacity-50' : ''}`}>
         {language === 'EN' ? 'DESTINY' : 'දෛවය'}
       </div>
 
@@ -92,15 +93,17 @@ const DestinySection: React.FC<DestinySectionProps> = ({ language, setView }) =>
           {shards.map((shard, idx) => (
             <motion.div
               key={shard.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
+              viewport={{ once: true, margin: isMobile ? "-20px" : "-50px" }}
+              transition={{ duration: isMobile ? 0.5 : 0.8, delay: isMobile ? 0 : idx * 0.1 }}
               className="group/shard relative aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-stone-100 border border-stone-200 shadow-xl hover:-translate-y-4 transition-all duration-700"
             >
               <img 
                 src={shard.image} 
-                className="w-full h-full object-cover transition-transform duration-[4000ms] group-hover:scale-110" 
+                loading="lazy"
+                decoding="async"
+                className={`w-full h-full object-cover transition-transform ${isMobile ? 'duration-[2000ms]' : 'duration-[4000ms]'} group-hover:scale-110`} 
                 alt={shard.title} 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />

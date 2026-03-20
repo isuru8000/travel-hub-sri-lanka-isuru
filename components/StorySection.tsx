@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language } from '../types.ts';
-import { UI_STRINGS } from '../constants.tsx';
+import { Language } from '../types';
+import { UI_STRINGS } from '../constants';
 import { ArrowRight, History, Users } from 'lucide-react';
 
 interface StorySectionProps {

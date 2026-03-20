@@ -1,7 +1,7 @@
 
 import React, { useMemo, useState } from 'react';
-import { Language, Destination } from '../types.ts';
-import { DESTINATIONS, FOODS_DATA, HERITAGE_MUSIC_DATA, MEDICINE_DATA, FESTIVALS_DATA } from '../constants.tsx';
+import { Language, Destination } from '../types';
+import { DESTINATIONS, FOODS_DATA, HERITAGE_MUSIC_DATA, MEDICINE_DATA, FESTIVALS_DATA } from '../constants';
 // Fix: Added missing Lock import to resolve name collision with browser's global Lock interface
 import { Heart, ArrowLeft, ArrowRight, Trash2, Box, Database, Sparkles, MapPin, ExternalLink, Compass, Globe, Zap, Navigation, Loader2, Lock } from 'lucide-react';
 

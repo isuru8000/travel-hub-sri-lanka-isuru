@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo } from 'react';
-import { Language, Food } from '../types.ts';
-import { FOODS_DATA } from '../constants.tsx';
+import { Language, Food } from '../types';
+import { FOODS_DATA } from '../constants';
 // Fix: Added ArrowLeft import for the back button
 import { Flame, UtensilsCrossed, Leaf, Sparkles, History, Compass, Utensils, Wheat, Candy, Waves, Crown, LayoutGrid, Search, ArrowLeft } from 'lucide-react';
 

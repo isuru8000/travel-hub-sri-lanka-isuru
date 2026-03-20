@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { Sparkles, Globe, Compass } from 'lucide-react';
 
 interface DiscoveryTransitionProps {

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
-import { Destination, Language, NearbyAttraction } from '../types.ts';
-import { DESTINATIONS, UI_STRINGS } from '../constants.tsx';
+import { Destination, Language, NearbyAttraction } from '../types';
+import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { 
   ArrowLeft, 
   MapPin, 
@@ -60,10 +60,10 @@ import {
   WeatherData, 
   getDestinationDeepDive, 
   DestinationDeepDive 
-} from '../services/gemini.ts';
+} from '../services/gemini';
 
 import ReactMarkdown from 'react-markdown';
-import { SEO } from './SEO.tsx';
+import { SEO } from './SEO';
 
 interface DestinationDetailProps {
   destination: Destination | null;
@@ -221,7 +221,18 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
   const googleMapsIframeUrl = `https://www.google.com/maps?q=${encodeURIComponent(destination.name.EN + ' ' + destination.location + ' Sri Lanka')}&output=embed&z=14`;
 
   return (
-    <div className="min-h-screen bg-white animate-in fade-in duration-1000 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f5f5f0] animate-in fade-in duration-1000 relative overflow-x-hidden font-serif text-[#2d2d2d]">
+      {/* Fixed Background Image Layer */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none opacity-[0.08] mix-blend-multiply"
+        style={{ 
+          backgroundImage: `url('https://i.pinimg.com/736x/5d/0d/ef/5d0def42d743d3e932b0b0095b12a61f.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+
       <SEO 
         title={destination.name[language]} 
         description={destination.shortStory[language]} 
@@ -236,18 +247,18 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
       <LiveWeatherWidget destinationName={destination.name.EN} language={language} />
 
       {/* Cinematic Hero */}
-      <div className="relative h-[85vh] w-full overflow-hidden bg-black">
+      <div className="relative h-[85vh] w-full overflow-hidden bg-[#1a1a1a]">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-[100ms] ease-out parallax-hero"
+          className="absolute inset-0 bg-cover bg-center opacity-70 transition-transform duration-[100ms] ease-out parallax-hero"
           style={{ 
             backgroundImage: `url(${destination.image})`,
             transform: `translateY(${scrollProgress * 200}px) scale(1.05)`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#f5f5f0] via-transparent to-black/40" />
         
         <div className="absolute top-0 left-0 right-0 p-4 md:p-12 z-50 flex justify-between items-center">
-          <button onClick={onBack} className="flex items-center gap-2 md:gap-4 px-5 py-3 md:px-8 md:py-4 bg-black/50 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-white hover:text-black transition-all group shadow-2xl active:scale-95">
+          <button onClick={onBack} className="flex items-center gap-2 md:gap-4 px-5 py-3 md:px-8 md:py-4 bg-[#5A5A40]/80 backdrop-blur-xl border border-white/20 text-white rounded-full font-bold text-[10px] md:text-[12px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-[#5A5A40] transition-all group shadow-2xl active:scale-95">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform md:w-[18px] md:h-[18px]" /> 
             <span className="hidden sm:inline">{UI_STRINGS.returnToRegistry[language]}</span>
             <span className="sm:hidden">Back</span>
@@ -258,21 +269,21 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
           <div className="max-w-7xl mx-auto space-y-4 md:space-y-8">
             <div className="flex flex-wrap items-center justify-between gap-4 md:gap-6">
                <div className="flex flex-wrap items-center gap-2 md:gap-4">
-                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-[#0EA5E9] text-white rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/20 shadow-xl">
+                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-[#5A5A40] text-white rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/10 shadow-xl">
                    ACTIVE NODE
                  </div>
-                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-black/40 backdrop-blur-3xl text-white rounded-full text-[8px] md:text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/20 flex items-center gap-2 md:gap-3 shadow-xl">
-                   <CatIcon size={12} className="md:w-3.5 md:h-3.5" style={{ color: config.color }} />
+                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-white/10 backdrop-blur-md text-white rounded-full text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.4em] border border-white/20 flex items-center gap-2 md:gap-3 shadow-xl">
+                   <CatIcon size={12} className="md:w-3.5 md:h-3.5" style={{ color: '#f5f5f0' }} />
                    {destination.category.toUpperCase()}
                  </div>
                </div>
             </div>
             
             <div className="space-y-2 md:space-y-4">
-               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heritage font-bold text-white leading-[0.9] tracking-tighter drop-shadow-2xl max-w-5xl">
+               <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-serif font-bold text-white leading-[0.85] tracking-tighter drop-shadow-2xl max-w-5xl uppercase">
                  {destination.name[language]}
                </h1>
-               <div className="text-lg sm:text-xl md:text-3xl text-white/90 font-light italic border-l-[3px] md:border-l-[4px] pl-4 md:pl-8 max-w-3xl py-1 md:py-2 drop-shadow-lg" style={{ borderColor: config.color }}>
+               <div className="text-lg sm:text-xl md:text-3xl text-white/90 font-light italic border-l-[3px] md:border-l-[4px] pl-4 md:pl-8 max-w-3xl py-1 md:py-2 drop-shadow-lg" style={{ borderColor: '#5A5A40' }}>
                  {destination.shortStory[language]}
                </div>
             </div>
@@ -280,7 +291,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32">
         
         {/* PRIMARY SECTION: ABOUT DESTINATION */}
         <section className="relative">
@@ -289,95 +300,33 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
               <div className="lg:col-span-7 space-y-12 md:space-y-20">
                  
-                 {/* ROUND NEARBY ATTRACTIONS (PROXIMITY NODES) - PLACED ABOVE MASTER ARCHIVE */}
-                 {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
-                  <div className="space-y-12 animate-in slide-in-from-bottom-6 duration-700">
-                    <div className="flex items-center justify-between px-2">
-                       <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-2xl bg-[#E1306C]/10 flex items-center justify-center text-[#E1306C] shadow-inner">
-                            <Target size={20} />
-                          </div>
-                          <h3 className="text-xl md:text-2xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
-                            {language === 'EN' ? 'Nearby Places.' : 'ආසන්න ස්ථාන.'}
-                          </h3>
-                       </div>
-                       <div className="flex items-center gap-2 opacity-30">
-                          <div className="w-1 h-1 rounded-full bg-black animate-pulse" />
-                          <div className="w-1 h-1 rounded-full bg-black animate-pulse delay-75" />
-                          <div className="w-1 h-1 rounded-full bg-black animate-pulse delay-150" />
-                       </div>
-                    </div>
-
-                    <div className="flex overflow-x-auto no-scrollbar gap-6 md:gap-12 pb-6 px-2 scroll-smooth snap-x snap-mandatory">
-                        {destination.nearbyAttractions.map((att, idx) => (
-                          <div 
-                            key={att.id} 
-                            className="shrink-0 group cursor-pointer flex flex-col items-center gap-3 md:gap-4 snap-center"
-                            onClick={() => handleNearbyClick(att.id)}
-                          >
-                            <div className="relative w-20 h-20 md:w-32 md:h-32">
-                                <div className="absolute inset-[-4px] border border-dashed border-[#E1306C]/20 rounded-full animate-spin-slow opacity-40 group-hover:opacity-100 group-hover:border-[#E1306C] transition-all" />
-                                <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl border-2 border-white transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl">
-                                  <img src={att.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
-                                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-20 group-hover:opacity-0 transition-opacity" />
-                                </div>
-                                <div className="absolute -top-1 -right-1 w-5 h-5 md:w-6 md:h-6 bg-[#0a0a0a] text-white rounded-full flex items-center justify-center border border-white shadow-lg text-[6px] md:text-[7px] font-black group-hover:bg-[#E1306C] transition-colors">
-                                  0{idx + 1}
-                                </div>
-                            </div>
-                            <div className="text-center space-y-1 max-w-[100px] md:max-w-[120px]">
-                                <h4 className="text-[10px] md:text-xs font-heritage font-bold text-[#0a0a0a] uppercase tracking-tight leading-tight line-clamp-2 md:line-clamp-1 group-hover:text-[#E1306C] transition-colors">{att.name[language]}</h4>
-                                <p className="text-[6px] md:text-[7px] font-black text-gray-300 uppercase tracking-widest">{language === 'EN' ? 'EXPLORE' : 'ගවේෂණය'}</p>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-                    <div className="h-px w-full bg-gradient-to-r from-gray-100 via-gray-200 to-transparent" />
-                  </div>
-                 )}
-
                  {/* 1. Long Narrative Section (About Destination) */}
-                 <div className="space-y-8 md:space-y-12 relative">
-                    {/* Throttling Notice */}
-                    {deepDive?.isThrottled && (
-                       <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-4 text-amber-800 animate-pulse">
-                          <EyeOff size={20} className="flex-shrink-0" />
-                          <p className="text-sm font-medium">
-                             {language === 'SI' 
-                                ? "නාභිගත සම්බන්ධතාවය තාවකාලිකව සීමා කර ඇත. පෙන්වන්නේ සංරක්ෂිත දත්ත පමණි." 
-                                : "Neural Link Throttled. Displaying archival data while the Master Archivist recharges."}
-                          </p>
-                       </div>
-                    )}
+                 <div className="space-y-8 md:space-y-12 relative bg-white/60 backdrop-blur-md p-8 md:p-16 rounded-[4rem] border border-[#5A5A40]/10 shadow-sm">
                     <div className="flex items-center gap-4 md:gap-6">
-                        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center shadow-inner bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20`}>
+                        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl flex items-center justify-center bg-[#5A5A40]/10 text-[#5A5A40] border border-[#5A5A40]/20`}>
                           <BookOpen size={24} className="w-5 h-5 md:w-6 md:h-6" />
                         </div>
-                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
+                        <h3 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
                           {UI_STRINGS.masterArchive[language]} {destination.name[language]}
                         </h3>
                     </div>
 
                     <div className="relative group">
-                       <div className={`absolute -left-4 md:-left-10 top-0 h-full w-1 bg-gradient-to-b from-[#0EA5E9] via-gray-100 to-transparent opacity-30`} />
-                       <div className="font-sans text-lg md:text-xl text-gray-800 leading-relaxed space-y-6 md:space-y-8 antialiased font-light relative z-10 pl-2 md:pl-0">
-                          <div className={`prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-heritage first-letter:font-bold first-letter:mr-3 md:first-letter:mr-4 first-letter:float-left first-letter:leading-[0.85] first-letter:mt-1 first-letter:text-[#0EA5E9]`}>
+                       <div className="font-serif text-xl md:text-2xl text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
+                          <div className="prose-container first-letter:text-6xl md:first-letter:text-8xl first-letter:font-serif first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] first-letter:mt-2 first-letter:text-[#5A5A40]">
                           {(() => {
                              const detailedContent = destination.detailedAbout?.[language];
                              const isPending = detailedContent?.includes("pending for this node") || detailedContent?.includes("සකසමින් පවතී");
-                             const isShort = detailedContent && detailedContent.length < 200;
                              
                              let content = detailedContent;
-                             if (deepDive?.history && (isPending || isShort)) {
+                             if (deepDive?.history && (isPending || (detailedContent && detailedContent.length < 200))) {
                                content = deepDive.history;
-                             } else if (isPending && !deepDive?.history) {
-                               return <p className="italic text-gray-400">Archival data loading...</p>;
                              }
 
-                             if (!content) return <p className="italic text-gray-400">Archival data loading...</p>;
+                             if (!content) return <p className="italic text-[#5A5A40]/40">Archival data loading...</p>;
 
                              return (
-                               <div className="prose prose-lg md:prose-xl prose-slate max-w-none prose-headings:font-heritage prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-p:leading-relaxed prose-a:text-[#0EA5E9] prose-strong:text-gray-900 prose-li:marker:text-[#0EA5E9]">
+                               <div className="prose prose-lg md:prose-2xl prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-strong:text-[#5A5A40] prose-li:marker:text-[#5A5A40]">
                                  <ReactMarkdown>{content}</ReactMarkdown>
                                </div>
                              );
@@ -387,112 +336,120 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                     </div>
                  </div>
 
-                 {/* Deep Dive Addendum: Hidden Echoes */}
-                 {deepDive?.hiddenEchoes && (
-                    <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12 animate-in fade-in duration-1000">
-                       <div className="flex items-center gap-4 md:gap-6">
-                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-[#E1306C]/10 flex items-center justify-center text-[#E1306C] border border-[#E1306C]/20 shadow-inner">
-                            <Sparkles size={26} className="w-5 h-5 md:w-6 md:h-6" />
-                          </div>
-                          <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Hidden Echoes</h4>
-                       </div>
-                       <div className="md:pl-20">
-                          <div className="bg-[#E1306C]/5 p-6 md:p-10 rounded-3xl md:rounded-[4rem] border border-[#E1306C]/10 shadow-sm relative overflow-hidden group">
-                             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.05] group-hover:rotate-12 transition-transform duration-1000">
-                                <Compass size={140} className="w-24 h-24 md:w-36 md:h-36" />
-                             </div>
-                             <p className="text-lg sm:text-xl md:text-2xl text-gray-800 italic font-medium leading-relaxed relative z-10">
-                                "{deepDive.hiddenEchoes}"
-                             </p>
-                          </div>
-                       </div>
+                 {/* Nearby Places & Hidden Echoes Grid */}
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                   {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
+                    <div className="space-y-6 animate-in slide-in-from-bottom-6 duration-700 bg-white/40 backdrop-blur-sm p-8 rounded-[3rem] border border-[#5A5A40]/10 h-full">
+                      <div className="flex items-center gap-4">
+                         <div className="w-10 h-10 rounded-2xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">
+                           <Target size={20} />
+                         </div>
+                         <h3 className="text-xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
+                           {language === 'EN' ? 'Nearby Places.' : 'ආසන්න ස්ථාන.'}
+                         </h3>
+                      </div>
+
+                      <div className="flex overflow-x-auto no-scrollbar gap-6 pb-6 px-2 scroll-smooth snap-x snap-mandatory">
+                          {destination.nearbyAttractions.map((att, idx) => (
+                            <div 
+                              key={att.id} 
+                              className="shrink-0 group cursor-pointer flex flex-col items-center gap-3 snap-center"
+                              onClick={() => handleNearbyClick(att.id)}
+                            >
+                              <div className="relative w-20 h-20">
+                                  <div className="absolute inset-[-4px] border border-dashed border-[#5A5A40]/20 rounded-full animate-spin-slow opacity-40 group-hover:opacity-100 group-hover:border-[#5A5A40] transition-all" />
+                                  <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl border-2 border-white transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl">
+                                    <img src={att.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
+                                  </div>
+                              </div>
+                              <div className="text-center space-y-1 max-w-[80px]">
+                                  <h4 className="text-[10px] font-serif font-bold text-[#2d2d2d] uppercase tracking-tight leading-tight line-clamp-2 group-hover:text-[#5A5A40] transition-colors">{att.name[language]}</h4>
+                              </div>
+                            </div>
+                          ))}
+                      </div>
                     </div>
-                 )}
+                   )}
+
+                   {deepDive?.hiddenEchoes && (
+                      <div className="space-y-6 animate-in fade-in duration-1000 bg-white/40 backdrop-blur-sm p-8 rounded-[3rem] border border-[#5A5A40]/10 h-full">
+                         <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 rounded-2xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40] border border-[#5A5A40]/20">
+                              <Sparkles size={20} />
+                            </div>
+                            <h4 className="text-xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">Hidden Echoes</h4>
+                         </div>
+                         <div className="bg-[#5A5A40]/5 p-6 rounded-[2rem] border border-[#5A5A40]/10 relative overflow-hidden group h-full">
+                            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:rotate-12 transition-transform duration-1000">
+                               <Compass size={100} />
+                            </div>
+                            <p className="text-lg text-[#2d2d2d] italic font-medium leading-relaxed relative z-10">
+                               "{deepDive.hiddenEchoes}"
+                            </p>
+                         </div>
+                      </div>
+                   )}
+                 </div>
+
+                 {/* 3. High-Fidelity Gallery Section */}
+                 {/* Gallery section removed as requested */}
+              </div>
+
+              {/* Sidebar Display Hub */}
+              <div className="lg:col-span-5 flex flex-col gap-8 md:gap-12">
+                 
+                 {/* Map Manifold Frame */}
+                 <div className="relative h-[400px] md:h-[600px] bg-white p-4 border border-[#5A5A40]/10 rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden group">
+                    <iframe 
+                      src={googleMapsIframeUrl}
+                      className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
+                      loading="lazy"
+                      allowFullScreen
+                    />
+                 </div>
 
                  {/* Temporal Sync & Voyager Wisdom */}
                  {deepDive && !deepDive.isThrottled && (
-                    <div className="pt-12 md:pt-20 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                    <div className="space-y-10 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-[#5A5A40]/10">
                        <div className="space-y-6">
                           <div className="flex items-center gap-4">
-                             <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
+                             <div className="w-10 h-10 rounded-xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">
                                 <History size={20} />
                              </div>
-                             <h5 className="text-lg font-bold uppercase tracking-widest text-gray-900">Temporal Sync</h5>
+                             <h5 className="text-lg font-bold uppercase tracking-widest text-[#2d2d2d]">Temporal Sync</h5>
                           </div>
-                          <p className="text-gray-600 leading-relaxed md:pl-14">
+                          <p className="text-[#2d2d2d]/70 leading-relaxed italic">
                              {deepDive.temporalSync}
                           </p>
                        </div>
                        
                        <div className="space-y-6">
                           <div className="flex items-center gap-4">
-                             <div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
+                             <div className="w-10 h-10 rounded-xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">
                                 <Sparkles size={20} />
                              </div>
-                             <h5 className="text-lg font-bold uppercase tracking-widest text-gray-900">Voyager Wisdom</h5>
+                             <h5 className="text-lg font-bold uppercase tracking-widest text-[#2d2d2d]">Voyager Wisdom</h5>
                           </div>
-                          <ul className="space-y-3 md:pl-14">
+                          <ul className="space-y-4">
                              {deepDive.wisdom?.map((tip, i) => (
-                                <li key={i} className="text-gray-600 flex gap-3">
-                                   <span className="text-emerald-500 font-bold">0{i+1}</span>
+                                <li key={i} className="text-[#2d2d2d]/80 flex gap-4 text-sm">
+                                   <span className="text-[#5A5A40] font-bold">0{i+1}</span>
                                    {tip}
-                                </li>
+                                 </li>
                              ))}
                           </ul>
                        </div>
                     </div>
                  )}
-
-
-                 {/* 3. High-Fidelity Gallery Section */}
-                 <div className="pt-12 md:pt-20 border-t border-gray-100 space-y-8 md:space-y-12">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 sm:gap-0">
-                      <div className="flex items-center gap-4 md:gap-6">
-                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] border border-[#0EA5E9]/20 shadow-inner">
-                          <ImageIcon size={26} className="w-5 h-5 md:w-6 md:h-6" />
-                        </div>
-                        <h4 className="text-xl sm:text-2xl md:text-4xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Visual Traversal</h4>
-                      </div>
-                      <span className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest">{destination.gallery.length} High-Res Frames</span>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 md:pl-20">
-                      {destination.gallery.map((img, i) => (
-                        <div key={i} className="group relative aspect-[4/5] rounded-3xl md:rounded-[3.5rem] overflow-hidden shadow-2xl transition-all duration-700 hover:-translate-y-2 border border-gray-100">
-                           <img src={img} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
-                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                           <div className="absolute bottom-6 left-6 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
-                              <span className="text-[8px] font-black text-white uppercase tracking-[0.4em] bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">Frame_Ref #0{i+1}</span>
-                           </div>
-                        </div>
-                      ))}
-                    </div>
-                 </div>
-              </div>
-
-              {/* Sidebar Display Hub */}
-              <div className="lg:col-span-5 flex flex-col gap-8 md:gap-10">
-                 
-                 {/* Map Manifold Frame */}
-                 <div className="relative h-[300px] md:h-[500px] bg-gray-100 border-4 border-white rounded-3xl md:rounded-[4rem] shadow-2xl overflow-hidden group">
-                    <iframe 
-                      src={googleMapsIframeUrl}
-                      className="absolute inset-0 w-full h-full grayscale-[0.2] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
-                      loading="lazy"
-                      allowFullScreen
-                    />
-                    <div className="absolute inset-0 pointer-events-none border-[8px] md:border-[12px] border-white/10" />
-                 </div>
-
               </div>
            </div>
         </section>
 
         {/* FINAL RETURN ACTION */}
-        <div className="mt-16 md:mt-32 pt-10 md:pt-20 border-t border-gray-100 flex justify-center">
+        <div className="mt-16 md:mt-32 pt-10 md:pt-20 border-t border-[#5A5A40]/10 flex justify-center">
            <button 
              onClick={onBack}
-             className="group relative flex items-center gap-4 md:gap-8 px-8 md:px-20 py-6 md:py-10 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-sm uppercase tracking-[0.4em] md:tracking-[0.8em] transition-all hover:scale-105 shadow-3xl overflow-hidden"
+             className="group relative flex items-center gap-4 md:gap-8 px-12 md:px-24 py-6 md:py-10 bg-[#5A5A40] text-white rounded-full font-bold text-[10px] md:text-sm uppercase tracking-[0.4em] md:tracking-[0.8em] transition-all hover:scale-105 shadow-2xl overflow-hidden"
            >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               <ArrowLeft size={32} className="w-6 h-6 md:w-8 md:h-8 group-hover:-translate-x-3 transition-transform" />
@@ -504,12 +461,6 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         .no-scrollbar::-webkit-scrollbar { display: none; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .animate-spin-slow { animation: spin 40s linear infinite; }
-        @keyframes loading-bar {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(300%); }
-        }
-        .animate-loading-bar { animation: loading-bar 2s linear infinite; }
-        
         @keyframes border-spin {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

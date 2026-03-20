@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language, HeritageMusic as HeritageMusicType } from '../types.ts';
-import { HERITAGE_MUSIC_DATA } from '../constants.tsx';
+import { Language, HeritageMusic as HeritageMusicType } from '../types';
+import { HERITAGE_MUSIC_DATA } from '../constants';
 // Fix: Added ArrowLeft import for the back button
 import { Music as MusicIcon, History, MapPin, Star, Quote, ArrowLeft } from 'lucide-react';
 

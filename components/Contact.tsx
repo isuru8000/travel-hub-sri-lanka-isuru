@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Language } from '../types.ts';
+import { Language } from '../types';
 import { Send, Mail, Loader2, CheckCircle2, AlertCircle, MapPin, Facebook, Youtube, Music2, Instagram, MessageCircle, ExternalLink } from 'lucide-react';
 
 interface ContactProps {

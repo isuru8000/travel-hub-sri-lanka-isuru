@@ -1,10 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Sparkles, X, Send, Compass, Loader2, History, Info, Square, Zap, Cpu, ShieldCheck, MapPin, ExternalLink, Brain, Globe, Bot, Navigation, Lock, Orbit, Activity, Camera, Image as ImageIcon, Trash2, Gem } from 'lucide-react';
-import { Language, Destination } from '../types.ts';
-import { UI_STRINGS } from '../constants.tsx';
-import { streamLankaGuideResponse, GroundingLink, ChatMessage } from '../services/gemini.ts';
-import { DESTINATIONS_DATA } from '../destination_details.tsx';
+import { Language, Destination } from '../types';
+import { UI_STRINGS } from '../constants';
+import { streamLankaGuideResponse, GroundingLink, ChatMessage } from '../services/gemini';
+import { DESTINATIONS_DATA } from '../destination_details';
 
 interface Message {
   role: 'user' | 'bot';

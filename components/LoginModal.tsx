@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { X, Globe, Chrome, ShieldCheck, Info, Loader2, AlertCircle } from 'lucide-react';
-import { Language } from '../types.ts';
-import { auth, db } from '../firebase.ts';
+import { Language } from '../types';
+import { auth, db } from '../firebase';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 

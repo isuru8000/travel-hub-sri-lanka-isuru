@@ -1,52 +1,53 @@
 import React, { useState, useEffect, useMemo, Suspense, lazy, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Language, User, Destination, View } from './types.ts';
-import Layout from './components/Layout.tsx';
-import Hero from './components/Hero.tsx';
-import PopularHighlights from './components/PopularHighlights.tsx';
-import DiscoveryTransition from './components/DiscoveryTransition.tsx';
-import DestinySection from './components/DestinySection.tsx';
-import { SEO } from './components/SEO.tsx';
-import GoogleAnalytics from './components/GoogleAnalytics.tsx';
-import { ErrorBoundary } from './components/ErrorBoundary.tsx';
-import LoginModal from './components/LoginModal.tsx';
-import AIModal from './components/AIModal.tsx';
-import ScrollControls from './components/ScrollControls.tsx';
+import { Language, User, Destination, View } from './types';
+import Layout from './components/Layout';
+import Hero from './components/Hero';
+import PopularHighlights from './components/PopularHighlights';
+import DiscoveryTransition from './components/DiscoveryTransition';
+import DestinySection from './components/DestinySection';
+import { SEO } from './components/SEO';
+import GoogleAnalytics from './components/GoogleAnalytics';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import LoginModal from './components/LoginModal';
+import AIModal from './components/AIModal';
+import ScrollControls from './components/ScrollControls';
 import Lenis from 'lenis';
-import { UI_STRINGS, DESTINATIONS as DESTINATIONS_DATA } from './constants.tsx';
+import { UI_STRINGS, DESTINATIONS as DESTINATIONS_DATA } from './constants';
 import { Sparkles, Compass, ShieldCheck, Star, MapPin, ArrowRight, Database, Box, Layers, Zap, Lock, Scan, Map as MapIcon, Heart, Globe, Library, Wind, Activity, Target, PawPrint, Landmark, Sprout, Mountain } from 'lucide-react';
-import { auth, db } from './firebase.ts';
+import { auth, db } from './firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, onSnapshot } from 'firebase/firestore';
 
-const Destinations = lazy(() => import('./components/Destinations.tsx'));
-const Foods = lazy(() => import('./components/Foods.tsx'));
-const HeritageMusic = lazy(() => import('./components/HeritageMusic.tsx'));
-const TraditionalMedicine = lazy(() => import('./components/TraditionalMedicine.tsx'));
-const ArtsAndCrafts = lazy(() => import('./components/ArtsAndCrafts.tsx').then(module => ({ default: module.ArtsAndCrafts })));
-const Phrasebook = lazy(() => import('./components/Phrasebook.tsx'));
-const TravelEssentials = lazy(() => import('./components/TravelEssentials.tsx'));
-const Festivals = lazy(() => import('./components/Festivals.tsx'));
-const CategoriesSection = lazy(() => import('./components/CategoriesSection.tsx'));
-const StorySection = lazy(() => import('./components/StorySection.tsx'));
-const IslandMapManifold = lazy(() => import('./components/IslandMapManifold.tsx'));
-const VRPortal = lazy(() => import('./components/VRPortal.tsx'));
-const TripPlanner = lazy(() => import('./components/TripPlanner.tsx'));
-const NexusRewards = lazy(() => import('./components/NexusRewards.tsx'));
-const DestinationDetail = lazy(() => import('./components/DestinationDetail.tsx'));
-const Quiz = lazy(() => import('./components/Quiz.tsx'));
-const ProfileView = lazy(() => import('./components/ProfileView.tsx'));
-const VRExperience = lazy(() => import('./components/VRExperience.tsx'));
-const VRShowcase = lazy(() => import('./components/VRShowcase.tsx'));
-const SearchPortal = lazy(() => import('./components/SearchPortal.tsx'));
-const Contact = lazy(() => import('./components/Contact.tsx'));
-const LockedView = lazy(() => import('./components/LockedView.tsx'));
-const ComingSoonView = lazy(() => import('./components/ComingSoonView.tsx'));
-const Marketplace = lazy(() => import('./components/Marketplace.tsx'));
-const Hotels = lazy(() => import('./components/Hotels.tsx'));
-const Transport = lazy(() => import('./components/Transport.tsx'));
-const BookingDestinations = lazy(() => import('./components/BookingDestinations.tsx'));
-const TravelStore = lazy(() => import('./components/TravelStore.tsx'));
+const Destinations = lazy(() => import('./components/Destinations'));
+const Foods = lazy(() => import('./components/Foods'));
+const HeritageMusic = lazy(() => import('./components/HeritageMusic'));
+const TraditionalMedicine = lazy(() => import('./components/TraditionalMedicine'));
+const ArtsAndCrafts = lazy(() => import('./components/ArtsAndCrafts').then(module => ({ default: module.ArtsAndCrafts })));
+const Heritage = lazy(() => import('./components/Heritage'));
+const Phrasebook = lazy(() => import('./components/Phrasebook'));
+const TravelEssentials = lazy(() => import('./components/TravelEssentials'));
+const Festivals = lazy(() => import('./components/Festivals'));
+const CategoriesSection = lazy(() => import('./components/CategoriesSection'));
+const StorySection = lazy(() => import('./components/StorySection'));
+const IslandMapManifold = lazy(() => import('./components/IslandMapManifold'));
+const VRPortal = lazy(() => import('./components/VRPortal'));
+const TripPlanner = lazy(() => import('./components/TripPlanner'));
+const NexusRewards = lazy(() => import('./components/NexusRewards'));
+const DestinationDetail = lazy(() => import('./components/DestinationDetail'));
+const Quiz = lazy(() => import('./components/Quiz'));
+const ProfileView = lazy(() => import('./components/ProfileView'));
+const VRExperience = lazy(() => import('./components/VRExperience'));
+const VRShowcase = lazy(() => import('./components/VRShowcase'));
+const SearchPortal = lazy(() => import('./components/SearchPortal'));
+const Contact = lazy(() => import('./components/Contact'));
+const LockedView = lazy(() => import('./components/LockedView'));
+const ComingSoonView = lazy(() => import('./components/ComingSoonView'));
+const Marketplace = lazy(() => import('./components/Marketplace'));
+const Hotels = lazy(() => import('./components/Hotels'));
+const Transport = lazy(() => import('./components/Transport'));
+const BookingDestinations = lazy(() => import('./components/BookingDestinations'));
+const TravelStore = lazy(() => import('./components/TravelStore'));
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('EN');
@@ -69,6 +70,11 @@ export default function App() {
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     
+    // Add mobile-specific performance class to body
+    if (isMobile) {
+      document.body.classList.add('is-mobile');
+    }
+
     // Disable Lenis smooth scrolling on mobile for better performance
     let rafId: number;
 
@@ -249,6 +255,8 @@ export default function App() {
             />
           </div>
         );
+      case 'heritage':
+        return <div className="pt-0"><Heritage language={language} setView={setView} onBack={() => setView('home')} /></div>;
       case 'destination-detail':
         return <DestinationDetail destination={selectedDestinationData} language={language} onBack={() => setView('destinations')} onSelect={navigateToDestination} />;
       case 'foods':
@@ -448,8 +456,8 @@ export default function App() {
           } : undefined}
         />
         <GoogleAnalytics view={view} />
-        <div className="overflow-x-hidden transition-all duration-300">
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+        <div className="overflow-x-hidden transition-all duration-300 mobile-optimize">
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-stone-50 font-heritage text-stone-400 uppercase tracking-[0.4em] animate-pulse">Loading Sri Lanka...</div>}>
             {renderContent()}
           </Suspense>
         </div>

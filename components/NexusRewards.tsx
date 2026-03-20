@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { Language, User, Memory, Comment } from '../types.ts';
+import { Language, User, Memory, Comment } from '../types';
 import { 
   Zap, ArrowRight, ArrowLeft, Sparkles, ShieldCheck, Camera, Share2, Lock, Gem, Activity,
   Award, Loader2, CheckCircle2, X, History, Target, Image as ImageIcon, Quote, Send, Star,
@@ -8,8 +8,8 @@ import {
   Upload, FileImage, Fingerprint, Scan, Layers, Search, Cpu, Bookmark, Bell, Terminal,
   ChevronRight, MoreVertical, ThumbsUp, Share, HeartOff, UserPlus, Shield
 } from 'lucide-react';
-import { refineTravelStory } from '../services/gemini.ts';
-import { db, handleFirestoreError, OperationType } from '../firebase.ts';
+import { refineTravelStory } from '../services/gemini';
+import { db, handleFirestoreError, OperationType } from '../firebase';
 import { collection, query, onSnapshot, addDoc, serverTimestamp, doc, updateDoc, increment, getDocs, deleteDoc } from 'firebase/firestore';
 
 interface NexusRewardsProps {

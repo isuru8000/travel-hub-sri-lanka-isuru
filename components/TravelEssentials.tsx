@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language } from '../types.ts';
-import { TRAVEL_ESSENTIALS_DATA } from '../constants.tsx';
+import { Language } from '../types';
+import { TRAVEL_ESSENTIALS_DATA } from '../constants';
 import * as Icons from 'lucide-react';
 // Fix: Added ArrowLeft import for the back button
 import { Backpack, ShieldCheck, PhoneCall, Sparkles, Activity, Shield, Zap, ArrowLeft } from 'lucide-react';

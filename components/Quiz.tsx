@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
-import { Language, QuizQuestion, ExplorerProfile } from '../types.ts';
-import { auth, db } from '../firebase.ts';
+import { Language, QuizQuestion, ExplorerProfile } from '../types';
+import { auth, db } from '../firebase';
 import { doc, updateDoc } from 'firebase/firestore';
 import { 
   Compass, 

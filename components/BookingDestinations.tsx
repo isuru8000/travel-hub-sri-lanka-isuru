@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { Language } from '../types.ts';
-import { DESTINATIONS } from '../constants.tsx';
+import { Language } from '../types';
+import { DESTINATIONS } from '../constants';
 import { 
   Compass, 
   MapPin, 

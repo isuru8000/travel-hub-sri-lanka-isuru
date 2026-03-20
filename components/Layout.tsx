@@ -1,9 +1,9 @@
 
 import React from 'react';
-import Navbar from './Navbar.tsx';
-import { Language, User } from '../types.ts';
+import Navbar from './Navbar';
+import { Language, User } from '../types';
 import { Facebook, Youtube, Music2, ShieldCheck, Sparkles, Radio } from 'lucide-react';
-import AnimatedLogo from './AnimatedLogo.tsx';
+import AnimatedLogo from './AnimatedLogo';
 
 interface LayoutProps {
   children: React.ReactNode;

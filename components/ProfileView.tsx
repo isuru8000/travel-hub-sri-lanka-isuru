@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Language, User, Memory, ExplorerProfile } from '../types.ts';
+import { Language, User, Memory, ExplorerProfile } from '../types';
 import { 
   User as UserIcon, 
   Mail, 
@@ -20,7 +20,7 @@ import {
   X,
   Share2
 } from 'lucide-react';
-import { db, handleFirestoreError, OperationType } from '../firebase.ts';
+import { db, handleFirestoreError, OperationType } from '../firebase';
 import { collection, query, where, onSnapshot, doc, updateDoc } from 'firebase/firestore';
 
 interface ProfileViewProps {
