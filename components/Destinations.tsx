@@ -45,7 +45,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
   
   const searchWrapperRef = useRef<HTMLDivElement>(null);
 
-  const headerBgImage = "https://i.pinimg.com/1200x/93/7f/5f/937f5f8b31f9fbad63893f189b3ddc4a.jpg";
+  const headerBgImage = "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80";
 
   const categories = [
     { id: 'all', EN: 'All', SI: 'සියල්ල', icon: LayoutGrid },
@@ -141,58 +141,58 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
         description={language === 'EN' ? 'Explore the beautiful destinations of Sri Lanka.' : 'ශ්‍රී ලංකාවේ සුන්දර ගමනාන්ත ගවේෂණය කරන්න.'} 
       />
       
-      {/* Cinematic Header - Added z-[60] to stay above the sticky bar (z-50) */}
-      <div className="relative z-[60] min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center bg-[#020205]">
+      {/* Cinematic Header */}
+      <div className="relative z-[60] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-black">
         <div className="absolute inset-0 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms]" 
             style={{ 
               backgroundImage: `url('${headerBgImage}')`, 
               transform: `scale(${1.1 + scrollPos / 10000})`,
-              filter: 'brightness(0.4) saturate(1.2)'
+              filter: 'brightness(0.5) saturate(1.1)'
             }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020205]/40 to-[#fafafa]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#fafafa]" />
           </div>
         </div>
 
         {/* Back Button */}
-        <div className="absolute top-6 left-6 md:top-10 md:left-10 z-[70]">
-          <button onClick={onBack} className="flex items-center gap-3 md:gap-4 px-6 py-3 md:px-8 md:py-4 bg-white/10 backdrop-blur-xl border border-white/20 text-white rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.4em] hover:bg-white hover:text-black transition-all shadow-xl group">
-            <ArrowLeft size={16} className="md:w-[18px] md:h-[18px] group-hover:-translate-x-1 transition-transform" /> 
+        <div className="absolute top-8 left-8 md:top-12 md:left-12 z-[70]">
+          <button onClick={onBack} className="flex items-center gap-4 px-8 py-4 bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all shadow-2xl group">
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> 
             {language === 'EN' ? 'Home' : 'මුල් පිටුව'}
           </button>
         </div>
         
-        <div className="relative z-10 w-full max-w-7xl mx-auto text-center px-4 md:px-6 space-y-8 md:space-y-12 mt-16 md:mt-0">
-          <div className="space-y-3 md:space-y-4">
-            <div className="inline-flex items-center gap-2 md:gap-3 px-4 py-2 md:px-6 md:py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl text-[#0EA5E9] text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] shadow-2xl mx-auto">
-              <Scan size={12} className="md:w-3.5 md:h-3.5 animate-pulse" />
-              Reality_Registry_Portal
+        <div className="relative z-10 w-full max-w-7xl mx-auto text-center px-8 space-y-12">
+          <div className="space-y-6">
+            <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl text-[#F59E0B] text-[10px] font-black uppercase tracking-[0.6em] shadow-2xl mx-auto">
+              <Sparkles size={14} className="animate-pulse" />
+              {language === 'EN' ? 'THE ARCHIVAL REGISTRY' : 'පැරණි නාමාවලිය'}
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-9xl font-heritage font-bold text-white tracking-tighter leading-none uppercase drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-              LOCATE <br/><span className="italic insta-text-gradient">WONDERS.</span>
+            <h2 className="text-4xl md:text-7xl lg:text-[8rem] font-heritage font-bold text-white tracking-tighter leading-[0.85] uppercase drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+              LOCATE <br/><span className="text-stone-400 italic">WONDERS.</span>
             </h2>
           </div>
 
           {/* CINEMATIC SEARCH BAR */}
-          <div className="w-full max-w-2xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
-            <div className="absolute -inset-2 bg-gradient-to-r from-[#0EA5E9]/20 to-blue-500/20 rounded-[2rem] md:rounded-[3rem] blur-xl md:blur-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
-            <div className={`relative flex items-center bg-[#0a0a0a]/40 backdrop-blur-[40px] border rounded-[2rem] md:rounded-[3rem] transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#0EA5E9] shadow-[0_20px_60px_-15px_rgba(14,165,233,0.6)]' : 'border-white/20 shadow-2xl'}`}>
-              <div className="pl-5 md:pl-8 text-[#0EA5E9]">
-                {isSearching ? <Loader2 size={20} className="md:w-6 md:h-6 animate-spin" /> : <Search size={20} className="md:w-6 md:h-6" />}
+          <div className="w-full max-w-3xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#F59E0B]/20 to-orange-500/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
+            <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#F59E0B] shadow-[0_30px_80px_-15px_rgba(245,158,11,0.4)]' : 'border-white/20 shadow-2xl'}`}>
+              <div className="pl-8 text-[#F59E0B]">
+                {isSearching ? <Loader2 size={24} className="animate-spin" /> : <Search size={24} />}
               </div>
               <input 
                 type="text" 
-                placeholder={language === 'EN' ? "Search Registry..." : "නාමාවලිය සොයන්න..."}
+                placeholder={language === 'EN' ? "Search the registry..." : "නාමාවලිය සොයන්න..."}
                 value={search}
                 onFocus={() => { setIsFocused(true); if (search.trim()) setShowResultsDropdown(true); }}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full px-4 py-5 md:px-5 md:py-9 text-lg md:text-2xl bg-transparent text-white font-medium focus:outline-none placeholder:text-white/20 tracking-wide"
+                className="w-full px-6 py-8 md:py-10 text-xl md:text-3xl bg-transparent text-white font-light focus:outline-none placeholder:text-white/20 tracking-tight"
               />
               {search && (
-                <button onClick={() => setSearch('')} className="pr-5 md:pr-8 text-white/40 hover:text-[#E1306C] transition-all hover:scale-110 active:scale-95">
-                  <X size={20} className="md:w-6 md:h-6" />
+                <button onClick={() => setSearch('')} className="pr-8 text-white/40 hover:text-[#F59E0B] transition-all hover:scale-110">
+                  <X size={24} />
                 </button>
               )}
             </div>
@@ -226,44 +226,43 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
         </div>
       </div>
 
-      {/* STICKY CATEGORY BAR - Controlled by lower z-index than header during dropdown display */}
-      <div className="sticky top-20 md:top-24 z-50 py-4 md:py-8 bg-white/80 backdrop-blur-2xl border-y border-gray-100 shadow-sm overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
-          <div className="relative w-full md:w-auto">
-            <div className="flex items-center gap-2 md:gap-3 overflow-x-auto no-scrollbar pb-2 md:pb-0 scroll-smooth">
+      {/* STICKY CATEGORY BAR */}
+      <div className="sticky top-20 md:top-24 z-50 py-6 md:py-10 bg-white/90 backdrop-blur-3xl border-y border-stone-100">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="relative w-full lg:w-auto">
+            <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2 lg:pb-0">
               {categories.map(cat => (
                 <button 
                   key={cat.id} 
                   onClick={() => setCategoryFilter(cat.id)} 
-                  className={`flex items-center gap-2 md:gap-2.5 px-5 py-2.5 md:px-7 md:py-3.5 rounded-full text-[9px] md:text-[11px] font-semibold uppercase tracking-wider transition-all whitespace-nowrap shadow-sm border relative overflow-hidden group/cat-btn shrink-0 ${
+                  className={`flex items-center gap-3 px-8 py-4 rounded-full text-[10px] font-black uppercase tracking-[0.2em] transition-all border shrink-0 ${
                     categoryFilter === cat.id 
-                      ? 'bg-[#0a0a0a] text-white border-transparent scale-105 shadow-xl active-category-glow' 
-                      : 'bg-white text-slate-500 border-gray-100 hover:bg-gray-50'
+                      ? 'bg-black text-white border-transparent shadow-2xl scale-105' 
+                      : 'bg-white text-stone-400 border-stone-100 hover:border-stone-300'
                   }`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/cat-btn:animate-shimmer pointer-events-none" />
-                  <cat.icon size={14} className={`md:w-4 md:h-4 ${categoryFilter === cat.id ? 'text-[#0EA5E9]' : 'opacity-60'}`} />
+                  <cat.icon size={14} className={categoryFilter === cat.id ? 'text-[#F59E0B]' : 'opacity-40'} />
                   {language === 'EN' ? cat.EN : cat.SI}
                 </button>
               ))}
             </div>
           </div>
           
-          <div className="flex items-center gap-3 md:gap-4 w-full md:w-auto">
-            <div className="relative flex-grow">
+          <div className="flex items-center gap-4 w-full lg:w-auto">
+            <div className="relative flex-grow lg:w-64">
               <select 
                 value={locationFilter} 
                 onChange={(e) => setLocationFilter(e.target.value)} 
-                className="appearance-none w-full md:w-56 pl-5 pr-10 py-2.5 md:pl-7 md:pr-12 md:py-3.5 bg-white border border-gray-200 rounded-full text-[9px] md:text-[11px] font-semibold uppercase tracking-wider text-slate-700 outline-none focus:border-[#0EA5E9] cursor-pointer shadow-sm"
+                className="appearance-none w-full pl-8 pr-12 py-4 bg-white border border-stone-100 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-stone-600 outline-none focus:border-[#F59E0B] cursor-pointer"
               >
                 <option value="all">{UI_STRINGS.allRegions[language]}</option>
                 {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc}>{loc}</option>)}
               </select>
-              <ChevronDown size={14} className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 text-[#0EA5E9] pointer-events-none" />
+              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-[#F59E0B] pointer-events-none" />
             </div>
             {(categoryFilter !== 'all' || locationFilter !== 'all' || search) && (
-              <button onClick={resetFilters} className="p-2.5 md:p-3.5 bg-red-50 text-red-500 rounded-full hover:bg-red-500 hover:text-white transition-all shadow-sm shrink-0">
-                <RotateCcw size={16} className="md:w-5 md:h-5" />
+              <button onClick={resetFilters} className="p-4 bg-stone-50 text-stone-400 rounded-full hover:bg-black hover:text-white transition-all">
+                <RotateCcw size={18} />
               </button>
             )}
           </div>
@@ -296,42 +295,51 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
             <div 
               key={dest.id} 
               onClick={() => onSelectDestination(dest)}
-              className={`group relative h-[380px] md:h-[480px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer animate-in slide-in-from-bottom-10 border border-gray-100/50 slow-glow-card`}
-              style={{ animationDelay: `${idx * 50}ms` }}
+              className="group relative h-[500px] md:h-[650px] bg-white rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700 cursor-pointer border border-stone-100"
+              style={{ animationDelay: `${idx * 100}ms` }}
             >
               <img 
                 src={dest.image} 
                 alt={dest.name[language]} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5000ms] group-hover:scale-110" 
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               
-              <div className="absolute top-5 left-5">
-                 <div className="px-3 py-1.5 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-semibold tracking-wider text-white border border-white/30 uppercase shadow-sm">
+              <div className="absolute top-8 left-8">
+                 <div className="px-6 py-2 bg-white/10 backdrop-blur-xl rounded-full text-[10px] font-black tracking-[0.2em] text-white border border-white/20 uppercase">
                     {dest.category}
                  </div>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end">
-                 <div className="flex items-center gap-2 text-white/90 mb-2">
-                    <MapPin size={14} className="text-[#0EA5E9]" />
-                    <span className="text-[10px] font-medium tracking-wider uppercase">{dest.location}</span>
+              {/* Editorial Number */}
+              <div className="absolute top-8 right-8 mix-blend-difference opacity-20">
+                <span className="text-4xl font-heritage font-bold text-white tracking-tighter">
+                  {idx < 9 ? `0${idx + 1}` : idx + 1}
+                </span>
+              </div>
+
+              <div className="absolute inset-x-0 bottom-0 p-12 flex flex-col justify-end transform translate-y-8 group-hover:translate-y-0 transition-transform duration-700">
+                 <div className="flex items-center gap-3 text-white/60 mb-4">
+                    <MapPin size={16} className="text-[#F59E0B]" />
+                    <span className="text-[10px] font-black uppercase tracking-[0.3em]">{dest.location}</span>
                  </div>
-                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight drop-shadow-md">{dest.name[language]}</h3>
+                 <h3 className="text-2xl md:text-4xl font-heritage font-bold text-white mb-4 tracking-tighter leading-tight uppercase">{dest.name[language]}</h3>
                  
-                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                 <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-700 ease-in-out">
                    <div className="overflow-hidden">
-                     <p className="text-sm text-white/80 line-clamp-2 leading-relaxed mb-4 mt-2">
+                     <p className="text-sm md:text-base text-white/60 font-light italic leading-relaxed mb-6">
                         {dest.shortStory[language]}
                      </p>
                    </div>
                  </div>
 
-                 <div className="mt-3">
-                   <div className="inline-flex items-center justify-center px-5 py-2.5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 group/btn shadow-lg hover:bg-[#0EA5E9] hover:text-white border border-transparent">
-                      <span className="mr-2">Explore</span>
-                      <ArrowRight size={14} className="transition-transform duration-300 group-hover/btn:translate-x-1" />
+                 <div className="pt-4">
+                   <div className="inline-flex items-center gap-4 text-white font-black text-[9px] uppercase tracking-[0.4em] group/btn">
+                      <span>Explore Node</span>
+                      <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-[#F59E0B] group-hover/btn:border-transparent transition-all duration-500">
+                        <ArrowRight size={16} className="transition-transform duration-500 group-hover/btn:translate-x-1" />
+                      </div>
                    </div>
                  </div>
               </div>

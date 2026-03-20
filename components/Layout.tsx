@@ -104,17 +104,37 @@ const Layout: React.FC<LayoutProps> = ({
             </div>
           </div>
 
-          <div className="md:col-span-3 space-y-8">
+          <div className="md:col-span-2 space-y-8">
             <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Quick Links</h3>
-            <ul className="space-y-4 text-sm text-gray-400 font-bold underline text-right border-dotted border-1 tracking-widest">
+            <ul className="space-y-4 text-sm text-gray-400 font-bold tracking-widest">
               <li><button onClick={() => setView('home')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Home</button></li>
               <li><button onClick={() => setView('destinations')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Destinations</button></li>
               <li><button onClick={() => setView('vr-trip')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> VR Experience</button></li>
-              <li><button onClick={() => setView('memories')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Travel Memories</button></li>
+              <li><button onClick={() => setView('memories')} className="hover:text-[#E1306C] transition-colors text-left w-full flex items-center gap-2"><Sparkles size={12} /> Memories</button></li>
             </ul>
           </div>
 
-          <div className="md:col-span-4 space-y-8">
+          <div className="md:col-span-2 space-y-8">
+            <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Explore</h3>
+            <ul className="space-y-4 text-sm text-gray-400 font-bold tracking-widest">
+              <li><button onClick={() => setView('foods')} className="hover:text-[#E1306C] transition-colors text-left w-full">Traditional Food</button></li>
+              <li><button onClick={() => setView('festivals')} className="hover:text-[#E1306C] transition-colors text-left w-full">Festivals</button></li>
+              <li><button onClick={() => setView('heritage')} className="hover:text-[#E1306C] transition-colors text-left w-full">Heritage</button></li>
+              <li><button onClick={() => setView('medicine')} className="hover:text-[#E1306C] transition-colors text-left w-full">Traditional Medicine</button></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2 space-y-8">
+            <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Resources</h3>
+            <ul className="space-y-4 text-sm text-gray-400 font-bold tracking-widest">
+              <li><button onClick={() => setView('arts-crafts')} className="hover:text-[#E1306C] transition-colors text-left w-full">Arts & Crafts</button></li>
+              <li><button onClick={() => setView('music')} className="hover:text-[#E1306C] transition-colors text-left w-full">Traditional Music</button></li>
+              <li><button onClick={() => setView('phrases')} className="hover:text-[#E1306C] transition-colors text-left w-full">Sinhala Phrases</button></li>
+              <li><button onClick={() => setView('essentials')} className="hover:text-[#E1306C] transition-colors text-left w-full">Travel Essentials</button></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-2 space-y-8">
             <h3 className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-[0.4em] border-b border-gray-50 pb-4">Social Media</h3>
             <div className="flex flex-wrap gap-4">
               <SocialLink 
@@ -138,9 +158,6 @@ const Layout: React.FC<LayoutProps> = ({
                 textColor="text-[#000000]"
                 label="TikTok"
               />
-            </div>
-            <div className="pt-4 flex flex-col gap-2">
-              {/* Technical indicators removed for better user experience */}
             </div>
           </div>
         </div>

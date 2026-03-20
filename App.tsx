@@ -4,6 +4,8 @@ import { Language, User, Destination, View } from './types.ts';
 import Layout from './components/Layout.tsx';
 import Hero from './components/Hero.tsx';
 import PopularHighlights from './components/PopularHighlights.tsx';
+import DiscoveryTransition from './components/DiscoveryTransition.tsx';
+import DestinySection from './components/DestinySection.tsx';
 import { SEO } from './components/SEO.tsx';
 import GoogleAnalytics from './components/GoogleAnalytics.tsx';
 import { ErrorBoundary } from './components/ErrorBoundary.tsx';
@@ -140,6 +142,49 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const path = window.location.pathname.slice(1);
+    if (path) {
+      if (path.startsWith('destinations/')) {
+        const destId = path.split('/')[1];
+        const found = DESTINATIONS_DATA.find(d => d.id === destId);
+        if (found) {
+          setSelectedDestinationData(found);
+          setView('destination-detail');
+        }
+      } else if (['destinations', 'foods', 'festivals', 'heritage', 'vr-trip', 'medicine', 'arts-crafts', 'music', 'phrases', 'essentials', 'quiz', 'profile', 'interests', 'search', 'contact', 'about'].includes(path)) {
+        setView(path as View);
+      }
+    }
+
+    const handlePopState = () => {
+      const newPath = window.location.pathname.slice(1);
+      if (newPath.startsWith('destinations/')) {
+        const destId = newPath.split('/')[1];
+        const found = DESTINATIONS_DATA.find(d => d.id === destId);
+        if (found) {
+          setSelectedDestinationData(found);
+          setView('destination-detail');
+        }
+      } else {
+        setView((newPath as View) || 'home');
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  useEffect(() => {
+    const path = view === 'home' ? '/' : `/${view}`;
+    const finalPath = view === 'destination-detail' && selectedDestinationData 
+      ? `/destinations/${selectedDestinationData.id}` 
+      : path;
+    
+    if (window.location.pathname !== finalPath) {
+      window.history.pushState(null, '', finalPath);
+    }
+  }, [view, selectedDestinationData]);
+
   const handleLogin = () => {
     setIsLoginModalOpen(true);
   };
@@ -240,6 +285,8 @@ export default function App() {
           <div className="relative">
             <Hero language={language} setView={setView} user={user} />
             <div className="relative z-10">
+              <DiscoveryTransition language={language} />
+              
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -248,151 +295,40 @@ export default function App() {
               >
                 <PopularHighlights language={language} onSelectDestination={navigateToDestination} setView={setView} />
               </motion.div>
-              
+
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="py-8 md:py-20 flex flex-col md:flex-row justify-center bg-white border-y border-gray-100 gap-4 md:gap-8 px-6"
+                className="py-12 md:py-32 flex flex-col md:flex-row justify-center bg-stone-50 border-y border-stone-200 gap-6 md:gap-12 px-8"
               >
                 <button 
                   onClick={() => setView('map')}
-                  className="group relative px-6 py-4 md:px-12 md:py-6 bg-[#0a0a0a] text-white rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-2xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
+                  className="group relative px-8 py-5 md:px-16 md:py-8 bg-black text-white rounded-full font-black text-[10px] md:text-[12px] uppercase tracking-[0.6em] flex items-center justify-center gap-6 shadow-2xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 group-hover:opacity-20 transition-opacity" />
-                  <MapIcon size={16} className="text-cyan-400 group-hover:rotate-12 transition-transform md:w-5 md:h-5" />
+                  <MapIcon size={18} className="text-cyan-400 group-hover:rotate-12 transition-transform" />
                   {UI_STRINGS.initializeMap[language]}
-                  <ArrowRight size={14} className="md:w-4 md:h-4" />
                 </button>
 
                 <button 
                   onClick={() => setView('trip-planner')}
-                  className="group relative px-6 py-4 md:px-12 md:py-6 bg-white text-black border border-black/10 rounded-full font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] flex items-center justify-center gap-4 md:gap-6 shadow-xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
+                  className="group relative px-8 py-5 md:px-16 md:py-8 bg-white text-black border border-stone-200 rounded-full font-black text-[10px] md:text-[12px] uppercase tracking-[0.6em] flex items-center justify-center gap-6 shadow-xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-10 transition-opacity" />
-                  <Compass size={18} className="text-emerald-600 group-hover:rotate-180 transition-transform duration-1000 md:w-5 md:h-5" />
+                  <Compass size={20} className="text-emerald-600 group-hover:rotate-180 transition-transform duration-1000" />
                   {language === 'EN' ? 'Trip Architect' : 'සංචාරක සැලසුම්කරු'}
-                  <ArrowRight size={14} className="md:w-4 md:h-4" />
                 </button>
               </motion.div>
 
-              {/* IMPROVED DESTINY SECTION: ARCHIVAL SHARDS GRID (4 COLUMNS PER ROW) */}
               <motion.div 
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="py-20 md:py-52 px-4 md:px-6 relative overflow-hidden bg-white"
               >
-                <div className="max-w-7xl mx-auto">
-                  <div className="relative rounded-[3rem] md:rounded-[6rem] bg-white overflow-hidden group/card shadow-[0_30px_100px_rgba(0,0,0,0.1)] md:shadow-[0_60px_150px_rgba(0,0,0,0.1)] border border-black/10">
-                    
-                    {/* Atmospheric Background Mesh */}
-                    <div className="absolute inset-0 opacity-20 pointer-events-none z-0">
-                       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(225,48,108,0.1)_0%,transparent_50%)]" />
-                       <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(14,165,233,0.1)_0%,transparent_50%)]" />
-                    </div>
-
-                    <div className="relative z-10 p-6 sm:p-10 md:p-24 space-y-12 md:space-y-20">
-                       {/* HEADER CONTENT */}
-                       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-10 border-b border-black/10 pb-10 md:pb-16">
-                          <div className="space-y-8 md:space-y-12">
-                             <div className="inline-flex items-center gap-3 md:gap-5 px-6 py-2 md:px-8 md:py-3 rounded-full bg-black/5 border border-black/10 text-[#E1306C] text-[9px] md:text-[11px] font-black uppercase tracking-[0.4em] md:tracking-[0.6em] backdrop-blur-xl">
-                               <span className="animate-pulse"><Sparkles size={14} className="md:w-[18px] md:h-[18px]" /></span>
-                               {language === 'EN' ? 'Personalized Exploration' : 'පුද්ගලීකරණය කළ ගවේෂණය'}
-                             </div>
-                             
-                             <div className="space-y-6 md:space-y-8">
-                               <h2 className="text-4xl sm:text-5xl md:text-[8rem] font-heritage font-bold text-black leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-2 md:mb-4">
-                                  {language === 'EN' ? (
-                                    <>Uncover Your <br/><span className="italic insta-text-gradient">Destiny.</span></>
-                                  ) : (
-                                    <>ඔබේ <span className="insta-text-gradient italic">දෛවය</span> <br/>සොයාගන්න.</>
-                                  )}
-                               </h2>
-                               <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-light italic leading-relaxed border-l-4 border-[#E1306C]/30 pl-6 md:pl-8">
-                                  {language === 'EN' 
-                                    ? "Every voyager carries a unique signature. We match your neural archetype to the perfect archival nodes."
-                                    : "සෑම සංචාරකයෙකුටම සුවිශේෂී අනන්‍යතාවයක් ඇත. ඔබේ රුචිකත්වයන්ට වඩාත් ගැලපෙන ස්ථාන අපි හඳුනා ගනිමු."}
-                               </p>
-                             </div>
-                          </div>
-
-                          <button 
-                            onClick={() => setView('quiz')}
-                            className="group relative px-6 py-4 w-full md:w-auto md:px-20 md:py-10 bg-black text-white font-black rounded-[2rem] md:rounded-[4rem] hover:scale-105 md:hover:scale-110 active:scale-95 transition-all shadow-[0_20px_60px_rgba(0,0,0,0.1)] md:shadow-[0_40px_100px_rgba(0,0,0,0.1)] flex items-center justify-center gap-3 md:gap-8 overflow-hidden"
-                          >
-                            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <Compass size={16} className="relative z-10 text-[#E1306C] group-hover:rotate-180 transition-transform duration-1000 md:w-6 md:h-6" />
-                            <span className="relative z-10 uppercase tracking-[0.3em] md:tracking-[0.6em] text-[9px] md:text-[12px]">
-                               {UI_STRINGS.startDiscovery[language]}
-                            </span>
-                          </button>
-                       </div>
-
-                       {/* UPGRADED 4-COLUMN SHARDS GRID */}
-                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                          {/* Decorative background script */}
-                          <div className="absolute -top-40 -right-40 text-[20rem] font-heritage font-black text-black/[0.02] select-none pointer-events-none rotate-90">
-                             {language === 'EN' ? 'ගවේෂණය' : 'DESTINY'}
-                          </div>
-
-                          {/* Shard 1: Ancient Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#E1306C]/40">
-                             <img src="https://i.pinimg.com/736x/0c/d6/36/0cd6364b766c233d0d9f25252fb16d4d.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Yapahuwa Ancient Rock Fortress' : 'යාපහුව ඓතිහාසික ශිලා බලකොටුව'} />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
-                                <Target size={18} className="text-[#E1306C] animate-pulse" />
-                             </div>
-                             <div className="absolute bottom-10 left-10 right-10 space-y-2">
-                                <p className="text-[9px] font-black uppercase tracking-[0.4em] text-[#E1306C]">Registry_Node_01</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Explore Yapahuwa: Ancient Rock Fortress' : 'යාපහුව ගවේෂණය කරන්න: පැරණි ශිලා බලකොටුව'}</h4>
-                             </div>
-                          </div>
-
-                          {/* Shard 2: Mist Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-cyan-400/40">
-                             <img src="https://i.pinimg.com/1200x/47/cc/a0/47cca06e7d0433c00f458f87621f939b.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Misty Highlands of Ella' : 'ඇල්ල මීදුම් සහිත කඳුකරය'} />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
-                                <Wind size={18} className="text-cyan-400 animate-pulse" />
-                             </div>
-                             <div className="absolute bottom-10 left-10 right-10 space-y-2">
-                                <p className="text-[9px] font-black uppercase tracking-[0.4em] text-cyan-400">Registry_Node_02</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Visit Ella: The Misty Highlands' : 'ඇල්ල සංචාරය: මීදුම් සහිත කඳුකරය'}</h4>
-                             </div>
-                          </div>
-
-                          {/* Shard 3: Wave Path */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-blue-400/40">
-                             <img src="https://i.pinimg.com/736x/fc/73/a0/fc73a0bd21708eeaa3baf5872482bf25.jpg" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Historic Galle Fort' : 'ඓතිහාසික ගාල්ල කොටුව'} />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
-                                <Activity size={18} className="text-blue-400 animate-pulse" />
-                             </div>
-                             <div className="absolute bottom-10 left-10 right-10 space-y-2">
-                                <p className="text-[9px] font-black uppercase tracking-[0.4em] text-blue-400">Registry_Node_03</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Discover Galle Fort: Historic Fortress' : 'ගාල්ල කොටුව සොයාගන්න: ඓතිහාසික බලකොටුව'}</h4>
-                             </div>
-                          </div>
-
-                          {/* Shard 4: Wild Heart */}
-                          <div className="group/shard relative aspect-[3/4] rounded-[3.5rem] overflow-hidden border border-black/10 shadow-2xl transition-all duration-1000 hover:-translate-y-4 hover:border-[#10B981]/40">
-                             <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000" alt={language === 'EN' ? 'Wildlife Safari in Yala' : 'යාල වනජීවී සෆාරිය'} />
-                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                             <div className="absolute top-8 left-8 p-3 bg-white/50 backdrop-blur-md rounded-2xl border border-black/10">
-                                <PawPrint size={18} className="text-[#10B981] animate-pulse" />
-                             </div>
-                             <div className="absolute bottom-10 left-10 right-10 space-y-2">
-                                <p className="text-[9px] font-black uppercase tracking-[0.4em] text-[#10B981]">Registry_Node_04</p>
-                                <h4 className="text-2xl font-heritage font-bold uppercase text-white tracking-widest">{language === 'EN' ? 'Experience Yala: Wildlife Safari' : 'යාල අත්විඳින්න: වනජීවී සෆාරිය'}</h4>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                  </div>
-                </div>
+                <DestinySection language={language} setView={setView} />
               </motion.div>
 
               <motion.div
@@ -410,6 +346,10 @@ export default function App() {
   };
 
   const getMetaTitle = (view: string): string => {
+    if (view === 'destination-detail' && selectedDestinationData) {
+      return `${selectedDestinationData.name[language]} | Travel Hub Sri Lanka`;
+    }
+
     const titles: Record<string, string> = {
       home: "Travel Hub Sri Lanka | Your Ultimate Guide to an Unforgettable Journey",
       foods: "Traditional Sri Lankan Cuisine | Culinary Journey with Travel Hub",
@@ -418,39 +358,76 @@ export default function App() {
       heritage: "Cultural Heritage of Sri Lanka | Discover Ancient Temples & History",
       booking: "Book Your Sri Lankan Getaway | Tours, Hotels & Experiences",
       memories: "Travel Memories | Relive Your Sri Lankan Adventures",
-      store: "Travel Hub Store | Authentic Sri Lankan Handicrafts & Souvenirs",
+      shop: "Travel Hub Store | Authentic Sri Lankan Handicrafts & Souvenirs",
       "vr-trip": "Virtual Reality Sri Lanka Tour | Immersive Travel Experience",
-      "sinhala-vision": "Sinhala Vision | Explore Sri Lankan Cultural Identity",
-      registry: "Travel Hub Registry | Manage Your Sri Lankan Travel Experience",
+      "vr-experience": "VR Experience | Immersive Sri Lankan Travel",
+      "vr-showcase": "VR Showcase | Discover Sri Lanka in 360",
+      search: "Search Sri Lanka | Find Your Next Adventure",
       contact: "Contact Travel Hub Sri Lanka | Expert Travel Advice & Support",
       about: "About Travel Hub Sri Lanka | Showcasing the Beauty of Our Island",
       medicine: "Traditional Sri Lankan Medicine | Ancient Healing & Wellness",
-      arts: "Arts & Crafts of Sri Lanka | Celebrate Our Artistic Spirit",
-      music: "Traditional Music of Sri Lanka | Listen to the Soul of Our Island"
+      "arts-crafts": "Arts & Crafts of Sri Lanka | Celebrate Our Artistic Spirit",
+      music: "Traditional Music of Sri Lanka | Listen to the Soul of Our Island",
+      phrases: "Sri Lankan Phrasebook | Learn Essential Sinhala Phrases",
+      essentials: "Travel Essentials | Plan Your Trip to Sri Lanka",
+      quiz: "Travel Quiz | Discover Your Sri Lankan Explorer Profile",
+      profile: "Your Profile | Travel Hub Sri Lanka",
+      interests: "Travel Interests | Customize Your Sri Lankan Journey"
     };
     return titles[view] || "Travel Hub Sri Lanka | Discover the Beauty of Our Island";
   };
 
   const getMetaDescription = (view: string): string => {
+    if (view === 'destination-detail' && selectedDestinationData) {
+      return selectedDestinationData.shortStory[language] || `Explore ${selectedDestinationData.name[language]} with Travel Hub Sri Lanka. Discover history, tips, and hidden echoes.`;
+    }
+
     const descriptions: Record<string, string> = {
       home: "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, festivals, heritage, and more. Your ultimate guide to an unforgettable Sri Lankan journey.",
-      foods: "Embark on a culinary journey through Sri Lanka. Explore our comprehensive guide to traditional Sri Lankan cuisine, from authentic spicy curries and fragrant rice dishes to popular street food, sweet treats, and unique culinary experiences found across the island. Discover the rich flavours, history, and secrets behind Sri Lanka's most beloved dishes.",
-      festivals: "Experience the vibrant cultural tapestry of Sri Lanka through our comprehensive guide to traditional festivals. From the grandeur of the Esala Perahera in Kandy to the sacred rituals of Poson and Vesak, discover the dates, customs, and significance of Sri Lanka's most iconic religious and cultural celebrations. Plan your visit to witness these spectacular events firsthand.",
+      foods: "Embark on a culinary journey through Sri Lanka. Explore our comprehensive guide to traditional Sri Lankan cuisine, from authentic spicy curries and fragrant rice dishes to popular street food, sweet treats, and unique culinary experiences found across the island.",
+      festivals: "Experience the vibrant cultural tapestry of Sri Lanka through our comprehensive guide to traditional festivals. From the grandeur of the Esala Perahera in Kandy to the sacred rituals of Poson and Vesak.",
       destinations: "Explore the diverse landscapes of Sri Lanka. From ancient rock fortresses like Sigiriya to the misty highlands of Ella and pristine beaches, discover the best places to visit in Sri Lanka.",
       heritage: "Immerse yourself in the rich cultural heritage of Sri Lanka. Discover ancient temples, historical sites, traditional arts, and the deep-rooted traditions that define our island nation.",
-      booking: "Plan your perfect Sri Lankan getaway. Easily book your tours, accommodations, and experiences through Travel Hub. Start your adventure today.",
-      memories: "Relive your Sri Lankan adventures. Share and explore the unforgettable moments and memories captured by travelers across our beautiful island.",
-      store: "Bring a piece of Sri Lanka home. Shop for authentic Sri Lankan handicrafts, souvenirs, and traditional products at the Travel Hub store.",
+      shop: "Bring a piece of Sri Lanka home. Shop for authentic Sri Lankan handicrafts, souvenirs, and traditional products at the Travel Hub store.",
       "vr-trip": "Experience Sri Lanka like never before. Take an immersive virtual reality tour of our most iconic destinations and landmarks from the comfort of your home.",
-      "sinhala-vision": "Explore the Sinhala vision and cultural identity of Sri Lanka. Discover the traditions, language, and artistic expressions that shape our unique heritage.",
-      registry: "Access the Travel Hub registry. Manage your bookings, profile, and travel preferences for a seamless Sri Lankan travel experience.",
+      search: "Search for destinations, food, culture, and more in Sri Lanka. Find exactly what you're looking for with Travel Hub's search portal.",
       contact: "Get in touch with Travel Hub. Have questions about your Sri Lankan trip? Contact our team for expert travel advice, support, and assistance.",
       about: "Learn more about Travel Hub Sri Lanka. We are dedicated to showcasing the true beauty, culture, and spirit of our island to travelers from around the world.",
       medicine: "Discover the ancient wisdom of Sri Lankan traditional medicine. Explore the healing practices, herbal remedies, and holistic wellness traditions of our island.",
-      arts: "Celebrate the artistic spirit of Sri Lanka. Discover traditional handicrafts, intricate carvings, vibrant paintings, and the skilled artisans who keep our cultural heritage alive.",
-      music: "Listen to the soul of Sri Lanka. Explore our traditional music, rhythmic drumming, and the melodic heritage that echoes through our island's history."
+      "arts-crafts": "Celebrate the artistic spirit of Sri Lanka. Discover traditional handicrafts, intricate carvings, vibrant paintings, and the skilled artisans who keep our cultural heritage alive.",
+      music: "Listen to the soul of Sri Lanka. Explore our traditional music, rhythmic drumming, and the melodic heritage that echoes through our island's history.",
+      phrases: "Learn essential Sinhala phrases for your trip to Sri Lanka. Our phrasebook covers greetings, dining, shopping, and emergencies.",
+      essentials: "Everything you need to know before traveling to Sri Lanka. Visas, currency, weather, and practical tips for a smooth journey.",
+      quiz: "Take our travel quiz to find your perfect Sri Lankan explorer profile and get personalized destination recommendations.",
+      profile: "Manage your Travel Hub profile, view your memories, and track your Sri Lankan travel journey.",
+      interests: "Customize your Sri Lankan adventure by exploring different travel categories and interests."
     };
     return descriptions[view] || "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, and more.";
+  };
+
+  const getMetaKeywords = (view: string): string => {
+    const baseKeywords = "Sri Lanka travel, Sri Lanka tourism, visit Sri Lanka, Sri Lanka destinations, Sri Lanka culture, Sri Lanka food, Sri Lanka heritage";
+    
+    if (view === 'destination-detail' && selectedDestinationData) {
+      return `${selectedDestinationData.name[language]}, ${selectedDestinationData.category}, ${baseKeywords}`;
+    }
+
+    const keywords: Record<string, string> = {
+      home: "Sri Lanka travel guide, best places in Sri Lanka, Sri Lanka tour, Travel Hub Sri Lanka",
+      foods: "Sri Lankan food, traditional Sri Lankan cuisine, Ceylon spices, Sri Lankan recipes, street food Sri Lanka",
+      festivals: "Sri Lankan festivals, Esala Perahera, Vesak Sri Lanka, cultural events Sri Lanka",
+      destinations: "Sri Lanka tourist attractions, Sigiriya, Ella, Galle, Yala safari, Kandy",
+      heritage: "Sri Lanka history, ancient cities Sri Lanka, UNESCO sites Sri Lanka, Buddhist temples",
+      shop: "Sri Lankan souvenirs, handicrafts Sri Lanka, Ceylon tea, traditional masks Sri Lanka",
+      "vr-trip": "virtual tour Sri Lanka, 360 travel Sri Lanka, immersive Sri Lanka experience",
+      medicine: "Ayurveda Sri Lanka, traditional healing, herbal medicine Sri Lanka, wellness Sri Lanka",
+      "arts-crafts": "Sri Lankan art, traditional crafts, wood carving Sri Lanka, lace making",
+      music: "Sri Lankan music, traditional drums, Baila, cultural music Sri Lanka",
+      phrases: "learn Sinhala, Sri Lankan language, basic Sinhala for travelers",
+      essentials: "Sri Lanka visa, travel tips Sri Lanka, currency Sri Lanka, weather Sri Lanka"
+    };
+
+    return keywords[view] ? `${keywords[view]}, ${baseKeywords}` : baseKeywords;
   };
 
   return (
@@ -459,6 +436,16 @@ export default function App() {
         <SEO 
           title={getMetaTitle(view)} 
           description={getMetaDescription(view)} 
+          language={language}
+          keywords={getMetaKeywords(view)}
+          image={view === 'destination-detail' && selectedDestinationData ? selectedDestinationData.image : undefined}
+          url={view === 'destination-detail' && selectedDestinationData ? `https://www.travelhubsrilanka.space/destinations/${selectedDestinationData.id}` : undefined}
+          touristAttraction={view === 'destination-detail' && selectedDestinationData ? {
+            name: selectedDestinationData.name[language],
+            description: selectedDestinationData.shortStory[language],
+            image: selectedDestinationData.image,
+            address: selectedDestinationData.location
+          } : undefined}
         />
         <GoogleAnalytics view={view} />
         <div className="overflow-x-hidden transition-all duration-300">

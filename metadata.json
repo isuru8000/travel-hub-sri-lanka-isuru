@@ -1,6 +1,6 @@
 {
   "name": "Remix: Travel Hub Sri Lanka  isuru",
-  "description": "A modern, fast, and mobile-friendly travel website inspired by Sri Lanka’s ancient heritage, history, and cultural memory combined with a modern travel experience. Added Google Analytics and fixed imports.",
+  "description": "Travel Hub Sri Lanka - Your ultimate guide to exploring the ancient heritage, pristine beaches, and vibrant culture of Sri Lanka. Discover the soul of the island with our modern travel experience.",
   "requestFramePermissions": [
     "camera",
     "geolocation"

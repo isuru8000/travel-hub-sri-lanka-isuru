@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, User } from '../types.ts';
-import { Box, Orbit, Layers, ShieldCheck, Activity, ChevronRight, Sparkles } from 'lucide-react';
+import { Box, Orbit, Layers, ShieldCheck, Activity, ChevronRight, Sparkles, MapPin, Compass } from 'lucide-react';
 import { UI_STRINGS } from '../constants.tsx';
 
 interface HeroProps {
@@ -14,30 +14,36 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [scrollPos, setScrollPos] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [mobileImageIndex, setMobileImageIndex] = useState(0);
 
   const heroImages = [
-    "https://i.pinimg.com/736x/42/d2/64/42d26488738bc11bac7ef935e22d0750.jpg"
+    "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80"
   ];
 
   const mobileHeroImages = [
-    "https://i.pinimg.com/736x/6e/ff/95/6eff9553b1bb8eb65a3d5f31761f7c12.jpg",
-    "https://i.pinimg.com/736x/54/ff/87/54ff8771c324a860307f665f81ed6bf9.jpg"
+    "https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80",
+    "https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80"
   ];
+
+  const stats = [
+    { label: language === 'EN' ? 'Destinations' : 'ගමනාන්ත', value: '100+', icon: MapPin },
+    { label: language === 'EN' ? 'Experiences' : 'අත්දැකීම්', value: '50+', icon: Sparkles },
+    { label: language === 'EN' ? 'Support' : 'සහාය', value: '24/7', icon: ShieldCheck },
+  ];
+
+  const marqueeItems = language === 'EN' 
+    ? ["SIGIRIYA", "ELLA", "GALLE", "KANDY", "MIRISSA", "NUWARA ELIYA", "YALA", "ANURADHAPURA"]
+    : ["සීගිරිය", "ඇල්ල", "ගාල්ල", "මහනුවර", "මිරිස්ස", "නුවරඑළිය", "යාල", "අනුරාධපුරය"];
 
   useEffect(() => {
     const mobileInterval = setInterval(() => {
       setMobileImageIndex((prevIndex) => (prevIndex + 1) % mobileHeroImages.length);
     }, 6000);
 
-    return () => {
-      clearInterval(mobileInterval);
-    };
+    return () => clearInterval(mobileInterval);
   }, []);
 
   useEffect(() => {
-    // Disable heavy event listeners on mobile for performance
     const isMobile = window.innerWidth < 768;
     if (isMobile) return;
 
@@ -72,14 +78,14 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   const mainTitleSI = "ශ්‍රී ලංකාව";
 
   return (
-    <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-white" style={{ perspective: '2000px' }}>
+    <div className="relative h-[110vh] flex items-center justify-center overflow-hidden bg-[#050505]" style={{ perspective: '2000px' }}>
       
-      {/* Background Layer with Parallax and Enhancements */}
+      {/* Background Layer with Parallax and Atmospheric Gradients */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div 
           className="absolute inset-0 transition-transform duration-[1200ms] ease-out"
           style={{ 
-            transform: `scale(1.1 + ${scrollPos / 6000}) translate3d(${mousePos.x * 35}px, ${mousePos.y * 35}px, 0)`,
+            transform: `scale(${1.1 + scrollPos / 5000}) translate3d(${mousePos.x * 40}px, ${mousePos.y * 40}px, 0)`,
             willChange: 'transform'
           }}
         >
@@ -92,112 +98,142 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 2, ease: "easeInOut" }}
-                className="absolute inset-0 bg-cover bg-center brightness-[0.8] saturate-[1.4]"
+                className="absolute inset-0 bg-cover bg-center brightness-[0.7] saturate-[1.2]"
                 style={{ backgroundImage: `url('${mobileHeroImages[mobileImageIndex]}')` }}
               />
             </AnimatePresence>
           </div>
 
-          {/* Desktop Background Slideshow */}
-          <div className="hidden md:block absolute inset-0">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentImageIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 2, ease: "easeInOut" }}
-                className="absolute inset-0 bg-cover bg-center brightness-[0.9] saturate-[1.1]"
-                style={{ backgroundImage: `url('${heroImages[currentImageIndex]}')` }}
-              />
-            </AnimatePresence>
-          </div>
+          {/* Desktop Background */}
+          <div className="hidden md:block absolute inset-0 bg-cover bg-center brightness-[0.6] saturate-[1.1]"
+               style={{ backgroundImage: `url('${heroImages[0]}')` }} />
           
-          {/* Multi-layered cinematic overlays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.1)_0%,transparent_80%)]" />
+          {/* Atmospheric Cinematic Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(245,158,11,0.15)_0%,transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_80%,rgba(234,88,12,0.1)_0%,transparent_50%)]" />
           
-          {/* Noise Texture */}
-          <div className="absolute inset-0 opacity-[0.05] pattern-overlay" />
+          {/* Subtle Noise Texture */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
         </div>
-        
-        {/* Floating Atmospheric Particles */}
-        <div className="absolute inset-0 opacity-40">
-           <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#F59E0B]/10 rounded-full blur-[180px] md:animate-pulse" />
-           <div className="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-[#EA580C]/5 rounded-full blur-[160px] md:animate-pulse" style={{ animationDelay: '3s' }} />
+      </div>
+
+      {/* Top Marquee */}
+      <div className="absolute top-24 left-0 w-full overflow-hidden z-20 opacity-30 pointer-events-none">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex items-center gap-12 px-6">
+              {marqueeItems.map((item, idx) => (
+                <span key={idx} className="text-[10px] font-black uppercase tracking-[0.6em] text-white">
+                  {item}
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Hero Content */}
       <div className="relative z-30 max-w-7xl w-full px-8 flex flex-col items-center text-center">
         
-        <div className="space-y-8 mb-12 animate-in fade-in zoom-in-95 duration-1000 delay-200">
-          <h1 className="flex flex-col items-center select-none">
-            <span className="block text-xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.8em] text-white mb-8 md:mb-12 uppercase font-heritage drop-shadow-2xl opacity-90">
-              {language === 'EN' ? 'WELCOME TO' : 'ආයුබෝවන්'}
-            </span>
+        <motion.div 
+          initial={{ opacity: 0, y: 100, scale: 1.1 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="space-y-6 mb-12"
+        >
+          <div className="flex flex-col items-center select-none">
+            <motion.span 
+              initial={{ opacity: 0, letterSpacing: "0.2em" }}
+              animate={{ opacity: 0.9, letterSpacing: language === 'EN' ? "1em" : "0.6em" }}
+              transition={{ duration: 1.5, delay: 0.5 }}
+              className="block text-xs md:text-sm font-black text-[#F59E0B] mb-6 uppercase"
+            >
+              {language === 'EN' ? 'THE ULTIMATE JOURNEY TO' : 'සුවිශේෂී සංචාරය'}
+            </motion.span>
             
-            <div className="relative">
-              <div 
-                className="text-6xl sm:text-8xl md:text-9xl lg:text-[16rem] font-heritage font-bold leading-none tracking-tighter uppercase water-text-container"
-              >
-                {language === 'EN' ? (
-                  <>
-                    <span className="water-base">{mainTitleEN}</span>
-                    <span className="water-wave md:animate-gradient-text-slow" data-text={mainTitleEN}>{mainTitleEN}</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="water-base">{mainTitleSI}</span>
-                    <span className="water-wave md:animate-gradient-text-slow" data-text={mainTitleSI}>{mainTitleSI}</span>
-                  </>
-                )}
-              </div>
+            <div className="relative group">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[8rem] font-heritage font-bold leading-none tracking-tighter uppercase text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-[1.02] whitespace-nowrap">
+                {language === 'EN' ? mainTitleEN : mainTitleSI}
+              </h1>
+              {/* Subtle floating glow behind title */}
+              <div className="absolute inset-0 bg-white/5 blur-[120px] -z-10 animate-pulse" />
             </div>
-          </h1>
-          
-          <div className="flex flex-col items-center mt-8 md:mt-12">
-             <div className="w-24 md:w-48 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent rounded-full shadow-[0_0_40px_#F59E0B] mb-8 md:mb-12 opacity-80" />
-             <p className="font-narrative text-sm md:text-2xl font-light text-white/90 max-w-4xl leading-relaxed tracking-[0.1em] md:tracking-[0.2em] px-4 text-center italic drop-shadow-md">
-               {language === 'EN' 
-                 ? "An immersive journey through the timeless wonders of the Pearl of the Indian Ocean."
-                 : "ඉන්දියන් සාගරයේ මුතු ඇටයේ කාලාන්තරයක් පුරා සැඟවුණු අසිරිය සොයා යන ගමනක්."}
-             </p>
           </div>
-        </div>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="flex flex-col items-center mt-6"
+          >
+             <p className="font-sans text-sm md:text-xl font-light text-white/80 max-w-3xl leading-relaxed tracking-wide px-4 text-center italic">
+               {language === 'EN' 
+                 ? "Where ancient memories meet modern journeys. Discover the soul of the Indian Ocean's most precious pearl."
+                 : "පැරණි මතකයන් සහ නූතන ගමන් මග හමුවන තැන. ඉන්දියන් සාගරයේ වටිනාම මුතු ඇටයේ ආත්මය සොයා ගන්න."}
+             </p>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500 w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 w-full mb-20"
+        >
           <button 
             onClick={() => setView('destinations')}
-            className="w-full sm:w-auto group relative px-10 py-6 md:px-20 md:py-10 bg-[#F59E0B] text-white rounded-full font-black text-[14px] md:text-[16px] uppercase tracking-[0.4em] md:tracking-[0.6em] transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_20px_80px_rgba(245,158,11,0.5)] overflow-hidden flex justify-center items-center"
+            className="w-full sm:w-auto group relative px-10 py-5 md:px-16 md:py-8 bg-white text-black rounded-full font-black text-[12px] md:text-[14px] uppercase tracking-[0.4em] transition-all duration-500 hover:scale-105 active:scale-95 shadow-[0_20px_60px_rgba(255,255,255,0.2)] overflow-hidden flex justify-center items-center"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms]" />
-            <span className="relative z-10 flex items-center gap-4 md:gap-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-[1000ms]" />
+            <span className="relative z-10 flex items-center gap-4">
               {UI_STRINGS.explore[language]}
-              <ChevronRight size={24} className="group-hover:translate-x-2 transition-transform" />
+              <ChevronRight size={20} className="group-hover:translate-x-2 transition-transform" />
             </span>
           </button>
 
           <button 
             onClick={() => setView('vr-trip')}
-            className="w-full sm:w-auto group relative px-10 py-6 md:px-20 md:py-10 glass-card rounded-full font-black text-[14px] md:text-[16px] text-white uppercase tracking-[0.4em] md:tracking-[0.6em] transition-all duration-700 hover:bg-white/10 hover:border-[#F59E0B] active:scale-95 shadow-2xl flex justify-center items-center"
+            className="w-full sm:w-auto group relative px-10 py-5 md:px-16 md:py-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full font-black text-[12px] md:text-[14px] text-white uppercase tracking-[0.4em] transition-all duration-700 hover:bg-white/10 hover:border-[#F59E0B] active:scale-95 shadow-2xl flex justify-center items-center"
           >
-            <span className="relative z-10 flex items-center gap-4 md:gap-8">
+            <span className="relative z-10 flex items-center gap-4">
               {UI_STRINGS.vrTrip[language]}
-              <Orbit size={24} className="text-[#F59E0B] md:animate-spin-slow" />
+              <Orbit size={20} className="text-[#F59E0B] animate-spin-slow" />
             </span>
           </button>
-        </div>
+        </motion.div>
+
+        {/* Glass Morphism Stats Bar */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
+          className="grid grid-cols-3 gap-4 md:gap-12 p-4 md:p-8 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] w-full max-w-4xl hover:bg-white/10 transition-colors duration-500"
+        >
+          {stats.map((stat, idx) => (
+            <div key={idx} className="flex flex-col items-center space-y-2 md:space-y-3 group/stat">
+              <div className="p-2 md:p-3 bg-white/10 rounded-xl md:rounded-2xl group-hover/stat:bg-[#F59E0B]/20 transition-colors duration-300">
+                <stat.icon size={16} className="text-[#F59E0B] md:w-5 md:h-5 group-hover/stat:scale-110 transition-transform" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl md:text-3xl font-heritage font-bold text-white leading-none">{stat.value}</span>
+                <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest text-white/40">{stat.label}</span>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Futuristic Grid Floor Decoration - Updated to Amber */}
-      <div className="absolute bottom-0 left-0 right-0 h-[400px] opacity-[0.1] pointer-events-none"
-           style={{ 
-             backgroundImage: `linear-gradient(#F59E0B 1.5px, transparent 1.5px), linear-gradient(90deg, #F59E0B 1.5px, transparent 1.5px)`, 
-             backgroundSize: '100px 100px',
-             transform: 'perspective(1200px) rotateX(65deg) scale(3)',
-             maskImage: 'linear-gradient(to top, black, transparent 90%)'
-           }} />
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+      >
+        <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent" />
+        <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/50 rotate-90 origin-left translate-x-1">Scroll</span>
+      </motion.div>
 
       <style dangerouslySetInnerHTML={{ __html: `
         @keyframes spin-slow {
@@ -207,57 +243,12 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
         .animate-spin-slow {
           animation: spin-slow 20s linear infinite;
         }
-
-        /* Water Text Effects - Reflection and Text-Shadow Removed */
-        .water-text-container {
-          position: relative;
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-25%); }
         }
-
-        .water-base {
-          color: rgba(255, 255, 255, 0.05);
-          -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
-          text-shadow: 0 0 20px rgba(0,0,0,0.5);
-          animation: border-light-flow 4s ease-in-out infinite;
-        }
-
-        @keyframes border-light-flow {
-          0%, 100% {
-            -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
-            filter: drop-shadow(0 0 0px transparent);
-          }
-          50% {
-            -webkit-text-stroke-color: #fff;
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-          }
-        }
-
-        .water-wave {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          color: #FFFFFF;
-          -webkit-text-stroke: 1px transparent;
-          animation: liquid-sway 4s ease-in-out infinite;
-          background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
-        }
-
-        @keyframes liquid-sway {
-          0%, 100% {
-            clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-          }
-          50% {
-            clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-          }
-        }
-        @media (max-width: 768px) {
-          .water-wave { animation: none !important; }
-          .water-base { animation: none !important; }
-          .water-base { -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3); }
+        .animate-marquee {
+          animation: marquee 40s linear infinite;
         }
       `}} />
     </div>
