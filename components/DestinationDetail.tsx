@@ -300,6 +300,43 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
               <div className="lg:col-span-7 space-y-12 md:space-y-20">
                  
+                 {/* ROUND NEARBY ATTRACTIONS (PROXIMITY NODES) */}
+                 {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
+                  <div className="space-y-12 animate-in slide-in-from-bottom-6 duration-700 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-[#5A5A40]/10">
+                    <div className="flex items-center justify-between px-2">
+                       <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-2xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">
+                            <Target size={20} />
+                          </div>
+                          <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
+                            {language === 'EN' ? 'Nearby Places.' : 'ආසන්න ස්ථාන.'}
+                          </h3>
+                       </div>
+                    </div>
+
+                    <div className="flex overflow-x-auto no-scrollbar gap-6 md:gap-12 pb-6 px-2 scroll-smooth snap-x snap-mandatory">
+                        {destination.nearbyAttractions.map((att, idx) => (
+                          <div 
+                            key={att.id} 
+                            className="shrink-0 group cursor-pointer flex flex-col items-center gap-3 md:gap-4 snap-center"
+                            onClick={() => handleNearbyClick(att.id)}
+                          >
+                            <div className="relative w-24 h-24 md:w-36 md:h-36">
+                                <div className="absolute inset-[-4px] border border-dashed border-[#5A5A40]/20 rounded-full animate-spin-slow opacity-40 group-hover:opacity-100 group-hover:border-[#5A5A40] transition-all" />
+                                <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl border-2 border-white transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl">
+                                  <img src={att.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-20 group-hover:opacity-0 transition-opacity" />
+                                </div>
+                            </div>
+                            <div className="text-center space-y-1 max-w-[100px] md:max-w-[140px]">
+                                <h4 className="text-[10px] md:text-xs font-serif font-bold text-[#2d2d2d] uppercase tracking-tight leading-tight line-clamp-2 group-hover:text-[#5A5A40] transition-colors">{att.name[language]}</h4>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                 )}
+
                  {/* 1. Long Narrative Section (About Destination) */}
                  <div className="space-y-8 md:space-y-12 relative bg-white/60 backdrop-blur-md p-8 md:p-16 rounded-[4rem] border border-[#5A5A40]/10 shadow-sm">
                     <div className="flex items-center gap-4 md:gap-6">
@@ -336,60 +373,27 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                     </div>
                  </div>
 
-                 {/* Nearby Places & Hidden Echoes Grid */}
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                   {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
-                    <div className="space-y-6 animate-in slide-in-from-bottom-6 duration-700 bg-white/40 backdrop-blur-sm p-8 rounded-[3rem] border border-[#5A5A40]/10 h-full">
-                      <div className="flex items-center gap-4">
-                         <div className="w-10 h-10 rounded-2xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">
-                           <Target size={20} />
-                         </div>
-                         <h3 className="text-xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
-                           {language === 'EN' ? 'Nearby Places.' : 'ආසන්න ස්ථාන.'}
-                         </h3>
-                      </div>
-
-                      <div className="flex overflow-x-auto no-scrollbar gap-6 pb-6 px-2 scroll-smooth snap-x snap-mandatory">
-                          {destination.nearbyAttractions.map((att, idx) => (
-                            <div 
-                              key={att.id} 
-                              className="shrink-0 group cursor-pointer flex flex-col items-center gap-3 snap-center"
-                              onClick={() => handleNearbyClick(att.id)}
-                            >
-                              <div className="relative w-20 h-20">
-                                  <div className="absolute inset-[-4px] border border-dashed border-[#5A5A40]/20 rounded-full animate-spin-slow opacity-40 group-hover:opacity-100 group-hover:border-[#5A5A40] transition-all" />
-                                  <div className="relative w-full h-full rounded-full overflow-hidden shadow-xl border-2 border-white transition-all duration-700 group-hover:scale-110 group-hover:shadow-2xl">
-                                    <img src={att.image} className="w-full h-full object-cover transition-transform duration-[8000ms] group-hover:scale-110" alt="" />
-                                  </div>
-                              </div>
-                              <div className="text-center space-y-1 max-w-[80px]">
-                                  <h4 className="text-[10px] font-serif font-bold text-[#2d2d2d] uppercase tracking-tight leading-tight line-clamp-2 group-hover:text-[#5A5A40] transition-colors">{att.name[language]}</h4>
-                              </div>
-                            </div>
-                          ))}
-                      </div>
+                 {/* Deep Dive Addendum: Hidden Echoes */}
+                 {deepDive?.hiddenEchoes && (
+                    <div className="pt-12 md:pt-20 space-y-8 md:space-y-12 animate-in fade-in duration-1000">
+                       <div className="flex items-center gap-4 md:gap-6">
+                          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl md:rounded-3xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40] border border-[#5A5A40]/20">
+                            <Sparkles size={26} className="w-5 h-5 md:w-6 md:h-6" />
+                          </div>
+                          <h4 className="text-xl sm:text-2xl md:text-4xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">Hidden Echoes</h4>
+                       </div>
+                       <div className="md:pl-20">
+                          <div className="bg-[#5A5A40]/5 p-8 md:p-16 rounded-[4rem] border border-[#5A5A40]/10 relative overflow-hidden group">
+                             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.03] group-hover:rotate-12 transition-transform duration-1000">
+                                <Compass size={200} className="w-32 h-32 md:w-48 md:h-48" />
+                             </div>
+                             <p className="text-xl sm:text-2xl md:text-3xl text-[#2d2d2d] italic font-medium leading-relaxed relative z-10">
+                                "{deepDive.hiddenEchoes}"
+                             </p>
+                          </div>
+                       </div>
                     </div>
-                   )}
-
-                   {deepDive?.hiddenEchoes && (
-                      <div className="space-y-6 animate-in fade-in duration-1000 bg-white/40 backdrop-blur-sm p-8 rounded-[3rem] border border-[#5A5A40]/10 h-full">
-                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-2xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40] border border-[#5A5A40]/20">
-                              <Sparkles size={20} />
-                            </div>
-                            <h4 className="text-xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">Hidden Echoes</h4>
-                         </div>
-                         <div className="bg-[#5A5A40]/5 p-6 rounded-[2rem] border border-[#5A5A40]/10 relative overflow-hidden group h-full">
-                            <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:rotate-12 transition-transform duration-1000">
-                               <Compass size={100} />
-                            </div>
-                            <p className="text-lg text-[#2d2d2d] italic font-medium leading-relaxed relative z-10">
-                               "{deepDive.hiddenEchoes}"
-                            </p>
-                         </div>
-                      </div>
-                   )}
-                 </div>
+                 )}
 
                  {/* 3. High-Fidelity Gallery Section */}
                  {/* Gallery section removed as requested */}

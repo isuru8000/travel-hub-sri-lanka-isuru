@@ -241,15 +241,15 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       </div>
 
       {/* STICKY CATEGORY BAR */}
-      <div className="sticky top-0 z-[100] py-3 md:py-4 bg-[#f5f5f0]/80 backdrop-blur-3xl border-b border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div className="sticky top-0 z-[100] py-6 md:py-8 bg-[#f5f5f0]/80 backdrop-blur-3xl border-b border-[#5A5A40]/10">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="relative w-full lg:w-auto">
             <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2 lg:pb-0">
               {categories.map(cat => (
                 <button 
                   key={cat.id} 
                   onClick={() => setCategoryFilter(cat.id)} 
-                  className={`flex items-center gap-3 px-8 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all border shrink-0 ${
+                  className={`flex items-center gap-3 px-8 py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all border shrink-0 ${
                     categoryFilter === cat.id 
                       ? 'bg-[#5A5A40] text-white border-transparent shadow-xl scale-105' 
                       : 'bg-white text-[#2d2d2d]/60 border-[#5A5A40]/10 hover:border-[#5A5A40]/30'
@@ -267,7 +267,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               <select 
                 value={locationFilter} 
                 onChange={(e) => setLocationFilter(e.target.value)} 
-                className="appearance-none w-full pl-8 pr-12 py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
+                className="appearance-none w-full pl-8 pr-12 py-4 bg-white border border-[#5A5A40]/10 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
               >
                 <option value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
                 {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc} className="bg-white">{loc}</option>)}

@@ -71,9 +71,9 @@ const Heritage: React.FC<HeritageProps> = ({ language, setView, onBack }) => {
               <button
                 key={item.id}
                 onClick={() => setView(item.id as View)}
-                className="flex flex-col items-center gap-2 p-2 rounded-2xl hover:bg-gray-50 transition-all group"
+                className="flex flex-col items-center gap-3 p-4 rounded-2xl hover:bg-gray-50 transition-all group"
               >
-                <div className={`w-12 h-12 ${item.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                <div className={`w-16 h-16 ${item.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   {item.icon}
                 </div>
                 <span className="font-medium text-gray-700">
