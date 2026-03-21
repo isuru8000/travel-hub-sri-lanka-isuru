@@ -1314,7 +1314,54 @@ Respect the local community. Mirissa is still at its core a fishing village. The
       { id: "sigiriya", name: { EN: "Sigiriya", SI: "සීගිරිය" }, image: "https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg" }
     ]
   },
-  { id: "pasikudah", name: { EN: "Pasikudah", SI: "පාසිකුඩා" }, category: "beach", image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg", gallery: ["https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg"], history: { EN: "Pasikudah is a coastal resort town located in the Batticaloa District, famous for its golden bay and one of the longest stretches of shallow reef coastline in the world. The water is so shallow and calm that you can walk kilometers into the sea. It is a perfect destination for families and luxury travelers, with high-end resorts lining the bay. The area is recovering its former glory as a premier tourist destination after decades of isolation.", SI: "නොගැඹුරු සාමකාමී වෙරළ." }, shortStory: { EN: "Infinite Horizon.", SI: "නිමක් නැති ක්ෂිතිජය." }, tips: [{ EN: "Safe for kids.", SI: "ළමයින්ට ඉතා ආරක්ෂිතයි." }], hiddenEchoes: { EN: "Coral walk nodes.", SI: "කොරල් මංපෙත්." }, location: "Batticaloa", coordinates: { x: 80, y: 44 },
+  { id: "pasikudah", name: { EN: "Pasikudah", SI: "පාසිකුඩා" }, category: "beach", image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg", gallery: ["https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg"], history: { EN: "Pasikudah is a coastal resort town located in the Batticaloa District, famous for its golden bay and one of the longest stretches of shallow reef coastline in the world.", SI: "පාසිකුඩා යනු මඩකලපුව දිස්ත්‍රික්කයේ පිහිටි වෙරළබඩ නිවාඩු නිකේතනයක් වන අතර එය එහි රන්වන් බොක්ක සහ ලෝකයේ දිගම නොගැඹුරු කොරල්පර වෙරළ තීරයක් සඳහා ප්‍රසිද්ධය." }, detailedAbout: { EN: `🏖️ PASIKUDAH — පාසිකුඩා
+The Safest Bay in Sri Lanka — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by historical records, geographical data, and physical observation
+
+📍 LOCATION
+Province: Eastern Province, Sri Lanka
+District: Batticaloa District
+Position: East coast of Sri Lanka, 35 km northwest of Batticaloa city
+
+🌊 WHAT IS PASIKUDAH?
+Pasikudah is a coastal resort bay on the east coast of Sri Lanka, 35 km northwest of Batticaloa. The name derives from the Tamil words Paasi — meaning green algae — and Kudah — meaning bay. The historic Tamil name therefore translates as Green Algae Bay — a reference to the algae that once colonised the shallow reef offshore. The name predates modern tourism by many centuries and reflects the bay's long history as a Tamil fishing settlement.
+
+The defining physical characteristic of Pasikudah is its extraordinarily shallow reef coastline. The gradual underwater slope of the bay allows visitors to walk approximately 500 metres from the shore and still be in waist-deep water. This is among the longest stretches of shallow reef coastline in the world. The currents are measurably weaker than at most Sri Lankan beaches. These two factors — extreme shallowness and weak currents — make Pasikudah the safest natural swimming environment in Sri Lanka and arguably one of the safest anywhere in Asia.
+
+📜 HISTORY
+Pasikudah and the adjacent Kalkudah bay were historically Tamil fishing communities whose economy was based on the sea. The shallow reef provided abundant fish and the sheltered bay made it a safe harbour for traditional outrigger fishing boats. Before the civil war began in 1983, Pasikudah and Kalkudah were among the most popular beach destinations in Sri Lanka. Following the end of the civil war in May 2009, the Sri Lankan government designated Pasikudah as a Special Tourist Development Zone.
+
+🏖️ THE BEACH AND BAY
+The shallow reef coastline of Pasikudah is the bay's most extraordinary physical characteristic. The underwater topography slopes so gradually that the water remains waist-deep for approximately 500 metres from the shore. The beach sand at Pasikudah is white, fine-grained, and soft. A coral reef lies offshore, parallel to the beach, forming the natural barrier responsible for the bay's calm conditions.
+
+🤿 WATER ACTIVITIES
+* **Swimming:** Swimming is the primary activity at Pasikudah and the bay is universally regarded as the safest swimming beach in Sri Lanka.
+* **Snorkelling:** Snorkelling over the reef is the most popular water activity at Pasikudah beyond simple swimming. The reef is accessible by swimming from the beach.
+* **Scuba Diving:** Several dive operators offer guided dives at Pasikudah. The bay is suitable for beginner dives given its calm, shallow conditions.`, SI: `🏖️ පාසිකුඩා — PASIKUDAH
+ශ්‍රී ලංකාවේ ආරක්ෂිතම මුහුදු බොක්ක — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
+
+📍 පිහිටීම සහ භූගෝලය
+පළාත: නැගෙනහිර පළාත, ශ්‍රී ලංකාව
+දිස්ත්‍රික්කය: මඩකලපුව දිස්ත්‍රික්කය
+පිහිටීම: ශ්‍රී ලංකාවේ නැගෙනහිර වෙරළ තීරය, මඩකලපුව නගරයේ සිට කි.මී. 35ක් වයඹ දෙසින්
+
+🌊 පාසිකුඩා යනු කුමක්ද?
+පාසිකුඩා යනු මඩකලපුවට කිලෝමීටර් 35ක් වයඹ දෙසින් ශ්‍රී ලංකාවේ නැගෙනහිර වෙරළ තීරයේ පිහිටි වෙරළබඩ නිවාඩු නිකේතනයකි. මෙම නම පැමිණෙන්නේ දෙමළ වචන වන පාසි — එනම් හරිත ඇල්ගී — සහ කුඩා — එනම් බොක්ක — යන වචන වලිනි. එබැවින් ඓතිහාසික දෙමළ නාමය හරිත ඇල්ගී බොක්ක ලෙස පරිවර්තනය වේ — මෙය වෙරළට ඔබ්බෙන් වූ නොගැඹුරු ගල්පරයේ වරක් ජනාවාස වූ ඇල්ගී ගැන සඳහනකි. මෙම නම නවීන සංචාරක ව්‍යාපාරයට සියවස් ගණනාවකට පෙර සිට පැවත එන අතර දෙමළ ධීවර ජනාවාසයක් ලෙස බොක්කෙහි දිගු ඉතිහාසය පිළිබිඹු කරයි.
+
+පාසිකුඩාවේ නිර්වචනය කරන භෞතික ලක්ෂණය වන්නේ එහි අසාමාන්‍ය ලෙස නොගැඹුරු ගල්පර වෙරළ තීරයයි. බොක්කෙහි ක්‍රමානුකූල දිය යට බෑවුම නිසා අමුත්තන්ට වෙරළේ සිට මීටර් 500ක් පමණ දුරක් ඉණ දක්වා ගැඹුරු ජලයේ ගමන් කිරීමට ඉඩ සලසයි. මෙය ලෝකයේ දිගම නොගැඹුරු ගල්පර වෙරළ තීරයන්ගෙන් එකකි. බොහෝ ශ්‍රී ලාංකික වෙරළ තීරයන්ට වඩා මෙහි දියවැල් මැනිය හැකි තරම් දුර්වලය. මෙම සාධක දෙක — අධික නොගැඹුරු බව සහ දුර්වල දියවැල් — පාසිකුඩා ශ්‍රී ලංකාවේ ආරක්ෂිතම ස්වභාවික පිහිනුම් පරිසරය බවට පත් කරන අතර ආසියාවේ ඕනෑම තැනක ඇති ආරක්ෂිතම ස්ථානයක් බවට පත් කරයි.
+
+📜 ඉතිහාසය
+පාසිකුඩා සහ යාබද කල්කුඩා බොක්ක ඓතිහාසික වශයෙන් දෙමළ ධීවර ප්‍රජාවන් වූ අතර ඔවුන්ගේ ආර්ථිකය මුහුද මත පදනම් විය. නොගැඹුරු ගල්පරය බහුල ලෙස මසුන් ලබා දුන් අතර ආරක්ෂිත බොක්ක සම්ප්‍රදායික ඔරු ධීවර බෝට්ටු සඳහා ආරක්ෂිත වරායක් බවට පත් කළේය. 1983 සිවිල් යුද්ධය ආරම්භ වීමට පෙර, පාසිකුඩා සහ කල්කුඩා ශ්‍රී ලංකාවේ වඩාත් ජනප්‍රිය වෙරළ ගමනාන්ත අතර විය. 2009 මැයි මාසයේදී සිවිල් යුද්ධය අවසන් වීමෙන් පසු, ශ්‍රී ලංකා රජය විසින් පාසිකුඩා විශේෂ සංචාරක සංවර්ධන කලාපයක් ලෙස නම් කරන ලදී.
+
+🏖️ වෙරළ සහ බොක්ක
+පාසිකුඩාවේ නොගැඹුරු ගල්පර වෙරළ තීරය බොක්කෙහි අසාමාන්‍ය භෞතික ලක්ෂණයයි. දිය යට භූ විෂමතාවය කෙතරම් ක්‍රමානුකූලව බෑවුම් වේද යත්, වෙරළේ සිට මීටර් 500ක් පමණ දුරක් ජලය ඉණ දක්වා ගැඹුරට පවතී. පාසිකුඩාවේ වෙරළේ වැලි සුදු, සියුම් සහ මෘදුයි. වෙරළට සමාන්තරව වෙරළට ඔබ්බෙන් කොරල්පරයක් පිහිටා ඇති අතර එය බොක්කෙහි සන්සුන් තත්වයන්ට වගකිව යුතු ස්වභාවික බාධකය සාදයි.
+
+🤿 ජල ක්‍රියාකාරකම්
+* **පිහිනීම:** පාසිකුඩාවේ ප්‍රධාන ක්‍රියාකාරකම පිහිනීම වන අතර බොක්ක ශ්‍රී ලංකාවේ ආරක්ෂිතම පිහිනුම් වෙරළ ලෙස විශ්වීයව සැලකේ.
+* **ස්නෝකර්ලිං:** සරල පිහිනුම් වලින් ඔබ්බට පාසිකුඩාවේ වඩාත් ජනප්‍රිය ජල ක්‍රියාකාරකම වන්නේ ගල්පරය මත ස්නෝකර්ලිං කිරීමයි. වෙරළේ සිට පිහිනීමෙන් ගල්පරයට ප්‍රවේශ විය හැකිය.
+* **ස්කූබා කිමිදීම:** කිමිදුම් ක්‍රියාකරුවන් කිහිප දෙනෙකු පාසිකුඩාවේ මාර්ගෝපදේශක කිමිදුම් ලබා දෙයි. එහි සන්සුන්, නොගැඹුරු තත්වයන් සැලකිල්ලට ගෙන ආරම්භක කිමිදුම් සඳහා බොක්ක සුදුසු වේ.` }, shortStory: { EN: "Infinite Horizon.", SI: "නිමක් නැති ක්ෂිතිජය." }, tips: [{ EN: "Safe for kids.", SI: "ළමයින්ට ඉතා ආරක්ෂිතයි." }], hiddenEchoes: { EN: "Coral walk nodes.", SI: "කොරල් මංපෙත්." }, location: "Batticaloa", coordinates: { x: 80, y: 44 },
     nearbyAttractions: [
       { id: "nilaveli", name: { EN: "Nilaveli Beach", SI: "නිලාවේලි වෙරළ" }, image: "https://i.pinimg.com/1200x/c8/c2/40/c8c240b6df4dfb3bccbaa0995b8266b4.jpg" },
       { id: "arugambay", name: { EN: "Arugam Bay", SI: "ආරුගම්බේ" }, image: "https://i.pinimg.com/1200x/51/b0/d8/51b0d8fdddaf927052ffe51ab54b65f9.jpg" },

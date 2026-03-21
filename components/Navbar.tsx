@@ -83,15 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({
       id: 'heritage', 
       label: { EN: 'Heritage', SI: 'උරුමය' }, 
       icon: <Landmark size={14} />,
-      hasDropdown: true,
-      items: [
-        { id: 'foods', label: { EN: 'Food', SI: 'ආහාර' }, icon: <Utensils size={14} /> },
-        { id: 'phrases', label: { EN: 'Language', SI: 'භාෂාව' }, icon: <Languages size={14} /> },
-        { id: 'music', label: { EN: 'Music', SI: 'සංගීතය' }, icon: <Music size={14} /> },
-        { id: 'arts-crafts', label: { EN: 'Arts & Crafts', SI: 'අත්කම්' }, icon: <Palette size={14} /> },
-        { id: 'medicine', label: { EN: 'Medicine', SI: 'වෙදකම' }, icon: <Activity size={14} /> },
-        { id: 'festivals', label: { EN: 'Festivals', SI: 'උත්සව' }, icon: <Calendar size={14} /> },
-      ]
+      hasDropdown: false
     },
     { 
       id: 'booking-nav', 

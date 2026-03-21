@@ -16,7 +16,8 @@ const REGISTRY_01 = [
     status: '92% SCANNED',
     image: 'https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg',
     type: 'FORTRESS',
-    progress: 92
+    progress: 92,
+    price: 150
   },
   {
     id: 'kandy',
@@ -24,7 +25,8 @@ const REGISTRY_01 = [
     status: '65% PROCESSING',
     image: 'https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?auto=format&fit=crop&w=800&q=80',
     type: 'SACRED',
-    progress: 65
+    progress: 65,
+    price: 120
   },
   {
     id: 'ella',
@@ -32,7 +34,8 @@ const REGISTRY_01 = [
     status: '40% RENDERING',
     image: 'https://images.unsplash.com/photo-1578519050142-afb511e518de?auto=format&fit=crop&w=800&q=80',
     type: 'HERITAGE',
-    progress: 40
+    progress: 40,
+    price: 100
   },
   {
     id: 'galle',
@@ -40,7 +43,8 @@ const REGISTRY_01 = [
     status: '15% INITIALIZING',
     image: 'https://images.unsplash.com/photo-1654561773591-57b9413c45c0?auto=format&fit=crop&w=800&q=80',
     type: 'COASTAL',
-    progress: 15
+    progress: 15,
+    price: 130
   }
 ];
 

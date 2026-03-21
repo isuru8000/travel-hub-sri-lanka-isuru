@@ -117,6 +117,76 @@ const Heritage: React.FC<HeritageProps> = ({ language, setView, onBack }) => {
           </div>
         </div>
       </div>
+
+      {/* Mahavamsa Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-20">
+        <div className="bg-[#262626] rounded-3xl p-8 md:p-16 text-white shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-heritage font-bold mb-8 text-amber-500">
+            {language === 'EN' ? 'The Mahavamsa: Our Great Chronicle' : 'මහාවංශය: අපගේ මහා වංශකථාව'}
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl">
+            {language === 'EN' 
+              ? "The Mahavamsa is a historical chronicle written in the Pali language, documenting the history of Sri Lanka from the arrival of Prince Vijaya in 543 BCE. It is considered one of the most important historical documents in the world, providing a continuous record of the island's kings, religious developments, and cultural evolution."
+              : "මහාවංශය යනු ක්‍රි.පූ. 543 දී විජය කුමරුගේ පැමිණීමේ සිට ශ්‍රී ලංකාවේ ඉතිහාසය ලේඛනගත කරමින් පාලි භාෂාවෙන් ලියන ලද ඓතිහාසික වංශකථාවකි. එය ලෝකයේ වැදගත්ම ඓතිහාසික ලේඛනයක් ලෙස සැලකෙන අතර, දිවයිනේ රජවරුන්, ආගමික වර්ධනයන් සහ සංස්කෘතික පරිණාමය පිළිබඳ අඛණ්ඩ වාර්තාවක් සපයයි."}
+          </p>
+        </div>
+      </div>
+
+      {/* Traditional Architecture Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-20">
+        <div className="bg-white rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
+          <h2 className="text-4xl md:text-5xl font-heritage font-bold mb-8 text-[#262626]">
+            {language === 'EN' ? 'Traditional Architecture: The Vatadage' : 'සාම්ප්‍රදායික වාස්තු විද්‍යාව: වටදාගෙය'}
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+            {language === 'EN' 
+              ? "A unique circular relic house, the Vatadage is a masterpiece of ancient Sri Lankan architecture. These structures, often featuring intricate stone carvings and lotus-shaped pillars, were designed to protect sacred stupas, showcasing the advanced engineering and artistic skills of our ancestors."
+              : "අද්විතීය වෘත්තාකාර ධාතු මන්දිරයක් වන වටදාගෙය පුරාණ ශ්‍රී ලංකා වාස්තු විද්‍යාවේ විශිෂ්ට නිර්මාණයකි. සංකීර්ණ ගල් කැටයම් සහ නෙළුම් මල් හැඩැති කුළුණු වලින් සමන්විත මෙම ව්‍යුහයන්, පූජනීය ස්තූප ආරක්ෂා කිරීම සඳහා නිර්මාණය කර ඇති අතර, අපගේ මුතුන් මිත්තන්ගේ උසස් ඉංජිනේරු සහ කලාත්මක කුසලතා විදහා දක්වයි."}
+          </p>
+        </div>
+      </div>
+
+      {/* Kandyan Dance Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-20">
+        <div className="bg-amber-50 rounded-3xl p-8 md:p-16 shadow-xl border border-amber-100">
+          <h2 className="text-4xl md:text-5xl font-heritage font-bold mb-8 text-amber-900">
+            {language === 'EN' ? 'Kandyan Dance: The Rhythm of the Island' : 'උඩරට නැටුම්: දිවයිනේ රිද්මය'}
+          </h2>
+          <p className="text-lg md:text-xl text-amber-800 leading-relaxed max-w-3xl">
+            {language === 'EN' 
+              ? "Originating from the central highlands, Kandyan dance is a vibrant and energetic art form. Characterized by intricate footwork, rhythmic drumming, and elaborate costumes, it has been passed down through generations, serving as a powerful expression of cultural identity and spiritual devotion."
+              : "මධ්‍යම කඳුකරයෙන් ආරම්භ වූ උඩරට නැටුම් යනු විචිත්‍රවත් සහ ජවසම්පන්න කලා මාධ්‍යයකි. සංකීර්ණ පාද චලනයන්, රිද්මයානුකූල බෙර වාදනය සහ විචිත්‍රවත් ඇඳුම් පැළඳුම් වලින් සමන්විත මෙය, පරම්පරා ගණනාවක් පුරා සංස්කෘතික අනන්‍යතාවයේ සහ ආධ්‍යාත්මික භක්තියේ ප්‍රබල ප්‍රකාශනයක් ලෙස පවත්වාගෙන එනු ලැබේ."}
+          </p>
+        </div>
+      </div>
+
+      {/* Traditional Ayurveda Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-20">
+        <div className="bg-emerald-50 rounded-3xl p-8 md:p-16 shadow-xl border border-emerald-100">
+          <h2 className="text-4xl md:text-5xl font-heritage font-bold mb-8 text-emerald-900">
+            {language === 'EN' ? 'Ayurveda: Ancient Wisdom of Healing' : 'ආයුර්වේදය: පුරාණ සුව කිරීමේ ප්‍රඥාව'}
+          </h2>
+          <p className="text-lg md:text-xl text-emerald-800 leading-relaxed max-w-3xl">
+            {language === 'EN' 
+              ? "Ayurveda, the traditional medicine system of Sri Lanka, is deeply rooted in the island's culture. Using natural herbs, oils, and holistic treatments, it focuses on balancing the body, mind, and spirit. It has been used for centuries to promote longevity and well-being."
+              : "ශ්‍රී ලංකාවේ සාම්ප්‍රදායික වෛද්‍ය ක්‍රමය වන ආයුර්වේදය දිවයිනේ සංස්කෘතිය තුළ ගැඹුරින් මුල් බැස ඇත. ස්වභාවික ඖෂධ පැළෑටි, තෙල් සහ පරිපූර්ණ ප්‍රතිකාර භාවිතා කරමින්, එය ශරීරය, මනස සහ ආත්මය සමතුලිත කිරීම කෙරෙහි අවධානය යොමු කරයි. එය සියවස් ගණනාවක් තිස්සේ දීර්ඝායුෂ සහ යහපැවැත්ම ප්‍රවර්ධනය කිරීම සඳහා භාවිතා කර ඇත."}
+          </p>
+        </div>
+      </div>
+
+      {/* Traditional Cuisine Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-20">
+        <div className="bg-orange-50 rounded-3xl p-8 md:p-16 shadow-xl border border-orange-100">
+          <h2 className="text-4xl md:text-5xl font-heritage font-bold mb-8 text-orange-900">
+            {language === 'EN' ? 'Traditional Cuisine: The Art of Rice & Curry' : 'සාම්ප්‍රදායික ආහාර: බත් සහ කරිය'}
+          </h2>
+          <p className="text-lg md:text-xl text-orange-800 leading-relaxed max-w-3xl">
+            {language === 'EN' 
+              ? "Sri Lankan cuisine is famous for its bold flavors, aromatic spices, and coconut-based dishes. The traditional 'Rice and Curry' meal is a culinary experience that reflects the island's agricultural richness, bringing together a variety of vegetable, meat, and fish curries served with red or white rice."
+              : "ශ්‍රී ලංකීය ආහාර එහි තියුණු රසයන්, සුවඳවත් කුළුබඩු සහ පොල් පදනම් කරගත් කෑම වර්ග සඳහා ප්‍රසිද්ධය. සාම්ප්‍රදායික 'බත් සහ කරිය' ආහාර වේල යනු දිවයිනේ කෘෂිකාර්මික සශ්‍රීකත්වය පිළිබිඹු කරන සූපශාස්ත්‍ර අත්දැකීමකි, එය රතු හෝ සුදු බත් සමඟ පිළිගන්වන විවිධ එළවළු, මස් සහ මාළු කරි එකතු කරයි."}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
