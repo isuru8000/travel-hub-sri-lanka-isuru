@@ -1,6 +1,6 @@
 {
-  "name": "Remix: Travel Hub Sri Lanka  isuru",
-  "description": "Travel Hub Sri Lanka - Your ultimate guide to exploring the ancient heritage, pristine beaches, and vibrant culture of Sri Lanka. Discover the soul of the island with our modern travel experience.",
+  "name": "Nearby Places - Sri Lanka",
+  "description": "Discover interesting places around you in Sri Lanka. Use your location to find nearby attractions, restaurants, and landmarks.",
   "requestFramePermissions": [
     "camera",
     "geolocation"

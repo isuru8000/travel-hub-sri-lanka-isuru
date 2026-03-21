@@ -25,12 +25,11 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   }, []);
 
   const heroImages = [
-    "https://picsum.photos/seed/nature/1920/1080"
+    "https://images.unsplash.com/photo-1588598116712-2902f9639fd4?auto=format&fit=crop&w=1920&q=80"
   ];
 
   const mobileHeroImages = [
-    "https://picsum.photos/seed/forest/800/600",
-    "https://picsum.photos/seed/landscape/800/600"
+    "https://i.pinimg.com/736x/bb/5b/02/bb5b021616ea1497a62f5058dcde2beb.jpg"
   ];
 
   const stats = [
@@ -44,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
     : ["සීගිරිය", "ඇල්ල", "ගාල්ල", "මහනුවර", "මිරිස්ස", "නුවරඑළිය", "යාල", "අනුරාධපුරය"];
 
   useEffect(() => {
-    if (!isMobile) {
+    if (isMobile) {
       const mobileInterval = setInterval(() => {
         setMobileImageIndex((prevIndex) => (prevIndex + 1) % mobileHeroImages.length);
       }, 6000);

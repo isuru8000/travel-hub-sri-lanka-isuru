@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Language, User, Destination, View } from './types';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
+import NearbyPlaces from './components/NearbyPlaces';
 import PopularHighlights from './components/PopularHighlights';
 import DiscoveryTransition from './components/DiscoveryTransition';
 import DestinySection from './components/DestinySection';
@@ -291,6 +292,7 @@ export default function App() {
       default:
         return (
           <div className="relative">
+            <NearbyPlaces language={language} />
             <Hero language={language} setView={setView} user={user} />
             <div className="relative z-10">
               <DiscoveryTransition language={language} />
@@ -359,7 +361,7 @@ export default function App() {
     }
 
     const titles: Record<string, string> = {
-      home: "Travel Hub Sri Lanka | Your Ultimate Guide to an Unforgettable Journey",
+      home: "Nearby Places - Sri Lanka | Your Ultimate Guide to an Unforgettable Journey",
       foods: "Traditional Sri Lankan Cuisine | Culinary Journey with Travel Hub",
       festivals: "Cultural Festivals of Sri Lanka | Experience the Vibrant Traditions",
       destinations: "Best Places to Visit in Sri Lanka | Travel Hub Destinations",
@@ -421,7 +423,7 @@ export default function App() {
     }
 
     const keywords: Record<string, string> = {
-      home: "Sri Lanka travel guide, best places in Sri Lanka, Sri Lanka tour, Travel Hub Sri Lanka",
+      home: "Nearby Places Sri Lanka, Sri Lanka travel guide, best places in Sri Lanka, Sri Lanka tour, Travel Hub Sri Lanka",
       foods: "Sri Lankan food, traditional Sri Lankan cuisine, Ceylon spices, Sri Lankan recipes, street food Sri Lanka",
       festivals: "Sri Lankan festivals, Esala Perahera, Vesak Sri Lanka, cultural events Sri Lanka",
       destinations: "Sri Lanka tourist attractions, Sigiriya, Ella, Galle, Yala safari, Kandy",
