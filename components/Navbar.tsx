@@ -119,11 +119,11 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[96%] md:w-[98%] max-w-7xl bg-white border border-gray-100 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-4 md:px-5' : 'py-2 px-4 md:py-2.5 md:px-8'}`}>
+    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[85%] md:w-[98%] max-w-7xl bg-white border border-gray-100 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-3 md:px-5' : 'py-1.5 px-3 md:py-2.5 md:px-8'}`}>
       <div className="flex items-center justify-between">
         {/* Brand */}
         <div className="flex items-center gap-3 md:gap-4 cursor-pointer group shrink-0" onClick={() => handleNav('home')}>
-          <div className="scale-125">
+          <div className="scale-110 md:scale-125">
             <AnimatedLogo />
           </div>
         </div>
@@ -199,14 +199,14 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Mobile Toggle */}
-        <button className="lg:hidden p-2 md:p-3 rounded-xl md:rounded-2xl bg-gray-100 border border-gray-200 text-[#0a0a0a]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={20} className="md:w-[22px] md:h-[22px]" /> : <Menu size={20} className="md:w-[22px] md:h-[22px]" />}
+        <button className="lg:hidden p-1.5 md:p-3 rounded-xl md:rounded-2xl bg-gray-100 border border-gray-200 text-[#0a0a0a]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X size={18} className="md:w-[22px] md:h-[22px]" /> : <Menu size={18} className="md:w-[22px] md:h-[22px]" />}
         </button>
       </div>
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className="fixed inset-x-0 top-full mt-2 md:mt-4 bg-white/95 backdrop-blur-3xl rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.2)] border border-gray-200/50 p-4 md:p-8 flex flex-col gap-4 md:gap-8 animate-in slide-in-from-top-4 duration-500 max-h-[85vh] overflow-y-auto w-full">
+        <div className="absolute left-0 right-0 top-full mt-2 md:mt-4 bg-white/95 backdrop-blur-3xl rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.2)] border border-gray-200/50 p-4 md:p-8 flex flex-col gap-4 md:gap-8 animate-in slide-in-from-top-4 duration-500 max-h-[85vh] overflow-y-auto w-full">
           {/* Header Identity in Mobile Menu */}
           <div className="flex items-center gap-3 md:gap-5 px-4 py-3 md:px-6 md:py-4 bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm shrink-0 border border-gray-100">
              <AnimatedLogo />

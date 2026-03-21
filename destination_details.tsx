@@ -521,34 +521,6 @@ Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihin
     ]
   },
   {
-    id: "mirissa",
-    name: { EN: "Mirissa", SI: "මිරිස්ස" },
-    category: "beach",
-    image: "https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg",
-    gallery: ["https://i.pinimg.com/736x/8b/20/84/8b20845913d1b7fef10a72a7472de8d3.jpg"],
-    history: { EN: "Mirissa is a beautiful beach town on the southern coast, famous for whale watching and its crescent-shaped beach.", SI: "මිරිස්ස දකුණු වෙරළ තීරයේ පිහිටි සුන්දර වෙරළ නගරයකි." },
-    shortStory: { EN: "Whale watching paradise.", SI: "තල්මසුන් නැරඹීමේ පාරාදීසය." },
-    tips: [{ EN: "Go for whale watching early in the morning.", SI: "උදෑසනම තල්මසුන් නැරඹීමට යන්න." }],
-    hiddenEchoes: { EN: "It is one of the best places in the world to see blue whales.", SI: "නිල් තල්මසුන් දැකගත හැකි ලොව හොඳම ස්ථානවලින් එකකි." },
-    location: "Mirissa",
-    coordinates: { x: 45, y: 95 },
-    nearbyAttractions: []
-  },
-  {
-    id: "ella",
-    name: { EN: "Ella", SI: "ඇල්ල" },
-    category: "mountains",
-    image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg",
-    gallery: ["https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg"],
-    history: { EN: "Ella is a small town in the high country, known for its stunning views, tea plantations, and the Nine Arch Bridge.", SI: "ඇල්ල කඳුකරයේ පිහිටි සුන්දර නගරයකි." },
-    shortStory: { EN: "A mountain retreat with breathtaking views.", SI: "අතිවිශිෂ්ට දසුන් සහිත කඳුකර නවාතැනක්." },
-    tips: [{ EN: "Hike to Little Adam's Peak for sunrise.", SI: "හිරු උදාව නැරඹීමට කුඩා ආදම්ගේ කන්ද තරණය කරන්න." }],
-    hiddenEchoes: { EN: "The Nine Arch Bridge is a marvel of colonial engineering.", SI: "නව ආරුක්කු පාලම යටත් විජිත ඉංජිනේරු විද්‍යාවේ විස්මිත නිර්මාණයකි." },
-    location: "Ella",
-    coordinates: { x: 60, y: 60 },
-    nearbyAttractions: []
-  },
-  { 
     id: "dambulla", 
     name: { EN: "Dambulla Temple", SI: "දඹුලු විහාරය" }, 
     category: "ancient", 

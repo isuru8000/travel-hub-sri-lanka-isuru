@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Language, User, Destination, View } from './types';
 import Layout from './components/Layout';
 import Hero from './components/Hero';
-import NearbyPlaces from './components/NearbyPlaces';
 import PopularHighlights from './components/PopularHighlights';
 import DiscoveryTransition from './components/DiscoveryTransition';
 import DestinySection from './components/DestinySection';
@@ -292,7 +291,6 @@ export default function App() {
       default:
         return (
           <div className="relative">
-            <NearbyPlaces language={language} />
             <Hero language={language} setView={setView} user={user} />
             <div className="relative z-10">
               <DiscoveryTransition language={language} />

@@ -24,7 +24,7 @@ const AnimatedLogo: React.FC = () => {
           <img 
             src="https://lh3.googleusercontent.com/d/1dxsYOR-B3HwShDO_7EQPkQUW3g4uBMw4" 
             alt="Travel Hub Logo" 
-            className="h-20 w-20 object-contain"
+            className="h-12 w-12 md:h-20 md:w-20 object-contain"
             referrerPolicy="no-referrer"
           />
         </motion.div>
