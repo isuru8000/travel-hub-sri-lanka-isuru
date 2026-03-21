@@ -139,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({
             >
               <button
                 onClick={() => handleNav(link.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all duration-500 relative group/link ${
+                className={`flex items-center gap-2 px-3 py-2.5 rounded-full text-[9px] xl:text-[10px] font-bold uppercase tracking-wider transition-all duration-500 relative group/link whitespace-nowrap ${
                   currentView === link.id || (link.hasDropdown && link.items?.some(i => i.id === currentView))
                     ? 'bg-black/5 text-[#0a0a0a]' 
                     : 'text-gray-600 hover:text-[#0a0a0a] hover:bg-black/5'

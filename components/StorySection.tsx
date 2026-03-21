@@ -36,72 +36,93 @@ const StorySection: React.FC<StorySectionProps> = ({ language, setView }) => {
   return (
     <section id="about" className="py-20 md:py-40 bg-white relative overflow-hidden border-t border-gray-50">
       <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 items-center">
-          <div className="space-y-12">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-4 px-6 py-2 rounded-full bg-black/5 border border-black/10 text-gray-400 text-[9px] font-black uppercase tracking-[0.5em]">
-                <Users size={14} className="text-[#E1306C]" />
-                Voyager_Social_Archive
-              </div>
-              <h2 className="text-4xl md:text-7xl font-heritage font-bold text-[#0a0a0a] tracking-tighter uppercase leading-none">
-                {UI_STRINGS.travelMemories[language]}
-              </h2>
-              <div className="w-24 h-1.5 insta-gradient rounded-full shadow-lg" />
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+          <div className="space-y-6 max-w-2xl">
+            <div className="inline-flex items-center gap-4 px-6 py-2 rounded-full bg-black/5 border border-black/10 text-gray-400 text-[9px] font-black uppercase tracking-[0.5em]">
+              <Users size={14} className="text-[#E1306C]" />
+              Voyager_Social_Archive
             </div>
-
-            <div className="space-y-8">
-              {stories.map((s, i) => (
-                <p key={i} className="text-xl md:text-2xl font-light leading-relaxed italic border-l-4 border-[#E1306C]/20 pl-8 py-2 text-gray-500">
-                  "{s[language]}"
-                </p>
-              ))}
-            </div>
-            
-            <button 
-              onClick={() => setView('community')}
-              className="group relative flex items-center gap-8 px-12 py-6 bg-[#0a0a0a] text-white rounded-[2.5rem] shadow-[0_30px_70px_rgba(225,48,108,0.3)] transition-all duration-500 hover:scale-105 active:scale-95 overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#E1306C] to-[#f09433] opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:rotate-12">
-                 <History size={24} />
-              </div>
-              <div className="relative z-10 flex flex-col items-start leading-none">
-                 <span className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-1">Public Journal</span>
-                 <span className="text-sm font-bold uppercase tracking-[0.2em]">
-                    {language === 'EN' ? 'Explore Community Journal' : 'සමූහයේ මතක සටහන්'}
-                 </span>
-              </div>
-              <ArrowRight size={20} className="relative z-10 text-white/50 group-hover:translate-x-2 transition-transform" />
-            </button>
+            <h2 className="text-4xl md:text-7xl font-heritage font-bold text-[#0a0a0a] tracking-tighter uppercase leading-none">
+              {UI_STRINGS.travelMemories[language]}
+            </h2>
+            <div className="w-24 h-1.5 insta-gradient rounded-full shadow-lg" />
           </div>
 
-          <div className="grid grid-cols-2 gap-8 md:gap-12 relative">
-            {/* Visual HUD Decoration */}
-            <div className="absolute -inset-10 opacity-[0.03] text-black pointer-events-none -z-10">
-               <History size={400} className="animate-spin-slow" />
+          <button 
+            onClick={() => setView('community')}
+            className="group relative flex items-center gap-8 px-12 py-6 bg-[#0a0a0a] text-white rounded-[2.5rem] shadow-[0_30px_70px_rgba(225,48,108,0.3)] transition-all duration-500 hover:scale-105 active:scale-95 overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-[#E1306C] to-[#f09433] opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:rotate-12">
+               <History size={24} />
             </div>
+            <div className="relative z-10 flex flex-col items-start leading-none">
+               <span className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-1">Public Journal</span>
+               <span className="text-sm font-bold uppercase tracking-[0.2em]">
+                  {language === 'EN' ? 'Explore Community Journal' : 'සමූහයේ මතක සටහන්'}
+               </span>
+            </div>
+            <ArrowRight size={20} className="relative z-10 text-white/50 group-hover:translate-x-2 transition-transform" />
+          </button>
+        </div>
 
-            <div className="space-y-8 pt-20">
-              <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Temple" />
+        {/* Stories Horizontal Scroll - Spreading horizontally across the page */}
+        <div className="relative group/scroll">
+          <div className="flex overflow-x-auto gap-8 md:gap-12 pb-16 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 mb-20">
+            {stories.map((s, i) => (
+              <div 
+                key={i} 
+                className="min-w-[85vw] md:min-w-[450px] snap-center space-y-8 group bg-stone-50/50 p-8 md:p-12 rounded-[3rem] border border-stone-100 hover:bg-white hover:shadow-[0_40px_80px_rgba(0,0,0,0.05)] transition-all duration-700"
+              >
+                 <div className="flex items-center gap-6">
+                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[12px] font-black text-[#E1306C] group-hover:bg-[#E1306C] group-hover:text-white transition-all duration-500">
+                      0{i+1}
+                    </div>
+                    <div className="h-px flex-grow bg-gray-200 group-hover:bg-[#E1306C]/20 transition-colors" />
+                    <span className="text-[9px] font-black text-gray-300 uppercase tracking-[0.4em]">Historical_Echo</span>
+                 </div>
+                 <p className="text-xl md:text-2xl font-light leading-relaxed italic text-gray-500 group-hover:text-gray-900 transition-colors">
+                   "{s[language]}"
+                 </p>
+                 <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="w-12 h-1 bg-[#E1306C]/20 rounded-full" />
+                 </div>
               </div>
-              <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Statue" />
-              </div>
-            </div>
-            <div className="space-y-8">
-              <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform rotate-6 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Culture" />
-              </div>
-              <div className="story-ring p-[2px] rounded-[3rem] shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden">
-                 <img src="https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg" loading="lazy" className="rounded-[2.9rem] w-full hover:opacity-100 transition-all duration-1000" alt="Nature" />
-              </div>
-            </div>
+            ))}
+          </div>
+          
+          {/* Scroll Hint */}
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 opacity-20 group-hover/scroll:opacity-50 transition-opacity">
+             <div className="w-24 h-[1px] bg-black" />
+             <span className="text-[8px] font-black uppercase tracking-[0.4em]">Swipe to Explore</span>
+             <div className="w-24 h-[1px] bg-black" />
+          </div>
+        </div>
+
+        {/* Visual Gallery Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 relative">
+          {/* Visual HUD Decoration */}
+          <div className="absolute -inset-20 opacity-[0.02] text-black pointer-events-none -z-10 flex items-center justify-center">
+             <History size={600} className="animate-spin-slow" />
+          </div>
+
+          <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5]">
+             <img src="https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Temple" />
+          </div>
+          <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5] mt-8 md:mt-16">
+             <img src="https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Statue" />
+          </div>
+          <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5]">
+             <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Culture" />
+          </div>
+          <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5] mt-8 md:mt-16">
+             <img src="https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Nature" />
           </div>
         </div>
       </div>
       <style dangerouslySetInnerHTML={{ __html: `
-        .animate-spin-slow { animation: spin 30s linear infinite; }
+        .animate-spin-slow { animation: spin 40s linear infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       `}} />
     </section>

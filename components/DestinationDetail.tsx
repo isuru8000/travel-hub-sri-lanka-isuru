@@ -334,8 +334,8 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
            )}
 
            {/* MAIN CONTENT BLOCK */}
-           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
-              <div className="lg:col-span-7 space-y-12 md:space-y-20">
+           <div className="flex flex-col gap-12 lg:gap-20 items-stretch">
+              <div className="w-full space-y-12 md:space-y-20">
 
                  {/* 1. Long Narrative Section (About Destination) */}
                  <div className="space-y-8 md:space-y-12 relative bg-white/60 backdrop-blur-md p-8 md:p-16 rounded-[4rem] border border-[#5A5A40]/10 shadow-sm">
@@ -349,8 +349,8 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                     </div>
 
                     <div className="relative group">
-                       <div className="font-serif text-xl md:text-2xl text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
-                          <div className="prose-container first-letter:text-6xl md:first-letter:text-8xl first-letter:font-serif first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] first-letter:mt-2 first-letter:text-[#5A5A40]">
+                       <div className="font-serif text-base md:text-lg text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
+                          <div className="prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] first-letter:mt-2 first-letter:text-[#5A5A40]">
                           {(() => {
                              const detailedContent = destination.detailedAbout?.[language];
                              const isPending = detailedContent?.includes("pending for this node") || detailedContent?.includes("සකසමින් පවතී");
@@ -363,7 +363,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              if (!content) return <p className="italic text-[#5A5A40]/40">Archival data loading...</p>;
 
                              return (
-                               <div className="prose prose-lg md:prose-2xl prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-strong:text-[#5A5A40] prose-li:marker:text-[#5A5A40]">
+                               <div className="prose prose-base md:prose-lg prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-strong:text-[#5A5A40] prose-li:marker:text-[#5A5A40]">
                                  <ReactMarkdown>{content}</ReactMarkdown>
                                </div>
                              );
@@ -387,7 +387,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                              <div className="absolute top-0 right-0 p-4 md:p-8 opacity-[0.03] group-hover:rotate-12 transition-transform duration-1000">
                                 <Compass size={200} className="w-32 h-32 md:w-48 md:h-48" />
                              </div>
-                             <p className="text-xl sm:text-2xl md:text-3xl text-[#2d2d2d] italic font-medium leading-relaxed relative z-10">
+                             <p className="text-lg sm:text-xl md:text-2xl text-[#2d2d2d] italic font-medium leading-relaxed relative z-10">
                                 "{deepDive.hiddenEchoes}"
                              </p>
                           </div>
@@ -400,10 +400,10 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
               </div>
 
               {/* Sidebar Display Hub */}
-              <div className="lg:col-span-5 flex flex-col gap-8 md:gap-12">
+              <div className="w-full flex flex-col gap-8 md:gap-12">
                  
                  {/* Map Manifold Frame */}
-                 <div className="relative h-[400px] md:h-[600px] bg-white p-4 border border-[#5A5A40]/10 rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden group">
+                 <div className="relative h-[400px] md:h-[600px] w-full bg-white p-4 border border-[#5A5A40]/10 rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden group">
                     <iframe 
                       src={googleMapsIframeUrl}
                       className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
@@ -414,7 +414,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
                  {/* Temporal Sync & Voyager Wisdom */}
                  {deepDive && !deepDive.isThrottled && (
-                    <div className="space-y-10 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-[#5A5A40]/10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-[#5A5A40]/10">
                        <div className="space-y-6">
                           <div className="flex items-center gap-4">
                              <div className="w-10 h-10 rounded-xl bg-[#5A5A40]/10 flex items-center justify-center text-[#5A5A40]">

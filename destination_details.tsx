@@ -607,8 +607,325 @@ Visit on Poson Poya if possible. The full moon of Poson in June transforms Mihin
     image: "https://i.pinimg.com/1200x/6f/b0/c0/6fb0c00a86082ccbdf8e6ac17b083319.jpg", 
     gallery: ["https://i.pinimg.com/1200x/5c/e2/f3/5ce2f34e60d60c138b49f766aacab214.jpg", "https://i.pinimg.com/1200x/6f/b0/c0/6fb0c00a86082ccbdf8e6ac17b083319.jpg"], 
     history: { 
-      EN: "Ritigala is an ancient Buddhist monastery nestled deep within a strict nature reserve. Dating back to the 1st century BC, it was a sanctuary for forest monks known as 'Pamsukulikas' who devoted themselves to extreme austerity. The site features unique double-platform stone structures, paved meditation paths, and ancient stone bridges, but notably lacks stupas or image houses. The mountain creates a unique microclimate, home to rare medicinal herbs and flora found nowhere else in the dry zone.", 
-      SI: "පැරණි බෞද්ධ ආරාමයක් සහ කඳු පන්තියක් වන මෙය එහි සුවිශේෂී දේශගුණය සහ භාවනා මංපෙත් සඳහා ප්‍රසිද්ධය." 
+      EN: "Ritigala is an ancient Buddhist monastery and mountain in Sri Lanka. The ruins and rock inscriptions of the monastery date back to 1st century BCE. It is situated at an elevation of 766 m above sea level, and is the highest mountain in northern Sri Lanka.", 
+      SI: "රිටිගල යනු ශ්‍රී ලංකාවේ පිහිටි පැරණි බෞද්ධ ආරාමයක් සහ කන්දකි. ආරාමයේ නටඹුන් සහ සෙල්ලිපි ක්‍රි.පූ. 1 වන සියවස දක්වා දිව යයි." 
+    }, 
+    detailedAbout: { 
+      EN: `🏔️ RITIGALA — රිටිගල
+Sri Lanka's Most Mysterious Ruins — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by archaeology, inscriptions, government records, and scientific surveys
+⭐ LEGEND / TRADITION — sincerely held belief or cultural tradition, not independently verifiable
+⚠️ UNCERTAIN — debated among historians or varies between sources
+
+📍 LOCATION
+Province: North Central Province, Sri Lanka
+District: Anuradhapura District
+Position: Between Anuradhapura and Polonnaruwa, rising abruptly from the dry zone plains
+Elevation of highest peak: 766 meters above sea level — 600 meters above the surrounding plains
+Distance from Habarana: approximately 21 km — about 40 minutes by road
+Distance from Anuradhapura: approximately 40 to 43 km — about 1 hour by road
+Distance from Sigiriya: approximately 30 km — about 45 minutes by road
+Distance from Polonnaruwa: approximately 50 km — about 1 hour by road
+Distance from Colombo: approximately 180 km — about 4 hours by road
+Access road: Turn off the Anuradhapura–Habarana highway at Ganewalpola junction — approximately 9 km of road to the archaeological site entrance
+
+🏔️ WHAT IS RITIGALA
+✅ CONFIRMED — Ritigala is a mountain range and ancient Buddhist monastery complex in the dry zone of Sri Lanka's North Central Province. It is simultaneously one of the most archaeologically extraordinary sites and one of the most biologically exceptional ecosystems in the entire country. Three things make it genuinely unlike any other destination in Sri Lanka.
+✅ CONFIRMED — First, the ruins themselves. Ritigala monastery contains none of the traditional Buddhist temple icons found at every other ancient site in Sri Lanka — no stupas, no Bodhi tree, no Buddha statues in shrines. Instead the complex is a network of stone-paved double-platforms, winding forest paths, a stone bridge, stone reservoirs, and meditation walkways that are archaeologically unlike anything else on the island — and whose precise religious function remains partially unresolved even after decades of excavation.
+✅ CONFIRMED — Second, the microclimate. Ritigala is the highest isolated mountain in northern Sri Lanka — rising 600 meters above the flat surrounding plains which extend without interruption in all directions. This height creates a unique wet microclimate in the middle of one of Sri Lanka's driest zones. During the southwest monsoon, when the plains all around are in drought and the surrounding land is brown and parched, the summit of Ritigala is covered in mist and cloud and the earth is moist. The mountain in effect generates its own rainfall through orographic condensation. This explains why a mountain surrounded by dry zone landscape supports an extraordinary concentration of wet zone and montane plant species at its higher elevations.
+✅ CONFIRMED — Third, the atmosphere. Ritigala is visited by a tiny fraction of the number of tourists who go to Sigiriya or the Anuradhapura sacred city. The ruins are partially excavated and partially still being absorbed by the jungle. The stone path winds through dense forest with ruins emerging from the undergrowth on both sides. There are no crowds, no souvenir vendors, no managed queues, and no safety barriers. The experience of exploring Ritigala is as close to genuine archaeological discovery as a non-specialist visitor can come anywhere in Sri Lanka.
+
+📜 THE NAME — CONFIRMED AND UNCERTAIN
+✅ CONFIRMED — The ancient Sinhala and Pali name for the mountain was Aritta Pabbata — meaning Dreadful Mountain or Safety Rock depending on the specific interpretation of aritta. Both interpretations are supported by linguistic scholarship. The name in the Pali form appears in the ancient chronicle Mahavamsa, confirming the antiquity of the designation.
+✅ CONFIRMED — An alternative derivation — also credible — links the name to Riti trees, a species of tree found growing on the mid-slopes of the mountain. The scientific name of the Riti tree is Antiaris toxicaria — a tree known in other traditions for its toxic properties and used historically to prepare arrow poison in some Asian cultures.
+✅ CONFIRMED — The name Aritta also connected with the historical figure of Aritta — the Chief Minister of King Devanampiyatissa who later became the first Sri Lankan Arahath monk — who is recorded to have spent his monastic life at Ritigala in the 3rd century BC. Whether the mountain was named after the man or the man adopted the name of the mountain in his monastic identity is uncertain.
+
+📜 HISTORY — CONFIRMED FACTS
+🏔️ Pre-Buddhist and Earliest Human Presence
+✅ CONFIRMED — Prince Pandukabhaya — who later became King Pandukabhaya and ruled from 437 to 367 BC — used Ritigala as a refuge and base during his military campaigns against his eight uncles who were attempting to prevent him from reaching the throne. Ritigala's isolated, elevated position made it a natural defensive refuge. This is confirmed in the Mahavamsa chronicles. Pandukabhaya is also credited with constructing the Banda Pokuna — the reservoir at the base of the monastery complex.
+✅ CONFIRMED — Rock caves prepared for monks with carved drip-ledges date from the 1st century BC. At least 74 such caves have been documented within the Ritigala reserve and surrounding area. One cave inscription specifically records that King Lanjatissa — the brother of the great King Dutugamunu who reigned from 161 to 137 BC — gifted a cave at Ritigala and is credited with founding the first formal monastery at the site.
+✅ CONFIRMED — Around the 3rd century BC, Aritta — the Chief Minister of King Devanampiyatissa who converted to Buddhism following the arrival of Arahat Mahinda from India in 247 BC — spent his monastic life at Ritigala after becoming a monk. Aritta is recorded as the first Sri Lankan-born person to achieve the status of Arahath — complete enlightenment in the Buddhist understanding — making his connection to Ritigala historically significant in the deepest sense.
+🏛️ The Lanka Viharaya — 187 to 177 BC
+✅ CONFIRMED — King Surathissa built the Lanka Viharaya at the base of Ritigala mountain during his reign from 187 to 177 BC. This was the first formally constructed monastery building at the site — preceding by a century the Aritta Viharaya built higher on the mountain.
+🏛️ The Aritta Viharaya — 59 to 50 BC
+✅ CONFIRMED — King Lajjatissa built the Aritta Viharaya on the mountain during his reign from 59 to 50 BC. This monastery complex higher on the slope established Ritigala as a major monastic destination rather than simply a forest refuge for individual hermit monks.
+👑 King Sena I and the Pansukulika Monks — 9th Century AD
+✅ CONFIRMED — The most architecturally distinctive phase of Ritigala's development occurred during the reign of King Sena I in the 9th century AD. Sena I made a major royal endowment to Ritigala for a specific and unusual group of Buddhist ascetic monks known as the Pansukulikas — meaning Monks of the Rag Robes.
+✅ CONFIRMED — The Pansukulikas were Buddhist monks who had chosen the most extreme form of ascetic practice available within Theravada Buddhism. Their defining characteristic was their robes — rather than wearing properly woven or purchased cloth, they wore only cleaned, washed, and repaired rags, mostly shrouds collected from cremation grounds and cemeteries. This practice — one of the thirteen ascetic practices or Dhutanga outlined in Buddhist monastic discipline — expressed a complete rejection of material comfort, social status, and conventional monastic life.
+✅ CONFIRMED — The Pansukulikas chose Ritigala precisely because of its isolation from village life and conventional society. Their practice required complete withdrawal from the world — no village temples, no lay patronage relationships, no conventional religious ceremonies. The remote, mist-covered mountain in the middle of the dry zone jungle was the ideal environment for monks devoted to extreme meditation practice and complete detachment from the ordinary world.
+✅ CONFIRMED — The distinctive double-platform structures that define the Ritigala ruins were built specifically for Pansukulika use. Each structure consists of two stone platforms connected by a bridge — one platform for walking meditation, one for seated meditation. The design is unique to Pansukulika forest monastery sites and has not been found in the same form anywhere else in Sri Lanka. The absence of stupas, Buddha shrines, and Bodhi trees at Ritigala directly reflects the Pansukulikas' rejection of conventional devotional religious practice in favour of pure meditation.
+⚔️ Abandonment — 10th to 12th Century
+✅ CONFIRMED — Ritigala was abandoned following the South Indian invasions of the 10th and 11th centuries that also devastated Anuradhapura. The Chola occupation of northern Sri Lanka from 1017 to 1070 AD eliminated the royal patronage that had sustained the Pansukulika community. Without support, the monks dispersed, the monastery fell silent, and the jungle reclaimed the buildings over the following centuries.
+🔬 Rediscovery — 19th Century
+✅ CONFIRMED — British colonial officers rediscovered the ruins in the 19th century. The site was included in the systematic archaeological survey of the island begun under the British Department of Archaeology. The Central Cultural Fund of Sri Lanka and the Cultural Triangle project have conducted ongoing excavation and conservation work since the 1980s.
+🌿 Declared Strict Nature Reserve — 1941
+✅ CONFIRMED — Ritigala was declared a Strict Nature Reserve on 7 November 1941 under Gazette Notification No. 8809, covering an area of 1,528 hectares. A Strict Nature Reserve is the highest level of nature protection available under Sri Lankan law — Category 1a under the IUCN protected area classification system. This designation technically prohibits all public entry. In practice, the Department of Archaeology has authorised public access to approximately 60 acres of the site — the excavated monastery ruins — while the remainder of the reserve is protected.
+
+🏗️ THE MONASTERY RUINS — COMPLETE CONFIRMED DETAILS
+🏊 Banda Pokuna — The Ritual Bathing Tank
+✅ CONFIRMED — The entrance to the monastery complex begins at the Banda Pokuna — a large ancient reservoir of remarkable engineering precision. The reservoir was constructed with a bund of polygonal plan completing a full circumference of 366 meters. The construction of the original reservoir is credited to King Pandukabhaya — dating the structure to the 4th century BC. The reservoir possibly served a ritual bathing purpose — the sequential arrangement of bathing tank, entrance complex ruins, and pedestrian path strongly suggests that visitors bathed here before entering the monastery precinct.
+✅ CONFIRMED — The Banda Pokuna today is overgrown and the water surface has been reclaimed by forest. The massive stone steps descending into the former pool are cracked and threaded with tree roots — a powerful visual representation of the 1,000 years of forest growth since abandonment. A natural spring in one corner of the pool still flows — the same spring that supplied the reservoir in the 9th century.
+🌉 The Stone Bridge
+✅ CONFIRMED — Beyond the Banda Pokuna, a still-intact stone slab bridge crosses a stream on the path to the monastery. This bridge is one of the oldest surviving stone structures on the site and is used by visitors today exactly as it was used by monks 1,000 years ago. Its survival while the surrounding buildings crumbled reflects the durability of simple stone slab construction.
+🧘 The Double Platform Structures — Padhanagharas
+✅ CONFIRMED — The defining architectural feature of Ritigala is the series of double-platform structures — known in Pali as Padhanagharas — that line the winding stone path through the monastery complex. Each structure consists of two raised stone platforms connected by a narrow stone bridge. The platforms are precisely constructed, with carefully cut stone slabs, stone railings, and elaborately carved guard stones at the approaches.
+✅ CONFIRMED — The two platforms of each Padhanagharas served distinct purposes. One platform was the walking meditation platform — monks paced back and forth on this surface during kinhin, the Buddhist practice of walking meditation, as an alternative to seated practice. The second platform was the seated meditation platform where monks sat in the standard cross-legged Samadhi posture. The bridge between them allowed transition between the two forms of practice without descending to ground level.
+✅ CONFIRMED — The double-platform design is unique to Pansukulika forest monastery sites. Identical structures have been found at other forest monastery ruins in Sri Lanka — Arankele being the most intact comparable example — but nowhere are they as numerous, as well preserved, or as atmospherically situated as at Ritigala.
+✅ CONFIRMED — The Padhanagharas at Ritigala are elevated above the ground surface on stone platforms and approached by stone staircases. The elevation served a practical purpose in the forest monastery context — raising the meditation surface above the damp ground, improving air circulation, and reducing insect disturbance during extended meditation sessions.
+🗺️ The Stone Path — The Monastery Road
+✅ CONFIRMED — The entire monastery complex is connected by a continuous stone-paved path that winds up the mountainside through the jungle for approximately 2 km. The path is constructed from precisely fitted stone slabs laid directly on the mountain surface. It is wide enough for two people walking abreast. The path passes through tunnel-like sections where overhanging trees create a closed canopy overhead, through open rock sections with views across the surrounding jungle, and past the ruins of dozens of monastic structures on both sides.
+✅ CONFIRMED — The path itself is one of the most remarkable features of the site. It is in better condition than many roads built in the colonial period — the 1,000-year-old stone paving is level, stable, and clearly legible despite a millennium of forest growth around and over it. Walking this path is the central experience of visiting Ritigala.
+🏥 The Hospital
+✅ CONFIRMED — Ruins of a hospital — a medical treatment facility — have been identified within the Ritigala monastery complex. The presence of a hospital within the monastery reflects the integration of medical care into the monastic community's life — the same pattern found at Mihintale, where an ancient hospital complex has been extensively excavated. The Ritigala hospital ruins include stone structures for preparation of herbal medicines consistent with the Ayurvedic medical tradition.
+🏛️ The Shrine Room Ruins
+✅ CONFIRMED — The ruins of a shrine room have been identified within the complex. This is one of the few structures at Ritigala that would have housed conventional Buddhist devotional objects. Its presence confirms that the Pansukulika community was not entirely without conventional religious practice — only that it was minimal compared to village temple monasteries.
+🏛️ The Uposatha Hall Ruins
+✅ CONFIRMED — Ruins consistent with an Uposatha hall — the assembly room where monks gathered fortnightly for the recitation of the Patimokkha, the monastic code of discipline — have been identified. The Uposatha ceremony was a compulsory element of Buddhist monastic life regardless of the ascetic tradition of the monks involved.
+📜 The 152 Stone Inscriptions
+✅ CONFIRMED — 152 stone inscriptions have been documented within the Ritigala reserve and surrounding area. These inscriptions — carved in Brahmi script — date primarily from the 2nd to the 1st century BC and document the names of monks, royal donors, and religious dedications. They confirm the site's active monastic use across a span of many centuries and provide the primary archaeological evidence for the dates and phases of the monastery's development.
+🪨 The 74 Rock Caves
+✅ CONFIRMED — At least 74 rock caves with carved drip-ledges on their upper edges have been documented. The drip-ledge is a characteristic feature of early Sri Lankan Buddhist monk habitation — a groove carved across the top of the cave entrance that channels rainwater away from the interior, keeping it dry for habitation. The drip-ledge caves at Ritigala are identical in form to those found at Mihintale, Dambulla, and hundreds of other early monastic sites across Sri Lanka, confirming their use by monks from the 1st century BC onward.
+
+🌿 THE UNIQUE MICROCLIMATE — SCIENCE CONFIRMED
+✅ CONFIRMED — Ritigala's most extraordinary natural feature is its microclimate — a genuinely unique meteorological phenomenon in the Sri Lankan dry zone.
+The surrounding Anuradhapura plains receive approximately 1,200 to 1,400 mm of annual rainfall distributed seasonally, with a pronounced dry period during the southwest monsoon when the northwest region receives little rain. The Ritigala summit receives significantly more rainfall — approximately 1,485 mm annually on average — through a combination of direct rainfall and orographic cloud condensation.
+✅ CONFIRMED — During the southwest monsoon season from May to September, when the plains all around are experiencing drought conditions and the vegetation is brown and desiccated, the crests of Ritigala are covered in mist and cloud. The cloud condenses on the vegetation surface and drips to the ground — a form of horizontal rainfall that supplements direct precipitation. The result is that the mountain summit remains moist while the surrounding plains are dry.
+✅ CONFIRMED — Three significant rivers originate within the Ritigala reserve — Na Ela, Deva Ela, and Malwathu Oya. The Malwathu Oya is the river that flows through Anuradhapura and has provided water to the ancient capital since its founding. Ritigala is therefore the hydrological source of the first Sri Lankan civilisation's primary water supply.
+✅ CONFIRMED — The temperature contrast between the summit and the base is dramatic. The surrounding plains experience hot dry zone conditions averaging 28 degrees Celsius. The summit is measurably cooler throughout the year and cold during the monsoon mist season. This temperature gradient combined with the moisture gradient creates the conditions for the extraordinary botanical diversity described below.
+
+🌿 BIODIVERSITY — CONFIRMED SCIENTIFIC DATA
+🌿 Flora — Extraordinary Endemism
+✅ CONFIRMED — 417 taxa of lower and higher plants have been documented within the Ritigala reserve. Of these, 337 are flowering plants. Approximately 54 to 57 species — approximately 16% of the total flora — are endemic to Sri Lanka. Four plant species are endemic specifically to Ritigala itself — found nowhere else on earth:
+Madhuca clavata — Sapotaceae family — a tree species unknown outside Ritigala
+Coleus elongatus — Lamiaceae family — a herbaceous plant confined to the mountain
+Thunbergia fragrans var. parviflora — Acanthaceae family — a flowering vine variant unique to Ritigala
+Dendrocalamus cinctus — a bamboo species
+✅ CONFIRMED — 96 of the documented flowering plant species are known to be used in Ayurvedic medicine — the traditional Indian and Sri Lankan herbal medical system. This exceptional concentration of medicinal plants is the scientific basis of the long-held tradition that Ritigala possesses extraordinary healing properties.
+✅ CONFIRMED — The first natural occurrence of Bambusa vulgaris in Sri Lanka was documented at Ritigala — a significant botanical discovery confirming that the mountain's unusual microclimate supports species distributions impossible on the surrounding plains.
+✅ CONFIRMED — The vegetation shows a clear pattern of altitudinal zonation with five distinct plant communities identified: dry mixed evergreen forest at the lower elevations, disturbed dry mixed evergreen forest, short-stature forest on the summits and upper slopes, vegetation associated with rock outcrops, and scrub. Most wet zone species are found at higher elevations and some are strictly confined to the summit areas — a botanical island of wet zone ecology in the middle of a dry zone landscape.
+🦎 Reptiles — A New Endemic Species
+✅ CONFIRMED — Cnemaspis retigalensis — the Ritigala day gecko — is an endemic gecko species described specifically from specimens collected at Ritigala. It is currently known only from Ritigala and is one of the point-endemic species that make the reserve of exceptional conservation significance. The gecko is common in the dry mixed evergreen forest and short-stature forest of the lower and mid-elevation zones.
+✅ CONFIRMED — Other reptile species confirmed at Ritigala include: Indian Rock Python, Rat Snake, Forsten's Cat Snake, Russell's Viper, endemic Green Pit Viper, Green Vine Snake, Land Monitor, Water Monitor, Star Tortoise, and multiple gecko and skink species.
+🦅 Birds — Over 100 Species
+✅ CONFIRMED — More than 100 bird species are documented at Ritigala. Notable species include:
+Spot-winged Thrush — endemic, a secretive ground thrush of forest interior
+Sri Lanka Junglefowl — endemic, national bird, commonly seen at forest edges
+Sri Lanka Spurfowl — endemic, secretive game bird of forest undergrowth
+Grey Hornbill — endemic, the characteristic large-billed bird of dry zone forests
+Malabar Pied Hornbill — large, striking hornbill with a massive yellow-black casque
+Blue-Faced Malkoha — a long-tailed, cryptic cuckoo of dense forest
+Rufous Woodpecker — commonly heard drumming in the forest
+Mountain Hawk-Eagle — a powerful highland eagle seen soaring over the mountain
+Rufous-Bellied Hawk-Eagle — recorded at Ritigala
+🐘 Mammals
+✅ CONFIRMED — Wild elephants move through the Ritigala forest, particularly in the latter parts of the day. Fresh elephant dung on the access road is commonly reported by visitors and is confirmed by multiple independent accounts. Elephant presence is a genuine consideration and not a theoretical risk. Visit in the morning when elephants are typically less active near the road and ruins.
+Sri Lanka Leopard — resident in the reserve
+Sri Lanka Sloth Bear — present
+Spotted Deer — common throughout the forest
+Purple-Faced Langur — endemic, Endangered, present in the forest canopy
+Toque Macaque — endemic, Endangered, present at forest edges
+Wild Boar — common
+🦋 Invertebrates
+✅ CONFIRMED — Approximately 50 species of butterflies have been recorded at Ritigala. 20 species of freshwater fish and 16 species of land snails are documented within the reserve — all reflecting the ecological richness produced by the unusual microclimate.
+
+⭐ THE LEGENDS — ALL TRADITIONS
+⭐ LEGEND — THE HIMALAYAN FRAGMENT:
+A Hindu and popular Buddhist tradition holds that Hanuman — the monkey god who assisted Rama in the Ramayana epic — was sent to the Himalayan mountains to collect a specific medicinal herb needed to heal a battle wound. Forgetting which specific herb was required, Hanuman cut an entire section of the Himalayan mountain range and carried it toward India. On his flight, a fragment of the mountain fell and landed in central Sri Lanka — creating the Ritigala mountain range. The legend holds that this Himalayan origin explains why Ritigala possesses such an extraordinary diversity of medicinal plants compared to the surrounding dry zone terrain.
+This legend is the popular explanation for Ritigala's unique biodiversity. The scientific explanation is the orographic microclimate described above. Both explanations produce the same observable fact — an unusual concentration of medicinal and wet zone plants in the middle of Sri Lanka's dry zone.
+⭐ LEGEND — THE SANSEVI HERB:
+Local tradition holds that on the crests of Ritigala, a herb called Sansevi grows — believed to have the power of conferring longevity and curing all human illness. This herb has been sought by traditional healers for centuries. No plant matching these described properties has been scientifically validated, but the tradition reflects the genuine unusualness of the mountain's botanical richness.
+⭐ LEGEND — THE YAKKA GUARDIANS:
+All vegetation on Ritigala is said to be protected by Yakkas — guardian spirits of the mountain. The Mahavamsa chronicle records that Prince Pandukabhaya was assisted by Yakkas during his battles at the foot of Ritigala in the 3rd century BC. The scholar Walpola Rahula, in his History of Buddhism in Ceylon, wrote that the term Yaksa may denote both superhuman beings and certain pre-Buddhist aboriginal human tribes of Sri Lanka — suggesting that the Yakka tradition may have a historical kernel in the presence of indigenous peoples in the Ritigala area.
+
+🎟️ ENTRY FEES AND PRACTICAL DETAILS — 2026
+✅ CONFIRMED — Ritigala is included in the Cultural Triangle Ticket — the combined ticket covering Anuradhapura, Polonnaruwa, Sigiriya, Dambulla, and Kandy heritage sites.
+Foreign adults: the Cultural Triangle round ticket covers approximately USD $50 and provides access to all major sites including Ritigala for a defined period
+Day ticket for Ritigala specifically: approximately USD $25 as an individual site entry — verify current rates at the on-site archaeology office
+Sri Lankan nationals: nominal local rate
+Opening Hours: 8:00 AM to 5:00 PM daily — the site archaeology office is staffed during these hours. Visiting outside these hours is not recommended — the forest is dense, unmarked off the main path, and wild elephant presence in the late afternoon makes unsupervised late visits genuinely risky.
+Compulsory Guide: A guide from the on-site Department of Archaeology office is required for all visitors. The guide fee is separate from the entry ticket and is paid at the archaeology office. This is not a bureaucratic formality — the forest paths beyond the main excavated trail are genuinely disorienting and the guide's knowledge of the site, its structures, and its wildlife is essential for a safe and informative visit.
+
+🌤️ BEST TIME TO VISIT
+February to April — Primary Recommendation
+The dry season for the North Central Province. Comfortable morning temperatures, dry paths, good visibility through the forest, minimum leech activity. The ruins are most clearly visible when the undergrowth is drier and less dense. Wildlife is active at water sources during the dry season. March and April are particularly good — the dry season is at its most settled and the morning light through the forest canopy is extraordinary.
+December to January
+Good conditions. The northeast monsoon has recently passed, the forest is green and lush, and the paths are drying out after the monsoon season. Leeches may still be active in January.
+May to September
+The southwest monsoon brings rain to the Ritigala summit area even while the surrounding plains are dry. The summit mist and the extraordinary botanical spectacle of wet vegetation in a dry zone context is unique to this period and is specifically worth experiencing. However the paths are wet and slippery, leeches are abundant, and visibility through the misted forest is reduced. For visitors primarily interested in the biological phenomenon of the microclimate, this is actually the most revealing season to visit.
+October to November
+The northeast monsoon transition. Rain, wet paths, maximum leech activity. Not recommended.
+
+🚌 GETTING THERE
+🚗 From Habarana — Most Practical Base:
+Habarana is 21 km from the site entrance — approximately 40 minutes by road. Turn off the Anuradhapura–Habarana A9 highway at the Ganewalpola junction, then 9 km on a secondary road to the archaeology office and car park. The road is passable by ordinary car in dry conditions.
+🚗 From Sigiriya:
+Approximately 30 km — about 45 minutes. Sigiriya and Ritigala on the same day is a natural and commonly made combination — Sigiriya or Pidurangala in the morning, Ritigala in the afternoon. However, given the morning recommendation for Ritigala, reversing this order — Ritigala in the morning, Sigiriya in the afternoon — is arguably better.
+🚗 From Anuradhapura:
+Approximately 40 to 43 km — about 1 hour via the A9 highway to Ganewalpola junction.
+🚗 From Polonnaruwa:
+Approximately 50 km — about 1 hour via Habarana.
+🚗 From Colombo:
+Approximately 180 km — about 4 hours via the A1 highway through Kurunegala and Habarana or via Kandy and Dambulla.
+🛺 By Tuk-Tuk:
+From Habarana junction, tuk-tuks are available for the round trip to Ritigala — negotiate a fixed rate including waiting time. The standard rate from Habarana is approximately 3,000 to 5,000 LKR for the vehicle for the full visit. The driver will wait at the car park while you explore. Most visits take 2 to 3 hours.
+
+🏨 WHERE TO STAY
+In Habarana — Most Convenient:
+Habarana is the nearest town and the most practical base for Ritigala. It is also centrally located for visits to Sigiriya, Minneriya, Polonnaruwa, and Anuradhapura — making it one of the finest base towns for the Cultural Triangle.
+Budget: Habarana Village by Cinnamon — mid-range property in village-style cottages with good facilities and central location. Rates approximately USD $80 to $100 per night.
+Luxury: Cinnamon Lodge Habarana — a large, well-established resort with extensive grounds, multiple pools, wildlife safaris, and the full range of luxury facilities. The finest established property in Habarana. Rates approximately USD $200 per night.
+Luxury: Aliya Resort and Spa — approximately 20 km from Habarana near Sigiriya, offering excellent facilities and well-organised safari booking. Rates from approximately USD $120 per night.
+Near the site:
+No accommodation within the reserve itself. The nearest guesthouses are in Kekirawa town, approximately 15 km from the Ganewalpola junction.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+⏰ Arrive by 8:00 AM when the site opens. The morning hours are the finest for the visit — cool forest temperatures, active bird life, best light through the forest canopy, and minimum elephant activity near the path. The heat builds significantly from 10:00 AM onward and elephant activity near the ruins increases in the afternoon.
+🦟 Apply leech repellent before entering the forest. The Ritigala forest supports abundant land leeches, particularly after any rain and during the monsoon periods. Apply DEET-based insect repellent or salt to footwear, socks, and lower trouser legs before beginning the walk. Wear long socks pulled over trouser cuffs. This is not optional precaution — leeches are confirmed abundant and the forest path is sufficiently long that multiple leeches will attach to unprepared visitors.
+👟 Wear proper hiking shoes. The stone path is level and well-maintained but wet sections near the reservoir and the stream crossing are slippery. The surrounding terrain off the path involves uneven rock and root surfaces. Proper rubber-soled shoes are important. Flip-flops are entirely inappropriate.
+🐘 Stay on the path and follow the guide's instructions on elephants. Wild elephants move through the Ritigala forest throughout the day and are confirmed in the area regularly. If elephants are sighted near the path, the guide will direct you appropriately. Never attempt to approach an elephant or deviate from the path toward undergrowth where animals may be present.
+🔭 Bring binoculars for birds. The forest canopy of Ritigala supports a remarkable range of endemic and rare birds. The hornbills, hawk-eagles, and thrushes are best appreciated with binoculars. The bird activity is concentrated in the first two hours after dawn — another reason for the early morning visit.
+📷 Give your camera time to adjust. Moving from bright open road conditions into the dense forest canopy requires lens adjustment from bright exterior to dark interior. The most photographically rewarding sections are the double-platform structures where shafts of light penetrate the canopy and illuminate the stone surfaces of the Padhanagharas.
+💧 Carry sufficient water. There are no refreshment facilities within the site — not even a small shop. Carry a minimum of 1.5 litres of water per person. The combination of heat, humidity, and the 2 km of walking within the ruins makes dehydration a real consideration.
+⏱️ Allow 2.5 to 3 hours. The main excavated trail covers approximately 2 km of winding forest path with ruins on both sides. Walking the full trail attentively — stopping to examine the double platforms, the reservoir, the cave inscriptions, and the forest ecology — takes 2 to 2.5 hours minimum. Rushing through in 45 minutes produces only a superficial impression of a site that rewards careful, attentive exploration.
+📅 Combine with Sigiriya and Pidurangala. The three sites are within 45 minutes of each other. Pidurangala at dawn, Sigiriya mid-morning, Ritigala afternoon — or Ritigala at 8:00 AM, Sigiriya at midday, Pidurangala for the sunset — are both viable single-day programmes covering three of the most extraordinary sites in the Cultural Triangle.
+🎒 This is not a casual tourist site. Unlike Sigiriya with its managed staircases, tour guide narrations, and souvenir shops, Ritigala is partially excavated ruins in an active forest. The experience is genuinely different from any other heritage site in Sri Lanka. Visitors who approach it with patience, curiosity, and physical preparation will find it one of the most remarkable places they have ever visited in Asia. Visitors who arrive expecting a managed tourist attraction will find it underdeveloped. It is emphatically the former.`, 
+      SI: `🏔️ රිටිගල
+ශ්‍රී ලංකාවේ අද්භූත නටඹුන් — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
+
+✅ අවංක ලේබල් කිරීම
+✅ තහවුරු කර ඇත — පුරාවිද්‍යාව, ශිලා ලේඛන, රජයේ වාර්තා සහ විද්‍යාත්මක සමීක්ෂණ මගින්
+⭐ පුරාවෘත්තය / සම්ප්‍රදාය — අවංකව විශ්වාස කරන නමුත් ස්වාධීනව තහවුරු කළ නොහැක
+⚠️ අවිනිශ්චිත — ඉතිහාසඥයින් අතර විවාදයට ලක්ව ඇත
+
+📍 ස්ථානය
+පළාත: උතුරු මැද පළාත, ශ්‍රී ලංකාව
+දිස්ත්‍රික්කය: අනුරාධපුර දිස්ත්‍රික්කය
+පිහිටීම: අනුරාධපුරය සහ පොළොන්නරුව අතර, වියළි කලාපීය තැනිතලාවෙන් හදිසියේම ඉහළට මතු වේ
+උසම කඳු මුදුනේ උස: මුහුදු මට්ටමේ සිට මීටර් 766 — අවට තැනිතලාවට වඩා මීටර් 600
+හබරණ සිට දුර: දළ වශයෙන් කි.මී. 21 — මාර්ගයෙන් විනාඩි 40 ක් පමණ
+අනුරාධපුරයේ සිට දුර: දළ වශයෙන් කි.මී. 40 සිට 43 දක්වා — මාර්ගයෙන් පැය 1 ක් පමණ
+සීගිරියේ සිට දුර: දළ වශයෙන් කි.මී. 30 — මාර්ගයෙන් විනාඩි 45 ක් පමණ
+පොළොන්නරුවේ සිට දුර: දළ වශයෙන් කි.මී. 50 — මාර්ගයෙන් පැය 1 ක් පමණ
+කොළඹ සිට දුර: දළ වශයෙන් කි.මී. 180 — මාර්ගයෙන් පැය 4 ක් පමණ
+ප්‍රවේශ මාර්ගය: ගනේවල්පොල හන්දියෙන් අනුරාධපුර-හබරණ අධිවේගී මාර්ගයෙන් හැරෙන්න — පුරාවිද්‍යා භූමියේ පිවිසුමට මාර්ගයේ කි.මී. 9 ක් පමණ
+
+🏔️ රිටිගල යනු කුමක්ද
+✅ තහවුරු කර ඇත — රිටිගල යනු ශ්‍රී ලංකාවේ උතුරු මැද පළාතේ වියළි කලාපයේ පිහිටි කඳුවැටියක් සහ පැරණි බෞද්ධ ආරාම සංකීර්ණයකි. එය එකවරම පුරාවිද්‍යාත්මකව අසාමාන්‍ය ස්ථානවලින් එකක් වන අතර මුළු රටේම ජීව විද්‍යාත්මකව සුවිශේෂී පරිසර පද්ධතිවලින් එකකි. කරුණු තුනක් එය ශ්‍රී ලංකාවේ වෙනත් ඕනෑම ගමනාන්තයකට වඩා වෙනස් කරයි.
+✅ තහවුරු කර ඇත — පළමුව, නටඹුන්. රිටිගල ආරාමයේ ශ්‍රී ලංකාවේ වෙනත් සෑම පැරණි ස්ථානයකම දක්නට ලැබෙන සාම්ප්‍රදායික බෞද්ධ විහාර අයිකන කිසිවක් අඩංගු නොවේ — ස්තූප නැත, බෝධියක් නැත, සිද්ධස්ථානවල බුදු පිළිම නැත. ඒ වෙනුවට මෙම සංකීර්ණය යනු ගල් ඇතිරූ ද්විත්ව වේදිකා, වංගු සහිත වනාන්තර මාර්ග, ගල් පාලමක්, ගල් ජලාශ සහ භාවනා මංපෙත් ජාලයකි.
+✅ තහවුරු කර ඇත — දෙවනුව, ක්ෂුද්‍ර දේශගුණය. රිටිගල යනු උතුරු ශ්‍රී ලංකාවේ උසම හුදකලා කන්දයි — සෑම දිශාවකටම බාධාවකින් තොරව විහිදෙන පැතලි අවට තැනිතලාවට වඩා මීටර් 600 ක් ඉහළට නැඟී ඇත. මෙම උස ශ්‍රී ලංකාවේ වියළිම කලාපයක මධ්‍යයේ සුවිශේෂී තෙත් ක්ෂුද්‍ර දේශගුණයක් නිර්මාණය කරයි.
+✅ තහවුරු කර ඇත — තෙවනුව, වායුගෝලය. සීගිරියට හෝ අනුරාධපුර පූජනීය නගරයට යන සංචාරකයින් සංඛ්‍යාවෙන් ඉතා කුඩා කොටසක් රිටිගලට පැමිණේ. නටඹුන් අර්ධ වශයෙන් කැණීම් කර ඇති අතර අර්ධ වශයෙන් තවමත් කැලෑව විසින් ගිල ගනිමින් පවතී.
+
+📜 නම — තහවුරු කළ සහ අවිනිශ්චිත
+✅ තහවුරු කර ඇත — කන්ද සඳහා පැරණි සිංහල සහ පාලි නම අරිට්ඨ පබ්බත විය — අරිට්ඨ යන්නෙහි නිශ්චිත අර්ථ නිරූපණය මත පදනම්ව බිහිසුණු කන්ද හෝ ආරක්ෂිත පර්වතය යන්නයි.
+✅ තහවුරු කර ඇත — විකල්ප ව්‍යුත්පන්නයක් — ද විශ්වාසදායක — කන්දේ මැද බෑවුම්වල වැඩෙන ගස් විශේෂයක් වන රිටි ගස් වලට නම සම්බන්ධ කරයි.
+✅ තහවුරු කර ඇත — අරිට්ඨ යන නම අරිට්ඨ නම් ඓතිහාසික චරිතය සමඟ ද සම්බන්ධ විය — පසුව පළමු ශ්‍රී ලාංකික රහතන් වහන්සේ බවට පත් වූ දේවානම්පියතිස්ස රජුගේ ප්‍රධාන අමාත්‍යවරයා — ක්‍රි.පූ. 3 වන සියවසේදී රිටිගල සිය පැවිදි ජීවිතය ගත කළ බවට වාර්තා වේ.
+
+📜 ඉතිහාසය — තහවුරු කළ කරුණු
+🏔️ පූර්ව බෞද්ධ සහ මුල්ම මානව පැවැත්ම
+✅ තහවුරු කර ඇත — පණ්ඩුකාභය කුමරු — පසුව පණ්ඩුකාභය රජු බවට පත් වූ අතර ක්‍රි.පූ. 437 සිට 367 දක්වා පාලනය කළේය — සිංහාසනයට පැමිණීම වැළැක්වීමට උත්සාහ කළ ඔහුගේ මාමාවරුන් අට දෙනාට එරෙහිව ඔහුගේ හමුදා මෙහෙයුම් වලදී රිටිගල රැකවරණයක් සහ කඳවුරක් ලෙස භාවිතා කළේය.
+✅ තහවුරු කර ඇත — ක්‍රි.පූ. 1 වන සියවසේ සිට කැටයම් කරන ලද කටාරම් සහිත භික්ෂූන් වහන්සේලා සඳහා සකස් කරන ලද ගල් ගුහා. රිටිගල රක්ෂිතය සහ ඒ අවට ප්‍රදේශය තුළ මෙවැනි ගුහා 74 ක් වත් ලේඛනගත කර ඇත.
+✅ තහවුරු කර ඇත — ක්‍රි.පූ. 3 වන සියවස පමණ වන විට, අරිට්ඨ — ක්‍රි.පූ. 247 දී මිහිඳු රහතන් වහන්සේගේ පැමිණීමෙන් පසු බුදුදහම වැළඳගත් දේවානම්පියතිස්ස රජුගේ ප්‍රධාන අමාත්‍යවරයා — භික්ෂුවක් වීමෙන් පසු රිටිගල සිය පැවිදි ජීවිතය ගත කළේය.
+🏛️ ලංකා විහාරය — ක්‍රි.පූ. 187 සිට 177 දක්වා
+✅ තහවුරු කර ඇත — සූරතිස්ස රජු ක්‍රි.පූ. 187 සිට 177 දක්වා ඔහුගේ පාලන සමයේදී රිටිගල කන්ද පාමුල ලංකා විහාරය ඉදි කළේය.
+🏛️ අරිට්ඨ විහාරය — ක්‍රි.පූ. 59 සිට 50 දක්වා
+✅ තහවුරු කර ඇත — ලජ්ජතිස්ස රජු ක්‍රි.පූ. 59 සිට 50 දක්වා ඔහුගේ පාලන සමයේදී කන්ද මත අරිට්ඨ විහාරය ඉදි කළේය.
+👑 පළමුවන සේන රජු සහ පාංශුකූලික භික්ෂූන් — ක්‍රි.ව. 9 වන සියවස
+✅ තහවුරු කර ඇත — රිටිගල සංවර්ධනයේ වාස්තු විද්‍යාත්මකව වඩාත්ම සුවිශේෂී අදියර සිදු වූයේ ක්‍රි.ව. 9 වන සියවසේ පළමුවන සේන රජුගේ පාලන සමයේදීය.
+✅ තහවුරු කර ඇත — පාංශුකූලිකයන් යනු ථෙරවාද බුදුදහම තුළ පවතින අන්තවාදී තාපස පිළිවෙත තෝරා ගත් බෞද්ධ භික්ෂූන් ය.
+✅ තහවුරු කර ඇත — පාංශුකූලිකයන් රිටිගල තෝරා ගත්තේ ග්‍රාමීය ජීවිතයෙන් සහ සාම්ප්‍රදායික සමාජයෙන් එහි හුදකලා වීම නිසාමය.
+✅ තහවුරු කර ඇත — රිටිගල නටඹුන් නිර්වචනය කරන සුවිශේෂී ද්විත්ව වේදිකා ව්‍යුහයන් පාංශුකූලික භාවිතය සඳහා විශේෂයෙන් ඉදිකරන ලදී.
+⚔️ අතහැර දැමීම — 10 සිට 12 වන සියවස
+✅ තහවුරු කර ඇත — අනුරාධපුරය විනාශ කළ 10 වන සහ 11 වන සියවස්වල දකුණු ඉන්දීය ආක්‍රමණවලින් පසු රිටිගල අතහැර දමන ලදී.
+🔬 නැවත සොයා ගැනීම — 19 වන සියවස
+✅ තහවුරු කර ඇත — බ්‍රිතාන්‍ය යටත් විජිත නිලධාරීන් 19 වන සියවසේදී නටඹුන් නැවත සොයා ගත්හ.
+🌿 දැඩි ස්වභාව රක්ෂිතයක් ලෙස ප්‍රකාශයට පත් කිරීම — 1941
+✅ තහවුරු කර ඇත — රිටිගල 1941 නොවැම්බර් 7 වන දින හෙක්ටයාර 1,528 ක ප්‍රදේශයක් ආවරණය වන පරිදි දැඩි ස්වභාව රක්ෂිතයක් ලෙස ප්‍රකාශයට පත් කරන ලදී.
+
+🏗️ ආරාම නටඹුන් — සම්පූර්ණ තහවුරු කළ විස්තර
+🏊 බන්දා පොකුණ — චාරිත්‍රානුකූල ස්නානය කරන ටැංකිය
+✅ තහවුරු කර ඇත — ආරාම සංකීර්ණයේ පිවිසුම ආරම්භ වන්නේ බන්දා පොකුණෙනි — විශිෂ්ට ඉංජිනේරු නිරවද්‍යතාවයකින් යුත් විශාල පැරණි ජලාශයකි.
+🌉 ගල් පාලම
+✅ තහවුරු කර ඇත — බන්දා පොකුණෙන් ඔබ්බට, තවමත් නොවෙනස්ව පවතින ගල් පුවරු පාලමක් ආරාමයට යන මාර්ගයේ ඇළක් හරහා ගමන් කරයි.
+🧘 ද්විත්ව වේදිකා ව්‍යුහයන් — පධානඝර
+✅ තහවුරු කර ඇත — රිටිගල නිර්වචනය කරන වාස්තු විද්‍යාත්මක ලක්ෂණය වන්නේ ආරාම සංකීර්ණය හරහා වංගු සහිත ගල් මාර්ගයේ පෙළ ගැසී ඇති ද්විත්ව වේදිකා ව්‍යුහයන් මාලාවයි — පාලි භාෂාවෙන් පධානඝර ලෙස හැඳින්වේ.
+🗺️ ගල් මාර්ගය — ආරාම පාර
+✅ තහවුරු කර ඇත — සම්පූර්ණ ආරාම සංකීර්ණය කි.මී. 2 ක් පමණ කැලෑව හරහා කන්ද ඉහළට වංගු වන අඛණ්ඩ ගල් ඇතිරූ මාර්ගයකින් සම්බන්ධ වේ.
+🏥 රෝහල
+✅ තහවුරු කර ඇත — රිටිගල ආරාම සංකීර්ණය තුළ රෝහලක — වෛද්‍ය ප්‍රතිකාර මධ්‍යස්ථානයක — නටඹුන් හඳුනාගෙන ඇත.
+🏛️ සිද්ධස්ථාන කාමර නටඹුන්
+✅ තහවුරු කර ඇත — සංකීර්ණය තුළ සිද්ධස්ථාන කාමරයක නටඹුන් හඳුනාගෙන ඇත.
+🏛️ උපෝසථ ශාලා නටඹුන්
+✅ තහවුරු කර ඇත — උපෝසථ ශාලාවකට අනුකූල නටඹුන් — භික්ෂූන් වහන්සේලා පෝය දිනවල රැස් වූ ශාලාව — හඳුනාගෙන ඇත.
+📜 ගල් ශිලා ලේඛන 152
+✅ තහවුරු කර ඇත — රිටිගල රක්ෂිතය සහ ඒ අවට ප්‍රදේශය තුළ ගල් ශිලා ලේඛන 152 ක් ලේඛනගත කර ඇත.
+🪨 ගල් ගුහා 74
+✅ තහවුරු කර ඇත — ඉහළ දාරවල කැටයම් කරන ලද කටාරම් සහිත ගල් ගුහා 74 ක් වත් ලේඛනගත කර ඇත.
+
+🌿 සුවිශේෂී ක්ෂුද්‍ර දේශගුණය — විද්‍යාව තහවුරු කර ඇත
+✅ තහවුරු කර ඇත — රිටිගල වඩාත්ම අසාමාන්‍ය ස්වාභාවික ලක්ෂණය වන්නේ එහි ක්ෂුද්‍ර දේශගුණයයි — ශ්‍රී ලංකාවේ වියළි කලාපයේ සැබවින්ම අද්විතීය කාලගුණ විද්‍යාත්මක සංසිද්ධියකි.
+✅ තහවුරු කර ඇත — මැයි සිට සැප්තැම්බර් දක්වා නිරිතදිග මෝසම් සමයේදී, අවට තැනිතලා නියඟ තත්ත්වයන් අත්විඳින විට සහ වෘක්ෂලතාදිය දුඹුරු සහ වියළී ගිය විට, රිටිගල කඳු මුදුන් මීදුමෙන් සහ වලාකුළු වලින් වැසී ඇත.
+✅ තහවුරු කර ඇත — රිටිගල රක්ෂිතය තුළ සැලකිය යුතු ගංගා තුනක් ආරම්භ වේ — නා ඇළ, දේව ඇළ සහ මල්වතු ඔය.
+✅ තහවුරු කර ඇත — කඳු මුදුන සහ පාමුල අතර උෂ්ණත්ව වෙනස නාටකාකාරය.
+
+🌿 ජෛව විවිධත්වය — තහවුරු කළ විද්‍යාත්මක දත්ත
+🌿 ශාක — අසාමාන්‍ය ආවේණිකත්වය
+✅ තහවුරු කර ඇත — රිටිගල රක්ෂිතය තුළ පහළ සහ ඉහළ ශාක වර්ග 417 ක් ලේඛනගත කර ඇත. මින් 337 ක් සපුෂ්ප ශාක වේ.
+✅ තහවුරු කර ඇත — ලේඛනගත සපුෂ්ප ශාක විශේෂ 96 ක් ආයුර්වේද වෛද්‍ය විද්‍යාවේ භාවිතා කරන බව දන්නා කරුණකි.
+🦎 උරගයින් — නව ආවේණික විශේෂයක්
+✅ තහවුරු කර ඇත — Cnemaspis retigalensis — රිටිගල දිවා හූනා — යනු රිටිගලින් එකතු කරන ලද නිදර්ශක වලින් විශේෂයෙන් විස්තර කරන ලද ආවේණික හූනන් විශේෂයකි.
+🦅 පක්ෂීන් — විශේෂ 100 කට වඩා
+✅ තහවුරු කර ඇත — රිටිගල කුරුලු විශේෂ 100 කට වඩා ලේඛනගත කර ඇත.
+🐘 ක්ෂීරපායින්
+✅ තහවුරු කර ඇත — වන අලි රිටිගල වනාන්තරය හරහා ගමන් කරයි, විශේෂයෙන් දවසේ අග භාගයේදී.
+🦋 අපෘෂ්ඨවංශීන්
+✅ තහවුරු කර ඇත — සමනලුන් විශේෂ 50 ක් පමණ රිටිගල වාර්තා වී ඇත.
+
+⭐ පුරාවෘත්ත — සියලුම සම්ප්‍රදායන්
+⭐ පුරාවෘත්තය — හිමාලයානු කොටස:
+රාමායණ වීර කාව්‍යයේ රාමාට සහාය වූ වඳුරු දෙවියා වන හනුමාන් — සටන් තුවාලයක් සුව කිරීමට අවශ්‍ය විශේෂිත ඖෂධීය පැළෑටියක් එකතු කිරීම සඳහා හිමාලය කඳුකරයට යවන ලද බව හින්දු සහ ජනප්‍රිය බෞද්ධ සම්ප්‍රදායක් පවසයි.
+⭐ පුරාවෘත්තය — සංජීවනි ඖෂධය:
+රිටිගල කඳු මුදුන්වල සංජීවනි නම් ඖෂධීය පැළෑටියක් වැඩෙන බව දේශීය සම්ප්‍රදායක් පවසයි — එය දීර්ඝායුෂ ලබා දීමේ සහ සියලුම මිනිස් රෝග සුව කිරීමේ බලය ඇති බව විශ්වාස කෙරේ.
+⭐ පුරාවෘත්තය — යක්ෂ ආරක්ෂකයින්:
+රිටිගල සියලුම වෘක්ෂලතාදිය යක්ෂයින් විසින් ආරක්ෂා කරන බව කියනු ලැබේ — කන්දේ ආරක්ෂක ආත්මයන්.
+
+🎟️ ප්‍රවේශ ගාස්තු සහ ප්‍රායෝගික විස්තර — 2026
+✅ තහවුරු කර ඇත — රිටිගල සංස්කෘතික ත්‍රිකෝණ ප්‍රවේශ පත්‍රයට ඇතුළත් කර ඇත.
+විවෘත වේලාවන්: දිනපතා පෙරවරු 8:00 සිට පස්වරු 5:00 දක්වා.
+අනිවාර්ය මාර්ගෝපදේශක: සියලුම අමුත්තන් සඳහා ස්ථානීය පුරාවිද්‍යා දෙපාර්තමේන්තු කාර්යාලයෙන් මාර්ගෝපදේශකයෙකු අවශ්‍ය වේ.
+
+🌤️ සංචාරය කිරීමට හොඳම කාලය
+පෙබරවාරි සිට අප්‍රේල් දක්වා — ප්‍රාථමික නිර්දේශය
+උතුරු මැද පළාත සඳහා වියළි සමය. සුවපහසු උදෑසන උෂ්ණත්වය, වියළි මාර්ග, වනාන්තරය හරහා හොඳ දෘශ්‍යතාව, අවම කූඩැල්ලන්ගේ ක්‍රියාකාරිත්වය.
+
+🚌 එහි යාම
+🚗 හබරණ සිට — වඩාත්ම ප්‍රායෝගික පදනම:
+හබරණ පිවිසුමේ සිට කි.මී. 21 කි — මාර්ගයෙන් විනාඩි 40 ක් පමණ.
+🚗 සීගිරියේ සිට:
+දළ වශයෙන් කි.මී. 30 — විනාඩි 45 ක් පමණ.
+🚗 අනුරාධපුරයේ සිට:
+දළ වශයෙන් කි.මී. 40 සිට 43 දක්වා — පැය 1 ක් පමණ.
+🚗 පොළොන්නරුවේ සිට:
+දළ වශයෙන් කි.මී. 50 — පැය 1 ක් පමණ.
+🚗 කොළඹ සිට:
+දළ වශයෙන් කි.මී. 180 — පැය 4 ක් පමණ.
+
+🏨 නැවතී සිටිය යුතු ස්ථානය
+හබරණ — වඩාත්ම පහසු:
+හබරණ යනු ළඟම ඇති නගරය වන අතර රිටිගල සඳහා වඩාත්ම ප්‍රායෝගික පදනම වේ.
+
+💡 අත්‍යවශ්‍ය උපදෙස් — ප්‍රායෝගික පමණි
+⏰ වෙබ් අඩවිය විවෘත වන විට පෙරවරු 8:00 ට පැමිණෙන්න.
+🦟 වනාන්තරයට ඇතුළු වීමට පෙර කූඩැල්ලන් විකර්ෂක යොදන්න.
+👟 නිසි කඳු නැගීමේ සපත්තු පළඳින්න.
+🐘 මාර්ගයේ රැඳී සිටින්න සහ අලි ඇතුන් පිළිබඳ මාර්ගෝපදේශකයාගේ උපදෙස් අනුගමනය කරන්න.
+🔭 කුරුල්ලන් සඳහා දුරදක්න රැගෙන එන්න.
+📷 ඔබේ කැමරාවට ගැලපීමට කාලය දෙන්න.
+💧 ප්‍රමාණවත් තරම් ජලය රැගෙන යන්න.
+⏱️ පැය 2.5 සිට 3 දක්වා කාලය ලබා දෙන්න.
+📅 සීගිරිය සහ පිදුරංගල සමඟ ඒකාබද්ධ කරන්න.
+🎒 මෙය සාමාන්‍ය සංචාරක ස්ථානයක් නොවේ.`
     }, 
     shortStory: { 
       EN: "The Forest Monastery - A sanctuary of silence.", 

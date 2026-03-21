@@ -249,13 +249,13 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                 <button 
                   key={cat.id} 
                   onClick={() => setCategoryFilter(cat.id)} 
-                  className={`flex items-center gap-3 px-8 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all border shrink-0 ${
+                  className={`flex items-center gap-1.5 md:gap-2 px-4 py-2 md:px-5 md:py-2.5 rounded-full text-[8px] md:text-[9px] font-bold uppercase tracking-wider md:tracking-[0.1em] transition-all border shrink-0 whitespace-nowrap ${
                     categoryFilter === cat.id 
                       ? 'bg-[#5A5A40] text-white border-transparent shadow-xl scale-105' 
                       : 'bg-white text-[#2d2d2d]/60 border-[#5A5A40]/10 hover:border-[#5A5A40]/30'
                   }`}
                 >
-                  <cat.icon size={14} className={categoryFilter === cat.id ? 'text-white' : 'opacity-40'} />
+                  <cat.icon size={12} className={categoryFilter === cat.id ? 'text-white' : 'opacity-40'} />
                   {language === 'EN' ? cat.EN : cat.SI}
                 </button>
               ))}
@@ -267,12 +267,12 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               <select 
                 value={locationFilter} 
                 onChange={(e) => setLocationFilter(e.target.value)} 
-                className="appearance-none w-full pl-8 pr-12 py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
+                className="appearance-none w-full pl-6 pr-10 py-2 md:py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
               >
                 <option value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
                 {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc} className="bg-white">{loc}</option>)}
               </select>
-              <ChevronDown size={14} className="absolute right-6 top-1/2 -translate-y-1/2 text-[#5A5A40] pointer-events-none" />
+              <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5A5A40] pointer-events-none" />
             </div>
             {(categoryFilter !== 'all' || locationFilter !== 'all' || search) && (
               <button onClick={resetFilters} className="p-4 bg-white text-[#5A5A40] border border-[#5A5A40]/10 rounded-full hover:bg-[#5A5A40]/5 transition-all shadow-sm">
@@ -324,8 +324,8 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-700" />
               
-              <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                 <div className="px-4 py-1.5 md:px-6 md:py-2 bg-[#5A5A40]/80 backdrop-blur-xl rounded-full text-[8px] md:text-[10px] font-bold tracking-[0.2em] text-white border border-white/20 uppercase">
+              <div className="absolute top-6 left-6 md:top-8 md:left-8 max-w-[70%]">
+                 <div className="px-3 py-1.5 md:px-5 md:py-2 bg-[#5A5A40]/80 backdrop-blur-xl rounded-full text-[7px] md:text-[8px] font-bold tracking-[0.15em] text-white border border-white/20 uppercase whitespace-nowrap overflow-hidden text-ellipsis">
                     {dest.category}
                  </div>
               </div>
@@ -342,7 +342,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                     <MapPin size={14} className="text-[#f5f5f0]" />
                     <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] md:tracking-[0.3em]">{dest.location}</span>
                  </div>
-                 <h3 className="text-xl md:text-4xl font-heritage font-bold text-white mb-2 md:mb-4 tracking-tighter leading-tight uppercase">{dest.name[language]}</h3>
+                 <h3 className="text-xl md:text-2xl lg:text-3xl font-heritage font-bold text-white mb-2 md:mb-4 tracking-tighter leading-tight uppercase break-words">{dest.name[language]}</h3>
                  
                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-700 ease-in-out">
                    <div className="overflow-hidden">
@@ -353,10 +353,10 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                  </div>
 
                  <div className="pt-2 md:pt-4">
-                   <div className="inline-flex items-center gap-3 md:gap-4 text-white font-bold text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] group/btn">
+                   <div className="inline-flex items-center gap-2 md:gap-3 text-white font-bold text-[7px] md:text-[8px] uppercase tracking-[0.2em] md:tracking-[0.3em] group/btn whitespace-nowrap">
                       <span>Explore Node</span>
-                      <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-[#5A5A40] group-hover/btn:border-transparent transition-all duration-500">
-                        <ArrowRight size={14} className="md:w-4 md:h-4 transition-transform duration-500 group-hover/btn:translate-x-1" />
+                      <div className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 flex items-center justify-center group-hover/btn:bg-[#5A5A40] group-hover/btn:border-transparent transition-all duration-500 shrink-0">
+                        <ArrowRight size={12} className="md:w-3 md:h-3 transition-transform duration-500 group-hover/btn:translate-x-1" />
                       </div>
                    </div>
                  </div>

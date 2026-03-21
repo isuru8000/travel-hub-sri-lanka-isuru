@@ -91,7 +91,7 @@ const Festivals: React.FC<FestivalsProps> = ({ language, onBack }) => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id as any)}
-                className={`flex items-center gap-3 px-8 py-5 rounded-[2.5rem] text-[11px] font-black uppercase tracking-widest transition-all duration-700 relative overflow-hidden group/btn ${
+                className={`flex items-center gap-2 md:gap-3 px-6 py-4 md:px-8 md:py-5 rounded-[2.5rem] text-[9px] md:text-[10px] font-black uppercase tracking-wider md:tracking-widest transition-all duration-700 relative overflow-hidden group/btn ${
                   activeCategory === cat.id 
                     ? 'text-white' 
                     : 'text-white/40 hover:text-white hover:bg-white/5'

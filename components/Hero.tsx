@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   }, []);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1588598116712-2902f9639fd4?auto=format&fit=crop&w=1920&q=80"
+    "https://i.pinimg.com/1200x/2c/68/43/2c6843857f826027ebc292a5c4c899d3.jpg"
   ];
 
   const mobileHeroImages = [

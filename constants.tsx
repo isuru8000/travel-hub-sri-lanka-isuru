@@ -415,7 +415,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Ambalangoda Masks", SI: "අම්බලන්ගොඩ වෙස් මුහුණු" },
     category: "mask",
     description: { EN: "Intricately carved wooden masks used in traditional healing rituals and dances.", SI: "ශාන්තිකර්ම සහ නර්තන සඳහා යොදා ගන්නා ලීයෙන් නෙළන ලද වෙස් මුහුණු." },
-    image: "https://i.pinimg.com/736x/83/92/7d/83927ddb06d862f92f1f3e74a81b2490.jpg",
+    image: "https://i.pinimg.com/1200x/83/9b/c1/839bc1329f127a0de770d8c09dad40cb.jpg",
     origin: { EN: "Ambalangoda", SI: "අම්බලන්ගොඩ" },
     significance: { EN: "Represents demons, gods, and characters in folklore.", SI: "යකුන්, දෙවිවරුන් සහ ජනප්‍රවාද චරිත නිරූපණය කරයි." }
   },
@@ -424,7 +424,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Beeralu Lace", SI: "බීරළු රේන්ද" },
     category: "textile",
     description: { EN: "A delicate, hand-woven lace technique introduced by the Portuguese.", SI: "පෘතුගීසීන් විසින් හඳුන්වා දුන් සියුම් අත්කම් රේන්ද කලාවකි." },
-    image: "https://i.pinimg.com/1200x/c1/9f/6a/c19f6a7d571618a803f26034e3e3b3c3.jpg",
+    image: "https://i.pinimg.com/736x/9e/ad/09/9ead099e3ef6da2f545794416d808aad.jpg",
     origin: { EN: "Galle / Weligama", SI: "ගාල්ල / වැලිගම" },
     significance: { EN: "A symbol of southern coastal heritage and women's craftsmanship.", SI: "දකුණු වෙරළබඩ උරුමය සහ කාන්තා අත්කම් කුසලතාවයේ සංකේතයකි." }
   },
@@ -433,7 +433,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Brassware", SI: "පිත්තල කර්මාන්තය" },
     category: "metal",
     description: { EN: "Traditional metalwork creating oil lamps, vases, and decorative items.", SI: "පහන්, මල් පෝච්චි සහ විසිතුරු භාණ්ඩ නිර්මාණය කරන පාරම්පරික ලෝහ කර්මාන්තයකි." },
-    image: "https://i.pinimg.com/1200x/49/a2/77/49a2779f187a5f6e8d21b3e7f67823e1.jpg",
+    image: "https://i.pinimg.com/736x/fe/fd/10/fefd103c0c7995e099660882c5936390.jpg",
     origin: { EN: "Pilimathalawa", SI: "පිළිමතලාව" },
     significance: { EN: "Essential for religious ceremonies and cultural events.", SI: "ආගමික සහ සංස්කෘතික උත්සව සඳහා අත්‍යවශ්‍ය වේ." }
   },
@@ -442,7 +442,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Batik", SI: "බතික් කලාව" },
     category: "textile",
     description: { EN: "A wax-resist dyeing technique creating vibrant, colorful patterns on fabric.", SI: "ඉටි භාවිතයෙන් රෙදි මත වර්ණවත් රටා මවන කලාවකි." },
-    image: "https://i.pinimg.com/1200x/2d/4e/7a/2d4e7a8b9c0d1e2f3a4b5c6d7e8f9a0b.jpg",
+    image: "https://i.pinimg.com/1200x/8b/90/52/8b905265c3fd6f0aaf7aeab11960e1db.jpg",
     origin: { EN: "Island-wide", SI: "දිවයින පුරා" },
     significance: { EN: "Used for traditional clothing and modern fashion.", SI: "පාරම්පරික ඇඳුම් සහ නවීන විලාසිතා සඳහා යොදා ගනී." }
   },
@@ -451,7 +451,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Wood Carving", SI: "ලී කැටයම්" },
     category: "wood",
     description: { EN: "Detailed carvings on mahogany, teak, and ebony wood.", SI: "මහෝගනී, තේක්ක සහ කළුවර ලී මත කරන සියුම් කැටයම්." },
-    image: "https://i.pinimg.com/1200x/1f/2e/3d/1f2e3d4c5b6a7b8c9d0e1f2a3b4c5d6e.jpg",
+    image: "https://i.pinimg.com/736x/cf/5c/94/cf5c94a9493a9f54c7626c0c1a5107c5.jpg",
     origin: { EN: "Embekke / Kandy", SI: "ඇම්බැක්ක / මහනුවර" },
     significance: { EN: "Showcases ancient architectural and artistic skills.", SI: "පැරණි වාස්තු විද්‍යාත්මක සහ කලාත්මක කුසලතා විදහා දක්වයි." }
   },
@@ -460,7 +460,7 @@ export const ARTS_CRAFTS_DATA: ArtAndCraft[] = [
     name: { EN: "Dumbara Mats", SI: "දුම්බර පැදුරු" },
     category: "textile",
     description: { EN: "Handwoven mats with geometric patterns made from Hana plant fibers.", SI: "හණ ශාකයේ කෙඳි වලින් වියන ලද ජ්‍යාමිතික රටා සහිත පැදුරු." },
-    image: "https://i.pinimg.com/1200x/5a/6b/7c/5a6b7c8d9e0f1a2b3c4d5e6f7g8h9i0j.jpg",
+    image: "https://i.pinimg.com/736x/07/93/60/07936040625077fc862d58a4554dd857.jpg",
     origin: { EN: "Dumbara Valley", SI: "දුම්බර මිටියාවත" },
     significance: { EN: "A UNESCO recognized intangible cultural heritage.", SI: "යුනෙස්කෝව විසින් පිළිගත් අස්පෘශ්‍ය සංස්කෘතික උරුමයකි." }
   }
