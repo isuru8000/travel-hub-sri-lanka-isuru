@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Landmark, Utensils, Music, Palette, Activity, Calendar, Languages } from 'lucide-react';
+import { ArrowLeft, Landmark, Utensils, Music, Palette, Activity, Calendar, Languages, ShieldCheck, Heart, Sprout } from 'lucide-react';
 import { Language, View } from '../types';
 import CategoriesSection from './CategoriesSection';
 import HeritageCollection from './HeritageCollection';
@@ -90,34 +90,6 @@ const Heritage: React.FC<HeritageProps> = ({ language, setView, onBack }) => {
         <HeritageCollection language={language} />
       </div>
 
-      {/* Cultural Significance */}
-      <div className="max-w-7xl mx-auto px-4 mt-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-heritage font-bold text-[#262626] mb-6">
-              {language === 'EN' ? 'Preserving Our Legacy' : 'අපගේ උරුමය සුරැකීම'}
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              {language === 'EN' 
-                ? "Sri Lanka's heritage is a tapestry of diverse influences, ancient wisdom, and artistic brilliance. From the intricate carvings of Anuradhapura to the vibrant rhythms of Kandyan dance, every element tells a story of resilience and creativity."
-                : "ශ්‍රී ලංකාවේ උරුමය යනු විවිධ බලපෑම්, පුරාණ ප්‍රඥාව සහ කලාත්මක දීප්තියේ එකතුවකි. අනුරාධපුරයේ සංකීර්ණ කැටයම්වල සිට උඩරට නැටුම්වල විචිත්‍රවත් රිද්මයන් දක්වා සෑම අංගයක්ම නිර්මාණශීලීත්වයේ කතාවක් කියයි."}
-            </p>
-            <div className="flex items-center gap-4 text-[#262626] font-semibold">
-              <Landmark className="text-amber-600" />
-              <span>8 UNESCO World Heritage Sites</span>
-            </div>
-          </div>
-          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
-            <img 
-              src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=1000" 
-              alt="Sigiriya"
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Mahavamsa Section */}
       <div className="max-w-7xl mx-auto px-4 mt-20">
         <div className="bg-[#262626] rounded-3xl p-8 md:p-16 text-white shadow-2xl">
@@ -185,6 +157,46 @@ const Heritage: React.FC<HeritageProps> = ({ language, setView, onBack }) => {
               ? "Sri Lankan cuisine is famous for its bold flavors, aromatic spices, and coconut-based dishes. The traditional 'Rice and Curry' meal is a culinary experience that reflects the island's agricultural richness, bringing together a variety of vegetable, meat, and fish curries served with red or white rice."
               : "ශ්‍රී ලංකීය ආහාර එහි තියුණු රසයන්, සුවඳවත් කුළුබඩු සහ පොල් පදනම් කරගත් කෑම වර්ග සඳහා ප්‍රසිද්ධය. සාම්ප්‍රදායික 'බත් සහ කරිය' ආහාර වේල යනු දිවයිනේ කෘෂිකාර්මික සශ්‍රීකත්වය පිළිබිඹු කරන සූපශාස්ත්‍ර අත්දැකීමකි, එය රතු හෝ සුදු බත් සමඟ පිළිගන්වන විවිධ එළවළු, මස් සහ මාළු කරි එකතු කරයි."}
           </p>
+        </div>
+      </div>
+      {/* Protect Heritage Advice Section */}
+      <div className="max-w-7xl mx-auto px-4 mt-24 mb-16">
+        <div className="relative rounded-[3rem] overflow-hidden shadow-2xl group">
+          <img 
+            src="https://images.unsplash.com/photo-1578503117502-3162799f9392?auto=format&fit=crop&q=80&w=2000" 
+            alt="Cultural Heritage"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/40" />
+          
+          <div className="relative z-10 p-8 md:p-16 flex flex-col items-center text-center">
+            <div className="w-16 h-16 bg-amber-500/20 rounded-2xl backdrop-blur-md flex items-center justify-center mb-8 border border-amber-500/30">
+              <ShieldCheck className="text-amber-400 w-8 h-8" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heritage font-bold mb-6 text-white leading-tight">
+              {language === 'EN' ? 'Guardians of Our Living Heritage' : 'අපේ ජීවමාන උරුමයේ මුරකරුවෝ වෙමු'}
+            </h2>
+            <p className="text-base md:text-xl text-gray-200 leading-relaxed max-w-4xl mb-12 font-light">
+              {language === 'EN' 
+                ? "Our heritage extends far beyond ancient bricks and monuments. It breathes through our traditional arts, our language, our culinary secrets, and the values passed down through generations. While we must protect our sacred sites by leaving no trace, we must equally champion our intangible culture. Support local artisans, respect village customs, and keep our stories alive. True preservation is protecting both the places we revere and the culture we live."
+                : "අපගේ උරුමය හුදෙක් පැරණි ගඩොල් සහ ස්මාරකවලට වඩා බොහෝ සෙයින් ඔබ්බට විහිදෙයි. එය අපගේ සාම්ප්‍රදායික කලාවන්, අපගේ භාෂාව, අපගේ සූපශාස්ත්‍ර රහස් සහ පරම්පරාවෙන් පරම්පරාවට පැවත එන සාරධර්ම හරහා ජීවමානව පවතී. අපගේ පූජනීය ස්ථානවලට හානියක් නොකර ඒවා ආරක්ෂා කරනවා සේම, අපගේ අස්පෘශ්‍ය සංස්කෘතියද අප විසින් රැකගත යුතුය. දේශීය කලාකරුවන්ට සහාය වන්න, ගමේ සිරිත් විරිත්වලට ගරු කරන්න, අපේ කතාන්දර මතු පරපුරට ගෙන යන්න. සැබෑ සංරක්ෂණය යනු අප වන්දනාමාන කරන ස්ථාන මෙන්ම අප ජීවත් වන සංස්කෘතියද එකසේ සුරක්ෂිත කිරීමයි."}
+            </p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full max-w-4xl">
+              {[
+                { icon: <Landmark size={24}/>, text: { EN: 'Historical Sites', SI: 'ඓතිහාසික ස්ථාන' } },
+                { icon: <Palette size={24}/>, text: { EN: 'Traditional Arts', SI: 'සාම්ප්‍රදායික කලා' } },
+                { icon: <Heart size={24}/>, text: { EN: 'Cultural Values', SI: 'සංස්කෘතික වටිනාකම්' } },
+                { icon: <Sprout size={24}/>, text: { EN: 'Natural Beauty', SI: 'ස්වභාවික සෞන්දර්යය' } },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors">
+                  <div className="text-amber-400">{item.icon}</div>
+                  <span className="text-sm md:text-base text-white font-medium">{language === 'EN' ? item.text.EN : item.text.SI}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
