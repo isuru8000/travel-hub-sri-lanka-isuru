@@ -14,9 +14,13 @@ interface SEOProps {
     image: string;
     address: string;
   };
+  itemList?: {
+    name: string;
+    url: string;
+  }[];
 }
 
-export const SEO: React.FC<SEOProps> = ({ title, description, image, url, language = 'en', keywords, touristAttraction }) => {
+export const SEO: React.FC<SEOProps> = ({ title, description, image, url, language = 'en', keywords, touristAttraction, itemList }) => {
   const siteName = "Travel Hub Sri Lanka";
   const defaultImage = "https://images.unsplash.com/photo-1588096344356-820865c36131?q=80&w=2070&auto=format&fit=crop";
   const finalTitle = `${title} | ${siteName}`;
@@ -57,6 +61,17 @@ export const SEO: React.FC<SEOProps> = ({ title, description, image, url, langua
     }
   } : null;
 
+  const itemListSchema = itemList ? {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": itemList.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "url": item.url
+    }))
+  } : null;
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -87,7 +102,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, image, url, langua
       
       {/* JSON-LD Schema Markup */}
       <script type="application/ld+json">
-        {JSON.stringify([organizationSchema, websiteSchema, breadcrumbSchema, ...(touristAttractionSchema ? [touristAttractionSchema] : [])])}
+        {JSON.stringify([organizationSchema, websiteSchema, breadcrumbSchema, ...(touristAttractionSchema ? [touristAttractionSchema] : []), ...(itemListSchema ? [itemListSchema] : [])])}
       </script>
 
       {/* Open Graph / Facebook */}
@@ -97,6 +112,8 @@ export const SEO: React.FC<SEOProps> = ({ title, description, image, url, langua
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image || defaultImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />

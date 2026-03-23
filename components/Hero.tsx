@@ -25,11 +25,11 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
   }, []);
 
   const heroImages = [
-    "https://i.pinimg.com/1200x/2c/68/43/2c6843857f826027ebc292a5c4c899d3.jpg"
+    "https://i.pinimg.com/1200x/6d/f7/4d/6df74de4c2548cc787dc224005393149.jpg"
   ];
 
   const mobileHeroImages = [
-    "https://i.pinimg.com/736x/bb/5b/02/bb5b021616ea1497a62f5058dcde2beb.jpg"
+    "https://i.pinimg.com/1200x/6d/f7/4d/6df74de4c2548cc787dc224005393149.jpg"
   ];
 
   const stats = [

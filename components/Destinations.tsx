@@ -1,5 +1,6 @@
 
 import React, { useState, useMemo, useEffect, useRef } from 'react';
+// Force Vite recompile
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, Destination } from '../types';
 import { DESTINATIONS, UI_STRINGS } from '../constants';
@@ -147,6 +148,10 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       <SEO 
         title={language === 'EN' ? 'Destinations' : 'ගමනාන්ත'} 
         description={language === 'EN' ? 'Explore the beautiful destinations of Sri Lanka.' : 'ශ්‍රී ලංකාවේ සුන්දර ගමනාන්ත ගවේෂණය කරන්න.'} 
+        itemList={filteredDestinations.map(dest => ({
+          name: dest.name[language],
+          url: `https://www.travelhubsrilanka.space/destinations/${dest.id}`
+        }))}
       />
       
       {/* Cinematic Header */}
