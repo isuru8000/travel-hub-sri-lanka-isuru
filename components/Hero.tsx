@@ -165,7 +165,7 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             </motion.span>
             
             <div className="relative group">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[8rem] font-heritage font-bold leading-none tracking-tighter uppercase text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-[1.02] whitespace-nowrap">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heritage font-bold leading-none tracking-tighter uppercase text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-[1.02] whitespace-nowrap">
                 {language === 'EN' ? mainTitleEN : mainTitleSI}
               </h1>
               {/* Subtle floating glow behind title */}
