@@ -155,7 +155,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       />
       
       {/* Cinematic Header */}
-      <div className="relative z-[60] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-[#1a1a1a]">
+      <div className="relative z-[101] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-[#1a1a1a]">
         <div className="absolute inset-0 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms]" 
@@ -196,6 +196,14 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
           {/* CINEMATIC SEARCH BAR */}
           <div className="w-full max-w-3xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
+            <div 
+              className="absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
+              style={{ 
+                backgroundImage: `url('https://i.pinimg.com/736x/d5/94/46/d594463c9e0baab249e9396b91ebd8ab.jpg')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            />
             <div className="absolute -inset-4 bg-[#5A5A40]/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
             <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#5A5A40] shadow-[0_30px_80px_-15px_rgba(90,90,64,0.4)]' : 'border-white/20 shadow-2xl'}`}>
               <div className="pl-8 text-[#f5f5f0]">
@@ -218,7 +226,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
             {/* EXPANSIVE SEARCH RESULTS DROPDOWN */}
             {showResultsDropdown && searchMatches.length > 0 && (
-              <div className="absolute top-[calc(100%+0.5rem)] md:top-[calc(100%+1rem)] left-0 right-0 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_60px_180px_rgba(0,0,0,0.3)] border border-[#5A5A40]/10 overflow-hidden animate-in slide-in-from-top-6 duration-700 z-[120]">
+              <div className="absolute top-[calc(100%+0.5rem)] md:top-[calc(100%+1rem)] left-0 right-0 bg-white rounded-[1.5rem] md:rounded-[2.5rem] shadow-[0_60px_180px_rgba(0,0,0,0.3)] border border-[#5A5A40]/10 overflow-hidden animate-in slide-in-from-top-6 duration-700 z-[999]">
                 {searchMatches.map((dest) => (
                   <button
                     key={dest.id}

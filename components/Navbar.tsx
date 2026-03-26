@@ -121,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-0">
+        <div className="hidden lg:flex items-center gap-2">
           {navLinks.map((link) => (
             <div 
               key={link.id} 
@@ -131,7 +131,7 @@ const Navbar: React.FC<NavbarProps> = ({
             >
               <button
                 onClick={() => handleNav(link.id)}
-                className={`flex items-center gap-1 px-1 py-1.5 rounded-full text-[7.5px] xl:text-[9px] font-black uppercase tracking-wider transition-all duration-500 relative group/link whitespace-nowrap ${
+                className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[7.5px] xl:text-[9px] font-black uppercase tracking-wider transition-all duration-500 relative group/link whitespace-nowrap ${
                   currentView === link.id || (link.hasDropdown && link.items?.some(i => i.id === currentView))
                     ? 'bg-black/5 text-[#0a0a0a]' 
                     : 'text-gray-600 hover:text-[#0a0a0a] hover:bg-black/5'
