@@ -38,7 +38,7 @@ import {
   Mail
 } from 'lucide-react';
 import { UI_STRINGS } from '../constants';
-import AnimatedLogo from './AnimatedLogo';
+import Logo from './Logo';
 
 interface NavItem {
   id: string;
@@ -111,17 +111,17 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[85%] md:w-[98%] max-w-7xl bg-white border border-gray-100 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-3 md:px-5' : 'py-1.5 px-3 md:py-2.5 md:px-8'}`}>
+    <nav className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] transition-all duration-500 w-[92%] md:w-[96%] max-w-7xl bg-white border border-gray-100 rounded-full shadow-[0_25px_60px_rgba(0,0,0,0.08)] ${isScrolled ? 'py-1 px-3 md:px-5' : 'py-1.5 px-3 md:py-2.5 md:px-8'}`}>
       <div className="flex items-center justify-between">
         {/* Brand */}
-        <div className="flex items-center gap-3 md:gap-4 cursor-pointer group shrink-0" onClick={() => handleNav('home')}>
-          <div className="scale-110 md:scale-125">
-            <AnimatedLogo />
+        <div className="flex items-center gap-2 md:gap-3 cursor-pointer group shrink-0" onClick={() => handleNav('home')}>
+          <div className="scale-100 md:scale-110">
+            <Logo />
           </div>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-0">
           {navLinks.map((link) => (
             <div 
               key={link.id} 
@@ -131,15 +131,15 @@ const Navbar: React.FC<NavbarProps> = ({
             >
               <button
                 onClick={() => handleNav(link.id)}
-                className={`flex items-center gap-2 px-3 py-2.5 rounded-full text-[9px] xl:text-[10px] font-bold uppercase tracking-wider transition-all duration-500 relative group/link whitespace-nowrap ${
+                className={`flex items-center gap-1 px-1 py-1.5 rounded-full text-[7.5px] xl:text-[9px] font-black uppercase tracking-wider transition-all duration-500 relative group/link whitespace-nowrap ${
                   currentView === link.id || (link.hasDropdown && link.items?.some(i => i.id === currentView))
                     ? 'bg-black/5 text-[#0a0a0a]' 
                     : 'text-gray-600 hover:text-[#0a0a0a] hover:bg-black/5'
                 }`}
               >
-                <span className="opacity-70 group-hover/link:opacity-100 transition-opacity">{link.icon}</span>
+                <span className="opacity-70 group-hover/link:opacity-100 transition-opacity scale-90">{link.icon}</span>
                 {link.label[language]}
-                {link.hasDropdown && <ChevronDown size={12} className={`transition-transform duration-300 ${activeDropdown === link.id ? 'rotate-180' : ''}`} />}
+                {link.hasDropdown && <ChevronDown size={10} className={`transition-transform duration-300 ${activeDropdown === link.id ? 'rotate-180' : ''}`} />}
               </button>
 
               {/* Dropdown Menu */}
@@ -166,24 +166,24 @@ const Navbar: React.FC<NavbarProps> = ({
             </div>
           ))}
           
-          <div className="h-8 w-px bg-gray-100 mx-4" />
+          <div className="h-8 w-px bg-gray-100 mx-2" />
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1">
             <button 
               onClick={() => setLanguage(language === 'EN' ? 'SI' : 'EN')} 
-              className="group flex items-center gap-3 px-5 py-2.5 rounded-2xl border border-[#0EA5E9]/20 text-[10px] font-black uppercase tracking-widest bg-white text-gray-600 hover:bg-[#0EA5E9] hover:text-white hover:border-transparent transition-all shadow-sm"
+              className="group flex items-center gap-1.5 px-1.5 py-1.5 rounded-xl border border-[#0EA5E9]/20 text-[7.5px] xl:text-[8.5px] font-black uppercase tracking-widest bg-white text-gray-600 hover:bg-[#0EA5E9] hover:text-white hover:border-transparent transition-all shadow-sm"
               title={language === 'EN' ? "Switch to Sinhala Vision" : "ආපසු ඉංග්‍රීසි දැක්මට"}
             >
-              <Globe size={13} className={`${language === 'EN' ? 'text-[#0EA5E9]' : 'text-white'} group-hover:text-white transition-colors`} />
-              {language === 'EN' ? 'Sinhala Vision' : 'English View'}
+              <Globe size={10} className={`${language === 'EN' ? 'text-[#0EA5E9]' : 'text-white'} group-hover:text-white transition-colors`} />
+              {language === 'EN' ? 'SI' : 'EN'}
             </button>
 
             {user ? (
-              <button onClick={() => handleNav('profile')} className="w-10 h-10 rounded-full border-2 border-white shadow-lg overflow-hidden group">
+              <button onClick={() => handleNav('profile')} className="w-7 h-7 rounded-full border-2 border-white shadow-lg overflow-hidden group">
                  <img src={user.photo} className="w-full h-full object-cover group-hover:scale-110 transition-transform" />
               </button>
             ) : (
-              <button onClick={onLogin} className="px-8 py-3 bg-[#0a0a0a] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] hover:scale-105 active:scale-95 transition-all shadow-md">
+              <button onClick={onLogin} className="px-3 py-1.5 bg-[#0a0a0a] text-white rounded-full text-[7.5px] xl:text-[8.5px] font-black uppercase tracking-[0.1em] hover:scale-105 active:scale-95 transition-all shadow-md">
                 {UI_STRINGS.registry[language]}
               </button>
             )}
@@ -201,7 +201,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="absolute left-0 right-0 top-full mt-2 md:mt-4 bg-white/95 backdrop-blur-3xl rounded-[2rem] md:rounded-[3rem] shadow-[0_50px_100px_rgba(0,0,0,0.2)] border border-gray-200/50 p-4 md:p-8 flex flex-col gap-4 md:gap-8 animate-in slide-in-from-top-4 duration-500 max-h-[85vh] overflow-y-auto w-full">
           {/* Header Identity in Mobile Menu */}
           <div className="flex items-center gap-3 md:gap-5 px-4 py-3 md:px-6 md:py-4 bg-gray-50 rounded-[1.5rem] md:rounded-[2.5rem] shadow-sm shrink-0 border border-gray-100">
-             <AnimatedLogo />
+             <Logo />
           </div>
 
           <div className="space-y-2 md:space-y-4 overflow-y-auto pr-2">
