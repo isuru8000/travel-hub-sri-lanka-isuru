@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Language, View } from '../types';
 import { Play, CreditCard, Users, Clock, ShieldCheck, ChevronLeft, MessageCircle, Send, Eye, Radio, Calendar, MapPin, Lock } from 'lucide-react';
 import StripePaymentModal from './StripePaymentModal';
+import VRPage from '../VRPage';
 
 interface VRPortalProps {
   language: Language;
@@ -249,17 +250,10 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
           <div className="flex flex-col lg:flex-row gap-6 flex-1">
             {/* VR Player Area */}
             <div className="flex-1 bg-[#2d2d2d] rounded-3xl overflow-hidden relative border border-[#5A5A40]/20 shadow-lg min-h-[50vh] lg:min-h-[70vh] group">
-              {/* Simulated 360 Video Embed */}
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${selectedTour.videoId}?autoplay=1&mute=1&controls=1&fs=1`} 
-                title={`${selectedTour.title.EN} 360 VR`} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; vr" 
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              ></iframe>
+            {/* Real 360 VR Player */}
+            <div className="absolute inset-0 w-full h-full">
+              <VRPage panoramaUrl={selectedTour.image} title={selectedTour.title[language]} />
+            </div>
               
               {/* Overlay UI */}
               <div className="absolute top-4 left-4 bg-[#f5f5f0]/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-[#5A5A40]/20 opacity-0 group-hover:opacity-100 transition-opacity">

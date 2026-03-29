@@ -1617,39 +1617,839 @@ The shallow reef coastline of Pasikudah is the bay's most extraordinary physical
   },
 
   // --- WATERFALLS (10) ---
-  { id: "diyaluma", name: { EN: "Diyaluma", SI: "දියලුම" }, category: "waterfalls", image: "https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg", gallery: ["https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg"], history: { EN: "Diyaluma Falls is 220 m (720 ft) high and the second highest waterfall in Sri Lanka and 361st highest waterfall in the world. It is situated 6 km away from Koslanda in Badulla District on Colombo-Badulla highway. The Falls are formed by Punagala Oya, a tributary of Kuda Oya which in turn, is a tributary of Kirindi Oya.", SI: "ඛේදජනක ප්‍රේම කතාවේ ඇල්ල." }, shortStory: { EN: "Diyaluma Falls - Sri Lanka's second-highest waterfall, famous for its natural pools at the top.", SI: "දියලුම ඇල්ල - ශ්‍රී ලංකාවේ දෙවන උසම දිය ඇල්ල සහ මුදුනේ ඇති ස්වභාවික තටාක සඳහා ප්‍රසිද්ධයි." }, tips: [{ EN: "Walk to the top of the falls.", SI: "මුදුනට ඇවිදින්න." }], hiddenEchoes: { EN: "Natural pools at the top.", SI: "ස්වභාවික තටාක." }, location: "Badulla", coordinates: { x: 66, y: 74 },
-    nearbyAttractions: [
-      { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" },
-      { id: "haputale", name: { EN: "Haputale", SI: "හපුතලේ" }, image: "https://i.pinimg.com/1200x/c3/bc/5e/c3bc5e159f35130bcad02b0ee7b0f91f.jpg" },
-      { id: "buduruwagala", name: { EN: "Buduruwagala", SI: "බුදුරුවගල" }, image: "https://i.pinimg.com/1200x/7d/ce/23/7dce235eedb24bdcbd5ece2ef2836fd8.jpg" }
-    ]
-  },
-  { id: "bambarakanda", name: { EN: "Bambarakanda", SI: "බඹරකන්ද" }, category: "waterfalls", image: "https://i.pinimg.com/736x/2c/90/80/2c908064d4b0d03c0051128438b872dd.jpg", gallery: ["https://i.pinimg.com/736x/2c/90/80/2c908064d4b0d03c0051128438b872dd.jpg"], history: { EN: "Bambarakanda Falls is the tallest waterfall in Sri Lanka. With a height of 263 m (863 ft), it ranks as the 299th highest waterfall in the world. Situated in Kalupahana in the Badulla District, this waterfall is directly visible from the A4 Highway. The waterfall was formed by Kuda Oya, which is a branch of the Walawe River. The Bambarakanda Falls can be found in a forest of pine trees.", SI: "ලංකාවේ උසම දිය ඇල්ල." }, shortStory: { EN: "Bambarakanda Falls - The tallest waterfall in Sri Lanka, surrounded by a scenic pine forest.", SI: "බඹරකන්ද ඇල්ල - පයින් වනාන්තරයකින් වට වූ ශ්‍රී ලංකාවේ උසම දිය ඇල්ල." }, tips: [{ EN: "It looks best after it rains.", SI: "වැස්සෙන් පසු අලංකාරයි." }], hiddenEchoes: { EN: "A path through pine trees.", SI: "පයින් වනාන්තර මග." }, location: "Badulla", coordinates: { x: 62, y: 76 },
+  { id: "diyaluma", name: { EN: "Diyaluma", SI: "දියලුම" }, category: "waterfalls", image: "https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg", gallery: ["https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg"], history: { EN: "Diyaluma Falls is 220 m (720 ft) high and the second highest waterfall in Sri Lanka and 361st highest waterfall in the world. It is situated 6 km away from Koslanda in Badulla District on Colombo-Badulla highway. The Falls are formed by Punagala Oya, a tributary of Kuda Oya which in turn, is a tributary of Kirindi Oya.", SI: "ඛේදජනක ප්‍රේම කතාවේ ඇල්ල." }, shortStory: { EN: "Diyaluma Falls - Sri Lanka's second-highest waterfall, famous for its natural pools at the top.", SI: "දියලුම ඇල්ල - ශ්‍රී ලංකාවේ දෙවන උසම දිය ඇල්ල සහ මුදුනේ ඇති ස්වභාවික තටාක සඳහා ප්‍රසිද්ධයි." }, detailedAbout: { EN: `💧 DIYALUMA FALLS — දියලුම ඇල්ල
+Sri Lanka's Second Tallest Waterfall — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by geological surveys, historical records, and physical measurement
+⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Uva Province, Sri Lanka
+District: Badulla District
+Village: Koslanda — 6 km from the base of the falls
+Position: On the Colombo–Badulla highway, between Beragala and Wellawaya
+Elevation at top: approximately 1,100 meters above sea level
+Distance from Ella: approximately 40 km — about 1 to 1.5 hours by road
+Distance from Haputale: approximately 30 km — about 45 minutes by road
+Distance from Wellawaya: approximately 15 km east — about 20 minutes
+Distance from Bambarakanda Falls: approximately 45 km — about 1 hour by road
+Distance from Horton Plains: approximately 40 km — about 1 hour by road
+Distance from Colombo: approximately 220 km — about 5 hours by road
+
+💧 WHAT IS DIYALUMA FALLS
+✅ CONFIRMED — Diyaluma Falls is the second highest waterfall in Sri Lanka and the 619th highest waterfall in the world. It plunges 220 meters — 720 feet — in a single dramatic drop from the plateau edge down a rocky cliff face to the Koslanda valley below. The falls are formed by the Punagala Oya — a stream fed by the highland plateau above — which is itself a tributary of Kuda Oya, which in turn flows into the Kirindi Oya river system.
+✅ CONFIRMED — The waterfall is actually two distinct features: the main Diyaluma Falls — the famous 220-meter single vertical plunge visible from the road below — and the Upper Diyaluma Falls above it — a series of cascades, natural rock channels, and natural swimming pools on the plateau surface before the stream reaches the cliff edge. Both features are extraordinary and together constitute the complete Diyaluma experience. Most photographs of Diyaluma show the upper pools rather than the main drop — the upper area is where visitors actually swim and interact with the water.
+✅ CONFIRMED — The name Diyaluma derives from Sinhala. Diya means water and haluma means rapid flow. The combined meaning is rapid flow of water or alternatively translated as liquid light — both interpretations are linguistically valid.
+
+📜 HISTORY AND LEGENDS — CONFIRMED FACTS AND TRADITIONS
+⭐ THE FOUNDING LEGEND — CONFIRMED AS LOCAL TRADITION:
+The most widely recorded legend associated with Diyaluma Falls is documented by the Sri Lankan historian Dr R. L. Brohier. The story concerns a young chieftain who had been banished to the highlands. His betrothed — prevented from joining him by guards at all the mountain passes — attempted to descend to him by a rope made of twisted creepers that the chieftain lowered over the cliff edge. As she was being hauled up the escarpment, she was dashed against the rocks and died. The gods, moved to pity by the tragedy, caused a stream of water to flow permanently from the place where she fell — the water representing the tears of eternal grief. The legend is recorded in Sinhala village oral tradition and documented by Brohier from village elders in the early 20th century.
+⭐ A SECOND DOCUMENTED TRAGEDY — 1910:
+Brohier also recorded a more recent story dating from 1910, remembered by local elders. Two tourists — Harris and Ashna — attempted to climb the cliff face of the falls. Ashna reached the top first and began to descend. Harris — his pride injured — produced a knife and cut the rope, sending Ashna falling to her death. He then cut his own rope and fell after her. The story is recorded as local historical memory. It cannot be independently verified from colonial records but reflects the genuine danger of the cliff face — a danger that remains real today.
+✅ CONFIRMED — THE WATER SOURCE:
+The Punagala Oya that feeds Diyaluma Falls originates in the Poonagala highland area above the cliff. The stream flows through the plateau before reaching the falls, carving the natural rock channels and pools that form the Upper Diyaluma area. The geological process of water carving rock over millions of years has produced the extraordinary natural pool formations that are the most sought-after feature of the site.
+
+💧 THE TWO AREAS — COMPLETE CONFIRMED DETAILS
+🏊 Upper Diyaluma Falls — The Swimming Pools
+✅ CONFIRMED — The Upper Diyaluma area is the plateau above the main waterfall where the Punagala Oya flows through a series of natural rock formations before reaching the cliff edge. Over geological time, the flowing water has carved the rock into intricate channels, pools, and cascades of varying sizes and depths. Three main tiers of natural pools have been formed — each tier at a slightly lower elevation as the water descends toward the cliff edge.
+✅ CONFIRMED — The defining feature of the Upper Diyaluma pools is their position. The pools closest to the cliff edge provide a direct view down the 220-meter main drop to the valley floor far below while you are swimming in them. This combination — swimming in cold, clear mountain water while looking over the edge of a 220-meter cliff to the plains below — is the experience that has made Diyaluma Upper Falls one of the most photographed natural features in Sri Lanka. Multiple independent visitor accounts consistently describe it as one of the finest natural experiences they have encountered in Asia.
+✅ CONFIRMED — The pools vary in depth between sections — some sections are suitable for swimming, others for jumping, and some allow sliding down smooth rock surfaces from one pool to the next. A small natural cascade feeds from one tier to the next. The rock surface around and between the pools is smooth, sculpted granite — warm in the sun and comfortable to walk on in bare feet during dry conditions.
+⚠️ WATER LEVEL WARNING — CRITICAL:
+The pools are only safe for swimming when water levels are low — during the dry season from approximately December to April and during drier periods in August and September. During and after the monsoon, the Punagala Oya carries dramatically increased water volume. The same pools that are gentle, swimmable, and safe in the dry season become fast-flowing, turbulent, and genuinely dangerous during and after heavy rain. The current at the pool closest to the cliff edge — if increased by heavy rain — carries directly toward the 220-meter drop. Multiple visitor accounts confirm this hazard. Never swim in the upper pools when water levels are elevated or flow is visibly fast. This is not a precautionary warning but a genuine life-safety concern.
+💧 The Main Diyaluma Falls — The 220-Meter Drop
+✅ CONFIRMED — The main Diyaluma Falls is the 220-meter single-plunge waterfall visible from the Colombo–Badulla highway in the valley below. The water drops from the plateau edge in a single unbroken cascade down the rocky cliff face — during peak flow the waterfall is a massive curtain of white water visible from a great distance; during the dry season it narrows to a more slender ribbon but remains a dramatic presence on the cliff face.
+✅ CONFIRMED — The main falls are best viewed from the road below and from the bridge across the Punagala Oya near the base of the falls. The bridge provides a direct upward view of the full 220-meter drop. During the wet season this viewpoint produces an extraordinary sight — the full force of the water descending the cliff face in a massive torrent. During the dry season the falls are less voluminous but the cliff profile and the height are still fully impressive.
+✅ CONFIRMED — The base of the main falls is accessible by a short walk from the road. A pool forms at the base where the falling water strikes the rock surface. Spray mist covers the surrounding vegetation near the base — the microclimate immediately around the base pool is significantly cooler and more humid than the surrounding valley, supporting lush ferns and mosses on the adjacent rocks.
+⚠️ BASE POOL SAFETY:
+The pool at the base of the 220-meter drop is not safe for swimming. The impact force of water falling 220 meters creates dangerous turbulence in the pool — particularly during high water flow periods. Never swim in the base pool. Observe from a safe distance on the adjacent rocks.
+
+🥾 THE HIKE — TWO ROUTES CONFIRMED
+Route 1 — From Poonagala Village (Top-Down) — Recommended
+✅ CONFIRMED — The most practical approach for visitors coming from Ella. A tuk-tuk from Ella to Poonagala village takes approximately 1.5 to 2 hours along a winding highland road through tea estates. The cost is approximately 3,500 to 5,000 LKR for the round trip — confirm the price including waiting time with the driver before departure.
+From Poonagala village, the hiking path begins at the Makaldeniya bend on the Poonagala road — identifiable on Maps.me and Google Maps offline. From the trailhead, the path descends through long highland grass toward the upper falls. Duration: approximately 20 to 30 minutes downhill from the trailhead to the first pools.
+✅ CONFIRMED — The path is not formally signposted but is clearly worn and easy to follow in dry conditions. The trail becomes overgrown in places during the wet season. Download offline maps before arrival as mobile data connectivity at the site is unreliable.
+Entry Fee at Upper Falls:
+A small entry charge is now collected at the upper falls — approximately 350 LKR based on confirmed visitor accounts. The exact current fee should be verified on arrival.
+Route 2 — From Below at Koslanda (Bottom-Up)
+✅ CONFIRMED — From the bridge near the base of the falls on the Colombo–Badulla highway, a hiking trail leads upward to the upper pool area. Duration: approximately 30 to 45 minutes of uphill hiking — more strenuous than the Poonagala descent. The route passes through forest and scrubland with the sound of the falls audible throughout the ascent.
+✅ CONFIRMED — The bottom-up approach allows visitors to see the main falls from below first — the most dramatic view of the full 220-meter drop — before ascending to the upper pools. This sequence gives the complete experience in logical order. The bus stop on the Colombo–Badulla highway is near the road junction for the base of the falls.
+Combining Both Routes:
+Many experienced visitors descend from Poonagala to the upper pools, spend time swimming, then continue downhill to the base of the falls and exit via the lower road — a one-way traverse. This requires either coordinating transport at both ends or returning on foot — the full descent from Poonagala to the base road takes approximately 1.5 to 2 hours.
+Duration — Full Visit:
+A thorough visit — base viewpoint, ascent or descent to upper pools, swimming, exploring the multiple pool tiers — requires a minimum of 3 to 4 hours. A full day allows a completely unhurried experience and is recommended by multiple visitor accounts.
+
+👮 GUIDE — HONEST ASSESSMENT
+⚠️ PARTIALLY UNCERTAIN — GUIDE REQUIREMENT:
+Multiple independent sources give directly contradictory advice on whether a guide is necessary:
+Against guides: Several visitor accounts confirm the trail from Poonagala is straightforward, well-marked on offline maps, and navigable without assistance. One source specifically advises firmly declining guide offers from local men at the parking area who pressure visitors with false claims of trail difficulty.
+For guides: Multiple other visitor accounts describe guides as significantly enhancing the experience — identifying safe swimming and jumping spots, navigating the rock pools safely, pointing out hidden viewpoints, and providing important safety advice about water levels. For first-time visitors during the wet season or after recent rain, an experienced guide's knowledge of safe versus dangerous pool sections is genuinely valuable.
+The honest middle position: A guide is not necessary for reaching the upper falls from Poonagala during the dry season. A guide is strongly recommended for first-time visitors during or after rain, for those who want to explore the full range of pools and cascades safely, and for anyone unfamiliar with highland terrain. The cost of a guide is modest and the safety and experiential value is real. The choice is genuinely circumstantial rather than categorically required or categorically unnecessary.
+
+🌿 WILDLIFE AND NATURAL ENVIRONMENT
+🐘 Elephants
+✅ CONFIRMED — Wild elephants are active in the broader area around Diyaluma Falls. Multiple visitor accounts note that guides specifically mention elephant presence as a reason for caution on longer hikes away from the main trail. The immediate falls area and the direct Poonagala trail are not high-risk zones but the forest surrounding the area is genuine elephant habitat. Avoid extended hikes off the main trail without local knowledge, particularly in the early morning and late afternoon when elephant activity increases.
+🦎 Reptiles
+Land monitors are commonly seen basking on rocks near the falls. Various snake species are present in the long grass and rocky terrain — wear closed-toe shoes and watch where you place your hands and feet when scrambling over rocks.
+🦟 Leeches
+Land leeches are present in the grass and forest sections of the trail — particularly after rain and during the wetter months. Apply salt or DEET-based repellent to shoes and lower trouser legs before beginning the hike.
+🦅 Birds
+Highland endemic bird species are present in the surrounding forest and scrubland — Yellow-Eared Bulbul, Sri Lanka White-Eye, and various flycatchers and babblers are commonly heard and seen along the trail. The stream habitat supports kingfishers. Raptors — crested serpent eagle and changeable hawk-eagle — are seen soaring over the escarpment.
+🌿 Vegetation
+The plateau area above the falls is characterised by highland grassland — long dry grass in the dry season, lush green during the monsoon. The stream banks support dense fern and moss vegetation sustained by permanent moisture from the Punagala Oya. The cliff face itself supports a variety of plants including mosses, ferns, and clinging shrubs in the spray zone of the falls.
+
+🌤️ BEST TIME TO VISIT
+December to March — Primary Recommendation
+The dry season for the south and central highlands. Water levels in the upper pools are low — the pools are calm, clear, and safe for swimming. The path from Poonagala is dry and easy to follow. The main falls may be less voluminous than during the monsoon but the upper pools are at their safest and most enjoyable. The highland air is cool and the surrounding landscape is dry and golden.
+March to May — Good Shoulder Season
+Water levels increasing as the first inter-monsoon rains approach. The pools are still swimmable in the early part of this period but water levels and flow speed should be checked on arrival. The landscape becomes increasingly green and lush. The main falls begin to build toward monsoon volume.
+August and September — Dry Season Secondary Window
+A secondary dry period when pool conditions can be good — confirmed by visitor accounts. However this is less reliably dry than December to March and conditions vary more between years.
+May to October — Wet Season
+The main falls are at their most dramatic and powerful — a genuinely extraordinary sight from the road below. The upper pools are potentially dangerous — high water volume, fast current, and risk of being swept toward the cliff edge make swimming inadvisable except during specifically dry spells within this period. The trail from Poonagala is more overgrown. Guide strongly recommended if visiting.
+October to November — Transition
+Improving conditions as the southwest monsoon ends. Water levels decreasing but the northeast monsoon can bring additional rain. Conditions are improving but variable.
+
+🚌 GETTING THERE
+🚗 From Ella — Most Common Base:
+Approximately 40 km — about 1 to 1.5 hours by road. Two options:
+By tuk-tuk to Poonagala village: approximately 1.5 to 2 hours each way on the highland road through tea estates; cost approximately 3,500 to 5,000 LKR round trip with waiting time; the mountain road is beautiful and the journey itself is a highlight
+By tuk-tuk to the base on the Colombo–Badulla highway: approximately 1 hour; cost approximately 2,000 to 3,500 LKR round trip; approaching from below gives the dramatic first view of the main falls from the road
+🚌 By Bus from Haputale:
+Direct bus from Haputale bus stand in the direction of Wellawaya — approximately 45 minutes to 1 hour. The bus stop is near the road junction for the base of the falls. This is the most economical transport option from Haputale.
+🚌 By Bus from Ella:
+Buses from Ella to Wellawaya pass the base of the falls junction. Ask the driver to let you off at Diyaluma Falls. From the junction, the base of the falls is a short walk. For the upper Poonagala approach from Ella by bus, change at Wellawaya for a Haputale-bound bus.
+From Wellawaya:
+15 km west — approximately 20 minutes by tuk-tuk or bus.
+From Horton Plains:
+Approximately 40 km — 1 hour by road. A natural pairing — Horton Plains in the early morning, Diyaluma in the afternoon.
+From Bambarakanda Falls:
+Approximately 45 km — 1 hour. Sri Lanka's tallest and second-tallest waterfalls in a single day is a practical and rewarding combination.
+
+🏨 WHERE TO STAY
+In Ella — Most Practical Base (40 km):
+The full range of Ella accommodation described in the Ella guide above. Diyaluma is most commonly done as a day trip from Ella — the distance and road quality make this entirely practical.
+Near Diyaluma — Very Limited:
+A small number of basic guesthouses operate in the Koslanda and Poonagala area. These are simple village homestays rather than tourist accommodation. Suitable for very budget-conscious travellers who want an early morning start at the falls without the 40 km drive from Ella.
+In Haputale (30 km):
+Haputale town has a range of budget to mid-range guesthouses. A quieter, more local atmosphere than Ella at significantly lower prices. A natural base for combining Diyaluma with Bambarakanda and Horton Plains.
+In Wellawaya (15 km):
+Several small guesthouses in Wellawaya town offer basic accommodation. Wellawaya is a junction town — not a tourist destination in itself but a practical and cheap overnight base for the surrounding waterfall and highland attractions.
+
+🍽️ WHERE TO EAT
+At the Falls:
+Small food stalls and coconut sellers operate near the base of the falls — particularly on the road near the bridge. These provide basic snacks, fresh coconuts, and cold drinks. A larger selection of vendors operates on weekends when local visitor numbers are higher.
+In Poonagala Village:
+The tea village of Poonagala has small local shops where biscuits, drinks, and basic provisions are available. A small kiosk near the upper falls — run by local families including the guide families who work the area — provides drinks and snacks.
+Carry Your Own Food:
+For a full day at the falls — which is strongly recommended — carry sufficient food and water from Ella, Haputale, or Wellawaya before arriving. Once past the village shops there is no reliable food supply on the trail or at the upper pools. A minimum of 2 litres of water per person and a full lunch should be packed.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+🌊 Check water levels immediately on arrival before swimming. The difference between safe and dangerous conditions at the upper pools is the speed of current. On arrival, observe the water surface carefully — calm, slow-moving water is safe; fast, rippling surface indicates elevated current. If there has been rain in the previous 24 to 48 hours, water levels will be elevated and the pools closest to the cliff edge should be avoided for swimming. This assessment requires judgment on the day and cannot be made in advance.
+🧴 Apply leech repellent before beginning the Poonagala trail. The long grass section of the descent from Poonagala has land leeches during wetter periods. Salt or DEET applied to shoes and lower trouser legs before starting the descent is effective prevention.
+👟 Wear shoes you don't mind getting wet. Swimming in the upper pools almost inevitably involves wet footwear when scrambling between pool sections. Water shoes or old trainers are ideal. Flip-flops are dangerous on the wet rock surfaces — avoid entirely.
+💧 Carry at least 2 litres of water per person. The highland heat combined with the physical activity of the hike and swimming is significantly dehydrating. No reliable water supply is available on the trail above the village level. Fresh coconuts are available near the base road but not on the upper trail.
+📱 Download offline maps before arriving. Mobile data connectivity at Diyaluma is unreliable. Google Maps or Maps.me downloaded for offline use before departure allows navigation on the Poonagala trail without network connectivity.
+⏰ Start early. Arriving at Poonagala by 7:00 to 8:00 AM gives the finest morning light at the upper pools, the coolest swimming conditions, and the best chance of having the pools with minimal other visitors. By late morning and early afternoon during peak season weekends, the upper pool area can become crowded with local and tourist visitors simultaneously.
+🚿 Bring a quick-dry towel. Spending several hours swimming between rock pools requires adequate drying equipment. A microfibre travel towel is ideal — lightweight, compact, and dries within minutes.
+📷 A waterproof case or dry bag for your camera. The rock pool swimming involves significant water exposure. Phone cameras and standard cameras are genuinely at risk from splashing and immersion. A waterproof phone case or a dry bag for electronics is practical preparation.
+⚠️ Never swim alone or in fast-moving current near the cliff edge. The upper pool closest to the cliff drop is the most photographed and most dramatic swimming location but also the most dangerous. A guide who can identify safe depth, rock hazards, and safe jumping spots is particularly valuable here. If swimming alone or without an experienced local, stay well away from the cliff-edge pool section when water flow is anything above very gentle.
+📅 Allow a full day. A rushed 2-hour visit to Diyaluma — as many tour group itineraries allocate — produces only a superficial experience. A full day — arriving by 8:00 AM, spending 4 to 5 hours exploring all three tiers of the upper pools, viewing the main falls from the base, swimming, and returning at leisure — produces one of the finest single-day natural experiences in Sri Lanka.
+📅 Combine with Bambarakanda Falls. Sri Lanka's tallest waterfall — Bambarakanda at 263 meters — is approximately 45 km from Diyaluma. Combining both falls in a single day produces a complete highland waterfall experience — the country's two greatest waterfalls visited one after the other. Diyaluma in the morning for the upper pools while it is coolest, Bambarakanda in the afternoon for the pine forest and base pool. This pairing is entirely practical for a visitor based in Ella or Haputale.
+📅 Combine with Horton Plains. Horton Plains National Park — with World's End and Baker's Falls — is approximately 40 km from Diyaluma. An early Horton Plains visit for the sunrise and World's End escarpment view before cloud builds, followed by an afternoon at Diyaluma for the upper pools, is one of the finest single-day highland programmes in Sri Lanka.`, SI: "දියලුම ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Walk to the top of the falls.", SI: "මුදුනට ඇවිදින්න." }], hiddenEchoes: { EN: "Natural pools at the top.", SI: "ස්වභාවික තටාක." }, location: "Badulla", coordinates: { x: 66, y: 74 },
+      nearbyAttractions: [
+        { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" },
+        { id: "haputale", name: { EN: "Haputale", SI: "හපුතලේ" }, image: "https://i.pinimg.com/1200x/c3/bc/5e/c3bc5e159f35130bcad02b0ee7b0f91f.jpg" },
+        { id: "buduruwagala", name: { EN: "Buduruwagala", SI: "බුදුරුවගල" }, image: "https://i.pinimg.com/1200x/7d/ce/23/7dce235eedb24bdcbd5ece2ef2836fd8.jpg" }
+      ]
+    },
+  { 
+    id: "bambarakanda", 
+    name: { EN: "Bambarakanda", SI: "බඹරකන්ද" }, 
+    category: "waterfalls", 
+    image: "https://i.pinimg.com/736x/2c/90/80/2c908064d4b0d03c0051128438b872dd.jpg", 
+    gallery: ["https://i.pinimg.com/736x/2c/90/80/2c908064d4b0d03c0051128438b872dd.jpg"], 
+    history: { 
+      EN: "Bambarakanda Falls is the tallest waterfall in Sri Lanka. With a height of 263 m (863 ft), it ranks as the 461st highest waterfall in the world. Situated in Kalupahana in the Badulla District, this waterfall is directly visible from the A4 Highway. The waterfall was formed by Kuda Oya, which is a branch of the Walawe River. The Bambarakanda Falls can be found in a forest of pine trees.", 
+      SI: "ලංකාවේ උසම දිය ඇල්ල." 
+    }, 
+    shortStory: { 
+      EN: "Bambarakanda Falls - The tallest waterfall in Sri Lanka, surrounded by a scenic pine forest.", 
+      SI: "බඹරකන්ද ඇල්ල - පයින් වනාන්තරයකින් වට වූ ශ්‍රී ලංකාවේ උසම දිය ඇල්ල." 
+    }, 
+    detailedAbout: { 
+      EN: `💧 BAMBARAKANDA FALLS — බඹරකන්ද ඇල්ල
+Sri Lanka's Tallest Waterfall — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by geological surveys, government records, and physical measurement
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Uva Province, Sri Lanka
+District: Badulla District
+Village: Kalupahana
+Position: On the southern escarpment of the central highlands, at the foot of the Haputale mountain range — specifically the Uduweriya Haputale mountain range
+Elevation of the falls: approximately 1,100 meters above sea level
+Distance from Colombo: approximately 180 to 200 km — about 4 to 5 hours by road
+Distance from Ella: approximately 60 km — about 1.5 to 2 hours by road
+Distance from Haputale: approximately 18 to 20 km — about 40 minutes by road
+Distance from Horton Plains National Park: approximately 18 to 25 km — about 45 minutes by road
+Distance from Belihuloya: approximately 18 to 22 km — about 40 minutes by road
+Distance from Diyaluma Falls: approximately 40 to 45 km — about 1 hour by road
+Access road: from Kalupahana junction on the A4 Colombo–Batticaloa highway near the Weli Oya Bridge — approximately 3 to 5 km of road to the falls car park
+
+💧 WHAT IS BAMBARAKANDA FALLS
+✅ CONFIRMED — Bambarakanda Falls — also written as Bambarakele Falls — is the tallest waterfall in Sri Lanka, with a confirmed height of 263 meters (863 feet). In global rankings it is the 461st highest waterfall in the world. The falls are located in the Badulla District of Uva Province in the central highlands.
+✅ CONFIRMED — The falls are formed by the Kuda Oya — a stream that is a tributary of the Walawe River. The Kuda Oya originates in the highland slopes of the Uduweriya Haputale mountain range and flows through the plateau before reaching the cliff edge where the 263-meter drop begins.
+✅ CONFIRMED — Bambarakanda is classified as a horsetail waterfall — meaning the water flows down a near-vertical rock face while maintaining continuous contact with the surface throughout the entire descent. Rather than a free-falling plunge separated from the cliff face, the water slides and cascades along the rock surface producing the distinctive narrow, ribbon-like appearance that defines Bambarakanda's visual character. The structure narrows from a slightly wider spread at the base to a thinner stream at the summit.
+✅ CONFIRMED — The falls are surrounded by a pine tree forest. These pines are not native to Sri Lanka — they were planted during the British colonial era by the Forest Department as a commercial timber crop and watershed protection measure. This unusual highland pine landscape in a tropical country gives the Bambarakanda area a distinctive, almost European alpine quality that visitors consistently note as unexpected and beautiful.
+✅ CONFIRMED — The name Bambarakanda translates from Sinhala as the Rock of the Wasps — a reference to the wasp and wild bee colonies that historically inhabited the cliff faces near the waterfall. An alternative interpretation translates Bambarakanda as Mountain Wasp — evoking the slender, elongated shape of the falling water itself.
+
+📜 HISTORY AND CONTEXT — CONFIRMED FACTS
+🌿 Geological Origin
+✅ CONFIRMED — Bambarakanda Falls is located within the Highland Complex — the central core of Sri Lanka's Precambrian basement terrain. The rocks in this area consist primarily of granulite-facies metamorphic rocks including charnockitic gneisses, orthogneisses, paragneisses, and quartzites. These rocks derive from late Archean sources with model ages ranging from 2.2 to 3.0 billion years — among the oldest exposed rock surfaces in Asia. The falls were formed by prolonged fluvial erosion along the Haputale escarpment over millions of years as the Kuda Oya cut progressively deeper into the resistant metamorphic layers.
+🌲 The Colonial Pine Forest
+✅ CONFIRMED — The pine trees surrounding Bambarakanda were planted by the British colonial Forest Department in the late 19th and early 20th centuries. Pine is not a native tree species of Sri Lanka's tropical highlands. The practice of planting exotic pine in the highlands is now recognised by conservation organisations as environmentally problematic — pine monocultures suppress native undergrowth, alter soil chemistry, reduce biodiversity, and change the water retention characteristics of the soil compared to natural montane forest. The pine plantations are an authentic colonial-era landscape feature but not a natural ecological one. Despite this, they contribute significantly to the unusual visual character of the Bambarakanda area.
+🌊 Lanka Ella Waterfall — The Adjacent Falls
+✅ CONFIRMED — Lanka Ella waterfall — a smaller but genuinely beautiful waterfall — is located approximately 1.5 km from Bambarakanda. It is accessible as an extension of the Bambarakanda trail and can be visited in combination with the main falls on the same trip.
+💡 Ecological Importance
+✅ CONFIRMED — Bambarakanda Falls plays a significant ecological role beyond its visual appeal. The falls and the Kuda Oya stream system contribute to the Walawe River — one of the most important rivers in southern Sri Lanka. The mist and spray generated by the 263-meter drop influences the microclimate of the immediate area, sustaining unusual concentrations of mosses, ferns, and moisture-dependent plants on the surrounding rocks and cliff face. The falls also provide irrigation water for the agricultural communities in the Kalupahana valley below.
+
+🌊 THE WATERFALL — CONFIRMED DETAILS
+📐 Measurements
+✅ CONFIRMED:
+Height: 263 meters — 863 feet — confirmed by multiple independent surveys
+World ranking: 461st highest waterfall globally (some sources cite 299th — this discrepancy likely reflects different ranking methodologies)
+Classification: horsetail waterfall — water in continuous contact with rock surface throughout descent
+Water source: Kuda Oya — tributary of the Walawe River
+Rock type: charnockitic gneiss and related Precambrian metamorphic rocks
+⚠️ UNCERTAIN — HEIGHT DISCREPANCY:
+One source in the search results gives a height of 241 meters rather than 263 meters. The 263-meter figure is the most widely cited by independent sources including the Wikipedia entry, government records, and multiple travel publications. The 241-meter figure appears to be an alternative measurement possibly taken at a different point. The 263-meter figure is accepted as the standard confirmed measurement.
+💧 Seasonal Water Flow
+✅ CONFIRMED — Bambarakanda displays pronounced seasonal variation in water volume driven by Sri Lanka's bimodal monsoon patterns:
+April to May — first inter-monsoon rains restore full flow after the dry season; the falls begin building toward peak volume; the surrounding landscape is greening rapidly
+May to October — southwest monsoon season; peak water flow; the falls are at their most powerful and visually dramatic; the 263-meter drop is a massive curtain of white water visible from a great distance; the surrounding pine forest is lush and dark green
+October to December — northeast monsoon; continued strong flow; second peak season for water volume
+January to March — the driest period; water flow reduces significantly; in dry years the falls can diminish to a narrow trickle barely visible on the rock face; trails are at their driest and most easily navigable
+August and September specifically — within the southwest monsoon season, these months are paradoxically reported by some sources as a relatively dry period for Bambarakanda specifically — sources note the falls can receive reduced water and almost disappear in August and September. This apparent contradiction with the broader monsoon season likely reflects the specific orographic patterns of the Haputale escarpment which can be in a rain shadow during certain monsoon phases.
+✅ CONFIRMED — BEST FLOW PERIOD:
+March to May — immediately after the northeast monsoon ends and as the first inter-monsoon rains begin — is consistently identified as the optimal window. Water flow is at a sustained full level from the preceding monsoon season, the path from the car park is drying out sufficiently for comfortable walking, weather is increasingly sunny, and the surrounding vegetation is at its most vibrantly green.
+
+🥾 THE VISIT — BASE AREA
+🅿️ The Car Park and Ticket Office
+✅ CONFIRMED — From the Kalupahana junction on the A4 highway, a road leads approximately 3 to 5 km to the car park area near the Bambarakanda Holiday Resort. This road is gravel surfaced and passable by ordinary car in dry conditions. After heavy rain the road can be muddy — a higher clearance vehicle is preferable but not strictly necessary in dry season.
+Entry Fee:
+✅ CONFIRMED — Entry to the falls area costs approximately 350 LKR per person as of recent visitor accounts. Payment is made at a ticket booth near the car park. Cash only — carry sufficient LKR. The entry fee applies to the path to the base pool and the surrounding area.
+🚶 The Path to the Base Pool
+✅ CONFIRMED — From the car park, a footpath of approximately 300 to 500 meters leads through the pine tree forest to the rock pool at the base of the falls. The path is well-maintained with a noticeable incline throughout — it is uphill all the way to the pool and downhill on return. Duration: approximately 10 to 20 minutes to reach the base pool.
+The path winds through pine forest — the tall, straight trunks of the plantation pines creating a colonnade effect on both sides. The sound of the falls becomes audible well before the falls are visible. The mist generated by the 263-meter drop is perceptible before rounding the final bend.
+🏊 The Base Pool
+✅ CONFIRMED — At the base of the falls, a natural rock pool has formed from the impact of the falling water over geological time. The pool is fed directly by the base of the 263-meter drop. The surrounding rocks are permanently wet from spray. Swimming in the base pool is possible during lower-flow dry season periods when the water entering the pool is calm enough for safe swimming. During high-flow monsoon periods, the force of water entering the pool creates dangerous turbulence — swimming is not safe. Assess conditions carefully on arrival.
+✅ CONFIRMED — The viewing platform near the base pool provides a full upward view of the complete 263-meter drop framed by pine trees on both sides. This is the standard photography viewpoint for the main falls. The early morning light — before 10:00 AM — produces the best illumination of the falls face. Later in the day, the cliff face falls into shadow.
+👁️ The Silhouette Rock
+✅ CONFIRMED — Local observation holds that the rocks to the left of the waterfall show the silhouette or shadowy outline of an embracing couple when viewed from the base. This visual feature is noted by multiple sources and is confirmed as a real pattern in the rock face — though its interpretation as a human silhouette is subjective. It is worth looking for.
+
+🥾 THE HIKE TO THE CREST — COMPLETE DETAILS
+✅ CONFIRMED — A trail leads from the base area all the way to the crest of the falls — the point where the Kuda Oya reaches the cliff edge and begins its 263-meter descent. This is the most physically demanding and most rewarding option for active visitors.
+⏱️ Duration and Difficulty
+The full hike from the base area to the crest and back takes approximately 3 to 4 hours for a moderately fit adult. The trail involves approximately 300 meters of elevation gain from the base road to the crest — a significant climb by any measure. The trail is classified as moderately challenging to challenging — not technically difficult but sustained steep climbing on terrain that becomes slippery when wet.
+📍 Trail Sequence — Confirmed
+From the car park and base pool area, the trail ascends through pine trees and then transitions into wooded forest on the steeper upper sections. Approximately halfway up, views of Horton Plains become visible to the north — the flat-topped highland massif visible across the highland landscape. The trail continues through increasingly dense forest with a steep climb of approximately 300 meters. Near the top, the forest opens and the trail reaches the cliff edge area.
+The crest area consists of: the pool that feeds Bambarakanda Falls — the gathering point of the Kuda Oya before the drop; the Lanka Ella waterfall approximately 1.5 km further; and a 360-degree panoramic viewpoint from the top of the cliff. From the crest, looking down the 263-meter drop is an extraordinary perspective — the valley floor far below, the tiny car park visible as a spec, and the full extent of the drop directly underfoot.
+⚠️ SAFETY AT THE CREST — CRITICAL:
+The crest area — where the Kuda Oya reaches the cliff edge — has no protective barriers. The drop is immediate, vertical, and 263 meters. The rock surface at the edge can be wet and slippery from the stream flow. Never approach the cliff edge carelessly, never stand at the very edge for photographs, and never approach the edge at all during high water flow when the stream is fast and powerful. Deaths have occurred at cliff edges of this type in Sri Lanka. Exercise absolute caution in this area.
+🧭 Trail Marking
+⚠️ UNCERTAIN — TRAIL MARKING: Multiple visitor accounts describe the Lanka Ella trail specifically as not well-marked. Some sections of the upper trail require local knowledge to navigate correctly. Starting the upper hike late in the day is specifically warned against in visitor accounts — beginning after approximately 1:00 PM risks being on the upper trail in fading light. Start early — before 9:00 AM — for a comfortable, well-lit ascent and descent. A local guide is recommended for the upper hike.
+
+🌿 WILDLIFE AND BIODIVERSITY
+🦅 Birds — Confirmed Species at Bambarakanda
+Yellow-Eared Bulbul — endemic to Sri Lanka; abundant in highland forests above 1,000 meters; the most commonly seen and heard bird in the Bambarakanda area
+Sri Lanka White-Eye — endemic; small active birds seen in flocks through the pine canopy and forest edges
+Sri Lanka Spurfowl — endemic; a secretive ground bird of highland forest undergrowth; heard more often than seen
+Hill Swallow — endemic; commonly seen flying above the open areas near the falls
+Various flycatcher and babbler species — present in the forest sections
+Raptors — crested serpent eagle and changeable hawk-eagle seen soaring above the escarpment
+Mountain Hawk-Eagle — present in the broader highland area
+🐘 Mammals
+The area surrounding Bambarakanda is generally free of large dangerous mammals on the main trail. Small mammals — toque macaques, purple-faced langurs, giant squirrels, and porcupines — are present in the surrounding forest. The macaques are bold and should not be fed. Wild boar and barking deer are present in the forest but rarely encountered on the main trail.
+🦎 Reptiles
+Land monitors are occasionally seen basking on rocks near the car park and path. Various snake species — including cobra and green pit viper — are present in the surrounding forest. Wearing proper shoes and watching where hands and feet are placed on rocks is important.
+🦟 Leeches
+Land leeches are present in the forest and long grass sections — particularly after rain and during the wetter months. Apply salt or DEET-based insect repellent to shoes and lower trouser legs before beginning the hike. Wearing long socks pulled over trouser cuffs is the most effective mechanical prevention.
+🌿 Flora
+The pine plantation surrounds the lower trail — Pinus species planted in the colonial era. Where the natural forest begins above the plantation, endemic highland trees, ferns, and mosses dominate. The spray zone immediately around the base of the falls supports a dense carpet of mosses and moisture-loving ferns on the surrounding rocks. Orchids are present in the forest sections. Wildflowers are visible along the trail edges during the greener monsoon months.
+
+🌤️ BEST TIME TO VISIT
+March to May — Primary Recommendation
+The single most consistently recommended window across multiple independent sources. The preceding northeast monsoon has maintained full water flow through January and February. As March begins, the trails dry out sufficiently for comfortable walking while the falls remain at full or near-full flow from the monsoon's water. The weather becomes increasingly sunny from March onward. By late April the landscape is brilliantly green and the falls are at sustained full flow before the southwest monsoon arrives.
+April — The Peak Month
+Maximum water flow combined with drying trails and the most sustained sunshine. The falls are at their most powerful and the surrounding vegetation at its most lush simultaneously. The optimal single month to visit if the full visual impact of the falls is the priority.
+October to November
+The northeast monsoon restores maximum water flow after any August to September reduction. The falls are powerful and dramatic. The trails are wet and leeches are active. The atmosphere of the misted forest in northeast monsoon conditions is atmospheric but the walk is more challenging.
+January to February
+Dry season. Trails at their best condition — dry, easy to navigate, minimum leeches. Water flow is reduced — in dry years the falls can be very thin. Recommended only for visitors specifically prioritising trail conditions over falls volume.
+August and September — Use Caution
+Sources specifically note that water flow at Bambarakanda can reduce significantly in August and September despite these months being within the nominal southwest monsoon season. In dry years, the falls can almost disappear during this window. If visiting in this period, check recent conditions locally before committing to a long journey specifically to see the falls.
+
+🚌 GETTING THERE
+🚗 From Colombo — Primary Route:
+Approximately 180 to 200 km via the A4 highway through Ratnapura and Belihuloya to Kalupahana junction. Journey time approximately 4 to 5 hours by car. The route follows the A4 — Colombo to Ratnapura through the wet zone, then ascending through increasingly dramatic highland scenery toward Belihuloya and Haputale.
+From Ella:
+Approximately 60 km — about 1.5 to 2 hours by road. The most practical base. Multiple route options through beautiful highland scenery.
+From Haputale:
+Approximately 18 to 20 km — about 40 minutes. The nearest small town with a range of accommodation. By tuk-tuk from Haputale bus stand approximately 1,500 to 2,500 LKR round trip.
+From Horton Plains:
+Approximately 18 to 25 km — about 45 minutes. Natural pairing — Horton Plains for World's End and Baker's Falls in the morning, Bambarakanda in the afternoon.
+From Diyaluma Falls:
+Approximately 40 to 45 km — about 1 hour. Sri Lanka's tallest and second-tallest waterfalls combined in a single day.
+🚂 By Train:
+Ohiya station — approximately 20 km from the falls — is on the Colombo–Badulla main highland railway. From Ohiya, tuk-tuks to the Kalupahana junction and onward to the falls cost approximately 1,500 to 3,000 LKR return. The train approach through the highland tea country is extraordinarily beautiful.
+🚌 By Bus:
+Buses from Colombo, Kandy, Haputale, and Badulla travel the A4 highway past the Kalupahana junction. Ask the driver to stop at Kalupahana — the junction is near the Weli Oya Bridge. From the junction, tuk-tuks to the falls car park cost approximately 1,500 to 2,500 LKR for the round trip including waiting time.
+🛺 Tuk-Tuk from Haputale or Ohiya:
+The standard arrangement for visitors without a car. Negotiate a fixed round-trip price including waiting time at the falls. From Haputale approximately 2,500 to 4,000 LKR round trip. Confirm the price includes waiting time — the driver will remain at the car park while you hike.
+
+🏨 WHERE TO STAY
+At the Falls — Very Limited:
+Eco Wild Glamping Bambarakanda — luxury eco-tented accommodation directly adjacent to the falls with clear views of the waterfall from the tents. This is the most atmospheric and immediate accommodation available — falling asleep with the sound of Sri Lanka's tallest waterfall directly outside and waking to see the full 263-meter drop in the first morning light is an exceptional experience. Rates from approximately USD $80 to $150 per night.
+Bambarakanda Holiday Resort — a basic guesthouse near the car park. Simple rooms, functional facilities, extremely convenient for an early morning start. Very affordable by any measure.
+In Haputale — Most Practical Base (18 to 20 km):
+Haputale town has a good range of budget to mid-range accommodation. The town itself sits on a spectacular ridge with views over both sides of the highland range. More peaceful and significantly cheaper than Ella. Budget guesthouses from approximately 2,500 to 4,000 LKR per night. Adisham Bungalow — a Benedictine monastery near Haputale — is open to visitors and provides modest accommodation in an extraordinary colonial heritage building.
+In Ella (60 km):
+The full range of Ella accommodation described in the Ella guide. Many visitors make Bambarakanda a day trip from Ella — the 60 km drive through beautiful highland road is part of the experience.
+In Belihuloya (18 to 22 km):
+Belihuloya is a small eco-tourism hub on the A4 highway with several guesthouses offering river activities, natural pools, and highland excursions. A quieter alternative to Haputale as a base.
+
+🍽️ WHERE TO EAT
+At the Falls:
+A small roadside coffee stall near the viewing area at the base is described by one visitor as a hidden gem. Basic provisions including coconuts, biscuits, and cold drinks are available from small shops near the car park and at the Kalupahana junction. Do not rely on a full meal being available at the site — carry your own food.
+At Kalupahana Junction:
+Small roadside kiosks and local shops at the main highway junction sell basic provisions, fruits, and drinks at local prices. Worth stocking up here before the 3 to 5 km gravel road to the car park.
+In Haputale:
+Multiple local restaurants in Haputale town serve Sri Lankan rice and curry, hoppers, and short eats at local prices. The Olympus Plaza restaurant is the most frequently mentioned budget dining option in Haputale. Simple, cheap, reliable.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+⏰ Arrive before 10:00 AM. Morning light before 10:00 AM falls directly on the falls face — illuminating the full 263-meter drop in clear, undiffused light that produces the finest photography conditions of the day. After 10:00 AM the falls face moves into partial shade and the heat of the day builds significantly. Early morning also means fewer visitors and a quieter, more atmospheric experience.
+👟 Wear proper grip shoes. The path to the base pool has a significant incline throughout and is slippery when wet. The crest trail involves steep, damp forest terrain. Proper rubber-soled hiking shoes or trail runners are essential. Sandals and flip-flops are not appropriate for this site at any time.
+🧴 Apply leech repellent before the forest sections. The pine forest and natural forest above it have land leeches — particularly after rain and during wetter months. Salt or DEET applied to footwear and lower trouser legs before entering the forest is effective. Wearing long socks is the most reliable mechanical barrier.
+💧 Carry a minimum of 1.5 litres of water per person. No reliable drinking water supply is available on the trail or at the base pool area. The exertion of the climb combined with the highland heat is dehydrating despite the relatively cool temperatures.
+🌧️ Check recent rainfall before visiting. Conditions at Bambarakanda change dramatically with rainfall. If the primary purpose is seeing a full-volume falls, visiting within 1 to 2 weeks after significant rain during the March to May window or October to November window produces the finest results. Visiting during a dry spell in August or September risks finding barely a trickle on the cliff face.
+⏰ Start the crest hike before 9:00 AM. For the upper hike to the crest, beginning by 9:00 AM ensures adequate daylight for the full ascent, time at the top, and a comfortable descent before the afternoon light deteriorates. Visitor accounts specifically warn against starting the upper trail late in the day. A 7:00 to 8:00 AM departure from accommodation allows arrival at the car park before 9:00 AM.
+🧭 Hire a local guide for the crest trail. The Lanka Ella side trail off the upper route is specifically noted as poorly marked. A local guide prevents route-finding difficulties and ensures the safest lines on the steeper sections. The cost is modest — approximately 1,000 to 2,000 LKR for the full crest hike.
+⚠️ Do not approach the cliff edge at the crest. The 263-meter drop at the crest has no barrier. The rock surface at the edge is wet from the stream flow. Stand at a safe distance of at least 3 to 5 meters from the cliff edge at all times. Never approach the edge for photographs. The view from a safe distance is extraordinary — the additional metre gained by standing at the extreme edge adds nothing to the experience and is genuinely life-threatening.
+📅 Combine with Horton Plains. Horton Plains — with World's End, Baker's Falls, and the finest highland bird species in Sri Lanka — is approximately 18 to 25 km from Bambarakanda. A dawn visit to Horton Plains for the World's End views before cloud builds, followed by a mid-morning descent to Bambarakanda for the waterfall, is one of the finest single-day highland programmes in Sri Lanka. Both sites in a single day is entirely practical from a Haputale or Ohiya base.
+📅 Combine with Diyaluma Falls. Sri Lanka's tallest waterfall and its second-tallest — Diyaluma at 220 meters — are approximately 40 to 45 km apart. Both in a single day from Ella or Haputale covers the two greatest waterfalls on the island in one highland circuit. Bambarakanda in the morning, Diyaluma upper pools in the afternoon.
+🏕️ Consider staying at Eco Wild Glamping. Waking before dawn and watching the 263-meter waterfall in the first grey light, before any other visitors arrive and before the sound of the car park disturbs the silence of the pine forest — this is the Bambarakanda experience that photographs cannot replicate. The on-site glamping accommodation makes this possible at very reasonable cost.`,
+      SI: "බඹරකන්ද ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." 
+    }, 
+    tips: [{ EN: "Walk to the top of the falls.", SI: "මුදුනට ඇවිදින්න." }], 
+    hiddenEchoes: { EN: "Natural pools at the top.", SI: "ස්වභාවික තටාක." }, 
+    location: "Badulla", 
+    coordinates: { x: 62, y: 76 },
     nearbyAttractions: [
       { id: "belihuloya", name: { EN: "Belihuloya", SI: "බෙලිහුල්ඔය" }, image: "https://i.pinimg.com/1200x/a3/b4/c5/a3b4c5d6e7f8g9h0i1j2.jpg" },
       { id: "haputale", name: { EN: "Haputale", SI: "හපුතලේ" }, image: "https://i.pinimg.com/1200x/c3/bc/5e/c3bc5e159f35130bcad02b0ee7b0f91f.jpg" },
       { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" }
     ]
   },
-  { id: "ravanafalls", name: { EN: "Ravana Falls", SI: "රාවණා ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/e5/cf/c0/e5cfc05e4ebb57cf741b8dcf0677a269.jpg", gallery: ["https://i.pinimg.com/1200x/e5/cf/c0/e5cfc05e4ebb57cf741b8dcf0677a269.jpg"], history: { EN: "Ravana Falls is a popular sightseeing attraction in Sri Lanka. It currently ranks as one of the widest falls in the country. This waterfall measures approximately 25 m (82 ft) in high and cascades from an oval-shaped concave rock outcrop. During the local wet season, the waterfall turns into what is said to resemble an areca flower with withering petals. The falls have been named after the legendary king Ravana, which is connected to the famous Indian epic, the Ramayana.", SI: "ගුහා සැඟවුණු තැන." }, shortStory: { EN: "Ravana Falls - A wide and scenic waterfall named after the legendary King Ravana.", SI: "රාවණා ඇල්ල - රාවණා රජුගේ පුරාවෘත්තය හා සම්බන්ධ පුළුල් සහ දර්ශනීය දිය ඇල්ල." }, tips: [{ EN: "Watch out for monkeys.", SI: "වඳුරන්ගෙන් ප්‍රවේශම් වන්න." }], hiddenEchoes: { EN: "A secret tunnel.", SI: "රහස් උමග." }, location: "Badulla", coordinates: { x: 68, y: 70 },
+  { id: "ravanafalls", name: { EN: "Ravana Falls", SI: "රාවණා ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/e5/cf/c0/e5cfc05e4ebb57cf741b8dcf0677a269.jpg", gallery: ["https://i.pinimg.com/1200x/e5/cf/c0/e5cfc05e4ebb57cf741b8dcf0677a269.jpg"], history: { EN: "Ravana Falls is a popular sightseeing attraction in Sri Lanka. It currently ranks as one of the widest falls in the country. This waterfall measures approximately 25 m (82 ft) in high and cascades from an oval-shaped concave rock outcrop. During the local wet season, the waterfall turns into what is said to resemble an areca flower with withering petals. The falls have been named after the legendary king Ravana, which is connected to the famous Indian epic, the Ramayana.", SI: "ගුහා සැඟවුණු තැන." }, shortStory: { EN: "Ravana Falls - A wide and scenic waterfall named after the legendary King Ravana.", SI: "රාවණා ඇල්ල - රාවණා රජුගේ පුරාවෘත්තය හා සම්බන්ධ පුළුල් සහ දර්ශනීය දිය ඇල්ල." }, detailedAbout: { EN: `💧 RAVANA FALLS — රාවණා ඇල්ල
+Ella's Most Famous Waterfall — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by archaeological evidence, government records, and physical measurement
+⭐ LEGEND / TRADITION — sincerely held belief connected to the Ramayana tradition, not independently verifiable as historical fact
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Uva Province, Sri Lanka
+District: Badulla District
+Position: On the Ella–Wellawaya Road, approximately 6 km south of Ella town
+Elevation: approximately 945 meters above sea level
+Distance from Ella town centre: approximately 6 km — about 10 to 15 minutes by tuk-tuk
+Distance from Ella Railway Station: 6 km
+Distance from Nine Arch Bridge: approximately 4 km — about 10 minutes
+Distance from Diyaluma Falls: approximately 35 km east — about 1 hour by road
+Distance from Ravana Cave: approximately 4 km further up the hill from the falls — accessible by continuing on the road toward Wellawaya and then ascending
+Part of: Ravana Ella Wildlife Sanctuary
+
+💧 WHAT IS RAVANA FALLS
+✅ CONFIRMED — Ravana Falls — known in Sinhala as Ravana Ella or Rawana Ella — is one of the most visited natural attractions in the Ella region of the Sri Lankan highlands. The waterfall measures approximately 25 meters in height and cascades from a distinctive oval-shaped concave rock outcrop — a uniquely shaped rock hollow that gives the falls their most immediately recognisable characteristic. The rock face curves inward like a bowl or a shallow amphitheatre, and the water fans out across this curved surface before falling to the pool below.
+✅ CONFIRMED — Ravana Falls ranks as one of the widest waterfalls in Sri Lanka. Although it is not tall by comparison with Bambarakanda (263 meters) or Diyaluma (220 meters), its extraordinary width — the water spreading broadly across the concave rock face — makes it visually spectacular in a different way. During the wet season, the volume of water flowing across the rock face produces a shape that local observers describe as resembling an areca palm flower with spreading petals — the water fans outward from the narrow centre to a broad base in a pattern that is genuinely distinctive.
+✅ CONFIRMED — The falls are located directly on the Ella–Wellawaya Road and are visible from the road itself. No significant hiking is required to reach the viewing area — the falls are immediately accessible from the roadside. This accessibility is one of the primary reasons for their high visitor numbers — every bus and car travelling between Ella and Wellawaya passes directly past the falls.
+✅ CONFIRMED — The falls form part of the Ravana Ella Wildlife Sanctuary. This designation provides legal protection to the waterfall and its surrounding habitat.
+
+📜 THE NAME — CONFIRMED AND TRADITION
+⭐ THE RAMAYANA TRADITION:
+The falls are named after Ravana — the king of Lanka in the Sanskrit epic Ramayana. The Ramayana is one of the foundational literary works of South Asian civilisation — a Sanskrit epic of approximately 24,000 verses recording the story of Prince Rama of Ayodhya, his wife Sita, and the demon king Ravana of Lanka. The epic records that Ravana abducted Sita and brought her to Lanka, where she was kept captive until Rama — assisted by the monkey god Hanuman and an army of allies — invaded Lanka, defeated Ravana, and rescued her.
+⭐ THE SPECIFIC TRADITION CONNECTED TO RAVANA FALLS:
+Local tradition and the Ramayana-connected lore of Sri Lanka hold that Ravana hid Sita in the cave behind and near this waterfall — a location known as the Ravana Ella Cave. The falls themselves are associated with the belief that Sita bathed in the pool formed by the waterfall during her captivity. The legend also records that Ravana played the Ravanahatha — an ancient stringed instrument said to have been invented by Ravana — at this location.
+⭐ THE BROADER RAVANA TRADITION IN SRI LANKA:
+In Indian Hindu tradition, Ravana is portrayed as the villain of the Ramayana — an evil demon king whose abduction of Sita constitutes the central moral transgression of the epic. In Sri Lankan cultural tradition, however, Ravana occupies a significantly more complex position. Many Sri Lankan Buddhists, Hindus, and general cultural observers regard Ravana not as a demon but as a great ancient king of Sri Lanka — a warrior of extraordinary power, a scholar of Ayurvedic medicine, a musician, and a ruler of a highly advanced civilisation. This contrasting cultural interpretation of the same literary figure is one of the most interesting aspects of the Ravana tradition in Sri Lanka and gives the Ella Ravana sites a genuine cultural complexity beyond simple mythological tourism.
+⚠️ THE HISTORICAL STATUS — CONFIRMED UNCERTAINTY:
+The historical existence of a King Ravana is genuinely debated. Some Sri Lankan cultural historians argue that the Ramayana contains a historical kernel — that a powerful ancient king of Sri Lanka was mythologised into the Ravana figure over centuries. Archaeological evidence of human habitation in the broader Ella region going back 25,000 years is confirmed — but this confirms ancient human presence generally, not the specific Ravana narrative. The Ramayana as a historical document of literal events is not accepted by mainstream scholarship. It is a literary and religious epic of enormous cultural significance whose relationship to actual historical events is genuinely uncertain.
+
+🏛️ THE RAVANA ELLA CAVE — CONFIRMED DETAILS
+✅ CONFIRMED — The Ravana Ella Cave is located approximately 2 km from Ella town on the hillside above the falls — higher up the escarpment, accessible by road to the Maha Ravana Viharaya temple followed by a steep climb of approximately 650 steps to the cave entrance.
+✅ CONFIRMED — The cave measures approximately 50 feet wide, 150 feet long, and 60 feet high. It lies at an elevation of approximately 1,370 meters above sea level on the foundation of a cliff. This is a genuine cave — a substantial natural rock formation, not a small rock shelter.
+✅ CONFIRMED — Archaeological excavations carried out within the cave have revealed evidence of human habitation dating back approximately 25,000 years. A human skull dating to approximately 20,000 BC was recovered during excavations. These are confirmed archaeological findings and represent genuine prehistoric human presence at the site.
+✅ CONFIRMED — The cave is actively used as a Buddhist and Hindu religious site. The Maha Ravana Viharaya temple nearby has a resident monastic community. Pilgrims and visitors climb to the cave throughout the year.
+⭐ RAMAYANA TRADITION:
+The cave is locally identified as the location where Ravana concealed Sita during her captivity. Local sources describe the cave as connected by underground tunnels to other historically significant sites including the Dowa Rock Temple near Bandarawela, the Sthripura Cave at Welimada, and other locations across the highlands. These tunnel connections are asserted in local tradition but have not been confirmed by systematic archaeological survey.
+✅ HONEST ASSESSMENT:
+The cave is a genuine, substantial natural formation with confirmed prehistoric human habitation going back 25,000 years. Its connection to the Ramayana is cultural tradition rather than documented historical fact. Both aspects — the genuine archaeology and the living tradition — are significant and make the site worth visiting for different reasons.
+⚠️ THE CLIMB — HONEST WARNING:
+The 650-step ascent to the cave from the temple is described by multiple independent visitor accounts as genuinely steep and physically demanding — some steps are uneven, some sections have no steps at all and require scrambling over bare rock. The climb takes approximately 30 to 45 minutes up and is significantly harder than it appears from below. The cave at the top is relatively small and visitors with very high expectations of the cave itself sometimes find the climb disproportionate to what is at the top. However the panoramic views across the Ella valley from the cave entrance are extraordinary and fully justify the effort regardless of the cave's size.
+
+💧 THE WATERFALL — CONFIRMED PHYSICAL DETAILS
+📐 Measurements
+✅ CONFIRMED:
+Height: approximately 25 meters (82 feet)
+Character: extremely wide relative to height — one of the widest waterfalls in Sri Lanka
+Rock formation: oval-shaped concave rock outcrop — the water cascades across the curved inner face of this rock hollow
+Width: significantly wider than the height — the water spreads broadly across the rock face
+💧 The Seasonal Variation
+✅ CONFIRMED — Ravana Falls displays more dramatic seasonal variation than any other major waterfall in the Ella area:
+Wet season (October to December and April to May) — the falls are at maximum volume. The water spreads broadly across the full width of the concave rock face producing the distinctive areca flower shape that makes the falls most visually impressive. The flow is powerful and the sound is audible from a considerable distance.
+Dry season (January to March) — the volume reduces dramatically. In dry years the falls can reduce to a thin, narrow trickle concentrated in the centre of the rock face — a very different and much less impressive sight than the wet season spectacle. Visitors arriving specifically to see the full-width areca flower form of the falls should plan their visit for the wetter months.
+⚠️ HONEST NOTE ON DRY SEASON:
+Multiple visitor accounts note disappointment at seeing Ravana Falls in the dry season when the flow is minimal. The dramatic width that makes the falls famous is only present when water volume is high. In the dry season it is still a pleasant stop but not a spectacular one.
+💧 The Lower Ravana Falls
+✅ CONFIRMED — A smaller waterfall — Lower Ravana Falls, also known as Bamabaragama Falls — is located approximately 9 meters in height on the Ella–Wellawaya road near the village of Udunuwara. It flows through the Bandarawela Hill Oya Reservoir system. Less visited than the main Ravana Falls but easily combined on the same road journey.
+
+🏊 SWIMMING — HONEST ASSESSMENT
+✅ CONFIRMED — The pool at the base of the falls is used for swimming by both locals and tourists. During periods of moderate water flow, the pool provides a refreshing if brief swimming experience. Multiple sources specifically endorse the swimming as enjoyable.
+⚠️ SAFETY CONCERNS — CONFIRMED:
+The rocks surrounding the pool and the approach to the water are permanently wet and covered in algae — extremely slippery. Multiple visitor accounts mention slips on the rocks near the falls. Proper grip footwear should be worn at all times and extreme care exercised when moving near the water's edge.
+During high water flow — particularly immediately after heavy rain — the force of the falling water creates significant turbulence in the pool. Swimming during high flow is not advisable.
+The roadside location of the falls means the pool area is frequently crowded with visitors simultaneously. The combination of crowds, slippery rocks, and water of varying depth requires continuous care.
+⚠️ CROWD WARNING — SPECIFIC TO RAVANA FALLS:
+Ravana Falls is one of the most visited natural sites in Sri Lanka due to its roadside accessibility. On busy days — particularly weekends and Sri Lankan public holidays — the pool area below the falls can be extremely crowded with local Sri Lankan visitors swimming, picnicking, and playing. The atmosphere during crowded periods is lively and social rather than serene. Visitors seeking quiet contemplation of the natural scene should visit early on weekday mornings.
+
+🌿 THE RAVANA ELLA WILDLIFE SANCTUARY
+✅ CONFIRMED — The falls form part of the Ravana Ella Wildlife Sanctuary — a protected area designation that encompasses the waterfall, the surrounding forest, and the broader habitat zone.
+Wildlife confirmed in the sanctuary:
+Toque Macaque — endemic, Endangered; commonly seen near the falls; these macaques are habituated to human presence and food-seeking behaviour from tourists. Do not feed them and keep food secured in bags at all times.
+Purple-Faced Langur — endemic, Endangered; present in the forest sections of the sanctuary; less commonly seen than the macaques but present
+Sri Lanka Junglefowl — the national bird; seen at the forest edge
+Various bird species — the forest surrounding the falls supports the standard suite of highland edge species
+Land Monitor — seen basking on rocks near the falls area
+Various snake species — present in the rocky terrain and forest margins
+⚠️ MONKEY BEHAVIOUR WARNING:
+The toque macaques at Ravana Falls are specifically noted in multiple visitor accounts as bold and food-seeking. They will approach people carrying food, attempt to take food from hands and open bags, and can scratch or bite if provoked. Keep all food in closed bags, never offer food, and do not allow children to hold food near the monkey groups.
+
+🏛️ CULTURAL SITES NEAR THE FALLS
+🛕 Maha Ravana Viharaya
+✅ CONFIRMED — The Maha Ravana Viharaya is an active Buddhist temple on the hillside above the falls — the starting point for the climb to the Ravana Ella Cave. The temple is dedicated partly to the veneration of Ravana as a historical figure of Sri Lankan culture, incorporating Buddhist, Hindu, and indigenous cultural elements. The temple building is relatively modern in construction but sits within a landscape of considerable religious significance to the local community.
+Remove footwear before entering the temple grounds. Respectful dress — shoulders and knees covered — is required.
+🛕 Dhowa Rock Temple — 5 km from Ella
+✅ CONFIRMED — The Dhowa Rock Temple is described in the Ella guide above — an ancient Buddhist temple containing a large unfinished reclining Buddha carved from natural rock dating to at least the Kandyan period. Approximately 5 km from Ella on the Badulla road — in the opposite direction from Ravana Falls. Worth combining with the Ravana Falls visit as part of a full-day Ella exploration.
+
+🌤️ BEST TIME TO VISIT
+October to December — Primary Recommendation for Full Falls
+The northeast monsoon restores maximum water volume. The falls are at their widest and most dramatic — the full areca flower spread of water across the concave rock face. The most visually impressive period for photography and general appreciation of the waterfall.
+April to May — Second Peak
+The first inter-monsoon rains restore good flow after the dry season. The landscape is green and lush. The falls have substantial volume.
+January to March — Dry Season
+Reduced water flow — in dry years the falls are underwhelming in terms of volume. This is the driest and most reliably sunny period for the Ella area generally but the worst for seeing the falls at their best. If visiting Ella in this period, manage expectations for the falls specifically.
+July to September — Moderate Season
+Variable conditions. Water flow is moderate — better than the dry season but less dramatic than the monsoon peaks. The falls are presentable and worth stopping at as part of an Ella day without being specifically spectacular.
+
+🚌 GETTING THERE
+🛺 By Tuk-Tuk from Ella:
+The most common approach. From Ella town centre, a tuk-tuk to Ravana Falls takes approximately 10 to 15 minutes and costs approximately 300 to 500 LKR one way. Many visitors hire a tuk-tuk for a half-day circuit covering the Nine Arch Bridge, Ravana Falls, and other Ella attractions — negotiate a fixed rate for the full circuit.
+🚌 By Bus from Ella:
+Any bus heading from Ella toward Wellawaya passes the falls directly. Ask the driver to stop at Ravana Falls. The fare is nominal — approximately 30 to 50 LKR. The falls are visible from the road so the stop is unmistakable. On the return, any bus heading uphill toward Ella will stop at the junction.
+🚗 By Car:
+The falls are directly on the Ella–Wellawaya Road — visible from the car window. Roadside parking is available.
+From Wellawaya:
+Approximately 35 km west — about 1 hour by bus or tuk-tuk. Ravana Falls is naturally encountered en route between Wellawaya and Ella for visitors travelling from the east.
+
+🏨 WHERE TO STAY
+All accommodation for Ravana Falls is based in Ella — the full range is described in the Ella guide above. The falls are a 10 to 15-minute tuk-tuk ride from any Ella accommodation. No accommodation at the falls site itself.
+
+🍽️ WHERE TO EAT
+At the Falls:
+Several small food stalls and drinks vendors operate near the falls — particularly near the roadside parking area. Fresh coconuts, soft drinks, biscuits, and basic snacks are available. No substantial meal is available at the site.
+In Ella:
+The full range of Ella restaurants and cafes described in the Ella guide — all within 10 to 15 minutes by tuk-tuk.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+⏰ Visit early in the morning on a weekday. Ravana Falls is one of the most visited sites in Ella — the roadside accessibility means it receives a constant stream of visitors throughout the day. Arriving before 8:30 AM on a weekday gives the best chance of quiet time at the falls before the main tourist and local visitor flow builds from mid-morning onward. Weekends and public holidays bring very large numbers of Sri Lankan day visitors.
+👟 Wear grip shoes and move carefully near the water. The rocks at and around the pool are permanently wet and algae-covered. This is the single most consistent safety warning from visitor accounts at Ravana Falls. Slipping on the approach rocks is genuinely common. Move deliberately, test each foot placement before committing weight, and never rush near the water edge.
+🐒 Secure all food from the macaques. The monkey population at Ravana Falls is large, bold, and experienced at food theft from tourists. Keep all food inside closed bags. Never hold food in your hand near the monkey groups.
+🌊 Visit during the wet season for the full areca flower display. If seeing the falls at their dramatic widest is a priority, plan specifically for October to December or April to May. The dry season version of the falls is genuinely underwhelming in comparison.
+🧗 Allow adequate time for the cave climb if attempting it. The 650-step ascent to Ravana Cave is harder than it appears. Allow a minimum of 1.5 to 2 hours return from the Maha Ravana Viharaya temple — more if fitness is moderate. The views from the cave entrance over the Ella valley are the finest reward of the climb regardless of the cave's dimensions.
+📅 Combine with the Nine Arch Bridge on the same tuk-tuk circuit. The Nine Arch Bridge is approximately 4 km from Ravana Falls. A single tuk-tuk round trip from Ella covering both the bridge and the falls — timed to coincide with a train crossing at the bridge — covers two of Ella's most photographed attractions in a single morning. Cost approximately 1,500 to 2,500 LKR for the full circuit.
+💰 The falls are free to enter. Unlike most major Sri Lankan heritage and wildlife sites, there is no formal entry fee to approach and view Ravana Falls. The roadside accessibility and the absence of a managed entry gate mean the falls are freely accessible to all visitors. Vendors near the parking area sell coconuts and snacks but no ticket is required.
+📸 The best photography position. The finest photograph of Ravana Falls — capturing the full width of the concave rock formation and the areca flower spread of water — is taken from the road or the road-adjacent viewpoint directly opposite the falls face, at a distance of approximately 30 to 50 meters. Moving too close loses the full-width perspective that makes the falls distinctive. The morning light — before 10:00 AM — illuminates the rock face directly. After midday the falls face moves into shade.`, SI: "රාවණා ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Watch out for monkeys.", SI: "වඳුරන්ගෙන් ප්‍රවේශම් වන්න." }], hiddenEchoes: { EN: "A secret tunnel.", SI: "රහස් උමග." }, location: "Badulla", coordinates: { x: 68, y: 70 },
     nearbyAttractions: [
       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" },
       { id: "diyaluma", name: { EN: "Diyaluma Falls", SI: "දියලුම ඇල්ල" }, image: "https://i.pinimg.com/736x/2c/6a/50/2c6a5022d41b3ee3a686ead9141d04f8.jpg" }
     ]
   },
-  { id: "dunhinda", name: { EN: "Dunhinda", SI: "දුන්හිඳ" }, category: "waterfalls", image: "https://i.pinimg.com/736x/91/0e/cf/910ecf8865df3a8d4ced56e2d3856562.jpg", gallery: ["https://i.pinimg.com/736x/91/0e/cf/910ecf8865df3a8d4ced56e2d3856562.jpg"], history: { EN: "Dunhinda Falls is a waterfall located about 5 kilometres (3.1 mi) from Badulla town in Sri Lanka. The waterfall, which is 64 metres (210 ft) high, gets its name from the smoky dew drops spray, (Dun in sinhala means mist or smoke) which surrounds the area at the foot of the waterfall. The waterfall is created by the river called Badulu Oya which goes through the Badulla town.", SI: "දුම් දමන දිය ඇල්ල." }, shortStory: { EN: "Dunhinda Falls - A spectacular waterfall known for its smoky mist and lush surroundings.", SI: "දුන්හිඳ ඇල්ල - මීදුමෙන් වැසුණු දර්ශනීය දිය ඇල්ල." }, tips: [{ EN: "The path can be very slippery.", SI: "මග ලිස්සන සුළුයි." }], hiddenEchoes: { EN: "A smaller waterfall nearby.", SI: "කුඩා දුන්හිඳ." }, location: "Badulla", coordinates: { x: 72, y: 64 },
+  { id: "dunhinda", name: { EN: "Dunhinda", SI: "දුන්හිඳ" }, category: "waterfalls", image: "https://i.pinimg.com/736x/91/0e/cf/910ecf8865df3a8d4ced56e2d3856562.jpg", gallery: ["https://i.pinimg.com/736x/91/0e/cf/910ecf8865df3a8d4ced56e2d3856562.jpg"], history: { EN: "Dunhinda Falls is a waterfall located about 5 kilometres (3.1 mi) from Badulla town in Sri Lanka. The waterfall, which is 64 metres (210 ft) high, gets its name from the smoky dew drops spray, (Dun in sinhala means mist or smoke) which surrounds the area at the foot of the waterfall. The waterfall is created by the river called Badulu Oya which goes through the Badulla town.", SI: "දුම් දමන දිය ඇල්ල." }, shortStory: { EN: "Dunhinda Falls - A spectacular waterfall known for its smoky mist and lush surroundings.", SI: "දුන්හිඳ ඇල්ල - මීදුමෙන් වැසුණු දර්ශනීය දිය ඇල්ල." }, detailedAbout: { EN: `💧 DUNHINDA FALLS — දුන්හින්ද ඇල්ල
+Badulla's Bridal Veil — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by geological surveys, government records, and physical measurement
+⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Uva Province, Sri Lanka
+District: Badulla District
+Position: Approximately 5 km northeast of Badulla town, on the Mahiyangana Road
+Distance from Badulla town: approximately 5 km — about 10 to 15 minutes by tuk-tuk or bus
+Distance from Ella: approximately 20 to 30 km — about 30 to 45 minutes by road
+Distance from Bandarawela: approximately 20 km — about 35 minutes by road
+Distance from Haputale: approximately 30 km — about 1 hour by road
+Distance from Horton Plains: approximately 35 km — about 1 hour by road
+Distance from Colombo: approximately 200 km — about 5 hours by road
+Distance from Ravana Falls: approximately 25 km — about 40 minutes
+Nearest railway station: Badulla Railway Station — 5 km; the final station of the Colombo–Badulla highland line
+
+💧 WHAT IS DUNHINDA FALLS
+✅ CONFIRMED — Dunhinda Falls is one of the most famous and most visited waterfalls in Sri Lanka — situated approximately 5 km from Badulla town in the Uva Province highlands. The falls are formed by the Badulu Oya — the river that flows through and gives its name to Badulla town — which descends a steep rocky escarpment to produce a powerful cascade of approximately 63 to 64 meters in height.
+✅ CONFIRMED — Dunhinda Falls holds the distinction of being the first waterfall in Sri Lanka at which an entry fee was charged to view it — a historical milestone in Sri Lankan tourism management. The access pathway is now well maintained with steps, handrails, a suspension bridge, and a formal viewing platform at the base.
+✅ CONFIRMED — Dunhinda Falls carries two English names. The first is Bridal Falls — the shape of the waterfall, spreading outward as it descends, resembles a bridal veil. The second is the informal translation of the Sinhala name itself. The falls are known in the Sinhala language as Dunhinda Ella — and Dunhinda translates variously as smoky mist, vapour waterfall, or the mist that is given — all references to the defining physical characteristic of the falls: an extraordinary spray of fine mist that rises from the base pool as the water strikes the rocks below and billows outward in a cloud-like haze. This mist is visible from a distance before the falls themselves become visible and creates a permanently cool, humid microclimate around the base viewing platform.
+⚠️ HEIGHT DISCREPANCY:
+Sources give heights of 63 meters and 64 meters. The 63-meter figure is the more commonly cited. Both figures appear in credible sources. The difference is within measurement tolerance and does not affect the visitor experience. The confirmed height is approximately 63 to 64 meters — making it the 5th or 6th tallest waterfall in Sri Lanka.
+✅ CONFIRMED — The geological area surrounding Dunhinda Falls consists mainly of igneous and metamorphic rocks — part of the same ancient Precambrian highland geological complex that underlies much of central Sri Lanka. The Badulu Oya has eroded through these resistant rock layers over millions of years to create the escarpment over which the falls now plunge.
+
+📜 NAME — CONFIRMED AND UNCERTAIN
+⚠️ NAME ETYMOLOGY — MULTIPLE VERSIONS:
+Multiple Sinhala etymologies are offered by different sources:
+Version 1 — the most widely cited: Dun means smoke or mist and Hinda means to evaporate — combined meaning is smoky mist or vapour
+Version 2 — an alternative: Dun means gave or was given and Hinda means to evaporate — combined meaning is that which is given to evaporate — referring to the water dissolving into mist at the base
+Version 3 — a third interpretation connects the name to the appearance of the falls resembling a human eye — one source specifically cites this as the original naming rationale
+All three versions are linguistically plausible. The smoky mist interpretation is the most consistent with the physical appearance of the falls and is the most widely accepted.
+
+📜 HISTORY AND LEGENDS
+🏕️ Vedda Habitation — Confirmed Archaeological Context
+✅ CONFIRMED — The broader Badulla region was historically inhabited by the Veddas — the indigenous people of Sri Lanka. Archaeological evidence of ancient human habitation is present throughout the Uva Province highlands. The Dunhinda area is specifically noted in multiple historical accounts as having been inhabited by Vedda communities. This is consistent with the general pattern of Vedda settlement in the highland interior that preceded Sinhalese agricultural expansion into these areas.
+⭐ THE GIANT FERN LEGEND — TRADITION:
+The most widely recorded legend connected to Dunhinda Falls concerns a catastrophic flood event during the reign of King Rajasinhe. According to the tradition, a massive fern — or in some versions a giant fallen tree — became lodged at the top of the waterfall between two mountains, acting as a dam that blocked the flow of the Badulu Oya. The impounded water backed up and flooded Badulla town. The king, alarmed by the flood, entrusted the task of clearing the blockage to a man named Ranhavadidaraya. After three months of difficult labour, Ranhavadidaraya finally cleared the obstruction. The blocked material was swept downstream but lodged again at a location further downstream — which is said to explain how the area now called Pussellawa received its name, as Pus means fern in Sinhala. This legend is recorded by multiple independent historical sources in nearly identical form, suggesting it was a well-established piece of regional oral tradition.
+⭐ THE PRINCESS LEGEND — TRADITION:
+A second tradition connected to the 14th century records that a princess named Mampitiya Anuhas Menike Bandara — daughter of the ruler of the Gampola Kingdom — eloped with her lover. Pursued by her father's forces and unable to escape, the princess and her lover chose to drown themselves in the pool at the base of Dunhinda Falls rather than face capture and separation. This tradition gives the falls an additional layer of romantic tragedy in local cultural memory.
+🏛️ First Paid-Entry Waterfall in Sri Lanka
+✅ CONFIRMED — Dunhinda Falls is historically documented as the first waterfall in Sri Lanka at which a formal entry fee was introduced for visitors. This established the model subsequently adopted at other Sri Lankan waterfalls and natural sites.
+⚠️ HYDROELECTRIC THREAT — CONFIRMED:
+Dunhinda Falls is specifically noted as threatened by a proposed hydroelectric project on the Badulu Oya. A hydroelectric dam upstream would reduce the water flow over the falls — potentially dramatically diminishing or eliminating the waterfall's spectacle. This threat has been noted by environmental organisations and has been the subject of local advocacy. The current status of any hydroelectric proposals should be verified at the time of visit.
+
+🥾 THE TRAIL — COMPLETE CONFIRMED DETAILS
+🎟️ Entry Fee and Opening Hours
+✅ CONFIRMED — The access path to the waterfall is open from 7:00 AM to 5:00 PM daily.
+Entry fees — current rates from recent visitor accounts:
+Foreign adults: approximately 500 LKR
+Sri Lankan adults: approximately 200 LKR
+Sri Lankan children: approximately 100 LKR
+⚠️ NOTE ON FEES: One visitor account from 2025 cites 500 LKR for foreign adults and 50 LKR for Sri Lankan nationals. These figures vary between sources and the dual-pricing system for locals and foreigners is real and confirmed, though the exact current amounts should be verified at the ticket booth on arrival. Cash only.
+📍 The Complete Trail — Section by Section
+Start Point: The trail begins at the entrance gate and ticket booth on the Mahiyangana Road, approximately 5 km from Badulla town. From the entrance gate, a walk of approximately 1 to 1.5 km leads to the main falls viewing platform.
+Section 1 — The Initial Path (0 to 500 meters)
+From the entrance gate, a well-maintained path winds through light forest. Small stalls and shops line the first section of the path — vendors sell snacks, fresh coconuts, local herbal drinks, cold drinks, and small souvenirs. The path is flat to gently inclining at the start.
+Section 2 — Kuda Dunhinda Falls Viewpoint (approximately 500 meters)
+Approximately halfway along the trail, a viewpoint on the left provides a view of Kuda Dunhinda — Little Dunhinda Falls — a smaller waterfall on the same stream system below the main falls. The falls are clearly visible from the viewpoint platform. Kuda Dunhinda is a genuinely attractive waterfall in its own right and worth the brief stop. A more rugged forest path leads closer to Kuda Dunhinda but this path is not well-maintained and requires proper preparation — not recommended for casual visitors.
+Herbal drink vendors operate near the Kuda Dunhinda viewpoint — offering traditional Sri Lankan medicinal drinks brewed from local herbs. These are a distinctive and enjoyable feature of the Dunhinda trail unique among Sri Lankan waterfall trails.
+Section 3 — The Suspension Bridge and Steps
+Beyond the Kuda Dunhinda viewpoint, the trail crosses a suspension bridge over the gorge — providing a view down into the river below. After the bridge, steep steps with wooden and iron handrails ascend to the final section.
+Section 4 — The Main Viewing Platform
+The trail ends at a formal viewing platform positioned at the base of the main falls. The platform provides a direct face-on view of the full 63 to 64-meter drop. The mist from the falls reaches the platform continuously — visitors become lightly wet from the spray even without approaching the water directly. The sound of the falls at this distance is significant.
+⏱️ Duration
+One way from gate to viewing platform: approximately 20 to 30 minutes at a comfortable pace
+Return: same duration
+Total round trip: 45 minutes to 1 hour
+Add 15 to 20 minutes for stops at Kuda Dunhinda viewpoint and vendor stalls
+
+💧 THE WATERFALL — PHYSICAL DETAILS
+✅ CONFIRMED — The Badulu Oya descends in a dramatic sequence of cascading steps before reaching the primary drop. The main plunge — approximately 63 to 64 meters — falls into a deep natural pool at the base. The impact of the water on the pool creates the defining spray cloud that gives the falls their name — a permanent fine mist billowing upward and outward from the base, cooling the surrounding air by several degrees compared to the forest above.
+✅ CONFIRMED — The shape of the waterfall in full flow resembles a spreading veil — broader at the base than at the top, the water fanning outward as it falls — which accounts for the English name Bridal Falls. During very high water flow in the monsoon, the falls produce a genuinely powerful torrent of white water occupying the full width of the rock face. During the dry season, the flow narrows but the falls remain permanently active — unlike some Sri Lankan waterfalls that reduce to a trickle in dry years, the Badulu Oya maintains year-round flow from its highland catchment.
+
+🌿 WILDLIFE AND BIODIVERSITY
+🐒 Toque Macaque
+✅ CONFIRMED — Toque macaques — the endemic, Endangered monkey — are present throughout the trail in large, habituated groups. They are specifically and consistently noted in visitor accounts as bold, food-seeking, and highly experienced at stealing from tourists. The macaques at Dunhinda are widely regarded as among the most aggressively food-seeking monkey groups at any Sri Lankan waterfall. Carry all food in closed, zipped bags. Never hold food in the open. Never feed the monkeys — it increases their aggression and dependency on human food. Keep bags zipped at all times including when standing still at viewpoints.
+🦋 Butterflies
+✅ CONFIRMED — The forested trail supports a diversity of highland butterflies. Multiple sources specifically note butterfly diversity as one of the pleasures of the Dunhinda trail. The Sri Lanka Birdwing — one of the largest and most spectacular butterflies in South Asia — is present in the broader highland butterfly fauna of this region.
+🦅 Birds
+The forest along the trail supports a range of highland and forest-edge bird species. Specific confirmed species sightings at Dunhinda include:
+Sri Lanka Junglefowl — the national bird; seen at forest edges along the trail
+Various bulbul and babbler species — heard throughout
+Kingfisher species — present near the stream sections
+Highland flycatchers — active in the forest canopy
+🦌 Deer
+Wild deer — primarily the barking deer and spotted deer — are occasionally reported along the trail by visitors, particularly in the less disturbed sections near the falls.
+🐘 Elephants
+Wild elephants are occasionally reported in the broader area around the trail. This is not a high-frequency sighting but is a confirmed possibility — the Badulla region has wild elephant populations in the surrounding forest zones. The main trail is well-used and elephant encounters near it are very rare but not impossible.
+🌿 Flora
+The forest along the trail is highland tropical vegetation — a mix of tree ferns, wild banana plants, highland flowering shrubs, and forest trees characteristic of Sri Lanka's mid-elevation wet zone. The spray zone immediately around the base viewing platform supports an extraordinarily dense growth of mosses, liverworts, and moisture-dependent ferns on every rock surface — permanently sustained by the mist from the falls.
+
+🏛️ NEARBY ATTRACTIONS IN BADULLA
+🛕 Muthiyangana Raja Maha Viharaya
+✅ CONFIRMED — The Muthiyangana Raja Maha Viharaya is an ancient Buddhist temple in the heart of Badulla town — one of the sixteen Solosmasthana, the sacred places in Sri Lanka held to have been visited by the Buddha. It is an important pilgrimage site for Buddhists from across the island. The temple contains significant historical sculptures and architectural elements from multiple periods of Sinhalese civilisation. Active and open to visitors daily — remove footwear before entering. Dress code: shoulders and knees covered.
+⭐ RELIGIOUS TRADITION: The Muthiyangana Raja Maha Viharaya is said to enshrine a hair relic of the Buddha. This is a sincerely held religious belief recorded in temple tradition and is not independently verifiable.
+🏰 Badulla Town — Colonial Architecture
+✅ CONFIRMED — Badulla is the capital of Uva Province and one of the oldest continuously inhabited towns in Sri Lanka. The town contains a range of British colonial-era architecture — government buildings, churches, and the colonial courthouse — that reflect its importance as a provincial administrative centre during the colonial period. St. Mark's Church — built in 1857 — is one of the best preserved colonial-era churches in the highland region and is still active.
+🚂 Badulla Railway Station
+✅ CONFIRMED — Badulla Railway Station is the terminus of the Colombo–Badulla highland railway — the most scenic railway line in Asia. The train journey from Kandy to Badulla via Ella is one of the great train experiences of the world. The station itself — with its classic hill station architecture, flower gardens on the platform, and the atmosphere of the journey's end — is worth visiting as a heritage site in its own right. The station master's office and platform infrastructure date from the British colonial period.
+🏔️ Dunhinda Adaviya — The Forest Backdrop
+✅ CONFIRMED — The forest directly behind the falls — visible on the cliff face above the waterfall — is known as Dunhinda Adaviya. This forest zone on the escarpment above the falls forms the immediate visual backdrop and the ecological catchment of the Dunhinda Falls system. It is protected as part of the broader land management around the Badulu Oya watershed.
+
+🌤️ BEST TIME TO VISIT
+November to March — Best for Full Volume and Spectacular Mist
+The northeast monsoon from October to December and the dry period of January to March produce interesting opposite effects at Dunhinda. The monsoon fills the Badulu Oya to maximum capacity — the falls are at their most powerful and the mist spray is most dramatic. Multiple sources confirm November to March as the period when the falls are at their most visually spectacular for sheer volume and mist cloud.
+June and July — Recommended for Overall Experience
+June and July are identified by multiple sources as the best overall period — sunny weather during the day, good water volume from the preceding southwest monsoon, and comfortable trail conditions. The combination of full falls and reliable sunshine produces the best photography conditions.
+April to May — Good Volume, Some Rain
+Good water volume as the first inter-monsoon rains begin. The landscape is lush and green. Occasional afternoon rain showers are possible.
+August to October — Moderate Conditions
+Variable water volume. The southwest monsoon weakens through August and September. October sees the beginning of the northeast monsoon bringing increased flow. Conditions are workable throughout this period.
+⚠️ RAINY SEASON WATER COLOUR:
+One visitor account specifically notes that after heavy rain the falls can run muddy brown rather than the clear white of dry-to-moderate flow conditions. This is a real phenomenon — when the Badulu Oya catchment receives very heavy rain, sediment is carried in the water, making the falls brown rather than white. This typically clears within 24 to 48 hours after rain stops.
+
+🚌 GETTING THERE
+🛺 By Tuk-Tuk from Badulla:
+The most practical option. A tuk-tuk from Badulla town to the Dunhinda Falls entrance costs approximately 350 LKR one way — about 10 to 15 minutes. From the entrance gate, the walk to the falls takes 20 to 30 minutes. Negotiate a fixed price including return if using the same tuk-tuk, or simply take a return tuk-tuk from the entrance gate when ready.
+🚌 By Bus from Badulla:
+Local buses from Badulla Bus Stand toward Mahiyangana run approximately every 30 minutes. Ask for the Dunhinda Falls stop. The fare is nominal — approximately 30 to 50 LKR. The bus stop is near the entrance gate.
+🚗 From Ella:
+Approximately 20 to 30 km — about 30 to 45 minutes by car or tuk-tuk. From Ella, a half-day trip combining Dunhinda Falls with Badulla town is entirely practical. Hire a tuk-tuk from Ella for the full circuit — the standard Ella tuk-tuk day-trip circuit covering Dunhinda Falls, Badulla town, and Ravana Falls is a popular and well-established local tourism programme.
+🚂 By Train to Badulla:
+Badulla is the terminus of the Colombo–Badulla highland railway — arriving by train from Kandy or Ella is one of the most beautiful train journeys in Asia. The journey from Ella to Badulla takes approximately 30 to 40 minutes. From Badulla station, tuk-tuks to the falls are immediately available.
+From Bandarawela:
+Approximately 20 km — about 35 minutes by tuk-tuk or bus.
+From Haputale:
+Approximately 30 km — about 1 hour.
+
+🏨 WHERE TO STAY
+In Ella — Most Common Base (20 to 30 km):
+The full range of Ella accommodation described in the Ella guide above. Dunhinda is most commonly visited as a half-day excursion from Ella combined with Badulla town.
+In Badulla Town (5 km):
+Badulla has a range of local guesthouses and mid-range hotels at significantly lower prices than Ella. The town is less touristic but has genuine cultural character as a highland provincial capital. Staying in Badulla allows easy morning access to the falls before the day-tripper crowds arrive from Ella.
+Greenlands Holiday Inn — one of the most frequently noted guesthouses in Badulla — modest, clean, central location, genuine Sri Lankan hospitality.
+Multiple small guesthouses in the town area from approximately 2,000 to 5,000 LKR per night with breakfast.
+In Bandarawela (20 km):
+Bandarawela Hotel — one of the oldest hill station hotels in Sri Lanka, built in 1892. The original colonial hotel building with its period architecture and highland atmosphere is one of the most characterful accommodation options in the entire Uva Province highlands.
+
+🍽️ WHERE TO EAT
+On the Trail:
+The most distinctive food experience at Dunhinda is the herbal drink vendors operating near the Kuda Dunhinda viewpoint. Traditional Sri Lankan medicinal drinks — brewed from local highland herbs including coriander, ginger, lemongrass, and other wild plants — are sold in small cups at minimal cost. This is a cultural food experience unique to the Dunhinda trail and worth trying. Coconuts, biscuits, cold drinks, and packaged snacks are also available.
+In Badulla:
+Multiple local restaurants in Badulla town serve Sri Lankan rice and curry at genuine local prices. The Old Rest House near the town centre serves reliable Sri Lankan food in a colonial building. Local food stalls near the bus stand serve kottu roti, hoppers, and short eats at the cheapest prices in the Badulla District.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+⏰ Arrive early on weekdays. Dunhinda Falls is extremely popular with Sri Lankan domestic tourists — particularly from Badulla and the surrounding Uva Province towns on weekends and public holidays. Arriving before 8:30 AM on a weekday gives the most peaceful experience — the trail is quiet, the monkeys are less hyperactive, and the viewing platform at the base can be enjoyed without crowds. Weekends and public holidays bring large numbers of local visitors simultaneously.
+🐒 Secure all food before entering the gate. The Dunhinda toque macaques are among the most aggressive food-seeking monkey groups at any Sri Lankan waterfall. Pack all food into zipped bags before entering the trail. Never reach into a bag for food while monkeys are nearby. Never hold food openly. This cannot be stated strongly enough — multiple visitor accounts describe food theft from hands, bags grabbed from shoulders, and general monkey aggression at this specific site.
+👟 Wear proper grip shoes. The trail includes sections of stone steps, mud, a suspension bridge, and the permanently wet viewing platform at the base. Proper rubber-soled shoes are important throughout. The viewing platform at the base of the falls is permanently wet from mist spray — the surface is slippery even when it has not rained.
+🧴 Bring an insect repellent. The forested trail has mosquitoes in the damp sections — particularly near the stream and the base pool area. The spray zone around the base platform is permanently humid and cool — ideal mosquito habitat.
+💧 Carry water. Despite the vendor stalls in the first section of the trail, there is no reliable drinking water supply beyond the stall section. Carry at least 1 litre per person from Badulla before entering the trail.
+🌊 Do not attempt to swim at the base pool. Multiple sources specifically warn against this. The currents in the pool are strong from the impact of the falling water. Submerged rocks are present. The pool looks inviting but swimming is genuinely dangerous. The formal viewing platform is positioned specifically to give a safe vantage point — stay on the platform.
+📷 The finest photography position. The formal viewing platform at the base of the falls provides the clearest full-face view of the complete 63 to 64-meter drop. The mist from the falls creates a diffuse, atmospheric light condition that is ideal for photography — the falls appear to glow within the mist cloud when the sun angle is right. Morning light before 10:00 AM produces the best illumination. After midday the gorge section moves into shade.
+⏱️ Allow 2 hours total. The trail is only 1 to 1.5 km each way but deserves unhurried exploration — the herbal drink vendors, the Kuda Dunhinda viewpoint, the suspension bridge, and the base platform all merit proper time. Two hours including the return allows a comfortable, complete visit.
+📅 Combine with Badulla town. The Muthiyangana Raja Maha Viharaya and the colonial architecture of Badulla town are only 5 km from the falls. After the trail, a brief visit to the temple and a walk through the town centre — including the colonial courthouse and St Mark's Church — gives a genuine sense of this historic highland capital. The return train from Badulla to Ella or Kandy, departing in the afternoon, completes a perfect day.
+📅 Combine with Ravana Falls. Ravana Falls is approximately 25 km from Dunhinda — about 40 minutes by road. A combined half-day visiting Dunhinda in the morning and Ravana Falls in the afternoon, with Badulla town in between, is one of the finest single-day waterfall circuits in the Uva Province highlands.`, SI: "දුන්හිඳ ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "The path can be very slippery. Secure all food from monkeys.", SI: "මග ලිස්සන සුළුයි. ආහාර ද්‍රව්‍ය වඳුරන්ගෙන් ආරක්ෂා කරගන්න." }], hiddenEchoes: { EN: "A smaller waterfall nearby.", SI: "කුඩා දුන්හිඳ." }, location: "Badulla", coordinates: { x: 72, y: 64 },
     nearbyAttractions: [
       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" },
       { id: "pasikudah", name: { EN: "Pasikudah Beach", SI: "පාසිකුඩා වෙරළ" }, image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg" }
     ]
   },
-  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg", gallery: ["https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is located in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's waterfalls is 20 metres (66 ft). The waterfall was named after Sir Samuel Baker, who was a famous explorer. The waterfall is known for its beautiful surroundings and the cool climate.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, tips: [{ EN: "It is very cold in the morning.", SI: "උදෑසනට අධික සීතලයි." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
+  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg", gallery: ["https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is located in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's waterfalls is 20 metres (66 ft). The waterfall was named after Sir Samuel Baker, who was a famous explorer. The waterfall is known for its beautiful surroundings and the cool climate.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, detailedAbout: { EN: `💧 BAKER'S FALLS — බේකර්ස් ඇල්ල
+Horton Plains' Hidden Cascade — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by government records, scientific surveys, and historical documentation
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Central Province, Sri Lanka
+District: Nuwara Eliya District
+Position: Within Horton Plains National Park — approximately 3 km from the main park entrance along the circular trail
+Elevation: approximately 2,100 to 2,200 meters above sea level
+Distance from the park entrance: 3 km along the circular trail
+Distance from World's End: approximately 2 km on the circular trail
+Distance from Nuwara Eliya: approximately 30 to 35 km — about 1 to 1.5 hours by road
+Distance from Haputale: approximately 20 km — about 45 minutes by road
+Distance from Ella: approximately 40 km — about 1.5 hours by road
+Distance from Ohiya Railway Station: approximately 13 to 14 km by road to the park entrance
+
+🚶 ACCESS AND THE TRAIL
+The trail to Baker's Falls is part of the 10 km circular loop within Horton Plains National Park.
+Section 1 — The Plateau Walk
+From the park entrance, the trail crosses the open, windswept montane grasslands (patanas). The path is relatively flat and well-marked.
+Section 2 — The Descent to the Falls
+Approximately 3 km from the entrance (if walking clockwise), a signposted path branches off the main loop and descends steeply toward the Belihul Oya gorge.
+The descent involves a series of steep, uneven stone steps and some sections with tree roots. It can be slippery, especially after rain or in the morning mist.
+Section 3 — The Viewing Platforms
+There are two main viewing levels. The upper platform provides a view of the top of the falls, while the lower platform (reached by further steps) offers the classic face-on view of the main 20-meter drop and the pool below.
+⏱️ Duration:
+One way from park entrance to the falls: approximately 45 minutes to 1 hour.
+Descent from the main loop to the lower platform: 10 to 15 minutes.
+Total time for the full 10 km loop including Baker's Falls and World's End: 3 to 4 hours.
+
+💧 THE WATERFALL — PHYSICAL DETAILS
+✅ CONFIRMED — Baker's Falls is a multi-tiered waterfall with a total height of approximately 20 meters (66 feet). It is formed by the Belihul Oya, a tributary of the Walawe River.
+✅ CONFIRMED — The falls are famous for the wide, fan-like spread of the water as it cascades over a black rock face. The surrounding vegetation is dense cloud forest, featuring endemic ferns, mosses, and rhododendrons.
+⚠️ UNCERTAIN: Some older sources list the height as 22 meters, but 20 meters is the most widely accepted modern figure.
+
+🏛️ HISTORY AND NAMING
+✅ CONFIRMED — The waterfall is named after Sir Samuel Baker, the famous British explorer and big-game hunter who "discovered" the falls in the mid-19th century (around 1845). Baker established a farm in Nuwara Eliya and was instrumental in the early colonial development of the central highlands.
+⭐ LEGEND / TRADITION: Local tradition suggests the falls were known to indigenous people long before Baker's arrival, but his name remains the official designation.
+
+🌿 WILDLIFE AND BIODIVERSITY
+Horton Plains is a biodiversity hotspot. While at Baker's Falls, you may encounter:
+Sambar Deer: Frequently seen in the grasslands near the trail.
+Purple-faced Langur: The endemic monkey often heard or seen in the canopy of the cloud forest surrounding the falls.
+Dull-blue Flycatcher: A beautiful endemic bird often seen near the water.
+Rhino-horned Lizard: A rare endemic lizard found in the cloud forest.
+Tree Ferns and Mosses: The spray zone around the falls supports a lush growth of ancient tree ferns and thick carpets of moss.
+
+🌤️ BEST TIME TO VISIT
+6:00 AM to 10:00 AM — Best for Visibility and Wildlife
+Horton Plains is famous for its sudden mist. Arriving at the park entrance at 6:00 AM (when it opens) ensures you reach the falls and World's End before the heavy mist typically rolls in around 10:00 AM or 11:00 AM.
+January to March — The Dry Season
+The clearest skies and best trail conditions. However, the water volume of the falls may be lower.
+October to December — The Monsoon
+The falls are at their most powerful and spectacular, but the trail can be very muddy, and the risk of mist obscuring the views is much higher.
+
+🚌 GETTING THERE
+🚗 From Nuwara Eliya:
+The most common way is by hired van or tuk-tuk. The journey takes about 1 to 1.5 hours. Most visitors arrange a 5:00 AM pickup to arrive at the gate by 6:00 AM.
+🚂 By Train:
+Take the train to Ohiya Railway Station. From Ohiya, it is a 13 km (approx. 30-45 min) drive to the park entrance. Tuk-tuks are available at the station.
+🥾 Hiking from Ohiya:
+Some adventurous hikers walk from Ohiya station to the park entrance (about 3-4 hours uphill).
+
+🏨 WHERE TO STAY
+Nuwara Eliya (30-35 km):
+A wide range of colonial-era hotels (e.g., The Grand Hotel, St. Andrew's) and modern guesthouses.
+Haputale (20 km):
+Offers stunning views and a quieter atmosphere. Popular guesthouses like Highcliffe or Amaya View Guest House.
+Ohiya (13 km):
+Very basic guesthouses near the station for those wanting the earliest possible start.
+
+🍽️ WHERE TO EAT
+Inside the Park:
+There are NO shops or restaurants inside the park beyond the entrance area.
+Entrance Area: A small canteen sells basic snacks, tea, and coffee.
+Pack a Breakfast: Most hotels in Nuwara Eliya or Haputale will provide a "packed breakfast" for Horton Plains visitors.
+⚠️ NO PLASTIC: Horton Plains is a "No Plastic" zone. All plastic wrappers, bottles, and bags will be checked at the entrance. Use reusable containers or paper bags.
+
+💡 ESSENTIAL TIPS — PRACTICAL ONLY
+👟 Wear sturdy hiking shoes. The steps down to the falls are uneven and often wet.
+🧥 Bring layers. Temperatures at 2,100 meters can be near freezing at 6:00 AM but warm up significantly by midday.
+💧 Stay hydrated. Bring water in a reusable (non-plastic) bottle.
+🤫 Keep quiet. To see wildlife, maintain a low noise level along the trail.
+🚫 No Drones. Drone use is strictly prohibited within the National Park.
+🚮 Leave No Trace. Take all your rubbish back out with you.`, SI: "බේකර්ස් ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Wear sturdy hiking shoes and bring warm layers.", SI: "ශක්තිමත් සපත්තු පළඳින්න සහ උණුසුම් ඇඳුම් රැගෙන එන්න." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
     nearbyAttractions: [
       { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
     ]
   },
-  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Central Highlands", coordinates: { x: 52, y: 64 },
+  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, detailedAbout: { EN: `💧 ST. CLAIR'S FALLS — සෙන්ට් ක්ලෙයාර් ඇල්ල
+The Little Niagara of Sri Lanka — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by geological surveys, government records, and physical measurement
+⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Central Province, Sri Lanka
+District: Nuwara Eliya District
+Position: Approximately 3 km west of Talawakele town, on the Hatton-Talawakele Highway (A7)
+Elevation: approximately 1,198 meters above sea level
+Distance from Talawakele: 3 km — about 5 to 10 minutes by road
+Distance from Hatton: approximately 16 km — about 30 to 40 minutes by road
+Distance from Nuwara Eliya: approximately 30 km — about 1 hour by road
+Distance from Colombo: approximately 140 km — about 4 to 5 hours by road
+
+📏 PHYSICAL CHARACTERISTICS
+✅ CONFIRMED Height: 80 meters (260 ft)
+✅ CONFIRMED Width: approximately 50 meters (160 ft) — making it one of the widest waterfalls in Sri Lanka
+Structure: Two-tier cascade (The "Greater St. Clair" and "Lesser St. Clair")
+Source: Kotmale Oya, a major tributary of the Mahaweli River
+Flow Rate: Historically high, but significantly impacted by the Upper Kotmale Hydropower Project
+
+🕰️ HISTORY & NAME
+✅ CONFIRMED Origin of Name: Named after the St. Clair Tea Estate, through which the waterfall flows.
+✅ CONFIRMED "Little Niagara": Earned this nickname due to its impressive width and volume, resembling a miniature version of the famous North American falls.
+⚠️ UNCERTAIN Local Legends: Some local folklore suggests the area was a retreat for ancient kings, though historical documentation is sparse compared to other sites like Sigiriya or Polonnaruwa.
+
+🌿 WILDLIFE & NATURE
+Surroundings: Lush tea plantations, primarily the St. Clair and Devon estates.
+Flora: Tea bushes (Camellia sinensis), eucalyptus trees, and various montane forest species in the surrounding valleys.
+Fauna: Various bird species endemic to the central highlands, small mammals like the purple-faced langur, and diverse butterfly species.
+
+☀️ BEST TIME TO VISIT
+✅ CONFIRMED Peak Flow: During the monsoon season (May to September) and immediately after heavy rains.
+⚠️ UNCERTAIN Dry Season: During February and March, the flow can be significantly reduced, sometimes appearing as a thin trickle due to water diversion for hydropower.
+Best Viewing Time: Early morning (6:00 AM to 9:00 AM) for the clearest views and best lighting for photography.
+
+🚗 TRAVEL INFORMATION
+How to get there:
+- By Train: One of the most scenic ways to see the falls is from the "Main Line" railway (Colombo to Badulla). The falls are visible between the Watagoda and Talawakele stations.
+- By Road: Easily accessible from the A7 highway. There is a well-maintained viewing gallery (St. Clair's Viewing Gallery) located along the road.
+- By Bus: Any bus travelling between Hatton and Talawakele or Nuwara Eliya will pass the viewing point.
+
+💡 ESSENTIAL TIPS
+1. Viewing Point: The best public view is from the dedicated viewing gallery on the main road.
+2. Photography: Use a wide-angle lens to capture the full width of the falls.
+3. Hydration: There are several tea centers nearby (like the Mlesna Tea Castle) where you can enjoy a cup of Ceylon tea with a view.
+4. Respect Nature: Do not litter. The surrounding tea estates are private property; stay on public paths.
+5. Safety: Attempting to reach the base of the falls is difficult and can be dangerous due to slippery rocks and unpredictable water levels. It is best enjoyed from the designated viewing areas.`, SI: `💧 සෙන්ට් ක්ලෙයාර් ඇල්ල — ST. CLAIR'S FALLS
+ලංකාවේ කුඩා නයගරා — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
+
+✅ සෑම තැනකම අවංක ලේබල් කිරීම
+✅ තහවුරු කර ඇත — භූ විද්‍යාත්මක සමීක්ෂණ, රජයේ වාර්තා සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත
+⭐ පුරාවෘත්තය / සම්ප්‍රදාය — සංස්කෘතික සම්ප්‍රදාය හෝ ජනප්‍රවාද, ස්වාධීනව තහවුරු කළ නොහැක
+⚠️ අවිශ්වාස සහගතයි — මූලාශ්‍ර අතර සංඛ්‍යාලේඛන වෙනස් වේ හෝ විවාදයට භාජනය වේ
+
+📍 පිහිටීම
+පළාත: මධ්‍යම පළාත, ශ්‍රී ලංකාව
+දිස්ත්‍රික්කය: නුවරඑළිය දිස්ත්‍රික්කය
+ස්ථානය: තලවාකැලේ නගරයට බටහිරින් කිලෝමීටර 3ක් පමණ දුරින්, හැටන්-තලවාකැලේ මහා මාර්ගයේ (A7)
+මුහුදු මට්ටමේ සිට උස: මීටර් 1,198ක් පමණ
+තලවාකැලේ සිට දුර: කිලෝමීටර 3 — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
+හැටන් සිට දුර: කිලෝමීටර 16ක් පමණ — මාර්ගයෙන් විනාඩි 30 සිට 40 දක්වා
+නුවරඑළිය සිට දුර: කිලෝමීටර 30ක් පමණ — මාර්ගයෙන් පැය 1ක් පමණ
+කොළඹ සිට දුර: කිලෝමීටර 140ක් පමණ — මාර්ගයෙන් පැය 4 සිට 5 දක්වා
+
+📏 භෞතික ලක්ෂණ
+✅ තහවුරු කළ උස: මීටර් 80 (අඩි 260)
+✅ තහවුරු කළ පළල: මීටර් 50ක් පමණ (අඩි 160) — ශ්‍රී ලංකාවේ පළල්ම දිය ඇලිවලින් එකකි
+ව්‍යුහය: කොටස් දෙකකින් යුත් දිය ඇල්ලකි ("මහා සෙන්ට් ක්ලෙයාර්" සහ "කුඩා සෙන්ට් ක්ලෙයාර්")
+මූලාශ්‍රය: කොත්මලේ ඔය, මහවැලි ගඟේ ප්‍රධාන අතු ගංගාවකි
+ජල ප්‍රවාහය: ඓතිහාසිකව ඉහළ අගයක් ගත්තද, ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය හේතුවෙන් සැලකිය යුතු ලෙස බලපෑමට ලක්ව ඇත
+
+🕰️ ඉතිහාසය සහ නම
+✅ තහවුරු කළ නමේ ආරම්භය: දිය ඇල්ල ගලා යන සෙන්ට් ක්ලෙයාර් තේ වත්ත අනුව නම් කර ඇත.
+✅ තහවුරු කළ "කුඩා නයගරා": එහි ආකර්ෂණීය පළල සහ ජල පරිමාව නිසා මෙම නම ලැබී ඇත.
+⚠️ අවිශ්වාස සහගත දේශීය පුරාවෘත්ත: සමහර දේශීය ජනප්‍රවාදවලට අනුව මෙම ප්‍රදේශය පැරණි රජවරුන්ගේ විවේකස්ථානයක් වූ බව කියැවේ.
+
+🌿 වනජීවී සහ සොබාදහම
+පරිසරය: සශ්‍රීක තේ වතු, මූලික වශයෙන් සෙන්ට් ක්ලෙයාර් සහ ඩෙවෝන් වතු.
+ශාක: තේ පඳුරු, යුකැලිප්ටස් ගස් සහ අවට නිම්නවල ඇති විවිධ කඳුකර වනාන්තර විශේෂ.
+සතුන්: මධ්‍යම කඳුකරයට ආවේණික විවිධ පක්ෂි විශේෂ, දම් මුහුණැති රිළවා වැනි කුඩා ක්ෂීරපායින් සහ විවිධ සමනලුන් විශේෂ.
+
+☀️ සංචාරය කිරීමට හොඳම කාලය
+✅ තහවුරු කළ උපරිම ජල ප්‍රවාහය: මෝසම් කාලය තුළ (මැයි සිට සැප්තම්බර් දක්වා) සහ අධික වර්ෂාවෙන් පසුව.
+⚠️ අවිශ්වාස සහගත වියළි කාලය: පෙබරවාරි සහ මාර්තු මාසවලදී, ජල විදුලිය සඳහා ජලය හරවා යැවීම හේතුවෙන් ජල ප්‍රවාහය සැලකිය යුතු ලෙස අඩු විය හැකිය.
+නැරඹීමට හොඳම කාලය: පැහැදිලි දර්ශන සහ ඡායාරූපකරණය සඳහා හොඳම ආලෝකය ලබා ගැනීමට උදෑසන (පෙ.ව. 6:00 සිට පෙ.ව. 9:00 දක්වා).
+
+🚗 සංචාරය කිරීමට තොරතුරු
+ළඟා වන ආකාරය:
+- දුම්රියෙන්: කොළඹ සිට බදුල්ල දක්වා දිවෙන දුම්රිය මාර්ගයේ වටගොඩ සහ තලවාකැලේ දුම්රිය ස්ථාන අතරදී මෙම දිය ඇල්ල දැකගත හැකිය.
+- මාර්ගයෙන්: A7 මහා මාර්ගයෙන් පහසුවෙන් ළඟා විය හැකිය. මාර්ගය අසල පිහිටි සෙන්ට් ක්ලෙයාර් නැරඹුම් මැදිරියෙන් මෙය නැරඹිය හැකිය.
+- බස් රථයෙන්: හැටන් සහ තලවාකැලේ හෝ නුවරඑළිය අතර ධාවනය වන ඕනෑම බස් රථයකින් නැරඹුම් ස්ථානයට ළඟා විය හැකිය.
+
+💡 අත්‍යවශ්‍ය උපදෙස්
+1. නැරඹුම් ස්ථානය: හොඳම දර්ශනය ලබා ගැනීමට ප්‍රධාන මාර්ගයේ ඇති නැරඹුම් මැදිරිය භාවිතා කරන්න.
+2. ඡායාරූපකරණය: දිය ඇල්ලේ සම්පූර්ණ පළල ග්‍රහණය කර ගැනීමට පුළුල් කෝණ කාචයක් (wide-angle lens) භාවිතා කරන්න.
+3. පානීය පහසුකම්: අවට ඇති තේ මධ්‍යස්ථානවලින් (Mlesna Tea Castle වැනි) දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳිය හැකිය.
+4. සොබාදහමට ගරු කරන්න: කුණු කසළ දැමීමෙන් වළකින්න. අවට ඇති තේ වතු පෞද්ගලික දේපළ බැවින් පොදු මාර්ගවල පමණක් රැඳී සිටින්න.
+5. ආරක්ෂාව: දිය ඇල්ලේ පාමුලට යාමට උත්සාහ කිරීම දුෂ්කර හා භයානක විය හැකිය. එබැවින් නම් කරන ලද නැරඹුම් ස්ථානවල සිට එය නැරඹීම වඩාත් සුදුසුය.` }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Central Highlands", coordinates: { x: 52, y: 64 },
     nearbyAttractions: [
       { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" }
     ]

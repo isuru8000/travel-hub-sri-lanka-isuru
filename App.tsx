@@ -19,7 +19,7 @@ import { auth, db } from './firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { doc, onSnapshot } from 'firebase/firestore';
 
-const Destinations = lazy(() => import('./components/Destinations'));
+const Destinations = lazy(() => import('./components/Destinations').then(module => ({ default: module.default })));
 const Foods = lazy(() => import('./components/Foods'));
 const HeritageMusic = lazy(() => import('./components/HeritageMusic'));
 const TraditionalMedicine = lazy(() => import('./components/TraditionalMedicine'));
