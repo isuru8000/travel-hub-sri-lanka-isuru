@@ -144,18 +144,18 @@ const Navbar: React.FC<NavbarProps> = ({
 
               {/* Dropdown Menu */}
               {link.hasDropdown && activeDropdown === link.id && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-3 animate-in fade-in slide-in-from-top-2 duration-300">
-                  <div className="bg-white rounded-[2.5rem] shadow-[0_40px_120px_rgba(0,0,0,0.18)] border border-gray-100 overflow-hidden p-2">
-                    <div className="grid grid-cols-1 gap-1">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 w-64 pt-4 animate-in fade-in slide-in-from-top-4 duration-300 z-[1000]">
+                  <div className="bg-white rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden p-3">
+                    <div className="grid grid-cols-1 gap-1.5">
                       {link.items?.map((subItem) => (
                         <button
                           key={subItem.id}
                           onClick={() => handleNav(subItem.id)}
-                          className={`w-full flex items-center gap-4 px-5 py-3.5 rounded-2xl text-[10px] font-bold uppercase tracking-widest transition-all ${
-                            currentView === subItem.id ? 'bg-[#0EA5E9]/10 text-[#0EA5E9]' : 'text-gray-500 hover:bg-gray-50 hover:text-[#0a0a0a]'
+                          className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-[11px] font-bold uppercase tracking-widest transition-all ${
+                            currentView === subItem.id ? 'bg-[#0EA5E9]/10 text-[#0EA5E9]' : 'text-gray-600 hover:bg-gray-100 hover:text-[#0a0a0a]'
                           }`}
                         >
-                          <span className="opacity-80 scale-90">{subItem.icon}</span>
+                          <span className="opacity-80 scale-100">{subItem.icon}</span>
                           {subItem.label[language]}
                         </button>
                       ))}

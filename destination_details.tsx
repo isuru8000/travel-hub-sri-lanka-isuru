@@ -15,7 +15,7 @@ const BASE_DESTINATIONS: Destination[] = [
       SI: "5 වන සියවසේදී කාශ්‍යප රජු විසින් ඉදිකරන ලද්දකි. මෙය වසර 18 ක් රාජකීය බලකොටුවක් ලෙස පැවති අතර පැරණි නගර නිර්මාණ ශිල්පයේ විශිෂ්ටතම නිර්මාණයකි." 
     }, 
     shortStory: { 
-      EN: "Explore Sigiriya Rock Fortress, the 'Eighth Wonder of the World'. Discover ancient frescoes, water gardens, and the history of King Kashyapa's sky palace.", 
+      EN: "Explore Sigiriya Rock Fortress, the 'Eighth Wonder of the World' in Sri Lanka. Discover ancient frescoes, advanced hydraulic water gardens, and the fascinating history of King Kashyapa's sky palace in this UNESCO World Heritage site.", 
       SI: "සීගිරි පර්වතය - ලෝකයේ අටවන පුදුමය. පුරාණ බිතුසිතුවම්, ජල උද්‍යාන සහ කාශ්‍යප රජුගේ අහස් මාලිගයේ ඉතිහාසය ගවේෂණය කරන්න." 
     }, 
     tips: [
@@ -48,7 +48,7 @@ const BASE_DESTINATIONS: Destination[] = [
       SI: "රුවන්වැලිසෑය යනු ශ්‍රී ලංකාවේ අනුරාධපුරයේ පිහිටි මහා ස්තූපයකි. මෙය ලොව පුරා බෞද්ධයන්ගේ ගෞරවාදරයට පාත්‍ර වූ පූජනීය ස්ථානයකි."
     },
     shortStory: {
-      EN: "Ruwanwelisaya Stupa - Ancient Anuradhapura's spiritual masterpiece. Discover the history and engineering of this iconic Buddhist monument.",
+      EN: "Ruwanwelisaya Stupa - Ancient Anuradhapura's spiritual masterpiece in Sri Lanka. Discover the fascinating history, ancient engineering, and cultural significance of this iconic, massive Buddhist monument.",
       SI: "රුවන්වැලිසෑය - අනුරාධපුරයේ පූජනීය මහා ස්තූපය. පුරාණ ඉංජිනේරු විද්‍යාව සහ බෞද්ධ උරුමය ගවේෂණය කරන්න."
     },
     tips: [
@@ -92,7 +92,7 @@ const BASE_DESTINATIONS: Destination[] = [
       SI: "පොළොන්නරුව වටදාගෙය යනු 12 වන සියවසේදී ඉදිකරන ලද, කුඩා මධ්‍යම ස්තූපයක් වටා ආරක්ෂාව සහ වන්දනාව සඳහා ඉදිකරන ලද වෘත්තාකාර ගල් ගොඩනැගිල්ලකි."
     },
     shortStory: {
-      EN: "Polonnaruwa Vatadage - A masterpiece of ancient Sri Lankan stone carving. Explore this iconic circular shrine and its historical significance.",
+      EN: "Polonnaruwa Vatadage - A masterpiece of ancient Sri Lankan stone carving and architecture. Explore this iconic circular shrine in the UNESCO World Heritage site of Polonnaruwa and discover its profound historical significance.",
       SI: "පොළොන්නරුව වටදාගෙය - පුරාණ ශිලා කැටයම් කලාවේ විශිෂ්ටතම නිර්මාණය. මෙම පූජනීය වෘත්තාකාර විහාරය ගවේෂණය කරන්න."
     },
     tips: [
@@ -787,7 +787,7 @@ No accommodation within the reserve itself. The nearest guesthouses are in Kekir
 🐘 Stay on the path and follow the guide's instructions on elephants. Wild elephants move through the Ritigala forest throughout the day and are confirmed in the area regularly. If elephants are sighted near the path, the guide will direct you appropriately. Never attempt to approach an elephant or deviate from the path toward undergrowth where animals may be present.
 🔭 Bring binoculars for birds. The forest canopy of Ritigala supports a remarkable range of endemic and rare birds. The hornbills, hawk-eagles, and thrushes are best appreciated with binoculars. The bird activity is concentrated in the first two hours after dawn — another reason for the early morning visit.
 📷 Give your camera time to adjust. Moving from bright open road conditions into the dense forest canopy requires lens adjustment from bright exterior to dark interior. The most photographically rewarding sections are the double-platform structures where shafts of light penetrate the canopy and illuminate the stone surfaces of the Padhanagharas.
-💧 Carry sufficient water. There are no refreshment facilities within the site — not even a small shop. Carry a minimum of 1.5 litres of water per person. The combination of heat, humidity, and the 2 km of walking within the ruins makes dehydration a real consideration.
+* Carry sufficient water. There are no refreshment facilities within the site — not even a small shop. Carry a minimum of 1.5 litres of water per person. The combination of heat, humidity, and the 2 km of walking within the ruins makes dehydration a real consideration.
 ⏱️ Allow 2.5 to 3 hours. The main excavated trail covers approximately 2 km of winding forest path with ruins on both sides. Walking the full trail attentively — stopping to examine the double platforms, the reservoir, the cave inscriptions, and the forest ecology — takes 2 to 2.5 hours minimum. Rushing through in 45 minutes produces only a superficial impression of a site that rewards careful, attentive exploration.
 📅 Combine with Sigiriya and Pidurangala. The three sites are within 45 minutes of each other. Pidurangala at dawn, Sigiriya mid-morning, Ritigala afternoon — or Ritigala at 8:00 AM, Sigiriya at midday, Pidurangala for the sunset — are both viable single-day programmes covering three of the most extraordinary sites in the Cultural Triangle.
 🎒 This is not a casual tourist site. Unlike Sigiriya with its managed staircases, tour guide narrations, and souvenir shops, Ritigala is partially excavated ruins in an active forest. The experience is genuinely different from any other heritage site in Sri Lanka. Visitors who approach it with patience, curiosity, and physical preparation will find it one of the most remarkable places they have ever visited in Asia. Visitors who arrive expecting a managed tourist attraction will find it underdeveloped. It is emphatically the former.`, 
@@ -922,7 +922,7 @@ No accommodation within the reserve itself. The nearest guesthouses are in Kekir
 🐘 මාර්ගයේ රැඳී සිටින්න සහ අලි ඇතුන් පිළිබඳ මාර්ගෝපදේශකයාගේ උපදෙස් අනුගමනය කරන්න.
 🔭 කුරුල්ලන් සඳහා දුරදක්න රැගෙන එන්න.
 📷 ඔබේ කැමරාවට ගැලපීමට කාලය දෙන්න.
-💧 ප්‍රමාණවත් තරම් ජලය රැගෙන යන්න.
+* ප්‍රමාණවත් තරම් ජලය රැගෙන යන්න.
 ⏱️ පැය 2.5 සිට 3 දක්වා කාලය ලබා දෙන්න.
 📅 සීගිරිය සහ පිදුරංගල සමඟ ඒකාබද්ධ කරන්න.
 🎒 මෙය සාමාන්‍ය සංචාරක ස්ථානයක් නොවේ.`
@@ -1638,7 +1638,7 @@ Distance from Bambarakanda Falls: approximately 45 km — about 1 hour by road
 Distance from Horton Plains: approximately 40 km — about 1 hour by road
 Distance from Colombo: approximately 220 km — about 5 hours by road
 
-💧 WHAT IS DIYALUMA FALLS
+* WHAT IS DIYALUMA FALLS
 ✅ CONFIRMED — Diyaluma Falls is the second highest waterfall in Sri Lanka and the 619th highest waterfall in the world. It plunges 220 meters — 720 feet — in a single dramatic drop from the plateau edge down a rocky cliff face to the Koslanda valley below. The falls are formed by the Punagala Oya — a stream fed by the highland plateau above — which is itself a tributary of Kuda Oya, which in turn flows into the Kirindi Oya river system.
 ✅ CONFIRMED — The waterfall is actually two distinct features: the main Diyaluma Falls — the famous 220-meter single vertical plunge visible from the road below — and the Upper Diyaluma Falls above it — a series of cascades, natural rock channels, and natural swimming pools on the plateau surface before the stream reaches the cliff edge. Both features are extraordinary and together constitute the complete Diyaluma experience. Most photographs of Diyaluma show the upper pools rather than the main drop — the upper area is where visitors actually swim and interact with the water.
 ✅ CONFIRMED — The name Diyaluma derives from Sinhala. Diya means water and haluma means rapid flow. The combined meaning is rapid flow of water or alternatively translated as liquid light — both interpretations are linguistically valid.
@@ -1651,14 +1651,14 @@ Brohier also recorded a more recent story dating from 1910, remembered by local 
 ✅ CONFIRMED — THE WATER SOURCE:
 The Punagala Oya that feeds Diyaluma Falls originates in the Poonagala highland area above the cliff. The stream flows through the plateau before reaching the falls, carving the natural rock channels and pools that form the Upper Diyaluma area. The geological process of water carving rock over millions of years has produced the extraordinary natural pool formations that are the most sought-after feature of the site.
 
-💧 THE TWO AREAS — COMPLETE CONFIRMED DETAILS
+* THE TWO AREAS — COMPLETE CONFIRMED DETAILS
 🏊 Upper Diyaluma Falls — The Swimming Pools
 ✅ CONFIRMED — The Upper Diyaluma area is the plateau above the main waterfall where the Punagala Oya flows through a series of natural rock formations before reaching the cliff edge. Over geological time, the flowing water has carved the rock into intricate channels, pools, and cascades of varying sizes and depths. Three main tiers of natural pools have been formed — each tier at a slightly lower elevation as the water descends toward the cliff edge.
 ✅ CONFIRMED — The defining feature of the Upper Diyaluma pools is their position. The pools closest to the cliff edge provide a direct view down the 220-meter main drop to the valley floor far below while you are swimming in them. This combination — swimming in cold, clear mountain water while looking over the edge of a 220-meter cliff to the plains below — is the experience that has made Diyaluma Upper Falls one of the most photographed natural features in Sri Lanka. Multiple independent visitor accounts consistently describe it as one of the finest natural experiences they have encountered in Asia.
 ✅ CONFIRMED — The pools vary in depth between sections — some sections are suitable for swimming, others for jumping, and some allow sliding down smooth rock surfaces from one pool to the next. A small natural cascade feeds from one tier to the next. The rock surface around and between the pools is smooth, sculpted granite — warm in the sun and comfortable to walk on in bare feet during dry conditions.
 ⚠️ WATER LEVEL WARNING — CRITICAL:
 The pools are only safe for swimming when water levels are low — during the dry season from approximately December to April and during drier periods in August and September. During and after the monsoon, the Punagala Oya carries dramatically increased water volume. The same pools that are gentle, swimmable, and safe in the dry season become fast-flowing, turbulent, and genuinely dangerous during and after heavy rain. The current at the pool closest to the cliff edge — if increased by heavy rain — carries directly toward the 220-meter drop. Multiple visitor accounts confirm this hazard. Never swim in the upper pools when water levels are elevated or flow is visibly fast. This is not a precautionary warning but a genuine life-safety concern.
-💧 The Main Diyaluma Falls — The 220-Meter Drop
+* The Main Diyaluma Falls — The 220-Meter Drop
 ✅ CONFIRMED — The main Diyaluma Falls is the 220-meter single-plunge waterfall visible from the Colombo–Badulla highway in the valley below. The water drops from the plateau edge in a single unbroken cascade down the rocky cliff face — during peak flow the waterfall is a massive curtain of white water visible from a great distance; during the dry season it narrows to a more slender ribbon but remains a dramatic presence on the cliff face.
 ✅ CONFIRMED — The main falls are best viewed from the road below and from the bridge across the Punagala Oya near the base of the falls. The bridge provides a direct upward view of the full 220-meter drop. During the wet season this viewpoint produces an extraordinary sight — the full force of the water descending the cliff face in a massive torrent. During the dry season the falls are less voluminous but the cliff profile and the height are still fully impressive.
 ✅ CONFIRMED — The base of the main falls is accessible by a short walk from the road. A pool forms at the base where the falling water strikes the rock surface. Spray mist covers the surrounding vegetation near the base — the microclimate immediately around the base pool is significantly cooler and more humid than the surrounding valley, supporting lush ferns and mosses on the adjacent rocks.
@@ -1674,28 +1674,23 @@ Entry Fee at Upper Falls:
 A small entry charge is now collected at the upper falls — approximately 350 LKR based on confirmed visitor accounts. The exact current fee should be verified on arrival.
 Route 2 — From Below at Koslanda (Bottom-Up)
 ✅ CONFIRMED — From the bridge near the base of the falls on the Colombo–Badulla highway, a hiking trail leads upward to the upper pool area. Duration: approximately 30 to 45 minutes of uphill hiking — more strenuous than the Poonagala descent. The route passes through forest and scrubland with the sound of the falls audible throughout the ascent.
-✅ CONFIRMED — The bottom-up approach allows visitors to see the main falls from below first — the most dramatic view of the full 220-meter drop — before ascending to the upper pools. This sequence gives the complete experience in logical order. The bus stop on the Colombo–Badulla highway is near the road junction for the base of the falls.
-Combining Both Routes:
-Many experienced visitors descend from Poonagala to the upper pools, spend time swimming, then continue downhill to the base of the falls and exit via the lower road — a one-way traverse. This requires either coordinating transport at both ends or returning on foot — the full descent from Poonagala to the base road takes approximately 1.5 to 2 hours.
-Duration — Full Visit:
-A thorough visit — base viewpoint, ascent or descent to upper pools, swimming, exploring the multiple pool tiers — requires a minimum of 3 to 4 hours. A full day allows a completely unhurried experience and is recommended by multiple visitor accounts.
+✅ CONFIRMED — The bottom-up approach allows visitors to see the main falls from below first — the most dramatic view of the full 220-meter drop — before ascending to the upper pools. This sequence gives the complete experience in logical order. The bus stop on the Colombo–BadulElevation: approximately 945 meters above sea level
+Distance from Ella town centre: approximately 6 km — about 10 to 15 minutes by tuk-tuk
+Distance from Ella Railway Station: 6 km
+Distance from Nine Arch Bridge: approximately 4 km — about 10 minutes
+Distance from Diyaluma Falls: approximately 35 km east — about 1 hour by road
+Distance from Ravana Cave: approximately 4 km further up the hill from the falls — accessible by continuing on the road toward Wellawaya and then ascending
+Part of: Ravana Ella Wildlife Sanctuary
 
-👮 GUIDE — HONEST ASSESSMENT
-⚠️ PARTIALLY UNCERTAIN — GUIDE REQUIREMENT:
-Multiple independent sources give directly contradictory advice on whether a guide is necessary:
-Against guides: Several visitor accounts confirm the trail from Poonagala is straightforward, well-marked on offline maps, and navigable without assistance. One source specifically advises firmly declining guide offers from local men at the parking area who pressure visitors with false claims of trail difficulty.
-For guides: Multiple other visitor accounts describe guides as significantly enhancing the experience — identifying safe swimming and jumping spots, navigating the rock pools safely, pointing out hidden viewpoints, and providing important safety advice about water levels. For first-time visitors during the wet season or after recent rain, an experienced guide's knowledge of safe versus dangerous pool sections is genuinely valuable.
-The honest middle position: A guide is not necessary for reaching the upper falls from Poonagala during the dry season. A guide is strongly recommended for first-time visitors during or after rain, for those who want to explore the full range of pools and cascades safely, and for anyone unfamiliar with highland terrain. The cost of a guide is modest and the safety and experiential value is real. The choice is genuinely circumstantial rather than categorically required or categorically unnecessary.
+💧 WHAT IS RAVANA FALLS
+✅ CONFIRMED — Ravana Falls — known in Sinhala as Ravana Ella or Rawana Ella — is one of the most visited natural attractions in the Ella region of the Sri Lankan highlands. The waterfall measures approximately 25 meters in height and cascades from a distinctive oval-shaped concave rock outcrop — a uniquely shaped rock hollow that gives the falls their most immediately recognisable characteristic. The rock face curves inward like a bowl or a shallow amphitheatre, and the water fans out across this curved surface before falling to the pool below.
+✅ CONFIRMED — Ravana Falls ranks as one of the widest waterfalls in Sri Lanka. Although it is not tall by comparison with Bambarakanda (263 meters) or Diyaluma (220 meters), its extraordinary width — the water spreading broadly across the concave rock face — makes it visually spectacular in a different way. During the wet season, the volume of water flowing across the rock face produces a shape that local observers describe as resembling an areca palm flower with spreading petals — the water fans outward from the narrow centre to a broad base in a pattern that is genuinely distinctive.
+✅ CONFIRMED — The falls are located directly on the Ella–Wellawaya Road and are visible from the road itself. No significant hiking is required to reach the viewing area — the falls are immediately accessible from the roadside. This accessibility is one of the primary reasons for their high visitor numbers — every bus and car travelling between Ella and Wellawaya passes directly past the falls.
+✅ CONFIRMED — The falls form part of the Ravana Ella Wildlife Sanctuary. This designation provides legal protection to the waterfall and its surrounding habitat.
 
-🌿 WILDLIFE AND NATURAL ENVIRONMENT
-🐘 Elephants
-✅ CONFIRMED — Wild elephants are active in the broader area around Diyaluma Falls. Multiple visitor accounts note that guides specifically mention elephant presence as a reason for caution on longer hikes away from the main trail. The immediate falls area and the direct Poonagala trail are not high-risk zones but the forest surrounding the area is genuine elephant habitat. Avoid extended hikes off the main trail without local knowledge, particularly in the early morning and late afternoon when elephant activity increases.
-🦎 Reptiles
-Land monitors are commonly seen basking on rocks near the falls. Various snake species are present in the long grass and rocky terrain — wear closed-toe shoes and watch where you place your hands and feet when scrambling over rocks.
-🦟 Leeches
-Land leeches are present in the grass and forest sections of the trail — particularly after rain and during the wetter months. Apply salt or DEET-based repellent to shoes and lower trouser legs before beginning the hike.
-🦅 Birds
-Highland endemic bird species are present in the surrounding forest and scrubland — Yellow-Eared Bulbul, Sri Lanka White-Eye, and various flycatchers and babblers are commonly heard and seen along the trail. The stream habitat supports kingfishers. Raptors — crested serpent eagle and changeable hawk-eagle — are seen soaring over the escarpment.
+📜 THE NAME — CONFIRMED AND TRADITION
+⭐ THE RAMAYANA TRADITION:
+The falls are named after Ravana — the king of Lanka in the Sanskrit epic Ramayana. The Ramayana is one of the foundational literary works of South Asian civilisation — a Sanskrit epic of approximately 24,000 verses recording the story of Prince Rama of Ayodhya, his wife Sita, and the demon king Ravana of Lanka. The epic records that Ravana abducted Sita and brought her to Lanka, where she was kept captive until Rama — assisted by the monkey god Hanuman and an army of allies — invaded Lanka, defeated Ravana, and rescued her. and changeable hawk-eagle — are seen soaring over the escarpment.
 🌿 Vegetation
 The plateau area above the falls is characterised by highland grassland — long dry grass in the dry season, lush green during the monsoon. The stream banks support dense fern and moss vegetation sustained by permanent moisture from the Punagala Oya. The cliff face itself supports a variety of plants including mosses, ferns, and clinging shrubs in the spray zone of the falls.
 
@@ -1966,99 +1961,13 @@ Ella's Most Famous Waterfall — Complete Verified Guide
 Province: Uva Province, Sri Lanka
 District: Badulla District
 Position: On the Ella–Wellawaya Road, approximately 6 km south of Ella town
-Elevation: approximately 945 meters above sea level
-Distance from Ella town centre: approximately 6 km — about 10 to 15 minutes by tuk-tuk
-Distance from Ella Railway Station: 6 km
-Distance from Nine Arch Bridge: approximately 4 km — about 10 minutes
-Distance from Diyaluma Falls: approximately 35 km east — about 1 hour by road
-Distance from Ravana Cave: approximately 4 km further up the hill from the falls — accessible by continuing on the road toward Wellawaya and then ascending
-Part of: Ravana Ella Wildlife Sanctuary
-
-💧 WHAT IS RAVANA FALLS
-✅ CONFIRMED — Ravana Falls — known in Sinhala as Ravana Ella or Rawana Ella — is one of the most visited natural attractions in the Ella region of the Sri Lankan highlands. The waterfall measures approximately 25 meters in height and cascades from a distinctive oval-shaped concave rock outcrop — a uniquely shaped rock hollow that gives the falls their most immediately recognisable characteristic. The rock face curves inward like a bowl or a shallow amphitheatre, and the water fans out across this curved surface before falling to the pool below.
-✅ CONFIRMED — Ravana Falls ranks as one of the widest waterfalls in Sri Lanka. Although it is not tall by comparison with Bambarakanda (263 meters) or Diyaluma (220 meters), its extraordinary width — the water spreading broadly across the concave rock face — makes it visually spectacular in a different way. During the wet season, the volume of water flowing across the rock face produces a shape that local observers describe as resembling an areca palm flower with spreading petals — the water fans outward from the narrow centre to a broad base in a pattern that is genuinely distinctive.
-✅ CONFIRMED — The falls are located directly on the Ella–Wellawaya Road and are visible from the road itself. No significant hiking is required to reach the viewing area — the falls are immediately accessible from the roadside. This accessibility is one of the primary reasons for their high visitor numbers — every bus and car travelling between Ella and Wellawaya passes directly past the falls.
-✅ CONFIRMED — The falls form part of the Ravana Ella Wildlife Sanctuary. This designation provides legal protection to the waterfall and its surrounding habitat.
-
-📜 THE NAME — CONFIRMED AND TRADITION
-⭐ THE RAMAYANA TRADITION:
-The falls are named after Ravana — the king of Lanka in the Sanskrit epic Ramayana. The Ramayana is one of the foundational literary works of South Asian civilisation — a Sanskrit epic of approximately 24,000 verses recording the story of Prince Rama of Ayodhya, his wife Sita, and the demon king Ravana of Lanka. The epic records that Ravana abducted Sita and brought her to Lanka, where she was kept captive until Rama — assisted by the monkey god Hanuman and an army of allies — invaded Lanka, defeated Ravana, and rescued her.
+Elevation: approximately 945 meters above sea level�
 ⭐ THE SPECIFIC TRADITION CONNECTED TO RAVANA FALLS:
 Local tradition and the Ramayana-connected lore of Sri Lanka hold that Ravana hid Sita in the cave behind and near this waterfall — a location known as the Ravana Ella Cave. The falls themselves are associated with the belief that Sita bathed in the pool formed by the waterfall during her captivity. The legend also records that Ravana played the Ravanahatha — an ancient stringed instrument said to have been invented by Ravana — at this location.
 ⭐ THE BROADER RAVANA TRADITION IN SRI LANKA:
 In Indian Hindu tradition, Ravana is portrayed as the villain of the Ramayana — an evil demon king whose abduction of Sita constitutes the central moral transgression of the epic. In Sri Lankan cultural tradition, however, Ravana occupies a significantly more complex position. Many Sri Lankan Buddhists, Hindus, and general cultural observers regard Ravana not as a demon but as a great ancient king of Sri Lanka — a warrior of extraordinary power, a scholar of Ayurvedic medicine, a musician, and a ruler of a highly advanced civilisation. This contrasting cultural interpretation of the same literary figure is one of the most interesting aspects of the Ravana tradition in Sri Lanka and gives the Ella Ravana sites a genuine cultural complexity beyond simple mythological tourism.
 ⚠️ THE HISTORICAL STATUS — CONFIRMED UNCERTAINTY:
-The historical existence of a King Ravana is genuinely debated. Some Sri Lankan cultural historians argue that the Ramayana contains a historical kernel — that a powerful ancient king of Sri Lanka was mythologised into the Ravana figure over centuries. Archaeological evidence of human habitation in the broader Ella region going back 25,000 years is confirmed — but this confirms ancient human presence generally, not the specific Ravana narrative. The Ramayana as a historical document of literal events is not accepted by mainstream scholarship. It is a literary and religious epic of enormous cultural significance whose relationship to actual historical events is genuinely uncertain.
-
-🏛️ THE RAVANA ELLA CAVE — CONFIRMED DETAILS
-✅ CONFIRMED — The Ravana Ella Cave is located approximately 2 km from Ella town on the hillside above the falls — higher up the escarpment, accessible by road to the Maha Ravana Viharaya temple followed by a steep climb of approximately 650 steps to the cave entrance.
-✅ CONFIRMED — The cave measures approximately 50 feet wide, 150 feet long, and 60 feet high. It lies at an elevation of approximately 1,370 meters above sea level on the foundation of a cliff. This is a genuine cave — a substantial natural rock formation, not a small rock shelter.
-✅ CONFIRMED — Archaeological excavations carried out within the cave have revealed evidence of human habitation dating back approximately 25,000 years. A human skull dating to approximately 20,000 BC was recovered during excavations. These are confirmed archaeological findings and represent genuine prehistoric human presence at the site.
-✅ CONFIRMED — The cave is actively used as a Buddhist and Hindu religious site. The Maha Ravana Viharaya temple nearby has a resident monastic community. Pilgrims and visitors climb to the cave throughout the year.
-⭐ RAMAYANA TRADITION:
-The cave is locally identified as the location where Ravana concealed Sita during her captivity. Local sources describe the cave as connected by underground tunnels to other historically significant sites including the Dowa Rock Temple near Bandarawela, the Sthripura Cave at Welimada, and other locations across the highlands. These tunnel connections are asserted in local tradition but have not been confirmed by systematic archaeological survey.
-✅ HONEST ASSESSMENT:
-The cave is a genuine, substantial natural formation with confirmed prehistoric human habitation going back 25,000 years. Its connection to the Ramayana is cultural tradition rather than documented historical fact. Both aspects — the genuine archaeology and the living tradition — are significant and make the site worth visiting for different reasons.
-⚠️ THE CLIMB — HONEST WARNING:
-The 650-step ascent to the cave from the temple is described by multiple independent visitor accounts as genuinely steep and physically demanding — some steps are uneven, some sections have no steps at all and require scrambling over bare rock. The climb takes approximately 30 to 45 minutes up and is significantly harder than it appears from below. The cave at the top is relatively small and visitors with very high expectations of the cave itself sometimes find the climb disproportionate to what is at the top. However the panoramic views across the Ella valley from the cave entrance are extraordinary and fully justify the effort regardless of the cave's size.
-
-💧 THE WATERFALL — CONFIRMED PHYSICAL DETAILS
-📐 Measurements
-✅ CONFIRMED:
-Height: approximately 25 meters (82 feet)
-Character: extremely wide relative to height — one of the widest waterfalls in Sri Lanka
-Rock formation: oval-shaped concave rock outcrop — the water cascades across the curved inner face of this rock hollow
-Width: significantly wider than the height — the water spreads broadly across the rock face
-💧 The Seasonal Variation
-✅ CONFIRMED — Ravana Falls displays more dramatic seasonal variation than any other major waterfall in the Ella area:
-Wet season (October to December and April to May) — the falls are at maximum volume. The water spreads broadly across the full width of the concave rock face producing the distinctive areca flower shape that makes the falls most visually impressive. The flow is powerful and the sound is audible from a considerable distance.
-Dry season (January to March) — the volume reduces dramatically. In dry years the falls can reduce to a thin, narrow trickle concentrated in the centre of the rock face — a very different and much less impressive sight than the wet season spectacle. Visitors arriving specifically to see the full-width areca flower form of the falls should plan their visit for the wetter months.
-⚠️ HONEST NOTE ON DRY SEASON:
-Multiple visitor accounts note disappointment at seeing Ravana Falls in the dry season when the flow is minimal. The dramatic width that makes the falls famous is only present when water volume is high. In the dry season it is still a pleasant stop but not a spectacular one.
-💧 The Lower Ravana Falls
-✅ CONFIRMED — A smaller waterfall — Lower Ravana Falls, also known as Bamabaragama Falls — is located approximately 9 meters in height on the Ella–Wellawaya road near the village of Udunuwara. It flows through the Bandarawela Hill Oya Reservoir system. Less visited than the main Ravana Falls but easily combined on the same road journey.
-
-🏊 SWIMMING — HONEST ASSESSMENT
-✅ CONFIRMED — The pool at the base of the falls is used for swimming by both locals and tourists. During periods of moderate water flow, the pool provides a refreshing if brief swimming experience. Multiple sources specifically endorse the swimming as enjoyable.
-⚠️ SAFETY CONCERNS — CONFIRMED:
-The rocks surrounding the pool and the approach to the water are permanently wet and covered in algae — extremely slippery. Multiple visitor accounts mention slips on the rocks near the falls. Proper grip footwear should be worn at all times and extreme care exercised when moving near the water's edge.
-During high water flow — particularly immediately after heavy rain — the force of the falling water creates significant turbulence in the pool. Swimming during high flow is not advisable.
-The roadside location of the falls means the pool area is frequently crowded with visitors simultaneously. The combination of crowds, slippery rocks, and water of varying depth requires continuous care.
-⚠️ CROWD WARNING — SPECIFIC TO RAVANA FALLS:
-Ravana Falls is one of the most visited natural sites in Sri Lanka due to its roadside accessibility. On busy days — particularly weekends and Sri Lankan public holidays — the pool area below the falls can be extremely crowded with local Sri Lankan visitors swimming, picnicking, and playing. The atmosphere during crowded periods is lively and social rather than serene. Visitors seeking quiet contemplation of the natural scene should visit early on weekday mornings.
-
-🌿 THE RAVANA ELLA WILDLIFE SANCTUARY
-✅ CONFIRMED — The falls form part of the Ravana Ella Wildlife Sanctuary — a protected area designation that encompasses the waterfall, the surrounding forest, and the broader habitat zone.
-Wildlife confirmed in the sanctuary:
-Toque Macaque — endemic, Endangered; commonly seen near the falls; these macaques are habituated to human presence and food-seeking behaviour from tourists. Do not feed them and keep food secured in bags at all times.
-Purple-Faced Langur — endemic, Endangered; present in the forest sections of the sanctuary; less commonly seen than the macaques but present
-Sri Lanka Junglefowl — the national bird; seen at the forest edge
-Various bird species — the forest surrounding the falls supports the standard suite of highland edge species
-Land Monitor — seen basking on rocks near the falls area
-Various snake species — present in the rocky terrain and forest margins
-⚠️ MONKEY BEHAVIOUR WARNING:
-The toque macaques at Ravana Falls are specifically noted in multiple visitor accounts as bold and food-seeking. They will approach people carrying food, attempt to take food from hands and open bags, and can scratch or bite if provoked. Keep all food in closed bags, never offer food, and do not allow children to hold food near the monkey groups.
-
-🏛️ CULTURAL SITES NEAR THE FALLS
-🛕 Maha Ravana Viharaya
-✅ CONFIRMED — The Maha Ravana Viharaya is an active Buddhist temple on the hillside above the falls — the starting point for the climb to the Ravana Ella Cave. The temple is dedicated partly to the veneration of Ravana as a historical figure of Sri Lankan culture, incorporating Buddhist, Hindu, and indigenous cultural elements. The temple building is relatively modern in construction but sits within a landscape of considerable religious significance to the local community.
-Remove footwear before entering the temple grounds. Respectful dress — shoulders and knees covered — is required.
-🛕 Dhowa Rock Temple — 5 km from Ella
-✅ CONFIRMED — The Dhowa Rock Temple is described in the Ella guide above — an ancient Buddhist temple containing a large unfinished reclining Buddha carved from natural rock dating to at least the Kandyan period. Approximately 5 km from Ella on the Badulla road — in the opposite direction from Ravana Falls. Worth combining with the Ravana Falls visit as part of a full-day Ella exploration.
-
-🌤️ BEST TIME TO VISIT
-October to December — Primary Recommendation for Full Falls
-The northeast monsoon restores maximum water volume. The falls are at their widest and most dramatic — the full areca flower spread of water across the concave rock face. The most visually impressive period for photography and general appreciation of the waterfall.
-April to May — Second Peak
-The first inter-monsoon rains restore good flow after the dry season. The landscape is green and lush. The falls have substantial volume.
-January to March — Dry Season
-Reduced water flow — in dry years the falls are underwhelming in terms of volume. This is the driest and most reliably sunny period for the Ella area generally but the worst for seeing the falls at their best. If visiting Ella in this period, manage expectations for the falls specifically.
-July to September — Moderate Season
-Variable conditions. Water flow is moderate — better than the dry season but less dramatic than the monsoon peaks. The falls are presentable and worth stopping at as part of an Ella day without being specifically spectacular.
-
-🚌 GETTING THERE
-🛺 By Tuk-Tuk from Ella:
-The most common approach. From Ella town centre, a tuk-tuk to Ravana Falls takes approximately 10 to 15 minutes and costs approximately 300 to 500 LKR one way. Many visitors hire a tuk-tuk for a half-day circuit covering the Nine Arch Bridge, Ravana Falls, and other Ella attractions — negotiate a fixed rate for the full circuit.
+The historical existence of a King Ravana is genuinely debated. Some Sri Lankan cultural historians argue that the Ramayana containisitors hire a tuk-tuk for a half-day circuit covering the Nine Arch Bridge, Ravana Falls, and other Ella attractions — negotiate a fixed rate for the full circuit.
 🚌 By Bus from Ella:
 Any bus heading from Ella toward Wellawaya passes the falls directly. Ask the driver to stop at Ravana Falls. The fare is nominal — approximately 30 to 50 LKR. The falls are visible from the road so the stop is unmistakable. On the return, any bus heading uphill toward Ella will stop at the junction.
 🚗 By Car:
@@ -2254,212 +2163,325 @@ Multiple local restaurants in Badulla town serve Sri Lankan rice and curry at ge
       { id: "pasikudah", name: { EN: "Pasikudah Beach", SI: "පාසිකුඩා වෙරළ" }, image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg" }
     ]
   },
-  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg", gallery: ["https://i.pinimg.com/1200x/dd/42/d0/dd42d0c6e1682f11c854f199aaeaeb9b.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is located in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's waterfalls is 20 metres (66 ft). The waterfall was named after Sir Samuel Baker, who was a famous explorer. The waterfall is known for its beautiful surroundings and the cool climate.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, detailedAbout: { EN: `💧 BAKER'S FALLS — බේකර්ස් ඇල්ල
-Horton Plains' Hidden Cascade — Complete Verified Guide
+  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://picsum.photos/seed/bakersfalls/736/736", gallery: ["https://picsum.photos/seed/bakersfalls/736/736"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is situated in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's Falls is 20 metres (66 ft). The falls were named after Sir Samuel Baker, who was a famous explorer. Many Rhododendron and Fern bushes can be seen around the waterfall.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, tips: [{ EN: "Bring warm clothes.", SI: "උණුසුම් ඇඳුම් රැගෙන එන්න." }], hiddenEchoes: { EN: "A beautiful waterfall.", SI: "සුන්දර දිය ඇල්ලක්." }, location: "Central Highlands" },
+
+
+
+
+
+// {
+// 🤫 Keep quiet. To see wildlife, maintain a low noise level along the trail.
+// 🚫 No Drones. Drone use is strictly prohibited within the National Park.
+// 🚮 Leave No Trace. Take all your rubbish back out with you.`, SI: "බේකර්ස් ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Wear sturdy hiking shoes and bring warm layers.", SI: "ශක්තිමත් සපත්තු පළඳින්න සහ උණුසුම් ඇඳුම් රැගෙන එන්න." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
+//     nearbyAttractions: [
+//       { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
+//       { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
+//     ]
+//   },
+  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, detailedAbout: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, tips: [{ EN: "View from the main road gallery.", SI: "ප්‍රධාන මාර්ගයේ දර්ශන තලයෙන් නරඹන්න." }], hiddenEchoes: { EN: "The roar of the falls.", SI: "දිය ඇල්ලේ ගර්ජනාව." }, location: "Central Highlands" },
+// The Little Niagara of Sri Lanka — Complete Verified Guide
+//
+//
+// Fauna: Various bird species endemic to the central highlands, small mammals like the purple-faced langur, and diverse butterfly species.
+//
+// ☀️ BEST TIME TO VISIT
+// ✅ CONFIRMED Peak Flow: During the monsoon season (May to September) and immediately after heavy rains.
+// ⚠️ UNCERTAIN Dry Season: During February and March, the flow can be significantly reduced, sometimes appearing as a thin trickle due to water diversion for hydropower.
+// Best Viewing Time: Early morning (6:00 AM to 9:00 AM) for the clearest views and best lighting for photography.
+//
+// 🚗 TRAVEL INFORMATION
+// How to get there:
+// - By Train: One of the most scenic ways to see the falls is from the "Main Line" railway (Colombo to Badulla). The falls are visible between the Watagoda and Talawakele stations.
+// - By Road: Easily accessible from the A7 highway. There is a well-maintained viewing gallery (St. Clair's Viewing Gallery) located along the road.
+// - By Bus: Any bus travelling between Hatton and Talawakele or Nuwara Eliya will pass the viewing point.
+//
+// 💡 ESSENTIAL TIPS
+// 1. Viewing Point: The best public view is from the dedicated viewing gallery on the main road.
+// 2. Photography: Use a wide-angle lens to capture the full width of the falls.
+// 3. Hydration: There are several tea centers nearby (like the Mlesna Tea Castle) where you can enjoy a cup of Ceylon tea with a view.
+// 4. Respect Nature: Do not litter. The surrounding tea estates are private property; stay on public paths.
+// 5. Safety: Attempting to reach the base of the falls is difficult and can be dangerous due to slippery rocks and unpredictable water levels. It is best enjoyed from the designated viewing areas.`, SI: `` },
+// 
+// 2205: // ✅ සෑම තැනකම අවංක ලේබල් කිරීම
+// 2206: // ✅ තහවුරු කර ඇත — භූ විද්‍යාත්මක සමීක්ෂණ, රජයේ වාර්තා සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත
+// 2207: // ⭐ පුරාවෘත්තය / සම්ප්‍රදාය — සංස්කෘතික සම්ප්‍රදාය හෝ ජනප්‍රවාද, ස්වාධීනව තහවුරු කළ නොහැක
+// 2208: // ⚠️ අවිශ්වාස සහගතයි — මූලාශ්‍ර අතර සංඛ්‍යාලේඛන වෙනස් වේ හෝ විවාදයට භාජනය වේ
+// 2209: // 
+// 2210: // 📍 පිහිටීම
+// 2211: පළාත: මධ්‍යම පළාත, ශ්‍රී ලංකාව
+// 2212: දිස්ත්‍රික්කය: නුවරඑළිය දිස්ත්‍රික්කය
+// 2213: ස්ථානය: තලවාකැලේ නගරයට බටහිරින් කිලෝමීටර 3ක් පමණ දුරින්, හැටන්-තලවාකැලේ මහා මාර්ගයේ (A7)
+// 2214: මුහුදු මට්ටමේ සිට උස: මීටර් 1,198ක් පමණ
+// 2215: තලවාකැලේ සිට දුර: කිලෝමීටර 3 — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
+// 2216: හැටන් සිට දුර: කිලෝමීටර 16ක් පමණ — මාර්ගයෙන් විනාඩි 30 සිට 40 දක්වා
+// 2217: නුවරඑළිය සිට දුර: කිලෝමීටර 30ක් පමණ — මාර්ගයෙන් පැය 1ක් පමණ
+// 2218: කොළඹ සිට දුර: කිලෝමීටර 140ක් පමණ — මාර්ගයෙන් පැය 4 සිට 5 දක්වා
+// 2219: 
+// 2220: 📏 භෞතික ලක්ෂණ
+// 2221: ✅ තහවුරු කළ උස: මීටර් 80 (අඩි 260)
+// 2222: ✅ තහවුරු කළ පළල: මීටර් 50ක් පමණ (අඩි 160) — ශ්‍රී ලංකාවේ පළල්ම දිය ඇලිවලින් එකකි
+// 2223: ව්‍යුහය: කොටස් දෙකකින් යුත් දිය ඇල්ලකි ("මහා සෙන්ට් ක්ලෙයාර්" සහ "කුඩා සෙන්ට් ක්ලෙයාර්")
+// 2224: මූලාශ්‍රය: කොත්මලේ ඔය, මහවැලි ගඟේ ප්‍රධාන අතු ගංගාවකි
+// 2225: ජල ප්‍රවාහය: ඓතිහාසිකව ඉහළ අගයක් ගත්තද, ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය හේතුවෙන් සැලකිය යුතු ලෙස බලපෑමට ලක්ව ඇත
+// 2226: 
+// 2227: 🕰️ ඉතිහාසය සහ නම
+// 2228: ✅ තහවුරු කළ නමේ ආරම්භය: දිය ඇල්ල ගලා යන සෙන්ට් ක්ලෙයාර් තේ වත්ත අනුව නම් කර ඇත.
+// 2229: ✅ තහවුරු කළ "කුඩා නයගරා": එහි ආකර්ෂණීය පළල සහ ජල පරිමාව නිසා මෙම නම ලැබී ඇත.
+// 2230: ⚠️ අවිශ්වාස සහගත දේශීය පුරාවෘත්ත: සමහර දේශීය ජනප්‍රවාදවලට අනුව මෙම ප්‍රදේශය පැරණි රජවරුන්ගේ විවේකස්ථානයක් වූ බව කියැවේ.
+// 2231: 
+// 2232: 🌿 වනජීවී සහ සොබාදහම
+// 2233: */
+// 2234: පරිසරය: සශ්‍රීක තේ වතු, මූලික වශයෙන් සෙන්ට් ක්ලෙයාර් සහ ඩෙවෝන් වතු.
+// 2235: ශාක: තේ පඳුරු, යුකැලිප්ටස් ගස් සහ අවට නිම්නවල ඇති විවිධ කඳුකර වනාන්තර විශේෂ.
+// 2236: සතුන්: මධ්‍යම කඳුකරයට ආවේණික විවිධ පක්ෂි විශේෂ, දම් මුහුණැති රිළවා වැනි කුඩා ක්ෂීරපායින් සහ විවිධ සමනලුන් විශේෂ.
+// 2237: 
+// 2238: ☀️ සංචාරය කිරීමට හොඳම කාලය
+// 2239: ✅ තහවුරු කළ උපරිම ජල ප්‍රවාහය: මෝසම් කාලය තුළ (මැයි සිට සැප්තම්බර් දක්වා) සහ අධික වර්ෂාවෙන් පසුව.
+// 2240: ⚠️ අවිශ්වාස සහගත වියළි කාලය: පෙබරවාරි සහ මාර්තු මාසවලදී, ජල විදුලිය සඳහා ජලය හරවා යැවීම හේතුවෙන් ජල ප්‍රවාහය සැලකිය යුතු ලෙස අඩු විය හැකිය.
+// 2241: නැරඹීමට හොඳම කාලය: පැහැදිලි දර්ශන සහ ඡායාරූපකරණය සඳහා හොඳම ආලෝකය ලබා ගැනීමට උදෑසන (පෙ.ව. 6:00 සිට පෙ.ව. 9:00 දක්වා).
+// 2242: 
+// 2243: 🚗 සංචාරය කිරීමට තොරතුරු
+// 2244: ළඟා වන ආකාරය:
+// 2245: - දුම්රියෙන්: කොළඹ සිට බදුල්ල දක්වා දිවෙන දුම්රිය මාර්ගයේ වටගොඩ සහ තලවාකැලේ දුම්රිය ස්ථාන අතරදී මෙම දිය ඇල්ල දැකගත හැකිය.
+// 2246: - මාර්ගයෙන්: A7 මහා මාර්ගයෙන් පහසුවෙන් ළඟා විය හැකිය. මාර්ගය අසල පිහිටි සෙන්ට් ක්ලෙයාර් නැරඹුම් මැදිරියෙන් මෙය නැරඹිය හැකිය.
+// 2247: - බස් රථයෙන්: හැටන් සහ තලවාකැලේ හෝ නුවරඑළිය අතර ධාවනය වන ඕනෑම බස් රථයකින් නැරඹුම් ස්ථානයට ළඟා විය හැකිය.
+// 2248: 
+// 2249: 💡 අත්‍යවශ්‍ය උපදෙස්
+// 2250: 1. නැරඹුම් ස්ථානය: හොඳම දර්ශනය ලබා ගැනීමට ප්‍රධාන මාර්ගයේ ඇති නැරඹුම් මැදිරිය භාවිතා කරන්න.
+// 2251: 2. ඡායාරූපකරණය: දිය ඇල්ලේ සම්පූර්ණ පළල ග්‍රහණය කර ගැනීමට පුළුල් කෝණ කාචයක් (wide-angle lens) භාවිතා කරන්න.
+// 2252: 3. පානීය පහසුකම්: අවට ඇති තේ මධ්‍යස්ථානවලින් (Mlesna Tea Castle වැනි) දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳිය හැකිය.
+// 2253: 4. සොබාදහමට ගරු කරන්න: කුණු කසළ දැමීමෙන් වළකින්න. අවට ඇති තේ වතු පෞද්ගලික දේපළ බැවින් පොදු මාර්ගවල පමණක් රැඳී සිටින්න.
+
+  { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg", gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"], history: { EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Central Highlands on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.", SI: "වැවිලිකරුවෙකුගේ නම." }, shortStory: { EN: "Devon Falls - A stunning 97-metre high waterfall named after a pioneer tea planter.", SI: "ඩෙවෝන් ඇල්ල - මීටර් 97ක් උස දර්ශනීය දිය ඇල්ල." }, /* detailedAbout: { EN: `💧 DEVON FALLS 
+Veil of the Valley — Complete Verified Guide
 
 ✅ HONEST LABELLING THROUGHOUT
-✅ CONFIRMED — verified by government records, scientific surveys, and historical documentation
+✅ CONFIRMED — verified by government records, physical measurement, and historical documentation
 ⚠️ UNCERTAIN — figures vary between sources or are debated
 
 📍 LOCATION
 Province: Central Province, Sri Lanka
 District: Nuwara Eliya District
-Position: Within Horton Plains National Park — approximately 3 km from the main park entrance along the circular trail
-Elevation: approximately 2,100 to 2,200 meters above sea level
-Distance from the park entrance: 3 km along the circular trail
-Distance from World's End: approximately 2 km on the circular trail
-Distance from Nuwara Eliya: approximately 30 to 35 km — about 1 to 1.5 hours by road
-Distance from Haputale: approximately 20 km — about 45 minutes by road
-Distance from Ella: approximately 40 km — about 1.5 hours by road
-Distance from Ohiya Railway Station: approximately 13 to 14 km by road to the park entrance
+Area: Dimbula — Sri Lanka's largest tea growing region
+Position: 6 km west of Talawakele on the A7 highway between Hatton and Nuwara Eliya
+Elevation: approximately 1,140 to 1,159 meters above sea level
+Distance from Talawakele town: 6 km — about 10 to 15 minutes by road
+Distance from St. Clair's Falls: approximately 3 km east — about 5 to 10 minutes by road
+Distance from Hatton: approximately 22 km — about 35 to 40 minutes by road
+Distance from Nuwara Eliya: approximately 30 km — about 1 hour by road
+Distance from Kandy: approximately 71 to 75 km — about 2 to 2.5 hours by road
+Distance from Colombo: approximately 135 to 145 km — about 3.5 to 4 hours via the A7 highway
+Distance from Adam's Peak trailhead at Nallathanni: approximately 45 km — about 1 to 1.5 hours
+Nearest railway station: Talawakele Railway Station — 6 km east; on the Colombo–Badulla highland line
+Primary viewpoint: Dimbula viewpoint — a designated parking area on the highway directly opposite the falls
 
-🚶 ACCESS AND THE TRAIL
-The trail to Baker's Falls is part of the 10 km circular loop within Horton Plains National Park.
-Section 1 — The Plateau Walk
-From the park entrance, the trail crosses the open, windswept montane grasslands (patanas). The path is relatively flat and well-marked.
-Section 2 — The Descent to the Falls
-Approximately 3 km from the entrance (if walking clockwise), a signposted path branches off the main loop and descends steeply toward the Belihul Oya gorge.
-The descent involves a series of steep, uneven stone steps and some sections with tree roots. It can be slippery, especially after rain or in the morning mist.
-Section 3 — The Viewing Platforms
-There are two main viewing levels. The upper platform provides a view of the top of the falls, while the lower platform (reached by further steps) offers the classic face-on view of the main 20-meter drop and the pool below.
-⏱️ Duration:
-One way from park entrance to the falls: approximately 45 minutes to 1 hour.
-Descent from the main loop to the lower platform: 10 to 15 minutes.
-Total time for the full 10 km loop including Baker's Falls and World's End: 3 to 4 hours.
+💧 WHAT IS DEVON FALLS
+✅ CONFIRMED — Devon Falls — known also as the Veil of the Valley — is a 97-meter tiered waterfall situated on the A7 highway in the Dimbula area of the Nuwara Eliya District. It is ranked the 19th highest waterfall in Sri Lanka. The falls are formed by the Kotmale Oya — a major tributary of the Mahaweli River, Sri Lanka's longest river. The Kotmale Oya originates in the central highlands northwest of Adam's Peak and flows through the working tea estate landscape before descending over the Devon escarpment.
+✅ CONFIRMED — Devon Falls descends in three continuous cascading tiers — making it a tiered waterfall rather than a single free plunge. The water flows over three distinct rocky outcrops in succession, each producing its own cascade before the water continues to the next level. This three-tier structure gives Devon Falls an elongated visual profile — taller and more graceful than its 97 meters might suggest when a single-drop comparison is made.
+✅ CONFIRMED — The falls are entirely visible from the A7 highway without any hiking. Two designated viewpoints with parking facilities are positioned along the road directly opposite the falls. The principal viewpoint — at Dimbula — provides the best full-face view of all three tiers simultaneously. The accessible roadside character makes Devon Falls one of the most easily observed major waterfalls in Sri Lanka — a natural stopping point on the busiest highland highway in the country.
+✅ CONFIRMED — On sunny days, a rainbow forms in the mist spray at the base of the falls — one of the most photographed natural phenomena at any Sri Lankan waterfall. The mist is generated by the impact of the falling water on the rocks below and rises in a fine cloud that the sunlight, entering from the correct angle, refracts into a visible spectrum. This rainbow is most commonly observed in the morning when the sun angle is low and directly illuminates the spray cloud.
+✅ CONFIRMED — The Mlesna Tea Centre — one of Sri Lanka's most famous premium tea retailers — operates directly adjacent to the Devon Falls viewpoint on the opposite side of the road. This positioning is not accidental — the tea centre takes advantage of the natural stopping behaviour of road travellers at the falls. The combination of waterfall viewing and a quality cup of freshly brewed highland tea is one of the most pleasant brief stops on the entire Colombo–Nuwara Eliya route.
+
+📜 THE NAME — CONFIRMED
+✅ CONFIRMED — Devon Falls takes its name from a pioneer English coffee planter named Devon who established a coffee plantation in the vicinity during the 19th century British colonial period. This is the same naming pattern as St. Clair's Falls — both waterfalls named after the tea or coffee estate through which their water flows, both estates named after the British planter who established them. The Devon Tea Estate — successor to the original Devon coffee plantation — continues as an active tea-producing estate today. The nearby Devon Bungalow — a rest house built by British colonial authorities in 1923 — is mentioned in multiple historical accounts of the area.
+⚠️ THE PLANTER'S FULL NAME — UNCERTAIN:
+Multiple sources refer simply to the planter as Devon without providing a full name. Whether Devon was a first name, surname, or an estate nickname derived from the English county of Devon is not confirmed in available historical records. The naming connection to the planter and the estate is confirmed — the full identity of the individual is uncertain.
+
+📜 HISTORY — CONFIRMED FACTS
+☕ The Coffee and Tea Transformation — 1840s to 1880s
+✅ CONFIRMED — The Dimbula area — the highland zone surrounding Devon Falls — was one of the first regions of Sri Lanka to be extensively developed as a plantation agricultural zone by the British colonial administration. In the 1840s and 1850s, British planters discovered that the central highlands provided ideal conditions for coffee cultivation — the combination of altitude, temperature, soil type, and rainfall produced a coffee of excellent quality. Plantations were established across the hills surrounding Devon Falls and the broader Talawakele–Hatton region.
+✅ CONFIRMED — The catastrophic destruction of the Ceylon coffee industry by the coffee leaf rust fungus Hemileia vastatrix — which devastated plantations from 1869 onward and effectively eliminated the entire commercial coffee crop by the late 1870s — forced a complete transformation of the plantation economy. The same planters who had grown coffee switched to tea cultivation, transforming the landscape that surrounds Devon Falls from the brown stems of dead coffee bushes into the precise geometric green of tea estates. The tea landscape visible from the Devon Falls viewpoint today is the direct legacy of this colonial agricultural disaster and subsequent adaptation.
+✅ CONFIRMED — The Devon Tea Estate — which gives the falls their name — underwent precisely this transformation. Originally a coffee plantation, it became a tea estate following the coffee blight and has produced tea continuously from the 1870s to the present day. The falls viewed from the Dimbula viewpoint are framed on all sides by this estate's tea fields — a visual composition that is simultaneously a natural wonder and an agricultural landscape with over 150 years of continuous production history.
+⚡ The Upper Kotmale Hydropower Project — The Critical Impact
+✅ CONFIRMED — Devon Falls is one of the most significantly affected waterfalls by the Upper Kotmale Hydropower Project. This is the same project documented in the St. Clair's Falls guide above, which captures the Kotmale Oya upstream and diverts it through turbines before releasing it downstream. Devon Falls is described by one authoritative source as one of the most affected waterfalls in the entire project impact zone.
+✅ CONFIRMED — The government of Sri Lanka ordered that sufficient water be released to maintain a minimum visible flow at the affected waterfalls — including Devon Falls — specifically to preserve their tourism value. This mandated release provides a daytime flow. However, the falls at their pre-dam natural volume — described in older accounts as a roaring, powerful cascade — are no longer what visitors observe today.
+✅ CONFIRMED — St. Andrews Falls — a 50-meter waterfall in the same project impact zone — has reportedly disappeared almost entirely as a result of the Upper Kotmale project. Devon Falls, while severely affected, retains visibility through the mandated release. The long-term ecological and tourism consequences of the project for the highland waterfall landscape are significant and ongoing.
+🏰 The Devon Bungalow — 1923
+✅ CONFIRMED — A bungalow built by British colonial authorities in 1923 stands in front of Devon Falls — directly in the view from the highway. This colonial-era rest house was a stopping point for colonial officers and travellers on the highland route. Its presence in the immediate foreground of the falls view gives the site an additional layer of colonial heritage character beyond the waterfall itself.
 
 💧 THE WATERFALL — PHYSICAL DETAILS
-✅ CONFIRMED — Baker's Falls is a multi-tiered waterfall with a total height of approximately 20 meters (66 feet). It is formed by the Belihul Oya, a tributary of the Walawe River.
-✅ CONFIRMED — The falls are famous for the wide, fan-like spread of the water as it cascades over a black rock face. The surrounding vegetation is dense cloud forest, featuring endemic ferns, mosses, and rhododendrons.
-⚠️ UNCERTAIN: Some older sources list the height as 22 meters, but 20 meters is the most widely accepted modern figure.
+📐 Measurements
+✅ CONFIRMED:
+Height: 97 meters (318 feet) — confirmed by multiple independent surveys
+Sri Lanka ranking: 19th highest waterfall in the country
+Classification: tiered waterfall — three distinct cascades in succession
+Water source: a tributary of the Kotmale Oya — which is itself a tributary of the Mahaweli River
+Elevation of the falls: approximately 1,140 to 1,159 meters above sea level
+Rock type: hard metamorphic rock — part of the ancient Precambrian Highland Complex
+💧 The Three Tiers
+✅ CONFIRMED — The three-tier structure of Devon Falls is its defining physical characteristic. Each tier is visible from the Dimbula viewpoint. The water flows in sequence over three rocky outcrops — the first tier at the top produces the narrowest and most concentrated flow; the water spreads progressively on the second and third tiers. The total vertical distance covered by the three tiers combined is the confirmed 97 meters.
+⚠️ DIMENSION CONSISTENCY:
+Sources are fully consistent on the 97-meter height. They vary slightly on the elevation — citing 1,140 meters in some sources and 1,159 meters in others. This small discrepancy reflects different measurement points and does not affect the visitor experience.
+🌈 The Rainbow Effect
+✅ CONFIRMED — When sunlight at the correct angle enters the mist spray generated by Devon Falls — most commonly in the morning on clear days — a rainbow is visible in the spray cloud. This effect is frequently described by visitors and is one of the most photographed moments at the site. The optimal conditions are morning sun from the east catching the west-facing spray cloud. The rainbow is not present on overcast days or in flat afternoon light.
+💧 Seasonal Water Flow — Impact of Hydropower
+✅ CONFIRMED — Pre-dam natural flow: significantly greater than current observed flow; historical accounts describe a powerful cascade; the pre-dam falls were classified as among the most impressive in Sri Lanka
+Current mandated flow: the government-ordered minimum release maintains a visible daytime flow. The falls are not dry but are at reduced volume compared to their natural state.
+Best current conditions: October to January — the northeast monsoon brings maximum rainfall to the highland catchment; the reservoir reaches capacity; excess water beyond what the turbines can process must be released over the spillway, temporarily supplementing the minimum mandated flow with natural surplus. These overflow periods produce the most impressive Devon Falls displays available in the post-dam era.
+Worst current conditions: February to April — the driest period of the year; the minimum mandated flow is the only water visible on the falls; the cascade is narrower and less powerful than at any other time.
 
-🏛️ HISTORY AND NAMING
-✅ CONFIRMED — The waterfall is named after Sir Samuel Baker, the famous British explorer and big-game hunter who "discovered" the falls in the mid-19th century (around 1845). Baker established a farm in Nuwara Eliya and was instrumental in the early colonial development of the central highlands.
-⭐ LEGEND / TRADITION: Local tradition suggests the falls were known to indigenous people long before Baker's arrival, but his name remains the official designation.
+👁️ VIEWING AND ACCESS — CONFIRMED DETAILS
+🅿️ The Dimbula Viewpoint — Primary View
+✅ CONFIRMED — The best view of Devon Falls is from the designated viewpoint at Dimbula — a formal parking area established on the highway directly opposite the falls. From this point, all three tiers are visible simultaneously. The Devon Bungalow of 1923 is visible in the lower foreground. The surrounding tea estate frames the falls on both sides. The distance from the viewpoint to the falls face is optimal for wide-angle photography capturing the full height and tiered structure.
+✅ CONFIRMED — Two viewpoints with parking facilities are available along the road in this section — one providing a more frontal view and one a slightly different angle. Both are accessible without leaving the road environment.
+🍵 The Mlesna Tea Centre
+✅ CONFIRMED — The Mlesna Tea Centre is located directly opposite the falls viewpoint on the A7 highway — on the road side facing away from the falls. Mlesna is one of Sri Lanka's most prominent premium tea brands. The centre sells a wide range of Ceylon teas, offers tea tasting, and provides freshly brewed cups of highland tea. Stopping at the Mlesna Tea Centre and drinking a cup of tea while looking at Devon Falls from across the road is specifically described as one of the most enjoyable brief stops on the entire highland highway by multiple independent visitor accounts.
+⚠️ NOTE: The Mlesna Tea Centre is a commercial retail operation. Tea prices at branded centres are higher than at factory shops or local market stalls. If purchasing tea for quality and value, the Devon area factory shops or estate shops offer comparable or superior tea at lower prices.
+🥾 The Trail to the Base
+✅ CONFIRMED — A hiking trail leads from the road level down to the base of the falls. The trail requires approximately 1 km of walking from the highway — sources describe this as easy to moderate terrain through the estate. The path passes through tea estate land.
+⚠️ TRAIL CONDITION:
+The path is not maintained to formal tourist trail standards. It passes through working estate land. The wet clay soil of the tea estate path is notoriously slippery after rain. Proper grip shoes are essential. The base pool area has strong currents from the falling water — swimming is specifically discouraged by multiple sources due to current strength and sudden water level changes from the hydropower release schedule.
+🚂 The Train View
+✅ CONFIRMED — Devon Falls is visible from the Colombo–Badulla highland railway — the same train from which St. Clair's Falls is also visible. Passengers on the left side of the train travelling toward Badulla see Devon Falls from the train window. The view is brief but memorable — the white cascade appearing through the tea estate landscape from the moving train is one of the unexpected visual highlights of the highland rail journey.
 
-🌿 WILDLIFE AND BIODIVERSITY
-Horton Plains is a biodiversity hotspot. While at Baker's Falls, you may encounter:
-Sambar Deer: Frequently seen in the grasslands near the trail.
-Purple-faced Langur: The endemic monkey often heard or seen in the canopy of the cloud forest surrounding the falls.
-Dull-blue Flycatcher: A beautiful endemic bird often seen near the water.
-Rhino-horned Lizard: A rare endemic lizard found in the cloud forest.
-Tree Ferns and Mosses: The spray zone around the falls supports a lush growth of ancient tree ferns and thick carpets of moss.
+🌿 WILDLIFE AND ENVIRONMENT
+🦅 Birds
+The tea estate landscape and the remaining natural forest in the gorge sections support a range of highland bird species. Confirmed in the broader Dimbula–Talawakele area:
+Sri Lanka Junglefowl — the national bird; commonly seen at estate margins and forest edges along the trail to the base
+Yellow-Eared Bulbul — endemic; abundant in highland scrub and forest canopy
+Various sunbird species — visiting flowering plants in the estate
+Sri Lanka White-Eye — endemic; small, active, green birds in flocks through the canopy
+Brown-Capped Babbler — endemic; in undergrowth near the gorge
+🦋 Butterflies
+The highland butterfly fauna of the Dimbula area is diverse. Multiple species of highland endemic butterflies are present in the natural vegetation along the stream and gorge sections. The flowering plants of the tea estate margins — including wild flowers and ornamental plantings near the estate roads — attract feeding butterflies throughout the day.
+🌿 Flora
+The tea estate dominates the landscape on all sides — the precise geometric green of trimmed Camellia sinensis bushes covering every hillside. The gorge of the Kotmale Oya below the falls retains a corridor of natural highland vegetation — ferns, mosses, forest trees — sustained by the permanent moisture of the stream. The spray zone at the base of the falls supports an extraordinary density of mosses and moisture-dependent ferns — the same effect seen at Dunhinda and Baker's Falls. Rhododendron — the endemic highland species — is present on the forested slopes above the falls.
+☕ Tea — The Dominant Ecology
+The specific tea grown on the estates surrounding Devon Falls is Dimbula tea — one of Sri Lanka's four main regional tea appellations alongside Nuwara Eliya, Uva, and Sabaragamuwa. Dimbula teas are high-grown — produced at elevations above 1,200 meters — and are characterised by a brisk, bright, medium-bodied flavour with a distinctive golden colour. The elevation, rainfall pattern, and temperature profile of the Dimbula region are directly responsible for the tea's flavour profile. Devon Falls sits at the heart of this production zone.
 
 🌤️ BEST TIME TO VISIT
-6:00 AM to 10:00 AM — Best for Visibility and Wildlife
-Horton Plains is famous for its sudden mist. Arriving at the park entrance at 6:00 AM (when it opens) ensures you reach the falls and World's End before the heavy mist typically rolls in around 10:00 AM or 11:00 AM.
-January to March — The Dry Season
-The clearest skies and best trail conditions. However, the water volume of the falls may be lower.
-October to December — The Monsoon
-The falls are at their most powerful and spectacular, but the trail can be very muddy, and the risk of mist obscuring the views is much higher.
+October to January — Primary Recommendation
+The northeast monsoon brings maximum rainfall to the central highlands. The reservoir behind the Upper Kotmale dam reaches capacity during this period. Surplus water beyond turbine capacity is released over the spillway — adding to the minimum mandated flow and temporarily restoring something closer to the natural cascade volume. Devon Falls is at its most powerful and most visually impressive during and immediately following heavy rainfall in this period. November and December produce the finest conditions.
+April to June
+The first inter-monsoon and early southwest monsoon build water levels again. The falls are increasing toward fuller flow from the dry season minimum. The landscape surrounding the falls is brilliantly green and the tea estate is at its most vibrant colour.
+February and March — Driest Period
+The minimum mandated release is the only water flowing. The falls are clearly visible and structurally intact but at reduced volume. The rainbow effect on sunny mornings remains observable even at minimum flow. Worth a road stop but not the optimal window for maximum visual impact.
+Year-round from the road viewpoint: The mandated daytime release ensures the falls are never entirely dry during daylight hours. All year round the falls are visible from the Dimbula viewpoint regardless of season.
 
 🚌 GETTING THERE
-🚗 From Nuwara Eliya:
-The most common way is by hired van or tuk-tuk. The journey takes about 1 to 1.5 hours. Most visitors arrange a 5:00 AM pickup to arrive at the gate by 6:00 AM.
-🚂 By Train:
-Take the train to Ohiya Railway Station. From Ohiya, it is a 13 km (approx. 30-45 min) drive to the park entrance. Tuk-tuks are available at the station.
-🥾 Hiking from Ohiya:
-Some adventurous hikers walk from Ohiya station to the park entrance (about 3-4 hours uphill).
+🚗 By Road on the A7 Highway — All Traffic Passes the Falls:
+Devon Falls is on the A7 highway — every vehicle travelling between Hatton and Nuwara Eliya passes directly past the Dimbula viewpoint. The falls are visible from the moving vehicle before the viewpoint is reached. Stopping requires only pulling into the designated parking area — no advance planning or special effort.
+From Colombo:
+Approximately 135 to 145 km via the A7 highway through Avissawella and Hatton. Journey approximately 3.5 to 4 hours. Devon Falls is encountered on the highway approximately 22 km past Hatton.
+From Kandy:
+Approximately 71 to 75 km — 2 to 2.5 hours via Nawalapitiya. The most common approach from the cultural triangle.
+From Hatton:
+Approximately 22 km — 35 to 40 minutes on the A7. Natural combination with Adam's Peak — the Nallathanni trailhead is approximately 45 km from Devon Falls.
+From Nuwara Eliya:
+Approximately 30 km — about 1 hour westward on the A7.
+From St. Clair's Falls (3 km east):
+5 to 10 minutes by road. Devon Falls and St. Clair's Falls are the most natural single-stop combination on the highland highway — both roadside, both affected by the same hydropower project, both within 3 km of each other.
+🚂 By Train to Talawakele:
+Talawakele Railway Station — 6 km east of the falls — is on the Colombo–Badulla highland line. From Kandy to Talawakele approximately 2 hours by train. From Nanu Oya (Nuwara Eliya) approximately 30 to 40 minutes. From Talawakele station, tuk-tuks to Devon Falls cost approximately 300 to 500 LKR and take approximately 10 to 15 minutes.
+🚌 By Bus:
+Buses from Colombo, Kandy, Hatton, and Nuwara Eliya travel the A7 highway regularly. Ask the driver to stop at Devon Falls — the Dimbula viewpoint is a well-known stop on this route. The fare is standard bus pricing.
 
 🏨 WHERE TO STAY
-Nuwara Eliya (30-35 km):
-A wide range of colonial-era hotels (e.g., The Grand Hotel, St. Andrew's) and modern guesthouses.
-Haputale (20 km):
-Offers stunning views and a quieter atmosphere. Popular guesthouses like Highcliffe or Amaya View Guest House.
-Ohiya (13 km):
-Very basic guesthouses near the station for those wanting the earliest possible start.
+In Talawakele (6 km east):
+Talawakele is the most convenient base for Devon Falls. Basic local guesthouses from approximately 2,000 to 4,000 LKR per night. The town is a working plantation community — not a tourist destination in itself but practical and affordable as a base.
+In Hatton (22 km east):
+Sri Lanka Tea Trails — the finest accommodation in the broader Hatton–Dimbula region. Four restored colonial-era tea planter's bungalows in the working Bogawantalawa tea estates surrounding the same highland landscape as Devon Falls. Fully staffed, private, extraordinary historical atmosphere. Rates from approximately USD $434 per villa per night fully inclusive. The quintessential central highland accommodation experience.
+Multiple mid-range guesthouses in Hatton town at significantly lower prices — practical for visitors making Adam's Peak night climbs combined with daytime highland sightseeing.
+In Nuwara Eliya (30 km east):
+Full range from budget guesthouses to luxury colonial hotels — Grand Hotel, Jetwing St. Andrew's, Hill Club, and multiple others. All described in detail in the Horton Plains guide above.
 
 🍽️ WHERE TO EAT
-Inside the Park:
-There are NO shops or restaurants inside the park beyond the entrance area.
-Entrance Area: A small canteen sells basic snacks, tea, and coffee.
-Pack a Breakfast: Most hotels in Nuwara Eliya or Haputale will provide a "packed breakfast" for Horton Plains visitors.
-⚠️ NO PLASTIC: Horton Plains is a "No Plastic" zone. All plastic wrappers, bottles, and bags will be checked at the entrance. Use reusable containers or paper bags.
+At the Falls — The Mlesna Tea Centre:
+The finest food and drink experience directly at Devon Falls is a cup of freshly brewed Dimbula tea at the Mlesna Tea Centre opposite the viewpoint. Premium Ceylon teas brewed properly — as they should be — in the actual highland tea growing landscape. Also sells tea packaging, gifts, and snacks.
+At the Viewpoint:
+Local vendors near the parking area sell king coconuts, bottled water, biscuits, and basic snacks. A refreshment stop rather than a meal option.
+In Talawakele:
+Local rice and curry restaurants serving plantation community food at local prices. Basic, cheap, reliable. The town market has fresh produce and a bakery. Estate worker canteens near the factory areas serve good local food at very affordable prices — ask locally for current recommendations.
+At Sri Lanka Tea Trails (if staying):
+Each bungalow has its own full kitchen team producing meals from local highland produce. The food quality at Tea Trails is described by multiple visitor accounts as exceptional — homestyle highland cooking at its finest, served in the atmospheric dining rooms of 19th-century plantation bungalows.
 
 💡 ESSENTIAL TIPS — PRACTICAL ONLY
-👟 Wear sturdy hiking shoes. The steps down to the falls are uneven and often wet.
-🧥 Bring layers. Temperatures at 2,100 meters can be near freezing at 6:00 AM but warm up significantly by midday.
-💧 Stay hydrated. Bring water in a reusable (non-plastic) bottle.
-🤫 Keep quiet. To see wildlife, maintain a low noise level along the trail.
-🚫 No Drones. Drone use is strictly prohibited within the National Park.
-🚮 Leave No Trace. Take all your rubbish back out with you.`, SI: "බේකර්ස් ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Wear sturdy hiking shoes and bring warm layers.", SI: "ශක්තිමත් සපත්තු පළඳින්න සහ උණුසුම් ඇඳුම් රැගෙන එන්න." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
-    nearbyAttractions: [
-      { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
-      { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
-    ]
-  },
-  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, detailedAbout: { EN: `💧 ST. CLAIR'S FALLS — සෙන්ට් ක්ලෙයාර් ඇල්ල
-The Little Niagara of Sri Lanka — Complete Verified Guide
-
-✅ HONEST LABELLING THROUGHOUT
-✅ CONFIRMED — verified by geological surveys, government records, and physical measurement
-⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
-⚠️ UNCERTAIN — figures vary between sources or are debated
-
-📍 LOCATION
-Province: Central Province, Sri Lanka
-District: Nuwara Eliya District
-Position: Approximately 3 km west of Talawakele town, on the Hatton-Talawakele Highway (A7)
-Elevation: approximately 1,198 meters above sea level
-Distance from Talawakele: 3 km — about 5 to 10 minutes by road
-Distance from Hatton: approximately 16 km — about 30 to 40 minutes by road
-Distance from Nuwara Eliya: approximately 30 km — about 1 hour by road
-Distance from Colombo: approximately 140 km — about 4 to 5 hours by road
-
-📏 PHYSICAL CHARACTERISTICS
-✅ CONFIRMED Height: 80 meters (260 ft)
-✅ CONFIRMED Width: approximately 50 meters (160 ft) — making it one of the widest waterfalls in Sri Lanka
-Structure: Two-tier cascade (The "Greater St. Clair" and "Lesser St. Clair")
-Source: Kotmale Oya, a major tributary of the Mahaweli River
-Flow Rate: Historically high, but significantly impacted by the Upper Kotmale Hydropower Project
-
-🕰️ HISTORY & NAME
-✅ CONFIRMED Origin of Name: Named after the St. Clair Tea Estate, through which the waterfall flows.
-✅ CONFIRMED "Little Niagara": Earned this nickname due to its impressive width and volume, resembling a miniature version of the famous North American falls.
-⚠️ UNCERTAIN Local Legends: Some local folklore suggests the area was a retreat for ancient kings, though historical documentation is sparse compared to other sites like Sigiriya or Polonnaruwa.
-
-🌿 WILDLIFE & NATURE
-Surroundings: Lush tea plantations, primarily the St. Clair and Devon estates.
-Flora: Tea bushes (Camellia sinensis), eucalyptus trees, and various montane forest species in the surrounding valleys.
-Fauna: Various bird species endemic to the central highlands, small mammals like the purple-faced langur, and diverse butterfly species.
-
-☀️ BEST TIME TO VISIT
-✅ CONFIRMED Peak Flow: During the monsoon season (May to September) and immediately after heavy rains.
-⚠️ UNCERTAIN Dry Season: During February and March, the flow can be significantly reduced, sometimes appearing as a thin trickle due to water diversion for hydropower.
-Best Viewing Time: Early morning (6:00 AM to 9:00 AM) for the clearest views and best lighting for photography.
-
-🚗 TRAVEL INFORMATION
-How to get there:
-- By Train: One of the most scenic ways to see the falls is from the "Main Line" railway (Colombo to Badulla). The falls are visible between the Watagoda and Talawakele stations.
-- By Road: Easily accessible from the A7 highway. There is a well-maintained viewing gallery (St. Clair's Viewing Gallery) located along the road.
-- By Bus: Any bus travelling between Hatton and Talawakele or Nuwara Eliya will pass the viewing point.
-
-💡 ESSENTIAL TIPS
-1. Viewing Point: The best public view is from the dedicated viewing gallery on the main road.
-2. Photography: Use a wide-angle lens to capture the full width of the falls.
-3. Hydration: There are several tea centers nearby (like the Mlesna Tea Castle) where you can enjoy a cup of Ceylon tea with a view.
-4. Respect Nature: Do not litter. The surrounding tea estates are private property; stay on public paths.
-5. Safety: Attempting to reach the base of the falls is difficult and can be dangerous due to slippery rocks and unpredictable water levels. It is best enjoyed from the designated viewing areas.`, SI: `💧 සෙන්ට් ක්ලෙයාර් ඇල්ල — ST. CLAIR'S FALLS
-ලංකාවේ කුඩා නයගරා — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
+⚠️ Understand the hydropower impact. Devon Falls is one of the most significantly affected waterfalls by the Upper Kotmale Hydropower Project. The falls you will see are at reduced volume compared to their pre-dam natural state. The best conditions are during the wet season from October to January when monsoon overflow temporarily supplements the mandated minimum flow. Managing expectations honestly prevents disappointment.
+🌅 Visit in the morning for the rainbow. The rainbow in the spray cloud is visible on sunny mornings when the east-facing sunlight enters the spray at the correct angle. This is most reliably observed between approximately 8:00 AM and 10:00 AM on clear mornings. Overcast mornings and afternoon visits do not produce the rainbow effect.
+🍵 Stop at the Mlesna Tea Centre. The combination of viewing Devon Falls and drinking a properly brewed cup of Dimbula highland tea at the same stop is one of the most authentically highland Sri Lankan experiences available on the A7 highway. Allow 20 to 30 minutes for both.
+📅 Combine with St. Clair's Falls. The two falls are 3 km apart on the same road. Both are roadside viewpoints. Both are affected by the same hydropower project. Both are worth seeing. Stopping at both adds only 15 to 20 minutes to any journey on the A7 and gives a complete picture of the highland waterfall landscape of the Dimbula region.
+🚂 Position yourself on the correct train side. Travelling from Kandy toward Badulla on the highland railway, Devon Falls is visible on the left side of the train approximately between Talawakele and the previous station. St. Clair's Falls follows a few minutes later — also on the left side. Both falls are visible from the moving train for approximately 30 to 60 seconds each.
+👟 Wear grip shoes for the trail to the base. The wet clay path through the tea estate to the base of the falls is slippery after any rainfall. Proper rubber-soled shoes are essential. If it has rained in the previous 24 hours, the trail is significantly more difficult and potentially hazardous in smooth-soled footwear.
+🚫 Do not swim in the base pool. The pool below Devon Falls has strong currents from the impact of the falling water and is subject to sudden increases in flow from hydropower release schedule changes. Multiple sources specifically warn against swimming. The rocks surrounding the pool are permanently wet and slippery. Observe from a safe distance only.
+📷 The finest photography position is from the Dimbula viewpoint. The main parking viewpoint on the highway provides the best full-face view of all three tiers simultaneously with the surrounding tea estate landscape visible on both sides. This is the standard photography position for Devon Falls. Moving too close by descending the trail loses the full-tier framing that defines the falls' visual identity.
+📅 Combine Devon and St. Clair's with Adam's Peak on the same trip. Hatton — the gateway town for the Adam's Peak night climb — is only 22 km from Devon Falls. A trip combining the Nallathanni night climb to Adam's Peak with a morning stop at Devon and St. Clair's Falls covers the two most distinctive highland experiences of the Hatton region — sacred mountain and highland waterfall — in a single coherent visit.`, SI: `💧 ඩෙවෝන් ඇල්ල — DEVON FALLS
+නිම්නයේ වැස්ම — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
 
 ✅ සෑම තැනකම අවංක ලේබල් කිරීම
-✅ තහවුරු කර ඇත — භූ විද්‍යාත්මක සමීක්ෂණ, රජයේ වාර්තා සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත
-⭐ පුරාවෘත්තය / සම්ප්‍රදාය — සංස්කෘතික සම්ප්‍රදාය හෝ ජනප්‍රවාද, ස්වාධීනව තහවුරු කළ නොහැක
+✅ තහවුරු කර ඇත — රජයේ වාර්තා, භෞතික මිනුම් සහ ඓතිහාසික ලේඛන මගින් තහවුරු කර ඇත
 ⚠️ අවිශ්වාස සහගතයි — මූලාශ්‍ර අතර සංඛ්‍යාලේඛන වෙනස් වේ හෝ විවාදයට භාජනය වේ
 
 📍 පිහිටීම
 පළාත: මධ්‍යම පළාත, ශ්‍රී ලංකාව
 දිස්ත්‍රික්කය: නුවරඑළිය දිස්ත්‍රික්කය
-ස්ථානය: තලවාකැලේ නගරයට බටහිරින් කිලෝමීටර 3ක් පමණ දුරින්, හැටන්-තලවාකැලේ මහා මාර්ගයේ (A7)
-මුහුදු මට්ටමේ සිට උස: මීටර් 1,198ක් පමණ
-තලවාකැලේ සිට දුර: කිලෝමීටර 3 — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
-හැටන් සිට දුර: කිලෝමීටර 16ක් පමණ — මාර්ගයෙන් විනාඩි 30 සිට 40 දක්වා
+ප්‍රදේශය: දිඹුල — ශ්‍රී ලංකාවේ විශාලතම තේ වගා කරන ප්‍රදේශය
+ස්ථානය: තලවාකැලේ සිට කිලෝමීටර 6ක් බටහිරින්, හැටන් සහ නුවරඑළිය අතර A7 මහා මාර්ගයේ
+මුහුදු මට්ටමේ සිට උස: මීටර් 1,140 සිට 1,159 දක්වා පමණ
+තලවාකැලේ නගරයේ සිට දුර: කිලෝමීටර 6 — මාර්ගයෙන් විනාඩි 10 සිට 15 දක්වා
+සෙන්ට් ක්ලෙයාර් ඇල්ලේ සිට දුර: කිලෝමීටර 3ක් පමණ නැගෙනහිරින් — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
+හැටන් සිට දුර: කිලෝමීටර 22ක් පමණ — මාර්ගයෙන් විනාඩි 35 සිට 40 දක්වා
 නුවරඑළිය සිට දුර: කිලෝමීටර 30ක් පමණ — මාර්ගයෙන් පැය 1ක් පමණ
-කොළඹ සිට දුර: කිලෝමීටර 140ක් පමණ — මාර්ගයෙන් පැය 4 සිට 5 දක්වා
+කොළඹ සිට දුර: කිලෝමීටර 135 සිට 145 දක්වා — A7 මහා මාර්ගය හරහා පැය 3.5 සිට 4 දක්වා
+ළඟම ඇති දුම්රිය ස්ථානය: තලවාකැලේ දුම්රිය ස්ථානය — කිලෝමීටර 6ක් නැගෙනහිරින්
+ප්‍රධාන නැරඹුම් ස්ථානය: දිඹුල නැරඹුම් ස්ථානය — දිය ඇල්ලට කෙලින්ම විරුද්ධ පැත්තේ මහා මාර්ගයේ පිහිටි නැරඹුම් ස්ථානය
 
-📏 භෞතික ලක්ෂණ
-✅ තහවුරු කළ උස: මීටර් 80 (අඩි 260)
-✅ තහවුරු කළ පළල: මීටර් 50ක් පමණ (අඩි 160) — ශ්‍රී ලංකාවේ පළල්ම දිය ඇලිවලින් එකකි
-ව්‍යුහය: කොටස් දෙකකින් යුත් දිය ඇල්ලකි ("මහා සෙන්ට් ක්ලෙයාර්" සහ "කුඩා සෙන්ට් ක්ලෙයාර්")
-මූලාශ්‍රය: කොත්මලේ ඔය, මහවැලි ගඟේ ප්‍රධාන අතු ගංගාවකි
-ජල ප්‍රවාහය: ඓතිහාසිකව ඉහළ අගයක් ගත්තද, ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය හේතුවෙන් සැලකිය යුතු ලෙස බලපෑමට ලක්ව ඇත
+💧 ඩෙවෝන් ඇල්ල යනු කුමක්ද?
+✅ තහවුරු කර ඇත — 'නිම්නයේ වැස්ම' ලෙසද හැඳින්වෙන ඩෙවෝන් ඇල්ල, නුවරඑළිය දිස්ත්‍රික්කයේ දිඹුල ප්‍රදේශයේ A7 මහා මාර්ගයේ පිහිටි මීටර් 97ක් උසැති දිය ඇල්ලකි. එය ශ්‍රී ලංකාවේ 19 වැනි උසම දිය ඇල්ල ලෙස සැලකේ. මෙම දිය ඇල්ල නිර්මාණය වන්නේ මහවැලි ගඟේ ප්‍රධාන අතු ගංගාවක් වන කොත්මලේ ඔයෙනි.
+✅ තහවුරු කර ඇත — ඩෙවෝන් ඇල්ල අඛණ්ඩව ගලා යන ස්ථර තුනකින් සමන්විත වේ. ජලය එකිනෙකට වෙනස් පාෂාණමය ස්ථර තුනක් මතින් ගලා යන අතර, මෙම ස්ථර තුන නිසා දිය ඇල්ලට ඉතා ආකර්ෂණීය පෙනුමක් ලැබී ඇත.
+✅ තහවුරු කර ඇත — කිසිදු පයින් ගමනකින් තොරව A7 මහා මාර්ගයේ සිටම මෙම දිය ඇල්ල සම්පූර්ණයෙන්ම දැකගත හැකිය. මහා මාර්ගය අසල පිහිටි නැරඹුම් ස්ථාන දෙකකින් මෙය නැරඹිය හැකිය.
+✅ තහවුරු කර ඇත — අව්ව සහිත දිනවලදී, දිය ඇල්ලේ පාමුල ඇති මීදුම අතරින් දේදුන්නක් නිර්මාණය වේ. මෙය උදෑසන කාලයේදී වඩාත් පැහැදිලිව දැකගත හැකිය.
+✅ තහවුරු කර ඇත — ප්‍රසිද්ධ 'එම්ලෙස්නා තේ මධ්‍යස්ථානය' (Mlesna Tea Centre) මෙම නැරඹුම් ස්ථානයට කෙලින්ම විරුද්ධ පැත්තේ පිහිටා ඇත. දිය ඇල්ල නරඹන අතරතුර නැවුම් තේ කෝප්පයක් රස විඳීමට මෙය කදිම ස්ථානයකි.
 
-🕰️ ඉතිහාසය සහ නම
-✅ තහවුරු කළ නමේ ආරම්භය: දිය ඇල්ල ගලා යන සෙන්ට් ක්ලෙයාර් තේ වත්ත අනුව නම් කර ඇත.
-✅ තහවුරු කළ "කුඩා නයගරා": එහි ආකර්ෂණීය පළල සහ ජල පරිමාව නිසා මෙම නම ලැබී ඇත.
-⚠️ අවිශ්වාස සහගත දේශීය පුරාවෘත්ත: සමහර දේශීය ජනප්‍රවාදවලට අනුව මෙම ප්‍රදේශය පැරණි රජවරුන්ගේ විවේකස්ථානයක් වූ බව කියැවේ.
+📜 නම — තහවුරු කර ඇත
+✅ තහවුරු කර ඇත — 19 වැනි සියවසේ බ්‍රිතාන්‍ය යටත් විජිත සමයේදී මෙම ප්‍රදේශයේ කෝපි වගාව ආරම්භ කළ බ්‍රිතාන්‍ය ජාතික 'ඩෙවෝන්' (Devon) නමැති වැවිලිකරුවෙකුගේ නම අනුව මෙම දිය ඇල්ල නම් කර ඇත. ඩෙවෝන් තේ වත්ත අදටත් ක්‍රියාකාරී තේ වත්තක් ලෙස පවතී.
 
-🌿 වනජීවී සහ සොබාදහම
-පරිසරය: සශ්‍රීක තේ වතු, මූලික වශයෙන් සෙන්ට් ක්ලෙයාර් සහ ඩෙවෝන් වතු.
-ශාක: තේ පඳුරු, යුකැලිප්ටස් ගස් සහ අවට නිම්නවල ඇති විවිධ කඳුකර වනාන්තර විශේෂ.
-සතුන්: මධ්‍යම කඳුකරයට ආවේණික විවිධ පක්ෂි විශේෂ, දම් මුහුණැති රිළවා වැනි කුඩා ක්ෂීරපායින් සහ විවිධ සමනලුන් විශේෂ.
+📜 ඉතිහාසය — තහවුරු කළ කරුණු
+☕ කෝපි සහ තේ පරිවර්තනය — 1840 සිට 1880 දක්වා
+✅ තහවුරු කර ඇත — දිඹුල ප්‍රදේශය බ්‍රිතාන්‍යයන් විසින් මුලින්ම කෝපි වගාව සඳහා සංවර්ධනය කරන ලද ප්‍රදේශයකි. පසුව කෝපි වගාව විනාශ වීමත් සමඟ ඔවුන් තේ වගාවට යොමු විය. අද අප දකින මෙම සුන්දර තේ වතු යාය එම ඉතිහාසයේ ප්‍රතිඵලයකි.
+⚡ ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය — තීරණාත්මක බලපෑම
+✅ තහවුරු කර ඇත — ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය නිසා ඩෙවෝන් ඇල්ලට සැලකිය යුතු බලපෑමක් එල්ල වී ඇත. රජයේ නියෝගය පරිදි දිය ඇල්ලේ සුන්දරත්වය රැක ගැනීම සඳහා අවම ජල ප්‍රමාණයක් මුදා හැරේ. කෙසේ වෙතත්, පෙර තිබූ ප්‍රබල ජල ප්‍රවාහය අද දැකගත නොහැක.
+🏰 ඩෙවෝන් බංගලාව — 1923
+✅ තහවුරු කර ඇත — 1923 දී බ්‍රිතාන්‍ය යටත් විජිත බලධාරීන් විසින් ඉදිකරන ලද බංගලාවක් ඩෙවෝන් ඇල්ල ඉදිරිපිට, මහා මාර්ගයට පෙනෙන පරිදි පිහිටා ඇත. මෙම යටත් විජිත යුගයේ විවේකාගාරය එකල නිලධාරීන්ගේ සහ සංචාරකයින්ගේ ප්‍රධාන නැවතුම්පොළක් විය.
+
+💧 දිය ඇල්ල — භෞතික විස්තර
+📐 මිනුම්
+✅ තහවුරු කර ඇත:
+උස: මීටර් 97 (අඩි 318)
+ශ්‍රී ලංකාවේ ශ්‍රේණිගත කිරීම: 19 වැනි උසම දිය ඇල්ල
+වර්ගීකරණය: ස්ථර තුනකින් යුත් දිය ඇල්ලකි
+ජල මූලාශ්‍රය: කොත්මලේ ඔයේ අතු ගංගාවකි (මහවැලි ගඟේ අතු ගංගාවකි)
+මුහුදු මට්ටමේ සිට උස: මීටර් 1,140 සිට 1,159 දක්වා පමණ
+
+💧 ස්ථර තුන
+✅ තහවුරු කර ඇත — ඩෙවෝන් ඇල්ලේ ප්‍රධානතම ලක්ෂණය වන්නේ එහි ඇති ස්ථර තුනයි. දිඹුල නැරඹුම් ස්ථානයේ සිට මෙම ස්ථර තුනම පැහැදිලිව දැකගත හැකිය. ඉහළම ස්ථරය පටු ජල ප්‍රවාහයකින් ආරම්භ වන අතර, පහළට ගලා ඒමේදී එය ක්‍රමයෙන් පළල් වේ.
+
+🌈 දේදුනු බලපෑම
+✅ තහවුරු කර ඇත — පැහැදිලි දිනවල උදෑසන කාලයේදී දිය ඇල්ලෙන් විහිදෙන මීදුම අතරින් දේදුන්නක් දැකගත හැකිය. මෙය ඡායාරූප ශිල්පීන්ගේ විශේෂ ආකර්ෂණයට ලක්වන අවස්ථාවකි.
+
+💧 සෘතුමය ජල ප්‍රවාහය — ජල විදුලි බලපෑම
+✅ තහවුරු කර ඇත — වේල්ල ඉදිකිරීමට පෙර මෙය ඉතා ප්‍රබල දිය ඇල්ලක් ලෙස පැවතිණි. දැනට පවතින රජයේ නියෝගය පරිදි දහවල් කාලයේදී දිය ඇල්ල නැරඹීමට හැකි වන පරිදි අවම ජල ප්‍රමාණයක් මුදා හැරේ. ඔක්තෝබර් සිට ජනවාරි දක්වා කාලය තුළ අධික වර්ෂාව ලැබෙන බැවින් දිය ඇල්ලේ උපරිම සුන්දරත්වය දැකගත හැකිය. පෙබරවාරි සිට අප්‍රේල් දක්වා කාලය වියළි බැවින් ජල ප්‍රවාහය අවම වේ.
 
 ☀️ සංචාරය කිරීමට හොඳම කාලය
-✅ තහවුරු කළ උපරිම ජල ප්‍රවාහය: මෝසම් කාලය තුළ (මැයි සිට සැප්තම්බර් දක්වා) සහ අධික වර්ෂාවෙන් පසුව.
-⚠️ අවිශ්වාස සහගත වියළි කාලය: පෙබරවාරි සහ මාර්තු මාසවලදී, ජල විදුලිය සඳහා ජලය හරවා යැවීම හේතුවෙන් ජල ප්‍රවාහය සැලකිය යුතු ලෙස අඩු විය හැකිය.
-නැරඹීමට හොඳම කාලය: පැහැදිලි දර්ශන සහ ඡායාරූපකරණය සඳහා හොඳම ආලෝකය ලබා ගැනීමට උදෑසන (පෙ.ව. 6:00 සිට පෙ.ව. 9:00 දක්වා).
+ඔක්තෝබර් සිට ජනවාරි දක්වා — ප්‍රධාන නිර්දේශය
+මෝසම් වැසි නිසා මෙම කාලයේදී දිය ඇල්ලේ උපරිම ජල ප්‍රවාහයක් දැකගත හැකිය. නොවැම්බර් සහ දෙසැම්බර් මාස වඩාත් සුදුසු වේ.
+පෙබරවාරි සහ මාර්තු — වියළි කාලය
+මෙම කාලයේදී ජල ප්‍රවාහය අවම මට්ටමක පවතී. නමුත් අව්ව සහිත උදෑසන කාලයේදී දේදුන්න දැකගැනීමේ වැඩි අවස්ථාවක් ඇත.
 
-🚗 සංචාරය කිරීමට තොරතුරු
-ළඟා වන ආකාරය:
-- දුම්රියෙන්: කොළඹ සිට බදුල්ල දක්වා දිවෙන දුම්රිය මාර්ගයේ වටගොඩ සහ තලවාකැලේ දුම්රිය ස්ථාන අතරදී මෙම දිය ඇල්ල දැකගත හැකිය.
-- මාර්ගයෙන්: A7 මහා මාර්ගයෙන් පහසුවෙන් ළඟා විය හැකිය. මාර්ගය අසල පිහිටි සෙන්ට් ක්ලෙයාර් නැරඹුම් මැදිරියෙන් මෙය නැරඹිය හැකිය.
-- බස් රථයෙන්: හැටන් සහ තලවාකැලේ හෝ නුවරඑළිය අතර ධාවනය වන ඕනෑම බස් රථයකින් නැරඹුම් ස්ථානයට ළඟා විය හැකිය.
+🚗 ළඟා වන ආකාරය
+- මාර්ගයෙන්: හැටන් සහ නුවරඑළිය අතර A7 මහා මාර්ගයේ ගමන් කරන ඕනෑම වාහනයකට මෙම දිය ඇල්ල දැකගත හැකිය.
+- දුම්රියෙන්: කොළඹ සිට බදුල්ල දක්වා දිවෙන දුම්රිය මාර්ගයේදී තලවාකැලේ දුම්රිය ස්ථානය අසලදී මෙය දැකගත හැකිය.
 
 💡 අත්‍යවශ්‍ය උපදෙස්
-1. නැරඹුම් ස්ථානය: හොඳම දර්ශනය ලබා ගැනීමට ප්‍රධාන මාර්ගයේ ඇති නැරඹුම් මැදිරිය භාවිතා කරන්න.
-2. ඡායාරූපකරණය: දිය ඇල්ලේ සම්පූර්ණ පළල ග්‍රහණය කර ගැනීමට පුළුල් කෝණ කාචයක් (wide-angle lens) භාවිතා කරන්න.
-3. පානීය පහසුකම්: අවට ඇති තේ මධ්‍යස්ථානවලින් (Mlesna Tea Castle වැනි) දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳිය හැකිය.
-4. සොබාදහමට ගරු කරන්න: කුණු කසළ දැමීමෙන් වළකින්න. අවට ඇති තේ වතු පෞද්ගලික දේපළ බැවින් පොදු මාර්ගවල පමණක් රැඳී සිටින්න.
-5. ආරක්ෂාව: දිය ඇල්ලේ පාමුලට යාමට උත්සාහ කිරීම දුෂ්කර හා භයානක විය හැකිය. එබැවින් නම් කරන ලද නැරඹුම් ස්ථානවල සිට එය නැරඹීම වඩාත් සුදුසුය.` }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Central Highlands", coordinates: { x: 52, y: 64 },
-    nearbyAttractions: [
-      { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" }
-    ]
-  },
-  { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg", gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"], history: { EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Central Highlands on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.", SI: "වැවිලිකරුවෙකුගේ නම." }, shortStory: { EN: "Devon Falls - A stunning 97-metre high waterfall named after a pioneer tea planter.", SI: "ඩෙවෝන් ඇල්ල - මීටර් 97ක් උස දර්ශනීය දිය ඇල්ල." }, tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Central Highlands", coordinates: { x: 50, y: 64 },
+1. උදෑසන කාලයේදී පැමිණෙන්න: දේදුන්න දැකගැනීමට උදෑසන 8:00 සිට 10:00 දක්වා කාලය වඩාත් සුදුසුය.
+2. එම්ලෙස්නා තේ මධ්‍යස්ථානය: දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳීමට අමතක නොකරන්න.
+3. සෙන්ට් ක්ලෙයාර් ඇල්ල සමඟ ඒකාබද්ධ කරන්න: මෙම දිය ඇලි දෙකම එකම මාර්ගයේ කිලෝමීටර 3ක් ඇතුළත පිහිටා ඇත.
+4. ආරක්ෂාව: දිය ඇල්ලේ පාමුල පිහිනීමෙන් වළකින්න. එහි ජල ප්‍රවාහය ඉතා ප්‍රබල සහ අනතුරුදායක විය හැකිය.` }, */ tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Central Highlands", coordinates: { x: 50, y: 64 },
     nearbyAttractions: [
       { id: "stclair's", name: { EN: "St. Clair's Falls", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල" }, image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg" }
     ]
   },
-  { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg", gallery: ["https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg"], history: { EN: "Bopath Ella is a waterfall situated in the Ratnapura District of Sri Lanka. It has a shape very similar to the leaf of the Sacred Fig or 'Bo' tree, which has earned it this name. The waterfall is a major tourist attraction in the country. The falls are formed by the Kuru Ganga, which is a tributary of the Kalu Ganga.", SI: "බෝ පතක හැඩය." }, shortStory: { EN: "Bopath Ella - A unique waterfall shaped like a Bo leaf, a major tourist attraction.", SI: "බෝපත් ඇල්ල - බෝ පතක හැඩය ගත් ප්‍රධාන සංචාරක ආකර්ෂණයක් වන දිය ඇල්ල." }, tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." }, location: "Ratnapura", coordinates: { x: 42, y: 76 },
+  { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg", gallery: ["https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg"], history: { EN: "Bopath Ella is a waterfall situated in the Ratnapura District of Sri Lanka. It has a shape very similar to the leaf of the Sacred Fig or 'Bo' tree, which has earned it this name. The waterfall is a major tourist attraction in the country. The falls are formed by the Kuru Ganga, which is a tributary of the Kalu Ganga.", SI: "බෝ පතක හැඩය." }, shortStory: { EN: "Bopath Ella - A unique waterfall shaped like a Bo leaf, a major tourist attraction.", SI: "බෝපත් ඇල්ල - බෝ පතක හැඩය ගත් ප්‍රධාන සංචාරක ආකර්ෂණයක් වන දිය ඇල්ල." }, // detailedAbout: { ... },
+    tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." }, location: "Ratnapura", coordinates: { x: 42, y: 76 },
     nearbyAttractions: [
       { id: "sinharaja", name: { EN: "Sinharaja Rainforest", SI: "සිංහරාජ වැසි වනාන්තරය" }, image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg" },
       { id: "udawalawe", name: { EN: "Udawalawe National Park", SI: "උඩවලව ජාතික වනෝද්‍යානය" }, image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg" },
@@ -2472,14 +2494,208 @@ How to get there:
       { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
-  { id: "aberdeen", name: { EN: "Aberdeen", SI: "ඇබර්ඩීන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg", gallery: ["https://i.pinimg.com/736x/fd/6b/36/fd6b3609c401c2f7e13de0b5b03b94fa.jpg"], history: { EN: "Aberdeen Falls is a 98 m (322 ft) high waterfall on the Kehelgamu Oya near Ginigathena, in the Central Highlands of Sri Lanka. Aberdeen is named after Aberdeen, the third largest city in Scotland and the capital of Aberdeenshire. The waterfall is ranked as the 18th highest in the Island.", SI: "ස්කොට්ලන්ත නම." }, shortStory: { EN: "Aberdeen Falls - A 98-metre high waterfall named after the Scottish city of Aberdeen.", SI: "ඇබර්ඩීන් ඇල්ල - මීටර් 98ක් උස දර්ශනීය දිය ඇල්ල." }, tips: [{ EN: "The walk is a bit hard.", SI: "ගමන මදක් දුෂ්කරයි." }], hiddenEchoes: { EN: "A deep pool at the bottom.", SI: "ගැඹුරු විල." }, location: "Central Highlands", coordinates: { x: 46, y: 72 },
-    nearbyAttractions: [
-      { id: "laxapana", name: { EN: "Laxapana Falls", SI: "ලක්ෂපාන ඇල්ල" }, image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg" },
-      { id: "kitulgala", name: { EN: "Kitulgala", SI: "කිතුල්ගල" }, image: "https://i.pinimg.com/1200x/4e/29/29/4e2929ee8842aac82e8cbb66db6dc9b9.jpg" }
-    ]
-  },
 
   // --- CAMPING (10) ---
+  {
+    id: "knuckles",
+    name: { EN: "Knuckles Mountain Range", SI: "නකල්ස් කඳු පන්තිය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg",
+    gallery: ["https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg"],
+    history: {
+      EN: "The Knuckles Mountain Range is a UNESCO World Heritage site known for its stunning landscapes and rich biodiversity. It offers excellent camping opportunities for nature lovers.",
+      SI: "නකල්ස් කඳු පන්තිය යුනෙස්කෝ ලෝක උරුමයක් වන අතර එය එහි සුන්දර භූ දර්ශන සහ ජෛව විවිධත්වය සඳහා ප්‍රසිද්ධය."
+    },
+    shortStory: {
+      EN: "Knuckles - A paradise for campers and hikers.",
+      SI: "නකල්ස් - කඳවුරු බැඳීමට සහ කඳු නැගීමට කදිම ස්ථානයක්."
+    },
+    tips: [{ EN: "Bring warm clothes.", SI: "උණුසුම් ඇඳුම් රැගෙන එන්න." }],
+    hiddenEchoes: { EN: "Mist-laden trails.", SI: "මීදුමෙන් පිරි මංපෙත්." },
+    location: "Central Highlands",
+    coordinates: { x: 56, y: 52 },
+    nearbyAttractions: []
+  },
+  {
+    id: "udawalawe",
+    name: { EN: "Udawalawe National Park", SI: "උඩවලව ජාතික වනෝද්‍යානය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg",
+    gallery: ["https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg"],
+    history: {
+      EN: "Udawalawe is famous for its elephant population and offers unique camping experiences near the reservoir.",
+      SI: "උඩවලව අලි ඇතුන් සඳහා ප්‍රසිද්ධ වන අතර ජලාශය අසල කඳවුරු බැඳීමේ අද්විතීය අත්දැකීම් ලබා දෙයි."
+    },
+    shortStory: {
+      EN: "Udawalawe - Camp with the elephants.",
+      SI: "උඩවලව - අලි ඇතුන් සමඟ කඳවුරු බැඳීම."
+    },
+    tips: [{ EN: "Keep a safe distance from elephants.", SI: "අලි ඇතුන්ගෙන් ආරක්ෂිත දුරක් තබා ගන්න." }],
+    hiddenEchoes: { EN: "Elephant calls at night.", SI: "රාත්‍රියේ ඇසෙන අලි ඇතුන්ගේ හඬ." },
+    location: "Southern Province",
+    coordinates: { x: 45, y: 80 },
+    nearbyAttractions: []
+  },
+  {
+    id: "yala-camping",
+    name: { EN: "Yala National Park (Camping)", SI: "යාල ජාතික වනෝද්‍යානය (කඳවුරු බැඳීම)" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg",
+    gallery: ["https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg"],
+    history: {
+      EN: "Yala is Sri Lanka's most popular national park, known for its high leopard density and diverse wildlife. Camping in Yala offers an immersive wildlife experience.",
+      SI: "යාල ශ්‍රී ලංකාවේ ජනප්‍රියම ජාතික වනෝද්‍යානය වන අතර එය දිවියන් සහ විවිධ වන සතුන් සඳහා ප්‍රසිද්ධය."
+    },
+    shortStory: {
+      EN: "Yala - Experience the wild.",
+      SI: "යාල - වන සතුන්ගේ ලෝකය අත්විඳින්න."
+    },
+    tips: [{ EN: "Follow the guide's instructions.", SI: "මාර්ගෝපදේශකයාගේ උපදෙස් පිළිපදින්න." }],
+    hiddenEchoes: { EN: "Leopard whispers in the dark.", SI: "අඳුරේ දිවියන්ගේ රහස්." },
+    location: "Southern Province",
+    coordinates: { x: 60, y: 85 },
+    nearbyAttractions: []
+  },
+  {
+    id: "horton-plains",
+    name: { EN: "Horton Plains National Park", SI: "හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg",
+    gallery: ["https://i.pinimg.com/1200x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg"],
+    history: {
+      EN: "Horton Plains is a high-altitude plateau known for its unique cloud forests and grasslands. It offers scenic camping spots.",
+      SI: "හෝර්ටන් තැන්න යනු උස් සානුවක් වන අතර එය එහි අද්විතීය වලාකුළු වනාන්තර සහ තණබිම් සඳහා ප්‍රසිද්ධය."
+    },
+    shortStory: {
+      EN: "Horton Plains - A misty highland escape.",
+      SI: "හෝර්ටන් තැන්න - මීදුමෙන් පිරි කඳුකර ගමනක්."
+    },
+    tips: [{ EN: "Be prepared for cold weather.", SI: "සීතල කාලගුණය සඳහා සූදානම් වන්න." }],
+    hiddenEchoes: { EN: "Whispers of the cloud forest.", SI: "වලාකුළු වනාන්තරයේ රහස්." },
+    location: "Central Highlands",
+    coordinates: { x: 50, y: 60 },
+    nearbyAttractions: []
+  },
+  {
+    id: "belihuloya",
+    name: { EN: "Belihuloya", SI: "බෙලිහුල්ඔය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg",
+    gallery: ["https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg"],
+    history: {
+      EN: "Belihuloya is a scenic village in the hill country, perfect for camping by the river.",
+      SI: "බෙලිහුල්ඔය යනු කඳුකරයේ පිහිටි දර්ශනීය ගම්මානයක් වන අතර එය ගංගාව අසල කඳවුරු බැඳීමට සුදුසුය."
+    },
+    shortStory: {
+      EN: "Belihuloya - Relax by the river.",
+      SI: "බෙලිහුල්ඔය - ගංගාව අසල විවේක ගන්න."
+    },
+    tips: [{ EN: "Enjoy a dip in the river.", SI: "ගංගාවේ දිය නෑමට විනෝද වන්න." }],
+    hiddenEchoes: { EN: "River murmurs.", SI: "ගංගාවේ රහස්." },
+    location: "Central Highlands",
+    coordinates: { x: 45, y: 70 },
+    nearbyAttractions: []
+  },
+  {
+    id: "kithulgala",
+    name: { EN: "Kithulgala", SI: "කිතුල්ගල" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg",
+    gallery: ["https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg"],
+    history: {
+      EN: "Kithulgala is famous for adventure sports like white water rafting and offers great camping spots along the Kelani River.",
+      SI: "කිතුල්ගල සුදු ජල ඔරු පැදීම වැනි වික්‍රමාන්විත ක්‍රීඩා සඳහා ප්‍රසිද්ධ වන අතර එය කැළණි ගඟ දිගේ කඳවුරු බැඳීමට සුදුසු ස්ථාන ලබා දෙයි."
+    },
+    shortStory: {
+      EN: "Kithulgala - Adventure awaits.",
+      SI: "කිතුල්ගල - වික්‍රමාන්විත ගමනක්."
+    },
+    tips: [{ EN: "Try white water rafting.", SI: "සුදු ජල ඔරු පැදීමට උත්සාහ කරන්න." }],
+    hiddenEchoes: { EN: "Echoes of the rapids.", SI: "දිය පහරේ රහස්." },
+    location: "Western Province",
+    coordinates: { x: 40, y: 60 },
+    nearbyAttractions: []
+  },
+  {
+    id: "ella",
+    name: { EN: "Ella", SI: "ඇල්ල" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg",
+    gallery: ["https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg"],
+    history: {
+      EN: "Ella is a popular hill station with stunning views, perfect for camping with a view.",
+      SI: "ඇල්ල යනු දර්ශනීය දසුන් සහිත ජනප්‍රිය කඳුකර නගරයක් වන අතර එය දර්ශනීය කඳවුරු බැඳීම සඳහා සුදුසුය."
+    },
+    shortStory: {
+      EN: "Ella - Views to remember.",
+      SI: "ඇල්ල - මතකයේ රැඳෙන දසුන්."
+    },
+    tips: [{ EN: "Hike to Little Adam's Peak.", SI: "කුඩා ශ්‍රී පාද කන්ද තරණය කරන්න." }],
+    hiddenEchoes: { EN: "Mountain whispers.", SI: "කඳුකරයේ රහස්." },
+    location: "Central Highlands",
+    coordinates: { x: 55, y: 65 },
+    nearbyAttractions: []
+  },
+  {
+    id: "nuwara-eliya",
+    name: { EN: "Nuwara Eliya", SI: "නුවරඑළිය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg",
+    gallery: ["https://i.pinimg.com/1200x/59/90/2a/59902a787d6a8c484b8d014234ef36d4.jpg"],
+    history: {
+      EN: "Nuwara Eliya is known as 'Little England' and offers cool weather, perfect for camping.",
+      SI: "නුවරඑළිය 'කුඩා එංගලන්තය' ලෙස හැඳින්වෙන අතර එය කඳවුරු බැඳීමට සුදුසු සිසිල් කාලගුණයක් ලබා දෙයි."
+    },
+    shortStory: {
+      EN: "Nuwara Eliya - Cool and refreshing.",
+      SI: "නුවරඑළිය - සිසිල් සහ ප්‍රබෝධමත්."
+    },
+    tips: [{ EN: "Visit Gregory Lake.", SI: "ග්‍රෙගරි වැව නැරඹීමට යන්න." }],
+    hiddenEchoes: { EN: "Cold breeze stories.", SI: "සීතල සුළඟේ කතා." },
+    location: "Central Highlands",
+    coordinates: { x: 52, y: 62 },
+    nearbyAttractions: []
+  },
+  {
+    id: "wilpattu",
+    name: { EN: "Wilpattu National Park", SI: "විල්පත්තු ජාතික වනෝද්‍යානය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg",
+    gallery: ["https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg"],
+    history: {
+      EN: "Wilpattu is known for its natural lakes (villus) and diverse wildlife, offering a peaceful camping experience.",
+      SI: "විල්පත්තු එහි ස්වාභාවික විල් (විල්ලු) සහ විවිධ වන සතුන් සඳහා ප්‍රසිද්ධය."
+    },
+    shortStory: {
+      EN: "Wilpattu - Peaceful wilderness.",
+      SI: "විල්පත්තු - සාමකාමී වනපෙත."
+    },
+    tips: [{ EN: "Look for leopards.", SI: "දිවියන් සොයා බලන්න." }],
+    hiddenEchoes: { EN: "Lake whispers.", SI: "විල්වල රහස්." },
+    location: "North Western Province",
+    coordinates: { x: 35, y: 25 },
+    nearbyAttractions: []
+  },
+  {
+    id: "wasgamuwa",
+    name: { EN: "Wasgamuwa National Park", SI: "වාසගමුව ජාතික වනෝද්‍යානය" },
+    category: "camping",
+    image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg",
+    gallery: ["https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg"],
+    history: {
+      EN: "Wasgamuwa is a remote national park, perfect for those seeking a quiet camping experience in the wild.",
+      SI: "වාසගමුව යනු වනගතව සාමකාමී කඳවුරු බැඳීමේ අත්දැකීමක් සොයන අය සඳහා සුදුසු දුරස්ථ ජාතික වනෝද්‍යානයකි."
+    },
+    shortStory: {
+      EN: "Wasgamuwa - Remote and wild.",
+      SI: "වාසගමුව - දුරස්ථ සහ වනගත."
+    },
+    tips: [{ EN: "Enjoy the quietness.", SI: "නිශ්ශබ්දතාවය විඳගන්න." }],
+    hiddenEchoes: { EN: "Wilderness secrets.", SI: "වනපෙතේ රහස්." },
+    location: "Central Province",
+    coordinates: { x: 55, y: 35 },
+    nearbyAttractions: []
+  },
 ];
 
 export const DESTINATIONS_DATA: Destination[] = BASE_DESTINATIONS.map(dest => ({

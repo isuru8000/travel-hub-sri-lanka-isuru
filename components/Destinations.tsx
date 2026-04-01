@@ -282,7 +282,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                 onChange={(e) => setLocationFilter(e.target.value)} 
                 className="appearance-none w-full pl-6 pr-10 py-2 md:py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
               >
-                <option value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
+                <option key="all" value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
                 {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc} className="bg-white">{loc}</option>)}
               </select>
               <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5A5A40] pointer-events-none" />

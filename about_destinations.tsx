@@ -646,6 +646,29 @@ Built by **King Parakramabahu I** (1153–1186 AD). It was one of the most promi
 
 මෙය 12 වන සියවසේදී **පළමුවන පරාක්‍රමබාහු රජු** විසින් කරවන ලදී. පොළොන්නරුව යුගයේ පැවති විශාලතම සහ වැදගත්ම ආගමික මධ්‍යස්ථානයක් ලෙස මෙය සැලකේ.`
   },
+  knuckles: {
+    EN: `### ⛰️ KNUCKLES MOUNTAIN RANGE — නකල්ස් කඳු පන්තිය
+
+#### 📍 LOCATION
+
+The Knuckles Mountain Range lies in central Sri Lanka, in the Districts of Matale and Kandy. The range takes its name from a series of recumbent folds and peaks in the west of the massif which resemble the knuckles of a clenched fist when viewed from certain locations in the Kandy District. Whilst this name was assigned by early British surveyors, the Sinhalese residents have traditionally referred to the area as Dumbara Kanduvetiya meaning Mist-laden Mountain Range.
+
+#### 🌿 WHAT IS KNUCKLES?
+
+The Knuckles Mountain Range is a UNESCO World Heritage Site and a major biodiversity hotspot. It is a rugged, mist-laden range with diverse flora, fauna, and challenging hiking trails. The area is home to unique ecosystems, including cloud forests, grasslands, and montane forests, supporting many endemic species of plants and animals.
+
+#### 🧗 HIKING & ACTIVITIES
+
+The range offers some of the best hiking in Sri Lanka, with trails ranging from easy walks to challenging climbs. Popular trails include the hike to the Knuckles peaks, Mini World's End, and trails leading to remote villages like Meemure.
+
+#### 💡 ESSENTIAL TIPS
+
+-   **Hire a guide:** The trails are often not well-marked and the weather can change rapidly. Hiring a local guide is highly recommended for safety and to learn about the area's biodiversity.
+-   **Prepare for weather:** The range is known for its mist and unpredictable weather. Bring rain gear and warm clothing.
+-   **Respect nature:** This is a sensitive ecosystem. Follow "leave no trace" principles.
+-   **Permits:** Some areas may require permits. Check with local authorities before planning your hike.`,
+    SI: "නකල්ස් කඳු පන්තිය මධ්‍යම ශ්‍රී ලංකාවේ මාතලේ සහ මහනුවර දිස්ත්‍රික්කවල පිහිටා ඇත. බ්‍රිතාන්‍ය සමීක්ෂකයන් විසින් මෙයට 'නකල්ස්' (මිට මොළවන ලද අතක ඇඟිලි පුරුක්) ලෙස නම් තැබුවද, දේශීය ජනතාව මෙය 'දුම්බර කඳුකරය' ලෙස හඳුන්වයි. මෙය යුනෙස්කෝ ලෝක උරුමයක් වන අතර ජෛව විවිධත්වයෙන් පොහොසත් මීදුමෙන් වැසුණු කඳු පන්තියකි. මෙහි විවිධ ශාක හා සත්ව විශේෂයන් දැකගත හැකි අතර කඳු නැගීම සඳහා ඉතා සුදුසු ස්ථානයකි."
+  },
   "galle-fort": { 
     EN: `### 🏰 GALLE FORT — ගාලු කොටුව
 
@@ -2354,6 +2377,28 @@ March to May is the most recommended period for strong water flow and manageable
 -   තනිවම කඳු මුදුනට යාමට උත්සාහ නොකරන්න.`
   },
 
+  aberdeen: {
+    EN: `### 💧 ABERDEEN FALLS — ඇබර්ඩීන් දිය ඇල්ල
+The Scottish Highland of Sri Lanka — Complete Verified Guide
+
+✅ HONEST LABELLING THROUGHOUT
+✅ CONFIRMED — verified by scientific surveys, government records, and physical measurement
+⭐ LEGEND / TRADITION — sincerely held cultural belief or folklore, not independently verifiable
+⚠️ UNCERTAIN — figures vary between sources or are debated
+
+📍 LOCATION
+Province: Central Province, Sri Lanka
+District: Nuwara Eliya District
+Town: Ginigathhena — the nearest town
+Position: In the Kehelgamuwa mountain range, within the area encompassing Ginigathhena, Norton Bridge, Laxapana, and Maskeliya
+Distance from Ginigathhena town: approximately 4 km — about 10 to 15 minutes by road
+Distance from Kitulgala: approximately 15 to 20 km — about 30 minutes
+Distance from Hatton: approximately 29 to 30 km — about 45 minutes to 1 hour
+Distance from Nuwara Eliya: approximately 68 km — about 2 to 2.5 hours by road
+Distance from Kandy: approximately 90 km — about 2.5 to 3 hours`,
+    SI: `ඇබර්ඩීන් දිය ඇල්ල යනු ශ්‍රී ලංකාවේ මධ්‍යම කඳුකරයේ ගිනිගත්හේන ප්‍රදේශයේ පිහිටි සුන්දර දිය ඇල්ලකි.`
+  },
+
   // Camping
 };
 
@@ -2368,5 +2413,7 @@ export const LOGISTICS_DATA: Record<string, { EN: string, SI: string }> = {
   "lankatilaka-vihara": { EN: "Near Gal Vihara. Impressive brickwork.", SI: "ගල් විහාරයට ආසන්නව පිහිටා ඇත." },
   yala: { EN: "Safari starts at 6 AM. 4WD vehicle required.", SI: "සෆාරි ගමන උදෑසන 6 ට ඇරඹේ. ජීප් රථයක් අවශ්‍යයි." },
   ella: { EN: "Reach via train or A16 road. Cool climate.", SI: "දුම්රියෙන් හෝ A16 මාර්ගයෙන් පැමිණිය හැක." },
-  "galle-fort": { EN: "Southern Expressway access. 2 hours from Colombo.", SI: "දක්ෂිණ අධිවේගී මාර්ගයෙන් පැය 2 කි." }
+  "galle-fort": { EN: "Southern Expressway access. 2 hours from Colombo.", SI: "දක්ෂිණ අධිවේගී මාර්ගයෙන් පැය 2 කි." },
+  aberdeen: { EN: "Reach via Ginigathhena. 4 km from town.", SI: "ගිනිගත්හේන හරහා පැමිණිය හැක. නගරයේ සිට කි.මී. 4කි." },
+  knuckles: { EN: "Access via Kandy or Matale. Hiring a local guide is highly recommended. Prepare for unpredictable weather.", SI: "මහනුවර හෝ මාතලේ හරහා පැමිණිය හැක. මඟපෙන්වන්නෙකුගේ සහාය ලබා ගැනීම අනිවාර්ය වේ." }
 };
