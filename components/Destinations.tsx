@@ -47,8 +47,6 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
   
   const searchWrapperRef = useRef<HTMLDivElement>(null);
 
-  const headerBgImage = "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1920&q=80";
-
   const categories = [
     { id: 'all', EN: 'All', SI: 'සියල්ල', icon: LayoutGrid },
     { id: 'ancient', EN: 'Ancient', SI: 'පුරාණ', icon: Landmark },
@@ -87,7 +85,6 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
   const filteredDestinations = useMemo(() => {
     return DESTINATIONS.filter(d => {
-      console.log('Destination:', d.id, 'Category:', d.category, 'Filter:', categoryFilter);
       const q = search.toLowerCase();
       const matchesLocation = locationFilter === 'all' || d.location === locationFilter;
       const matchesSearch = !search.trim() || 
@@ -95,7 +92,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                             d.name.SI.includes(q) ||
                             d.location.toLowerCase().includes(q) ||
                             d.category.toLowerCase().includes(q);
-      const matchesCategory = categoryFilter === 'all' || d.category.trim() === categoryFilter.trim();
+      const matchesCategory = categoryFilter === 'all' || d.category === categoryFilter;
       return matchesLocation && matchesSearch && matchesCategory;
     });
   }, [locationFilter, search, categoryFilter]);
@@ -135,16 +132,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
   return (
     <section id="destinations" className="min-h-screen pb-64 bg-[#f5f5f0] relative antialiased text-[#2d2d2d] font-sans overflow-x-hidden">
-      {/* Fixed Background Image Layer */}
-      <div 
-        className="fixed inset-0 z-0 pointer-events-none opacity-[0.25] mix-blend-multiply"
-        style={{ 
-          backgroundImage: `url('https://i.pinimg.com/736x/5d/0d/ef/5d0def42d743d3e932b0b0095b12a61f.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      />
+
 
       <SEO 
         title={language === 'EN' ? 'Destinations' : 'ගමනාන්ත'} 
@@ -158,16 +146,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       {/* Cinematic Header */}
       <div className="relative z-[101] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-[#1a1a1a]">
         <div className="absolute inset-0 overflow-hidden">
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-[1200ms]" 
-            style={{ 
-              backgroundImage: `url('${headerBgImage}')`, 
-              transform: `scale(${1.1 + scrollPos / 10000})`,
-              filter: 'brightness(0.5) saturate(1.1)'
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#f5f5f0]" />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#f5f5f0]" />
         </div>
 
         {/* Back Button */}
@@ -283,7 +262,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                 onChange={(e) => setLocationFilter(e.target.value)} 
                 className="appearance-none w-full pl-6 pr-10 py-2 md:py-2.5 bg-white border border-[#5A5A40]/10 rounded-full text-[9px] md:text-[10px] font-bold uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#2d2d2d]/60 outline-none focus:border-[#5A5A40] cursor-pointer"
               >
-                <option key="all" value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
+                <option value="all" className="bg-white">{UI_STRINGS.allRegions[language]}</option>
                 {locations.filter(l => l !== 'all').map(loc => <option key={loc} value={loc} className="bg-white">{loc}</option>)}
               </select>
               <ChevronDown size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5A5A40] pointer-events-none" />
