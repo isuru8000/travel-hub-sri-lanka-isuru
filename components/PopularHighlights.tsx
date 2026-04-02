@@ -162,7 +162,7 @@ const PopularHighlights: React.FC<PopularHighlightsProps> = ({ language, onSelec
         <div className="space-y-32 md:space-y-64">
           {highlights.map((dest, index) => (
             <HighlightCard 
-              key={dest.id} 
+              key={`${dest.id}-${index}`} 
               dest={dest} 
               index={index} 
               language={language} 

@@ -87,6 +87,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
   const filteredDestinations = useMemo(() => {
     return DESTINATIONS.filter(d => {
+      console.log('Destination:', d.id, 'Category:', d.category, 'Filter:', categoryFilter);
       const q = search.toLowerCase();
       const matchesLocation = locationFilter === 'all' || d.location === locationFilter;
       const matchesSearch = !search.trim() || 
@@ -94,7 +95,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                             d.name.SI.includes(q) ||
                             d.location.toLowerCase().includes(q) ||
                             d.category.toLowerCase().includes(q);
-      const matchesCategory = categoryFilter === 'all' || d.category === categoryFilter;
+      const matchesCategory = categoryFilter === 'all' || d.category.trim() === categoryFilter.trim();
       return matchesLocation && matchesSearch && matchesCategory;
     });
   }, [locationFilter, search, categoryFilter]);
