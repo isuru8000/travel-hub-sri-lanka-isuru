@@ -2151,42 +2151,9 @@ Start Point: The trail begins at the entrance gate and ticket booth on the Mahiy
 Section 1 — The Initial Path (0 to 500 meters)
 From the entrance gate, a well-maintained path winds through light forest. Small stalls and shops line the first section of the path — vendors sell snacks, fresh coconuts, local herbal drinks, cold drinks, and small souvenirs. The path is flat to gently inclining at the start.
 Section 2 — Kuda Dunhinda Falls Viewpoint (approximately 500 meters)
-Approximately halfway along the trail, a viewpoint on the left provides a view of Kuda Dunhinda — Little Dunhinda Falls — a smaller waterfall on the same stream system below the main falls. The falls are clearly visible from the viewpoint platform. Kuda Dunhinda is a genuinely attractive waterfall in its own right and worth the brief stop. A more rugged forest path leads closer to Kuda Dunhinda but this path is not well-maintained and requires proper preparation — not recommended for casual visitors.
-Herbal drink vendors operate near the Kuda Dunhinda viewpoint — offering traditional Sri Lankan medicinal drinks brewed from local herbs. These are a distinctive and enjoyable feature of the Dunhinda trail unique among Sri Lankan waterfall trails.
-Section 3 — The Suspension Bridge and Steps
-Beyond the Kuda Dunhinda viewpoint, the trail crosses a suspension bridge over the gorge — providing a view down into the river below. After the bridge, steep steps with wooden and iron handrails ascend to the final section.
-Section 4 — The Main Viewing Platform
-The trail ends at a formal viewing platform positioned at the base of the main falls. The platform provides a direct face-on view of the full 63 to 64-meter drop. The mist from the falls reaches the platform continuously — visitors become lightly wet from the spray even without approaching the water directly. The sound of the falls at this distance is significant.
-⏱️ Duration
-One way from gate to viewing platform: approximately 20 to 30 minutes at a comfortable pace
-Return: same duration
-Total round trip: 45 minutes to 1 hour
-Add 15 to 20 minutes for stops at Kuda Dunhinda viewpoint and vendor stalls
+A viewpoint offers a glimpse of Kuda Dunhinda (Little Dunhinda) before reaching the main falls.
 
-💧 THE WATERFALL — PHYSICAL DETAILS
-✅ CONFIRMED — The Badulu Oya descends in a dramatic sequence of cascading steps before reaching the primary drop. The main plunge — approximately 63 to 64 meters — falls into a deep natural pool at the base. The impact of the water on the pool creates the defining spray cloud that gives the falls their name — a permanent fine mist billowing upward and outward from the base, cooling the surrounding air by several degrees compared to the forest above.
-✅ CONFIRMED — The shape of the waterfall in full flow resembles a spreading veil — broader at the base than at the top, the water fanning outward as it falls — which accounts for the English name Bridal Falls. During very high water flow in the monsoon, the falls produce a genuinely powerful torrent of white water occupying the full width of the rock face. During the dry season, the flow narrows but the falls remain permanently active — unlike some Sri Lankan waterfalls that reduce to a trickle in dry years, the Badulu Oya maintains year-round flow from its highland catchment.
-
-🌿 WILDLIFE AND BIODIVERSITY
-🐒 Toque Macaque
-✅ CONFIRMED — Toque macaques — the endemic, Endangered monkey — are present throughout the trail in large, habituated groups. They are specifically and consistently noted in visitor accounts as bold, food-seeking, and highly experienced at stealing from tourists. The macaques at Dunhinda are widely regarded as among the most aggressively food-seeking monkey groups at any Sri Lankan waterfall. Carry all food in closed, zipped bags. Never hold food in the open. Never feed the monkeys — it increases their aggression and dependency on human food. Keep bags zipped at all times including when standing still at viewpoints.
-🦋 Butterflies
-✅ CONFIRMED — The forested trail supports a diversity of highland butterflies. Multiple sources specifically note butterfly diversity as one of the pleasures of the Dunhinda trail. The Sri Lanka Birdwing — one of the largest and most spectacular butterflies in South Asia — is present in the broader highland butterfly fauna of this region.
-🦅 Birds
-The forest along the trail supports a range of highland and forest-edge bird species. Specific confirmed species sightings at Dunhinda include:
-Sri Lanka Junglefowl — the national bird; seen at forest edges along the trail
-Various bulbul and babbler species — heard throughout
-Kingfisher species — present near the stream sections
-Highland flycatchers — active in the forest canopy
-🦌 Deer
-Wild deer — primarily the barking deer and spotted deer — are occasionally reported along the trail by visitors, particularly in the less disturbed sections near the falls.
-🐘 Elephants
-Wild elephants are occasionally reported in the broader area around the trail. This is not a high-frequency sighting but is a confirmed possibility — the Badulla region has wild elephant populations in the surrounding forest zones. The main trail is well-used and elephant encounters near it are very rare but not impossible.
-🌿 Flora
-The forest along the trail is highland tropical vegetation — a mix of tree ferns, wild banana plants, highland flowering shrubs, and forest trees characteristic of Sri Lanka's mid-elevation wet zone. The spray zone immediately around the base viewing platform supports an extraordinarily dense growth of mosses, liverworts, and moisture-dependent ferns on every rock surface — permanently sustained by the mist from the falls.
-
-🏛️ NEARBY ATTRACTIONS IN BADULLA
-🛕 Muthiyangana Raja Maha Viharaya
+🏛️ Muthiyangana Raja Maha Viharaya
 ✅ CONFIRMED — The Muthiyangana Raja Maha Viharaya is an ancient Buddhist temple in the heart of Badulla town — one of the sixteen Solosmasthana, the sacred places in Sri Lanka held to have been visited by the Buddha. It is an important pilgrimage site for Buddhists from across the island. The temple contains significant historical sculptures and architectural elements from multiple periods of Sinhalese civilisation. Active and open to visitors daily — remove footwear before entering. Dress code: shoulders and knees covered.
 ⭐ RELIGIOUS TRADITION: The Muthiyangana Raja Maha Viharaya is said to enshrine a hair relic of the Buddha. This is a sincerely held religious belief recorded in temple tradition and is not independently verifiable.
 🏰 Badulla Town — Colonial Architecture
@@ -2254,7 +2221,7 @@ Multiple local restaurants in Badulla town serve Sri Lankan rice and curry at ge
       { id: "pasikudah", name: { EN: "Pasikudah Beach", SI: "පාසිකුඩා වෙරළ" }, image: "https://i.pinimg.com/1200x/02/4f/c9/024fc9b932d7565de43b861d11a58ef9.jpg" }
     ]
   },
-  { id: "baker'sfalls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://picsum.photos/seed/bakersfalls/736/736", gallery: ["https://picsum.photos/seed/bakersfalls/736/736"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is situated in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's Falls is 20 metres (66 ft). The falls were named after Sir Samuel Baker, who was a famous explorer. Many Rhododendron and Fern bushes can be seen around the waterfall.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, detailedAbout: { EN: `BAKER'S FALLS — බේකර්ස් ඇල්ල` }
+  { id: "bakers-falls", name: { EN: "Baker's Falls", SI: "බේකර්ස් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/47/1f/78/471f789bcd8639f93a5b859b9058bfe9.jpg", gallery: ["https://i.pinimg.com/1200x/47/1f/78/471f789bcd8639f93a5b859b9058bfe9.jpg"], history: { EN: "Baker's Falls is a famous waterfall in Sri Lanka. It is situated in the Horton Plains National Park, on a tributary of the Belihul Oya. The height of the Baker's Falls is 20 metres (66 ft). The falls were named after Sir Samuel Baker, who was a famous explorer. Many Rhododendron and Fern bushes can be seen around the waterfall.", SI: "හෝර්ටන් තැන්නේ මැණික." }, shortStory: { EN: "Baker's Falls - A beautiful waterfall located within the Horton Plains National Park.", SI: "බේකර්ස් ඇල්ල - හෝර්ටන් තැන්න ජාතික වනෝද්‍යානය තුළ පිහිටි සුන්දර දිය ඇල්ල." }, detailedAbout: { EN: "BAKER'S FALLS", SI: "බේකර්ස් ඇල්ල" }, tips: [{ EN: "Walk to the top of the falls.", SI: "මුදුනට ඇවිදින්න." }], hiddenEchoes: { EN: "Natural pools at the top.", SI: "ස්වභාවික තටාක." }, location: "Nuwara Eliya", coordinates: { x: 50, y: 60 }
   },
   { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg", gallery: ["https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg"], history: { EN: "Bopath Ella is a waterfall situated in the Ratnapura District of Sri Lanka. It has a shape very similar to the leaf of the Sacred Fig or 'Bo' tree, which has earned it this name. The waterfall is a major tourist attraction in the country. The falls are formed by the Kuru Ganga, which is a tributary of the Kalu Ganga.", SI: "බෝ පතක හැඩය." }, shortStory: { EN: "Bopath Ella - A unique waterfall shaped like a Bo leaf, a major tourist attraction.", SI: "බෝපත් ඇල්ල - බෝ පතක හැඩය ගත් ප්‍රධාන සංචාරක ආකර්ෂණයක් වන දිය ඇල්ල." }, detailedAbout: { EN: `BOPATH ELLA FALLS — බෝපත් ඇල්ල
 The Bo Leaf Falls of Ratnapura — Complete Verified Guide
@@ -2441,136 +2408,34 @@ The Ratnapura town centre has a range of local restaurants and a good covered ma
 
 ✅ සෑම තැනකම අවංක ලේබල් කිරීම
 ✅ තහවුරු කර ඇත — විද්‍යාත්මක සමීක්ෂණ, රජයේ වාර්තා සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත
-⭐ ජනප්‍රවාද / සම්ප්‍රදාය — ස්වාධීනව තහවුරු කළ නොහැකි, අවංකව විශ්වාස කරන සංස්කෘතික විශ්වාසයන් හෝ ජනප්‍රවාද
-⚠️ අවිශ්වාස සහගතයි — මූලාශ්‍ර අතර සංඛ්‍යාලේඛන වෙනස් වේ හෝ විවාදයට භාජනය වේ` }
-
-📍 පිහිටීම
-පළාත: සබරගමුව පළාත, ශ්‍රී ලංකාව
-දිස්ත්‍රික්කය: රත්නපුර දිස්ත්‍රික්කය
-ගම: දෙවිපහල — කුරුවිට ප්‍රාදේශීය ලේකම් කොට්ඨාශය තුළ
-ස්ථානය: කුරුවිට නගරය අසල, A4 කොළඹ-රත්නපුර මහා මාර්ගයෙන් බැහැරව
-කොළඹ සිට දුර: කිලෝමීටර 75 සිට 80 දක්වා — මාර්ගයෙන් පැය 2.5 සිට 3 දක්වා
-රත්නපුර නගරයේ සිට දුර: කිලෝමීටර 10 සිට 15 දක්වා — මාර්ගයෙන් විනාඩි 20 සිට 30 දක්වා
-කුරුවිට සිට දුර: කිලෝමීටර 3ක් පමණ — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
-සිංහරාජ වනාන්තරයේ සිට දුර: කිලෝමීටර 35ක් පමණ — මාර්ගයෙන් පැය 1ක් පමණ
-ශ්‍රී පාද පලාබද්දල පිවිසුමේ සිට දුර: කිලෝමීටර 30ක් පමණ — මාර්ගයෙන් විනාඩි 45ක් පමණ
-කෑගල්ල සිට දුර: කිලෝමීටර 30ක් පමණ උතුරින් — මාර්ගයෙන් විනාඩි 45ක් පමණ` }, tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." }, location: "Ratnapura", coordinates: { x: 42, y: 76 },. Bring water in a reusable (non-plastic) bottle.
-🤫 Keep quiet. To see wildlife, maintain a low noise level along the trail.
-🚫 No Drones. Drone use is strictly prohibited within the National Park.
-🚮 Leave No Trace. Take all your rubbish back out with you.`, SI: "බේකර්ස් ඇල්ල පිළිබඳ සම්පූර්ණ විස්තරය." }, tips: [{ EN: "Wear sturdy hiking shoes and bring warm layers.", SI: "ශක්තිමත් සපත්තු පළඳින්න සහ උණුසුම් ඇඳුම් රැගෙන එන්න." }], hiddenEchoes: { EN: "An area with many ferns.", SI: "මීවන ශාක කලාපය." }, location: "Central Highlands", coordinates: { x: 63, y: 73 },
-    nearbyAttractions: [
-      { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
-      { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
-    ]
+⭐ ජනප්‍රවාද / සම්ප්‍රදාය — ස්වාධීනව තහවුරු කළ නොහැකි, අවංකව විශ්වාස කරන සංස්කෘතික විශ්වාසයන් හෝ ජනප්‍රවාද`
   },
-  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, detailedAbout: { EN: `💧 ST. CLAIR'S FALLS — සෙන්ට් ක්ලෙයාර් ඇල්ල
-The Little Niagara of Sri Lanka — Complete Verified Guide
-
-✅ HONEST LABELLING THROUGHOUT
-✅ CONFIRMED — verified by geological surveys, government records, and physical measurement
-⭐ LEGEND / TRADITION — cultural tradition or folklore, not independently verifiable
-⚠️ UNCERTAIN — figures vary between sources or are debated
-
-📍 LOCATION
-Province: Central Province, Sri Lanka
-District: Nuwara Eliya District
-Position: Approximately 3 km west of Talawakele town, on the Hatton-Talawakele Highway (A7)
-Elevation: approximately 1,198 meters above sea level
-Distance from Talawakele: 3 km — about 5 to 10 minutes by road
-Distance from Hatton: approximately 16 km — about 30 to 40 minutes by road
-Distance from Nuwara Eliya: approximately 30 km — about 1 hour by road
-Distance from Colombo: approximately 140 km — about 4 to 5 hours by road
-
-📏 PHYSICAL CHARACTERISTICS
-✅ CONFIRMED Height: 80 meters (260 ft)
-✅ CONFIRMED Width: approximately 50 meters (160 ft) — making it one of the widest waterfalls in Sri Lanka
-Structure: Two-tier cascade (The "Greater St. Clair" and "Lesser St. Clair")
-Source: Kotmale Oya, a major tributary of the Mahaweli River
-Flow Rate: Historically high, but significantly impacted by the Upper Kotmale Hydropower Project
-
-🕰️ HISTORY & NAME
-✅ CONFIRMED Origin of Name: Named after the St. Clair Tea Estate, through which the waterfall flows.
-✅ CONFIRMED "Little Niagara": Earned this nickname due to its impressive width and volume, resembling a miniature version of the famous North American falls.
-⚠️ UNCERTAIN Local Legends: Some local folklore suggests the area was a retreat for ancient kings, though historical documentation is sparse compared to other sites like Sigiriya or Polonnaruwa.
-
-🌿 WILDLIFE & NATURE
-Surroundings: Lush tea plantations, primarily the St. Clair and Devon estates.
-Flora: Tea bushes (Camellia sinensis), eucalyptus trees, and various montane forest species in the surrounding valleys.
-Fauna: Various bird species endemic to the central highlands, small mammals like the purple-faced langur, and diverse butterfly species.
-
-☀️ BEST TIME TO VISIT
-✅ CONFIRMED Peak Flow: During the monsoon season (May to September) and immediately after heavy rains.
-⚠️ UNCERTAIN Dry Season: During February and March, the flow can be significantly reduced, sometimes appearing as a thin trickle due to water diversion for hydropower.
-Best Viewing Time: Early morning (6:00 AM to 9:00 AM) for the clearest views and best lighting for photography.
-
-🚗 TRAVEL INFORMATION
-How to get there:
-- By Train: One of the most scenic ways to see the falls is from the "Main Line" railway (Colombo to Badulla). The falls are visible between the Watagoda and Talawakele stations.
-- By Road: Easily accessible from the A7 highway. There is a well-maintained viewing gallery (St. Clair's Viewing Gallery) located along the road.
-- By Bus: Any bus travelling between Hatton and Talawakele or Nuwara Eliya will pass the viewing point.
-
-💡 ESSENTIAL TIPS
-1. Viewing Point: The best public view is from the dedicated viewing gallery on the main road.
-2. Photography: Use a wide-angle lens to capture the full width of the falls.
-3. Hydration: There are several tea centers nearby (like the Mlesna Tea Castle) where you can enjoy a cup of Ceylon tea with a view.
-4. Respect Nature: Do not litter. The surrounding tea estates are private property; stay on public paths.
-5. Safety: Attempting to reach the base of the falls is difficult and can be dangerous due to slippery rocks and unpredictable water levels. It is best enjoyed from the designated viewing areas.`, SI: `💧 සෙන්ට් ක්ලෙයාර් ඇල්ල — ST. CLAIR'S FALLS
-ලංකාවේ කුඩා නයගරා — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
-
-✅ සෑම තැනකම අවංක ලේබල් කිරීම
-✅ තහවුරු කර ඇත — භූ විද්‍යාත්මක සමීක්ෂණ, රජයේ වාර්තා සහ භෞතික මිනුම් මගින් තහවුරු කර ඇත
-⭐ පුරාවෘත්තය / සම්ප්‍රදාය — සංස්කෘතික සම්ප්‍රදාය හෝ ජනප්‍රවාද, ස්වාධීනව තහවුරු කළ නොහැක
-⚠️ අවිශ්වාස සහගතයි — මූලාශ්‍ර අතර සංඛ්‍යාලේඛන වෙනස් වේ හෝ විවාදයට භාජනය වේ
-
-📍 පිහිටීම
-පළාත: මධ්‍යම පළාත, ශ්‍රී ලංකාව
-දිස්ත්‍රික්කය: නුවරඑළිය දිස්ත්‍රික්කය
-ස්ථානය: තලවාකැලේ නගරයට බටහිරින් කිලෝමීටර 3ක් පමණ දුරින්, හැටන්-තලවාකැලේ මහා මාර්ගයේ (A7)
-මුහුදු මට්ටමේ සිට උස: මීටර් 1,198ක් පමණ
-තලවාකැලේ සිට දුර: කිලෝමීටර 3 — මාර්ගයෙන් විනාඩි 5 සිට 10 දක්වා
-හැටන් සිට දුර: කිලෝමීටර 16ක් පමණ — මාර්ගයෙන් විනාඩි 30 සිට 40 දක්වා
-නුවරඑළිය සිට දුර: කිලෝමීටර 30ක් පමණ — මාර්ගයෙන් පැය 1ක් පමණ
-කොළඹ සිට දුර: කිලෝමීටර 140ක් පමණ — මාර්ගයෙන් පැය 4 සිට 5 දක්වා
-
-📏 භෞතික ලක්ෂණ
-✅ තහවුරු කළ උස: මීටර් 80 (අඩි 260)
-✅ තහවුරු කළ පළල: මීටර් 50ක් පමණ (අඩි 160) — ශ්‍රී ලංකාවේ පළල්ම දිය ඇලිවලින් එකකි
-ව්‍යුහය: කොටස් දෙකකින් යුත් දිය ඇල්ලකි ("මහා සෙන්ට් ක්ලෙයාර්" සහ "කුඩා සෙන්ට් ක්ලෙයාර්")
-මූලාශ්‍රය: කොත්මලේ ඔය, මහවැලි ගඟේ ප්‍රධාන අතු ගංගාවකි
-ජල ප්‍රවාහය: ඓතිහාසිකව ඉහළ අගයක් ගත්තද, ඉහළ කොත්මලේ ජල විදුලි ව්‍යාපෘතිය හේතුවෙන් සැලකිය යුතු ලෙස බලපෑමට ලක්ව ඇත
-
-🕰️ ඉතිහාසය සහ නම
-✅ තහවුරු කළ නමේ ආරම්භය: දිය ඇල්ල ගලා යන සෙන්ට් ක්ලෙයාර් තේ වත්ත අනුව නම් කර ඇත.
-✅ තහවුරු කළ "කුඩා නයගරා": එහි ආකර්ෂණීය පළල සහ ජල පරිමාව නිසා මෙම නම ලැබී ඇත.
-⚠️ අවිශ්වාස සහගත දේශීය පුරාවෘත්ත: සමහර දේශීය ජනප්‍රවාදවලට අනුව මෙම ප්‍රදේශය පැරණි රජවරුන්ගේ විවේකස්ථානයක් වූ බව කියැවේ.
-
-🌿 වනජීවී සහ සොබාදහම
-පරිසරය: සශ්‍රීක තේ වතු, මූලික වශයෙන් සෙන්ට් ක්ලෙයාර් සහ ඩෙවෝන් වතු.
-ශාක: තේ පඳුරු, යුකැලිප්ටස් ගස් සහ අවට නිම්නවල ඇති විවිධ කඳුකර වනාන්තර විශේෂ.
-සතුන්: මධ්‍යම කඳුකරයට ආවේණික විවිධ පක්ෂි විශේෂ, දම් මුහුණැති රිළවා වැනි කුඩා ක්ෂීරපායින් සහ විවිධ සමනලුන් විශේෂ.
-
-☀️ සංචාරය කිරීමට හොඳම කාලය
-✅ තහවුරු කළ උපරිම ජල ප්‍රවාහය: මෝසම් කාලය තුළ (මැයි සිට සැප්තම්බර් දක්වා) සහ අධික වර්ෂාවෙන් පසුව.
-⚠️ අවිශ්වාස සහගත වියළි කාලය: පෙබරවාරි සහ මාර්තු මාසවලදී, ජල විදුලිය සඳහා ජලය හරවා යැවීම හේතුවෙන් ජල ප්‍රවාහය සැලකිය යුතු ලෙස අඩු විය හැකිය.
-නැරඹීමට හොඳම කාලය: පැහැදිලි දර්ශන සහ ඡායාරූපකරණය සඳහා හොඳම ආලෝකය ලබා ගැනීමට උදෑසන (පෙ.ව. 6:00 සිට පෙ.ව. 9:00 දක්වා).
-
-🚗 සංචාරය කිරීමට තොරතුරු
-ළඟා වන ආකාරය:
-- දුම්රියෙන්: කොළඹ සිට බදුල්ල දක්වා දිවෙන දුම්රිය මාර්ගයේ වටගොඩ සහ තලවාකැලේ දුම්රිය ස්ථාන අතරදී මෙම දිය ඇල්ල දැකගත හැකිය.
-- මාර්ගයෙන්: A7 මහා මාර්ගයෙන් පහසුවෙන් ළඟා විය හැකිය. මාර්ගය අසල පිහිටි සෙන්ට් ක්ලෙයාර් නැරඹුම් මැදිරියෙන් මෙය නැරඹිය හැකිය.
-- බස් රථයෙන්: හැටන් සහ තලවාකැලේ හෝ නුවරඑළිය අතර ධාවනය වන ඕනෑම බස් රථයකින් නැරඹුම් ස්ථානයට ළඟා විය හැකිය.
-
-💡 අත්‍යවශ්‍ය උපදෙස්
-1. නැරඹුම් ස්ථානය: හොඳම දර්ශනය ලබා ගැනීමට ප්‍රධාන මාර්ගයේ ඇති නැරඹුම් මැදිරිය භාවිතා කරන්න.
-2. ඡායාරූපකරණය: දිය ඇල්ලේ සම්පූර්ණ පළල ග්‍රහණය කර ගැනීමට පුළුල් කෝණ කාචයක් (wide-angle lens) භාවිතා කරන්න.
-3. පානීය පහසුකම්: අවට ඇති තේ මධ්‍යස්ථානවලින් (Mlesna Tea Castle වැනි) දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳිය හැකිය.
-4. සොබාදහමට ගරු කරන්න: කුණු කසළ දැමීමෙන් වළකින්න. අවට ඇති තේ වතු පෞද්ගලික දේපළ බැවින් පොදු මාර්ගවල පමණක් රැඳී සිටින්න.
-5. ආරක්ෂාව: දිය ඇල්ලේ පාමුලට යාමට උත්සාහ කිරීම දුෂ්කර හා භයානක විය හැකිය. එබැවින් නම් කරන ලද නැරඹුම් ස්ථානවල සිට එය නැරඹීම වඩාත් සුදුසුය.` }, tips: [{ EN: "You can see it from the train.", SI: "දුම්රියෙන් නැරඹිය හැකිය." }], hiddenEchoes: { EN: "Old tea farms.", SI: "පැරණි තේ වතු." }, location: "Central Highlands", coordinates: { x: 52, y: 64 },
-    nearbyAttractions: [
-      { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" }
-    ]
-  },
-  { id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg", gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"], history: { EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Central Highlands on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.", SI: "වැවිලිකරුවෙකුගේ නම." }, shortStory: { EN: "Devon Falls - A stunning 97-metre high waterfall named after a pioneer tea planter.", SI: "ඩෙවෝන් ඇල්ල - මීටර් 97ක් උස දර්ශනීය දිය ඇල්ල." }, detailedAbout: { EN: `💧 DEVON FALLS 
+  tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }],
+  hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." },
+  location: "Ratnapura",
+  coordinates: { x: 42, y: 76 },
+  nearbyAttractions: [
+    { id: "horton", name: { EN: "Horton Plains", SI: "හෝර්ටන් තැන්න" }, image: "https://i.pinimg.com/736x/dc/0f/bb/dc0fbbb8b94e6038509e4b79a53c2f58.jpg" },
+    { id: "ella", name: { EN: "Ella", SI: "ඇල්ල" }, image: "https://i.pinimg.com/736x/19/c4/ca/19c4ca9cac03989b7a94bbe48beb166d.jpg" }
+  ]
+},
+  { id: "stclair's", name: { EN: "St. Clair's", SI: "සෙන්ට් ක්ලෙයාර්" }, category: "waterfalls", image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg", gallery: ["https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg"], history: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka and is commonly known as the 'Little Niagara of Sri Lanka'. It is one of six waterfalls formed by the Kotmale Oya, a tributary of the Mahaweli River. The falls are located 3 km (1.9 mi) west of the town of Talawakele on the Hatton-Talawakele Highway in the Central Highlands.", SI: "ලංකාවේ නයගරා." }, shortStory: { EN: "St. Clair's Falls - Known as the 'Little Niagara of Sri Lanka', one of the widest waterfalls.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල - 'ලංකාවේ කුඩා නයගරා' ලෙස හැඳින්වෙන පුළුල්ම දිය ඇල්ල." }, detailedAbout: { EN: "St. Clair's Falls is one of the widest waterfalls in Sri Lanka.", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල ලංකාවේ පුළුල්ම දිය ඇල්ලකි." }, tips: [{ EN: "Great for photography.", SI: "ඡායාරූප සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Known as the Little Niagara.", SI: "ලංකාවේ නයගරා ලෙස හැඳින්වේ." }, location: "Central Highlands", coordinates: { x: 70, y: 50 }, nearbyAttractions: [{ id: "devonfalls", name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" }, image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg" }] },
+  {
+    id: "devonfalls",
+    name: { EN: "Devon Falls", SI: "ඩෙවෝන් ඇල්ල" },
+    category: "waterfalls",
+    image: "https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg",
+    gallery: ["https://i.pinimg.com/736x/dd/09/05/dd0905293bbaf9e3d7d3075fbc87a1a0.jpg"],
+    history: {
+      EN: "Devon Falls is a waterfall in Sri Lanka, situated 6 km west of Talawakele, Central Highlands on the A7 highway. The falls is named after a pioneer English coffee planter called Devon, whose plantation was situated nearby the falls. The waterfall is 97 metres (318 ft) high and is the 19th highest in the country. The falls are formed by a tributary of Kothmale Oya, which is a tributary of Mahaweli River.",
+      SI: "වැවිලිකරුවෙකුගේ නම."
+    },
+    shortStory: {
+      EN: "Devon Falls - A stunning 97-metre high waterfall named after a pioneer tea planter.",
+      SI: "ඩෙවෝන් ඇල්ල - මීටර් 97ක් උස දර්ශනීය දිය ඇල්ල."
+    },
+    detailedAbout: {
+      EN: `💧 DEVON FALLS 
 Veil of the Valley — Complete Verified Guide
 
 ✅ HONEST LABELLING THROUGHOUT
@@ -2722,7 +2587,8 @@ Each bungalow has its own full kitchen team producing meals from local highland 
 👟 Wear grip shoes for the trail to the base. The wet clay path through the tea estate to the base of the falls is slippery after any rainfall. Proper rubber-soled shoes are essential. If it has rained in the previous 24 hours, the trail is significantly more difficult and potentially hazardous in smooth-soled footwear.
 🚫 Do not swim in the base pool. The pool below Devon Falls has strong currents from the impact of the falling water and is subject to sudden increases in flow from hydropower release schedule changes. Multiple sources specifically warn against swimming. The rocks surrounding the pool are permanently wet and slippery. Observe from a safe distance only.
 📷 The finest photography position is from the Dimbula viewpoint. The main parking viewpoint on the highway provides the best full-face view of all three tiers simultaneously with the surrounding tea estate landscape visible on both sides. This is the standard photography position for Devon Falls. Moving too close by descending the trail loses the full-tier framing that defines the falls' visual identity.
-📅 Combine Devon and St. Clair's with Adam's Peak on the same trip. Hatton — the gateway town for the Adam's Peak night climb — is only 22 km from Devon Falls. A trip combining the Nallathanni night climb to Adam's Peak with a morning stop at Devon and St. Clair's Falls covers the two most distinctive highland experiences of the Hatton region — sacred mountain and highland waterfall — in a single coherent visit.`, SI: `💧 ඩෙවෝන් ඇල්ල — DEVON FALLS
+📅 Combine Devon and St. Clair's with Adam's Peak on the same trip. Hatton — the gateway town for the Adam's Peak night climb — is only 22 km from Devon Falls. A trip combining the Nallathanni night climb to Adam's Peak with a morning stop at Devon and St. Clair's Falls covers the two most distinctive highland experiences of the Hatton region — sacred mountain and highland waterfall — in a single coherent visit.`,
+      SI: `💧 ඩෙවෝන් ඇල්ල — DEVON FALLS
 නිම්නයේ වැස්ම — සම්පූර්ණ තහවුරු කළ මාර්ගෝපදේශය
 
 ✅ සෑම තැනකම අවංක ලේබල් කිරීම
@@ -2793,16 +2659,10 @@ Each bungalow has its own full kitchen team producing meals from local highland 
 1. උදෑසන කාලයේදී පැමිණෙන්න: දේදුන්න දැකගැනීමට උදෑසන 8:00 සිට 10:00 දක්වා කාලය වඩාත් සුදුසුය.
 2. එම්ලෙස්නා තේ මධ්‍යස්ථානය: දිය ඇල්ල නරඹන අතරතුර තේ කෝප්පයක් රස විඳීමට අමතක නොකරන්න.
 3. සෙන්ට් ක්ලෙයාර් ඇල්ල සමඟ ඒකාබද්ධ කරන්න: මෙම දිය ඇලි දෙකම එකම මාර්ගයේ කිලෝමීටර 3ක් ඇතුළත පිහිටා ඇත.
-4. ආරක්ෂාව: දිය ඇල්ලේ පාමුල පිහිනීමෙන් වළකින්න. එහි ජල ප්‍රවාහය ඉතා ප්‍රබල සහ අනතුරුදායක විය හැකිය.` }, tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Central Highlands", coordinates: { x: 50, y: 64 },
+4. ආරක්ෂාව: දිය ඇල්ලේ පාමුල පිහිනීමෙන් වළකින්න. එහි ජල ප්‍රවාහය ඉතා ප්‍රබල සහ අනතුරුදායක විය හැකිය.`
+    }, tips: [{ EN: "Drink tea at the castle nearby.", SI: "තේ කෝප්පයක් රස බලන්න." }], hiddenEchoes: { EN: "A view of the deep valley.", SI: "නිම්නයේ දර්ශනය." }, location: "Central Highlands", coordinates: { x: 50, y: 64 },
     nearbyAttractions: [
       { id: "stclair's", name: { EN: "St. Clair's Falls", SI: "සෙන්ට් ක්ලෙයාර් ඇල්ල" }, image: "https://i.pinimg.com/1200x/74/c2/32/74c2320adae0d8151df278cc62d5b5be.jpg" }
-    ]
-  },
-  { id: "bopathella", name: { EN: "Bopath Ella", SI: "බෝපත් ඇල්ල" }, category: "waterfalls", image: "https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg", gallery: ["https://i.pinimg.com/736x/bd/ba/05/bdba05c1bd88ef141866a2b37f2d2ebf.jpg"], history: { EN: "Bopath Ella is a waterfall situated in the Ratnapura District of Sri Lanka. It has a shape very similar to the leaf of the Sacred Fig or 'Bo' tree, which has earned it this name. The waterfall is a major tourist attraction in the country. The falls are formed by the Kuru Ganga, which is a tributary of the Kalu Ganga.", SI: "බෝ පතක හැඩය." }, shortStory: { EN: "Bopath Ella - A unique waterfall shaped like a Bo leaf, a major tourist attraction.", SI: "බෝපත් ඇල්ල - බෝ පතක හැඩය ගත් ප්‍රධාන සංචාරක ආකර්ෂණයක් වන දිය ඇල්ල." }, detailedAbout: { EN: "Bopath Ella is a unique waterfall shaped like a Bo leaf, a major tourist attraction in the Ratnapura District.", SI: "බෝපත් ඇල්ල - බෝ පතක හැඩය ගත් ප්‍රධාන සංචාරක ආකර්ෂණයක් වන දිය ඇල්ල." }, tips: [{ EN: "Good for a family trip.", SI: "විනෝද චාරිකා සඳහා සුදුසුයි." }], hiddenEchoes: { EN: "Old stories and myths.", SI: "පැරණි ජනප්‍රවාද." }, location: "Ratnapura", coordinates: { x: 42, y: 76 },
-    nearbyAttractions: [
-      { id: "sinharaja", name: { EN: "Sinharaja Rainforest", SI: "සිංහරාජ වැසි වනාන්තරය" }, image: "https://i.pinimg.com/1200x/85/a0/62/85a06272c31ffa951d64c4fa7437ee63.jpg" },
-      { id: "udawalawe", name: { EN: "Udawalawe National Park", SI: "උඩවලව ජාතික වනෝද්‍යානය" }, image: "https://i.pinimg.com/1200x/28/95/94/28959415856159f64b3a6f98073698b8.jpg" },
-      { id: "adam'speak", name: { EN: "Adam's Peak", SI: "ශ්‍රී පාදය" }, image: "https://i.pinimg.com/736x/4f/ca/f7/4fcaf7f3fa7753f8d381557712fe023c.jpg" }
     ]
   },
   { id: "laxapana", name: { EN: "Laxapana", SI: "ලක්ෂපාන" }, category: "waterfalls", image: "https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg", gallery: ["https://i.pinimg.com/736x/39/fa/e5/39fae53bd62e11db5fd2ef09d1eb819b.jpg"], history: { EN: "Laxapana Falls is 126 m (413 ft) high and the 8th highest waterfall in Sri Lanka and 625th highest waterfall in the world. It is situated in Maskeliya area in the Central Highlands, about 16 km from Maskeliya town on Maskeliya-Norton Bridge road, in a village called Kiriwan Eliya. It is formed by Maskeliya Oya near the confluence of Kehelgamu Oya and Maskeliya Oya which forms Kelani River.", SI: "විදුලි බල උල්පත." }, shortStory: { EN: "Laxapana Falls - A powerful 126-metre high waterfall in the Central Highlands.", SI: "ලක්ෂපාන ඇල්ල - මධ්‍යම කඳුකරයේ පිහිටි මීටර් 126ක් උස දර්ශනීය දිය ඇල්ල." }, tips: [{ EN: "See the bridge nearby.", SI: "පාලම නරඹන්න." }], hiddenEchoes: { EN: "Tunnels under the ground.", SI: "භූගත උමං." }, location: "Central Highlands", coordinates: { x: 48, y: 70 },

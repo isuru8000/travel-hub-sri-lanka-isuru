@@ -1,18 +1,9 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore, getDocFromServer, doc } from 'firebase/firestore';
+import firebaseConfig from './firebase-applet-config.json';
 
 // Initialize Firebase SDK
-const firebaseConfig = {
-  apiKey: "AIzaSyALjz9X0a9bRUr_WKhAK6ab-pDDiik4AGY",
-  authDomain: "travelhub-37c3c.firebaseapp.com",
-  projectId: "travelhub-37c3c",
-  storageBucket: "travelhub-37c3c.firebasestorage.app",
-  messagingSenderId: "662883466221",
-  appId: "1:662883466221:web:b63a6885090caf3bdb85e4",
-  measurementId: "G-CN5FNERHMK"
-};
-
 let app;
 try {
   app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
@@ -22,7 +13,7 @@ try {
   app = getApp();
 }
 
-export const db = getFirestore(app);
+export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
 export const auth = getAuth(app);
 
 // Test connection to Firestore

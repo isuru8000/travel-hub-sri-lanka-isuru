@@ -1,9 +1,10 @@
 {
+  "projectId": "travelhub-37c3c",
+  "appId": "1:662883466221:web:cdf9e6dab1a971abdb85e4",
   "apiKey": "AIzaSyALjz9X0a9bRUr_WKhAK6ab-pDDiik4AGY",
   "authDomain": "travelhub-37c3c.firebaseapp.com",
-  "projectId": "travelhub-37c3c",
+  "firestoreDatabaseId": "ai-studio-3797809c-12bf-4b3e-ad2a-5c6bd5613aeb",
   "storageBucket": "travelhub-37c3c.firebasestorage.app",
   "messagingSenderId": "662883466221",
-  "appId": "1:662883466221:web:b63a6885090caf3bdb85e4",
-  "measurementId": "G-CN5FNERHMK"
+  "measurementId": ""
 }
