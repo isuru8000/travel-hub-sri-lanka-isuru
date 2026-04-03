@@ -52,7 +52,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
     { id: 'ancient', EN: 'Ancient', SI: 'පුරාණ', icon: Landmark },
     { id: 'beach', EN: 'Beaches', SI: 'වෙරළ', icon: Waves },
     { id: 'wildlife', EN: 'Wildlife', SI: 'වනජීවී', icon: PawPrint },
-    { id: 'mountains', EN: 'Hills', SI: 'කඳුකරය', icon: Mountain },
+    { id: 'mountains', EN: 'Mountains', SI: 'කඳුකරය', icon: Mountain },
     { id: 'waterfalls', EN: 'Waterfalls', SI: 'දියඇලි', icon: Droplets },
     { id: 'camping', EN: 'Camping', SI: 'කඳවුරු', icon: Tent },
   ];
@@ -177,12 +177,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
           {/* CINEMATIC SEARCH BAR */}
           <div className="w-full max-w-3xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
             <div 
-              className="absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl"
-              style={{ 
-                backgroundImage: `url('https://i.pinimg.com/736x/d5/94/46/d594463c9e0baab249e9396b91ebd8ab.jpg')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
+              className="absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl bg-[#5A5A40]"
             />
             <div className="absolute -inset-4 bg-[#5A5A40]/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
             <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#5A5A40] shadow-[0_30px_80px_-15px_rgba(90,90,64,0.4)]' : 'border-white/20 shadow-2xl'}`}>
