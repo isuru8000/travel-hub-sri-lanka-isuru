@@ -63,6 +63,7 @@ import {
 } from '../services/gemini';
 
 import ReactMarkdown from 'react-markdown';
+import Map from './Map';
 import { SEO } from './SEO';
 
 interface DestinationDetailProps {
@@ -404,12 +405,16 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                  
                  {/* Map Manifold Frame */}
                  <div className="relative h-[400px] md:h-[600px] w-full bg-white p-4 border border-[#5A5A40]/10 rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden group">
-                    <iframe 
-                      src={googleMapsIframeUrl}
-                      className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
-                      loading="lazy"
-                      allowFullScreen
-                    />
+                    {destination.coordinates ? (
+                      <Map lat={destination.coordinates.x} lng={destination.coordinates.y} name={destination.name[language]} />
+                    ) : (
+                      <iframe 
+                        src={googleMapsIframeUrl}
+                        className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.1] transition-all duration-700 group-hover:grayscale-0"
+                        loading="lazy"
+                        allowFullScreen
+                      />
+                    )}
                  </div>
 
                  {/* Temporal Sync & Voyager Wisdom */}
