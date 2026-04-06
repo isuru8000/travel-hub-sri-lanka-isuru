@@ -154,7 +154,12 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       
       {/* Cinematic Header */}
       <div className="relative z-[101] min-h-[60vh] md:min-h-[80vh] flex flex-col items-center justify-center bg-[#1a1a1a]">
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-0">
+          <img 
+            src="https://i.pinimg.com/736x/3a/31/28/3a31288f4b9f2eac97336463fdfa78fe.jpg" 
+            alt="Sri Lanka landscape" 
+            className="w-full h-full object-cover opacity-60"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#f5f5f0]" />
         </div>
 
@@ -238,8 +243,16 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       </div>
 
       {/* STICKY CATEGORY BAR */}
-      <div className="sticky top-0 z-[100] py-3 md:py-4 bg-[#f5f5f0]/80 backdrop-blur-3xl border-b border-[#5A5A40]/10">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
+      <div className="sticky top-0 z-[100] py-3 md:py-4 border-b border-[#5A5A40]/10 overflow-hidden relative">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://i.pinimg.com/736x/3a/31/28/3a31288f4b9f2eac97336463fdfa78fe.jpg" 
+            alt="Background" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-[#f5f5f0]/90 backdrop-blur-sm" />
+        </div>
+        <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-4 relative z-10">
           <div className="relative w-full lg:w-auto">
             <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2 lg:pb-0">
               {categories.map(cat => (
@@ -282,6 +295,13 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
       {/* RESULTS GRID */}
       <div id="registry-grid" className="max-w-[1600px] mx-auto px-4 md:px-12 mt-12 md:mt-24 relative z-10">
+        <div className="fixed inset-0 -z-10">
+          <img 
+            src="https://i.pinimg.com/736x/f4/e9/bc/f4e9bc3f546068f945814ec700f275db.jpg" 
+            alt="Fixed Background" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
         {recommendations.length > 0 && categoryFilter === 'all' && locationFilter === 'all' && !search && (
           <div className="mb-24">
             <h3 className="text-3xl font-heritage font-bold text-[#2d2d2d] uppercase tracking-tighter mb-12 flex items-center gap-4">
