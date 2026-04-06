@@ -51,8 +51,12 @@ import {
   Radio,
   AlertTriangle,
   History,
-  EyeOff
+  EyeOff,
+  ThumbsUp,
+  ThumbsDown
 } from 'lucide-react';
+import { db } from '../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 import { 
   getLankaGuideResponse, 
   GroundingLink, 
@@ -153,6 +157,25 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
   const [nearbyResults, setNearbyResults] = useState<GroundingLink[]>([]);
   const [isSyncingNearby, setIsSyncingNearby] = useState(false);
   const [deepDive, setDeepDive] = useState<DestinationDeepDive | null>(null);
+  const [feedback, setFeedback] = useState<'up' | 'down' | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const submitFeedback = async (type: 'up' | 'down') => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+    try {
+      await addDoc(collection(db, 'feedback'), {
+        destination: destination?.name.EN,
+        type,
+        timestamp: new Date()
+      });
+      setFeedback(type);
+    } catch (e) {
+      console.error("Feedback submission failed", e);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -166,6 +189,13 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
 
   useEffect(() => {
     if (destination) {
+      // Track viewed destination
+      const viewed = JSON.parse(localStorage.getItem('viewedDestinations') || '[]');
+      if (!viewed.includes(destination.id)) {
+        viewed.push(destination.id);
+        localStorage.setItem('viewedDestinations', JSON.stringify(viewed.slice(-10))); // Keep last 10
+      }
+
       // Force scroll to top immediately
       if ((window as any).scrollToTop) {
         (window as any).scrollToTop();
@@ -453,6 +483,33 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
               </div>
            </div>
         </section>
+
+        {/* Feedback Section */}
+        <div className="mt-16 md:mt-24 flex flex-col items-center gap-6 p-8 bg-white/40 backdrop-blur-sm rounded-[2rem] border border-[#5A5A40]/10">
+          <h3 className="text-lg font-bold text-[#2d2d2d] uppercase tracking-widest">
+            {language === 'EN' ? 'Was this helpful?' : 'මෙය ප්‍රයෝජනවත්ද?'}
+          </h3>
+          {feedback ? (
+            <p className="text-[#5A5A40] font-bold">{language === 'EN' ? 'Thank you for your feedback!' : 'ඔබගේ ප්‍රතිචාරයට ස්තූතියි!'}</p>
+          ) : (
+            <div className="flex gap-4">
+              <button 
+                onClick={() => submitFeedback('up')}
+                className="p-4 rounded-full bg-[#5A5A40]/10 text-[#5A5A40] hover:bg-[#5A5A40] hover:text-white transition-all"
+                disabled={isSubmitting}
+              >
+                <ThumbsUp size={24} />
+              </button>
+              <button 
+                onClick={() => submitFeedback('down')}
+                className="p-4 rounded-full bg-[#5A5A40]/10 text-[#5A5A40] hover:bg-[#5A5A40] hover:text-white transition-all"
+                disabled={isSubmitting}
+              >
+                <ThumbsDown size={24} />
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* FINAL RETURN ACTION */}
         <div className="mt-16 md:mt-32 pt-10 md:pt-20 border-t border-[#5A5A40]/10 flex justify-center">

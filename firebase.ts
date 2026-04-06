@@ -16,24 +16,6 @@ try {
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
 export const auth = getAuth(app);
 
-// Test connection to Firestore
-async function testConnection() {
-  try {
-    console.log("Testing Firestore connection...");
-    const testDoc = await getDocFromServer(doc(db, 'test', 'connection'));
-    console.log("Firestore connection test successful:", testDoc.exists());
-  } catch (error: any) {
-    console.error("Firestore connection test failed:", error);
-    if (error.code === 'permission-denied') {
-      console.error("PERMISSION DENIED: This usually means Firestore is not enabled or rules are blocking access.");
-    }
-    if (error instanceof Error && error.message.includes('the client is offline')) {
-      console.error("Please check your Firebase configuration. ");
-    }
-  }
-}
-testConnection();
-
 export enum OperationType {
   CREATE = 'create',
   UPDATE = 'update',

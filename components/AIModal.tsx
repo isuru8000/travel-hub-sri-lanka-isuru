@@ -481,7 +481,7 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
             {/* Image Preview */}
             {selectedImage && (
               <div className="relative inline-block animate-in fade-in slide-in-from-bottom-4">
-                <div className="relative w-24 h-24 rounded-2xl overflow-hidden border border-gray-200 shadow-lg group">
+                <div className="relative w-24 h-24 rounded-2xl overflow-hidden border-2 border-[#0EA5E9] shadow-lg group">
                   <img src={selectedImage} alt="Selected image preview" className="w-full h-full object-cover" />
                   <button 
                     onClick={() => setSelectedImage(null)}
@@ -493,6 +493,7 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
                 <div className="absolute -top-2 -right-2 w-5 h-5 bg-[#0EA5E9] rounded-full flex items-center justify-center border-2 border-white">
                   <ImageIcon size={10} className="text-white" />
                 </div>
+                <span className="absolute -bottom-6 left-0 text-[8px] font-black text-[#0EA5E9] uppercase tracking-widest">Preview</span>
               </div>
             )}
 

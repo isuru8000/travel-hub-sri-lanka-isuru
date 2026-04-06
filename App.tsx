@@ -32,7 +32,6 @@ const CategoriesSection = lazy(() => import('./components/CategoriesSection'));
 const StorySection = lazy(() => import('./components/StorySection'));
 const IslandMapManifold = lazy(() => import('./components/IslandMapManifold'));
 const VRPortal = lazy(() => import('./components/VRPortal'));
-const TripPlanner = lazy(() => import('./components/TripPlanner'));
 const NexusRewards = lazy(() => import('./components/NexusRewards'));
 const DestinationDetail = lazy(() => import('./components/DestinationDetail'));
 const Quiz = lazy(() => import('./components/Quiz'));
@@ -230,8 +229,6 @@ export default function App() {
         return <IslandMapManifold language={language} onSelectDestination={navigateToDestination} />;
       case 'vr-trip':
         return <VRPortal language={language} setView={setView} />;
-      case 'trip-planner':
-        return <ComingSoonView language={language} setView={setView} title={language === 'EN' ? 'Trip Architect' : 'සංචාරක සැලසුම්කරු'} />;
       case 'community':
       case 'memories':
         return <NexusRewards language={language} user={user} onLogin={handleLogin} setView={setView} />;
@@ -319,15 +316,6 @@ export default function App() {
                   <MapIcon size={18} className="text-cyan-400 group-hover:rotate-12 transition-transform" />
                   {UI_STRINGS.initializeMap[language]}
                 </button>
-
-                <button 
-                  onClick={() => setView('trip-planner')}
-                  className="group relative px-8 py-5 md:px-16 md:py-8 bg-white text-black border border-stone-200 rounded-full font-black text-[10px] md:text-[12px] uppercase tracking-[0.6em] flex items-center justify-center gap-6 shadow-xl hover:scale-105 active:scale-95 transition-all overflow-hidden w-full md:w-auto"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-400 opacity-0 group-hover:opacity-10 transition-opacity" />
-                  <Compass size={20} className="text-emerald-600 group-hover:rotate-180 transition-transform duration-1000" />
-                  {language === 'EN' ? 'Trip Architect' : 'සංචාරක සැලසුම්කරු'}
-                </button>
               </motion.div>
 
               <motion.div 
@@ -378,6 +366,7 @@ export default function App() {
       music: "Traditional Music of Sri Lanka | Listen to the Soul of Our Island",
       phrases: "Sri Lankan Phrasebook | Learn Essential Sinhala Phrases",
       essentials: "Travel Essentials | Plan Your Trip to Sri Lanka",
+      trip: "Plan your journey with our trip tools",
       quiz: "Travel Quiz | Discover Your Sri Lankan Explorer Profile",
       profile: "Your Profile | Travel Hub Sri Lanka",
       interests: "Travel Interests | Customize Your Sri Lankan Journey"
@@ -457,7 +446,7 @@ export default function App() {
         />
         <GoogleAnalytics view={view} />
         <div className="overflow-x-hidden transition-all duration-300 mobile-optimize">
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-stone-50 font-heritage text-stone-400 uppercase tracking-[0.4em] animate-pulse">Loading Sri Lanka...</div>}>
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-stone-50"></div>}>
             {renderContent()}
           </Suspense>
         </div>

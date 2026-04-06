@@ -35,7 +35,8 @@ import {
   Route,
   Orbit,
   Atom,
-  Mail
+  Mail,
+  Calculator
 } from 'lucide-react';
 import { UI_STRINGS } from '../constants';
 import Logo from './Logo';
@@ -91,7 +92,6 @@ const Navbar: React.FC<NavbarProps> = ({
       icon: <Briefcase size={14} />,
       hasDropdown: true,
       items: [
-        { id: 'trip-planner', label: { EN: 'Trip Architect', SI: 'සංචාරක සැලසුම්කරු' }, icon: <Compass size={14} /> },
         { id: 'marketplace', label: { EN: 'Packages', SI: 'පැකේජ' }, icon: <Box size={14} /> },
         { id: 'hotels', label: { EN: 'Hotels', SI: 'හෝටල්' }, icon: <Building2 size={14} /> },
         { id: 'transport', label: { EN: 'Transport', SI: 'ප්‍රවාහනය' }, icon: <Car size={14} /> },

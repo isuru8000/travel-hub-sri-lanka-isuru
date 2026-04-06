@@ -4,6 +4,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Language, Destination } from '../types';
 import { DESTINATIONS, UI_STRINGS } from '../constants';
+import { getRecommendations } from '../services/recommendations';
 import { 
   Search, 
   MapPin, 
@@ -39,6 +40,14 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [locationFilter, setLocationFilter] = useState<string>('all');
   const [search, setSearch] = useState('');
+  const [recommendations, setRecommendations] = useState<Destination[]>([]);
+
+  useEffect(() => {
+    const viewed = JSON.parse(localStorage.getItem('viewedDestinations') || '[]');
+    if (viewed.length > 0) {
+      setRecommendations(getRecommendations(viewed));
+    }
+  }, []);
 
   const [isSearching, setIsSearching] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
@@ -180,9 +189,9 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
               className="absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl bg-[#5A5A40]"
             />
             <div className="absolute -inset-4 bg-[#5A5A40]/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
-            <div className={`relative flex items-center bg-black/40 backdrop-blur-[40px] border rounded-full transition-all duration-700 overflow-hidden ${isFocused ? 'border-[#5A5A40] shadow-[0_30px_80px_-15px_rgba(90,90,64,0.4)]' : 'border-white/20 shadow-2xl'}`}>
-              <div className="pl-8 text-[#f5f5f0]">
-                {isSearching ? <Loader2 size={24} className="animate-spin" /> : <Search size={24} />}
+            <div className={`relative flex items-center bg-white border transition-all duration-500 overflow-hidden rounded-2xl ${isFocused ? 'border-[#5A5A40] shadow-xl' : 'border-gray-200 shadow-md'}`}>
+              <div className="pl-6 text-[#5A5A40]">
+                {isSearching ? <Loader2 size={20} className="animate-spin" /> : <Search size={20} />}
               </div>
               <input 
                 type="text" 
@@ -190,11 +199,11 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
                 value={search}
                 onFocus={() => { setIsFocused(true); if (search.trim()) setShowResultsDropdown(true); }}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full px-6 py-8 md:py-10 text-xl md:text-3xl bg-transparent text-white font-light focus:outline-none placeholder:text-white/20 tracking-tight font-serif"
+                className="w-full px-4 py-5 text-lg bg-transparent text-[#2d2d2d] font-medium focus:outline-none placeholder:text-gray-400 tracking-tight"
               />
               {search && (
-                <button onClick={() => setSearch('')} className="pr-8 text-white/40 hover:text-[#f5f5f0] transition-all hover:scale-110">
-                  <X size={24} />
+                <button onClick={() => setSearch('')} className="pr-6 text-gray-400 hover:text-[#5A5A40] transition-all hover:scale-110">
+                  <X size={20} />
                 </button>
               )}
             </div>
@@ -273,6 +282,33 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
 
       {/* RESULTS GRID */}
       <div id="registry-grid" className="max-w-[1600px] mx-auto px-4 md:px-12 mt-12 md:mt-24 relative z-10">
+        {recommendations.length > 0 && categoryFilter === 'all' && locationFilter === 'all' && !search && (
+          <div className="mb-24">
+            <h3 className="text-3xl font-heritage font-bold text-[#2d2d2d] uppercase tracking-tighter mb-12 flex items-center gap-4">
+              <Sparkles className="text-[#5A5A40]" />
+              {language === 'EN' ? 'Recommended For You' : 'ඔබට නිර්දේශිත'}
+            </h3>
+            <div className="flex flex-wrap justify-start gap-6">
+              {recommendations.map((dest, idx) => (
+                <motion.div
+                  key={dest.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  onClick={() => onSelectDestination(dest)}
+                  className="group flex flex-col items-center cursor-pointer gap-3 w-36"
+                >
+                  <div className="relative w-36 h-36 overflow-hidden rounded-full border-2 border-white shadow-md transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg">
+                    <img src={dest.image} alt={dest.name[language]} className="w-full h-full object-cover" />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="font-heritage font-bold text-sm text-[#2d2d2d] tracking-tight truncate max-w-[140px]">{dest.name[language]}</h4>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
         {categoryFilter === 'camping' ? (
           <div className="py-16 md:py-48 text-center space-y-8 md:space-y-12 bg-white/40 backdrop-blur-sm rounded-[2rem] md:rounded-[4rem] border border-[#5A5A40]/10 shadow-sm mx-4">
              <div className="w-20 h-20 md:w-32 md:h-32 bg-[#5A5A40]/10 rounded-full flex items-center justify-center mx-auto text-[#5A5A40] shadow-inner">

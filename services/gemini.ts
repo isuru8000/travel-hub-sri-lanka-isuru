@@ -321,16 +321,20 @@ export async function* streamLankaGuideResponse(
       For example: "[NAVIGATE:sigiriya] Sigiriya is an ancient rock fortress..." or "[NAVIGATE:arts-crafts] Here is some information about traditional arts and crafts..."
       Do not use the tag if the user is just asking a general question or if the destination/category is not in the list.
 
+      SITE CONTEXT:
+      You can search the content of this site: https://ais-dev-oqa7d2tkxanyrj4pzkfab3-12375318301.asia-southeast1.run.app
+      Use the 'urlContext' tool to find information about the site's content.
+
       Context:
       User Location: ${location ? `${location.latitude}, ${location.longitude}` : 'Unknown'}
     `;
 
-    // Use gemini-2.5-flash for vision tasks as it is robust and fast.
-    // If thinking mode is on, we still use pro, but pro also supports vision.
-    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-2.5-flash';
+    // Use gemini-3.1-flash-lite-preview for low latency
+    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite-preview';
     
     // Use googleMaps for standard queries, googleSearch for thinking/complex queries if needed
-    const tools = isThinkingMode ? [{ googleSearch: {} }] : [{ googleMaps: {} }];
+    // Add urlContext to allow searching site content
+    const tools = isThinkingMode ? [{ googleSearch: {} }, { urlContext: {} }] : [{ googleMaps: {} }, { urlContext: {} }];
 
     const chat = ai.chats.create({
       model,
@@ -409,8 +413,8 @@ export const getLankaGuideResponse = async (
       Your tone: Sophisticated, expert, and welcoming (Ayubowan). Always respond in ${language === 'SI' ? 'Sinhala' : 'English'}.
     `;
 
-    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-2.5-flash';
-    const tools = isThinkingMode ? [{ googleSearch: {} }] : [{ googleMaps: {} }];
+    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite-preview';
+    const tools = isThinkingMode ? [{ googleSearch: {} }, { urlContext: {} }] : [{ googleMaps: {} }, { urlContext: {} }];
 
     const response = await ai.models.generateContent({
       model,
