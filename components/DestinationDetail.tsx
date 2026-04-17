@@ -2,8 +2,22 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Destination, Language, NearbyAttraction } from '../types';
 import { DESTINATIONS, UI_STRINGS } from '../constants';
+import AboutTemple from './AboutTemple';
+import AboutSigiriya from './AboutSigiriya';
+import AboutUnawatuna from './AboutUnawatuna';
+import AboutMirissa from './AboutMirissa';
+import AboutHikkaduwa from './AboutHikkaduwa';
+import AboutArugamBay from './AboutArugamBay';
+import AboutNilaveli from './AboutNilaveli';
+import AboutPasikudah from './AboutPasikudah';
+import AboutRuwanwelisaya from './AboutRuwanwelisaya';
+import AboutBuduruwagala from './AboutBuduruwagala';
+import AboutMihintale from './AboutMihintale';
+import AboutVatadage from './AboutVatadage';
+import AboutGalleFort from './AboutGalleFort';
+import AboutDambulla from './AboutDambulla';
 import { 
-  ArrowLeft, 
+  ArrowLeft,  
   MapPin, 
   Compass, 
   Clock, 
@@ -55,7 +69,7 @@ import {
   ThumbsUp,
   ThumbsDown
 } from 'lucide-react';
-import { db } from '../firebase';
+import { db, auth } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { 
   getLankaGuideResponse, 
@@ -67,8 +81,9 @@ import {
 } from '../services/gemini';
 
 import ReactMarkdown from 'react-markdown';
-import Map from './Map';
+const Map = React.lazy(() => import('./Map'));
 import { SEO } from './SEO';
+import ReviewComponent from './ReviewComponent';
 
 interface DestinationDetailProps {
   destination: Destination | null;
@@ -379,29 +394,64 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                         </h3>
                     </div>
 
-                    <div className="relative group">
-                       <div className="font-serif text-base md:text-lg text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
-                          <div className="prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] first-letter:mt-2 first-letter:text-[#5A5A40]">
-                          {(() => {
-                             const detailedContent = destination.detailedAbout?.[language];
-                             const isPending = detailedContent?.includes("pending for this node") || detailedContent?.includes("සකසමින් පවතී");
-                             
-                             let content = detailedContent;
-                             if (deepDive?.history && (isPending || (detailedContent && detailedContent.length < 200))) {
-                               content = deepDive.history;
-                             }
+                    {destination.id === 'kandy-temple' ? (
+                       <AboutTemple language={language} />
+                    ) : destination.id === 'sigiriya' ? (
+                       <AboutSigiriya language={language} />
+                    ) : destination.id === 'unawatuna' ? (
+                       <AboutUnawatuna language={language} />
+                    ) : destination.id === 'mirissa' ? (
+                       <AboutMirissa language={language} />
+                    ) : destination.id === 'hikkaduwa' ? (
+                       <AboutHikkaduwa language={language} />
+                    ) : destination.id === 'arugambay' ? (
+                       <AboutArugamBay language={language} />
+                    ) : destination.id === 'nilaveli' ? (
+                       <AboutNilaveli language={language} />
+                    ) : destination.id === 'pasikudah' ? (
+                       <AboutPasikudah language={language} />
+                    ) : destination.id === 'ruwanwelisaya' ? (
+                       <AboutRuwanwelisaya language={language} />
+                    ) : destination.id === 'buduruwagala' ? (
+                       <AboutBuduruwagala language={language} />
+                    ) : destination.id === 'mihintale' ? (
+                       <AboutMihintale language={language} />
+                    ) : destination.id === 'vatadage' ? (
+                       <AboutVatadage language={language} />
+                    ) : destination.id === 'galle-fort' ? (
+                       <AboutGalleFort language={language} />
+                    ) : destination.id === 'dambulla' ? (
+                       <AboutDambulla language={language} />
+                    ) : (
+                      <div className="relative group">
+                         <div className="font-serif text-base md:text-lg text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
+                            <div className="prose-container first-letter:text-5xl md:first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:mr-4 first-letter:float-left first-letter:leading-[0.8] first-letter:mt-2 first-letter:text-[#5A5A40]">
+                            {(() => {
+                               const detailedContent = destination.detailedAbout?.[language];
+                               const isPending = detailedContent?.includes("pending for this node") || detailedContent?.includes("සකසමින් පවතී");
+                               
+                               let content = detailedContent;
+                               if (deepDive?.history && (isPending || (detailedContent && detailedContent.length < 200))) {
+                                 content = deepDive.history;
+                               }
 
-                             if (!content) return <p className="italic text-[#5A5A40]/40">Archival data loading...</p>;
+                               if (!content) return <p className="italic text-[#5A5A40]/40">Archival data loading...</p>;
 
-                             return (
-                               <div className="prose prose-base md:prose-lg prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-strong:text-[#5A5A40] prose-li:marker:text-[#5A5A40]">
-                                 <ReactMarkdown>{content}</ReactMarkdown>
-                               </div>
-                             );
-                          })()}
-                          </div>
-                       </div>
-                    </div>
+                               // Auto-parse raw image URLs and [IMG: url] tags to make it super easy for the user
+                               const processedContent = content
+                                 .replace(/\[IMG:\s*(https?:\/\/[^\]]+)\]/gi, '![]($1)')
+                                 .replace(/^(https?:\/\/[^\s]+\.(?:jpg|jpeg|png|gif|webp)(?:\?[^\s]*)?)$/gim, '![]($1)');
+
+                               return (
+                                 <div className="prose prose-base md:prose-lg prose-stone max-w-none prose-headings:font-serif prose-headings:font-bold prose-p:leading-relaxed prose-strong:text-[#5A5A40] prose-li:marker:text-[#5A5A40] prose-img:rounded-3xl prose-img:shadow-2xl prose-img:w-full prose-img:object-cover prose-img:my-10 prose-img:border prose-img:border-[#5A5A40]/10">
+                                   <ReactMarkdown>{processedContent}</ReactMarkdown>
+                                 </div>
+                               );
+                            })()}
+                            </div>
+                         </div>
+                      </div>
+                    )}
                  </div>
 
                  {/* Deep Dive Addendum: Hidden Echoes */}
@@ -436,7 +486,13 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                  {/* Map Manifold Frame */}
                  <div className="relative h-[400px] md:h-[600px] w-full bg-white p-4 border border-[#5A5A40]/10 rounded-[3rem] md:rounded-[4rem] shadow-xl overflow-hidden group">
                     {destination.coordinates ? (
-                      <Map lat={destination.coordinates.x} lng={destination.coordinates.y} name={destination.name[language]} />
+                      <React.Suspense fallback={
+                        <div className="w-full h-full bg-stone-100 flex items-center justify-center rounded-2xl border border-stone-200">
+                          <Loader2 className="animate-spin text-stone-400" />
+                        </div>
+                      }>
+                        <Map lat={destination.coordinates.x} lng={destination.coordinates.y} name={destination.name[language]} />
+                      </React.Suspense>
                     ) : (
                       <iframe 
                         src={googleMapsIframeUrl}
@@ -509,6 +565,10 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
               </button>
             </div>
           )}
+        </div>
+
+        <div className="mt-16 md:mt-24">
+          <ReviewComponent destinationId={destination.id} />
         </div>
 
         {/* FINAL RETURN ACTION */}

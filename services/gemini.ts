@@ -138,7 +138,7 @@ export const analyzeFoodImage = async (base64Image: string, language: Language):
         ? "කණගාටුයි, ගෝලීය දත්ත ප්‍රමාණය ඉක්මවා ඇත. කරුණාකර මොහොතකින් නැවත උත්සාහ කරන්න."
         : "Neural Link Throttled: Quota exceeded. Please wait a moment for the kitchen archives to re-sync.";
     }
-    return "Error: Neural link to the kitchen archives was interrupted.";
+    return "Error: Neural link to the kitchen archives was interrupted. Please try again.";
   }
 };
 
@@ -225,6 +225,7 @@ export const getWeatherUpdate = async (location: string, language: Language): Pr
         isThrottled: true
       };
     }
+    console.error("Weather API Error:", error);
     return null;
   }
 };

@@ -267,7 +267,10 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user || !user.uid) { onLogin(); return; }
-    if (!newMemoryForm.image) { alert("Missing visual fragment."); return; }
+    if (!newMemoryForm.image) {
+      console.error("Missing visual fragment.");
+      return;
+    }
 
     setIsSubmitting(true);
     try {

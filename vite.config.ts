@@ -6,6 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: '/',
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-leaflet', 'leaflet'],
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -15,11 +18,7 @@ export default defineConfig({
         main: './index.html',
       },
       output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return id.toString().split('node_modules/')[1].split('/')[0].toString();
-          }
-        }
+        // manualChunks disabled for debugging
       }
     },
   },

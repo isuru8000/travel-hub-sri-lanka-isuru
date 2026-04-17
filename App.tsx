@@ -33,7 +33,7 @@ const StorySection = lazy(() => import('./components/StorySection'));
 const IslandMapManifold = lazy(() => import('./components/IslandMapManifold'));
 const VRPortal = lazy(() => import('./components/VRPortal'));
 const NexusRewards = lazy(() => import('./components/NexusRewards'));
-const DestinationDetail = lazy(() => import('./components/DestinationDetail'));
+import DestinationDetail from './components/DestinationDetail';
 const Quiz = lazy(() => import('./components/Quiz'));
 const ProfileView = lazy(() => import('./components/ProfileView'));
 const VRExperience = lazy(() => import('./components/VRExperience'));
@@ -427,6 +427,16 @@ export default function App() {
     return keywords[view] ? `${keywords[view]}, ${baseKeywords}` : baseKeywords;
   };
 
+  const destinationItemList = useMemo(() => {
+    if (view === 'destinations') {
+      return DESTINATIONS_DATA.map(dest => ({
+        name: dest.name[language],
+        url: `https://www.travelhubsrilanka.space/destinations/${dest.id}`
+      }));
+    }
+    return undefined;
+  }, [view, language]);
+
   return (
     <ErrorBoundary>
       <Layout language={language} setLanguage={setLanguage} setView={(v: any) => setView(v)} currentView={view} user={user} onLogin={handleLogin} onLogout={handleLogout}>
@@ -443,6 +453,7 @@ export default function App() {
             image: selectedDestinationData.image,
             address: selectedDestinationData.location
           } : undefined}
+          itemList={destinationItemList}
         />
         <GoogleAnalytics view={view} />
         <div className="overflow-x-hidden transition-all duration-300 mobile-optimize">

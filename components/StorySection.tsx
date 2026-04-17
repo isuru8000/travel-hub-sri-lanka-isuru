@@ -67,37 +67,24 @@ const StorySection: React.FC<StorySectionProps> = ({ language, setView }) => {
           </button>
         </div>
 
-        {/* Stories Horizontal Scroll - Spreading horizontally across the page */}
-        <div className="relative group/scroll">
-          <div className="flex overflow-x-auto gap-8 md:gap-12 pb-16 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 mb-20">
-            {stories.map((s, i) => (
-              <div 
-                key={i} 
-                className="min-w-[85vw] md:min-w-[450px] snap-center space-y-8 group bg-stone-50/50 p-8 md:p-12 rounded-[3rem] border border-stone-100 hover:bg-white hover:shadow-[0_40px_80px_rgba(0,0,0,0.05)] transition-all duration-700"
-              >
-                 <div className="flex items-center gap-6">
-                    <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[12px] font-black text-[#E1306C] group-hover:bg-[#E1306C] group-hover:text-white transition-all duration-500">
-                      0{i+1}
-                    </div>
-                    <div className="h-px flex-grow bg-gray-200 group-hover:bg-[#E1306C]/20 transition-colors" />
-                    <span className="text-[9px] font-black text-gray-300 uppercase tracking-[0.4em]">Historical_Echo</span>
-                 </div>
-                 <p className="text-xl md:text-2xl font-light leading-relaxed italic text-gray-500 group-hover:text-gray-900 transition-colors">
-                   "{s[language]}"
-                 </p>
-                 <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                    <div className="w-12 h-1 bg-[#E1306C]/20 rounded-full" />
-                 </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Scroll Hint */}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3 opacity-20 group-hover/scroll:opacity-50 transition-opacity">
-             <div className="w-24 h-[1px] bg-black" />
-             <span className="text-[8px] font-black uppercase tracking-[0.4em]">Swipe to Explore</span>
-             <div className="w-24 h-[1px] bg-black" />
-          </div>
+        {/* Stories Bento Grid - Compact Pro Look */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16 max-w-5xl mx-auto">
+          {stories.map((s, i) => (
+            <div 
+              key={i} 
+              className="group bg-white p-6 rounded-2xl border border-stone-100 shadow-sm hover:shadow-md transition-all duration-300"
+            >
+               <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-lg bg-stone-100 flex items-center justify-center text-[9px] font-bold text-stone-600 group-hover:bg-[#E1306C] group-hover:text-white transition-all duration-300">
+                    0{i+1}
+                  </div>
+                  <span className="text-[8px] font-bold text-stone-400 uppercase tracking-[0.2em]">Historical_Echo</span>
+               </div>
+               <p className="text-sm md:text-base font-medium leading-relaxed text-stone-700 group-hover:text-black transition-colors">
+                 "{s[language]}"
+               </p>
+            </div>
+          ))}
         </div>
 
         {/* Visual Gallery Row */}

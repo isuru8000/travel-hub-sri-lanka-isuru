@@ -165,7 +165,15 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             </motion.span>
             
             <div className="relative group">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heritage font-bold leading-none tracking-tighter uppercase text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-[1.02] whitespace-nowrap">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="block text-2xl md:text-4xl font-serif italic text-white/80 mb-2"
+              >
+                {language === 'EN' ? 'Welcome to' : 'සාදරයෙන් පිළිගනිමු'}
+              </motion.span>
+              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[12rem] font-heritage font-bold leading-none tracking-tighter uppercase text-white drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-700 group-hover:scale-[1.02] whitespace-nowrap">
                 {language === 'EN' ? mainTitleEN : mainTitleSI}
               </h1>
               {/* Subtle floating glow behind title */}
@@ -179,10 +187,10 @@ const Hero: React.FC<HeroProps> = ({ language, setView, user }) => {
             transition={{ duration: 1, delay: 1 }}
             className="flex flex-col items-center mt-6"
           >
-             <p className="font-serif text-lg md:text-2xl font-medium text-white/90 max-w-3xl leading-relaxed tracking-widest px-4 text-center">
+             <p className="font-heritage text-sm md:text-lg font-bold text-white/70 max-w-xl leading-relaxed tracking-[0.05em] px-4 text-center">
                {language === 'EN' 
-                 ? "Embark on a journey to discover the untamed beauty, rich heritage, and hidden wonders of our island paradise."
-                 : "අපගේ දූපත් පාරාදීසයේ සැඟවුණු අසිරිය, පොහොසත් උරුමය සහ වනගත සුන්දරත්වය සොයා යන ගමනකට එක්වන්න."}
+                 ? "Embark on a journey to discover the untamed beauty,\nrich heritage, and hidden wonders of our island paradise."
+                 : "අපගේ දූපත් පාරාදීසයේ සැඟවුණු අසිරිය,\nපොහොසත් උරුමය සහ වනගත සුන්දරත්වය සොයා යන ගමනකට එක්වන්න."}
              </p>
           </motion.div>
         </motion.div>

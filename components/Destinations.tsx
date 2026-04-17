@@ -177,23 +177,19 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-2"
           >
             <div className="inline-flex items-center gap-4 px-6 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-3xl text-[#f5f5f0] text-[10px] font-bold uppercase tracking-[0.6em] shadow-2xl mx-auto">
               <Sparkles size={14} className="animate-pulse" />
               {language === 'EN' ? 'THE ARCHIVAL REGISTRY' : 'පැරණි නාමාවලිය'}
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-[8rem] font-heritage font-bold text-white tracking-tighter leading-none uppercase drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
+            <h2 className="text-4xl md:text-6xl lg:text-[7rem] font-heritage font-bold text-white tracking-tighter leading-none uppercase drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]">
               LOCATE <br/><span className="text-[#f5f5f0]/70 italic">WONDERS.</span>
             </h2>
           </motion.div>
 
           {/* CINEMATIC SEARCH BAR */}
-          <div className="w-full max-w-3xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
-            <div 
-              className="absolute -inset-4 rounded-[3rem] opacity-30 blur-2xl bg-[#5A5A40]"
-            />
-            <div className="absolute -inset-4 bg-[#5A5A40]/20 rounded-[3rem] blur-3xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-700" />
+          <div className="w-full max-w-2xl mx-auto relative group z-[110]" ref={searchWrapperRef}>
             <div className={`relative flex items-center bg-white border transition-all duration-500 overflow-hidden rounded-2xl ${isFocused ? 'border-[#5A5A40] shadow-xl' : 'border-gray-200 shadow-md'}`}>
               <div className="pl-6 text-[#5A5A40]">
                 {isSearching ? <Loader2 size={20} className="animate-spin" /> : <Search size={20} />}
@@ -243,15 +239,7 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
       </div>
 
       {/* STICKY CATEGORY BAR */}
-      <div className="sticky top-0 z-[100] py-3 md:py-4 border-b border-[#5A5A40]/10 overflow-hidden relative">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://i.pinimg.com/736x/3a/31/28/3a31288f4b9f2eac97336463fdfa78fe.jpg" 
-            alt="Background" 
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-[#f5f5f0]/90 backdrop-blur-sm" />
-        </div>
+      <div className="sticky top-0 z-[100] py-3 md:py-4 border-b border-white/10 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-8 flex flex-col lg:flex-row items-center justify-between gap-4 relative z-10">
           <div className="relative w-full lg:w-auto">
             <div className="flex items-center gap-4 overflow-x-auto no-scrollbar pb-2 lg:pb-0">

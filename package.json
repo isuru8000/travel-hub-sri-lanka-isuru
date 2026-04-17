@@ -40,6 +40,7 @@
   "devDependencies": {
     "@prerenderer/renderer-puppeteer": "^1.2.4",
     "@tailwindcss/vite": "^4.2.1",
+    "@types/leaflet": "^1.9.21",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.1",
