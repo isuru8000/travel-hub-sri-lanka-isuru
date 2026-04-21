@@ -16,6 +16,32 @@ import AboutMihintale from './AboutMihintale';
 import AboutVatadage from './AboutVatadage';
 import AboutGalleFort from './AboutGalleFort';
 import AboutDambulla from './AboutDambulla';
+import AboutAbhayagiriya from './AboutAbhayagiriya';
+import AboutYapahuwa from './AboutYapahuwa';
+import AboutJetavanaramaya from './AboutJetavanaramaya';
+import AboutYala from './AboutYala';
+import AboutUdawalawe from './AboutUdawalawe';
+import AboutMinneriya from './AboutMinneriya';
+import AboutWilpattu from './AboutWilpattu';
+import AboutKumana from './AboutKumana';
+import AboutSinharaja from './AboutSinharaja';
+import AboutBundala from './AboutBundala';
+import AboutPidurangala from './AboutPidurangala';
+import AboutRiverston from './AboutRiverston';
+import AboutHortonPlains from './AboutHortonPlains';
+import AboutKnuckles from './AboutKnuckles';
+import AboutElla from './AboutElla';
+import AboutAdamsPeak from './AboutAdamsPeak';
+import AboutDiyaluma from './AboutDiyaluma';
+import AboutBambarakanda from './AboutBambarakanda';
+import AboutRavanaFalls from './AboutRavanaFalls';
+import AboutDunhindaFalls from './AboutDunhindaFalls';
+import AboutBakersFalls from './AboutBakersFalls';
+import AboutBopathElla from './AboutBopathElla';
+import AboutStClairsFalls from './AboutStClairsFalls';
+import AboutDevonFalls from './AboutDevonFalls';
+import AboutLaxapanaFalls from './AboutLaxapanaFalls';
+import AboutAberdeenFalls from './AboutAberdeenFalls';
 import { 
   ArrowLeft,  
   MapPin, 
@@ -422,6 +448,58 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
                        <AboutGalleFort language={language} />
                     ) : destination.id === 'dambulla' ? (
                        <AboutDambulla language={language} />
+                    ) : destination.id === 'abhayagiriya' ? (
+                       <AboutAbhayagiriya language={language} />
+                    ) : destination.id === 'yapahuwa' ? (
+                       <AboutYapahuwa language={language} />
+                    ) : destination.id === 'jetavanaramaya' ? (
+                       <AboutJetavanaramaya language={language} />
+                    ) : destination.id === 'yala' ? (
+                       <AboutYala language={language} />
+                    ) : destination.id === 'udawalawe' ? (
+                       <AboutUdawalawe language={language} />
+                    ) : destination.id === 'minneriya' ? (
+                       <AboutMinneriya language={language} />
+                    ) : destination.id === 'wilpattu' ? (
+                       <AboutWilpattu language={language} />
+                    ) : destination.id === 'kumana' ? (
+                       <AboutKumana language={language} />
+                    ) : destination.id === 'sinharaja' ? (
+                       <AboutSinharaja language={language} />
+                    ) : destination.id === 'bundala' ? (
+                       <AboutBundala language={language} />
+                    ) : destination.id === 'pidurangala' ? (
+                       <AboutPidurangala language={language} />
+                    ) : destination.id === 'riverston' ? (
+                       <AboutRiverston language={language} />
+                    ) : destination.id === 'horton-plains' ? (
+                       <AboutHortonPlains language={language} />
+                    ) : destination.id === 'knuckles' ? (
+                       <AboutKnuckles language={language} />
+                    ) : destination.id === 'ella' ? (
+                       <AboutElla language={language} />
+                    ) : destination.id === 'adams-peak' ? (
+                       <AboutAdamsPeak language={language} />
+                    ) : destination.id === 'diyaluma' ? (
+                       <AboutDiyaluma language={language} />
+                    ) : destination.id === 'bambarakanda' ? (
+                       <AboutBambarakanda language={language} />
+                    ) : destination.id === 'ravanafalls' ? (
+                       <AboutRavanaFalls language={language} />
+                    ) : destination.id === 'dunhinda-falls' ? (
+                       <AboutDunhindaFalls language={language} />
+                    ) : destination.id === 'bakers-falls' ? (
+                       <AboutBakersFalls language={language} />
+                    ) : destination.id === 'bopathella' ? (
+                       <AboutBopathElla language={language} />
+                    ) : destination.id === "stclair's" ? (
+                       <AboutStClairsFalls language={language} />
+                    ) : destination.id === "devonfalls" ? (
+                       <AboutDevonFalls language={language} />
+                    ) : destination.id === "laxapana" ? (
+                       <AboutLaxapanaFalls language={language} />
+                    ) : destination.id === "aberdeen" ? (
+                       <AboutAberdeenFalls language={language} />
                     ) : (
                       <div className="relative group">
                          <div className="font-serif text-base md:text-lg text-[#2d2d2d] leading-relaxed space-y-6 md:space-y-10 antialiased font-light">
