@@ -77,7 +77,53 @@ const AboutSigiriya: React.FC<AboutSigiriyaProps> = ({ language }) => {
             <h3 className="text-[11px] uppercase tracking-[0.3em] text-[#5A5A40]/50 pt-2">{section.title.split(':')[0]}</h3>
             <div className="space-y-4">
               <h4 className="text-2xl md:text-3xl font-semibold text-black">{section.title.split(':')[1]}</h4>
-              <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line">{section.body}</p>
+              <div className="flex flex-col md:flex-row gap-6">
+                <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line flex-1">{section.body}</p>
+                {section.title.includes("Frescoes") && (
+                  <figure className="w-full md:w-64 flex-shrink-0">
+                    <img 
+                      src="https://i.pinimg.com/1200x/3e/09/76/3e0976235d0db25a0bed84f6df9a0a3f.jpg" 
+                      alt="Sigiriya Frescoes" 
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">— Ancient frescoes.</figcaption>
+                  </figure>
+                )}
+                {section.title.includes("Mirror Wall") && (
+                  <figure className="w-full md:w-64 flex-shrink-0">
+                    <img 
+                      src="https://i.pinimg.com/736x/dc/b5/cf/dcb5cf4c9b507d3a57a8b4f466984ace.jpg" 
+                      alt="Sigiriya Mirror Wall" 
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">— Ancient inscriptions.</figcaption>
+                  </figure>
+                )}
+                {section.title.includes("Lion's Paw") && (
+                  <figure className="w-full md:w-64 flex-shrink-0">
+                    <img 
+                      src="https://i.pinimg.com/736x/59/d1/34/59d13493ec9c363a6e9216d0818f8b41.jpg" 
+                      alt="Lion's Paw Platform" 
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">— Lion's Paw Platform.</figcaption>
+                  </figure>
+                )}
+                {section.title.includes("Summit Palace") && (
+                  <figure className="w-full md:w-64 flex-shrink-0">
+                    <img 
+                      src="https://i.pinimg.com/736x/63/35/66/633566ec001678599fc9db142a4dc912.jpg" 
+                      alt="Summit Palace View" 
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">— Summit palace view.</figcaption>
+                  </figure>
+                )}
+              </div>
             </div>
           </section>
         ))}
