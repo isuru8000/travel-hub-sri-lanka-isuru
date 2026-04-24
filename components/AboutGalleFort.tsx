@@ -103,7 +103,76 @@ const AboutGalleFort: React.FC<AboutGalleFortProps> = ({ language }) => {
                     </figcaption>
                   </figure>
                 )}
+                <div>
+                {section.title.match(/Section 0(3|4|5|7)/) && (
+                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
+                    <img 
+                      src={
+                        section.title.includes("Section 03") 
+                          ? "https://i.pinimg.com/736x/23/7a/7b/237a7b52854312546872cf2306d50241.jpg" 
+                          : section.title.includes("Section 04")
+                          ? "https://i.pinimg.com/736x/01/be/75/01be75abec8526543b573a4b0d061c4b.jpg"
+                          : section.title.includes("Section 05")
+                          ? "https://i.pinimg.com/736x/8d/f2/07/8df207e0c8de8174775d713a29851759.jpg"
+                          : "https://i.pinimg.com/736x/44/e9/c9/44e9c9c30c8da98105c3c042978a3f89.jpg"
+                      }
+                      alt={section.title.split(':')[1]?.trim() || "Image"}
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
+                      — {section.title.includes("Section 03") ? "The Ramparts" : section.title.includes("Section 04") ? "Streets & Architecture" : section.title.includes("Section 05") ? "Galle Lighthouse" : "Dining in the Fort"}.
+                    </figcaption>
+                  </figure>
+                )}
+                <div>
+                {section.title.match(/Section 0(3|4|5|7)/) && (
+                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
+                    <img 
+                      src={
+                        section.title.includes("Section 03") 
+                          ? "https://i.pinimg.com/736x/23/7a/7b/237a7b52854312546872cf2306d50241.jpg" 
+                          : section.title.includes("Section 04")
+                          ? "https://i.pinimg.com/736x/01/be/75/01be75abec8526543b573a4b0d061c4b.jpg"
+                          : section.title.includes("Section 05")
+                          ? "https://i.pinimg.com/736x/8d/f2/07/8df207e0c8de8174775d713a29851759.jpg"
+                          : "https://i.pinimg.com/736x/44/e9/c9/44e9c9c30c8da98105c3c042978a3f89.jpg"
+                      }
+                      alt={section.title.split(':')[1]?.trim() || "Image"}
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
+                      — {section.title.includes("Section 03") ? "The Ramparts" : section.title.includes("Section 04") ? "Streets & Architecture" : section.title.includes("Section 05") ? "Galle Lighthouse" : "Dining in the Fort"}.
+                    </figcaption>
+                  </figure>
+                )}
+                <div>
+                {section.title.match(/Section 0(3|4|5|7)/) && (
+                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
+                    <img 
+                      src={
+                        section.title.includes("Section 03") 
+                          ? "https://i.pinimg.com/736x/23/7a/7b/237a7b52854312546872cf2306d50241.jpg" 
+                          : section.title.includes("Section 04")
+                          ? "https://i.pinimg.com/736x/01/be/75/01be75abec8526543b573a4b0d061c4b.jpg"
+                          : section.title.includes("Section 05")
+                          ? "https://i.pinimg.com/736x/8d/f2/07/8df207e0c8de8174775d713a29851759.jpg"
+                          : "https://i.pinimg.com/736x/44/e9/c9/44e9c9c30c8da98105c3c042978a3f89.jpg"
+                      }
+                      alt={section.title.split(':')[1]?.trim() || "Image"}
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
+                      — {section.title.includes("Section 03") ? "The Ramparts" : section.title.includes("Section 04") ? "Streets & Architecture" : section.title.includes("Section 05") ? "Galle Lighthouse" : "Dining in the Fort"}.
+                    </figcaption>
+                  </figure>
+                )}
                 <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line">{section.body}</p>
+              </div>
+              </div>
+              </div>
               </div>
             </div>
           </section>

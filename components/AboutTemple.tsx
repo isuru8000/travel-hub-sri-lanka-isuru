@@ -81,7 +81,30 @@ const AboutTemple: React.FC<AboutTempleProps> = ({ language }) => {
             <h3 className="text-[11px] uppercase tracking-[0.3em] text-[#5A5A40]/50 pt-2">{section.title.split(':')[0]}</h3>
             <div className="space-y-4">
               <h4 className="text-2xl md:text-3xl font-semibold text-black">{section.title.split(':')[1]}</h4>
-              <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line">{section.body}</p>
+              <div>
+                {section.title.match(/Section 0(3|4|5|6)/) && (
+                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
+                    <img 
+                      src={
+                        section.title.includes("Section 03") 
+                          ? "https://i.pinimg.com/1200x/83/bb/fd/83bbfd0f4efba835c40517ae0793b8cf.jpg" 
+                          : section.title.includes("Section 04")
+                          ? "https://i.pinimg.com/736x/b0/68/68/b06868dcfc87e807d1009463db348b38.jpg"
+                          : section.title.includes("Section 05")
+                          ? "https://i.pinimg.com/736x/7e/7f/25/7e7f253cfa65a829f50d87bd032deaae.jpg"
+                          : "https://i.pinimg.com/736x/2a/d5/a5/2ad5a5cdab1f051ec1ae61eff8cd93bd.jpg"
+                      }
+                      alt={section.title.split(':')[1]?.trim() || "Image"}
+                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
+                      referrerPolicy="no-referrer"
+                    />
+                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
+                      — {section.title.includes("Section 03") ? "Temple Architecture" : section.title.includes("Section 04") ? "Relic Chamber" : section.title.includes("Section 05") ? "Puja Ceremony" : "Esala Perahera"}.
+                    </figcaption>
+                  </figure>
+                )}
+                <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line">{section.body}</p>
+              </div>
             </div>
           </section>
         ))}
