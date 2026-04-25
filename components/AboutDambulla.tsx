@@ -99,76 +99,7 @@ const AboutDambulla: React.FC<AboutDambullaProps> = ({ language }) => {
                     </figcaption>
                   </figure>
                 )}
-                <div>
-                {section.title.match(/Section 0(1|3|4|5)/) && (
-                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
-                    <img 
-                      src={
-                        section.title.includes("Section 01") 
-                          ? "https://i.pinimg.com/736x/9d/f4/c0/9df4c077da209a0e522c7f5642cb900b.jpg" 
-                          : section.title.includes("Section 03")
-                          ? "https://i.pinimg.com/736x/53/fe/4f/53fe4f3913936747e254aee1ff5672e7.jpg"
-                          : section.title.includes("Section 04")
-                          ? "https://i.pinimg.com/1200x/fb/60/5c/fb605c19507fa820ac4029204e66e63d.jpg"
-                          : "https://i.pinimg.com/1200x/f2/99/ff/f299ff5f25a8282c6404ca03519cf117.jpg"
-                      }
-                      alt={section.title.split(':')[1]?.trim() || "Image"}
-                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
-                      referrerPolicy="no-referrer"
-                    />
-                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
-                      — {section.title.includes("Section 01") ? "Dambulla Cave Temple" : section.title.includes("Section 03") ? "Inside the caves" : section.title.includes("Section 04") ? "Ancient paintings" : "Buddhist statues"}.
-                    </figcaption>
-                  </figure>
-                )}
-                <div>
-                {section.title.match(/Section 0(1|3|4|5)/) && (
-                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
-                    <img 
-                      src={
-                        section.title.includes("Section 01") 
-                          ? "https://i.pinimg.com/736x/9d/f4/c0/9df4c077da209a0e522c7f5642cb900b.jpg" 
-                          : section.title.includes("Section 03")
-                          ? "https://i.pinimg.com/736x/53/fe/4f/53fe4f3913936747e254aee1ff5672e7.jpg"
-                          : section.title.includes("Section 04")
-                          ? "https://i.pinimg.com/1200x/fb/60/5c/fb605c19507fa820ac4029204e66e63d.jpg"
-                          : "https://i.pinimg.com/1200x/f2/99/ff/f299ff5f25a8282c6404ca03519cf117.jpg"
-                      }
-                      alt={section.title.split(':')[1]?.trim() || "Image"}
-                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
-                      referrerPolicy="no-referrer"
-                    />
-                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
-                      — {section.title.includes("Section 01") ? "Dambulla Cave Temple" : section.title.includes("Section 03") ? "Inside the caves" : section.title.includes("Section 04") ? "Ancient paintings" : "Buddhist statues"}.
-                    </figcaption>
-                  </figure>
-                )}
-                <div>
-                {section.title.match(/Section 0(1|3|4|5)/) && (
-                  <figure className="w-full md:w-64 float-right ml-6 mb-4">
-                    <img 
-                      src={
-                        section.title.includes("Section 01") 
-                          ? "https://i.pinimg.com/736x/9d/f4/c0/9df4c077da209a0e522c7f5642cb900b.jpg" 
-                          : section.title.includes("Section 03")
-                          ? "https://i.pinimg.com/736x/53/fe/4f/53fe4f3913936747e254aee1ff5672e7.jpg"
-                          : section.title.includes("Section 04")
-                          ? "https://i.pinimg.com/1200x/fb/60/5c/fb605c19507fa820ac4029204e66e63d.jpg"
-                          : "https://i.pinimg.com/1200x/f2/99/ff/f299ff5f25a8282c6404ca03519cf117.jpg"
-                      }
-                      alt={section.title.split(':')[1]?.trim() || "Image"}
-                      className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
-                      referrerPolicy="no-referrer"
-                    />
-                    <figcaption className="text-[10px] text-gray-500 mt-2 font-mono tracking-wider uppercase">
-                      — {section.title.includes("Section 01") ? "Dambulla Cave Temple" : section.title.includes("Section 03") ? "Inside the caves" : section.title.includes("Section 04") ? "Ancient paintings" : "Buddhist statues"}.
-                    </figcaption>
-                  </figure>
-                )}
                 <p className="text-[#2d2d2d]/80 leading-relaxed font-light whitespace-pre-line">{section.body}</p>
-              </div>
-              </div>
-              </div>
               </div>
             </div>
           </section>

@@ -4,23 +4,12 @@ import { Language } from "../types";
 
 // Helper to get the API key safely across different environments (AI Studio vs Vercel)
 const getApiKey = (): string => {
-  // 1. Try Vite environment variable (for Vercel/local deployments)
-  if (import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
-    return import.meta.env.VITE_GEMINI_API_KEY;
-  }
-  // 2. Fallback to process.env (for AI Studio environment)
-  if (typeof process !== 'undefined' && process.env) {
-    const key = process.env.API_KEY || process.env.GEMINI_API_KEY;
-    if (key) return key;
+  // Use process.env.GEMINI_API_KEY as the primary source
+  if (process.env.GEMINI_API_KEY) {
+    return process.env.GEMINI_API_KEY;
   }
   
-  // 3. Last resort check for Vercel injected envs on window if available
-  // Sometimes Vercel injects envs differently in certain build configs
-  if (typeof window !== 'undefined' && (window as any)._env_ && (window as any)._env_.VITE_GEMINI_API_KEY) {
-    return (window as any)._env_.VITE_GEMINI_API_KEY;
-  }
-
-  console.warn("Gemini API Key is missing. Please check Vercel Environment Variables.");
+  console.warn("Gemini API Key is missing. Please check Environment Variables.");
   return '';
 };
 
@@ -334,8 +323,10 @@ export async function* streamLankaGuideResponse(
     const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite-preview';
     
     // Use googleMaps for standard queries, googleSearch for thinking/complex queries if needed
-    // Add urlContext to allow searching site content
-    const tools = isThinkingMode ? [{ googleSearch: {} }, { urlContext: {} }] : [{ googleMaps: {} }, { urlContext: {} }];
+    // Add urlContext only when using googleSearch to avoid conflict with googleMaps
+    const tools = isThinkingMode 
+      ? [{ googleSearch: {} }, { urlContext: {} }] 
+      : [{ googleMaps: {} }];
 
     const chat = ai.chats.create({
       model,
