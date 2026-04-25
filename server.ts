@@ -6,6 +6,7 @@ import axios from "axios";
 import path from "path";
 import { fileURLToPath } from "url";
 import Stripe from "stripe";
+import { streamLankaGuideResponse } from "./services/gemini";
 
 dotenv.config();
 
@@ -25,6 +26,23 @@ async function startServer() {
 
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok" });
+  });
+
+  app.post("/api/chat", async (req, res) => {
+    const { prompt, history, language, location, isThinkingMode, image } = req.body;
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+    res.setHeader('Transfer-Encoding', 'chunked');
+
+    try {
+      const stream = streamLankaGuideResponse(prompt, history, language, location, isThinkingMode, image);
+      for await (const chunk of stream) {
+        res.write(JSON.stringify(chunk) + '\n');
+      }
+      res.end();
+    } catch (e) {
+      console.error(e);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   });
 
   app.post("/api/create-payment-intent", async (req, res) => {
