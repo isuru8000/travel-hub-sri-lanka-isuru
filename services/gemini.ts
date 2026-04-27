@@ -9,7 +9,7 @@ const getApiKey = (): string => {
     return process.env.GEMINI_API_KEY;
   }
   
-  console.warn("Gemini API Key is missing. Please check Environment Variables.");
+  console.error("Gemini API Key is missing. Current environment keys:", Object.keys(process.env).filter(k => k.includes('GEMINI')));
   return '';
 };
 
