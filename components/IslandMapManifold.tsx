@@ -1,20 +1,15 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo } from 'react';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
 import { Language, Destination } from '../types';
-import { DESTINATIONS, UI_STRINGS } from '../constants';
+import { DESTINATIONS } from '../constants';
 import { 
   Compass, 
-  MapPin, 
-  ArrowRight, 
-  ArrowLeft,
-  Sparkles, 
   Target, 
   Search, 
-  X,
-  Zap,
-  Layers,
-  Database,
-  Globe,
-  Star,
+  ArrowRight, 
+  ArrowLeft,
   Activity,
   Maximize2,
   ChevronLeft,
@@ -23,9 +18,21 @@ import {
   Pause,
   Scan,
   Radio,
-  Droplets,
   Tent
 } from 'lucide-react';
+
+// Fix for leaflet marker icon
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+const DefaultIcon = L.icon({
+    iconUrl: markerIcon,
+    shadowUrl: markerShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41]
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 interface IslandMapManifoldProps {
   language: Language;
@@ -54,8 +61,6 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
     });
   }, [searchQuery, categoryFilter]);
 
-  const currentNode = tourMode ? filteredNodes[activeTourIndex] : hoveredNode;
-
   const categoryColors = {
     ancient: '#F59E0B',
     beach: '#0EA5E9',
@@ -77,18 +82,6 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
     setTourMode(!tourMode);
     if (!tourMode) setActiveTourIndex(0);
   };
-
-  // Map view transformation based on focus
-  const mapTransform = useMemo(() => {
-    if (!tourMode || !filteredNodes[activeTourIndex]?.coordinates) return 'scale(1) translate(0, 0)';
-    const node = filteredNodes[activeTourIndex];
-    if (!node.coordinates) return 'scale(1) translate(0, 0)';
-    
-    // Calculate translation to center the node (assuming 50% is center)
-    const tx = (50 - node.coordinates.x) * 2.5; 
-    const ty = (50 - node.coordinates.y) * 2.5;
-    return `scale(1.8) translate(${tx}%, ${ty}%)`;
-  }, [tourMode, activeTourIndex, filteredNodes]);
 
   return (
     <div className="min-h-screen bg-[#050508] relative overflow-hidden flex flex-col pt-32 pb-12">
@@ -218,116 +211,39 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
            <div className="absolute inset-0 pattern-overlay opacity-10 pointer-events-none" />
            
            {/* MAP ENGINE */}
-           <div className="absolute inset-0 flex items-center justify-center p-10 md:p-20">
-              {categoryFilter === 'camping' && (
-                <div className="absolute inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-md animate-in fade-in duration-700">
-                   <div className="text-center space-y-8 max-w-md px-6">
-                      <div className="w-24 h-24 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto border border-emerald-500/30 shadow-[0_0_50px_rgba(16,185,129,0.2)]">
-                         <Tent size={48} className="text-emerald-500 animate-pulse" />
-                      </div>
-                      <div className="space-y-4">
-                         <h3 className="text-4xl font-heritage font-bold text-white uppercase tracking-tighter">Camping Registry</h3>
-                         <p className="text-xl text-emerald-500 font-black uppercase tracking-[0.4em] animate-pulse">
-                            {language === 'EN' ? 'Coming Soon' : 'ළඟදීම'}
-                         </p>
-                      </div>
-                      <p className="text-gray-400 italic text-sm leading-relaxed">
-                         {language === 'EN' 
-                           ? "The geospatial nodes for wild forest camping are currently being synchronized. Access will be granted in the next system update."
-                           : "වනාන්තර කලාප දත්ත පද්ධතියට එක් කරමින් පවතී. මීළඟ යාවත්කාලීනයෙන් පිවිසිය හැක."}
-                      </p>
-                      <button 
-                        onClick={() => setCategoryFilter('all')}
-                        className="px-10 py-4 bg-white text-black rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:scale-105 transition-transform"
-                      >
-                        Return to Core
-                      </button>
-                   </div>
-                </div>
-              )}
-              <div 
-                className="relative h-full aspect-[3/4] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
-                style={{ transform: mapTransform }}
+           <div className="absolute inset-0">
+              <MapContainer 
+                center={[7.8731, 80.7718]} 
+                zoom={8} 
+                style={{ width: '100%', height: '100%' }}
+                className="rounded-[4rem]"
               >
-                 {/* Topographical Base */}
-                 <img 
-                   src="https://images.unsplash.com/photo-1514483127413-f72f273478c3?auto=format&fit=crop&w=1200&q=80" 
-                   className="w-full h-full object-contain opacity-30 grayscale contrast-150 transition-all duration-1000" 
-                   alt="Lanka Terrain"
-                   style={{ maskImage: 'radial-gradient(circle, black 40%, transparent 95%)' }}
-                 />
-                 
-                 {/* Nodes Layer */}
-                 <div className="absolute inset-0">
-                    {filteredNodes.map((node, idx) => {
-                      if (!node.coordinates) return null;
-                      const isActive = tourMode && activeTourIndex === idx;
-                      const isHovered = hoveredNode?.id === node.id;
-                      const isFocused = isActive || isHovered;
-                      const color = categoryColors[node.category] || '#ffffff';
-
-                      return (
-                        <div 
-                          key={node.id}
-                          className="absolute"
-                          style={{ left: `${node.coordinates.x}%`, top: `${node.coordinates.y}%`, transform: 'translate(-50%, -50%)', zIndex: isFocused ? 50 : 10 }}
-                          onMouseEnter={() => !tourMode && setHoveredNode(node)}
-                          onMouseLeave={() => !tourMode && setHoveredNode(null)}
-                          onClick={() => onSelectDestination(node)}
-                        >
-                          <div className={`relative cursor-pointer transition-all duration-700 ${isFocused ? 'scale-[2]' : 'scale-100'}`}>
-                             <div className={`absolute inset-0 rounded-full animate-ping opacity-30 ${isFocused ? 'scale-[3]' : ''}`} style={{ backgroundColor: color, animationDuration: '3s' }} />
-                             <div 
-                               className="w-4 h-4 rounded-full border-2 border-white shadow-2xl relative z-10 flex items-center justify-center" 
-                               style={{ backgroundColor: color }}
-                             >
-                                {isFocused && <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />}
-                             </div>
-                          </div>
-
-                          {/* Focus Shard (Tooltip) */}
-                          {isFocused && (
-                            <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-8 w-80 animate-in slide-in-from-bottom-4 zoom-in-95 duration-500 z-50 pointer-events-none ${tourMode ? 'scale-[0.6]' : ''}`}>
-                               <div className="bg-black/90 backdrop-blur-3xl border border-white/20 rounded-[3.5rem] p-2 shadow-[0_40px_100px_rgba(0,0,0,1)] overflow-hidden">
-                                  <div className="aspect-video rounded-[3rem] overflow-hidden mb-4 border border-white/5 relative">
-                                     <img src={node.image} className="w-full h-full object-cover" alt="" />
-                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                                     <div className="absolute top-4 right-4">
-                                        <div className="px-3 py-1 bg-[#E1306C] text-white text-[7px] font-black uppercase tracking-widest rounded-full shadow-2xl">Focus_Active</div>
-                                     </div>
-                                     <div className="absolute bottom-4 left-6">
-                                        <p className="text-[10px] font-black uppercase text-[#0EA5E9] tracking-widest">{node.location}</p>
-                                     </div>
-                                  </div>
-                                  <div className="px-8 pb-10 pt-2 space-y-4">
-                                     <div className="flex items-center justify-between">
-                                        <h4 className="text-2xl font-heritage font-bold text-white uppercase tracking-tight">{node.name[language]}</h4>
-                                        <Star size={14} className="text-yellow-400 fill-current" />
-                                     </div>
-                                     <p className="text-xs text-gray-400 font-medium italic line-clamp-3 leading-relaxed">"{node.shortStory[language]}"</p>
-                                     <div className="pt-6 border-t border-white/10 flex items-center justify-between">
-                                        <div className="flex items-center gap-2">
-                                           <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping" />
-                                           <span className="text-[8px] font-black uppercase text-white/30">Registry_Synced</span>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-[#E1306C] text-[8px] font-black uppercase tracking-widest">
-                                           Launch <ArrowRight size={12} />
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                               <div className="w-[1px] h-14 bg-gradient-to-t from-[#E1306C]/50 to-transparent mx-auto" />
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                 </div>
-              </div>
+                  <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  />
+                  {filteredNodes.map((node) => {
+                       if (!node.coordinates) return null;
+                       const position: [number, number] = [
+                           9.6 - (node.coordinates.y / 100) * 5,
+                           79.5 + (node.coordinates.x / 100) * 5
+                       ];
+                       
+                       return (
+                         <Marker
+                           key={node.id}
+                           position={position}
+                           eventHandlers={{
+                               click: () => onSelectDestination(node),
+                           }}
+                         />
+                       );
+                  })}
+              </MapContainer>
            </div>
-
+           
            {/* Map HUD Components */}
-           <div className="absolute top-10 right-10 flex flex-col gap-6">
+           <div className="absolute top-10 right-10 flex flex-col gap-6 z-[60]">
               <div className="bg-black/60 backdrop-blur-3xl border border-white/10 p-6 rounded-3xl space-y-4 text-right shadow-2xl">
                  <div className="space-y-1">
                     <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.4em]">Uplink_Identity</p>
@@ -350,21 +266,10 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
                  </button>
               </div>
            </div>
-
-           <div className="absolute bottom-10 left-10 space-y-6 pointer-events-none">
-              <div className="bg-white/5 backdrop-blur-xl border border-white/5 p-6 rounded-[2rem] space-y-2 opacity-60 group-hover:opacity-100 transition-opacity">
-                 <p className="text-[8px] font-black text-white/40 uppercase tracking-[0.4em]">Node_Coordinates</p>
-                 <div className="flex items-center gap-4 text-white font-mono text-[10px] tracking-widest">
-                    <span>X: {currentNode?.coordinates?.x || '--'}</span>
-                    <span>Y: {currentNode?.coordinates?.y || '--'}</span>
-                 </div>
-              </div>
-              <Compass size={120} className="text-white opacity-10 animate-spin-slow" />
-           </div>
            
            {/* Tour Progress Bar (Bottom) */}
            {tourMode && (
-             <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-white/5">
+             <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-white/5 z-[60]">
                 <div 
                   className="h-full bg-gradient-to-r from-[#E1306C] via-purple-500 to-[#0EA5E9] shadow-[0_0_20px_#E1306C] transition-all duration-700"
                   style={{ width: `${((activeTourIndex + 1) / filteredNodes.length) * 100}%` }}
@@ -375,6 +280,7 @@ const IslandMapManifold: React.FC<IslandMapManifoldProps> = ({ language, onSelec
       </div>
       
       <style dangerouslySetInnerHTML={{ __html: `
+        .leaflet-container { z-index: 10; }
         .animate-spin-slow { animation: spin 40s linear infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         .shadow-3xl { box-shadow: 0 40px 100px rgba(0,0,0,0.8); }

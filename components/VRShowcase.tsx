@@ -14,7 +14,7 @@ const REGISTRY_01 = [
     id: 'sigiriya',
     name: { EN: 'Sigiriya Lion Rock', SI: 'සීගිරිය සිංහගිරිය' },
     status: '92% SCANNED',
-    image: 'https://i.pinimg.com/1200x/3a/e7/48/3ae7487f4e95b92ce2d3c10c5b1038e0.jpg',
+    image: 'https://i.pinimg.com/736x/49/b3/b7/49b3b7214c196d52e531737a9e4f9613.jpg',
     type: 'FORTRESS',
     progress: 92,
     price: 150
@@ -23,7 +23,7 @@ const REGISTRY_01 = [
     id: 'kandy',
     name: { EN: 'Temple of the Tooth', SI: 'ශ්‍රී දළදා මාළිගාව' },
     status: '65% PROCESSING',
-    image: 'https://images.unsplash.com/photo-1665849050332-8d5d7e59afb6?auto=format&fit=crop&w=800&q=80',
+    image: 'https://i.pinimg.com/736x/f6/5c/1e/f65c1e46b4d2a26994a58b04f0d51ee2.jpg',
     type: 'SACRED',
     progress: 65,
     price: 120
@@ -52,18 +52,18 @@ const PHASE_02_SPACES = [
   {
     id: 'ruwanwelisaya',
     name: { EN: 'Sacred Ruwanwelisaya', SI: 'රුවන්වැලිසෑය' },
-    status: 'COMING SOON',
+    status: 'ACTIVE_NODE',
     image: 'https://i.pinimg.com/1200x/e6/c4/67/e6c467b97e6ff3c8344d25e2b107b50e.jpg',
     type: 'ANCIENT',
-    progress: 5
+    progress: 88
   },
   {
     id: 'gal-vihara',
     name: { EN: 'Gal Vihara Sculptures', SI: 'ගල් විහාරය' },
-    status: 'COMING SOON',
+    status: 'ACTIVE_NODE',
     image: 'https://i.pinimg.com/1200x/bd/35/c6/bd35c69b7b3ed5e31da0edc4e374b028.jpg',
     type: 'KINGDOM',
-    progress: 5
+    progress: 82
   },
   {
     id: 'jaffna-vr',
@@ -71,15 +71,23 @@ const PHASE_02_SPACES = [
     status: 'NORTH SECTOR SYNC',
     image: 'https://images.unsplash.com/photo-1578503117502-3162799f9392?auto=format&fit=crop&w=800&q=80',
     type: 'NORTHERN',
-    progress: 8
+    progress: 75
   },
   {
     id: 'yala',
     name: { EN: 'Yala Leopard Zone', SI: 'යාල අභයභූමිය' },
-    status: 'COMING SOON',
+    status: 'ACTIVE_NODE',
     image: 'https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=800&q=80',
     type: 'WILDLIFE',
-    progress: 5
+    progress: 91
+  },
+  {
+    id: 'sinharaja-forest',
+    name: { EN: 'Sinharaja Rainforest', SI: 'සිංහරාජ වැසි වනාන්තරය' },
+    status: 'ACTIVE_NODE',
+    image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80',
+    type: 'RAINFOREST',
+    progress: 72
   }
 ];
 
@@ -87,18 +95,18 @@ const PHASE_05_SPACES = [
   {
     id: 'mihintale-peak',
     name: { EN: 'Mihintale Solar Peak', SI: 'මිහින්තලේ රන් පියස' },
-    status: 'AWAITING LIGHT LOCK',
+    status: 'ACTIVE_NODE',
     image: 'https://images.unsplash.com/photo-1578503117502-3162799f9392?auto=format&fit=crop&w=800&q=80',
     type: 'SACRED',
-    progress: 0
+    progress: 85
   },
   {
     id: 'buduruwagala-monolith',
     name: { EN: 'Buduruwagala Monolith', SI: 'බුදුරුවගල සලකුණ' },
-    status: 'SYNCING VIBRATION',
+    status: 'ACTIVE_NODE',
     image: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80',
     type: 'KINGDOM',
-    progress: 0
+    progress: 78
   },
   {
     id: 'dunhinda-liquid',
@@ -106,7 +114,7 @@ const PHASE_05_SPACES = [
     status: 'FLOW CALIBRATION',
     image: 'https://i.pinimg.com/1200x/6d/7e/56/6d7e563f1c2023515b337ca7b266cd77.jpg',
     type: 'CASCADE',
-    progress: 0
+    progress: 95
   },
   {
     id: 'nilaveli-abyss',
@@ -114,9 +122,10 @@ const PHASE_05_SPACES = [
     status: 'DEPTH HANDSHAKE',
     image: 'https://i.pinimg.com/1200x/c8/c2/40/c8c240b6df4dfb3bccbaa0995b8266b4.jpg',
     type: 'ABYSS',
-    progress: 0
+    progress: 82
   }
 ];
+
 
 const VRCard: React.FC<{ space: any, language: Language, idx: number, isLocked?: boolean, themeColor?: string, onClick?: () => void }> = ({ space, language, idx, isLocked, themeColor = '#E1306C', onClick }) => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -487,7 +496,7 @@ const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView, onBack }) =>
 
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
               {PHASE_02_SPACES.map((space, idx) => (
-                <VRCard key={space.id} space={space} language={language} idx={idx + 4} isLocked={true} themeColor="#3B82F6" />
+                <VRCard key={space.id} space={space} language={language} idx={idx + 4} isLocked={false} themeColor="#3B82F6" />
               ))}
            </div>
         </div>
@@ -504,13 +513,15 @@ const VRShowcase: React.FC<VRShowcaseProps> = ({ language, setView, onBack }) =>
                  THE <span className="text-amber-500 italic">FRONTIER.</span>
               </h3>
               <p className="text-gray-500 text-sm md:text-base font-black uppercase tracking-[0.4em] max-w-2xl leading-relaxed opacity-60 italic">
-                Looking at the high mountains and deep seas. New places will be ready soon.
+                {language === 'EN' 
+                  ? 'Looking at the high mountains and deep seas. New places are now syncing.' 
+                  : 'උස කඳු සහ ගැඹුරු මුහුදු දෙස බලමින්. දැන් නව ස්ථාන සැකසෙමින් පවතී.'}
               </p>
            </div>
 
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
               {PHASE_05_SPACES.map((space, idx) => (
-                <VRCard key={space.id} space={space} language={language} idx={idx + 12} isLocked={true} themeColor="#F59E0B" />
+                <VRCard key={space.id} space={space} language={language} idx={idx + 12} isLocked={false} themeColor="#F59E0B" />
               ))}
            </div>
            

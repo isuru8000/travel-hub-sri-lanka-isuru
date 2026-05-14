@@ -308,10 +308,10 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
   const memoriesHeroImage = "https://i.pinimg.com/736x/0a/51/50/0a51506962464dcfabe4ec6baa8efc84.jpg";
 
   return (
-    <div className="min-h-screen bg-white text-[#0a0a0a] relative overflow-hidden flex flex-col items-center">
+    <div className="min-h-screen bg-pink-50 text-rose-900 relative overflow-hidden flex flex-col items-center">
       {/* BACKGROUND DECORATION */}
-      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.02]" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/carbon-fibre.png")` }} />
-      <div className="fixed inset-0 z-0 pointer-events-none opacity-10 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.15)_0%,transparent_80%)]" />
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.05]" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/heart-pattern.png")` }} />
+      <div className="fixed inset-0 z-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,rgba(251,113,133,0.15)_0%,transparent_80%)]" />
 
       {/* DELETE CONFIRMATION MODAL */}
       {deleteConfirm && (
@@ -323,7 +323,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                 <X size={32} className="text-red-500" />
               </div>
               <div className="space-y-2">
-                <h4 className="text-2xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">
+                <h4 className="text-2xl font-heritage font-bold text-rose-950 uppercase tracking-tighter">
                   {language === 'EN' ? 'Confirm Deletion' : 'මකා දැමීම තහවුරු කරන්න'}
                 </h4>
                 <p className="text-gray-500 text-sm font-medium italic">
@@ -394,7 +394,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                       <img src={`https://ui-avatars.com/api/?name=${currentActiveMemory.userName}&background=0EA5E9&color=fff`} className="w-full h-full object-cover rounded-xl" alt={currentActiveMemory.userName} />
                     </div>
                     <div className="text-left">
-                      <p className="text-xs font-black text-[#0a0a0a] uppercase tracking-widest">{currentActiveMemory.userName}</p>
+                      <p className="text-xs font-black text-rose-950 uppercase tracking-widest">{currentActiveMemory.userName}</p>
                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{currentActiveMemory.date}</p>
                     </div>
                   </div>
@@ -424,7 +424,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                           <img src={comment.userPhoto || `https://ui-avatars.com/api/?name=${comment.userName}&background=f0f0f0&color=999`} className="w-10 h-10 rounded-xl object-cover" alt={comment.userName} />
                           <div className="flex-grow text-left space-y-1">
                             <div className="flex justify-between items-center">
-                              <p className="text-[10px] font-black text-[#0a0a0a] uppercase tracking-widest">{comment.userName}</p>
+                              <p className="text-[10px] font-black text-rose-950 uppercase tracking-widest">{comment.userName}</p>
                               <div className="flex items-center gap-3">
                                 <span className="text-[8px] font-bold text-gray-300 uppercase tracking-widest">{comment.date}</span>
                                 {user && comment.authorUid === user.uid && (
@@ -551,7 +551,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                           <Radio className="w-5 h-5 animate-pulse" />
                           <span className="text-[10px] font-black uppercase tracking-[0.5em]">Input_Buffer_Active</span>
                       </div>
-                      <h3 className="text-4xl md:text-6xl font-heritage font-bold text-[#0a0a0a] uppercase tracking-tighter">Create <span className="italic text-gray-300">Memoir.</span></h3>
+                      <h3 className="text-4xl md:text-6xl font-heritage font-bold text-rose-950 uppercase tracking-tighter">Create <span className="italic text-gray-300">Memoir.</span></h3>
                     </div>
                     <button onClick={() => setShowForm(false)} className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-gray-300 hover:text-red-500 hover:bg-red-50 shadow-sm transition-all active:scale-90">
                       <X size={24} />
@@ -589,7 +589,7 @@ const NexusRewards: React.FC<NexusRewardsProps> = ({ language, user, onLogin, se
                              <input type="file" ref={fileInputRef} onChange={(e) => { const f = e.target.files?.[0]; if (f) processFile(f); }} className="hidden" accept="image/*" />
                           </div>
                        </div>
-                       <button type="submit" disabled={isSubmitting} className="w-full py-8 bg-[#0a0a0a] text-white rounded-full font-black text-xs uppercase tracking-[0.5em] shadow-3xl hover:bg-[#0EA5E9] transition-all flex items-center justify-center">
+                       <button type="submit" disabled={isSubmitting} className="w-full py-8 bg-rose-950 text-white rounded-full font-black text-xs uppercase tracking-[0.5em] shadow-3xl hover:bg-[#0EA5E9] transition-all flex items-center justify-center">
                           {isSubmitting ? <Loader2 className="animate-spin" /> : (language === 'EN' ? 'TRANSMIT' : 'යොමු කරන්න')}
                        </button>
                     </div>

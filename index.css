@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Abhaya+Libre:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "leaflet/dist/leaflet.css";
 @plugin "@tailwindcss/typography";
@@ -6,12 +6,12 @@
 @theme {
   --font-heritage: "Libre Baskerville", serif;
   --font-serif: "Libre Baskerville", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Abhaya Libre", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   body {
-    @apply bg-white text-[#0a0a0a] antialiased;
+    @apply bg-pink-50 text-rose-900 antialiased;
   }
 }
 
@@ -45,7 +45,7 @@
 }
 
 .insta-text-gradient {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #fbcfe8 0%, #e879f9 50%, #d8b4fe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
