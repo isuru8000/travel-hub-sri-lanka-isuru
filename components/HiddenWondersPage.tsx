@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { MapPin, Mountain, Truck, Ship, Navigation, Star, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Language } from '../types';
@@ -24,6 +25,29 @@ const HiddenWondersPage: React.FC<HiddenWondersPageProps> = ({ language, onBack 
 
   return (
     <div className="min-h-screen bg-[#0a0f0d] text-stone-200 font-sans p-8 md:p-16 flex flex-col items-center relative overflow-hidden">
+        <Helmet>
+          <title>
+            {language === 'EN' 
+              ? 'Seeking the Unseen: A 2026 Traveler\'s Journal | Hidden Wonders of Sri Lanka' 
+              : 'නොදුටු දේශයේ රහස් සොයා: 2026 ගවේෂණ සටහන් | ශ්‍රී ලංකාවේ සැඟවුණු විස්මිත ස්ථාන'}
+          </title>
+          <meta name="description" content={language === 'EN' ? 'Explore the most secluded and off-the-beaten-path locations in Sri Lanka. A traveler\'s guide for 2026.' : 'ශ්‍රී ලංකාවේ වැඩිපුර සංචාරය නොකරන, සැඟවුණු රමණීය ස්ථාන ගවේෂණය කරන්න. 2026 සඳහා සංචාරක මාර්ගෝපදේශය.'} />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": language === 'EN' ? 'Hidden Wonders of Sri Lanka' : 'ශ්‍රී ලංකාවේ සැඟවුණු විස්මිත ස්ථාන',
+              "description": language === 'EN' ? 'A traveler\'s journey to discover unseen locations.' : 'නොදුටු ස්ථාන සොයා යන සංචාරක ගවේෂණයක්.',
+              "itemListElement": allHiddenPlaces.map((place, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": place.name[language],
+                "url": `${window.location.origin}${window.location.pathname}#${place.id}`
+              }))
+            })}
+          </script>
+        </Helmet>
+
         {/* Watermark */}
         <div className="fixed inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center z-0">
             <svg width="600" height="600" viewBox="0 0 100 100" fill="none" stroke="white" strokeWidth="0.5">
@@ -39,8 +63,8 @@ const HiddenWondersPage: React.FC<HiddenWondersPageProps> = ({ language, onBack 
         &larr; {language === 'EN' ? 'Back' : 'ආපසු'}
       </button>
 
-      <h1 className="text-4xl md:text-6xl font-serif text-white mb-16 tracking-tighter text-center relative z-10">
-        {language === 'EN' ? 'Expedition 2026' : '2026 ගවේෂණ'}
+      <h1 className="text-3xl md:text-5xl font-serif text-white mb-16 tracking-tighter text-center relative z-10">
+        {language === 'EN' ? 'Seeking the Unseen: A 2026 Traveler\'s Journal' : 'නොදුටු දේශයේ රහස් සොයා: 2026 ගවේෂණ සටහන්'}
       </h1>
 
       <div className="relative w-full max-w-6xl flex items-center z-10">
