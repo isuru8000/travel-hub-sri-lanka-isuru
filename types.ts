@@ -1,7 +1,7 @@
 
 export type Language = 'EN' | 'SI';
 
-export type View = 'home' | 'destinations' | 'map' | 'hotels' | 'transport' | 'booking-destinations' | 'about' | 'privacy' | 'foods' | 'music' | 'arts-crafts' | 'interests' | 'medicine' | 'phrases' | 'essentials' | 'festivals' | 'memories' | 'quiz' | 'vr-experience' | 'vr-showcase' | 'search' | 'contact' | 'marketplace' | 'community' | 'shop' | 'destination-detail' | 'vr-trip' | 'vr-portal' | 'profile' | 'heritage';
+export type View = 'home' | 'destinations' | 'map' | 'hotels' | 'transport' | 'booking-destinations' | 'about' | 'privacy' | 'foods' | 'music' | 'arts-crafts' | 'interests' | 'medicine' | 'phrases' | 'essentials' | 'festivals' | 'memories' | 'quiz' | 'vr-experience' | 'vr-showcase' | 'search' | 'contact' | 'marketplace' | 'community' | 'shop' | 'destination-detail' | 'vr-trip' | 'vr-portal' | 'profile' | 'heritage' | 'hidden-wonders';
 
 export interface Review {
   id: string;
@@ -38,6 +38,18 @@ export interface NearbyAttraction {
   image: string;
 }
 
+export interface HiddenPlace {
+  id: string;
+  name: { EN: string; SI: string };
+  image: string;
+  description: { EN: string; SI: string };
+  location: string;
+  coordinates: { lat: number; lng: number };
+  discoveryLevel: number; // 1-5
+  accessibility: string[]; // ['hiking', '4x4', 'boat', 'easy', 'moderate', 'difficult']
+  mapUrl: string;
+}
+
 export interface Destination {
   id: string;
   name: { EN: string; SI: string };
@@ -53,6 +65,7 @@ export interface Destination {
   masterRecord?: { EN: string; SI: string };
   tips: { EN: string; SI: string }[];
   hiddenEchoes: { EN: string; SI: string };
+  hiddenPlaces?: HiddenPlace[];
   location: string;
   coordinates?: { x: number; y: number };
   nearbyAttractions?: NearbyAttraction[];

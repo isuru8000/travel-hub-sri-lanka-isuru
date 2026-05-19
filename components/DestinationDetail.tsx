@@ -107,6 +107,7 @@ import {
 } from '../services/gemini';
 
 import ReactMarkdown from 'react-markdown';
+import { HIDDEN_PLACES } from '../hidden_places_data';
 const Map = React.lazy(() => import('./Map'));
 import { SEO } from './SEO';
 import ReviewComponent from './ReviewComponent';
@@ -368,7 +369,7 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
         {/* PRIMARY SECTION: ABOUT DESTINATION */}
         <section className="relative">
            
-           {/* ROUND NEARBY ATTRACTIONS (PROXIMITY NODES) - MOVED TO TOP */}
+                       {/* PROXIMITY HUB: Nearby Places & Hidden Wonders */}
            {destination.nearbyAttractions && destination.nearbyAttractions.length > 0 && (
             <div className="mb-20 space-y-12 animate-in slide-in-from-bottom-6 duration-700 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-[#5A5A40]/10">
               <div className="flex items-center justify-between px-2">
@@ -404,6 +405,36 @@ const DestinationDetail: React.FC<DestinationDetailProps> = ({ destination, lang
               </div>
             </div>
            )}
+
+            {/* HIDDEN WONDERS (STARTING POINT) */}
+            {HIDDEN_PLACES[destination.id] && HIDDEN_PLACES[destination.id].length > 0 && (
+             <div className="mb-20 space-y-12 animate-in slide-in-from-bottom-6 duration-700 bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-[3rem] border border-emerald-500/10">
+               <div className="flex items-center justify-between px-2">
+                  <div className="flex items-center gap-4">
+                     <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                       <Eye size={20} />
+                     </div>
+                     <h3 className="text-xl md:text-2xl font-serif font-bold text-[#2d2d2d] uppercase tracking-tighter">
+                       {language === 'EN' ? 'Hidden Wonders.' : 'සැඟවුණු විස්මිත.'}
+                     </h3>
+                  </div>
+               </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                   {HIDDEN_PLACES[destination.id].map(place => (
+                     <div key={place.id} className="bg-white/60 p-6 rounded-3xl border border-emerald-500/10 shadow-sm flex flex-col gap-4">
+                       <h5 className="text-lg font-bold text-[#2d2d2d] font-serif">{place.name[language]}</h5>
+                       <img src={place.image} alt={place.name[language]} className="w-full h-40 object-cover rounded-xl" />
+                       <p className="text-sm text-[#2d2d2d]/80">{place.description[language]}</p>
+                       <div className="flex items-center gap-2 text-emerald-600 text-xs font-bold uppercase tracking-widest mt-auto pt-2">
+                         <MapPin size={12} />
+                         {place.location}
+                       </div>
+                     </div>
+                   ))}
+                </div>
+             </div>
+            )}
 
            {/* MAIN CONTENT BLOCK */}
            <div className="flex flex-col gap-12 lg:gap-20 items-stretch">

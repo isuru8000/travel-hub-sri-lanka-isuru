@@ -34,6 +34,7 @@ const IslandMapManifold = lazy(() => import('./components/IslandMapManifold'));
 const VRPortal = lazy(() => import('./components/VRPortal'));
 const NexusRewards = lazy(() => import('./components/NexusRewards'));
 import DestinationDetail from './components/DestinationDetail';
+const HiddenWondersPage = lazy(() => import('./components/HiddenWondersPage'));
 const Quiz = lazy(() => import('./components/Quiz'));
 const ProfileView = lazy(() => import('./components/ProfileView'));
 const VRExperience = lazy(() => import('./components/VRExperience'));
@@ -157,7 +158,7 @@ export default function App() {
           setSelectedDestinationData(found);
           setView('destination-detail');
         }
-      } else if (['destinations', 'foods', 'festivals', 'heritage', 'vr-trip', 'medicine', 'arts-crafts', 'music', 'phrases', 'essentials', 'quiz', 'profile', 'interests', 'search', 'contact', 'about'].includes(path)) {
+      } else if (['destinations', 'foods', 'festivals', 'heritage', 'vr-trip', 'medicine', 'arts-crafts', 'music', 'phrases', 'essentials', 'quiz', 'profile', 'interests', 'search', 'contact', 'about', 'hidden-wonders'].includes(path)) {
         setView(path as View);
       }
     }
@@ -249,6 +250,7 @@ export default function App() {
               language={language} 
               onSelectDestination={navigateToDestination} 
               onBack={() => setView('home')}
+              setView={setView}
             />
           </div>
         );
@@ -272,6 +274,8 @@ export default function App() {
         return <div className="pt-24"><Festivals language={language} onBack={() => setView('home')} /></div>;
       case 'interests':
         return <div className="pt-24"><CategoriesSection language={language} setView={setView} /></div>;
+      case 'hidden-wonders':
+        return <HiddenWondersPage language={language} onBack={() => setView('home')} />;
       case 'quiz':
         return <div className="pt-24"><Quiz language={language} setView={setView} /></div>;
       case 'profile':

@@ -2,7 +2,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 // Force Vite recompile
 import { motion, AnimatePresence } from 'framer-motion';
-import { Language, Destination } from '../types';
+import { Language, Destination, View } from '../types';
 import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { getRecommendations } from '../services/recommendations';
 import { 
@@ -23,7 +23,9 @@ import {
   Droplets,
   Tent,
   Sparkles,
-  Navigation
+  Navigation,
+  Eye,
+  Compass
 } from 'lucide-react';
 
 
@@ -34,9 +36,10 @@ interface DestinationsProps {
   language: Language;
   onSelectDestination: (dest: Destination) => void;
   onBack: () => void;
+  setView: (view: View) => void;
 }
 
-const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestination, onBack }) => {
+const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestination, onBack, setView }) => {
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [locationFilter, setLocationFilter] = useState<string>('all');
   const [search, setSearch] = useState('');
@@ -292,9 +295,18 @@ const Destinations: React.FC<DestinationsProps> = ({ language, onSelectDestinati
         </div>
         {recommendations.length > 0 && categoryFilter === 'all' && locationFilter === 'all' && !search && (
           <div className="mb-24">
-            <h3 className="text-3xl font-heritage font-bold text-[#2d2d2d] uppercase tracking-tighter mb-12 flex items-center gap-4">
-              <Sparkles className="text-[#5A5A40]" />
-              {language === 'EN' ? 'Recommended For You' : 'ඔබට නිර්දේශිත'}
+            <h3 className="text-3xl font-heritage font-bold text-[#2d2d2d] uppercase tracking-tighter mb-12 flex items-center justify-between gap-4">
+              <div className='flex items-center gap-4'>
+                <Sparkles className="text-[#5A5A40]" />
+                {language === 'EN' ? 'Recommended For You' : 'ඔබට නිර්දේශිත'}
+              </div>
+              <button 
+                onClick={() => setView('hidden-wonders')}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/30 backdrop-blur-md border border-stone-200 text-stone-800 font-serif text-[10px] uppercase tracking-wider transition-all hover:bg-white/50 hover:scale-105 shrink-0 shadow-sm"
+              >
+                <Compass size={12} className="animate-pulse" />
+                {language === 'EN' ? 'Hidden Wonders' : 'සැඟවුණු විස්මිත'}
+              </button>
             </h3>
             <div className="flex flex-wrap justify-start gap-6">
               {recommendations.map((dest, idx) => (

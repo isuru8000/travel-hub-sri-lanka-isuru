@@ -7,6 +7,7 @@ import { abhayagiriya } from './abhayagiriya';
 import { vatadageya } from './vatadageya';
 import { jetavanaramaya } from './jetavanaramaya';
 import { galVihara } from './gal-vihara';
+import { ellaRock } from './ella-rock';
 
 export const ABOUT_DATA = {
   sigiriya,
@@ -18,4 +19,5 @@ export const ABOUT_DATA = {
   vatadageya,
   jetavanaramaya,
   "gal-vihara": galVihara,
+  "ella-rock": ellaRock,
 };

@@ -49,3 +49,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.flashlight {
+  cursor: crosshair;
+  position: relative;
+}
+
+.flashlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle 120px at var(--x, 50%) var(--y, 50%), transparent 0%, rgba(0,0,0,0.85) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.flashlight:hover::before {
+  opacity: 1;
+}
