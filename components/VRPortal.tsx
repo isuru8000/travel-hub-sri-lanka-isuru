@@ -3,6 +3,7 @@ import { Language, View } from '../types';
 import { Play, CreditCard, Users, Clock, ShieldCheck, ChevronLeft, MessageCircle, Send, Eye, Radio, Calendar, MapPin, Lock, Volume2, VolumeX, Compass, Activity, Star } from 'lucide-react';
 import StripePaymentModal from './StripePaymentModal';
 import VRPage from '../VRPage';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface VRPortalProps {
   language: Language;
@@ -192,7 +193,7 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
               .map(tour => (
               <div key={tour.id} className={`bg-white border rounded-[2rem] overflow-hidden hover:border-[#5A5A40]/30 transition-all group flex flex-col shadow-sm ${searchTerm && (tour.title.EN.toLowerCase().includes(searchTerm.toLowerCase()) || tour.desc.EN.toLowerCase().includes(searchTerm.toLowerCase()) || tour.title.SI.includes(searchTerm) || tour.desc.SI.includes(searchTerm)) && 'border-[#5A5A40]/50 ring-2 ring-[#5A5A40]/20'}`}>
                 <div className="relative h-48 overflow-hidden">
-                  <img src={tour.image} alt={tour.title.EN} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={getOptimizedImageUrl(tour.image, 600)} alt={tour.title.EN} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#f5f5f0] to-transparent"></div>
                   
                   <div className="absolute top-4 left-4">
@@ -403,7 +404,7 @@ const VRPortal: React.FC<VRPortalProps> = ({ language, setView }) => {
 
       <div className="absolute inset-0 z-0">
         <img 
-          src={selectedTour.image} 
+          src={getOptimizedImageUrl(selectedTour.image, 800)} 
           alt={selectedTour.title.EN} 
           className="w-full h-full object-cover opacity-10 blur-sm scale-105"
         />

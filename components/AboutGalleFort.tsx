@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface AboutGalleFortProps {
   language: Language;
@@ -85,15 +86,16 @@ const AboutGalleFort: React.FC<AboutGalleFortProps> = ({ language }) => {
                 {section.title.match(/Section 0(3|4|5|7)/) && (
                   <figure className="w-full md:w-64 float-right ml-6 mb-4">
                     <img 
-                      src={
+                      src={getOptimizedImageUrl(
                         section.title.includes("Section 03") 
                           ? "https://i.pinimg.com/736x/23/7a/7b/237a7b52854312546872cf2306d50241.jpg" 
                           : section.title.includes("Section 04")
                           ? "https://i.pinimg.com/736x/8e/66/47/8e66471ce6346c1cea241b47636df4f0.jpg"
                           : section.title.includes("Section 05")
                           ? "https://i.pinimg.com/736x/8d/f2/07/8df207e0c8de8174775d713a29851759.jpg"
-                          : "https://i.pinimg.com/736x/44/e9/c9/44e9c9c30c8da98105c3c042978a3f89.jpg"
-                      }
+                          : "https://i.pinimg.com/736x/44/e9/c9/44e9c9c30c8da98105c3c042978a3f89.jpg",
+                        600
+                      )}
                       alt={section.title.split(':')[1]?.trim() || "Image"}
                       className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
                       referrerPolicy="no-referrer"

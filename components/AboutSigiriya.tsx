@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface AboutSigiriyaProps {
   language: Language;
@@ -81,15 +82,16 @@ const AboutSigiriya: React.FC<AboutSigiriyaProps> = ({ language }) => {
                 {section.title.match(/Section 0(4|5|6|7)/) && (
                   <figure className="w-full md:w-64 float-right ml-6 mb-4">
                     <img 
-                      src={
+                      src={getOptimizedImageUrl(
                         section.title.includes("Section 04") 
                           ? "https://i.pinimg.com/1200x/3e/09/76/3e0976235d0db25a0bed84f6df9a0a3f.jpg" 
                           : section.title.includes("Section 05")
                           ? "https://i.pinimg.com/736x/dc/b5/cf/dcb5cf4c9b507d3a57a8b4f466984ace.jpg"
                           : section.title.includes("Section 06")
                           ? "https://i.pinimg.com/736x/59/d1/34/59d13493ec9c363a6e9216d0818f8b41.jpg"
-                          : "https://i.pinimg.com/736x/63/35/66/633566ec001678599fc9db142a4dc912.jpg"
-                      }
+                          : "https://i.pinimg.com/736x/63/35/66/633566ec001678599fc9db142a4dc912.jpg",
+                        600
+                      )}
                       alt={section.title.split(':')[1]?.trim() || "Image"}
                       className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
                       referrerPolicy="no-referrer"

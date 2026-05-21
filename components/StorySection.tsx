@@ -3,6 +3,7 @@ import React from 'react';
 import { Language } from '../types';
 import { UI_STRINGS } from '../constants';
 import { ArrowRight, History, Users } from 'lucide-react';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface StorySectionProps {
   language: Language;
@@ -95,16 +96,16 @@ const StorySection: React.FC<StorySectionProps> = ({ language, setView }) => {
           </div>
 
           <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5]">
-             <img src="https://images.unsplash.com/photo-1580794749460-76f97b7180d8?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Temple" />
+             <img src={getOptimizedImageUrl("https://images.unsplash.com/photo-1580794749460-76f97b7180d8", 600)} loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Temple" />
           </div>
           <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5] mt-8 md:mt-16">
-             <img src="https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Statue" />
+             <img src={getOptimizedImageUrl("https://i.pinimg.com/736x/ba/5b/83/ba5b83dea5e07a5a4d9e51f7b61029a5.jpg", 600)} loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Statue" />
           </div>
           <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform -rotate-1 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5]">
-             <img src="https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&w=800&q=80" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Culture" />
+             <img src={getOptimizedImageUrl("https://images.unsplash.com/photo-1546708973-b339540b5162", 600)} loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Culture" />
           </div>
           <div className="story-ring p-[2px] rounded-[2rem] md:rounded-[3rem] shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700 overflow-hidden aspect-[4/5] mt-8 md:mt-16">
-             <img src="https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg" loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Nature" />
+             <img src={getOptimizedImageUrl("https://i.pinimg.com/736x/16/96/d6/1696d63f11bf5fce39cb0a8ce1d6dbe9.jpg", 600)} loading="lazy" className="rounded-[1.9rem] md:rounded-[2.9rem] w-full h-full object-cover hover:scale-110 transition-all duration-1000" alt="Nature" />
           </div>
         </div>
       </div>

@@ -93,6 +93,7 @@ const HiddenWondersPage: React.FC<HiddenWondersPageProps> = ({ language, onBack 
                 src={place.image}
                 alt={place.name[language]}
                 className="w-full h-[250px] object-cover"
+                loading="lazy"
                 />
                 <div className="pt-4 flex flex-col justify-center items-center">
                     <h3 className="text-lg font-serif text-stone-900 mb-1">
@@ -132,7 +133,7 @@ const HiddenWondersPage: React.FC<HiddenWondersPageProps> = ({ language, onBack 
                 >
                   <X />
                 </button>
-                <img src={selectedPlace.image} alt={selectedPlace.name[language]} className="w-full h-64 object-cover rounded-xl mb-8" />
+                <img src={selectedPlace.image} alt={selectedPlace.name[language]} className="w-full h-64 object-cover rounded-xl mb-8" loading="lazy" />
                 <h2 className="text-4xl font-serif text-white mb-4">{selectedPlace.name[language]}</h2>
                 <p className="text-stone-400 mb-8 leading-relaxed">{selectedPlace.description[language]}</p>
                 

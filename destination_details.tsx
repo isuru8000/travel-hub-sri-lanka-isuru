@@ -1,6 +1,7 @@
 
 import { Destination } from './types';
 import { ABOUT_DATA, LOGISTICS_DATA } from './about_destinations';
+import { getOptimizedImageUrl } from './lib/utils';
 
 const BASE_DESTINATIONS: Destination[] = [
   // --- ANCIENT (10) ---
@@ -2823,6 +2824,12 @@ Each bungalow has its own full kitchen team producing meals from local highland 
 
 export const DESTINATIONS_DATA: Destination[] = BASE_DESTINATIONS.map(dest => ({
   ...dest,
+  image: getOptimizedImageUrl(dest.image, 800),
+  gallery: dest.gallery ? dest.gallery.map(img => getOptimizedImageUrl(img, 1200)) : [],
+  nearbyAttractions: dest.nearbyAttractions ? dest.nearbyAttractions.map(att => ({
+    ...att,
+    image: getOptimizedImageUrl(att.image, 400)
+  })) : [],
   detailedAbout: dest.detailedAbout || ABOUT_DATA[dest.id] || { EN: "Deep archival narrative pending for this node.", SI: "මෙම ස්ථානය පිළිබඳ විස්තරය සකසමින් පවතී." },
   logistics: dest.logistics || LOGISTICS_DATA[dest.id] || { EN: "Logistics data syncing...", SI: "ප්‍රවාහන දත්ත යාවත්කාලීන වෙමින් පවතී..." }
 }));

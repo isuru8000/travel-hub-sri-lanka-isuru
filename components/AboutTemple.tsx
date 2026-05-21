@@ -1,5 +1,6 @@
 import React from 'react';
 import { Language } from '../types';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface AboutTempleProps {
   language: Language;
@@ -85,15 +86,16 @@ const AboutTemple: React.FC<AboutTempleProps> = ({ language }) => {
                 {section.title.match(/Section 0(3|4|5|6)/) && (
                   <figure className="w-full md:w-64 float-right ml-6 mb-4">
                     <img 
-                      src={
+                      src={getOptimizedImageUrl(
                         section.title.includes("Section 03") 
                           ? "https://i.pinimg.com/1200x/83/bb/fd/83bbfd0f4efba835c40517ae0793b8cf.jpg" 
                           : section.title.includes("Section 04")
                           ? "https://i.pinimg.com/736x/b0/68/68/b06868dcfc87e807d1009463db348b38.jpg"
                           : section.title.includes("Section 05")
                           ? "https://i.pinimg.com/736x/7e/7f/25/7e7f253cfa65a829f50d87bd032deaae.jpg"
-                          : "https://i.pinimg.com/736x/2a/d5/a5/2ad5a5cdab1f051ec1ae61eff8cd93bd.jpg"
-                      }
+                          : "https://i.pinimg.com/736x/2a/d5/a5/2ad5a5cdab1f051ec1ae61eff8cd93bd.jpg",
+                        600
+                      )}
                       alt={section.title.split(':')[1]?.trim() || "Image"}
                       className="w-full h-auto aspect-square object-cover rounded-lg shadow-lg"
                       referrerPolicy="no-referrer"

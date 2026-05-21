@@ -2,6 +2,7 @@
 import React from 'react';
 import { Food, HeritageMusic, TraditionalMedicine, Phrase, TravelEssential, Festival, Translation, Transport, ArtAndCraft } from './types';
 import { DESTINATIONS_DATA } from './destination_details';
+import { getOptimizedImageUrl } from './lib/utils';
 
 export const SUPABASE_KEY = 'sb_publishable_c8wPY71QFNsFJKcAEuD86w_pcqen0nv';
 
@@ -527,3 +528,16 @@ export const FESTIVALS_DATA: Festival[] = [
   { id: 'fest6', name: { EN: 'Deepavali', SI: 'දීපාවලි' }, category: 'religious', date: { EN: 'October/November', SI: 'ඔක්තෝබර්/නොවැම්බර්' }, description: { EN: 'The festival of lights for Hindu people.', SI: 'අන්ධකාරය පරදා ආලෝකය ජය ගැනීම සමරන හින්දු ආගමික උත්සවයකි.' }, image: 'https://i.pinimg.com/736x/96/42/46/96424673d68d99ee45e4154e6a3261b6.jpg', significance: { EN: 'Lighting lamps and visiting family.', SI: 'පහන් දැල්වීම සහ පහල සාමාජිකයන් එක්වීම සිදු කෙරේ.' } },
   { id: 'fest11', name: { EN: 'Nallur Festival', SI: 'නල්ලූර් උත්සවය' }, category: 'religious', date: { EN: 'August/September', SI: 'අගෝස්තු/සැප්තැම්බර්' }, description: { EN: 'A long religious festival in Jaffna.', SI: 'යාපනය නල්ලූර් කෝවිලේ දින 25 ක් පුරා පැවැත්වෙන විශාලතම මංගල්‍යයයි.' }, image: 'https://i.pinimg.com/1200x/3a/67/fb/3a67fb8991a10ce030adeb1d69f3137b.jpg', significance: { EN: 'Shows the culture of the north.', SI: 'උතුරේ සංස්කෘතික අනන්‍යතාවය විදහා දක්වයි.' } }
 ];
+
+// Dynamically optimize all image URLs in constants datasets on-the-fly for maximum speed and WebP conversion
+try {
+  TRANSPORT_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 800); });
+  FOODS_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 600); });
+  HERITAGE_MUSIC_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 600); });
+  MEDICINE_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 600); });
+  ARTS_CRAFTS_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 600); });
+  FESTIVALS_DATA.forEach(item => { if (item.image) item.image = getOptimizedImageUrl(item.image, 800); });
+} catch (e) {
+  console.error("Initialization image mapping failed", e);
+}
+
