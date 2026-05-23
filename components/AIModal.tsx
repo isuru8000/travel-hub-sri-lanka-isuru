@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import { Sparkles, X, Send, Compass, Loader2, History, Info, Square, Zap, Cpu, ShieldCheck, MapPin, ExternalLink, Brain, Globe, Bot, Navigation, Lock, Orbit, Activity, Camera, Image as ImageIcon, Trash2, Volume2, VolumeX, Mic, MicOff, RotateCcw } from 'lucide-react';
 import { Language, Destination } from '../types';
 import { UI_STRINGS } from '../constants';
-import { streamLankaGuideResponse, GroundingLink, ChatMessage } from '../services/gemini';
+import { GroundingLink, ChatMessage } from '../services/gemini';
 import { DESTINATIONS_DATA } from '../destination_details';
 
 interface Message {
@@ -293,94 +293,138 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
       // Initialize bot message
       setMessages(prev => [...prev, { role: 'bot', text: '', isThinking: isDeepMode }]);
       
-      const generator = streamLankaGuideResponse(textToSend, history, language, userLocation, isDeepMode, imageToSend);
-      
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: textToSend,
+          history,
+          language,
+          location: userLocation,
+          isThinkingMode: isDeepMode,
+          image: imageToSend,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server returned status ${response.status}`);
+      }
+
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error('ReadableStream not supported by browser or response body is null');
+      }
+
+      const decoder = new TextDecoder('utf-8');
+      let buffer = "";
       let rawAccumulatedText = "";
       let displayText = "";
       let accumulatedLinks: GroundingLink[] = [];
       let isCheckingTag = true;
       let hasNavigated = false;
 
-      for await (const chunk of generator) {
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
         if (stopTypingRef.current) break;
 
-        if (chunk.error === "API_KEY_REQUIRED") {
-          setNeedsApiKey(true);
-          setMessages(prev => prev.slice(0, -1));
-          setIsLoading(false);
-          return;
-        }
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        // Keep the last partial line in the buffer
+        buffer = lines.pop() || "";
 
-        if (chunk.links) {
-          accumulatedLinks = [...accumulatedLinks, ...chunk.links];
-        }
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          let chunk: any;
+          try {
+            chunk = JSON.parse(line);
+          } catch (e) {
+            console.warn("Failed to parse chunk", line, e);
+            continue;
+          }
 
-        if (chunk.text) {
-          rawAccumulatedText += chunk.text;
-          
-          if (isCheckingTag) {
-            if (rawAccumulatedText.trimStart().startsWith('[')) {
-              const closingIndex = rawAccumulatedText.indexOf(']');
-              if (closingIndex !== -1) {
-                isCheckingTag = false;
-                const tag = rawAccumulatedText.substring(0, closingIndex + 1);
-                const navMatch = tag.match(/\[NAVIGATE:([a-zA-Z0-9-']+)\]/i);
-                if (navMatch) {
-                  const destId = navMatch[1].toLowerCase();
-                  const dest = DESTINATIONS_DATA.find(d => d.id === destId);
-                  if (dest && onNavigate) {
-                    onNavigate(dest);
-                  } else if (onNavigate) {
-                    onNavigate(destId);
+          if (chunk.error === "API_KEY_REQUIRED") {
+            setNeedsApiKey(true);
+            setMessages(prev => prev.slice(0, -1));
+            setIsLoading(false);
+            return;
+          }
+
+          if (chunk.links) {
+            accumulatedLinks = [...accumulatedLinks, ...chunk.links];
+          }
+
+          if (chunk.text) {
+            rawAccumulatedText += chunk.text;
+            
+            if (isCheckingTag) {
+              if (rawAccumulatedText.trimStart().startsWith('[')) {
+                const closingIndex = rawAccumulatedText.indexOf(']');
+                if (closingIndex !== -1) {
+                  isCheckingTag = false;
+                  const tag = rawAccumulatedText.substring(0, closingIndex + 1);
+                  const navMatch = tag.match(/\[NAVIGATE:([a-zA-Z0-9-']+)\]/i);
+                  if (navMatch) {
+                    const destId = navMatch[1].toLowerCase();
+                    const dest = DESTINATIONS_DATA.find(d => d.id === destId);
+                    if (dest && onNavigate) {
+                      onNavigate(dest);
+                    } else if (onNavigate) {
+                      onNavigate(destId);
+                    }
+                    hasNavigated = true;
                   }
-                  hasNavigated = true;
+                } else if (rawAccumulatedText.length > 50) {
+                  isCheckingTag = false;
+                } else {
+                  continue;
                 }
-              } else if (rawAccumulatedText.length > 50) {
-                isCheckingTag = false;
               } else {
-                continue;
+                isCheckingTag = false;
               }
-            } else {
-              isCheckingTag = false;
-            }
-          }
-
-          if (!isCheckingTag) {
-            let cleanText = rawAccumulatedText;
-            if (hasNavigated || (rawAccumulatedText.includes('[NAVIGATE:') && rawAccumulatedText.includes(']'))) {
-              cleanText = rawAccumulatedText.replace(/\[NAVIGATE:[a-zA-Z0-9-']+\]\s*/i, '').trimStart();
             }
 
-            const newChars = Array.from(cleanText.slice(displayText.length));
-            for (const char of newChars) {
-              if (stopTypingRef.current) break;
-              displayText += char;
-              
-              setMessages(prev => {
-                const updated = [...prev];
-                updated[updated.length - 1] = {
-                  role: 'bot',
-                  text: displayText,
-                  links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
-                  isThinking: isDeepMode
-                };
-                return updated;
-              });
-              
-              await new Promise(resolve => setTimeout(resolve, 15));
+            if (!isCheckingTag) {
+              let cleanText = rawAccumulatedText;
+              if (hasNavigated || (rawAccumulatedText.includes('[NAVIGATE:') && rawAccumulatedText.includes(']'))) {
+                cleanText = rawAccumulatedText.replace(/\[NAVIGATE:[a-zA-F0-9-']+\]\s*/i, '').trimStart();
+                // Match custom destination IDs like adam'speak too
+                cleanText = cleanText.replace(/\[NAVIGATE:[a-zA-Z0-9-']+\]\s*/i, '').trimStart();
+              }
+
+              const newChars = Array.from(cleanText.slice(displayText.length));
+              for (const char of newChars) {
+                if (stopTypingRef.current) break;
+                displayText += char;
+                
+                setMessages(prev => {
+                  const updated = [...prev];
+                  updated[updated.length - 1] = {
+                    role: 'bot',
+                    text: displayText,
+                    links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
+                    isThinking: isDeepMode
+                  };
+                  return updated;
+                });
+                
+                await new Promise(resolve => setTimeout(resolve, 15));
+              }
             }
+          } else {
+            setMessages(prev => {
+              const updated = [...prev];
+              updated[updated.length - 1] = {
+                role: 'bot',
+                text: displayText,
+                links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
+                isThinking: isDeepMode
+              };
+              return updated;
+            });
           }
-        } else {
-          setMessages(prev => {
-            const updated = [...prev];
-            updated[updated.length - 1] = {
-              role: 'bot',
-              text: displayText,
-              links: accumulatedLinks.length > 0 ? accumulatedLinks : undefined,
-              isThinking: isDeepMode
-            };
-            return updated;
-          });
         }
       }
     } catch (error) {
