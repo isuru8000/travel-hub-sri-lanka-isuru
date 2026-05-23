@@ -21,7 +21,8 @@ async function startServer() {
   // Note: In a real app, you must provide the STRIPE_SECRET_KEY in your .env file
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder');
 
-  app.use(express.json());
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
   app.use(cookieParser());
 
   app.get("/api/health", (req, res) => {
@@ -31,7 +32,6 @@ async function startServer() {
   app.post("/api/chat", async (req, res) => {
     const { prompt, history, language, location, isThinkingMode, image } = req.body;
     res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-    res.setHeader('Transfer-Encoding', 'chunked');
 
     try {
       const stream = streamLankaGuideResponse(prompt, history, language, location, isThinkingMode, image);
@@ -40,8 +40,13 @@ async function startServer() {
       }
       res.end();
     } catch (e) {
-      console.error(e);
-      res.status(500).json({ error: 'Internal Server Error' });
+      console.error('Error in /api/chat:', e);
+      if (!res.headersSent) {
+        res.status(500).json({ error: 'Internal Server Error' });
+      } else {
+        res.write(JSON.stringify({ error: 'STREAM_ERROR' }) + '\n');
+        res.end();
+      }
     }
   });
 

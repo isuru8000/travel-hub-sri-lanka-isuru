@@ -324,8 +324,8 @@ export async function* streamLankaGuideResponse(
       User Location: ${location ? `${location.latitude}, ${location.longitude}` : 'Unknown'}
     `;
 
-    // Use gemini-3.1-flash-lite-preview for low latency
-    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite-preview';
+    // Use gemini-3.1-flash-lite for low latency
+    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite';
     
     // Use googleMaps for standard queries, googleSearch for thinking/complex queries if needed
     // Add urlContext only when using googleSearch to avoid conflict with googleMaps
@@ -414,8 +414,8 @@ export const getLankaGuideResponse = async (
       Your tone: Sophisticated, expert, and welcoming (Ayubowan). Always respond in ${language === 'SI' ? 'Sinhala' : 'English'}.
     `;
 
-    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite-preview';
-    const tools = isThinkingMode ? [{ googleSearch: {} }, { urlContext: {} }] : [{ googleMaps: {} }, { urlContext: {} }];
+    const model = isThinkingMode ? 'gemini-3.1-pro-preview' : 'gemini-3.1-flash-lite';
+    const tools = isThinkingMode ? [{ googleSearch: {} }, { urlContext: {} }] : [{ googleMaps: {} }];
 
     const response = await ai.models.generateContent({
       model,
