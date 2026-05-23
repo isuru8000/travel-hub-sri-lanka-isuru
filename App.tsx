@@ -242,7 +242,7 @@ export default function App() {
       case 'booking-destinations':
         return <ComingSoonView language={language} setView={setView} title={language === 'EN' ? 'Booking' : 'වෙන් කිරීම්'} />;
       case 'shop':
-        return <ComingSoonView language={language} setView={setView} title={language === 'EN' ? 'Travel Store' : 'සංචාරක වෙළඳසැල'} />;
+        return <div className="pt-24"><TravelStore language={language} onBack={() => setView('home')} /></div>;
       case 'destinations':
         return (
           <div className="pt-24">

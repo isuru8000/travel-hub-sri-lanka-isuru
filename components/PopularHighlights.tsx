@@ -4,6 +4,7 @@ import { Language, Destination } from '../types';
 import { DESTINATIONS, UI_STRINGS } from '../constants';
 import { MapPin, Sparkles, Compass, ArrowRight, ShieldCheck, Box, Globe, MoveRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 const HighlightCard: React.FC<{ dest: Destination; index: number; language: Language; onClick: () => void }> = ({ dest, index, language, onClick }) => {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -44,7 +45,7 @@ const HighlightCard: React.FC<{ dest: Destination; index: number; language: Lang
       >
         <div className="relative aspect-[4/5] md:aspect-[16/10] rounded-[2rem] md:rounded-[4rem] overflow-hidden bg-stone-200 shadow-[0_40px_100px_rgba(0,0,0,0.15)]">
           <img 
-            src={dest.image} 
+            src={getOptimizedImageUrl(dest.image, isMobile ? 600 : 1200)} 
             alt={dest.name[language]} 
             loading="lazy"
             decoding="async"

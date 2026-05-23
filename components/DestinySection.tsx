@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Language, View } from '../types';
 import { UI_STRINGS } from '../constants';
 import { Compass, Sparkles, Target, Wind, Activity, PawPrint } from 'lucide-react';
+import { getOptimizedImageUrl } from '../lib/utils';
 
 interface DestinySectionProps {
   language: Language;
@@ -100,7 +101,7 @@ const DestinySection: React.FC<DestinySectionProps> = ({ language, setView }) =>
               className="group/shard relative aspect-[3/4] rounded-[2.5rem] overflow-hidden bg-stone-100 border border-stone-200 shadow-xl hover:-translate-y-4 transition-all duration-700"
             >
               <img 
-                src={shard.image} 
+                src={getOptimizedImageUrl(shard.image, isMobile ? 400 : 850)} 
                 loading="lazy"
                 decoding="async"
                 className={`w-full h-full object-cover transition-transform ${isMobile ? 'duration-[2000ms]' : 'duration-[4000ms]'} group-hover:scale-110`} 

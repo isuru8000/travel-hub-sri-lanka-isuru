@@ -73,8 +73,15 @@ const Navbar: React.FC<NavbarProps> = ({
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    let lastState = false;
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 20;
+      if (scrolled !== lastState) {
+        lastState = scrolled;
+        setIsScrolled(scrolled);
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
