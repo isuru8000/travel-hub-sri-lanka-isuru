@@ -291,7 +291,12 @@ export async function* streamLankaGuideResponse(
   image?: { data: string; mimeType: string }
 ): AsyncGenerator<AIResponse> {
   try {
-    const ai = new GoogleGenAI({ apiKey: getApiKey() });
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      yield { text: "API_KEY_REQUIRED", links: [], error: "API_KEY_REQUIRED" };
+      return;
+    }
+    const ai = new GoogleGenAI({ apiKey });
     
     const systemInstruction = `
       You are "Lanka Guide AI", a prestige travel intelligence unit for "Travel Hub Sri Lanka". 
@@ -398,7 +403,11 @@ export const getLankaGuideResponse = async (
   isThinkingMode: boolean = false
 ): Promise<AIResponse> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: getApiKey() });
+    const apiKey = getApiKey();
+    if (!apiKey) {
+      return { text: "API_KEY_REQUIRED", links: [], error: "API_KEY_REQUIRED" };
+    }
+    const ai = new GoogleGenAI({ apiKey });
     const systemInstruction = `
       You are "Lanka Guide AI", a prestige travel intelligence unit for "Travel Hub Sri Lanka". 
       ${isThinkingMode ? 'You are currently in DEEP THINKING MODE, utilizing maximum neural resources to solve complex travel queries.' : 'You use real-time Google Maps data to provide accurate, up-to-date information.'}

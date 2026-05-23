@@ -429,7 +429,22 @@ const AIModal: React.FC<AIModalProps> = ({ language, onNavigate }) => {
       }
     } catch (error) {
       console.error("Stream error:", error);
-      setMessages(prev => [...prev, { role: 'bot', text: "Connection interrupted. Please try again." }]);
+      setMessages(prev => {
+        const updated = [...prev];
+        if (updated.length > 0 && updated[updated.length - 1].role === 'bot') {
+          updated[updated.length - 1] = {
+            role: 'bot',
+            text: language === 'EN' ? "Connection interrupted. Please try again." : "සම්බන්ධතාවය බිඳවැටුණි. කරුණාකර නැවත උත්සාහ කරන්න.",
+            isThinking: false
+          };
+        } else {
+          updated.push({
+            role: 'bot',
+            text: language === 'EN' ? "Connection interrupted. Please try again." : "සම්බන්ධතාවය බිඳවැටුණි. කරුණාකර නැවත උත්සාහ කරන්න."
+          });
+        }
+        return updated;
+      });
     } finally {
       setIsLoading(false);
     }
