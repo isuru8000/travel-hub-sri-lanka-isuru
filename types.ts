@@ -1,7 +1,7 @@
 
 export type Language = 'EN' | 'SI';
 
-export type View = 'home' | 'destinations' | 'map' | 'hotels' | 'transport' | 'booking-destinations' | 'about' | 'privacy' | 'foods' | 'music' | 'arts-crafts' | 'interests' | 'medicine' | 'phrases' | 'essentials' | 'festivals' | 'memories' | 'quiz' | 'vr-experience' | 'vr-showcase' | 'search' | 'contact' | 'marketplace' | 'community' | 'shop' | 'destination-detail' | 'vr-trip' | 'vr-portal' | 'profile' | 'heritage' | 'hidden-wonders';
+export type View = 'home' | 'destinations' | 'map' | 'hotels' | 'transport' | 'booking-destinations' | 'about' | 'privacy' | 'foods' | 'music' | 'arts-crafts' | 'interests' | 'medicine' | 'phrases' | 'essentials' | 'festivals' | 'memories' | 'quiz' | 'vr-experience' | 'vr-showcase' | 'search' | 'contact' | 'marketplace' | 'community' | 'shop' | 'destination-detail' | 'vr-trip' | 'vr-portal' | 'profile' | 'heritage' | 'hidden-wonders' | 'top-rated';
 
 export interface Review {
   id: string;

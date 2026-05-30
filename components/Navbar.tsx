@@ -87,6 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   const navLinks: NavItem[] = [
     { id: 'destinations', label: { EN: 'Destinations', SI: 'ගමනාන්ත' }, icon: <Map size={14} /> },
+    { id: 'top-rated', label: { EN: 'TOP RATED', SI: 'විශිෂ්ටතම' }, icon: null },
     { 
       id: 'heritage', 
       label: { EN: 'Heritage', SI: 'උරුමය' }, 
@@ -144,8 +145,17 @@ const Navbar: React.FC<NavbarProps> = ({
                     : 'text-gray-600 hover:text-[#0a0a0a] hover:bg-black/5'
                 }`}
               >
-                <span className="opacity-70 group-hover/link:opacity-100 transition-opacity scale-90">{link.icon}</span>
-                {link.label[language]}
+                {link.id === 'top-rated' ? (
+                  <div className="flex flex-col items-center leading-none">
+                    <span className="text-[6.5px] text-amber-500 select-none animate-pulse">★★★★★</span>
+                    <span className="font-sans font-black tracking-widest text-[#0a0a0a]">{link.label[language]}</span>
+                  </div>
+                ) : (
+                  <>
+                    <span className="opacity-70 group-hover/link:opacity-100 transition-opacity scale-90">{link.icon}</span>
+                    {link.label[language]}
+                  </>
+                )}
                 {link.hasDropdown && <ChevronDown size={10} className={`transition-transform duration-300 ${activeDropdown === link.id ? 'rotate-180' : ''}`} />}
               </button>
 
@@ -229,8 +239,17 @@ const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   <div className="flex items-center gap-3 md:gap-6">
-                    <span className={currentView === link.id ? 'text-[#0EA5E9]' : ''}>{link.icon}</span>
-                    <span className="text-sm md:text-lg font-heritage font-bold uppercase tracking-widest">{link.label[language]}</span>
+                    {link.id === 'top-rated' ? (
+                      <div className="flex flex-col items-start leading-[1.2]">
+                        <span className="text-[9px] md:text-xs text-amber-500 tracking-normal leading-none mb-1 select-none">★★★★★</span>
+                        <span className="text-sm md:text-lg font-heritage font-bold uppercase tracking-widest leading-none">{link.label[language]}</span>
+                      </div>
+                    ) : (
+                      <>
+                        <span className={currentView === link.id ? 'text-[#0EA5E9]' : ''}>{link.icon}</span>
+                        <span className="text-sm md:text-lg font-heritage font-bold uppercase tracking-widest">{link.label[language]}</span>
+                      </>
+                    )}
                   </div>
                   {link.hasDropdown && <ChevronDown size={16} className={`md:w-5 md:h-5 ${activeDropdown === link.id ? 'rotate-180 transition-transform' : 'transition-transform'}`} />}
                 </button>

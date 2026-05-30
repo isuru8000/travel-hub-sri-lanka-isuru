@@ -48,6 +48,7 @@ const Hotels = lazy(() => import('./components/Hotels'));
 const Transport = lazy(() => import('./components/Transport'));
 const BookingDestinations = lazy(() => import('./components/BookingDestinations'));
 const TravelStore = lazy(() => import('./components/TravelStore'));
+const TopRated = lazy(() => import('./components/TopRated'));
 
 export default function App() {
   const [language, setLanguage] = useState<Language>('EN');
@@ -158,7 +159,7 @@ export default function App() {
           setSelectedDestinationData(found);
           setView('destination-detail');
         }
-      } else if (['destinations', 'foods', 'festivals', 'heritage', 'vr-trip', 'medicine', 'arts-crafts', 'music', 'phrases', 'essentials', 'quiz', 'profile', 'interests', 'search', 'contact', 'about', 'hidden-wonders'].includes(path)) {
+      } else if (['destinations', 'foods', 'festivals', 'heritage', 'vr-trip', 'medicine', 'arts-crafts', 'music', 'phrases', 'essentials', 'quiz', 'profile', 'interests', 'search', 'contact', 'about', 'hidden-wonders', 'top-rated'].includes(path)) {
         setView(path as View);
       }
     }
@@ -276,6 +277,8 @@ export default function App() {
         return <div className="pt-24"><CategoriesSection language={language} setView={setView} /></div>;
       case 'hidden-wonders':
         return <HiddenWondersPage language={language} onBack={() => setView('home')} />;
+      case 'top-rated':
+        return <div className="pt-0"><TopRated language={language} onBack={() => setView('home')} /></div>;
       case 'quiz':
         return <div className="pt-24"><Quiz language={language} setView={setView} /></div>;
       case 'profile':
@@ -353,6 +356,7 @@ export default function App() {
     const titles: Record<string, string> = {
       home: "Nearby Places - Sri Lanka | Your Ultimate Guide to an Unforgettable Journey",
       foods: "Traditional Sri Lankan Cuisine | Culinary Journey with Travel Hub",
+      "top-rated": "Sri Lanka's Top Rated: Iconic Flavors & Destinations",
       festivals: "Cultural Festivals of Sri Lanka | Experience the Vibrant Traditions",
       destinations: "Best Places to Visit in Sri Lanka | Travel Hub Destinations",
       heritage: "Cultural Heritage of Sri Lanka | Discover Ancient Temples & History",
@@ -386,6 +390,7 @@ export default function App() {
     const descriptions: Record<string, string> = {
       home: "Discover the beauty of Sri Lanka with Travel Hub. Explore destinations, culture, food, festivals, heritage, and more. Your ultimate guide to an unforgettable Sri Lankan journey.",
       foods: "Embark on a culinary journey through Sri Lanka. Explore our comprehensive guide to traditional Sri Lankan cuisine, from authentic spicy curries and fragrant rice dishes to popular street food, sweet treats, and unique culinary experiences found across the island.",
+      "top-rated": "Explore Sri Lanka's top-rated destinations and iconic traditional cuisines. Discover famous attractions like Sigiriya, Ella, Galle Fort, and savor legendary flavors like Rice & Curry, Kottu Roti, and Ceylon Tea.",
       festivals: "Experience the vibrant cultural tapestry of Sri Lanka through our comprehensive guide to traditional festivals. From the grandeur of the Esala Perahera in Kandy to the sacred rituals of Poson and Vesak.",
       destinations: "Explore the diverse landscapes of Sri Lanka. From ancient rock fortresses like Sigiriya to the misty highlands of Ella and pristine beaches, discover the best places to visit in Sri Lanka.",
       heritage: "Immerse yourself in the rich cultural heritage of Sri Lanka. Discover ancient temples, historical sites, traditional arts, and the deep-rooted traditions that define our island nation.",
@@ -416,6 +421,7 @@ export default function App() {
     const keywords: Record<string, string> = {
       home: "Nearby Places Sri Lanka, Sri Lanka travel guide, best places in Sri Lanka, Sri Lanka tour, Travel Hub Sri Lanka",
       foods: "Sri Lankan food, traditional Sri Lankan cuisine, Ceylon spices, Sri Lankan recipes, street food Sri Lanka",
+      "top-rated": "best Sri Lankan food, top rated places in Sri Lanka, famous Sri Lankan attractions, iconic Sri Lanka, must-visit Sri Lanka",
       festivals: "Sri Lankan festivals, Esala Perahera, Vesak Sri Lanka, cultural events Sri Lanka",
       destinations: "Sri Lanka tourist attractions, Sigiriya, Ella, Galle, Yala safari, Kandy",
       heritage: "Sri Lanka history, ancient cities Sri Lanka, UNESCO sites Sri Lanka, Buddhist temples",
