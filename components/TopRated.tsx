@@ -65,19 +65,19 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "An exhilarating safari through a unique dry-zone forest bordering the Indian Ocean, offering the world's best chance to spot wild leopards, massive elephant herds, and sloth bears.", 
       SI: "ඉන්දියන් සාගරයට මායිම් වූ යාල ජාතික වනෝද්‍යානයේ සැරිසරන වන දිවියන්, අලි රංචු සහ වලසුන් සියැසින් දැකගැනීමට ලැබෙන වනචාරී අත්දැකීමක්." 
     },
-    image: "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/736x/86/5c/66/865c66c797a4ab5e900308e96fdc7b79.jpg"
   },
   {
     id: "nilambe-meditation",
-    name: { EN: "Silent Mountaintop Mindfulness", SI: "නිලම්බේ නිහඬ මනෝභ්‍යාස මධ්‍යස්ථානය" },
+    name: { EN: "Misty Riverston Valley", SI: "රිවර්ස්ටන් මීදුම් නිම්නය සහ පිටවල පතන" },
     rating: 5.0,
     reviewsCount: 1120,
-    location: "Nilambe Meditation Centre",
+    location: "Riverston Peak & Pitawala Pathana, Matale, Sri Lanka",
     description: { 
-      EN: "Immersing yourself in a profound life-changing silent meditation retreat. Situated on a serene, misty peak, it offers pure tranquility, daily yoga, and a mindful organic lifestyle.", 
-      SI: "මීදුම් සළු පොරවන කඳු මුදුනක පිහිටි නිසංසල පරිසරයක යෝග සාධන, නිර්මාංශ ආහාර රටා සමගින් ජීවිතය වෙනස් කරන අසිරිමත් භාවනා අත්දැකීමක්." 
+      EN: "Walk through Riverston and Pitawala Pathana, one of Sri Lanka's most beautiful misty mountain valleys, to relax your mind and energy absolutely free of charge.", 
+      SI: "ලංකාවේ මීදුමෙන් බරවුණු සුන්දරම කඳුකර නිම්නයක් වන රිවර්ස්ටන් සහ පිටවල පතන හරහා ඇවිද යමින් ගත සිත සැහැල්ලු කරගන්න. කිසිදු අයකිරීමකින් තොරව නිදහසේ සොබාදහම විඳින්නට, මීදුම් සෙවනැලි මැදින් ඇවිද යන්නට සහ මහා හුළඟ සමඟ මුසුවුණු සුවදායී නිදහසක් අත්විඳින්නට ලැබෙන අපූරු පොදු පාරාදීසයකි." 
     },
-    image: "https://images.unsplash.com/photo-1518098268026-4e43a1a009de?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/736x/4d/92/fc/4d92fc76396cfb8a2a77a1edc06be75b.jpg"
   },
   {
     id: "ruwanweli-meditation",
@@ -89,7 +89,7 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "Experiencing deep inner peace by walking barefoot on the vast, cooling granite floor of a 2,000-year-old giant stupa, surrounded by soft oil lamps, chanting, and a calming spiritual atmosphere.", 
       SI: "වසර දෙදහසක් පැරණි රුවන්වැලි මහා සෑ රඳුන්ගේ සලපතල මළුවේ පහන් ආලෝක සහ ධර්ම ශබ්ද මධ්‍යයේ පාවහන් රහිතව ඇවිද යමින් සිතට සැනසුම ළඟා කරගැනීම." 
     },
-    image: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/736x/36/18/76/361876cc510b33ba1af29a082af0ddf1.jpg"
   },
   {
     id: "ayurveda-healing",
@@ -101,7 +101,7 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "Completely rejuvenating the mind and body with ancient, authentic holistic medicine, herbal steam baths, and sunrise yoga sessions set in peaceful, green paddy field environments.", 
       SI: "නැවුම් කුඹුරු යායකින් වට වූ පරිසරයක පැරණි ආයුර්වේද ප්‍රතිකාර, ඖෂධීය වාෂ්ප ස්නාන සහ හිරු උදාව සමග යෝග අභ්‍යාස මගින් කය හා මනස පූර්ණ සුවපත් කිරීම." 
     },
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/1200x/27/7d/ba/277dbaf49558e7f9c8136392daa49559.jpg"
   },
   {
     id: "sigiriya-fortress",
@@ -113,7 +113,7 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "Climbing a massive 200-meter-high sheer rock fortress rising from the jungle, exploring ancient artistic frescoes, and marveling at the oldest surviving royal water gardens in Asia.", 
       SI: "මීටර් 200ක් උසැති සීගිරි පර්වතය මුදුනෙහි පිහිටි පැරණි කලාත්මක බිතුසිතුවම් සහ ආසියාවේ ඉපැරණිතම ජල උද්‍යාන සහිත මාලිගා සංකීර්ණය ගවේෂණය." 
     },
-    image: "https://images.unsplash.com/photo-1588598130782-690a298573ec?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/736x/4e/ea/52/4eea523089a40514c4a42e25dabc146c.jpg"
   },
   {
     id: "galle-fortress",
@@ -125,7 +125,7 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "Strolling through vibrant, cobblestone streets lined with century-old Dutch architecture, cozy cafes, and artistic boutiques, all protected by a massive rampart overlooking the ocean waves.", 
       SI: "ලන්දේසි ගෘහ නිර්මාණ ශිල්පයෙන්, අලංකාර කැෆේ සහ කලාගාරවලින් සමන්විත, මුහුදු රළ පහර වදින මහා පවුරකින් වට වූ ඓතිහාසික ගාලු කොටුවේ සැරිසැරීම." 
     },
-    image: "https://images.unsplash.com/photo-1563294371-d64e0da193f4?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/1200x/0c/98/88/0c98889ea2fc8f29acb6f0dcaa376028.jpg"
   },
   {
     id: "sunset-hill",
@@ -137,7 +137,7 @@ const TOP_SPOTS: TopSpot[] = [
       EN: "Standing on a unique red-cliff headland jutting into the sea, framed by a perfectly symmetrical grove of towering coconut palms as the sky turns into a brilliant shade of orange.", 
       SI: "මුහුද දෙසට නෙරා ගිය රතු පස් කන්දක ඉහළට විහිදුණු පොල්ගස් යායක් අතරින් ක්ෂිතිජය රන්වන් සහ තැඹිලි පාටින් වර්ණවත් වන අසිරිමත් සැඳෑ දර්ශනයක්." 
     },
-    image: "https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?auto=format&fit=crop&w=1200&q=80"
+    image: "https://i.pinimg.com/736x/ca/66/7f/ca667f397295af5a4202003e4d99c321.jpg"
   }
 ];
 
@@ -152,7 +152,7 @@ const TOP_TASTES: TopTaste[] = [
       EN: "A culinary journey celebrating wholesome local red rice served with an array of colorful, spice-infused curries, slow-cooked in traditional clay pots over open firewood.", 
       SI: "මැටි වළඳේ දර ලිපේ පිසින ලද සුවඳැති රතු බත් සහ විවිධ දේශීය කුළුබඩු රැගත් ව්‍යංජන රැසක් සහිත ශ්‍රී ලාංකේය පාරම්පරික අසිරිමත් භෝජන සංග්‍රහය." 
     },
-    image: "https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=1200&q=80",
+    image: "https://i.pinimg.com/736x/43/67/2c/43672c72610795ac789fe44438b5ce5e.jpg",
     badge: { EN: "National Heritage", SI: "ජාතික උරුමය" }
   },
   {
@@ -165,7 +165,7 @@ const TOP_TASTES: TopTaste[] = [
       EN: "Watching local chefs rhythmically chop flatbread, fresh vegetables, eggs, and rich gravies with metal blades on hot griddles, creating Sri Lanka's ultimate sensory street food experience.", 
       SI: "නැවුම් එළවළු, බිත්තර, රොටි සහ රසවත් හොදි එක්කර රත් වූ යකඩ තැටියක් මත ලෝහ තල දෙකකින් තළමින් ශබ්ද නඟා සාදන ලංකාවේ සුප්‍රසිද්ධම වීදි ආහාර අත්දැකීම." 
     },
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://i.pinimg.com/736x/b6/8c/06/b68c06484ec6bafb30abb3fdf86fe207.jpg",
     badge: { EN: "Street Favorite", SI: "වීදි ආහාර ප්‍රියතමයා" }
   },
   {
@@ -178,7 +178,7 @@ const TOP_TASTES: TopTaste[] = [
       EN: "Savoring live-tossed, bowl-shaped rice flour crepes featuring paper-thin crispy edges and a soft, fluffy coconut milk center, perfectly paired with fiery, fresh lunu miris paste.", 
       SI: "පොල් කිරි සහ සහල් පිටි මිශ්‍රණයෙන් තැටියක සාදන, වටේ කරකුරු ගෑවෙන අතර මැද කොටස ඉතාම මෘදු වූ, ඵ් සමග කටට සැර ලුණුමිරිස් එක්කර රසවිඳින සම්ප්‍රදායික ආප්ප වේල." 
     },
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=1200&q=80",
+    image: "https://i.pinimg.com/1200x/a8/fe/54/a8fe54d30c1b388e746b74f2e31c1329.jpg",
     badge: { EN: "Breakfast Classic", SI: "උදෑසන ප්‍රියතමය" }
   }
 ];

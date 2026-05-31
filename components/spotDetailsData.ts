@@ -160,7 +160,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Yala National Park",
     rating: 4.9,
     reviewsCount: 3240,
-    heroImage: "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/736x/86/5c/66/865c66c797a4ab5e900308e96fdc7b79.jpg",
     overview: {
       EN: "An exhilarating safari tour through a unique dry-zone forest bordering the Indian Ocean, offering the world's absolute best chance to spot wild leopards, massive elephant herds, and sloth bears.",
       SI: "ඉන්දියන් සාගරයට මායිම් වූ යාල ජාතික වනෝද්‍යානයේ සැරිසරන වන දිවියන්, අලි රංචු සහ වළසුන් සියැසින් දැකගැනීමට ලැබෙන වනචාරී ජීවිතය."
@@ -202,48 +202,84 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
   },
   "nilambe-meditation": {
     id: "nilambe-meditation",
-    name: { EN: "Silent Mountaintop Mindfulness", SI: "නිලම්බේ නිහඬ මනෝභ්‍යාස මධ්‍යස්ථානය" },
-    location: "Nilambe Meditation Centre",
+    name: { EN: "Misty Riverston Valley", SI: "රිවර්ස්ටන් මීදුම් නිම්නය සහ පිටවල පතන" },
+    location: "Riverston Peak & Pitawala Pathana, Matale, Sri Lanka",
     rating: 5.0,
     reviewsCount: 1120,
-    heroImage: "https://images.unsplash.com/photo-1518098268026-4e43a1a009de?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/736x/4d/92/fc/4d92fc76396cfb8a2a77a1edc06be75b.jpg",
     overview: {
-      EN: "Immerse yourself in a profound, deeply calm silent meditation retreat. Situated on a serene, misty peak under pine trees, it offers absolute tranquility, guided yoga, and a mindful organic lifestyle.",
-      SI: "මීදුම් සළු පොරවන කඳු මුදුනක පිහිටි නිසංසල පරිසරයක යෝග සාධන, නිර්මාංශ ආහාර රටා සමගින් ජීවිතය වෙනස් කරන අසිරිමත් නිහඬ භාවනා අත්දැකීමක් ලබන්න."
+      EN: "Walk through Riverston and Pitawala Pathana, one of Sri Lanka's most beautiful misty mountain valleys, to relax your mind and energy. This beautiful public paradise is completely free of charge, allowing you to freely enjoy nature, stroll through shifting shadows of mist, and experience a soothing sense of freedom with the rushing mountain winds.",
+      SI: "ලංකාවේ මීදුමෙන් බරවුණු සුන්දරම කඳුකර නිම්නයක් වන රිවර්ස්ටන් සහ පිටවල පතන හරහා ඇවිද යමින් ගත සිත සැහැල්ලු කරගන්න. කිසිදු අයකිරීමකින් තොරව නිදහසේ සොබාදහම විඳින්නට, මීදුම් සෙවනැලි මැදින් ඇවිද යන්නට සහ මහා හුළඟ සමඟ මුසුවුණු සුවදායී නිදහසක් අත්විඳින්නට ලැබෙන අපූරු පොදු පාරාදීසයකි."
     },
     highlights: [
       {
-        title: { EN: "Noble Silence Practice", SI: "ආධ්‍යාත්මික නිහඬතාව රැකීම" },
-        desc: { EN: "Detox from high tech screens and enter absolute peaceful verbal silence.", SI: "තාක්ෂණික මෙවලම් වලින් බැහැරව උපරිම මානසික සහ ආත්මීය නිහඬතාවයක් ළඟා කරගැනීම." },
+        title: { EN: "Breathtaking panoramic views", SI: "විස්මිත පරිදර්ශන දසුන්" },
+        desc: { EN: "Breathtaking panoramic views from the Riverston windy gap.", SI: "රිවර්ස්ටන් සුළං කපොල්ලේ සිට විහිදෙන අංශක 360ක මනරම් පරිදර්ශනය." },
         icon: "Compass"
       },
       {
-        title: { EN: "Mountain Pine Forest", SI: "පයිනස් වනාන්තර භාවනා මංපෙත්" },
-        desc: { EN: "Wander along highly scenic pine needle carpet trails during sunset walks.", SI: "කඳුකර පයිනස් ගස් අතරින් වැටී ඇති මංපෙත්වල සෙමෙන් ඇවිද යමින් සිත සන්සුන් කරගැනීම." },
+        title: { EN: "Vast Green Plains Walk", SI: "තෘණ භූමියේ සුවදායී ඇවිදීම" },
+        desc: { EN: "A peaceful, budget-friendly walk across the vast green plains of Pitawala Pathana.", SI: "පිටවල පතන තෘණ භූමියේ පරිසර හිතකාමී සහ සුවදායී නිදහස් ඇවිදීම." },
         icon: "TreePine"
+      },
+      {
+        title: { EN: "Mystical Fog Viewpoints", SI: "මීදුම් කඳුකර ඡායාරූප කලාප" },
+        desc: { EN: "Stunning photography viewpoints surrounded by unpredictable mountain mist.", SI: "සොබාදහමේ අපූර්ව මීදුම් දිය සළු මැදින් සුන්දර ඡායාරූප ලබාගත හැකි ස්ථාන." },
+        icon: "Droplets"
       }
     ],
     mapSpots: [
       {
-        id: "hall",
-        name: { EN: "Main Granite Meditation Hall", SI: "ප්‍රධාන ගල් භාවනා ශාලාව" },
+        id: "windy-gap",
+        name: { EN: "Riverston Windy Gap", SI: "රිවර්ස්ටන් සුළං කපොල්ල" },
         coordinates: { x: 45, y: 35 },
-        description: { EN: "Earthly stone building catching morning mist clouds.", SI: "ස්වභාවික ගල් පුවරු වලින් නිම වූ නිස්කලංක ප්‍රධාන භාවනා මධ්‍යස්ථානය." }
+        description: { EN: "The famous breeze corridor with incredible views.", SI: "මහ හුළඟ හමන ප්‍රසිද්ධ කඳුකර මාවත සහ මනරම් දර්ශන කලාපය." }
+      },
+      {
+        id: "pathana",
+        name: { EN: "Pitawala Plain Edge", SI: "පිටවල පතන ලෝකාන්තය" },
+        coordinates: { x: 65, y: 55 },
+        description: { EN: "A sheer mini world's end drop looking down into the deep valley.", SI: "පහළ ගැඹුරු නිම්නය දෙස බලා සිටින අපූර්ව කුඩා ලෝකාන්ත බෑවුම." }
       }
     ],
     visitorGuide: {
-      bestTime: { EN: "Minimum 3-day stay recommended to truly experience noble silence.", SI: "දේශීය නිහඬතාව මැනවින් අත්විඳීමට අවම වශයෙන් දින 3ක නේවාසික කාලයක් වඩාත් යෝග්‍ය වේ." },
-      gettingThere: { EN: "Travel past Galaha road from Kandy, followed by a scenic 1km walk or tuk-tuk ascent.", SI: "මහනුවර සිට ගලහ මාර්ගය හරහා පැමිණ කන්ද මුදුනට ඇති මීටර් 1000ක වන මාවත දිගේ පයින් යා යුතුය." },
-      attractions: { EN: "Pine forest walks, Organic tea garden Shalas, mountain ridges.", SI: "පයිනස් වනාන්තරය, කාබනික තේ වතු සහ සොඳුරු කඳු මුදුන්." }
+      bestTime: { 
+        EN: "Early morning (6:00 AM - 8:30 AM) to catch the best mist and soft sunlight.", 
+        SI: "හොඳම මීදුම සහ මෘදු සූර්යාලෝකය නැරඹීමට උදෑසන කාලය (පෙ.ව. 6:00 - පෙ.ව. 8:30) වඩාත් සුදුසු වේ." 
+      },
+      gettingThere: { 
+        EN: "A scenic drive from Matale town via the Illukkumbura road; easily accessible by bike or car.", 
+        SI: "මාතලේ නගරයේ සිට ඉලුක්කුඹුර මාර්ගය ඔස්සේ දිවෙන සුන්දර ගමනකි; යතුරුපැදියකින් හෝ මෝටර් රථයකින් පහසුවෙන් ළඟා විය හැක." 
+      },
+      attractions: { 
+        EN: "Completely Free / Public Access Area.", 
+        SI: "සම්පූර්ණයෙන්ම නොමිලයේ / පොදු පිවිසුම් කලාපයක් වේ." 
+      }
     },
     galleryPhotos: [
-      { id: "gm1", url: "https://images.unsplash.com/photo-1518098268026-4e43a1a009de?auto=format&fit=crop&w=800&q=80", caption: { EN: "The silent granite halls overlooking mountains", SI: "කඳු පන්තියට මුහුණලා ඇති ආසිරිමත් ගල් ශාලාවේ දසුනක්" } }
+      { id: "gm1", url: "https://images.unsplash.com/photo-1518098268026-4e43a1a009de?auto=format&fit=crop&w=800&q=80", caption: { EN: "Misty highlands of Riverston", SI: "රිවර්ස්ටන් හි මීදුමෙන් බර වූ කඳුකර දසුනක්" } }
     ],
     packages: [
-      { id: "pkgm1", title: { EN: "3-Day Inner Peace Retreat", SI: "තෙදින පූර්ණ ආධ්‍යාත්මික එකමුතුව" }, desc: { EN: "Includes minimalist forest cabin stay, organic vegetarian meals, tea, and daily guided sessions.", SI: "වන කුටීරයක නවාතැන්, දිනපතා යෝගා, හෘදයාංගම සෙලෝන් තේ සහ කාබනික ආහාර ඇතුළත් වේ." }, price: "35" }
+      { 
+        id: "pkgm1", 
+        title: { EN: "Self-Guided Nature Trek", SI: "ස්වයං මඟපෙන්වන සොබාදැහම ගවේෂණය" }, 
+        desc: { EN: "Explore the scenic trails, breezy cliffs, and unique grasslands at your own leisurely pace.", SI: "මනරම් මංපෙත්, සුළං කඳු බෑවුම් සහ අද්විතීය තණබිම් ඔබේම රිද්මයට අනුව නොමිලේ ගවේෂණය කරන්න." }, 
+        price: "0" 
+      }
     ],
     reviews: [
-      { id: "revm1", author: "Dr. David Vance", country: "United States", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80", rating: 5, date: "May 10, 2026", comment: { EN: "A sanctuary for the soul. The silence at Nilambe is loud enough to wake you up inside.", SI: "ආත්මය සුවපත් කරන ක්ෂේම භූමියක්. නිලම්බේ ඇති නිහඬබව සැබැවින්ම මනස අවදි කරවයි." } }
+      { 
+        id: "revm1", 
+        author: "Saman Perera", 
+        country: "Sri Lanka", 
+        avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80", 
+        rating: 5, 
+        date: "May 29, 2026", 
+        comment: { 
+          EN: "The wind was so strong at the gap we felt like flying! Pitawala Pathana plains are pure magic when the mist rolls in.", 
+          SI: "සුළං කපොල්ල ළඟ සුළඟ කොතරම් තදින් හැමුවාද කියනවා නම් අපිට පියාඹනවා වගේ දැනුණා! මීදුම ගලාගෙන එද්දී පිටවල පතන හරියටම මායාවක් වගේ." 
+        } 
+      }
     ]
   },
   "ruwanweli-meditation": {
@@ -252,7 +288,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Ruwanweli Maha Seya (Anuradhapura)",
     rating: 5.0,
     reviewsCount: 4350,
-    heroImage: "https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/736x/36/18/76/361876cc510b33ba1af29a082af0ddf1.jpg",
     overview: {
       EN: "Experience deep, unshakeable inner peace by walking barefoot on the vast, cooling granite floor of Ruwanweli Maha Seya, a 2,000-year-old giant stupa enveloped in shifting mist, oil lamp light and gentle chanting.",
       SI: "වසර දෙදහසක් පැරණි රුවන්වැලි මහා සෑ රඳුන්ගේ සලපතල මළුවේ පහන් ආලෝක සහ සාධුකාර හඬ මධ්‍යයේ පාවහන් රහිතව පියවර තබමින් සිතට අසීමිත සැනසුම හා සන්සුන්කම ළඟා කරගන්න."
@@ -298,7 +334,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Rural Wellness Sanctuaries",
     rating: 4.8,
     reviewsCount: 1840,
-    heroImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/1200x/27/7d/ba/277dbaf49558e7f9c8136392daa49559.jpg",
     overview: {
       EN: "Completely rejuvenate your tired mind and body with ancient, authentic Ayurveda medicinal systems, rich warm-oil herbal baths, and sunrise yoga sessions set in silent verdant rice fields.",
       SI: "කුඹුරු යායකින් වට වූ නිස්කලංක පරිසරයක පැරණි ආයුර්වේද තෙල් ප්‍රතිකාර, ඖෂධීය වාෂ්ප ස්නාන සහ හිරු උදාවත් සමඟ කෙරෙන යෝග අභ්‍යාස මඟින් කය හා මනස පූර්ණ සුවපත් කරගන්න."
@@ -344,7 +380,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Sigiriya Ancient Citadel",
     rating: 5.0,
     reviewsCount: 5670,
-    heroImage: "https://images.unsplash.com/photo-1588598130782-690a298573ec?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/736x/4e/ea/52/4eea523089a40514c4a42e25dabc146c.jpg",
     overview: {
       EN: "Climb the grand 200-meter-high sheer rock citadel built by King Kasyapa. Explore ancient wall frescoes, mirror writings, and walk through the oldest surviving royal water gardens in Asia.",
       SI: "මීටර් 200ක් උසැති සීගිරි පර්වතය මුදුනෙහි පිහිටි පැරණි කලාත්මක බිතුසිතුවම් සහ ආසියාවේ ඉපැරණිතම ජල උද්‍යාන සහිත කාශ්‍යප රජුගේ මාලිගා සංකීර්ණය ගවේෂණය කරන්න."
@@ -396,7 +432,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Galle Dutch Fort",
     rating: 4.8,
     reviewsCount: 3950,
-    heroImage: "https://images.unsplash.com/photo-1563294371-d64e0da193f4?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/1200x/0c/98/88/0c98889ea2fc8f29acb6f0dcaa376028.jpg",
     overview: {
       EN: "Stroll through vibrant, ancient cobblestone streets preserved beautifully over 400 years. Bordered by the Indian Ocean, discover historic Dutch architecture, cozy art cafes, and scenic ramparts.",
       SI: "ලන්දේසි ගෘහ නිර්මාණ ශිල්පයෙන්, අලංකාර වීදි කැෆේ සහ කලාගාරවලින් සමන්විත, මුහුදු රළ පහර වදින මහා කොටු පවුරකින් වට වූ පෞරාණික ගාලු කොටුවේ සිරි නරඹන්න."
@@ -442,7 +478,7 @@ export const SPOT_DETAILS_POOL: Record<string, SpotDetailData> = {
     location: "Coconut Tree Hill (Mirissa)",
     rating: 4.9,
     reviewsCount: 2280,
-    heroImage: "https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "https://i.pinimg.com/736x/ca/66/7f/ca667f397295af5a4202003e4d99c321.jpg",
     overview: {
       EN: "Stand on a highly unique red-clay headland jutting dramatically into the turquoise sea, framed by a perfectly symmetrical grove of tall coconut palms as the evening sky turns orange.",
       SI: "මුහුද දෙසට නෙරා ගිය රතු පස් කන්දක ඉහළට විහිදුණු පොල්ගස් යායක් අතරින් ක්ෂිතිජය රන්වන් සහ තැඹිලි පාටින් වර්ණවත් වන අසිරිමත් සැඳෑ හිරු දසුනක් විඳින්න."
